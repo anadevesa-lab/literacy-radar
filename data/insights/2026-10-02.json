@@ -1,15 +1,15 @@
 {
  "auto": true,
  "date": "2026-10-02",
- "basedOn": "2026-10-02T10:45:18.764Z",
- "generatedAt": "2026-10-02T10:45:19.891Z",
- "resumo": "Today's talk is mostly about **stocks and bonds**. Rising: bonds, funds. Falling: stocks.",
+ "basedOn": "2026-10-02T10:53:05.715Z",
+ "generatedAt": "2026-10-02T10:53:07.215Z",
+ "resumo": "Today's talk is mostly about **stocks and bonds**. Rising: funds. Falling: stocks, bonds.",
  "classes": [
   {
    "nome": "Ações",
    "tendencia": "a descer",
    "forca": 3,
-   "leitura": "18 stories today. Top one: IG Group Shares Plunge After Surprise Slump in Revenue (Bloomberg).",
+   "leitura": "20 stories today. Top one: IG Group Shares Plunge After Surprise Slump in Revenue (Bloomberg).",
    "a_favor": [],
    "riscos": [
     "IG Group Shares Plunge After Surprise Slump in Revenue"
@@ -18,12 +18,10 @@
   },
   {
    "nome": "Obrigações",
-   "tendencia": "a subir",
+   "tendencia": "a descer",
    "forca": 3,
-   "leitura": "11 stories today. Top one: Stocks Climb as Calm Prevails Before Payrolls: Markets Wrap (Bloomberg).",
-   "a_favor": [
-    "Stocks Climb as Calm Prevails Before Payrolls: Markets Wrap"
-   ],
+   "leitura": "10 stories today. Top one: U.S. Bond Yields Hit Highest Level Since 2002 (New York Times).",
+   "a_favor": [],
    "riscos": [
     "U.S. Bond Yields Hit Highest Level Since 2002"
    ],
@@ -44,19 +42,10 @@
    "nome": "Tecnologia",
    "tendencia": "estável",
    "forca": 3,
-   "leitura": "7 stories today. Top one: Amazon seeks to offload $8bn of Nvidia chips to investors (Financial Times).",
+   "leitura": "8 stories today. Top one: Amazon seeks to offload $8bn of Nvidia chips to investors (Financial Times).",
    "a_favor": [],
    "riscos": [],
    "perfil": "Long horizon and tolerance for high volatility."
-  },
-  {
-   "nome": "Juros (bancos centrais)",
-   "tendencia": "estável",
-   "forca": 3,
-   "leitura": "6 stories today. Top one: Fed Seems to Want to Hike Rates Slower, Says Citi Economist Clark (Bloomberg).",
-   "a_favor": [],
-   "riscos": [],
-   "perfil": "Affects everyone's deposits, loans and bonds."
   },
   {
    "nome": "Matérias-primas",
@@ -66,6 +55,15 @@
    "a_favor": [],
    "riscos": [],
    "perfil": "A small slice of a portfolio, for diversification only."
+  },
+  {
+   "nome": "Juros (bancos centrais)",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "5 stories today. Top one: Trump could target three Fed governors. Removing them may be harder than it looks (CNBC).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Affects everyone's deposits, loans and bonds."
   },
   {
    "nome": "Depósitos e poupança",

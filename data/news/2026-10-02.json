@@ -3,62 +3,6 @@
  "items": [
   {
    "source": "Bloomberg",
-   "category": "Inflação",
-   "published": "2 Oct",
-   "title": "Credit Markets Sputter as Spreads Widen Most Since March",
-   "summary": "Credit markets are showing signs of caution, as investors pull back from treating high-grade debt as a bastion of safety amid lingering worries about record borrowings and inflation.",
-   "url": "https://www.bloomberg.com/news/articles/2026-10-02/global-credit-market-starts-to-sputter-as-jumbo-deals-drag"
-  },
-  {
-   "source": "Bloomberg",
-   "category": "Mercados",
-   "published": "2 Oct",
-   "title": "Germany Explores Ways to Avoid Other UniCredit-Style Takeovers",
-   "summary": "Germany is studying legal changes to avoid a repeat of UniCredit SpA‘s takeover of Commerzbank AG, where the Italian suitor was able to discreetly build large derivatives positions and surprise the ba",
-   "url": "https://www.bloomberg.com/news/articles/2026-10-02/germany-explores-ways-to-avoid-other-unicredit-style-takeovers"
-  },
-  {
-   "source": "Bloomberg",
-   "category": "Obrigações",
-   "published": "1 Oct",
-   "title": "Stocks Climb as Calm Prevails Before Payrolls: Markets Wrap",
-   "summary": "Stocks climbed and sovereign bonds were broadly firm in calmer trading following a week in which markets were lashed by sharp swings in yields, with the US payrolls report still to come.",
-   "url": "https://www.bloomberg.com/news/articles/2026-10-01/asian-stocks-to-fall-on-oil-rally-bonds-in-focus-markets-wrap"
-  },
-  {
-   "source": "Bloomberg",
-   "category": "Obrigações",
-   "published": "2 Oct",
-   "title": "France’s Troubles Are Deepening as Investors Head for the Exit",
-   "summary": "10-year yield premium over Germany is now at widest in 15 years.",
-   "url": "https://www.bloomberg.com/news/articles/2026-10-02/france-s-crisis-is-deepening-as-investors-head-for-the-exit"
-  },
-  {
-   "source": "Bloomberg",
-   "category": "Obrigações",
-   "published": "2 Oct",
-   "title": "French Bond Risk Premium Rises to Highest Since Euro Crisis",
-   "summary": "A surge in euro-area sovereign bond spreads extended on Friday, sending the yield gap between France and Germany to the widest since the euro-zone crisis.",
-   "url": "https://www.bloomberg.com/news/articles/2026-10-02/europe-s-bond-spread-blowout-prompts-bets-on-fewer-ecb-hikes"
-  },
-  {
-   "source": "Bloomberg",
-   "category": "Economia",
-   "published": "2 Oct",
-   "title": "US Jobs Preview: What to Watch for in the September Report",
-   "summary": "US employment growth is expected to slow from August’s blockbuster numbers, with analysts expecting 90,000 jobs added for the month. Michael McKee has a preview on Bloomberg Television. (Source: Bloom",
-   "url": "https://www.bloomberg.com/news/videos/2026-10-02/what-to-watch-for-in-the-september-us-jobs-report-video"
-  },
-  {
-   "source": "Bloomberg",
-   "category": "Banca central",
-   "published": "2 Oct",
-   "title": "Fed Seems to Want to Hike Rates Slower, Says Citi Economist Clark",
-   "summary": "Veronica Clark, US economist at Citi, sees the Federal Reserve becoming “increasingly divided” on raising interest rates and says the labor market “definitely has been more stable than we were expecti",
-   "url": "https://www.bloomberg.com/news/videos/2026-10-02/fed-seems-to-want-to-hike-rates-slower-citi-s-clark-video"
-  },
-  {
-   "source": "Bloomberg",
    "category": "Mercados",
    "published": "1 Oct",
    "title": "Latest Oil Market News and Analysis for Oct. 2",
@@ -768,6 +712,94 @@
    "title": "Christine Lagarde: Where AI risks meet",
    "summary": "",
    "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261001~cf3c630379.en.html"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "2 Oct",
+   "title": "Swiss Franc Is Back as Haven as French Angst Hits Euro Markets",
+   "summary": "The Swiss franc is grabbing the spotlight as a haven against European risk after concerns about France’s debt situation hit the region’s markets.",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-02/swiss-franc-is-back-as-haven-as-french-angst-hits-euro-markets"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Obrigações",
+   "published": "2 Oct",
+   "title": "AT1 Niche Turns Into Acute Painpoint of Global Bond Selloff",
+   "summary": "One corner of the Additional Tier 1 market stands out in the global bond selloff, where rising rates are squeezing banks with large property-lending businesses, hammering their riskiest debt.",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-02/at1-niche-turns-into-acute-painpoint-of-global-bond-selloff"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "2 Oct",
+   "title": "YouTube sports strategy targets more live rights -- but not necessarily events",
+   "summary": "YouTube is targeting more live sports rights. But it's more likely to buy games in bulk if there's a clear consumer proposition underlying the rights.",
+   "url": "https://www.cnbc.com/2026/10/02/youtube-sports-strategy-targets-more-live-rights-but-not-necessarily-events.html"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Bolsa",
+   "published": "2 Oct",
+   "title": "Three reasons why this Wall Street market-making powerhouse says investors should reload on stocks now",
+   "summary": "September provided a reset for stocks, pointing to a good end to the year, says Scott Rubner",
+   "url": "https://www.marketwatch.com/story/three-reasons-why-this-wall-street-market-making-powerhouse-says-investors-should-reload-on-stocks-now-8e19ecce?mod=mw_rss_topstories"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "2 Oct",
+   "title": "Walmart CEO says retailer will not use personal data for pricing",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/walmart-ceo-says-retailer-will-not-use-personal-data-for-pricing-93CH-4929415"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "2 Oct",
+   "title": "RBC downgrades Commerzbank on rising execution risk from UniCredit plans",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/rbc-downgrades-commerzbank-on-rising-execution-risk-from-unicredit-plans-4929414"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "2 Oct",
+   "title": "Why is Better Home & Finance stock rallying 5% today?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/why-is-better-home--finance-stock-rallying-5-today-93CH-4929413"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Obrigações",
+   "published": "2 Oct",
+   "title": "European shares set for worst week since April as soaring EU yields weigh",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/european-shares-set-for-worst-week-since-april-as-soaring-eu-yields-weigh-4928995"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "2 Oct",
+   "title": "Russia may ease diesel export ban if overproduction occurs",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/russia-may-ease-diesel-export-ban-if-overproduction-occurs-93CH-4929405"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Tecnologia",
+   "published": "2 Oct",
+   "title": "Nvidia returns as Morgan Stanley’s Top Pick on attractive valuation",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/nvidia-returns-as-morgan-stanleys-top-pick-on-attractive-valuation-4929404"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "2 Oct",
+   "title": "Mizuho sees biopharma funding rise 56% in September on public deals",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/mizuho-sees-biopharma-funding-rise-56-in-september-on-public-deals-93CH-4929401"
   }
  ],
  "sources": [
@@ -787,5 +819,5 @@
  "editions": [
   "morning"
  ],
- "collectedAt": "2026-10-02T10:45:18.764Z"
+ "collectedAt": "2026-10-02T10:53:05.715Z"
 }
