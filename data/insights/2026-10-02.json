@@ -1,74 +1,76 @@
 {
  "auto": true,
  "date": "2026-10-02",
- "basedOn": "2026-10-02T11:34:05.402Z",
- "generatedAt": "2026-10-02T11:34:06.734Z",
- "resumo": "Global markets face pressures from **soaring bond yields** and geopolitical tensions impacting commodities and equities.",
+ "basedOn": "2026-10-02T20:09:55.923Z",
+ "generatedAt": "2026-10-02T20:09:57.348Z",
+ "resumo": "Weak US jobs data moderated interest rate hike expectations, while **energy prices fell sharply** after G7 nations agreed to release 100 million barrels of emergency reserves.",
  "classes": [
   {
-   "nome": "Equities",
+   "nome": "Sovereign bonds",
    "tendencia": "mixed",
-   "forca": 3,
-   "leitura": "Stock markets are pressured by rising bond yields and AI financing crunches, despite enthusiasm in select sectors.",
+   "forca": 2,
+   "leitura": "Government debt steadied after weak employment figures softened near-term interest rate hike expectations.",
    "a_favor": [
-    "AI sector growth",
-    "Potential emerging market rallies"
+    "Weaker job growth eases rate pressures",
+    "German Bunds attract safe-haven demand"
    ],
    "riscos": [
-    "High interest rates",
-    "Market shocks from AI spending"
+    "Persistent inflation fears fuel selling",
+    "Yields remain near multi-year highs"
    ],
-   "perfil": "Suits investors with a higher risk tolerance and long-term horizon."
+   "perfil": "Suits conservative investors seeking regular income and capital preservation."
   },
   {
-   "nome": "Bonds",
+   "nome": "Energy commodities",
    "tendencia": "falling",
    "forca": 2,
-   "leitura": "Global bond routs have driven yields to multi-decade highs, putting pressure on corporate and consumer borrowers.",
+   "leitura": "Fuel prices retreated after G7 nations agreed to release 100 million barrels of emergency supplies.",
    "a_favor": [
-    "Higher yields on new issuances"
+    "Emergency stock releases increase supply",
+    "High consumer prices dampen demand"
    ],
    "riscos": [
-    "Global bond rout",
-    "French debt angst hitting European markets"
+    "Export curbs tighten international availability",
+    "Ongoing geopolitical tensions disrupt shipping"
    ],
-   "perfil": "Suits conservative investors seeking regular income."
+   "perfil": "Appeals to high-risk investors comfortable with acute volatility and geopolitical swings."
   },
   {
-   "nome": "Commodities",
-   "tendencia": "rising",
-   "forca": 3,
-   "leitura": "Crude oil and diesel prices remain elevated due to Middle East hostilities and supply worries.",
+   "nome": "Global equities",
+   "tendencia": "mixed",
+   "forca": 1,
+   "leitura": "Equity markets showed resilience despite cooling labour data and slowing corporate acquisition activity.",
    "a_favor": [
-    "High demand keeping prices elevated",
-    "Supply constraints"
+    "Lower yield pressures support valuations",
+    "Potential pause in monetary tightening"
    ],
    "riscos": [
-    "Geopolitical volatility",
-    "Potential sudden demand shifts"
+    "Rising borrowing costs curtail deals",
+    "Slowing employment signals economic caution"
    ],
-   "perfil": "Suits experienced investors looking to hedge against inflation."
+   "perfil": "Appropriate for long-term investors targeting capital growth who can tolerate price swings."
   },
   {
-   "nome": "Real Estate",
+   "nome": "Corporate credit",
    "tendencia": "falling",
    "forca": 2,
-   "leitura": "The housing market faces hits from disappearing screen-based jobs and rising mortgage rates.",
+   "leitura": "Corporate debt markets showed skittishness as higher financing costs weighed on company transaction activity.",
    "a_favor": [
-    "Buyers shifting to alternative loans"
+    "Attractive coupon yields for lenders",
+    "Demand for senior corporate debt"
    ],
    "riscos": [
-    "Higher mortgage rates",
-    "Potential hits from job market shifts"
+    "Higher borrowing costs strain issuers",
+    "Widening spreads on riskier debt"
    ],
-   "perfil": "Suits long-term investors focused on property assets."
+   "perfil": "Suits moderate-risk investors pursuing income above government debt yields."
   }
  ],
  "temas": [
-  "Inflation and interest rates",
-  "Artificial intelligence market impacts",
-  "Global bond yields",
-  "Commodity price pressures"
+  "How labour market reports influence central bank interest rate decisions",
+  "Understanding sovereign bond yields and government debt pricing",
+  "The role of strategic reserves in stabilizing commodity prices",
+  "How borrowing costs and credit spreads affect corporate activity"
  ],
  "ai": true,
  "brief": {
