@@ -1530,47 +1530,59 @@ const RIBBONS=(()=>{
   const mix=(a,b,k)=>a.map((v,i)=>Math.round(v+(b[i]-v)*k));
   const css=c=>`rgb(${c[0]},${c[1]},${c[2]})`;
   addEventListener("pointermove",e=>{ tx=e.clientX/innerWidth-.5; ty=e.clientY/innerHeight-.5; },{passive:true});
+  // Cube block, drawn with WebGL and a real depth buffer so overlaps are always right; canvas runs at device
+  // resolution with antialiasing (crisp edges), and the block is scaled so it never leaves its canvas.
   function make(cv){
-    const ctx=cv.getContext("2d"); if(!ctx) return null;
+    const gl=cv.getContext("webgl",{antialias:true,alpha:true,premultipliedAlpha:true,preserveDrawingBuffer:false}); if(!gl) return null;
     const sd=+cv.dataset.seed||1; let q=sd*9301+49297; const R=()=>{ q=(q*9301+49297)%233280; return q/233280; };
-    // a 4x4x4 block of white cubes; some sit still, some drift outwards and back, like the cube is assembling itself
-    const N=4, cubes=[];
+    // outer cubes slide straight out along one face axis: they never pass through each other
+    const N=4, cubes=[]; const h=(N-1)/2;
     for(let i=0;i<N;i++) for(let j=0;j<N;j++) for(let k=0;k<N;k++){
-      const c=[i-(N-1)/2,j-(N-1)/2,k-(N-1)/2]; const outer=Math.max(...c.map(Math.abs))>1;
-      if(outer&&R()<.14) continue;
-      const len=Math.hypot(...c)||1; const out=outer ? (R()<.8 ? 1+R()*3.2 : .2+R()*.5) : (R()<.35 ? .4+R()*.9 : 0);
-      const jit=[R()-.5,R()-.5,R()-.5].map(v=>v*1.1); const dd=c.map((v,i)=>v/len+jit[i]);
-      cubes.push({c, d:dd, out, ph:R()*6.283, sp:.35+R()*.3, tone:.97+R()*.03});
+      const c=[i-h,j-h,k-h]; const ax=[0,1,2].filter(a=>Math.abs(c[a])===h);
+      if(ax.length&&R()<.12) continue;
+      let dir=[0,0,0], out=0;
+      if(ax.length&&R()<.72){ const a=ax[Math.floor(R()*ax.length)]; dir[a]=Math.sign(c[a]); out=.5+R()*1.15; }
+      cubes.push({c,dir,out,ph:R()*6.283,sp:.32+R()*.3,tone:.975+R()*.025});
     }
-    const F=[[[1,0,0],[1,2,6,5]],[[-1,0,0],[0,4,7,3]],[[0,1,0],[3,7,6,2]],[[0,-1,0],[0,1,5,4]],[[0,0,1],[4,5,6,7]],[[0,0,-1],[0,3,2,1]]];
-    const V=[[-1,-1,-1],[1,-1,-1],[1,1,-1],[-1,1,-1],[-1,-1,1],[1,-1,1],[1,1,1],[-1,1,1]];
-    const L=(()=>{ const l=[-.45,.75,.5], n=Math.hypot(...l); return l.map(v=>v/n); })();
+    const GAP=1.04, HALF=.46;
+    let ext=0; cubes.forEach(b=>{ const p=b.c.map((v,i)=>v*GAP+b.dir[i]*b.out); ext=Math.max(ext,Math.hypot(...p)); }); ext+=HALF*Math.sqrt(3);
+    const VS=`attribute vec3 p;attribute vec3 n;attribute vec2 uv;uniform vec3 off;uniform mat3 Rm;uniform vec4 P;uniform float D;varying vec3 vn;varying vec2 vuv;
+      void main(){vec3 w=Rm*(p*${HALF.toFixed(2)}+off);float ww=(D-w.z)/D;vn=Rm*n;vuv=uv;
+      gl_Position=vec4(P.x*ww+w.x*P.z, P.y*ww+w.y*P.w, (-w.z/40.)*ww, ww);}`;
+    const FS=`precision highp float;varying vec3 vn;varying vec2 vuv;uniform float tone;
+      void main(){vec3 N=normalize(vn);vec3 L=normalize(vec3(-.45,.75,.5));float lam=max(dot(N,L),0.);
+      float e=max(abs(vuv.x),abs(vuv.y));float edge=smoothstep(.86,1.,e);
+      float sh=(.75+.25*lam)*tone-edge*.07+(1.-edge)*.012;
+      gl_FragColor=vec4(vec3(.955,.975,.99)*sh,1.);}`;
+    const sh=(t,src)=>{ const o=gl.createShader(t); gl.shaderSource(o,src); gl.compileShader(o); if(!gl.getShaderParameter(o,gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(o)); return o; };
+    const prog=gl.createProgram(); gl.attachShader(prog,sh(gl.VERTEX_SHADER,VS)); gl.attachShader(prog,sh(gl.FRAGMENT_SHADER,FS)); gl.linkProgram(prog);
+    if(!gl.getProgramParameter(prog,gl.LINK_STATUS)) return null; gl.useProgram(prog);
+    const pos=[],nor=[],uvs=[];
+    const FACES=[[[1,0,0],[0,0,-1],[0,1,0]],[[-1,0,0],[0,0,1],[0,1,0]],[[0,1,0],[1,0,0],[0,0,-1]],[[0,-1,0],[1,0,0],[0,0,1]],[[0,0,1],[1,0,0],[0,1,0]],[[0,0,-1],[-1,0,0],[0,1,0]]];
+    for(const [n,u,v] of FACES) for(const [a,b] of [[-1,-1],[1,-1],[1,1],[-1,-1],[1,1],[-1,1]]){ pos.push(...[0,1,2].map(i=>n[i]+u[i]*a+v[i]*b)); nor.push(...n); uvs.push(a,b); }
+    const buf=(data,loc,size)=>{ const bo=gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,bo); gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(data),gl.STATIC_DRAW); const l=gl.getAttribLocation(prog,loc); gl.enableVertexAttribArray(l); gl.vertexAttribPointer(l,size,gl.FLOAT,false,0,0); };
+    buf(pos,"p",3); buf(nor,"n",3); buf(uvs,"uv",2);
+    const U={}; ["off","Rm","P","D","tone"].forEach(k=>U[k]=gl.getUniformLocation(prog,k));
+    gl.enable(gl.DEPTH_TEST); gl.enable(gl.CULL_FACE); gl.cullFace(gl.BACK); gl.frontFace(gl.CCW);
+    const Dd=22;
     function frame(t){
-      const mob=innerWidth<760, dpr=Math.min(3,devicePixelRatio||1);
+      const mob=innerWidth<760, dpr=Math.min(2.5,devicePixelRatio||1);
       const W=Math.round(cv.clientWidth*dpr), H=Math.round(cv.clientHeight*dpr); if(!W||!H) return;
       if(cv.width!==W||cv.height!==H){ cv.width=W; cv.height=H; }
+      gl.viewport(0,0,W,H); gl.clearColor(0,0,0,0); gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
       mx+=(tx-mx)*.05; my+=(ty-my)*.05;
-      ctx.setTransform(1,0,0,1,0,0); ctx.clearRect(0,0,W,H); ctx.lineJoin="round";
-      const CX=(mob?.74:.79)*W, CY=(mob?.87:.47)*H, U=(mob?.032:.054)*Math.min(H,W*.9);
-      const ay=t*.12+.6+mx*.5, ax=-.48+my*.25, cy=Math.cos(ay), sy=Math.sin(ay), cx=Math.cos(ax), sx=Math.sin(ax), D=14;
-      const rot=([x,y,z])=>{ const x1=x*cy+z*sy, z1=-x*sy+z*cy; const y1=y*cx-z1*sx, z2=y*sx+z1*cx; return [x1,y1,z2]; };
-      const proj=([x,y,z])=>{ const f=D/(D-z); return [CX+x*U*f, CY-y*U*f]; };
-      // soft floor shadow
-      const sh=ctx.createRadialGradient(CX,CY+U*3.9,0,CX,CY+U*3.9,U*3.8); sh.addColorStop(0,"rgba(5,22,26,.06)"); sh.addColorStop(1,"rgba(5,22,26,0)");
-      ctx.fillStyle=sh; ctx.beginPath(); ctx.ellipse(CX,CY+U*3.9,U*3.8,U*.7,0,0,6.2832); ctx.fill();
-      const list=cubes.map(b=>{ const e=b.out*(.5-.5*Math.cos(t*b.sp*1.15+b.ph)); const p=b.c.map((v,i)=>v*1.04+b.d[i]*e); return {b,p,z:rot(p)[2]}; }).sort((a,b)=>a.z-b.z);
-      ctx.lineWidth=Math.max(1,dpr*.7);
-      for(const {b,p} of list){
-        const vs=V.map(v=>rot([p[0]+v[0]*.46,p[1]+v[1]*.46,p[2]+v[2]*.46]));
-        const faces=[];
-        for(const [n,idx] of F){ const rn=rot(n); if(rn[2]<=0) continue; faces.push([rn,idx]); }
-        for(const [rn,idx] of faces){
-          const lam=Math.max(0,rn[0]*L[0]+rn[1]*L[1]+rn[2]*L[2]);
-          const v=255*b.tone*(.76+.24*lam);
-          ctx.fillStyle=`rgb(${Math.round(v*.955)},${Math.round(v*.975)},${Math.min(255,Math.round(v*.99))})`; ctx.strokeStyle="rgba(5,22,26,.07)";
-          ctx.beginPath(); idx.forEach((ix,i)=>{ const [X,Y]=proj(vs[ix]); i?ctx.lineTo(X,Y):ctx.moveTo(X,Y); }); ctx.closePath(); ctx.fill(); ctx.stroke();
-        }
-      }
+      const top=(parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--hh"))||110)*dpr+14*dpr;
+      const CX=(mob?.74:.795)*W, CY=mob?H*.86:(top+H)/2;
+      const fmax=Dd/(Dd-ext), room=Math.min(CX-(mob?.5:.585)*W, W-CX, CY-top, H-CY)-8*dpr;
+      const Upx=Math.max(4,Math.min((mob?.04:.07)*Math.min(H,W*.9), room/(ext*fmax)));
+      const ay=t*.12+.6+mx*.5, ax=-.42+my*.22, c1=Math.cos(ay), s1=Math.sin(ay), c2=Math.cos(ax), s2=Math.sin(ax);
+      // R = Rx(ax) * Ry(ay), column-major for GLSL
+      const Rm=[c1, s2*s1, -c2*s1,  0, c2, s2,  s1, -s2*c1, c2*c1];
+      gl.uniformMatrix3fv(U.Rm,false,Rm); gl.uniform1f(U.D,Dd);
+      gl.uniform4f(U.P, CX/W*2-1, 1-CY/H*2, Upx/W*2, Upx/H*2);
+      for(const b of cubes){ const e=b.out*(.5-.5*Math.cos(t*b.sp+b.ph));
+        gl.uniform3f(U.off, b.c[0]*GAP+b.dir[0]*e, b.c[1]*GAP+b.dir[1]*e, b.c[2]*GAP+b.dir[2]*e); gl.uniform1f(U.tone,b.tone);
+        gl.drawArrays(gl.TRIANGLES,0,36); }
     }
     return {frame};
   }
