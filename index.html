@@ -7,7 +7,7 @@
 <title>Literacy Radar · Nova SBE project</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>:root{color-scheme:light} body{margin:0} img{max-width:100%} [hidden]{display:none!important}</style>
 </head>
 <body>
@@ -583,6 +583,31 @@ header.top,body.solid header.top{background:#FFFFFF!important;backdrop-filter:no
   .aikey-top{order:2;margin-left:auto;position:static!important;top:auto;right:auto}
   .tabs{order:3;width:100%;margin-left:0!important;justify-content:space-between;padding-bottom:var(--s2)}
 }
+
+/* ===== CMCC-inspired layer: light giant type, a full-bleed cube wall, clean stat grid ===== */
+.dhero h1{font-weight:300!important;letter-spacing:-.035em;line-height:1.02;font-size:clamp(2.7rem,6.2vw,6rem)!important;max-width:14ch}
+.dhero .giant b{font-weight:300!important;letter-spacing:-.04em}
+.mega{font-weight:300;letter-spacing:-.035em}
+h2{font-weight:500;letter-spacing:-.025em}
+.dhero{min-height:min(92vh,880px)}
+.dhero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.92) 26%,rgba(255,255,255,0) 58%)}
+.dhero .in > *{max-width:100%!important}
+.dhero .hgrid,.dhero .in > h1,.dhero .in > p,.dhero .in > .eyebrow,.dhero .in > .stats,.dhero .in > .field{max-width:min(680px,56%)!important}
+.btn{border-radius:6px}
+.btn.primary,.dhero .btn.primary,.fcta .btn.primary{background:#05161A;border-color:#05161A}
+.tab,.tabind,.aikey-top,.godown{border-radius:6px} .godown{width:44px;height:44px}
+/* stat grid, numbers first */
+.stats4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--line)}
+.stats4 .st{display:flex;flex-direction:column;gap:6px;padding:var(--s5) var(--s4) var(--s6) 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);transition:background .25s}
+.stats4 .st:hover{background:linear-gradient(180deg,rgba(109,165,192,.08),rgba(109,165,192,0))}
+.stats4 .st b{display:flex;align-items:baseline;gap:2px;font-weight:300;font-size:clamp(2.4rem,4.2vw,3.6rem);letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums;color:#05161A}
+.stats4 .st b i{font-style:normal;font-size:.5em;letter-spacing:0;margin-left:2px;color:var(--muted)}
+.stats4 .st b em{font-style:normal;font-size:12px;font-weight:700;letter-spacing:0;margin-left:10px;color:#0C7075} .stats4 .st b em.dn{color:#B26B00}
+.stats4 .st .k{font-size:var(--t-sm);font-weight:600;color:var(--ink);max-width:22ch;line-height:1.35}
+.stats4 .st small{font-size:11px;color:var(--muted);letter-spacing:.02em}
+@media (max-width:900px){.stats4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:860px){.dhero::before{background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.94) 55%,rgba(255,255,255,.2) 80%,rgba(255,255,255,0) 100%)} .dhero .hgrid,.dhero .in > h1,.dhero .in > p,.dhero .in > .eyebrow,.dhero .in > .stats,.dhero .in > .field{max-width:100%!important}}
+@media (max-width:760px){.dhero .in{padding-bottom:210px}}
 </style>
 
 <header class="top"><div class="wrap">
@@ -956,11 +981,11 @@ function applyIndDefaults(){ if(mk.touched) return; const d=indGet("dep_pt"), b=
 function indText(){ const it=S.ind?.items||[]; if(!it.length) return ""; return "Verified indicators (use these values; do not use other figures from memory):\n"+it.map(x=>`- ${indLabel(x)}: ${x.value}${x.unit||""} (${perEN(x.period)}; source: ${srcEN(x.source)})`).join("\n")+"\n"; }
 const fmtNum = (v,dec) => Number(v).toLocaleString("en-GB",{minimumFractionDigits:dec??1,maximumFractionDigits:dec??2});
 function vPills(){
-  const it=S.ind?.items||[]; if(!it.length) return `<div class="stack"><div class="layer p1"><span class="k">Loading indicators…</span></div></div>`;
-  return `<div class="stack">${it.map((x,i)=>{ const ch = x.prev!=null ? (+x.value-+x.prev) : null;
-    return `<a class="layer p${i%6+1}" ${x.url?`href="${esc(x.url)}" target="_blank" rel="noopener"`:""} title="Source: ${esc(srcEN(x.source))}">
-      <span class="k">${esc(indLabel(x))}<small>${esc(perEN(x.period))} · ${esc(srcEN(x.source))}</small></span>
-      <span class="v">${fmtNum(x.value,x.dec)}%${ch?`<small>${ch>0?"▲":"▼"} ${fmtNum(Math.abs(ch),x.dec)}</small>`:""}</span></a>`; }).join("")}</div>`;
+  const it=S.ind?.items||[]; if(!it.length) return `<div class="stats4"><div class="st"><b>…</b><span>Loading indicators</span></div></div>`;
+  return `<div class="stats4">${it.map(x=>{ const ch = x.prev!=null ? (+x.value-+x.prev) : null;
+    return `<a class="st" ${x.url?`href="${esc(x.url)}" target="_blank" rel="noopener"`:""} title="Source: ${esc(srcEN(x.source))}">
+      <b><span class="v">${fmtNum(x.value,x.dec)}</span><i>%</i>${ch?`<em class="${ch>0?"up":"dn"}">${ch>0?"▲":"▼"} ${fmtNum(Math.abs(ch),x.dec)}</em>`:""}</b>
+      <span class="k">${esc(indLabel(x))}</span><small>${esc(perEN(x.period))} · ${esc(srcEN(x.source))}</small></a>`; }).join("")}</div>`;
 }
 function vInd(){
   const it=S.ind?.items||[]; if(!it.length) return "";
@@ -1531,7 +1556,7 @@ ${R.msg.slice(0,4000)}
 /* ---------- Motion layer (ticker, reveal, count-up, tab indicator) ---------- */
 /* Living ribbons: translucent sheets of fine strands that twist slowly, drawn with additive light
    in the palette's teals and blues. Canvas 2D, ~30 fps, pauses off-screen, still frame for reduced motion. */
-/* Cube block on white: a 4x4x4 cluster of soft-lit white cubes that slowly turns while outer cubes drift out and back,
+/* Cube wall on white: a diagonal field of soft-lit cubes rippling in depth, inspired by calm institutional sites,
    with depth (far ones smaller and paler) and soft contact shadows. Canvas 2D at full device
    resolution, so edges stay crisp. ~30 fps, pauses off-screen, still frame for reduced motion. */
 const RIBBONS=(()=>{
@@ -1541,32 +1566,29 @@ const RIBBONS=(()=>{
   const mix=(a,b,k)=>a.map((v,i)=>Math.round(v+(b[i]-v)*k));
   const css=c=>`rgb(${c[0]},${c[1]},${c[2]})`;
   addEventListener("pointermove",e=>{ tx=e.clientX/innerWidth-.5; ty=e.clientY/innerHeight-.5; },{passive:true});
-  // Cube block, drawn with WebGL and a real depth buffer so overlaps are always right; canvas runs at device
-  // resolution with antialiasing (crisp edges), and the block is scaled so it never leaves its canvas.
+  // Cube wall: a diagonal field of soft-lit cubes that ripple in depth, drawn with WebGL (depth buffer,
+  // device resolution, antialiasing). It is a full-bleed backdrop, so it runs off the edges on purpose.
   function make(cv){
-    const gl=cv.getContext("webgl",{antialias:true,alpha:true,premultipliedAlpha:true,preserveDrawingBuffer:false}); if(!gl) return null;
+    const gl=cv.getContext("webgl",{antialias:true,alpha:true,premultipliedAlpha:true}); if(!gl) return null;
     const sd=+cv.dataset.seed||1; let q=sd*9301+49297; const R=()=>{ q=(q*9301+49297)%233280; return q/233280; };
-    // outer cubes slide straight out along one face axis: they never pass through each other
-    const N=4, cubes=[]; const h=(N-1)/2;
-    for(let i=0;i<N;i++) for(let j=0;j<N;j++) for(let k=0;k<N;k++){
-      const c=[i-h,j-h,k-h]; const ax=[0,1,2].filter(a=>Math.abs(c[a])===h);
-      if(ax.length&&R()<.12) continue;
-      let dir=[0,0,0], out=0;
-      if(ax.length&&R()<.72){ const a=ax[Math.floor(R()*ax.length)]; dir[a]=Math.sign(c[a]); out=.5+R()*1.15; }
-      cubes.push({c,dir,out,ph:R()*6.283,sp:.32+R()*.3,tone:.975+R()*.025});
-    }
-    const GAP=1.04, HALF=.46;
-    let ext=0; cubes.forEach(b=>{ const p=b.c.map((v,i)=>v*GAP+b.dir[i]*b.out); ext=Math.max(ext,Math.hypot(...p)); }); ext+=HALF*Math.sqrt(3);
-    const VS=`attribute vec3 p;attribute vec3 n;attribute vec2 uv;uniform vec3 off;uniform mat3 Rm;uniform vec4 P;uniform float D;varying vec3 vn;varying vec2 vuv;
+    const COLS=26, ROWS=14, cubes=[];
+    for(let i=0;i<COLS;i++) for(let j=0;j<ROWS;j++){ const u=i-(COLS-1)/2, v=j-(ROWS-1)/2;
+      // keep a diagonal band, ragged at the edges, like a wall breaking up
+      const band=Math.abs(v*1.0-u*.18); if(band>3.6+R()*1.4) continue;
+      cubes.push({u,v,ph:R()*6.283,amp:.25+R()*.55,lift:R()<.12?.6+R()*.8:0,tone:.965+R()*.035}); }
+    const HALF=.47;
+    const VS=`attribute vec3 p;attribute vec3 n;attribute vec2 uv;uniform vec3 off;uniform mat3 Rm;uniform vec4 P;uniform float D;varying vec3 vn;varying vec2 vuv;varying float vx;
       void main(){vec3 w=Rm*(p*${HALF.toFixed(2)}+off);float ww=(D-w.z)/D;vn=Rm*n;vuv=uv;
-      gl_Position=vec4(P.x*ww+w.x*P.z, P.y*ww+w.y*P.w, (-w.z/40.)*ww, ww);}`;
-    const FS=`precision highp float;varying vec3 vn;varying vec2 vuv;uniform float tone;
-      void main(){vec3 N=normalize(vn);vec3 L=normalize(vec3(-.45,.75,.5));float lam=max(dot(N,L),0.);
-      float e=max(abs(vuv.x),abs(vuv.y));float edge=smoothstep(.86,1.,e);
-      float sh=(.75+.25*lam)*tone-edge*.07+(1.-edge)*.012;
-      gl_FragColor=vec4(vec3(.955,.975,.99)*sh,1.);}`;
-    const sh=(t,src)=>{ const o=gl.createShader(t); gl.shaderSource(o,src); gl.compileShader(o); if(!gl.getShaderParameter(o,gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(o)); return o; };
-    const prog=gl.createProgram(); gl.attachShader(prog,sh(gl.VERTEX_SHADER,VS)); gl.attachShader(prog,sh(gl.FRAGMENT_SHADER,FS)); gl.linkProgram(prog);
+      vec4 c=vec4(P.x*ww+w.x*P.z, P.y*ww+w.y*P.w, (-w.z/60.)*ww, ww);vx=c.x/c.w;gl_Position=c;}`;
+    const FS=`precision highp float;varying vec3 vn;varying vec2 vuv;varying float vx;uniform float tone;
+      void main(){vec3 N=normalize(vn);vec3 L=normalize(vec3(-.35,.45,.82));float lam=max(dot(N,L),0.);
+      float e=max(abs(vuv.x),abs(vuv.y));float edge=smoothstep(.9,1.,e);
+      float sh=(.84+.17*lam)*tone-edge*.035;
+      vec3 cool=vec3(.90,.955,.97), warm=vec3(1.,1.,1.);
+      vec3 base=mix(warm,cool,smoothstep(-.2,1.,vx));
+      gl_FragColor=vec4(base*sh,1.);}`;
+    const shd=(t,src)=>{ const o=gl.createShader(t); gl.shaderSource(o,src); gl.compileShader(o); if(!gl.getShaderParameter(o,gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(o)); return o; };
+    const prog=gl.createProgram(); gl.attachShader(prog,shd(gl.VERTEX_SHADER,VS)); gl.attachShader(prog,shd(gl.FRAGMENT_SHADER,FS)); gl.linkProgram(prog);
     if(!gl.getProgramParameter(prog,gl.LINK_STATUS)) return null; gl.useProgram(prog);
     const pos=[],nor=[],uvs=[];
     const FACES=[[[1,0,0],[0,0,-1],[0,1,0]],[[-1,0,0],[0,0,1],[0,1,0]],[[0,1,0],[1,0,0],[0,0,-1]],[[0,-1,0],[1,0,0],[0,0,1]],[[0,0,1],[1,0,0],[0,1,0]],[[0,0,-1],[-1,0,0],[0,1,0]]];
@@ -1574,26 +1596,26 @@ const RIBBONS=(()=>{
     const buf=(data,loc,size)=>{ const bo=gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,bo); gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(data),gl.STATIC_DRAW); const l=gl.getAttribLocation(prog,loc); gl.enableVertexAttribArray(l); gl.vertexAttribPointer(l,size,gl.FLOAT,false,0,0); };
     buf(pos,"p",3); buf(nor,"n",3); buf(uvs,"uv",2);
     const U={}; ["off","Rm","P","D","tone"].forEach(k=>U[k]=gl.getUniformLocation(prog,k));
-    gl.enable(gl.DEPTH_TEST); gl.enable(gl.CULL_FACE); gl.cullFace(gl.BACK); gl.frontFace(gl.CCW);
-    const Dd=22;
+    gl.enable(gl.DEPTH_TEST); gl.enable(gl.CULL_FACE);
+    const Dd=26;
     function frame(t){
       const mob=innerWidth<760, dpr=Math.min(2.5,devicePixelRatio||1);
       const W=Math.round(cv.clientWidth*dpr), H=Math.round(cv.clientHeight*dpr); if(!W||!H) return;
       if(cv.width!==W||cv.height!==H){ cv.width=W; cv.height=H; }
       gl.viewport(0,0,W,H); gl.clearColor(0,0,0,0); gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
       mx+=(tx-mx)*.05; my+=(ty-my)*.05;
-      const top=(parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--hh"))||110)*dpr+14*dpr;
-      const CX=(mob?.74:.795)*W, CY=mob?H*.86:(top+H)/2;
-      const fmax=Dd/(Dd-ext), room=Math.min(CX-(mob?.5:.585)*W, W-CX, CY-top, H-CY)-8*dpr;
-      const Upx=Math.max(4,Math.min((mob?.04:.07)*Math.min(H,W*.9), room/(ext*fmax)));
-      const ay=t*.12+.6+mx*.5, ax=-.42+my*.22, c1=Math.cos(ay), s1=Math.sin(ay), c2=Math.cos(ax), s2=Math.sin(ax);
-      // R = Rx(ax) * Ry(ay), column-major for GLSL
-      const Rm=[c1, s2*s1, -c2*s1,  0, c2, s2,  s1, -s2*c1, c2*c1];
-      gl.uniformMatrix3fv(U.Rm,false,Rm); gl.uniform1f(U.D,Dd);
+      const CX=(mob?.62:.72)*W, CY=(mob?.66:.5)*H, Upx=(mob?.07:.046)*Math.max(W*.62,H);
+      // wall plane turned towards the viewer, then rolled onto a diagonal
+      const ry=-.62+mx*.12, rx=.42+my*.08, rz=.62;
+      const cy=Math.cos(ry), sy=Math.sin(ry), cx=Math.cos(rx), sx=Math.sin(rx), cz=Math.cos(rz), sz=Math.sin(rz);
+      // R = Rz * Rx * Ry  (column-major)
+      const Ry=[cy,0,-sy, 0,1,0, sy,0,cy], Rx=[1,0,0, 0,cx,sx, 0,-sx,cx], Rz=[cz,sz,0, -sz,cz,0, 0,0,1];
+      const mul=(A,B)=>{ const o=new Array(9); for(let c=0;c<3;c++) for(let r=0;r<3;r++){ let s=0; for(let k=0;k<3;k++) s+=A[k*3+r]*B[c*3+k]; o[c*3+r]=s; } return o; };
+      gl.uniformMatrix3fv(U.Rm,false,mul(Rz,mul(Rx,Ry))); gl.uniform1f(U.D,Dd);
       gl.uniform4f(U.P, CX/W*2-1, 1-CY/H*2, Upx/W*2, Upx/H*2);
-      for(const b of cubes){ const e=b.out*(.5-.5*Math.cos(t*b.sp+b.ph));
-        gl.uniform3f(U.off, b.c[0]*GAP+b.dir[0]*e, b.c[1]*GAP+b.dir[1]*e, b.c[2]*GAP+b.dir[2]*e); gl.uniform1f(U.tone,b.tone);
-        gl.drawArrays(gl.TRIANGLES,0,36); }
+      for(const b of cubes){
+        const z=b.amp*Math.sin(t*.5+b.u*.35+b.v*.22+b.ph*.35)+b.lift*(.5-.5*Math.cos(t*.4+b.ph));
+        gl.uniform3f(U.off, b.u*1.0, b.v*1.0, z); gl.uniform1f(U.tone,b.tone); gl.drawArrays(gl.TRIANGLES,0,36); }
     }
     return {frame};
   }
@@ -1638,8 +1660,8 @@ function motion(m){
   m.classList.remove("enter"); void m.offsetWidth; m.classList.add("enter");
   m.classList.add("play"); clearTimeout(motion._p); motion._p=setTimeout(()=>m.classList.remove("play"),1800);
   rvIO?.disconnect(); rvIO=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("shown"); rvIO.unobserve(e.target); } }),{rootMargin:"0px 0px -6% 0px"});
-  m.querySelectorAll(".panel,.story,.ncard,.idea,.pillgrid .layer,.acls,.step,.reply").forEach((el,i)=>{ el.classList.add("rv"); el.style.transitionDelay=Math.min(i%8,7)*45+"ms"; rvIO.observe(el); });
-  m.querySelectorAll(".giant b,.pillgrid .layer .v").forEach(el=>{ const v=el.querySelector?el.childNodes[0]:null; if(el.matches(".giant b")) countUp(el); else if(v&&v.nodeType===3){ const sp=document.createElement("span"); sp.textContent=v.textContent; el.replaceChild(sp,v); countUp(sp); } });
+  m.querySelectorAll(".panel,.story,.ncard,.idea,.pillgrid .st,.acls,.step,.reply").forEach((el,i)=>{ el.classList.add("rv"); el.style.transitionDelay=Math.min(i%8,7)*45+"ms"; rvIO.observe(el); });
+  m.querySelectorAll(".giant b,.pillgrid .st .v").forEach(el=>{ const v=el.querySelector?el.childNodes[0]:null; if(el.matches(".giant b")) countUp(el); else if(v&&v.nodeType===3){ const sp=document.createElement("span"); sp.textContent=v.textContent; el.replaceChild(sp,v); countUp(sp); } });
 }
 function moveInd(){
   const nav=document.querySelector("nav.tabs"); if(!nav) return; let ind=nav.querySelector(".tabind"); if(!ind){ ind=document.createElement("span"); ind.className="tabind"; nav.prepend(ind); }
