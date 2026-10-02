@@ -438,6 +438,79 @@ a.layer{transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s} a.la
 .story .q.care{background:var(--bg);border-radius:var(--r-sm);padding:var(--s3)}
 .story .acts{display:flex;gap:var(--s2);flex-wrap:wrap;margin-top:auto;padding-top:var(--s2)}
 .story .acts a{text-decoration:none}
+
+/* ===== Marble-level layer: dark hero bands with living ribbons, white reading areas ===== */
+:root{--dk:#05161A;--dk2:#072E33;--lt:#E6F1F3}
+header.top{background:rgba(5,22,26,.94);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);color:#fff;border-bottom:1px solid rgba(255,255,255,.06)}
+header.top .logo{color:#fff;font-weight:800}
+header.top .logo i{border-color:#0F969C} header.top .logo i::after{background:#6DA5C0}
+.tab{color:rgba(230,241,243,.72);text-transform:uppercase;letter-spacing:.09em;font-size:11.5px;font-weight:800}
+.tab:hover{color:#fff;background:rgba(255,255,255,.07)}
+.tabind{background:#fff} .tab.on{color:var(--dk)!important} .tabs.noind .tab.on{background:#fff!important}
+.ticker{background:var(--dk);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+/* buttons: uppercase pills with a travelling arrow */
+.btn{text-transform:uppercase;letter-spacing:.07em;font-size:11.5px;font-weight:800}
+.btn.small{font-size:10.5px}
+.btn.primary::after{content:"→";font-size:13px;letter-spacing:0;transition:transform .25s cubic-bezier(.2,.7,.2,1)}
+.btn.primary:hover::after{transform:translateX(3px)}
+/* headings and section rhythm */
+h2{font-size:clamp(1.6rem,2.6vw,2.3rem);font-weight:700;letter-spacing:-.04em;line-height:1.05}
+.eyebrow{display:inline-flex;align-items:center;gap:0;color:var(--muted);letter-spacing:.14em}
+.eyebrow::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:#0F969C;box-shadow:9px 0 0 #6DA5C0;margin-right:21px}
+.panel{border-color:#E3ECEE;border-radius:28px}
+main.wrap{gap:var(--s7)}
+/* the dark hero */
+.dhero{background:var(--dk);color:#fff;min-height:min(84vh,800px);display:flex;align-items:flex-end;isolation:isolate}
+.dhero canvas.rib,.fcta canvas.rib{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0;-webkit-mask-image:linear-gradient(104deg,transparent 6%,rgba(0,0,0,.55) 34%,#000 60%);mask-image:linear-gradient(104deg,transparent 6%,rgba(0,0,0,.55) 34%,#000 60%)}
+.dhero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(rgba(5,22,26,0),var(--dk));z-index:1;pointer-events:none}
+.dhero .in{position:relative;z-index:2;width:100%;max-width:1120px;margin:0 auto;padding:clamp(96px,14vh,160px) var(--s5) var(--s7);display:flex;flex-direction:column;gap:var(--s5)}
+.dhero h1{font-size:clamp(2.6rem,7vw,6.3rem);font-weight:700;line-height:.97;letter-spacing:-.055em;color:#fff;max-width:14ch}
+.dhero .eyebrow{color:#9CC3D3} .dhero .muted{color:rgba(230,241,243,.72)}
+.dhero p.muted{font-size:1.125rem;line-height:1.55;max-width:46ch}
+.dhero .btn{background:transparent;color:#fff;border-color:rgba(255,255,255,.28)}
+.dhero .btn:hover{border-color:#fff}
+.dhero .btn.primary{background:#fff;color:var(--dk);border-color:#fff}
+.dhero .btn.primary:hover{background:#6DA5C0;border-color:#6DA5C0;color:var(--dk)}
+.dhero .field .label{color:rgba(230,241,243,.7)}
+.dhero .field input{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.2);color:#fff}
+.dhero .stats{display:flex!important;flex-direction:row!important;flex-wrap:wrap;gap:var(--s3)!important;margin-top:var(--s2)}
+.dhero .stat{background:rgba(255,255,255,.06)!important;border:1px solid rgba(255,255,255,.12)!important;box-shadow:none!important;border-radius:999px;height:auto;min-height:48px;margin:0!important;padding:var(--s2) var(--s5)!important;display:flex;flex-direction:row-reverse;align-items:center;gap:var(--s3);color:#fff;backdrop-filter:blur(6px)}
+.dhero .stat b{font-size:1.15rem;font-weight:800} .dhero .stat span{color:rgba(230,241,243,.75);font-size:var(--t-xs);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.dhero .hgrid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:var(--s6);align-items:end}
+.dhero .hfoot{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--s5);flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.1);padding-top:var(--s5)}
+.dhero .hfoot .meta{font-size:var(--t-xs);color:rgba(230,241,243,.55);font-weight:600}
+.dhero .giant b{background:linear-gradient(180deg,#FFFFFF 10%,#6DA5C0 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.dhero .giant em{color:#6DA5C0} .dhero .giant span{color:rgba(230,241,243,.7)}
+.dhero .giant b{font-size:clamp(4.5rem,11vw,9.5rem)}
+.godown{width:48px;height:48px;border-radius:50%;border:0;background:#fff;color:var(--dk);font-size:18px;font-weight:800;cursor:pointer;display:grid;place-items:center;transition:transform .25s cubic-bezier(.2,.7,.2,1),background .2s}
+.godown:hover{transform:translateY(3px);background:#6DA5C0}
+@media (max-width:860px){.dhero{min-height:0} .dhero .hgrid{grid-template-columns:minmax(0,1fr)} .dhero .giant{align-items:flex-start;text-align:left} .dhero .in{padding-top:var(--s8)}}
+@media (max-width:640px){.dhero .in{padding-inline:var(--s4);gap:var(--s4)} .dhero p.muted{font-size:var(--t-md)} .godown{display:none}}
+.pillgrid,.seg{scroll-margin-top:130px}
+/* headline reveal, word by word */
+.dhero h1 .w,.mega .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.1em;margin-bottom:-.1em}
+.dhero h1 .w>span,.mega .w>span{display:inline-block}
+main.play .dhero h1 .w>span{animation:rise .95s cubic-bezier(.2,.75,.1,1) both;animation-delay:calc(var(--i) * 55ms + 80ms)}
+@keyframes rise{from{transform:translateY(108%)}to{transform:none}}
+@media (prefers-reduced-motion:reduce){main.play .dhero h1 .w>span{animation:none}}
+/* closing band + footer */
+.foot{background:var(--dk);color:var(--lt);position:relative;z-index:1}
+.fcta{position:relative;overflow:hidden;background:radial-gradient(120% 140% at 85% 20%,#0C7075 0%,#072E33 45%,#05161A 80%);isolation:isolate}
+.fcta canvas.rib{-webkit-mask-image:none;mask-image:none;opacity:.9}
+.fcta .in{position:relative;z-index:2;max-width:1120px;margin:0 auto;padding:clamp(80px,14vh,140px) var(--s5);display:flex;flex-direction:column;gap:var(--s5);align-items:flex-start}
+.fcta .eyebrow{color:#9CC3D3}
+.mega{font-size:clamp(2.8rem,8vw,7rem);font-weight:700;line-height:.95;letter-spacing:-.055em;color:#fff;margin:0;max-width:12ch}
+.fcta .btn.primary{background:#fff;color:var(--dk);border-color:#fff} .fcta .btn.primary:hover{background:#6DA5C0;border-color:#6DA5C0}
+.fbot .in{max-width:1120px;margin:0 auto;padding:var(--s7) var(--s5) var(--s6);display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:var(--s6)}
+.fbot .logo{color:#fff}
+.fbot p{font-size:var(--t-sm);color:rgba(230,241,243,.6);line-height:1.6;margin-top:var(--s3);max-width:34ch}
+.fbot h4{margin:0 0 var(--s3);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#6DA5C0;font-weight:800}
+.fbot ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:var(--s2);font-size:var(--t-sm);color:rgba(230,241,243,.75)}
+.flink{background:none;border:0;padding:0;color:rgba(230,241,243,.85);cursor:pointer;font:600 var(--t-sm)/1.4 var(--f-body);text-align:left}
+.flink:hover{color:#fff;text-decoration:underline}
+.flegal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.08);padding-top:var(--s4);display:flex;justify-content:space-between;gap:var(--s4);flex-wrap:wrap;font-size:var(--t-xs);color:rgba(230,241,243,.5)}
+@media (max-width:860px){.fbot .in{grid-template-columns:repeat(2,minmax(0,1fr))} .fbot .in>div:first-child{grid-column:1/-1}}
+@media (max-width:640px){.fcta .in,.fbot .in{padding-inline:var(--s4)}}
 </style>
 
 <header class="top"><div class="wrap">
@@ -446,6 +519,21 @@ a.layer{transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s} a.la
 </div></header>
 <div class="ticker" id="ticker" aria-label="Market ticker"></div>
 <main class="wrap" id="main"></main>
+<footer class="foot">
+  <section class="fcta"><canvas class="rib" data-seed="9" aria-hidden="true"></canvas><div class="in">
+    <span class="eyebrow">Made for everyday savers</span>
+    <h2 class="mega">Money news, made clear.</h2>
+    <p style="color:rgba(230,241,243,.75);max-width:46ch;font-size:1.0625rem;line-height:1.55">Read what moved today, see what it means for your money, then turn it into content in minutes.</p>
+    <button class="btn primary" data-tab="studio" type="button">Open the Studio</button>
+  </div></section>
+  <div class="fbot"><div class="in">
+    <div><div class="logo"><i></i>Literacy Radar</div><p>A daily, plain-English read of the financial news, built as a Nova SBE project for the course "Boosting productivity with AI".</p></div>
+    <div><h4>Explore</h4><ul><li><button class="flink" data-tab="mkt" type="button">Markets</button></li><li><button class="flink" data-tab="ask" type="button">Ask the Radar</button></li><li><button class="flink" data-tab="lib" type="button">Library</button></li><li><button class="flink" data-tab="studio" type="button">Studio</button></li></ul></div>
+    <div><h4>Sources</h4><ul><li>Bloomberg · Financial Times</li><li>WSJ · The Economist</li><li>CNBC · MarketWatch · BBC</li><li>ECB · Fed · Eurostat · INE</li></ul></div>
+    <div><h4>Good to know</h4><ul><li>Educational only</li><li>No buy or sell calls</li><li>Capital at risk</li></ul></div>
+    <div class="flegal"><span>Educational content generated from public news. Not investment advice. Past performance is not a guide to future returns.</span><span>© 2026 Literacy Radar</span></div>
+  </div></div>
+</footer>
 <div class="toast" id="toast" hidden></div>
 <script>
 // Literacy Radar — standalone runtime for GitHub Pages (100% free).
@@ -637,7 +725,7 @@ let tab="mkt";
 const st = { input: ls.get("radar-input",""), level:"beginner", formats:new Set(["carousel","reel"]), ideas:null, sel:null, content:null, busy:null, err:"", t0:0, ideaMs:0, contentMs:0, pieceId:null, openPiece:null, newsDay:null, picked:new Set(), cat:"", src:"", lang:"en", tone:"playful", own:"", done:0, nmore:false };
 const baseline = () => +ls.get("radar-baseline","120") || 120;
 
-document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>{ tab=b.dataset.tab; st.openPiece=null; animateNext=true; window.scrollTo({top:0}); document.querySelectorAll("[data-tab]").forEach(x=>x.classList.toggle("on",x===b)); render(); });
+document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>{ tab=b.dataset.tab; st.openPiece=null; animateNext=true; window.scrollTo({top:0}); document.querySelectorAll(".tab[data-tab]").forEach(x=>x.classList.toggle("on",x.dataset.tab===tab)); render(); });
 
 /* ---------- Render ---------- */
 function stats(){
@@ -649,7 +737,7 @@ function stats(){
     <div class="stat"><b>${n?Math.round(saved/3600000*10)/10+" h":"—"}</b><span>saved vs. ${baseline()} min by hand</span></div></div>`;
 }
 function vStudio(){
-  let h = `<section class="bleed cubes"><div class="in">
+  let h = `<section class="bleed dhero"><canvas class="rib" data-seed="2" aria-hidden="true"></canvas><div class="in">
       <span class="eyebrow">Content studio</span>
       <h1>From today's news to content ready to post.</h1>
       <p class="muted">Pick some news or write your own topic. The Studio suggests ideas and writes Instagram posts, LinkedIn posts and articles, opinion pieces, PowerPoint decks and newsletters, with a regulatory check built in.</p>${window.RADAR_AI_KEY?`<button class="btn small" id="aikey" type="button" style="align-self:flex-start">AI key</button>`:""}${stats()}</div></section>
@@ -771,7 +859,7 @@ function vLib(){
   if(st.openPiece){ const p=S.pieces.find(x=>x.id===st.openPiece); if(p) return `<button class="btn small" id="back" type="button" style="align-self:flex-start">← Library</button>
     <section class="panel"><span class="label">${esc(new Date(p.createdAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric"}))}</span><h1>${esc(p.idea?.title)}</h1><p class="muted">${esc(p.idea?.hook)}</p></section>`+vContent(p.content,{total:p.totalMs}); }
   const list=[...S.pieces].sort((a,b)=>(b.createdAt||0)-(a.createdAt||0));
-  return `<section class="bleed cubes"><div class="in"><span class="eyebrow">Library</span><h1>Everything you've made</h1>
+  return `<section class="bleed dhero"><canvas class="rib" data-seed="3" aria-hidden="true"></canvas><div class="in"><span class="eyebrow">Library</span><h1>Everything you've made</h1>
     <label class="field" style="max-width:320px"><span class="label">How long a post takes you without the Radar (min)</span><input id="base" type="number" min="5" step="5" value="${baseline()}"></label>${stats()}</div></section>
     ${!S.persistent?`<p class="notice">This view keeps your pieces in this browser only.</p>`:""}
     ${list.length?`<section class="panel"><div class="lib">${list.map(p=>`<button class="librow" data-piece="${esc(p.id)}" type="button"><span class="mono muted">${esc(new Date(p.createdAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}</span><span style="min-width:0"><b>${esc(p.idea?.title)}</b><div class="muted" style="font-size:.88rem">${esc(Object.keys(p.content||{}).filter(k=>k!=="compliance").map(k=>FORMATS.find(f=>f[0]===k)?.[1]).filter(Boolean).join(" · "))}</div></span><span class="pill ${(+p.content?.compliance?.score||0)>=85?"":(+p.content?.compliance?.score||0)>=60?"warn":"bad"}">${esc(p.content?.compliance?.score??"—")}</span></button>`).join("")}</div></section>`
@@ -813,7 +901,7 @@ function vInd(){
 function newsBlock(day){ return (day.items||[]).map(it=>`- [${it.source}, ${it.published||""}] ${it.title}${it.summary?" — "+it.summary:""}`).join("\n").slice(0,30000); }
 function vAsk(){
   const day=latestDay();
-  let h = `<section class="bleed cubes"><div class="in"><span class="eyebrow">Ask the Radar</span><h1>Ask anything about today's money news.</h1><p class="muted">Answers use the stories collected today and the verified indicators. Scenarios and risks, never buy or sell calls.</p></div></section>`;
+  let h = `<section class="bleed dhero"><canvas class="rib" data-seed="4" aria-hidden="true"></canvas><div class="in"><span class="eyebrow">Ask the Radar</span><h1>Ask anything about today's money news.</h1><p class="muted">Answers use the stories collected today and the verified indicators. Scenarios and risks, never buy or sell calls.</p></div></section>`;
   h += `<section class="panel"><div class="ptitle"><h2>Your question</h2></div>
     <p class="muted" style="font-size:.9rem">Ask anything about today's markets. The answer uses the collected news and shows scenarios and risks, never buy or sell calls.</p>
     <div class="chips">${["What could earn more than a deposit right now?","With rates rising, do bonds make sense to look at?","What does rising oil mean for investors?","Which risks are growing in markets this week?"].map(q=>`<button class="chip" type="button" data-q="${esc(q)}">${esc(q)}</button>`).join("")}</div>
@@ -833,10 +921,13 @@ function vMarkets(){
   const sub = iPT&&dPT ? `Inflation at ${fmtNum(iPT.value,iPT.dec)}%, term deposits at ${fmtNum(dPT.value,dPT.dec)}%.` : "What today's news says about each type of investment.";
   const SUBS=[["brief","The Brief"],["hoje","Daily map"],["mes","Month"],["sim","Simulator"]]; mk.sub=mk.sub||"brief"; if(mk.sub==="perg") mk.sub="brief";
   const bb=ins0?.brief; const gNum = bb?.number?.value || (iPT?fmtNum(iPT.value,iPT.dec)+"%":""); const gCap = bb?.number?.value ? (bb.number.caption||"") : (iPT?`${indLabel(iPT)} · ${perEN(iPT.period)}`:"");
-  let h = `<section class="hero">${gNum?`<div class="giant" aria-label="Number of the day: ${esc(gNum)}"><em>Number of the day</em><b data-count="${esc(gNum)}">${esc(gNum)}</b><span>${esc(gCap)}</span></div>`:""}<div class="in">
+  const meta = `${day?`${(day.items||[]).length} stories from ${(day.sources||[]).length} sources`:"Waiting for the first collection"}${S.ind?` · indicators verified ${esc(new Date(S.ind.updatedAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}`:""}${day&&day.collectedAt?` · news at ${esc(new Date(day.collectedAt).toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"}))}`:""}`;
+  let h = `<section class="bleed dhero mk"><canvas class="rib" data-seed="1" aria-hidden="true"></canvas><div class="in">
       <span class="eyebrow">Literacy Radar · ${esc(new Date().toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"}))}</span>
-      <h1>${esc(head)}</h1><p class="muted">${esc(sub)}</p>
-      <span class="muted" style="font-size:var(--t-xs)">${day?`${(day.items||[]).length} stories from ${(day.sources||[]).length} sources`:"Waiting for the first collection"}${S.ind?` · verified indicators updated ${esc(new Date(S.ind.updatedAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}`:""}${day&&day.collectedAt?` · news at ${esc(new Date(day.collectedAt).toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"}))}`:""}</span></div></section>
+      <div class="hgrid"><h1>${esc(head)}</h1>${gNum?`<div class="giant" aria-label="Number of the day: ${esc(gNum)}"><em>Number of the day</em><b data-count="${esc(gNum)}">${esc(gNum)}</b><span>${esc(gCap)}</span></div>`:""}</div>
+      <div class="hfoot"><div style="display:flex;flex-direction:column;gap:var(--s2)"><p class="muted">${esc(sub)}</p><span class="meta">${meta}</span></div>
+        <div class="row"><button class="btn primary" type="button" data-jump=".seg" data-go="brief">Read The Brief</button><button class="godown" type="button" data-jump=".pillgrid" aria-label="Scroll to the indicators">↓</button></div></div>
+    </div></section>
   <section class="pillgrid" aria-label="Verified indicators">${vPills()}</section>
   <nav class="seg" role="tablist" aria-label="Markets sections">${SUBS.map(([k,t])=>`<button type="button" role="tab" aria-selected="${mk.sub===k}" class="${mk.sub===k?"on":""}" data-sub="${k}">${t}</button>`).join("")}</nav>`;
   if(mk.sub==="hoje") h += `<section class="panel"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>Daily map</h2>
@@ -1284,7 +1375,7 @@ function vRoutine(){
   const weekN=days.filter(d=>d.n>=3).length; const doneN=todayDone.filter(Boolean).length;
   const wk=weekId(today); const sig=R.data.signals||{}; const weeks=Object.keys(sig).sort().reverse().slice(0,6); if(!weeks.includes(wk)) weeks.unshift(wk);
   const mins = R.timer ? `${String(Math.floor(R.left/60)).padStart(2,"0")}:${String(R.left%60).padStart(2,"0")}` : "15:00";
-  return `<section class="bleed cubes"><div class="in"><span class="eyebrow">Engagement routine · Instagram and LinkedIn</span>
+  return `<section class="bleed dhero"><canvas class="rib" data-seed="5" aria-hidden="true"></canvas><div class="in"><span class="eyebrow">Engagement routine · Instagram and LinkedIn</span>
       <h1>15 minutes a day, always in the same window.</h1>
       <p class="muted">Replying and commenting is what grows an account most, but only if it's a habit you can keep. The routine is short on purpose. The Radar doesn't post or read your messages: you engage in the apps and the Radar helps you write the replies.</p>
     <div class="stats"><div class="stat"><b>${doneN}/4</b><span>steps today</span></div><div class="stat"><b>${weekN}/5</b><span>days done this week</span></div><div class="stat"><b>${esc(win)}</b><span>your daily window</span></div></div></div></section>
@@ -1366,6 +1457,60 @@ ${R.msg.slice(0,4000)}
 }
 
 /* ---------- Motion layer (ticker, reveal, count-up, tab indicator) ---------- */
+/* Living ribbons: translucent sheets of fine strands that twist slowly, drawn with additive light
+   in the palette's teals and blues. Canvas 2D, ~30 fps, pauses off-screen, still frame for reduced motion. */
+const RIBBONS=(()=>{
+  const T0=performance.now(); let live=[], raf=0, io=null, last=0;
+  const COL=[[15,150,156],[109,165,192],[12,112,117],[190,226,232]];
+  function make(cv){
+    const ctx=cv.getContext("2d"); if(!ctx) return null;
+    const sd=+cv.dataset.seed||1, r=k=>{ const x=Math.sin(sd*97.13+k*31.7)*43758.5453; return x-Math.floor(x); };
+    const sheets=[
+      {c:0,y:.44,amp:.15,f:.85,sp:.10,tw:1.05,w:.30,ph:r(1)*6.28,a:.055},
+      {c:1,y:.58,amp:.11,f:1.15,sp:-.075,tw:1.6,w:.20,ph:r(2)*6.28,a:.05},
+      {c:2,y:.34,amp:.09,f:1.5,sp:.13,tw:2.2,w:.12,ph:r(3)*6.28,a:.06},
+      {c:3,y:.50,amp:.07,f:1.9,sp:-.11,tw:2.7,w:.05,ph:r(4)*6.28,a:.05}];
+    function frame(t){
+      const mob=innerWidth<760, dpr=Math.min(mob?1.5:2,devicePixelRatio||1);
+      const W=Math.round(cv.clientWidth*dpr), H=Math.round(cv.clientHeight*dpr); if(!W||!H) return;
+      if(cv.width!==W||cv.height!==H){ cv.width=W; cv.height=H; }
+      ctx.setTransform(1,0,0,1,0,0); ctx.globalCompositeOperation="source-over"; ctx.clearRect(0,0,W,H);
+      const g=ctx.createRadialGradient(W*.72,H*.38,0,W*.72,H*.38,Math.max(W,H)*.55); g.addColorStop(0,"rgba(15,150,156,.20)"); g.addColorStop(1,"rgba(15,150,156,0)"); ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
+      ctx.globalCompositeOperation="lighter"; ctx.lineWidth=Math.max(1,dpr*.9);
+      const N=mob?22:40, step=Math.max(5*dpr,W/150), tilt=H*.42;
+      const yAt=(s,X,u,t)=>{ const c=s.y*H - (X-.5)*tilt + s.amp*H*Math.sin(X*s.f*6.283+t*s.sp+s.ph) + s.amp*.4*H*Math.sin(X*s.f*2.1*6.283-t*s.sp*.7+s.ph*1.3);
+        return c+u*s.w*H*Math.cos(X*s.tw*3.1416+t*s.sp*1.7+s.ph*.5); };
+      for(const s of sheets){ const [cr,cg,cb]=COL[s.c];
+        // glassy body: fill between the two edges, brighter where the sheet faces us
+        ctx.beginPath(); for(let x=-step;x<=W+step;x+=step){ const y=yAt(s,x/W,-.5,t); x<0?ctx.moveTo(x,y):ctx.lineTo(x,y); }
+        for(let x=W+step;x>=-step;x-=step) ctx.lineTo(x,yAt(s,x/W,.5,t)); ctx.closePath();
+        const lg=ctx.createLinearGradient(0,0,W,0); lg.addColorStop(0,`rgba(${cr},${cg},${cb},0)`); lg.addColorStop(.55,`rgba(${cr},${cg},${cb},${s.a*1.6})`); lg.addColorStop(1,`rgba(${cr},${cg},${cb},${s.a*.9})`);
+        ctx.fillStyle=lg; ctx.fill();
+        for(let k=0;k<N;k++){ const u=k/(N-1)-.5, edge=Math.abs(u)*2;
+          ctx.beginPath();
+          for(let x=-step;x<=W+step;x+=step){ const X=x/W;
+            const c=s.y*H - (X-.5)*tilt + s.amp*H*Math.sin(X*s.f*6.283+t*s.sp+s.ph) + s.amp*.4*H*Math.sin(X*s.f*2.1*6.283-t*s.sp*.7+s.ph*1.3);
+            const tw=Math.cos(X*s.tw*3.1416+t*s.sp*1.7+s.ph*.5);
+            const y=c+u*s.w*H*tw;
+            if(x<0) ctx.moveTo(x,y); else ctx.lineTo(x,y); }
+          ctx.strokeStyle=`rgba(${cr},${cg},${cb},${Math.min(.5,s.a*(1+2.2*edge*edge)).toFixed(3)})`; ctx.stroke(); } }
+    }
+    return {frame};
+  }
+  const RMq=()=>matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function loop(now){ raf=0; if(now-last>=32){ last=now; const t=(now-T0)/1000; live.forEach(s=>{ if(s.vis&&s.el.isConnected) s.r.frame(t); }); }
+    if(!RMq()&&!document.hidden&&live.some(s=>s.vis&&s.el.isConnected)) raf=requestAnimationFrame(loop); }
+  const kick=()=>{ if(!raf&&!RMq()) raf=requestAnimationFrame(loop); };
+  function mount(root){
+    live=live.filter(s=>s.el.isConnected);
+    io?.disconnect(); io=new IntersectionObserver(es=>{ es.forEach(e=>{ const s=live.find(x=>x.el===e.target); if(s) s.vis=e.isIntersecting; }); kick(); });
+    root.querySelectorAll("canvas.rib").forEach(el=>{ let s=live.find(x=>x.el===el); if(!s){ let r=null; try{ r=make(el); }catch(e){} if(!r) return; s={el,r,vis:true}; live.push(s); } io.observe(el); s.r.frame((performance.now()-T0)/1000); });
+    kick();
+  }
+  document.addEventListener("visibilitychange",()=>{ if(!document.hidden) kick(); });
+  addEventListener("resize",()=>live.forEach(s=>s.el.isConnected&&s.r.frame((performance.now()-T0)/1000)));
+  return {mount};
+})();
 let animateNext=true, tickKey="";
 const RM=()=>matchMedia("(prefers-reduced-motion: reduce)").matches;
 function renderTicker(){
@@ -1391,6 +1536,7 @@ function motion(m){
   if(!S.ind && tab==="mkt") return;
   animateNext=false;
   m.classList.remove("enter"); void m.offsetWidth; m.classList.add("enter");
+  m.classList.add("play"); clearTimeout(motion._p); motion._p=setTimeout(()=>m.classList.remove("play"),1800);
   rvIO?.disconnect(); rvIO=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("shown"); rvIO.unobserve(e.target); } }),{rootMargin:"0px 0px -6% 0px"});
   m.querySelectorAll(".panel,.story,.ncard,.idea,.pillgrid .layer,.acls,.step,.reply").forEach((el,i)=>{ el.classList.add("rv"); el.style.transitionDelay=Math.min(i%8,7)*45+"ms"; rvIO.observe(el); });
   m.querySelectorAll(".giant b,.pillgrid .layer .v").forEach(el=>{ const v=el.querySelector?el.childNodes[0]:null; if(el.matches(".giant b")) countUp(el); else if(v&&v.nodeType===3){ const sp=document.createElement("span"); sp.textContent=v.textContent; el.replaceChild(sp,v); countUp(sp); } });
@@ -1406,7 +1552,13 @@ function render(){
   else pauseR3();
   m.innerHTML = tab==="lib" ? vLib() : tab==="mkt" ? vMarkets() : tab==="ask" ? vAsk() : tab==="rot" ? vRoutine() : vStudio();
   bind(); if(tab==="mkt"||tab==="ask") bindMarkets(); if(tab==="rot") bindRoutine();
+  splitWords(m); RIBBONS.mount(document);
+  m.querySelectorAll("[data-jump]").forEach(b=>b.onclick=()=>{ if(b.dataset.go&&mk.sub!==b.dataset.go){ mk.sub=b.dataset.go; render(); } document.querySelector(b.dataset.jump)?.scrollIntoView({behavior:RM()?"auto":"smooth",block:"start"}); });
   renderTicker(); motion(m);
+}
+function splitWords(root){
+  root.querySelectorAll(".dhero h1:not([data-split])").forEach(h=>{ const words=h.textContent.trim().split(/\s+/); h.dataset.split="1"; h.setAttribute("aria-label",h.textContent.trim());
+    h.innerHTML=words.map((w,i)=>`<span class="w" aria-hidden="true"><span style="--i:${i}">${esc(w)}</span></span>`).join(" "); });
 }
 function bind(){
   const inp=$("#in"); if(inp) inp.oninput=()=>{ st.input=inp.value; ls.set("radar-input",inp.value); };
