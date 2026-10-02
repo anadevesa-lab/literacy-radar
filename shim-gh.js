@@ -79,7 +79,7 @@
     if(!el){ el = document.createElement("div"); el.id = "aiPanel"; el.className = "aipanel"; el.setAttribute("role","dialog"); el.setAttribute("aria-label","AI key"); document.body.appendChild(el); }
     el.innerHTML = `<b>${reason === "bad" ? "That AI key didn't work" : "Connect the free AI"}</b>
       <p>The Studio, Ask and The Brief use Google's free Gemini AI. Create a free key at <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com/apikey</a> (Google account, 2 minutes) and paste it here. It stays only in this browser.</p>
-      <label class="field"><span class="label">Gemini API key</span><input id="aiKeyIn" type="password" autocomplete="off" placeholder="AIza…"></label>
+      <label class="field"><span class="label">Gemini API key</span><input id="aiKeyIn" type="password" autocomplete="off" placeholder="Paste your key (AIza… or AQ.…)"></label>
       <div class="row"><button class="btn primary" type="button" data-ai="save">Save key</button><button class="btn" type="button" data-ai="close">Close</button>${getKey() ? '<button class="btn" type="button" data-ai="forget">Remove key</button>' : ""}</div>`;
     el.querySelector('[data-ai="close"]').onclick = () => el.remove();
     el.querySelector('[data-ai="save"]').onclick = () => { const v = el.querySelector("#aiKeyIn").value.trim(); if(v.length < 20) return; try{ localStorage.setItem(KEY, v); }catch{} el.innerHTML = "<b>Key saved</b><p>Try again: press the button you used before.</p>"; setTimeout(() => el.remove(), 2200); };
