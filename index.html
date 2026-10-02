@@ -1531,8 +1531,9 @@ const RIBBONS=(()=>{
     for(let i=0;i<N;i++) for(let j=0;j<N;j++) for(let k=0;k<N;k++){
       const c=[i-(N-1)/2,j-(N-1)/2,k-(N-1)/2]; const outer=Math.max(...c.map(Math.abs))>1;
       if(outer&&R()<.14) continue;
-      const len=Math.hypot(...c)||1; const out=outer&&R()<.42 ? .35+R()*1.1 : 0;
-      cubes.push({c, d:c.map(v=>v/len), out, ph:R()*6.283, sp:.35+R()*.3, tone:.97+R()*.03});
+      const len=Math.hypot(...c)||1; const out=outer ? (R()<.75 ? .8+R()*2.4 : .15+R()*.4) : (R()<.3 ? .3+R()*.6 : 0);
+      const jit=[R()-.5,R()-.5,R()-.5].map(v=>v*.7); const dd=c.map((v,i)=>v/len+jit[i]);
+      cubes.push({c, d:dd, out, ph:R()*6.283, sp:.35+R()*.3, tone:.97+R()*.03});
     }
     const F=[[[1,0,0],[1,2,6,5]],[[-1,0,0],[0,4,7,3]],[[0,1,0],[3,7,6,2]],[[0,-1,0],[0,1,5,4]],[[0,0,1],[4,5,6,7]],[[0,0,-1],[0,3,2,1]]];
     const V=[[-1,-1,-1],[1,-1,-1],[1,1,-1],[-1,1,-1],[-1,-1,1],[1,-1,1],[1,1,1],[-1,1,1]];
@@ -1543,14 +1544,14 @@ const RIBBONS=(()=>{
       if(cv.width!==W||cv.height!==H){ cv.width=W; cv.height=H; }
       mx+=(tx-mx)*.05; my+=(ty-my)*.05;
       ctx.setTransform(1,0,0,1,0,0); ctx.clearRect(0,0,W,H); ctx.lineJoin="round";
-      const CX=(mob?.74:.8)*W, CY=(mob?.87:.4)*H, U=(mob?.036:.05)*Math.min(H,W*.9);
+      const CX=(mob?.74:.8)*W, CY=(mob?.87:.4)*H, U=(mob?.032:.045)*Math.min(H,W*.9);
       const ay=t*.12+.6+mx*.5, ax=-.48+my*.25, cy=Math.cos(ay), sy=Math.sin(ay), cx=Math.cos(ax), sx=Math.sin(ax), D=14;
       const rot=([x,y,z])=>{ const x1=x*cy+z*sy, z1=-x*sy+z*cy; const y1=y*cx-z1*sx, z2=y*sx+z1*cx; return [x1,y1,z2]; };
       const proj=([x,y,z])=>{ const f=D/(D-z); return [CX+x*U*f, CY-y*U*f]; };
       // soft floor shadow
       const sh=ctx.createRadialGradient(CX,CY+U*3.9,0,CX,CY+U*3.9,U*3.8); sh.addColorStop(0,"rgba(5,22,26,.06)"); sh.addColorStop(1,"rgba(5,22,26,0)");
       ctx.fillStyle=sh; ctx.beginPath(); ctx.ellipse(CX,CY+U*3.9,U*3.8,U*.7,0,0,6.2832); ctx.fill();
-      const list=cubes.map(b=>{ const e=b.out*(.5-.5*Math.cos(t*b.sp+b.ph)); const p=b.c.map((v,i)=>v*1.04+b.d[i]*e); return {b,p,z:rot(p)[2]}; }).sort((a,b)=>a.z-b.z);
+      const list=cubes.map(b=>{ const e=b.out*(.5-.5*Math.cos(t*b.sp*1.15+b.ph)); const p=b.c.map((v,i)=>v*1.04+b.d[i]*e); return {b,p,z:rot(p)[2]}; }).sort((a,b)=>a.z-b.z);
       ctx.lineWidth=Math.max(1,dpr*.7);
       for(const {b,p} of list){
         const vs=V.map(v=>rot([p[0]+v[0]*.46,p[1]+v[1]*.46,p[2]+v[2]*.46]));
