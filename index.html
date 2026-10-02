@@ -522,11 +522,17 @@ main.wrap{padding-top:calc(var(--hh) + var(--s6))}
 main.wrap > .bleed:first-child{margin-top:calc(-1 * (var(--hh) + var(--s6)))}
 .dhero .in{padding-top:calc(var(--hh) + clamp(64px,10vh,130px))}
 .pillgrid,.seg{scroll-margin-top:calc(var(--hh) + 20px)}
+
+html,body{overflow-x:clip}
+.aikey-top{margin-left:var(--s3);display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 14px;border-radius:999px;border:1px solid rgba(255,255,255,.28);background:transparent;color:#fff;font:800 11px/1 var(--f-body);letter-spacing:.09em;text-transform:uppercase;cursor:pointer;transition:border-color .2s,background .2s}
+.aikey-top:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+.aikey-top i{width:7px;height:7px;border-radius:50%;background:#E8B46B;flex:none} .aikey-top.ok i{background:#3FBFC4}
+@media (max-width:640px){header.top .wrap{position:relative} .aikey-top{position:absolute;right:var(--s4);top:14px;min-height:32px;padding:0 12px}}
 </style>
 
 <header class="top"><div class="wrap">
   <div class="logo"><i></i>Literacy Radar</div>
-  <nav class="tabs"><button class="tab on" data-tab="mkt" type="button">Markets</button><button class="tab" data-tab="ask" type="button"><span class="lg-only">Ask the Radar</span><span class="sm-only">Ask</span></button><button class="tab" data-tab="lib" type="button">Library</button><button class="tab" data-tab="studio" type="button">Studio</button></nav>
+  <nav class="tabs"><button class="tab on" data-tab="mkt" type="button">Markets</button><button class="tab" data-tab="ask" type="button"><span class="lg-only">Ask the Radar</span><span class="sm-only">Ask</span></button><button class="tab" data-tab="lib" type="button">Library</button><button class="tab" data-tab="studio" type="button">Studio</button></nav><button class="aikey-top" id="aikeyTop" type="button" hidden><i></i><span>AI key</span></button>
 </div></header>
 <div class="ticker" id="ticker" aria-label="Market ticker"></div>
 <main class="wrap" id="main"></main>
@@ -1575,6 +1581,10 @@ function render(){
   addEventListener("resize",()=>{ size(); solid(); }); addEventListener("scroll",solid,{passive:true});
   new ResizeObserver(()=>{ size(); solid(); }).observe(hd); if(tk) new ResizeObserver(size).observe(tk);
   window.RADAR_BAR=()=>{ size(); solid(); }; size(); solid(); })();
+
+(()=>{ const b=document.getElementById("aikeyTop"); if(!b||!window.RADAR_AI_KEY) return; b.hidden=false;
+  const upd=()=>{ let k=""; try{ k=localStorage.getItem("radar-gemini-key")||""; }catch{} b.classList.toggle("ok",!!k); b.title=k?"AI connected in this browser":"Connect the free AI"; b.querySelector("span").textContent=k?"AI on":"AI key"; };
+  b.onclick=()=>{ window.RADAR_AI_KEY(); const t=setInterval(upd,800); setTimeout(()=>clearInterval(t),60000); }; upd(); addEventListener("storage",upd); })();
 function splitWords(root){
   root.querySelectorAll(".dhero h1:not([data-split])").forEach(h=>{ const words=h.textContent.trim().split(/\s+/); h.dataset.split="1"; h.setAttribute("aria-label",h.textContent.trim());
     h.innerHTML=words.map((w,i)=>`<span class="w" aria-hidden="true"><span style="--i:${i}">${esc(w)}</span></span>`).join(" "); });
