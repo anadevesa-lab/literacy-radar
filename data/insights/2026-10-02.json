@@ -1,122 +1,113 @@
 {
  "auto": true,
  "date": "2026-10-02",
- "basedOn": "2026-10-02T10:53:05.715Z",
- "generatedAt": "2026-10-02T10:53:07.215Z",
- "resumo": "Today's talk is mostly about **stocks and bonds**. Rising: funds. Falling: stocks, bonds.",
+ "basedOn": "2026-10-02T11:34:05.402Z",
+ "generatedAt": "2026-10-02T11:34:06.734Z",
+ "resumo": "Global markets face pressures from **soaring bond yields** and geopolitical tensions impacting commodities and equities.",
  "classes": [
   {
-   "nome": "Ações",
-   "tendencia": "a descer",
+   "nome": "Equities",
+   "tendencia": "mixed",
    "forca": 3,
-   "leitura": "20 stories today. Top one: IG Group Shares Plunge After Surprise Slump in Revenue (Bloomberg).",
-   "a_favor": [],
-   "riscos": [
-    "IG Group Shares Plunge After Surprise Slump in Revenue"
-   ],
-   "perfil": "Long horizon and tolerance for temporary losses."
-  },
-  {
-   "nome": "Obrigações",
-   "tendencia": "a descer",
-   "forca": 3,
-   "leitura": "10 stories today. Top one: U.S. Bond Yields Hit Highest Level Since 2002 (New York Times).",
-   "a_favor": [],
-   "riscos": [
-    "U.S. Bond Yields Hit Highest Level Since 2002"
-   ],
-   "perfil": "Medium horizon and tolerance for price swings."
-  },
-  {
-   "nome": "Fundos",
-   "tendencia": "a subir",
-   "forca": 3,
-   "leitura": "8 stories today. Top one: Brazil is holding an election &#x2014; and for the stock market, there&#x2019;s more to gain than to lose, sa… (MarketWatch).",
+   "leitura": "Stock markets are pressured by rising bond yields and AI financing crunches, despite enthusiasm in select sectors.",
    "a_favor": [
-    "Brazil is holding an election &#x2014; and for the stock ma…"
+    "AI sector growth",
+    "Potential emerging market rallies"
    ],
-   "riscos": [],
-   "perfil": "People who want to diversify with professional management."
+   "riscos": [
+    "High interest rates",
+    "Market shocks from AI spending"
+   ],
+   "perfil": "Suits investors with a higher risk tolerance and long-term horizon."
   },
   {
-   "nome": "Tecnologia",
-   "tendencia": "estável",
+   "nome": "Bonds",
+   "tendencia": "falling",
+   "forca": 2,
+   "leitura": "Global bond routs have driven yields to multi-decade highs, putting pressure on corporate and consumer borrowers.",
+   "a_favor": [
+    "Higher yields on new issuances"
+   ],
+   "riscos": [
+    "Global bond rout",
+    "French debt angst hitting European markets"
+   ],
+   "perfil": "Suits conservative investors seeking regular income."
+  },
+  {
+   "nome": "Commodities",
+   "tendencia": "rising",
    "forca": 3,
-   "leitura": "8 stories today. Top one: Amazon seeks to offload $8bn of Nvidia chips to investors (Financial Times).",
-   "a_favor": [],
-   "riscos": [],
-   "perfil": "Long horizon and tolerance for high volatility."
+   "leitura": "Crude oil and diesel prices remain elevated due to Middle East hostilities and supply worries.",
+   "a_favor": [
+    "High demand keeping prices elevated",
+    "Supply constraints"
+   ],
+   "riscos": [
+    "Geopolitical volatility",
+    "Potential sudden demand shifts"
+   ],
+   "perfil": "Suits experienced investors looking to hedge against inflation."
   },
   {
-   "nome": "Matérias-primas",
-   "tendencia": "estável",
+   "nome": "Real Estate",
+   "tendencia": "falling",
    "forca": 2,
-   "leitura": "5 stories today. Top one: Latest Oil Market News and Analysis for Oct. 2 (Bloomberg).",
-   "a_favor": [],
-   "riscos": [],
-   "perfil": "A small slice of a portfolio, for diversification only."
-  },
-  {
-   "nome": "Juros (bancos centrais)",
-   "tendencia": "estável",
-   "forca": 2,
-   "leitura": "5 stories today. Top one: Trump could target three Fed governors. Removing them may be harder than it looks (CNBC).",
-   "a_favor": [],
-   "riscos": [],
-   "perfil": "Affects everyone's deposits, loans and bonds."
-  },
-  {
-   "nome": "Depósitos e poupança",
-   "tendencia": "estável",
-   "forca": 2,
-   "leitura": "5 stories today. Top one: My wife never went back to work after raising our kids. Do I have to share my retirement savings 50/50? (MarketWatch).",
-   "a_favor": [],
-   "riscos": [],
-   "perfil": "Emergency fund and short-term goals."
+   "leitura": "The housing market faces hits from disappearing screen-based jobs and rising mortgage rates.",
+   "a_favor": [
+    "Buyers shifting to alternative loans"
+   ],
+   "riscos": [
+    "Higher mortgage rates",
+    "Potential hits from job market shifts"
+   ],
+   "perfil": "Suits long-term investors focused on property assets."
   }
  ],
  "temas": [
-  "Volatility is not the same as losing money",
-  "Why bond prices fall when rates rise",
-  "What an investment fund is"
+  "Inflation and interest rates",
+  "Artificial intelligence market impacts",
+  "Global bond yields",
+  "Commodity price pressures"
  ],
+ "ai": true,
  "brief": {
-  "one_liner": "Bond markets are playing musical chairs, but higher rates are offering a hidden perk for retirement income â if you can still afford to save!",
+  "one_liner": "Global bond markets feel the heat and oil stays sticky, reminding savers that steady buffers remain a financial superpower.",
   "number": {
    "value": "3.6%",
-   "caption": "Portugal's latest inflation estimate"
+   "caption": "Portugal's flash inflation rate for September 2026"
   },
   "stories": [
    {
-    "i": 54,
-    "title": "Vive la Volatility! French Bonds Jitter",
-    "whats_going_on": "France's government bond market has seen a significant sell-off, pushing yields higher, with some comparing the situation to the euro crisis. This comes as the French government proposes â¬43bn in budget cuts and tax rises for next year to tackle its debt.",
-    "what_it_means": "A major European economy facing bond market stress can signal broader concerns about financial stability in the Eurozone. Higher bond yields mean it costs more for the government to borrow money.",
-    "why_care": "If a government's borrowing costs rise, it can lead to higher taxes or reduced public spending down the line, potentially impacting the economy and your financial outlook."
+    "i": 18,
+    "title": "Fuel prices climb as global oil markets stay jittery",
+    "whats_going_on": "Crude oil is holding near $100 a barrel and UK diesel has hit £2 a litre for the first time. Traders remain nervous that ongoing geopolitical tensions could disrupt supplies and drain emergency stockpiles.",
+    "what_it_means": "When energy costs spike, they quickly ripple through supply chains to make everyday goods and transport more expensive. This persistent pressure is a key reason why broader inflation figures remain stubborn.",
+    "why_care": "Higher fuel and energy costs eat directly into household budgets, leaving less room for monthly savings or loan repayments."
    },
    {
-    "i": 12,
-    "title": "Global Bonds Take a Breather",
-    "whats_going_on": "After a turbulent period, the global bond market has started to steady following a sharp sell-off that pushed 10-year US Treasury yields to their highest level since 2002. This sell-off was driven by higher oil prices and fears of persistent inflation.",
-    "what_it_means": "Government bonds are seen as safe investments, so their stability or instability reflects wider economic confidence. When yields rise sharply, it often means investors are demanding a higher return to lend money, indicating higher risk or inflation expectations.",
-    "why_care": "Bond market movements influence interest rates across the economy. A steadier bond market can hint at more predictable borrowing costs for things like mortgages and business loans in the future."
+    "i": 14,
+    "title": "Bank of England raises a wary eyebrow at the AI cash boom",
+    "whats_going_on": "Bank of England Governor Andrew Bailey has warned that regulators are watching the massive waves of cash pouring into artificial intelligence very carefully. Central bankers fear that speculative market bubbles could eventually trigger broader financial shocks.",
+    "what_it_means": "Unprecedented corporate spending on new technologies can sometimes disconnect stock valuations from economic reality. If sentiment shifts abruptly, it can cause sudden ripples across wider investment portfolios.",
+    "why_care": "For everyday investors, a reminder that tech-heavy portfolios carry higher volatility is always worth keeping in mind."
    },
    {
-    "i": 46,
-    "title": "Pension Pause for Gen Z",
-    "whats_going_on": "A growing number of younger people, particularly Gen Z, are opting out of workplace pension schemes. Many cite the current cost-of-living pressures as the reason, with some feeling they need the money now despite the potential long-term cost.",
-    "what_it_means": "Workplace pensions offer benefits like employer contributions and tax relief, which significantly boost savings. Opting out means missing out on these advantages for future financial security.",
-    "why_care": "While short-term financial pressures are real, understanding the long-term benefits of compound interest and employer contributions in pensions is crucial for your retirement planning."
+    "i": 32,
+    "title": "Borrowing costs bite as fixed mortgage rates climb",
+    "whats_going_on": "In the US, the average 30-year fixed-rate mortgage has climbed to 7.28%, up significantly from 6.34% a year ago. With traditional loans becoming pricier, a growing number of buyers are exploring adjustable-rate mortgages instead.",
+    "what_it_means": "Higher benchmark borrowing costs are forcing buyers and homeowners to adapt to a much more expensive property landscape. Fixed deals offer certainty, but at a noticeably higher monthly price tag compared to recent years.",
+    "why_care": "Anyone looking to buy a home or refinance needs to run their numbers carefully to ensure monthly repayments fit comfortably within their household budget."
    },
    {
-    "i": 41,
-    "title": "High Rates, Higher Retirement Payouts?",
-    "whats_going_on": "The current environment of high interest rates is presenting a \"hidden silver lining\" for retirement income, particularly for those looking at annuities. Annuity payout rates are closely linked to interest rates.",
-    "what_it_means": "An annuity is a product you can buy with your pension pot that guarantees you a regular income for life. When interest rates are higher, annuity providers can offer more generous payouts.",
-    "why_care": "If you're nearing retirement, higher interest rates could mean your existing pension pot can buy you a larger guaranteed income for life, which is a positive for long-term financial planning."
+    "i": 60,
+    "title": "Swiss franc shines as a safe haven amid European jitters",
+    "whats_going_on": "The Swiss franc has surged back into the spotlight as investors seek shelter from European market turbulence. Fresh concerns over French debt dynamics have rattled regional bond markets and sparked a wider flight to safety.",
+    "what_it_means": "When political or fiscal anxiety grips a region, capital tends to move swiftly toward traditional safe-haven currencies and assets. It highlights how quickly market sentiment can pivot in response to government borrowing news.",
+    "why_care": "Broad market jitters can cause turbulence in international funds, making a well-diversified and balanced portfolio crucial for peace of mind."
    }
   ],
-  "basedOn": "2026-10-02T06:47:19.146Z",
-  "generatedAt": "2026-10-02T06:47:41.023Z"
+  "basedOn": "2026-10-02T11:34:05.402Z",
+  "generatedAt": "2026-10-02T11:34:47.998Z"
  }
 }
