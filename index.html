@@ -564,6 +564,7 @@ body.solid header.top{background:rgba(255,255,255,.88);border-bottom-color:var(-
 @media (min-width:861px){.dhero .in > *:not(.hgrid):not(.hfoot), .dhero .hgrid h1{position:relative}}
 
 @media (max-width:760px){.dhero .in{padding-bottom:150px}}
+
 </style>
 
 <header class="top"><div class="wrap">
@@ -1512,7 +1513,7 @@ ${R.msg.slice(0,4000)}
 /* ---------- Motion layer (ticker, reveal, count-up, tab indicator) ---------- */
 /* Living ribbons: translucent sheets of fine strands that twist slowly, drawn with additive light
    in the palette's teals and blues. Canvas 2D, ~30 fps, pauses off-screen, still frame for reduced motion. */
-/* Market wave on white: a coral wireframe terrain rolling slowly in perspective,
+/* Cube block on white: a 4x4x4 cluster of soft-lit white cubes that slowly turns while outer cubes drift out and back,
    with depth (far ones smaller and paler) and soft contact shadows. Canvas 2D at full device
    resolution, so edges stay crisp. ~30 fps, pauses off-screen, still frame for reduced motion. */
 const RIBBONS=(()=>{
@@ -1524,31 +1525,44 @@ const RIBBONS=(()=>{
   addEventListener("pointermove",e=>{ tx=e.clientX/innerWidth-.5; ty=e.clientY/innerHeight-.5; },{passive:true});
   function make(cv){
     const ctx=cv.getContext("2d"); if(!ctx) return null;
-    const sd=+cv.dataset.seed||1, ph=sd*1.7;
-    // market wave: a wireframe terrain in coral that rolls slowly, like a live chart seen in perspective
-    const hgt=(u,v,t)=>Math.sin(u*2.1+t*.45+v*3.1+ph)*.55+Math.sin(u*4.7-t*.32+v*1.6+ph*.6)*.28+Math.cos(v*4.2+t*.38-u*.8)*.3;
+    const sd=+cv.dataset.seed||1; let q=sd*9301+49297; const R=()=>{ q=(q*9301+49297)%233280; return q/233280; };
+    // a 4x4x4 block of white cubes; some sit still, some drift outwards and back, like the cube is assembling itself
+    const N=4, cubes=[];
+    for(let i=0;i<N;i++) for(let j=0;j<N;j++) for(let k=0;k<N;k++){
+      const c=[i-(N-1)/2,j-(N-1)/2,k-(N-1)/2]; const outer=Math.max(...c.map(Math.abs))>1;
+      if(outer&&R()<.14) continue;
+      const len=Math.hypot(...c)||1; const out=outer&&R()<.42 ? .35+R()*1.1 : 0;
+      cubes.push({c, d:c.map(v=>v/len), out, ph:R()*6.283, sp:.35+R()*.3, tone:.97+R()*.03});
+    }
+    const F=[[[1,0,0],[1,2,6,5]],[[-1,0,0],[0,4,7,3]],[[0,1,0],[3,7,6,2]],[[0,-1,0],[0,1,5,4]],[[0,0,1],[4,5,6,7]],[[0,0,-1],[0,3,2,1]]];
+    const V=[[-1,-1,-1],[1,-1,-1],[1,1,-1],[-1,1,-1],[-1,-1,1],[1,-1,1],[1,1,1],[-1,1,1]];
+    const L=(()=>{ const l=[-.45,.75,.5], n=Math.hypot(...l); return l.map(v=>v/n); })();
     function frame(t){
       const mob=innerWidth<760, dpr=Math.min(3,devicePixelRatio||1);
       const W=Math.round(cv.clientWidth*dpr), H=Math.round(cv.clientHeight*dpr); if(!W||!H) return;
       if(cv.width!==W||cv.height!==H){ cv.width=W; cv.height=H; }
       mx+=(tx-mx)*.05; my+=(ty-my)*.05;
-      ctx.setTransform(1,0,0,1,0,0); ctx.globalCompositeOperation="source-over"; ctx.clearRect(0,0,W,H); ctx.lineJoin="round";
-      const R=mob?{x0:-.1,x1:1.1,y0:.8,y1:1.0}:{x0:.44,x1:1.06,y0:.2,y1:.62};
-      const X0=R.x0*W, X1=R.x1*W, Y0=R.y0*H, Y1=R.y1*H, CX=(X0+X1)/2 - mx*24*dpr, HW=(X1-X0)*.62, A=(Y1-Y0)*(mob?.3:.42);
-      const rows=mob?18:28, cols=mob?26:44, K=2.3, sMin=1/(1+K);
-      const pt=(c,r)=>{ const v=r/(rows-1), u=c/(cols-1)*2-1, sc=1/(1+v*K);
-        const yb=Y1-(Y1-Y0)*.82*(1-sc)/(1-sMin) - my*14*dpr*sc; return [CX+u*HW*sc*1.25, yb-hgt(u,v,t)*A*sc, sc]; };
-      ctx.lineWidth=dpr*1.1;
-      for(let r=rows-1;r>=0;r--){ const sc=1/(1+r/(rows-1)*K); ctx.strokeStyle="#ff8478"; ctx.globalAlpha=.22+.78*Math.pow((sc-sMin)/(1-sMin),1.2);
-        ctx.beginPath(); for(let c=0;c<cols;c++){ const [x,y]=pt(c,r); c?ctx.lineTo(x,y):ctx.moveTo(x,y); } ctx.stroke(); }
-      ctx.strokeStyle="#cb4c46";
-      for(let c=0;c<cols;c++){ ctx.globalAlpha=.45; ctx.beginPath(); for(let r=0;r<rows;r++){ const [x,y]=pt(c,r); r?ctx.lineTo(x,y):ctx.moveTo(x,y); } ctx.stroke(); }
-      ctx.globalAlpha=1;
-      // fade the edges into the white page
-      ctx.globalCompositeOperation="destination-out";
-      if(!mob){ const g=ctx.createLinearGradient(X0,0,X0+(X1-X0)*.32,0); g.addColorStop(0,"rgba(0,0,0,1)"); g.addColorStop(1,"rgba(0,0,0,0)"); ctx.fillStyle=g; ctx.fillRect(0,0,X0+(X1-X0)*.32,H); }
-      const gt=ctx.createLinearGradient(0,Y0-(Y1-Y0)*.1,0,Y0+(Y1-Y0)*.35); gt.addColorStop(0,"rgba(0,0,0,1)"); gt.addColorStop(1,"rgba(0,0,0,0)"); ctx.fillStyle=gt; ctx.fillRect(0,0,W,Y0+(Y1-Y0)*.35);
-      ctx.globalCompositeOperation="source-over";
+      ctx.setTransform(1,0,0,1,0,0); ctx.clearRect(0,0,W,H); ctx.lineJoin="round";
+      const CX=(mob?.74:.8)*W, CY=(mob?.87:.4)*H, U=(mob?.036:.05)*Math.min(H,W*.9);
+      const ay=t*.12+.6+mx*.5, ax=-.48+my*.25, cy=Math.cos(ay), sy=Math.sin(ay), cx=Math.cos(ax), sx=Math.sin(ax), D=14;
+      const rot=([x,y,z])=>{ const x1=x*cy+z*sy, z1=-x*sy+z*cy; const y1=y*cx-z1*sx, z2=y*sx+z1*cx; return [x1,y1,z2]; };
+      const proj=([x,y,z])=>{ const f=D/(D-z); return [CX+x*U*f, CY-y*U*f]; };
+      // soft floor shadow
+      const sh=ctx.createRadialGradient(CX,CY+U*3.9,0,CX,CY+U*3.9,U*3.8); sh.addColorStop(0,"rgba(5,22,26,.06)"); sh.addColorStop(1,"rgba(5,22,26,0)");
+      ctx.fillStyle=sh; ctx.beginPath(); ctx.ellipse(CX,CY+U*3.9,U*3.8,U*.7,0,0,6.2832); ctx.fill();
+      const list=cubes.map(b=>{ const e=b.out*(.5-.5*Math.cos(t*b.sp+b.ph)); const p=b.c.map((v,i)=>v*1.04+b.d[i]*e); return {b,p,z:rot(p)[2]}; }).sort((a,b)=>a.z-b.z);
+      ctx.lineWidth=Math.max(1,dpr*.7);
+      for(const {b,p} of list){
+        const vs=V.map(v=>rot([p[0]+v[0]*.46,p[1]+v[1]*.46,p[2]+v[2]*.46]));
+        const faces=[];
+        for(const [n,idx] of F){ const rn=rot(n); if(rn[2]<=0) continue; faces.push([rn,idx]); }
+        for(const [rn,idx] of faces){
+          const lam=Math.max(0,rn[0]*L[0]+rn[1]*L[1]+rn[2]*L[2]);
+          const v=255*b.tone*(.76+.24*lam);
+          ctx.fillStyle=`rgb(${Math.round(v*.955)},${Math.round(v*.975)},${Math.min(255,Math.round(v*.99))})`; ctx.strokeStyle="rgba(5,22,26,.07)";
+          ctx.beginPath(); idx.forEach((ix,i)=>{ const [X,Y]=proj(vs[ix]); i?ctx.lineTo(X,Y):ctx.moveTo(X,Y); }); ctx.closePath(); ctx.fill(); ctx.stroke();
+        }
+      }
     }
     return {frame};
   }
