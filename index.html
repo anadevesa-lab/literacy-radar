@@ -629,24 +629,44 @@ header.top,body.solid header.top{background:#FFFFFF!important;backdrop-filter:no
 .flink,.story .acts a,.src a,.fbot a{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .45s cubic-bezier(.2,.7,.2,1);text-decoration:none}
 .flink:hover,.story .acts a:hover,.fbot a:hover{background-size:100% 1px;text-decoration:none}
 @media (prefers-reduced-motion:reduce){#preload{display:none} .sx .w>span{transform:none;transition:none} .sf{opacity:1;transform:none;transition:none} .stats4::before,.stats4 .st::after{transform:none;transition:none}}
+
+/* closing band: soft gradient tiles that drift, turn and parallax on scroll */
+.fcta{min-height:min(100vh,900px);display:flex;align-items:flex-end;background:linear-gradient(160deg,#F6F8F7 0%,#FFFFFF 45%,#EEF8F6 100%)!important;border-top:0}
+.fcta .in{width:100%}
+.tiles{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.tiles span{position:absolute;left:var(--x);top:var(--y);width:var(--s);height:var(--s);transform:translate3d(0,calc(var(--p,0) * var(--k) * -140px),0);will-change:transform}
+.tiles i{display:block;width:100%;height:100%;border-radius:16%;background:linear-gradient(135deg,rgba(255,255,255,.95) 0%,var(--c) 100%);box-shadow:0 30px 60px -40px rgba(0,60,59,.45);transform:rotate(var(--r));animation:tdrift var(--d) ease-in-out var(--dl) infinite alternate}
+.tiles span:nth-child(3) i{background:linear-gradient(135deg,#FFFFFF,#F1F5F4)}
+@keyframes tdrift{0%{transform:translate(0,0) rotate(var(--r))}100%{transform:translate(18px,-26px) rotate(calc(var(--r) + 22deg))}}
+.fcta .mega{position:relative}
+@media (max-width:760px){.tiles span{width:calc(var(--s) * .55);height:calc(var(--s) * .55)} .fcta{min-height:88vh}}
+@media (prefers-reduced-motion:reduce){.tiles i{animation:none} .tiles span{transform:none}}
+
+/* logo mark: rising blocks */
+.logo .mark{flex:none;display:block;overflow:visible}
+.logo .mark rect{transform-box:fill-box;transform-origin:center bottom;transition:transform .45s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i) * 45ms)}
+.logo:hover .mark rect{transform:translateY(-2px)}
+#preload .pc{display:none}
+#preload .mk rect{transform-box:fill-box;transform-origin:center;animation:mkpop 1.1s cubic-bezier(.7,0,.3,1) infinite;animation-delay:calc(var(--i) * 90ms)}
+@keyframes mkpop{0%,100%{transform:scale(1)}45%{transform:scale(.2);opacity:.3}}
 </style>
 
-<div id="preload" aria-hidden="true"><div class="pc"><i></i><i></i><i></i><i></i></div></div>
+<div id="preload" aria-hidden="true"><svg class="mk" viewBox="0 0 24 24" width="48" height="48" aria-hidden="true"><rect x="0" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:0"/><rect x="8" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:1"/><rect x="16" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:2"/><rect x="8" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:3"/><rect x="16" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:4"/><rect x="16" y="2" width="6.4" height="6.4" rx="1.3" fill="#3AA89C" style="--i:5"/></svg></div>
 <header class="top"><div class="wrap">
-  <div class="logo"><i></i>Literacy Radar</div>
+  <div class="logo"><svg class="mark" viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="0" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:0"/><rect x="8" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:1"/><rect x="16" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:2"/><rect x="8" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:3"/><rect x="16" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:4"/><rect x="16" y="2" width="6.4" height="6.4" rx="1.3" fill="#3AA89C" style="--i:5"/></svg>Literacy Radar</div>
   <nav class="tabs"><button class="tab on" data-tab="mkt" type="button">Markets</button><button class="tab" data-tab="ask" type="button"><span class="lg-only">Ask the Radar</span><span class="sm-only">Ask</span></button><button class="tab" data-tab="lib" type="button">Library</button><button class="tab" data-tab="studio" type="button">Studio</button></nav><button class="aikey-top" id="aikeyTop" type="button" hidden><i></i><span>AI key</span></button>
 </div></header>
 <div class="ticker" id="ticker" aria-label="Market ticker"></div>
 <main class="wrap" id="main"></main>
 <footer class="foot">
-  <section class="fcta"><div class="in">
+  <section class="fcta"><div class="tiles" aria-hidden="true"><span style="--x:8%;--y:10%;--s:150px;--r:24deg;--c:#3AA89C;--k:0.35;--d:9.0s;--dl:-0.0s"><i></i></span><span style="--x:62%;--y:4%;--s:190px;--r:-28deg;--c:#1F7F7C;--k:0.70;--d:10.3s;--dl:-1.7s"><i></i></span><span style="--x:26%;--y:40%;--s:200px;--r:-22deg;--c:#FFFFFF;--k:1.05;--d:11.6s;--dl:-3.4s"><i></i></span><span style="--x:82%;--y:38%;--s:160px;--r:4deg;--c:#5BC8B6;--k:0.35;--d:12.9s;--dl:-5.1s"><i></i></span><span style="--x:-4%;--y:66%;--s:170px;--r:32deg;--c:#1F7F7C;--k:0.70;--d:14.2s;--dl:-6.8s"><i></i></span><span style="--x:46%;--y:70%;--s:190px;--r:-30deg;--c:#3AA89C;--k:1.05;--d:15.5s;--dl:-8.5s"><i></i></span><span style="--x:90%;--y:78%;--s:110px;--r:18deg;--c:#5BC8B6;--k:0.35;--d:16.8s;--dl:-10.2s"><i></i></span></div><div class="in">
     <span class="eyebrow">Made for everyday savers</span>
     <h2 class="mega">Money news, made clear.</h2>
     <p style="color:rgba(230,241,243,.75);max-width:46ch;font-size:1.0625rem;line-height:1.55">Read what moved today, see what it means for your money, then turn it into content in minutes.</p>
     <button class="btn primary" data-tab="studio" type="button">Open the Studio</button>
   </div></section>
   <div class="fbot"><div class="in">
-    <div><div class="logo"><i></i>Literacy Radar</div><p>A daily, plain-English read of the financial news, built as a Nova SBE project for the course "Boosting productivity with AI".</p></div>
+    <div><div class="logo"><svg class="mark" viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="0" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:0"/><rect x="8" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:1"/><rect x="16" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:2"/><rect x="8" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:3"/><rect x="16" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:4"/><rect x="16" y="2" width="6.4" height="6.4" rx="1.3" fill="#3AA89C" style="--i:5"/></svg>Literacy Radar</div><p>A daily, plain-English read of the financial news, built as a Nova SBE project for the course "Boosting productivity with AI".</p></div>
     <div><h4>Explore</h4><ul><li><button class="flink" data-tab="mkt" type="button">Markets</button></li><li><button class="flink" data-tab="ask" type="button">Ask the Radar</button></li><li><button class="flink" data-tab="lib" type="button">Library</button></li><li><button class="flink" data-tab="studio" type="button">Studio</button></li></ul></div>
     <div><h4>Sources</h4><ul><li>Bloomberg · Financial Times</li><li>WSJ · The Economist</li><li>CNBC · MarketWatch · BBC</li><li>ECB · Fed · Eurostat · INE</li></ul></div>
     <div><h4>Good to know</h4><ul><li>Educational only</li><li>No buy or sell calls</li><li>Capital at risk</li></ul></div>
@@ -1043,7 +1063,7 @@ function vMarkets(){
   const meta = `${day?`${(day.items||[]).length} stories from ${(day.sources||[]).length} sources`:"Waiting for the first collection"}${S.ind?` · indicators verified ${esc(new Date(S.ind.updatedAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}`:""}${day&&day.collectedAt?` · news at ${esc(new Date(day.collectedAt).toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"}))}`:""}`;
   let h = `<section class="bleed dhero mk"><canvas class="rib" data-seed="1" aria-hidden="true"></canvas><div class="in">
       <span class="eyebrow">Literacy Radar · ${esc(new Date().toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"}))}</span>
-      <div class="hgrid"><h1>${esc(head)}</h1>${gNum?`<div class="giant" aria-label="Number of the day: ${esc(gNum)}"><em>Number of the day</em><b data-count="${esc(gNum)}">${esc(gNum)}</b><span>${esc(gCap)}</span></div>`:""}</div>
+      <div class="hgrid"><h1>${esc(head)}</h1></div>
       <div class="hfoot"><div style="display:flex;flex-direction:column;gap:var(--s2)"><p class="muted">${esc(sub)}</p><span class="meta">${meta}</span></div>
         <div class="row"><button class="btn primary" type="button" data-jump=".seg" data-go="brief">Read The Brief</button><button class="godown" type="button" data-jump=".pillgrid" aria-label="Scroll to the indicators">↓</button></div></div>
     </div></section>
@@ -1728,6 +1748,11 @@ function scrollFX(root){
   root.querySelectorAll(".panel > p.muted, .fcta p, .fbot p, .disc").forEach(p=>{ if(!p.classList.contains("sf")){ p.classList.add("sf"); watch(p,"p:"+p.textContent.trim().slice(0,60)); } });
   root.querySelectorAll(".stats4").forEach(g=>{ g.querySelectorAll(".st").forEach((c,i)=>c.style.setProperty("--i",i)); watch(g,"stats4"); });
 }
+
+/* parallax for the closing band tiles */
+(()=>{ const band=document.querySelector(".fcta"); if(!band||matchMedia("(prefers-reduced-motion: reduce)").matches) return; let raf=0;
+  const upd=()=>{ raf=0; const r=band.getBoundingClientRect(); const p=Math.max(-1,Math.min(1.2,(innerHeight-r.top)/(innerHeight+r.height))); band.style.setProperty("--p",p.toFixed(3)); };
+  addEventListener("scroll",()=>{ if(!raf) raf=requestAnimationFrame(upd); },{passive:true}); addEventListener("resize",upd); upd(); })();
 function splitWords(root){
   root.querySelectorAll(".dhero h1:not([data-split])").forEach(h=>{ const words=h.textContent.trim().split(/\s+/); h.dataset.split="1"; h.setAttribute("aria-label",h.textContent.trim());
     h.innerHTML=words.map((w,i)=>`<span class="w" aria-hidden="true"><span style="--i:${i}">${esc(w)}</span></span>`).join(" "); });
