@@ -630,17 +630,20 @@ header.top,body.solid header.top{background:#FFFFFF!important;backdrop-filter:no
 .flink:hover,.story .acts a:hover,.fbot a:hover{background-size:100% 1px;text-decoration:none}
 @media (prefers-reduced-motion:reduce){#preload{display:none} .sx .w>span{transform:none;transition:none} .sf{opacity:1;transform:none;transition:none} .stats4::before,.stats4 .st::after{transform:none;transition:none}}
 
-/* closing band: soft gradient tiles that drift, turn and parallax on scroll */
-.fcta{min-height:min(100vh,900px);display:flex;align-items:flex-end;background:linear-gradient(160deg,#F6F8F7 0%,#FFFFFF 45%,#EEF8F6 100%)!important;border-top:0}
-.fcta .in{width:100%}
+/* hero tiles (first screen): fly in, drift, follow the pointer, turn and rise with scroll */
+.dhero{background:linear-gradient(160deg,#F6F8F7 0%,#FFFFFF 45%,#EEF8F6 100%)!important}
+.dhero::before{display:none!important}
 .tiles{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
-.tiles span{position:absolute;left:var(--x);top:var(--y);width:var(--s);height:var(--s);transform:translate3d(0,calc(var(--p,0) * var(--k) * -140px),0);will-change:transform}
-.tiles i{display:block;width:100%;height:100%;border-radius:16%;background:linear-gradient(135deg,rgba(255,255,255,.95) 0%,var(--c) 100%);box-shadow:0 30px 60px -40px rgba(0,60,59,.45);transform:rotate(var(--r));animation:tdrift var(--d) ease-in-out var(--dl) infinite alternate}
-.tiles span:nth-child(3) i{background:linear-gradient(135deg,#FFFFFF,#F1F5F4)}
-@keyframes tdrift{0%{transform:translate(0,0) rotate(var(--r))}100%{transform:translate(18px,-26px) rotate(calc(var(--r) + 22deg))}}
-.fcta .mega{position:relative}
-@media (max-width:760px){.tiles span{width:calc(var(--s) * .55);height:calc(var(--s) * .55)} .fcta{min-height:88vh}}
-@media (prefers-reduced-motion:reduce){.tiles i{animation:none} .tiles span{transform:none}}
+.tiles span{position:absolute;left:var(--x);top:var(--y);width:clamp(70px,var(--s),260px);aspect-ratio:1;
+  transform:translate3d(calc(var(--mx,0) * var(--k) * 46px), calc(var(--p,0) * var(--k) * -420px + var(--my,0) * var(--k) * 30px), 0) rotate(calc(var(--p,0) * var(--spin))) scale(calc(1 + var(--p,0) * var(--k) * .12));will-change:transform}
+.tiles b{display:block;width:100%;height:100%;animation:tin 1.3s cubic-bezier(.2,.8,.2,1) var(--e) both}
+.tiles i{display:block;width:100%;height:100%;border-radius:16%;background:linear-gradient(135deg,rgba(255,255,255,.96) 0%,var(--c) 100%);box-shadow:0 34px 70px -44px rgba(0,60,59,.5);transform:rotate(var(--r));animation:tdrift var(--d) ease-in-out var(--dl) infinite alternate}
+.tiles span:nth-child(3) i{background:linear-gradient(135deg,#FFFFFF,#EEF3F2)}
+@keyframes tdrift{0%{transform:translate(0,0) rotate(var(--r))}100%{transform:translate(22px,-30px) rotate(calc(var(--r) + 24deg))}}
+@keyframes tin{from{opacity:0;transform:translateY(80px) scale(.6) rotate(-20deg)}to{opacity:1;transform:none}}
+.fcta{background:#FFFFFF!important;min-height:0;border-top:1px solid var(--line)}
+@media (max-width:760px){.tiles span{width:calc(clamp(70px,var(--s),260px) * .8)} .dhero .in{padding-bottom:var(--s7)!important}}
+@media (prefers-reduced-motion:reduce){.tiles i,.tiles b{animation:none} .tiles span{transform:none}}
 
 /* logo mark: rising blocks */
 .logo .mark{flex:none;display:block;overflow:visible}
@@ -659,7 +662,7 @@ header.top,body.solid header.top{background:#FFFFFF!important;backdrop-filter:no
 <div class="ticker" id="ticker" aria-label="Market ticker"></div>
 <main class="wrap" id="main"></main>
 <footer class="foot">
-  <section class="fcta"><div class="tiles" aria-hidden="true"><span style="--x:8%;--y:10%;--s:150px;--r:24deg;--c:#3AA89C;--k:0.35;--d:9.0s;--dl:-0.0s"><i></i></span><span style="--x:62%;--y:4%;--s:190px;--r:-28deg;--c:#1F7F7C;--k:0.70;--d:10.3s;--dl:-1.7s"><i></i></span><span style="--x:26%;--y:40%;--s:200px;--r:-22deg;--c:#FFFFFF;--k:1.05;--d:11.6s;--dl:-3.4s"><i></i></span><span style="--x:82%;--y:38%;--s:160px;--r:4deg;--c:#5BC8B6;--k:0.35;--d:12.9s;--dl:-5.1s"><i></i></span><span style="--x:-4%;--y:66%;--s:170px;--r:32deg;--c:#1F7F7C;--k:0.70;--d:14.2s;--dl:-6.8s"><i></i></span><span style="--x:46%;--y:70%;--s:190px;--r:-30deg;--c:#3AA89C;--k:1.05;--d:15.5s;--dl:-8.5s"><i></i></span><span style="--x:90%;--y:78%;--s:110px;--r:18deg;--c:#5BC8B6;--k:0.35;--d:16.8s;--dl:-10.2s"><i></i></span></div><div class="in">
+  <section class="fcta"><div class="in">
     <span class="eyebrow">Made for everyday savers</span>
     <h2 class="mega">Money news, made clear.</h2>
     <p style="color:rgba(230,241,243,.75);max-width:46ch;font-size:1.0625rem;line-height:1.55">Read what moved today, see what it means for your money, then turn it into content in minutes.</p>
@@ -876,7 +879,7 @@ function stats(){
     <div class="stat"><b>${n?Math.round(saved/3600000*10)/10+" h":"—"}</b><span>saved vs. ${baseline()} min by hand</span></div></div>`;
 }
 function vStudio(){
-  let h = `<section class="bleed dhero"><canvas class="rib" data-seed="2" aria-hidden="true"></canvas><div class="in">
+  let h = `<section class="bleed dhero">${tilesHTML(2)}<div class="in">
       <span class="eyebrow">Content studio</span>
       <h1>From today's news to content ready to post.</h1>
       <p class="muted">Pick some news or write your own topic. The Studio suggests ideas and writes Instagram posts, LinkedIn posts and articles, opinion pieces, PowerPoint decks and newsletters, with a regulatory check built in.</p>${window.RADAR_AI_KEY?`<button class="btn small" id="aikey" type="button" style="align-self:flex-start">AI key</button>`:""}${stats()}</div></section>
@@ -998,7 +1001,7 @@ function vLib(){
   if(st.openPiece){ const p=S.pieces.find(x=>x.id===st.openPiece); if(p) return `<button class="btn small" id="back" type="button" style="align-self:flex-start">← Library</button>
     <section class="panel"><span class="label">${esc(new Date(p.createdAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric"}))}</span><h1>${esc(p.idea?.title)}</h1><p class="muted">${esc(p.idea?.hook)}</p></section>`+vContent(p.content,{total:p.totalMs}); }
   const list=[...S.pieces].sort((a,b)=>(b.createdAt||0)-(a.createdAt||0));
-  return `<section class="bleed dhero"><canvas class="rib" data-seed="3" aria-hidden="true"></canvas><div class="in"><span class="eyebrow">Library</span><h1>Everything you've made</h1>
+  return `<section class="bleed dhero">${tilesHTML(3)}<div class="in"><span class="eyebrow">Library</span><h1>Everything you've made</h1>
     <label class="field" style="max-width:320px"><span class="label">How long a post takes you without the Radar (min)</span><input id="base" type="number" min="5" step="5" value="${baseline()}"></label>${stats()}</div></section>
     ${!S.persistent?`<p class="notice">This view keeps your pieces in this browser only.</p>`:""}
     ${list.length?`<section class="panel"><div class="lib">${list.map(p=>`<button class="librow" data-piece="${esc(p.id)}" type="button"><span class="mono muted">${esc(new Date(p.createdAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}</span><span style="min-width:0"><b>${esc(p.idea?.title)}</b><div class="muted" style="font-size:.88rem">${esc(Object.keys(p.content||{}).filter(k=>k!=="compliance").map(k=>FORMATS.find(f=>f[0]===k)?.[1]).filter(Boolean).join(" · "))}</div></span><span class="pill ${(+p.content?.compliance?.score||0)>=85?"":(+p.content?.compliance?.score||0)>=60?"warn":"bad"}">${esc(p.content?.compliance?.score??"—")}</span></button>`).join("")}</div></section>`
@@ -1040,7 +1043,7 @@ function vInd(){
 function newsBlock(day){ return (day.items||[]).map(it=>`- [${it.source}, ${it.published||""}] ${it.title}${it.summary?" — "+it.summary:""}`).join("\n").slice(0,30000); }
 function vAsk(){
   const day=latestDay();
-  let h = `<section class="bleed dhero"><canvas class="rib" data-seed="4" aria-hidden="true"></canvas><div class="in"><span class="eyebrow">Ask the Radar</span><h1>Ask anything about today's money news.</h1><p class="muted">Answers use the stories collected today and the verified indicators. Scenarios and risks, never buy or sell calls.</p></div></section>`;
+  let h = `<section class="bleed dhero">${tilesHTML(4)}<div class="in"><span class="eyebrow">Ask the Radar</span><h1>Ask anything about today's money news.</h1><p class="muted">Answers use the stories collected today and the verified indicators. Scenarios and risks, never buy or sell calls.</p></div></section>`;
   h += `<section class="panel"><div class="ptitle"><h2>Your question</h2></div>
     <p class="muted" style="font-size:.9rem">Ask anything about today's markets. The answer uses the collected news and shows scenarios and risks, never buy or sell calls.</p>
     <div class="chips">${["What could earn more than a deposit right now?","With rates rising, do bonds make sense to look at?","What does rising oil mean for investors?","Which risks are growing in markets this week?"].map(q=>`<button class="chip" type="button" data-q="${esc(q)}">${esc(q)}</button>`).join("")}</div>
@@ -1061,7 +1064,7 @@ function vMarkets(){
   const SUBS=[["brief","The Brief"],["hoje","Daily map"],["mes","Month"],["sim","Simulator"]]; mk.sub=mk.sub||"brief"; if(mk.sub==="perg") mk.sub="brief";
   const bb=ins0?.brief; const gNum = bb?.number?.value || (iPT?fmtNum(iPT.value,iPT.dec)+"%":""); const gCap = bb?.number?.value ? (bb.number.caption||"") : (iPT?`${indLabel(iPT)} · ${perEN(iPT.period)}`:"");
   const meta = `${day?`${(day.items||[]).length} stories from ${(day.sources||[]).length} sources`:"Waiting for the first collection"}${S.ind?` · indicators verified ${esc(new Date(S.ind.updatedAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}`:""}${day&&day.collectedAt?` · news at ${esc(new Date(day.collectedAt).toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"}))}`:""}`;
-  let h = `<section class="bleed dhero mk"><canvas class="rib" data-seed="1" aria-hidden="true"></canvas><div class="in">
+  let h = `<section class="bleed dhero mk">${tilesHTML(1)}<div class="in">
       <span class="eyebrow">Literacy Radar · ${esc(new Date().toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"}))}</span>
       <div class="hgrid"><h1>${esc(head)}</h1></div>
       <div class="hfoot"><div style="display:flex;flex-direction:column;gap:var(--s2)"><p class="muted">${esc(sub)}</p><span class="meta">${meta}</span></div>
@@ -1514,7 +1517,7 @@ function vRoutine(){
   const weekN=days.filter(d=>d.n>=3).length; const doneN=todayDone.filter(Boolean).length;
   const wk=weekId(today); const sig=R.data.signals||{}; const weeks=Object.keys(sig).sort().reverse().slice(0,6); if(!weeks.includes(wk)) weeks.unshift(wk);
   const mins = R.timer ? `${String(Math.floor(R.left/60)).padStart(2,"0")}:${String(R.left%60).padStart(2,"0")}` : "15:00";
-  return `<section class="bleed dhero"><canvas class="rib" data-seed="5" aria-hidden="true"></canvas><div class="in"><span class="eyebrow">Engagement routine · Instagram and LinkedIn</span>
+  return `<section class="bleed dhero">${tilesHTML(5)}<div class="in"><span class="eyebrow">Engagement routine · Instagram and LinkedIn</span>
       <h1>15 minutes a day, always in the same window.</h1>
       <p class="muted">Replying and commenting is what grows an account most, but only if it's a habit you can keep. The routine is short on purpose. The Radar doesn't post or read your messages: you engage in the apps and the Radar helps you write the replies.</p>
     <div class="stats"><div class="stat"><b>${doneN}/4</b><span>steps today</span></div><div class="stat"><b>${weekN}/5</b><span>days done this week</span></div><div class="stat"><b>${esc(win)}</b><span>your daily window</span></div></div></div></section>
@@ -1716,7 +1719,7 @@ function render(){
   else pauseR3();
   m.innerHTML = tab==="lib" ? vLib() : tab==="mkt" ? vMarkets() : tab==="ask" ? vAsk() : tab==="rot" ? vRoutine() : vStudio();
   bind(); if(tab==="mkt"||tab==="ask") bindMarkets(); if(tab==="rot") bindRoutine();
-  splitWords(m); RIBBONS.mount(document);
+  splitWords(m); window.RADAR_TILES?.();
   m.querySelectorAll("[data-jump]").forEach(b=>b.onclick=()=>{ if(b.dataset.go&&mk.sub!==b.dataset.go){ mk.sub=b.dataset.go; render(); } document.querySelector(b.dataset.jump)?.scrollIntoView({behavior:RM()?"auto":"smooth",block:"start"}); });
   renderTicker(); motion(m); window.RADAR_BAR?.(); scrollFX(document);
 }
@@ -1749,10 +1752,24 @@ function scrollFX(root){
   root.querySelectorAll(".stats4").forEach(g=>{ g.querySelectorAll(".st").forEach((c,i)=>c.style.setProperty("--i",i)); watch(g,"stats4"); });
 }
 
-/* parallax for the closing band tiles */
-(()=>{ const band=document.querySelector(".fcta"); if(!band||matchMedia("(prefers-reduced-motion: reduce)").matches) return; let raf=0;
-  const upd=()=>{ raf=0; const r=band.getBoundingClientRect(); const p=Math.max(-1,Math.min(1.2,(innerHeight-r.top)/(innerHeight+r.height))); band.style.setProperty("--p",p.toFixed(3)); };
-  addEventListener("scroll",()=>{ if(!raf) raf=requestAnimationFrame(upd); },{passive:true}); addEventListener("resize",upd); upd(); })();
+/* hero tiles: rounded gradient squares that fly in, drift, follow the pointer and turn as you scroll */
+const TILESETS=[
+  [[60,6,13,-28,"#1F7F7C",1.2,40],[4,12,10,26,"#3AA89C",.7,-30],[22,32,15,-18,"#FFFFFF",.35,20],[82,30,12,8,"#5BC8B6",.9,-45],[-5,58,13,34,"#1F7F7C",1.1,35],[46,58,14,-30,"#3AA89C",1.4,-25],[88,72,9,22,"#5BC8B6",.6,50]],
+  [[70,8,12,-20,"#3AA89C",1,35],[2,20,9,30,"#5BC8B6",.6,-40],[30,46,13,-12,"#FFFFFF",.4,25],[86,40,13,14,"#1F7F7C",1.2,-30],[52,70,12,-26,"#5BC8B6",1.3,45],[10,72,10,18,"#3AA89C",.8,-20]],
+];
+function tilesHTML(seed){
+  const set=TILESETS[(seed||1)%TILESETS.length];
+  return `<div class="tiles" aria-hidden="true">${set.map(([x,y,sz,r,c,k,spin],i)=>`<span style="--x:${x}%;--y:${y}%;--s:${sz}vw;--r:${r}deg;--c:${c};--k:${k};--spin:${spin}deg;--d:${(9+i*1.4).toFixed(1)}s;--dl:-${(i*1.7).toFixed(1)}s;--e:${i*90}ms"><b><i></i></b></span>`).join("")}</div>`;
+}
+(()=>{ if(matchMedia("(prefers-reduced-motion: reduce)").matches) return; let raf=0, mx=0, my=0, tx=0, ty=0;
+  const upd=()=>{ raf=0; mx+=(tx-mx)*.12; my+=(ty-my)*.12;
+    document.querySelectorAll(".dhero").forEach(h=>{ const r=h.getBoundingClientRect(); const p=Math.max(0,Math.min(1.4,-r.top/Math.max(1,r.height)));
+      h.style.setProperty("--p",p.toFixed(3)); h.style.setProperty("--mx",mx.toFixed(3)); h.style.setProperty("--my",my.toFixed(3)); });
+    if(Math.abs(tx-mx)>.002||Math.abs(ty-my)>.002) raf=requestAnimationFrame(upd); };
+  const kick=()=>{ if(!raf) raf=requestAnimationFrame(upd); };
+  addEventListener("scroll",kick,{passive:true}); addEventListener("resize",kick);
+  addEventListener("pointermove",e=>{ tx=e.clientX/innerWidth-.5; ty=e.clientY/innerHeight-.5; kick(); },{passive:true});
+  window.RADAR_TILES=kick; kick(); })();
 function splitWords(root){
   root.querySelectorAll(".dhero h1:not([data-split])").forEach(h=>{ const words=h.textContent.trim().split(/\s+/); h.dataset.split="1"; h.setAttribute("aria-label",h.textContent.trim());
     h.innerHTML=words.map((w,i)=>`<span class="w" aria-hidden="true"><span style="--i:${i}">${esc(w)}</span></span>`).join(" "); });
