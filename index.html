@@ -572,6 +572,17 @@ body.solid header.top{background:rgba(255,255,255,.88);border-bottom-color:var(-
 .dhero .giant b{font-size:clamp(3.2rem,6vw,5.4rem)}
 .dhero h1{max-width:13ch;font-size:clamp(2.4rem,5.4vw,4.9rem)}
 @media (min-width:861px){.dhero .in > *{max-width:58%} .dhero .hfoot{max-width:100%}}
+
+/* menu bar: always solid white, never see-through */
+.ticker{-webkit-mask-image:none!important;mask-image:none!important}
+header.top,body.solid header.top{background:#FFFFFF!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border-bottom:1px solid var(--line)!important}
+/* narrower screens: logo and AI key on the first row, the menu on its own row */
+@media (max-width:1000px){
+  header.top .wrap{flex-wrap:wrap;row-gap:0;padding-block:var(--s2) 0}
+  header.top .logo{order:1;min-height:52px}
+  .aikey-top{order:2;margin-left:auto;position:static!important;top:auto;right:auto}
+  .tabs{order:3;width:100%;margin-left:0!important;justify-content:space-between;padding-bottom:var(--s2)}
+}
 </style>
 
 <header class="top"><div class="wrap">
