@@ -539,7 +539,7 @@ header.top .logo i,.fbot .logo i{border-color:#0C7075} header.top .logo i::after
 body.solid header.top{background:rgba(255,255,255,.88);border-bottom-color:var(--line)}
 .ticker,body.solid .ticker{background:#05161A;backdrop-filter:none;-webkit-backdrop-filter:none}
 .dhero,.fcta{background:#FFFFFF;color:var(--ink)}
-.dhero::after{background:linear-gradient(rgba(255,255,255,0),#FFFFFF)}
+.dhero::after{display:none}
 .dhero canvas.rib,.fcta canvas.rib{-webkit-mask-image:none;mask-image:none;opacity:1}
 .dhero h1,.mega{color:var(--ink)}
 .dhero .eyebrow,.fcta .eyebrow{color:var(--muted)} .dhero .muted{color:var(--muted)}
@@ -562,6 +562,8 @@ body.solid header.top{background:rgba(255,255,255,.88);border-bottom-color:var(-
 .flegal{border-top-color:var(--line);color:var(--muted)}
 /* text sits over the spheres: a soft white veil behind the left column on wide screens */
 @media (min-width:861px){.dhero .in > *:not(.hgrid):not(.hfoot), .dhero .hgrid h1{position:relative}}
+
+@media (max-width:760px){.dhero .in{padding-bottom:150px}}
 </style>
 
 <header class="top"><div class="wrap">
@@ -1510,7 +1512,7 @@ ${R.msg.slice(0,4000)}
 /* ---------- Motion layer (ticker, reveal, count-up, tab indicator) ---------- */
 /* Living ribbons: translucent sheets of fine strands that twist slowly, drawn with additive light
    in the palette's teals and blues. Canvas 2D, ~30 fps, pauses off-screen, still frame for reduced motion. */
-/* Wireframe globes on white: thin meridians and parallels in the palette, each turning on its own tilted axis,
+/* Market wave on white: a coral wireframe terrain rolling slowly in perspective,
    with depth (far ones smaller and paler) and soft contact shadows. Canvas 2D at full device
    resolution, so edges stay crisp. ~30 fps, pauses off-screen, still frame for reduced motion. */
 const RIBBONS=(()=>{
@@ -1522,35 +1524,31 @@ const RIBBONS=(()=>{
   addEventListener("pointermove",e=>{ tx=e.clientX/innerWidth-.5; ty=e.clientY/innerHeight-.5; },{passive:true});
   function make(cv){
     const ctx=cv.getContext("2d"); if(!ctx) return null;
-    const sd=+cv.dataset.seed||1; let q=sd*9301+49297; const R=()=>{ q=(q*9301+49297)%233280; return q/233280; };
-    const COLS=["#670010","#ff8478","#3c0000","#cb4c46","#960018"]; // warm reds against the teal page
-    // wireframe globes: meridians + parallels, each on its own tilted axis, turning slowly
-    const G=[{x:.83,y:.33,r:.19,c:"#960018",w:1.25,mer:18,par:10}];
-    const spots=[[.66,.2,.045]]; // one quiet accent, nothing overlaps
-    spots.forEach(([x,y,r],i)=>G.push({x:x+(R()-.5)*.03,y:y+(R()-.5)*.03,r,c:"#ff8478",w:1,mer:r<.06?8:12,par:r<.06?6:8}));
-    G.forEach(g=>{ g.ax=(R()-.5)*1.6; g.az=(R()-.5)*1.4; g.sp=(.06+R()*.1)*(R()<.5?-1:1); g.ph=R()*6.283; g.bob=R()*6.283; });
-    const rot=(p,ax,az,ay)=>{ let [x,y,z]=p; let c=Math.cos(ay),s=Math.sin(ay); [x,z]=[x*c+z*s,-x*s+z*c];
-      c=Math.cos(ax); s=Math.sin(ax); [y,z]=[y*c-z*s,y*s+z*c]; c=Math.cos(az); s=Math.sin(az); [x,y]=[x*c-y*s,x*s+y*c]; return [x,y,z]; };
-    function curve(ctx,pts,front){ let on=false; ctx.beginPath(); for(const p of pts){ const vis=front?p[2]>=0:p[2]<0; if(vis){ on?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]); on=true; } else on=false; } ctx.stroke(); }
+    const sd=+cv.dataset.seed||1, ph=sd*1.7;
+    // market wave: a wireframe terrain in coral that rolls slowly, like a live chart seen in perspective
+    const hgt=(u,v,t)=>Math.sin(u*2.1+t*.45+v*3.1+ph)*.55+Math.sin(u*4.7-t*.32+v*1.6+ph*.6)*.28+Math.cos(v*4.2+t*.38-u*.8)*.3;
     function frame(t){
       const mob=innerWidth<760, dpr=Math.min(3,devicePixelRatio||1);
       const W=Math.round(cv.clientWidth*dpr), H=Math.round(cv.clientHeight*dpr); if(!W||!H) return;
       if(cv.width!==W||cv.height!==H){ cv.width=W; cv.height=H; }
       mx+=(tx-mx)*.05; my+=(ty-my)*.05;
-      ctx.setTransform(1,0,0,1,0,0); ctx.clearRect(0,0,W,H); ctx.lineCap="round"; ctx.lineJoin="round";
-      const S=Math.min(H,W*.9);
-      for(const g of G){
-        let X=g.x, Y=g.y; if(mob){ X=.3+g.x*.7; Y=.19+g.y*.24; }
-        const r=g.r*S*(mob?.5:1), cx=X*W+Math.cos(t*.3+g.bob)*.006*W-mx*30*dpr, cy=Y*H+Math.sin(t*.4+g.bob)*.012*H-my*22*dpr;
-        const ay=g.ph+t*g.sp, P=(la,lo)=>{ const v=rot([Math.cos(la)*Math.sin(lo),Math.sin(la),Math.cos(la)*Math.cos(lo)],g.ax+my*.2,g.az,ay+mx*.3); return [cx+v[0]*r,cy-v[1]*r,v[2]]; };
-        const lines=[];
-        for(let i=0;i<g.mer;i++){ const lo=i/g.mer*Math.PI; const pts=[]; for(let k=0;k<=72;k++){ const la=k/72*2*Math.PI; pts.push(P(la,lo)); } lines.push(pts); }
-        for(let j=1;j<g.par;j++){ const la=-Math.PI/2+j/g.par*Math.PI; const pts=[]; for(let k=0;k<=72;k++) pts.push(P(la,k/72*2*Math.PI)); lines.push(pts); }
-        ctx.strokeStyle=g.c; ctx.lineWidth=g.w*dpr*.8; ctx.globalAlpha=.16; lines.forEach(l=>curve(ctx,l,false));
-        ctx.lineWidth=g.w*dpr; ctx.globalAlpha=.9; lines.forEach(l=>curve(ctx,l,true));
-        ctx.globalAlpha=1; ctx.lineWidth=g.w*dpr*1.15; ctx.beginPath(); ctx.arc(cx,cy,r,0,6.2832); ctx.stroke();
-      }
+      ctx.setTransform(1,0,0,1,0,0); ctx.globalCompositeOperation="source-over"; ctx.clearRect(0,0,W,H); ctx.lineJoin="round";
+      const R=mob?{x0:-.1,x1:1.1,y0:.8,y1:1.0}:{x0:.44,x1:1.06,y0:.2,y1:.62};
+      const X0=R.x0*W, X1=R.x1*W, Y0=R.y0*H, Y1=R.y1*H, CX=(X0+X1)/2 - mx*24*dpr, HW=(X1-X0)*.62, A=(Y1-Y0)*(mob?.3:.42);
+      const rows=mob?18:28, cols=mob?26:44, K=2.3, sMin=1/(1+K);
+      const pt=(c,r)=>{ const v=r/(rows-1), u=c/(cols-1)*2-1, sc=1/(1+v*K);
+        const yb=Y1-(Y1-Y0)*.82*(1-sc)/(1-sMin) - my*14*dpr*sc; return [CX+u*HW*sc*1.25, yb-hgt(u,v,t)*A*sc, sc]; };
+      ctx.lineWidth=dpr*1.1;
+      for(let r=rows-1;r>=0;r--){ const sc=1/(1+r/(rows-1)*K); ctx.strokeStyle="#ff8478"; ctx.globalAlpha=.22+.78*Math.pow((sc-sMin)/(1-sMin),1.2);
+        ctx.beginPath(); for(let c=0;c<cols;c++){ const [x,y]=pt(c,r); c?ctx.lineTo(x,y):ctx.moveTo(x,y); } ctx.stroke(); }
+      ctx.strokeStyle="#cb4c46";
+      for(let c=0;c<cols;c++){ ctx.globalAlpha=.45; ctx.beginPath(); for(let r=0;r<rows;r++){ const [x,y]=pt(c,r); r?ctx.lineTo(x,y):ctx.moveTo(x,y); } ctx.stroke(); }
       ctx.globalAlpha=1;
+      // fade the edges into the white page
+      ctx.globalCompositeOperation="destination-out";
+      if(!mob){ const g=ctx.createLinearGradient(X0,0,X0+(X1-X0)*.32,0); g.addColorStop(0,"rgba(0,0,0,1)"); g.addColorStop(1,"rgba(0,0,0,0)"); ctx.fillStyle=g; ctx.fillRect(0,0,X0+(X1-X0)*.32,H); }
+      const gt=ctx.createLinearGradient(0,Y0-(Y1-Y0)*.1,0,Y0+(Y1-Y0)*.35); gt.addColorStop(0,"rgba(0,0,0,1)"); gt.addColorStop(1,"rgba(0,0,0,0)"); ctx.fillStyle=gt; ctx.fillRect(0,0,W,Y0+(Y1-Y0)*.35);
+      ctx.globalCompositeOperation="source-over";
     }
     return {frame};
   }
