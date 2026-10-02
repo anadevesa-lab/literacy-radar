@@ -1510,7 +1510,7 @@ ${R.msg.slice(0,4000)}
 /* ---------- Motion layer (ticker, reveal, count-up, tab indicator) ---------- */
 /* Living ribbons: translucent sheets of fine strands that twist slowly, drawn with additive light
    in the palette's teals and blues. Canvas 2D, ~30 fps, pauses off-screen, still frame for reduced motion. */
-/* Floating spheres on white: soft-lit, glossy balls in the palette that drift and bob slowly,
+/* Wireframe globes on white: thin meridians and parallels in the palette, each turning on its own tilted axis,
    with depth (far ones smaller and paler) and soft contact shadows. Canvas 2D at full device
    resolution, so edges stay crisp. ~30 fps, pauses off-screen, still frame for reduced motion. */
 const RIBBONS=(()=>{
@@ -1523,43 +1523,34 @@ const RIBBONS=(()=>{
   function make(cv){
     const ctx=cv.getContext("2d"); if(!ctx) return null;
     const sd=+cv.dataset.seed||1; let q=sd*9301+49297; const R=()=>{ q=(q*9301+49297)%233280; return q/233280; };
-    const n=9, balls=[];
-    for(let i=0;i<n;i++){ const z=.35+R()*.65; // depth 0.35 (far) .. 1 (near)
-      balls.push({x:.68+R()*.3, y:.2+R()*.34, z, r:(.028+R()*.05)*(.6+z*.6), c:hex(PAL[Math.floor(R()*PAL.length)]), ph:R()*6.283, sp:.25+R()*.35, dr:.01+R()*.016}); }
-    balls.push({x:.84,y:.38,z:1,r:.11,c:hex("#0F969C"),ph:R()*6.283,sp:.22,dr:.01}); // the lead sphere
-    balls.push({x:.7,y:.28,z:.85,r:.045,c:hex("#EAF3F5"),ph:R()*6.283,sp:.3,dr:.016});
-    balls.push({x:.95,y:.24,z:.7,r:.035,c:hex("#294D61"),ph:R()*6.283,sp:.34,dr:.014});
-    balls.sort((a,b)=>a.z-b.z);
+    const COLS=["#05161A","#0C7075","#294D61","#0F969C","#6DA5C0"];
+    // wireframe globes: meridians + parallels, each on its own tilted axis, turning slowly
+    const G=[{x:.83,y:.4,r:.2,c:"#0C7075",w:1.25,mer:16,par:9}];
+    const spots=[[.67,.27,.07],[.97,.26,.055],[.71,.53,.05],[.98,.55,.07],[.9,.2,.035]];
+    spots.forEach(([x,y,r],i)=>G.push({x:x+(R()-.5)*.03,y:y+(R()-.5)*.03,r,c:COLS[i%COLS.length],w:1,mer:r<.06?8:12,par:r<.06?6:8}));
+    G.forEach(g=>{ g.ax=(R()-.5)*1.6; g.az=(R()-.5)*1.4; g.sp=(.06+R()*.1)*(R()<.5?-1:1); g.ph=R()*6.283; g.bob=R()*6.283; });
+    const rot=(p,ax,az,ay)=>{ let [x,y,z]=p; let c=Math.cos(ay),s=Math.sin(ay); [x,z]=[x*c+z*s,-x*s+z*c];
+      c=Math.cos(ax); s=Math.sin(ax); [y,z]=[y*c-z*s,y*s+z*c]; c=Math.cos(az); s=Math.sin(az); [x,y]=[x*c-y*s,x*s+y*c]; return [x,y,z]; };
+    function curve(ctx,pts,front){ let on=false; ctx.beginPath(); for(const p of pts){ const vis=front?p[2]>=0:p[2]<0; if(vis){ on?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]); on=true; } else on=false; } ctx.stroke(); }
     function frame(t){
       const mob=innerWidth<760, dpr=Math.min(3,devicePixelRatio||1);
       const W=Math.round(cv.clientWidth*dpr), H=Math.round(cv.clientHeight*dpr); if(!W||!H) return;
       if(cv.width!==W||cv.height!==H){ cv.width=W; cv.height=H; }
       mx+=(tx-mx)*.05; my+=(ty-my)*.05;
-      ctx.setTransform(1,0,0,1,0,0); ctx.clearRect(0,0,W,H);
-      const S=Math.min(H,W*.9), white=[255,255,255];
-      for(const b of balls){
-        let X=b.x, Y=b.y; if(mob){ X=.25+b.x*.75; Y=.19+b.y*.22; }
-        const cx=X*W + Math.cos(t*b.sp*.6+b.ph)*b.dr*W - mx*40*dpr*b.z;
-        const cy=Y*H + Math.sin(t*b.sp+b.ph)*b.dr*H*1.4 - my*30*dpr*b.z;
-        const r=b.r*S*(mob?.55:1);
-        const far=1-b.z, base=mix(b.c,white,far*.55);
-        // soft shadow on the "floor" below
-        const sh=ctx.createRadialGradient(cx+r*.15,cy+r*1.25,0,cx+r*.15,cy+r*1.25,r*1.1);
-        sh.addColorStop(0,`rgba(5,22,26,${(.06*b.z).toFixed(3)})`); sh.addColorStop(1,"rgba(5,22,26,0)");
-        ctx.fillStyle=sh; ctx.beginPath(); ctx.ellipse(cx+r*.15,cy+r*1.25,r*.9,r*.22,0,0,6.2832); ctx.fill();
-        // body: light from the upper left
-        const g=ctx.createRadialGradient(cx-r*.38,cy-r*.42,r*.05,cx,cy,r*1.02);
-        g.addColorStop(0,css(mix(base,white,.72))); g.addColorStop(.35,css(mix(base,white,.18))); g.addColorStop(.82,css(base)); g.addColorStop(1,css(mix(base,[5,22,26],.28)));
-        ctx.fillStyle=g; ctx.beginPath(); ctx.arc(cx,cy,r,0,6.2832); ctx.fill();
-        // rim light from the right, bounced off the white page
-        const rim=ctx.createRadialGradient(cx+r*.55,cy+r*.35,r*.2,cx+r*.55,cy+r*.35,r*.9);
-        rim.addColorStop(0,"rgba(255,255,255,.22)"); rim.addColorStop(1,"rgba(255,255,255,0)");
-        ctx.fillStyle=rim; ctx.beginPath(); ctx.arc(cx,cy,r,0,6.2832); ctx.fill();
-        // specular glint
-        const sp=ctx.createRadialGradient(cx-r*.42,cy-r*.48,0,cx-r*.42,cy-r*.48,r*.32);
-        sp.addColorStop(0,"rgba(255,255,255,.85)"); sp.addColorStop(1,"rgba(255,255,255,0)");
-        ctx.fillStyle=sp; ctx.beginPath(); ctx.arc(cx,cy,r,0,6.2832); ctx.fill();
+      ctx.setTransform(1,0,0,1,0,0); ctx.clearRect(0,0,W,H); ctx.lineCap="round"; ctx.lineJoin="round";
+      const S=Math.min(H,W*.9);
+      for(const g of G){
+        let X=g.x, Y=g.y; if(mob){ X=.3+g.x*.7; Y=.19+g.y*.24; }
+        const r=g.r*S*(mob?.5:1), cx=X*W+Math.cos(t*.3+g.bob)*.006*W-mx*30*dpr, cy=Y*H+Math.sin(t*.4+g.bob)*.012*H-my*22*dpr;
+        const ay=g.ph+t*g.sp, P=(la,lo)=>{ const v=rot([Math.cos(la)*Math.sin(lo),Math.sin(la),Math.cos(la)*Math.cos(lo)],g.ax+my*.2,g.az,ay+mx*.3); return [cx+v[0]*r,cy-v[1]*r,v[2]]; };
+        const lines=[];
+        for(let i=0;i<g.mer;i++){ const lo=i/g.mer*Math.PI; const pts=[]; for(let k=0;k<=72;k++){ const la=k/72*2*Math.PI; pts.push(P(la,lo)); } lines.push(pts); }
+        for(let j=1;j<g.par;j++){ const la=-Math.PI/2+j/g.par*Math.PI; const pts=[]; for(let k=0;k<=72;k++) pts.push(P(la,k/72*2*Math.PI)); lines.push(pts); }
+        ctx.strokeStyle=g.c; ctx.lineWidth=g.w*dpr*.8; ctx.globalAlpha=.16; lines.forEach(l=>curve(ctx,l,false));
+        ctx.lineWidth=g.w*dpr; ctx.globalAlpha=.9; lines.forEach(l=>curve(ctx,l,true));
+        ctx.globalAlpha=1; ctx.lineWidth=g.w*dpr*1.15; ctx.beginPath(); ctx.arc(cx,cy,r,0,6.2832); ctx.stroke();
       }
+      ctx.globalAlpha=1;
     }
     return {frame};
   }
