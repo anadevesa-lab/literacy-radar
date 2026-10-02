@@ -1523,10 +1523,10 @@ const RIBBONS=(()=>{
   function make(cv){
     const ctx=cv.getContext("2d"); if(!ctx) return null;
     const sd=+cv.dataset.seed||1; let q=sd*9301+49297; const R=()=>{ q=(q*9301+49297)%233280; return q/233280; };
-    const COLS=["#05161A","#0C7075","#294D61","#0F969C","#6DA5C0"];
+    const COLS=["#670010","#ff8478","#3c0000","#cb4c46","#960018"]; // warm reds against the teal page
     // wireframe globes: meridians + parallels, each on its own tilted axis, turning slowly
-    const G=[{x:.83,y:.4,r:.2,c:"#0C7075",w:1.25,mer:16,par:9}];
-    const spots=[[.67,.27,.07],[.97,.26,.055],[.71,.53,.05],[.98,.55,.07],[.9,.2,.035]];
+    const G=[{x:.86,y:.46,r:.34,c:"#960018",w:1.3,mer:20,par:11}];
+    const spots=[[.64,.26,.065],[.66,.6,.045],[.99,.16,.05],[.72,.14,.035]];
     spots.forEach(([x,y,r],i)=>G.push({x:x+(R()-.5)*.03,y:y+(R()-.5)*.03,r,c:COLS[i%COLS.length],w:1,mer:r<.06?8:12,par:r<.06?6:8}));
     G.forEach(g=>{ g.ax=(R()-.5)*1.6; g.az=(R()-.5)*1.4; g.sp=(.06+R()*.1)*(R()<.5?-1:1); g.ph=R()*6.283; g.bob=R()*6.283; });
     const rot=(p,ax,az,ay)=>{ let [x,y,z]=p; let c=Math.cos(ay),s=Math.sin(ay); [x,z]=[x*c+z*s,-x*s+z*c];
