@@ -528,6 +528,40 @@ html,body{overflow-x:clip}
 .aikey-top:hover{border-color:#fff;background:rgba(255,255,255,.06)}
 .aikey-top i{width:7px;height:7px;border-radius:50%;background:#E8B46B;flex:none} .aikey-top.ok i{background:#3FBFC4}
 @media (max-width:640px){header.top .wrap{position:relative} .aikey-top{position:absolute;right:var(--s4);top:14px;min-height:32px;padding:0 12px}}
+
+/* ===== White everywhere: floating spheres on white, ink type; the dark ticker stays as the accent stripe ===== */
+header.top{color:var(--ink)}
+header.top .logo,.fbot .logo{color:var(--ink)}
+header.top .logo i,.fbot .logo i{border-color:#0C7075} header.top .logo i::after,.fbot .logo i::after{background:#0F969C}
+.tab{color:var(--muted)} .tab:hover{color:var(--ink);background:rgba(5,22,26,.05)}
+.tabind{background:var(--ink)} .tab.on{color:#fff!important} .tabs.noind .tab.on{background:var(--ink)!important}
+.aikey-top{border-color:var(--line);color:var(--ink)} .aikey-top:hover{border-color:var(--ink);background:rgba(5,22,26,.04)}
+body.solid header.top{background:rgba(255,255,255,.88);border-bottom-color:var(--line)}
+.ticker,body.solid .ticker{background:#05161A;backdrop-filter:none;-webkit-backdrop-filter:none}
+.dhero,.fcta{background:#FFFFFF;color:var(--ink)}
+.dhero::after{background:linear-gradient(rgba(255,255,255,0),#FFFFFF)}
+.dhero canvas.rib,.fcta canvas.rib{-webkit-mask-image:none;mask-image:none;opacity:1}
+.dhero h1,.mega{color:var(--ink)}
+.dhero .eyebrow,.fcta .eyebrow{color:var(--muted)} .dhero .muted{color:var(--muted)}
+.dhero .btn{background:#fff;color:var(--ink);border-color:var(--line)} .dhero .btn:hover{border-color:var(--ink)}
+.dhero .btn.primary,.fcta .btn.primary{background:var(--ink);color:#fff;border-color:var(--ink)}
+.dhero .btn.primary:hover,.fcta .btn.primary:hover{background:#0C7075;border-color:#0C7075;color:#fff}
+.dhero .field .label{color:var(--muted)} .dhero .field input{background:#fff;border-color:var(--line);color:var(--ink)}
+.dhero .stat{background:rgba(255,255,255,.75)!important;border:1px solid var(--line)!important;color:var(--ink);backdrop-filter:blur(8px)}
+.dhero .stat span{color:var(--muted)}
+.dhero .hfoot{border-top-color:var(--line)} .dhero .hfoot .meta{color:var(--muted);opacity:.8}
+.dhero .giant b{background:linear-gradient(180deg,#05161A 0%,#0C7075 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.dhero .giant em{color:#0C7075} .dhero .giant span{color:var(--muted)}
+.godown{background:var(--ink);color:#fff} .godown:hover{background:#0C7075}
+.fcta{border-top:1px solid var(--line)}
+.fcta p{color:var(--muted)!important}
+.foot{background:#FFFFFF;color:var(--ink)}
+.fbot{border-top:1px solid var(--line)}
+.fbot p{color:var(--muted)} .fbot h4{color:#0C7075} .fbot ul{color:var(--muted)}
+.flink{color:var(--ink)} .flink:hover{color:#0C7075}
+.flegal{border-top-color:var(--line);color:var(--muted)}
+/* text sits over the spheres: a soft white veil behind the left column on wide screens */
+@media (min-width:861px){.dhero .in > *:not(.hgrid):not(.hfoot), .dhero .hgrid h1{position:relative}}
 </style>
 
 <header class="top"><div class="wrap">
@@ -1476,41 +1510,56 @@ ${R.msg.slice(0,4000)}
 /* ---------- Motion layer (ticker, reveal, count-up, tab indicator) ---------- */
 /* Living ribbons: translucent sheets of fine strands that twist slowly, drawn with additive light
    in the palette's teals and blues. Canvas 2D, ~30 fps, pauses off-screen, still frame for reduced motion. */
+/* Floating spheres on white: soft-lit, glossy balls in the palette that drift and bob slowly,
+   with depth (far ones smaller and paler) and soft contact shadows. Canvas 2D at full device
+   resolution, so edges stay crisp. ~30 fps, pauses off-screen, still frame for reduced motion. */
 const RIBBONS=(()=>{
-  const T0=performance.now(); let live=[], raf=0, io=null, last=0;
-  const COL=[[15,150,156],[109,165,192],[12,112,117],[190,226,232]];
+  const T0=performance.now(); let live=[], raf=0, io=null, last=0, mx=0, my=0, tx=0, ty=0;
+  const PAL=["#0C7075","#0F969C","#6DA5C0","#294D61","#072E33","#EAF3F5","#6DA5C0","#0F969C"];
+  const hex=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16));
+  const mix=(a,b,k)=>a.map((v,i)=>Math.round(v+(b[i]-v)*k));
+  const css=c=>`rgb(${c[0]},${c[1]},${c[2]})`;
+  addEventListener("pointermove",e=>{ tx=e.clientX/innerWidth-.5; ty=e.clientY/innerHeight-.5; },{passive:true});
   function make(cv){
     const ctx=cv.getContext("2d"); if(!ctx) return null;
-    const sd=+cv.dataset.seed||1, r=k=>{ const x=Math.sin(sd*97.13+k*31.7)*43758.5453; return x-Math.floor(x); };
-    const sheets=[
-      {c:0,y:.44,amp:.15,f:.85,sp:.10,tw:1.05,w:.30,ph:r(1)*6.28,a:.055},
-      {c:1,y:.58,amp:.11,f:1.15,sp:-.075,tw:1.6,w:.20,ph:r(2)*6.28,a:.05},
-      {c:2,y:.34,amp:.09,f:1.5,sp:.13,tw:2.2,w:.12,ph:r(3)*6.28,a:.06},
-      {c:3,y:.50,amp:.07,f:1.9,sp:-.11,tw:2.7,w:.05,ph:r(4)*6.28,a:.05}];
+    const sd=+cv.dataset.seed||1; let q=sd*9301+49297; const R=()=>{ q=(q*9301+49297)%233280; return q/233280; };
+    const n=9, balls=[];
+    for(let i=0;i<n;i++){ const z=.35+R()*.65; // depth 0.35 (far) .. 1 (near)
+      balls.push({x:.68+R()*.3, y:.2+R()*.34, z, r:(.028+R()*.05)*(.6+z*.6), c:hex(PAL[Math.floor(R()*PAL.length)]), ph:R()*6.283, sp:.25+R()*.35, dr:.01+R()*.016}); }
+    balls.push({x:.84,y:.38,z:1,r:.11,c:hex("#0F969C"),ph:R()*6.283,sp:.22,dr:.01}); // the lead sphere
+    balls.push({x:.7,y:.28,z:.85,r:.045,c:hex("#EAF3F5"),ph:R()*6.283,sp:.3,dr:.016});
+    balls.push({x:.95,y:.24,z:.7,r:.035,c:hex("#294D61"),ph:R()*6.283,sp:.34,dr:.014});
+    balls.sort((a,b)=>a.z-b.z);
     function frame(t){
-      const mob=innerWidth<760, dpr=Math.min(mob?1.5:2,devicePixelRatio||1);
+      const mob=innerWidth<760, dpr=Math.min(3,devicePixelRatio||1);
       const W=Math.round(cv.clientWidth*dpr), H=Math.round(cv.clientHeight*dpr); if(!W||!H) return;
       if(cv.width!==W||cv.height!==H){ cv.width=W; cv.height=H; }
-      ctx.setTransform(1,0,0,1,0,0); ctx.globalCompositeOperation="source-over"; ctx.clearRect(0,0,W,H);
-      const g=ctx.createRadialGradient(W*.72,H*.38,0,W*.72,H*.38,Math.max(W,H)*.55); g.addColorStop(0,"rgba(15,150,156,.20)"); g.addColorStop(1,"rgba(15,150,156,0)"); ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
-      ctx.globalCompositeOperation="lighter"; ctx.lineWidth=Math.max(1,dpr*.9);
-      const N=mob?22:40, step=Math.max(5*dpr,W/150), tilt=H*.42;
-      const yAt=(s,X,u,t)=>{ const c=s.y*H - (X-.5)*tilt + s.amp*H*Math.sin(X*s.f*6.283+t*s.sp+s.ph) + s.amp*.4*H*Math.sin(X*s.f*2.1*6.283-t*s.sp*.7+s.ph*1.3);
-        return c+u*s.w*H*Math.cos(X*s.tw*3.1416+t*s.sp*1.7+s.ph*.5); };
-      for(const s of sheets){ const [cr,cg,cb]=COL[s.c];
-        // glassy body: fill between the two edges, brighter where the sheet faces us
-        ctx.beginPath(); for(let x=-step;x<=W+step;x+=step){ const y=yAt(s,x/W,-.5,t); x<0?ctx.moveTo(x,y):ctx.lineTo(x,y); }
-        for(let x=W+step;x>=-step;x-=step) ctx.lineTo(x,yAt(s,x/W,.5,t)); ctx.closePath();
-        const lg=ctx.createLinearGradient(0,0,W,0); lg.addColorStop(0,`rgba(${cr},${cg},${cb},0)`); lg.addColorStop(.55,`rgba(${cr},${cg},${cb},${s.a*1.6})`); lg.addColorStop(1,`rgba(${cr},${cg},${cb},${s.a*.9})`);
-        ctx.fillStyle=lg; ctx.fill();
-        for(let k=0;k<N;k++){ const u=k/(N-1)-.5, edge=Math.abs(u)*2;
-          ctx.beginPath();
-          for(let x=-step;x<=W+step;x+=step){ const X=x/W;
-            const c=s.y*H - (X-.5)*tilt + s.amp*H*Math.sin(X*s.f*6.283+t*s.sp+s.ph) + s.amp*.4*H*Math.sin(X*s.f*2.1*6.283-t*s.sp*.7+s.ph*1.3);
-            const tw=Math.cos(X*s.tw*3.1416+t*s.sp*1.7+s.ph*.5);
-            const y=c+u*s.w*H*tw;
-            if(x<0) ctx.moveTo(x,y); else ctx.lineTo(x,y); }
-          ctx.strokeStyle=`rgba(${cr},${cg},${cb},${Math.min(.5,s.a*(1+2.2*edge*edge)).toFixed(3)})`; ctx.stroke(); } }
+      mx+=(tx-mx)*.05; my+=(ty-my)*.05;
+      ctx.setTransform(1,0,0,1,0,0); ctx.clearRect(0,0,W,H);
+      const S=Math.min(H,W*.9), white=[255,255,255];
+      for(const b of balls){
+        let X=b.x, Y=b.y; if(mob){ X=.25+b.x*.75; Y=.19+b.y*.22; }
+        const cx=X*W + Math.cos(t*b.sp*.6+b.ph)*b.dr*W - mx*40*dpr*b.z;
+        const cy=Y*H + Math.sin(t*b.sp+b.ph)*b.dr*H*1.4 - my*30*dpr*b.z;
+        const r=b.r*S*(mob?.55:1);
+        const far=1-b.z, base=mix(b.c,white,far*.55);
+        // soft shadow on the "floor" below
+        const sh=ctx.createRadialGradient(cx+r*.15,cy+r*1.25,0,cx+r*.15,cy+r*1.25,r*1.1);
+        sh.addColorStop(0,`rgba(5,22,26,${(.06*b.z).toFixed(3)})`); sh.addColorStop(1,"rgba(5,22,26,0)");
+        ctx.fillStyle=sh; ctx.beginPath(); ctx.ellipse(cx+r*.15,cy+r*1.25,r*.9,r*.22,0,0,6.2832); ctx.fill();
+        // body: light from the upper left
+        const g=ctx.createRadialGradient(cx-r*.38,cy-r*.42,r*.05,cx,cy,r*1.02);
+        g.addColorStop(0,css(mix(base,white,.72))); g.addColorStop(.35,css(mix(base,white,.18))); g.addColorStop(.82,css(base)); g.addColorStop(1,css(mix(base,[5,22,26],.28)));
+        ctx.fillStyle=g; ctx.beginPath(); ctx.arc(cx,cy,r,0,6.2832); ctx.fill();
+        // rim light from the right, bounced off the white page
+        const rim=ctx.createRadialGradient(cx+r*.55,cy+r*.35,r*.2,cx+r*.55,cy+r*.35,r*.9);
+        rim.addColorStop(0,"rgba(255,255,255,.22)"); rim.addColorStop(1,"rgba(255,255,255,0)");
+        ctx.fillStyle=rim; ctx.beginPath(); ctx.arc(cx,cy,r,0,6.2832); ctx.fill();
+        // specular glint
+        const sp=ctx.createRadialGradient(cx-r*.42,cy-r*.48,0,cx-r*.42,cy-r*.48,r*.32);
+        sp.addColorStop(0,"rgba(255,255,255,.85)"); sp.addColorStop(1,"rgba(255,255,255,0)");
+        ctx.fillStyle=sp; ctx.beginPath(); ctx.arc(cx,cy,r,0,6.2832); ctx.fill();
+      }
     }
     return {frame};
   }
