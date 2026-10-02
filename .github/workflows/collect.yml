@@ -1,0 +1,30 @@
+name: Collect news
+# Weekdays, morning and afternoon in Lisbon (cron is UTC). Free on GitHub.
+on:
+  schedule:
+    - cron: "47 6,15 * * 1-5"
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: collect
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Collect news, daily map and The Brief
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/collect.mts
+      - name: Save
+        run: |
+          git config user.name "radar-bot"
+          git config user.email "radar-bot@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet || (git commit -m "News $(date -u +%F\ %H:%M)" && git push)
