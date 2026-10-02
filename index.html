@@ -565,6 +565,13 @@ body.solid header.top{background:rgba(255,255,255,.88);border-bottom-color:var(-
 
 @media (max-width:760px){.dhero .in{padding-bottom:150px}}
 
+
+/* number of the day sits under the headline, the right side belongs to the cubes */
+.dhero .hgrid{grid-template-columns:minmax(0,1fr)!important;gap:var(--s5)}
+.dhero .giant{align-items:flex-start!important;text-align:left!important}
+.dhero .giant b{font-size:clamp(3.2rem,6vw,5.4rem)}
+.dhero h1{max-width:13ch;font-size:clamp(2.4rem,5.4vw,4.9rem)}
+@media (min-width:861px){.dhero .in > *{max-width:58%} .dhero .hfoot{max-width:100%}}
 </style>
 
 <header class="top"><div class="wrap">
@@ -1531,8 +1538,8 @@ const RIBBONS=(()=>{
     for(let i=0;i<N;i++) for(let j=0;j<N;j++) for(let k=0;k<N;k++){
       const c=[i-(N-1)/2,j-(N-1)/2,k-(N-1)/2]; const outer=Math.max(...c.map(Math.abs))>1;
       if(outer&&R()<.14) continue;
-      const len=Math.hypot(...c)||1; const out=outer ? (R()<.75 ? .8+R()*2.4 : .15+R()*.4) : (R()<.3 ? .3+R()*.6 : 0);
-      const jit=[R()-.5,R()-.5,R()-.5].map(v=>v*.7); const dd=c.map((v,i)=>v/len+jit[i]);
+      const len=Math.hypot(...c)||1; const out=outer ? (R()<.8 ? 1+R()*3.2 : .2+R()*.5) : (R()<.35 ? .4+R()*.9 : 0);
+      const jit=[R()-.5,R()-.5,R()-.5].map(v=>v*1.1); const dd=c.map((v,i)=>v/len+jit[i]);
       cubes.push({c, d:dd, out, ph:R()*6.283, sp:.35+R()*.3, tone:.97+R()*.03});
     }
     const F=[[[1,0,0],[1,2,6,5]],[[-1,0,0],[0,4,7,3]],[[0,1,0],[3,7,6,2]],[[0,-1,0],[0,1,5,4]],[[0,0,1],[4,5,6,7]],[[0,0,-1],[0,3,2,1]]];
@@ -1544,7 +1551,7 @@ const RIBBONS=(()=>{
       if(cv.width!==W||cv.height!==H){ cv.width=W; cv.height=H; }
       mx+=(tx-mx)*.05; my+=(ty-my)*.05;
       ctx.setTransform(1,0,0,1,0,0); ctx.clearRect(0,0,W,H); ctx.lineJoin="round";
-      const CX=(mob?.74:.8)*W, CY=(mob?.87:.4)*H, U=(mob?.032:.045)*Math.min(H,W*.9);
+      const CX=(mob?.74:.79)*W, CY=(mob?.87:.47)*H, U=(mob?.032:.054)*Math.min(H,W*.9);
       const ay=t*.12+.6+mx*.5, ax=-.48+my*.25, cy=Math.cos(ay), sy=Math.sin(ay), cx=Math.cos(ax), sx=Math.sin(ax), D=14;
       const rot=([x,y,z])=>{ const x1=x*cy+z*sy, z1=-x*sy+z*cy; const y1=y*cx-z1*sx, z2=y*sx+z1*cx; return [x1,y1,z2]; };
       const proj=([x,y,z])=>{ const f=D/(D-z); return [CX+x*U*f, CY-y*U*f]; };
