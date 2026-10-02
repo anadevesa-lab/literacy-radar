@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Literacy Radar: financial news, official indicators and a financial-literacy content studio.">
-<title>Literacy Radar · Nova SBE project</title>
+<meta name="description" content="MINT, a fresh take on finance: financial news, official indicators and a financial-literacy content studio.">
+<title>MINT · A fresh take on finance</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -635,7 +635,8 @@ header.top,body.solid header.top{background:#FFFFFF!important;backdrop-filter:no
 .dhero::before{display:none!important}
 .tiles{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
 .tiles span{position:absolute;left:var(--x);top:var(--y);width:clamp(70px,var(--s),260px);aspect-ratio:1;
-  transform:translate3d(calc(var(--mx,0) * var(--k) * 46px), calc(var(--p,0) * var(--k) * -420px + var(--my,0) * var(--k) * 30px), 0) rotate(calc(var(--p,0) * var(--spin))) scale(calc(1 + var(--p,0) * var(--k) * .12));will-change:transform}
+  transform:translate3d(calc(var(--ox,0px) + var(--mx,0) * var(--k) * 46px), calc(var(--oy,0px) + var(--p,0) * var(--k) * -420px + var(--my,0) * var(--k) * 30px), 0) rotate(calc(var(--p,0) * var(--spin))) scale(calc(var(--os,1) + var(--p,0) * var(--k) * .12));will-change:transform}
+.tiles.orbit span{left:50%;top:50%;margin:calc(clamp(70px,var(--s),260px) / -2) 0 0 calc(clamp(70px,var(--s),260px) / -2)}
 .tiles b{display:block;width:100%;height:100%;animation:tin 1.3s cubic-bezier(.2,.8,.2,1) var(--e) both}
 .tiles i{display:block;width:100%;height:100%;border-radius:16%;background:linear-gradient(135deg,rgba(255,255,255,.96) 0%,var(--c) 100%);box-shadow:0 34px 70px -44px rgba(0,60,59,.5);transform:rotate(var(--r));animation:tdrift var(--d) ease-in-out var(--dl) infinite alternate}
 .tiles span:nth-child(3) i{background:linear-gradient(135deg,#FFFFFF,#EEF3F2)}
@@ -656,29 +657,29 @@ header.top,body.solid header.top{background:#FFFFFF!important;backdrop-filter:no
 
 <div id="preload" aria-hidden="true"><svg class="mk" viewBox="0 0 24 24" width="48" height="48" aria-hidden="true"><rect x="0" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:0"/><rect x="8" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:1"/><rect x="16" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:2"/><rect x="8" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:3"/><rect x="16" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:4"/><rect x="16" y="2" width="6.4" height="6.4" rx="1.3" fill="#3AA89C" style="--i:5"/></svg></div>
 <header class="top"><div class="wrap">
-  <div class="logo"><svg class="mark" viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="0" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:0"/><rect x="8" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:1"/><rect x="16" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:2"/><rect x="8" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:3"/><rect x="16" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:4"/><rect x="16" y="2" width="6.4" height="6.4" rx="1.3" fill="#3AA89C" style="--i:5"/></svg>Literacy Radar</div>
-  <nav class="tabs"><button class="tab on" data-tab="mkt" type="button">Markets</button><button class="tab" data-tab="ask" type="button"><span class="lg-only">Ask the Radar</span><span class="sm-only">Ask</span></button><button class="tab" data-tab="lib" type="button">Library</button><button class="tab" data-tab="studio" type="button">Studio</button></nav><button class="aikey-top" id="aikeyTop" type="button" hidden><i></i><span>AI key</span></button>
+  <div class="logo"><svg class="mark" viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="0" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:0"/><rect x="8" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:1"/><rect x="16" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:2"/><rect x="8" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:3"/><rect x="16" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:4"/><rect x="16" y="2" width="6.4" height="6.4" rx="1.3" fill="#3AA89C" style="--i:5"/></svg>MINT</div>
+  <nav class="tabs"><button class="tab on" data-tab="mkt" type="button">Markets</button><button class="tab" data-tab="ask" type="button"><span class="lg-only">Ask MINT</span><span class="sm-only">Ask</span></button><button class="tab" data-tab="lib" type="button">Library</button><button class="tab" data-tab="studio" type="button">Studio</button></nav><button class="aikey-top" id="aikeyTop" type="button" hidden><i></i><span>AI key</span></button>
 </div></header>
 <div class="ticker" id="ticker" aria-label="Market ticker"></div>
 <main class="wrap" id="main"></main>
 <footer class="foot">
   <section class="fcta"><div class="in">
     <span class="eyebrow">Made for everyday savers</span>
-    <h2 class="mega">Money news, made clear.</h2>
+    <h2 class="mega">A fresh take on finance.</h2>
     <p style="color:rgba(230,241,243,.75);max-width:46ch;font-size:1.0625rem;line-height:1.55">Read what moved today, see what it means for your money, then turn it into content in minutes.</p>
     <button class="btn primary" data-tab="studio" type="button">Open the Studio</button>
   </div></section>
   <div class="fbot"><div class="in">
-    <div><div class="logo"><svg class="mark" viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="0" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:0"/><rect x="8" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:1"/><rect x="16" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:2"/><rect x="8" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:3"/><rect x="16" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:4"/><rect x="16" y="2" width="6.4" height="6.4" rx="1.3" fill="#3AA89C" style="--i:5"/></svg>Literacy Radar</div><p>A daily, plain-English read of the financial news, built as a Nova SBE project for the course "Boosting productivity with AI".</p></div>
-    <div><h4>Explore</h4><ul><li><button class="flink" data-tab="mkt" type="button">Markets</button></li><li><button class="flink" data-tab="ask" type="button">Ask the Radar</button></li><li><button class="flink" data-tab="lib" type="button">Library</button></li><li><button class="flink" data-tab="studio" type="button">Studio</button></li></ul></div>
+    <div><div class="logo"><svg class="mark" viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="0" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:0"/><rect x="8" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:1"/><rect x="16" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:2"/><rect x="8" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:3"/><rect x="16" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:4"/><rect x="16" y="2" width="6.4" height="6.4" rx="1.3" fill="#3AA89C" style="--i:5"/></svg>MINT</div><p>A daily, plain-English read of the financial news, built as a Nova SBE project for the course "Boosting productivity with AI".</p></div>
+    <div><h4>Explore</h4><ul><li><button class="flink" data-tab="mkt" type="button">Markets</button></li><li><button class="flink" data-tab="ask" type="button">Ask MINT</button></li><li><button class="flink" data-tab="lib" type="button">Library</button></li><li><button class="flink" data-tab="studio" type="button">Studio</button></li></ul></div>
     <div><h4>Sources</h4><ul><li>Bloomberg · Financial Times</li><li>WSJ · The Economist</li><li>CNBC · MarketWatch · BBC</li><li>ECB · Fed · Eurostat · INE</li></ul></div>
     <div><h4>Good to know</h4><ul><li>Educational only</li><li>No buy or sell calls</li><li>Capital at risk</li></ul></div>
-    <div class="flegal"><span>Educational content generated from public news. Not investment advice. Past performance is not a guide to future returns.</span><span>© 2026 Literacy Radar</span></div>
+    <div class="flegal"><span>Educational content generated from public news. Not investment advice. Past performance is not a guide to future returns.</span><span>© 2026 MINT</span></div>
   </div></div>
 </footer>
 <div class="toast" id="toast" hidden></div>
 <script>
-// Literacy Radar — standalone runtime for GitHub Pages (100% free).
+// MINT — standalone runtime for GitHub Pages (100% free).
 // News, insights and indicators are static JSON files in /data, refreshed by a GitHub Action.
 // Personal data (library, routine, AI results you generate) stays in this browser.
 // AI calls go straight from the browser to Google's free Gemini API with YOUR key, which is
@@ -1002,7 +1003,7 @@ function vLib(){
     <section class="panel"><span class="label">${esc(new Date(p.createdAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric"}))}</span><h1>${esc(p.idea?.title)}</h1><p class="muted">${esc(p.idea?.hook)}</p></section>`+vContent(p.content,{total:p.totalMs}); }
   const list=[...S.pieces].sort((a,b)=>(b.createdAt||0)-(a.createdAt||0));
   return `<section class="bleed dhero">${tilesHTML(3)}<div class="in"><span class="eyebrow">Library</span><h1>Everything you've made</h1>
-    <label class="field" style="max-width:320px"><span class="label">How long a post takes you without the Radar (min)</span><input id="base" type="number" min="5" step="5" value="${baseline()}"></label>${stats()}</div></section>
+    <label class="field" style="max-width:320px"><span class="label">How long a post takes you without MINT (min)</span><input id="base" type="number" min="5" step="5" value="${baseline()}"></label>${stats()}</div></section>
     ${!S.persistent?`<p class="notice">This view keeps your pieces in this browser only.</p>`:""}
     ${list.length?`<section class="panel"><div class="lib">${list.map(p=>`<button class="librow" data-piece="${esc(p.id)}" type="button"><span class="mono muted">${esc(new Date(p.createdAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}</span><span style="min-width:0"><b>${esc(p.idea?.title)}</b><div class="muted" style="font-size:.88rem">${esc(Object.keys(p.content||{}).filter(k=>k!=="compliance").map(k=>FORMATS.find(f=>f[0]===k)?.[1]).filter(Boolean).join(" · "))}</div></span><span class="pill ${(+p.content?.compliance?.score||0)>=85?"":(+p.content?.compliance?.score||0)>=60?"warn":"bad"}">${esc(p.content?.compliance?.score??"—")}</span></button>`).join("")}</div></section>`
     :`<div class="empty"><h2>Nothing here yet</h2><p class="muted">Every piece you create in the Studio is saved here, with how long it took and its compliance score.</p><button class="btn primary" id="tostudio" type="button" style="align-self:flex-start">Go to the Studio</button></div>`}`;
@@ -1043,7 +1044,7 @@ function vInd(){
 function newsBlock(day){ return (day.items||[]).map(it=>`- [${it.source}, ${it.published||""}] ${it.title}${it.summary?" — "+it.summary:""}`).join("\n").slice(0,30000); }
 function vAsk(){
   const day=latestDay();
-  let h = `<section class="bleed dhero">${tilesHTML(4)}<div class="in"><span class="eyebrow">Ask the Radar</span><h1>Ask anything about today's money news.</h1><p class="muted">Answers use the stories collected today and the verified indicators. Scenarios and risks, never buy or sell calls.</p></div></section>`;
+  let h = `<section class="bleed dhero">${tilesHTML(4)}<div class="in"><span class="eyebrow">Ask MINT</span><h1>Ask anything about today's money news.</h1><p class="muted">Answers use the stories collected today and the verified indicators. Scenarios and risks, never buy or sell calls.</p></div></section>`;
   h += `<section class="panel"><div class="ptitle"><h2>Your question</h2></div>
     <p class="muted" style="font-size:.9rem">Ask anything about today's markets. The answer uses the collected news and shows scenarios and risks, never buy or sell calls.</p>
     <div class="chips">${["What could earn more than a deposit right now?","With rates rising, do bonds make sense to look at?","What does rising oil mean for investors?","Which risks are growing in markets this week?"].map(q=>`<button class="chip" type="button" data-q="${esc(q)}">${esc(q)}</button>`).join("")}</div>
@@ -1065,7 +1066,7 @@ function vMarkets(){
   const bb=ins0?.brief; const gNum = bb?.number?.value || (iPT?fmtNum(iPT.value,iPT.dec)+"%":""); const gCap = bb?.number?.value ? (bb.number.caption||"") : (iPT?`${indLabel(iPT)} · ${perEN(iPT.period)}`:"");
   const meta = `${day?`${(day.items||[]).length} stories from ${(day.sources||[]).length} sources`:"Waiting for the first collection"}${S.ind?` · indicators verified ${esc(new Date(S.ind.updatedAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}`:""}${day&&day.collectedAt?` · news at ${esc(new Date(day.collectedAt).toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"}))}`:""}`;
   let h = `<section class="bleed dhero mk">${tilesHTML(1)}<div class="in">
-      <span class="eyebrow">Literacy Radar · ${esc(new Date().toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"}))}</span>
+      <span class="eyebrow">MINT · ${esc(new Date().toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"}))}</span>
       <div class="hgrid"><h1>${esc(head)}</h1></div>
       <div class="hfoot"><div style="display:flex;flex-direction:column;gap:var(--s2)"><p class="muted">${esc(sub)}</p><span class="meta">${meta}</span></div>
         <div class="row"><button class="btn primary" type="button" data-jump=".seg" data-go="brief">Read The Brief</button><button class="godown" type="button" data-jump=".pillgrid" aria-label="Scroll to the indicators">↓</button></div></div>
@@ -1112,7 +1113,7 @@ function vBrief(){
       <button class="btn ${!b||stale?"primary":""}" id="bgen" type="button" ${mk.bBusy||!day?"disabled":""}>${b?"Rewrite the Brief":"Write today's Brief"}</button></div>
     ${mk.bBusy?think("Reading "+((day?.items||[]).length)+" stories and picking the ones that matter…"):""}
     ${mk.bErr?`<p class="notice">${esc(mk.bErr)}</p>`:""}`;
-  if(!b){ h += `<div class="empty"><b>No Brief yet today.</b><p class="muted">${day?"Press the button and the Radar picks the four stories that matter most for everyday money, and explains each one in plain English: what's going on, what it means and why you should care.":"The Brief appears after the first news collection."}</p></div></section>`; return h; }
+  if(!b){ h += `<div class="empty"><b>No Brief yet today.</b><p class="muted">${day?"Press the button and MINT picks the four stories that matter most for everyday money, and explains each one in plain English: what's going on, what it means and why you should care.":"The Brief appears after the first news collection."}</p></div></section>`; return h; }
   const items=day.items||[];
   h += `<div class="bhead"><p class="bline">${md(b.one_liner||"")}</p>${b.number?.value?`<div class="bnum"><em>Number of the day</em><b>${esc(b.number.value)}</b><span>${esc(b.number.caption||"")}</span></div>`:""}</div>
     <div class="stories">${(b.stories||[]).map((x,k)=>{ const it=items[(+x.i||0)-1]||{}; return `<article class="story">
@@ -1460,7 +1461,7 @@ async function ask(){
   if(!sample){ mk.qErr="AI is not available right now."; return render(); }
   const ins=S.insights.find(i=>i.id===day.id);
   mk.qBusy=true; mk.qErr=""; mk.answer=""; mk.ctl=new AbortController(); render();
-  const prompt = `You are the Radar's financial-literacy assistant. You answer in clear British English, in a fair and balanced way, for people learning to invest. Light, friendly wit is welcome; never at the expense of accuracy.
+  const prompt = `You are MINT's financial-literacy assistant. You answer in clear British English, in a fair and balanced way, for people learning to invest. Light, friendly wit is welcome; never at the expense of accuracy.
 Rules: no personal recommendations or buy/sell calls, name no products, companies or specific funds, promise no returns. Explain scenarios, what today's news shows, the risks, and why time horizon, diversification and an emergency fund matter. Quote numbers from the news where they help. Maximum 220 words, short paragraphs, you may use **bold**. End with one short sentence reminding the reader this is educational information, not personal advice.
 
 ${indText()}${ins?"Daily map:\n"+ins.resumo+"\n"+(ins.classes||[]).map(c=>`- ${clsEN(c.nome)}: ${c.tendencia}. ${c.leitura}`).join("\n")+"\n\n":""}News from ${day.date}:
@@ -1519,7 +1520,7 @@ function vRoutine(){
   const mins = R.timer ? `${String(Math.floor(R.left/60)).padStart(2,"0")}:${String(R.left%60).padStart(2,"0")}` : "15:00";
   return `<section class="bleed dhero">${tilesHTML(5)}<div class="in"><span class="eyebrow">Engagement routine · Instagram and LinkedIn</span>
       <h1>15 minutes a day, always in the same window.</h1>
-      <p class="muted">Replying and commenting is what grows an account most, but only if it's a habit you can keep. The routine is short on purpose. The Radar doesn't post or read your messages: you engage in the apps and the Radar helps you write the replies.</p>
+      <p class="muted">Replying and commenting is what grows an account most, but only if it's a habit you can keep. The routine is short on purpose. MINT doesn't post or read your messages: you engage in the apps and MINT helps you write the replies.</p>
     <div class="stats"><div class="stat"><b>${doneN}/4</b><span>steps today</span></div><div class="stat"><b>${weekN}/5</b><span>days done this week</span></div><div class="stat"><b>${esc(win)}</b><span>your daily window</span></div></div></div></section>
   <div style="display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:20px" class="rgrid">
   <section class="panel"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>Today</h2>
@@ -1769,7 +1770,15 @@ function tilesHTML(seed){
   const kick=()=>{ if(!raf) raf=requestAnimationFrame(upd); };
   addEventListener("scroll",kick,{passive:true}); addEventListener("resize",kick);
   addEventListener("pointermove",e=>{ tx=e.clientX/innerWidth-.5; ty=e.clientY/innerHeight-.5; kick(); },{passive:true});
-  window.RADAR_TILES=kick; kick(); })();
+  window.RADAR_TILES=kick; kick();
+  // the wheel: tiles travel slowly round an ellipse, nearer ones (bottom of the ring) a little bigger
+  const T0=performance.now(); let last=0;
+  const spin=now=>{ requestAnimationFrame(spin); if(now-last<33||document.hidden) return; last=now; const t=(now-T0)/1000;
+    document.querySelectorAll(".dhero .tiles").forEach(g=>{ const h=g.parentElement; const W=h.clientWidth, H=h.clientHeight; if(!W) return; g.classList.add("orbit");
+      const mob=innerWidth<760, rx=W*(mob?.42:.44), ry=H*(mob?.36:.38), cx=mob?0:W*.08, cy=mob?H*.04:0; const sp=g.querySelectorAll("span"), n=sp.length;
+      sp.forEach((el,i)=>{ const a=i/n*6.2832+t*.105*(1+.08*(i%3)); const z=(Math.sin(a)+1)/2;
+        el.style.setProperty("--ox",(cx+Math.cos(a)*rx).toFixed(1)+"px"); el.style.setProperty("--oy",(cy+Math.sin(a)*ry).toFixed(1)+"px"); el.style.setProperty("--os",(.78+.34*z).toFixed(3)); el.style.zIndex=Math.round(z*10); }); }); };
+  requestAnimationFrame(spin); })();
 function splitWords(root){
   root.querySelectorAll(".dhero h1:not([data-split])").forEach(h=>{ const words=h.textContent.trim().split(/\s+/); h.dataset.split="1"; h.setAttribute("aria-label",h.textContent.trim());
     h.innerHTML=words.map((w,i)=>`<span class="w" aria-hidden="true"><span style="--i:${i}">${esc(w)}</span></span>`).join(" "); });

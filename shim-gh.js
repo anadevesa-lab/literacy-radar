@@ -1,4 +1,4 @@
-// Literacy Radar — standalone runtime for GitHub Pages (100% free).
+// MINT — standalone runtime for GitHub Pages (100% free).
 // News, insights and indicators are static JSON files in /data, refreshed by a GitHub Action.
 // Personal data (library, routine, AI results you generate) stays in this browser.
 // AI calls go straight from the browser to Google's free Gemini API with YOUR key, which is
