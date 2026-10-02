@@ -1060,7 +1060,7 @@ function vMarkets(){
   const stale = ins && day.collectedAt && ins.basedOn < day.collectedAt;
   const when = d => new Date(d).toLocaleString("en-GB",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"});
   const iPT=indGet("inf_pt"), dPT=indGet("dep_pt");
-  const head = iPT&&dPT&&+dPT.value<+iPT.value ? "Cash sitting still is earning less than inflation." : "What today's news means for your money.";
+  const head = "A fresh take on finance.";
   const sub = iPT&&dPT ? `Inflation at ${fmtNum(iPT.value,iPT.dec)}%, term deposits at ${fmtNum(dPT.value,dPT.dec)}%.` : "What today's news says about each type of investment.";
   const SUBS=[["brief","The Brief"],["hoje","Daily map"],["mes","Month"],["sim","Simulator"]]; mk.sub=mk.sub||"brief"; if(mk.sub==="perg") mk.sub="brief";
   const bb=ins0?.brief; const gNum = bb?.number?.value || (iPT?fmtNum(iPT.value,iPT.dec)+"%":""); const gCap = bb?.number?.value ? (bb.number.caption||"") : (iPT?`${indLabel(iPT)} · ${perEN(iPT.period)}`:"");
