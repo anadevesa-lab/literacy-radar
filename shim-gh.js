@@ -90,7 +90,7 @@
   const PROXY = "__MINT_AI_PROXY__".startsWith("http") ? "__MINT_AI_PROXY__" : "";
   window.MINT_AI_PROXY = PROXY;
   // owner sign-in: email + password checked against a salted SHA-256 fingerprint (the password itself is never stored)
-  const OWNER_HASH = "__MINT_OWNER_HASH__".length === 64 ? "__MINT_OWNER_HASH__" : "";
+  const OWNER_HASH = "4767b469b9aeec7201a27cc862ac91446a05fd736e4d08926a2e1649991c1cbe";
   const isOwner = () => { try{ return localStorage.getItem("mint-owner") === OWNER_HASH && !!OWNER_HASH; }catch{ return false; } };
   window.MINT_OWNER = isOwner();
   const sha = async t => [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t)))].map(b => b.toString(16).padStart(2,"0")).join("");
