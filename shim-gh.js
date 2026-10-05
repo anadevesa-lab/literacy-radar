@@ -86,11 +86,23 @@
     const fg = el.querySelector('[data-ai="forget"]'); if(fg) fg.onclick = () => { try{ localStorage.removeItem(KEY); }catch{} el.remove(); };
     el.querySelector("#aiKeyIn").focus();
   }
-  window.RADAR_AI_KEY = () => keyPanel();
+  // free relay (Cloudflare Worker) that holds MINT's key: visitors need no key of their own
+  const PROXY = "__MINT_AI_PROXY__".startsWith("http") ? "__MINT_AI_PROXY__" : "";
+  window.MINT_AI_PROXY = PROXY;
+  if(!PROXY) window.RADAR_AI_KEY = () => keyPanel();
   const toText = input => typeof input === "string" ? input : (input || []).map(t => t.content).join("\n\n");
   const MODELS = ["gemini-flash-latest", "gemini-2.5-flash", "gemini-flash-lite-latest", "gemini-2.5-flash-lite"];
+  async function viaProxy(input, json, opts){
+    let r; try{ r = await fetch(PROXY, { method:"POST", signal: opts.signal, headers:{ "content-type":"application/json" }, body: JSON.stringify({ prompt: toText(input).slice(0, 60000), json: !!json }) }); }
+    catch(e){ if(e?.name === "AbortError") throw { code:"cancelled" }; throw { code:"network" }; }
+    const b = await r.json().catch(() => ({}));
+    if(r.ok && b.text) return b.text;
+    throw { code: r.status === 429 ? "rate_limited" : (b.code || "ai_error") };
+  }
   async function callAI(input, json, opts = {}){
-    const key = getKey(); if(!key){ keyPanel(); throw { code:"no_key" }; }
+    const key = getKey();
+    if(!key && PROXY) return viaProxy(input, json, opts);
+    if(!key){ keyPanel(); throw { code:"no_key" }; }
     let last = null;
     for(const m of MODELS){
       let r;

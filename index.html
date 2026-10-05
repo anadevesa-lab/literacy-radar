@@ -653,6 +653,20 @@ header.top,body.solid header.top{background:#FFFFFF!important;backdrop-filter:no
 #preload .pc{display:none}
 #preload .mk rect{transform-box:fill-box;transform-origin:center;animation:mkpop 1.1s cubic-bezier(.7,0,.3,1) infinite;animation-delay:calc(var(--i) * 90ms)}
 @keyframes mkpop{0%,100%{transform:scale(1)}45%{transform:scale(.2);opacity:.3}}
+
+/* daily pack + FAQ */
+.pslides{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s3)}
+.pslide2{background:linear-gradient(160deg,#FFFFFF,#EEF8F6);border:1px solid var(--line);border-radius:14px;padding:var(--s4);display:flex;flex-direction:column;gap:6px;min-height:150px}
+.pslide2 .n{font-size:11px;font-weight:800;color:#3AA89C;letter-spacing:.08em}
+.pslide2 b{font-size:1.05rem;line-height:1.25;color:var(--ink)} .pslide2 p{font-size:var(--t-sm);color:var(--muted);line-height:1.5}
+.pack .out pre{white-space:pre-wrap;font:inherit;margin:0;line-height:1.6} .pack .out ol{margin:6px 0 0;padding-left:20px;line-height:1.6}
+.faq{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line);padding:var(--s4) 0}
+.faq summary{cursor:pointer;font-weight:700;font-size:1.02rem;color:var(--ink);list-style:none;display:flex;justify-content:space-between;gap:var(--s4)}
+.faq summary::after{content:"+";font-weight:400;font-size:1.4rem;line-height:1;color:#1F7F7C;transition:transform .3s} .faq details[open] summary::after{transform:rotate(45deg)}
+.faq summary::-webkit-details-marker{display:none}
+.faq p{margin-top:var(--s2);color:var(--muted);line-height:1.6;max-width:70ch}
+@media (max-width:760px){.pslides{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 
 <div id="preload" aria-hidden="true"><svg class="mk" viewBox="0 0 24 24" width="48" height="48" aria-hidden="true"><rect x="0" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:0"/><rect x="8" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:1"/><rect x="16" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:2"/><rect x="8" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:3"/><rect x="16" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:4"/><rect x="16" y="2" width="6.4" height="6.4" rx="1.3" fill="#3AA89C" style="--i:5"/></svg></div>
@@ -767,11 +781,23 @@ header.top,body.solid header.top{background:#FFFFFF!important;backdrop-filter:no
     const fg = el.querySelector('[data-ai="forget"]'); if(fg) fg.onclick = () => { try{ localStorage.removeItem(KEY); }catch{} el.remove(); };
     el.querySelector("#aiKeyIn").focus();
   }
-  window.RADAR_AI_KEY = () => keyPanel();
+  // free relay (Cloudflare Worker) that holds MINT's key: visitors need no key of their own
+  const PROXY = "__MINT_AI_PROXY__".startsWith("http") ? "__MINT_AI_PROXY__" : "";
+  window.MINT_AI_PROXY = PROXY;
+  if(!PROXY) window.RADAR_AI_KEY = () => keyPanel();
   const toText = input => typeof input === "string" ? input : (input || []).map(t => t.content).join("\n\n");
   const MODELS = ["gemini-flash-latest", "gemini-2.5-flash", "gemini-flash-lite-latest", "gemini-2.5-flash-lite"];
+  async function viaProxy(input, json, opts){
+    let r; try{ r = await fetch(PROXY, { method:"POST", signal: opts.signal, headers:{ "content-type":"application/json" }, body: JSON.stringify({ prompt: toText(input).slice(0, 60000), json: !!json }) }); }
+    catch(e){ if(e?.name === "AbortError") throw { code:"cancelled" }; throw { code:"network" }; }
+    const b = await r.json().catch(() => ({}));
+    if(r.ok && b.text) return b.text;
+    throw { code: r.status === 429 ? "rate_limited" : (b.code || "ai_error") };
+  }
   async function callAI(input, json, opts = {}){
-    const key = getKey(); if(!key){ keyPanel(); throw { code:"no_key" }; }
+    const key = getKey();
+    if(!key && PROXY) return viaProxy(input, json, opts);
+    if(!key){ keyPanel(); throw { code:"no_key" }; }
     let last = null;
     for(const m of MODELS){
       let r;
@@ -856,7 +882,7 @@ async function initStore(){
       db.doc("indicators/current").onSnapshot(d=>{ S.ind=d.exists?d.data():null; applyIndDefaults(); if((tab==="mkt"||tab==="ask") && !mk.busy && !mk.qBusy) render(); },()=>{});
       db.doc("data/users/"+id+"/routine").onSnapshot(d=>{ R.data=d.exists?{...d.data()}:{}; R.loaded=true; const ae=document.activeElement; if(tab==="rot" && !(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))) render(); },()=>{ R.loaded=true; });
       db.collection("monthly").onSnapshot(s=>{ S.monthly=s.docs.map(d=>({id:d.id,...d.data()})); if(tab==="mkt" && !mm.busy) render(); },()=>{});
-      db.collection("insights").orderBy("basedOn","desc").limit(10).onSnapshot(s=>{ S.insights=s.docs.map(d=>({id:d.id,...d.data()})); if(tab==="mkt" && !mk.busy) render(); },()=>{});
+      db.collection("insights").orderBy("basedOn","desc").limit(10).onSnapshot(s=>{ S.insights=s.docs.map(d=>({id:d.id,...d.data()})); const ae=document.activeElement; if((tab==="mkt"||tab==="studio"||tab==="ask") && !mk.busy && !(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))) render(); },()=>{});
       return; }
   }catch{}
   S.ready=true; render();
@@ -884,6 +910,7 @@ function vStudio(){
       <span class="eyebrow">Content studio</span>
       <h1>From today's news to content ready to post.</h1>
       <p class="muted">Pick some news or write your own topic. The Studio suggests ideas and writes Instagram posts, LinkedIn posts and articles, opinion pieces, PowerPoint decks and newsletters, with a regulatory check built in.</p>${window.RADAR_AI_KEY?`<button class="btn small" id="aikey" type="button" style="align-self:flex-start">AI key</button>`:""}${stats()}</div></section>
+  ${vPack()}
   ${vNews()}
   <section class="panel">
     <div class="row between"><h2>What's happening</h2><div class="row"><button class="btn small" id="ex" type="button">Use an example</button><button class="btn small" id="sur" type="button">Evergreen topic</button></div></div>
@@ -1042,9 +1069,32 @@ function vInd(){
         <span class="p">${esc(perEN(x.period))} · ${x.url?`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(srcEN(x.source))}</a>`:esc(srcEN(x.source))}</span></div>`; }).join("")}</div></section>`;
 }
 function newsBlock(day){ return (day.items||[]).map(it=>`- [${it.source}, ${it.published||""}] ${it.title}${it.summary?" — "+it.summary:""}`).join("\n").slice(0,30000); }
+
+/* ---------- the daily ready-made pack (prepared every morning and afternoon by the collector) ---------- */
+let PACKTXT={};
+function latestPack(){ const l=(S.insights||[]).filter(i=>i&&i.pack).sort((a,b)=>a.id<b.id?1:-1)[0]; return l?{...l.pack,day:l.id}:null; }
+function vPack(){
+  const p=latestPack(); if(!p) return "";
+  const when=new Date(p.generatedAt||p.day).toLocaleString("en-GB",{weekday:"long",day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"});
+  const car=p.carousel||{}, reel=p.reel||{};
+  PACKTXT={ carousel:[car.title,...(car.slides||[]).map((s,i)=>`${i+1}. ${s.h}\n${s.t}`)].filter(Boolean).join("\n\n"), linkedin:p.linkedin||"", reel:[reel.hook,...(reel.script||[]),"",reel.caption?"Caption: "+reel.caption:""].filter(x=>x!==undefined).join("\n") };
+  return `<section class="panel pack"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><span class="eyebrow">Ready to post · ${esc(when)}</span><h2>Today's content pack</h2>
+      <span class="muted" style="font-size:.9rem">Written from today's Brief. Copy, tweak, post. No key needed.</span></div></div>
+    ${car.slides?.length?`<div class="row between"><h3 class="ui">Instagram carousel · ${esc(car.title||"")}</h3><button class="btn small" data-pcopy="carousel" type="button">Copy text</button></div>
+    <div class="pslides">${car.slides.map((s,i)=>`<div class="pslide2"><span class="n">${i+1}/${car.slides.length}</span><b>${esc(s.h)}</b><p>${esc(s.t)}</p></div>`).join("")}</div>`:""}
+    ${p.linkedin?`<div class="row between"><h3 class="ui">LinkedIn post</h3><button class="btn small" data-pcopy="linkedin" type="button">Copy</button></div><div class="out"><pre>${esc(p.linkedin)}</pre></div>`:""}
+    ${reel.hook?`<div class="row between"><h3 class="ui">Reel script</h3><button class="btn small" data-pcopy="reel" type="button">Copy script</button></div><div class="out"><p><b>Hook:</b> ${esc(reel.hook)}</p><ol>${(reel.script||[]).map(l=>`<li>${esc(l)}</li>`).join("")}</ol>${reel.caption?`<p class="muted">Caption: ${esc(reel.caption)}</p>`:""}</div>`:""}
+    <p class="disc">Educational content generated automatically from public news. Not investment advice. Check it before you post.</p></section>`;
+}
+function vFaq(){
+  const p=latestPack(); if(!p?.faq?.length) return "";
+  return `<section class="panel"><div style="display:flex;flex-direction:column;gap:2px"><span class="eyebrow">Answered today</span><h2>Today's questions</h2><span class="muted" style="font-size:.9rem">What beginners are asking about today's news, answered from the collected stories.</span></div>
+    <div class="faq">${p.faq.map((f,i)=>`<details ${i===0?"open":""}><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join("")}</div></section>`;
+}
 function vAsk(){
   const day=latestDay();
   let h = `<section class="bleed dhero">${tilesHTML(4)}<div class="in"><span class="eyebrow">Ask MINT</span><h1>Ask anything about today's money news.</h1><p class="muted">Answers use the stories collected today and the verified indicators. Scenarios and risks, never buy or sell calls.</p></div></section>`;
+  h += vFaq();
   h += `<section class="panel"><div class="ptitle"><h2>Your question</h2></div>
     <p class="muted" style="font-size:.9rem">Ask anything about today's markets. The answer uses the collected news and shows scenarios and risks, never buy or sell calls.</p>
     <div class="chips">${["What could earn more than a deposit right now?","With rates rising, do bonds make sense to look at?","What does rising oil mean for investors?","Which risks are growing in markets this week?"].map(q=>`<button class="chip" type="button" data-q="${esc(q)}">${esc(q)}</button>`).join("")}</div>
@@ -1784,6 +1834,7 @@ function splitWords(root){
     h.innerHTML=words.map((w,i)=>`<span class="w" aria-hidden="true"><span style="--i:${i}">${esc(w)}</span></span>`).join(" "); });
 }
 function bind(){
+  document.querySelectorAll("[data-pcopy]").forEach(b=>b.onclick=()=>copy(PACKTXT[b.dataset.pcopy]||"",b));
   const inp=$("#in"); if(inp) inp.oninput=()=>{ st.input=inp.value; ls.set("radar-input",inp.value); };
   const ex=$("#ex"); if(ex) ex.onclick=()=>{ st.input=EXAMPLE; ls.set("radar-input",EXAMPLE); render(); };
   const sur=$("#sur"); if(sur) sur.onclick=()=>{ const t=EVERGREEN[Math.floor(Math.random()*EVERGREEN.length)]; st.input=(st.input.trim()?st.input.trim()+"\n":"")+"- Evergreen topic: "+t; render(); };
