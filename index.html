@@ -794,7 +794,7 @@ html:not(.guest) .guest-only{display:none!important}
   const isOwner = () => { try{ return localStorage.getItem("mint-owner") === OWNER_HASH && !!OWNER_HASH; }catch{ return false; } };
   window.MINT_OWNER = isOwner();
   // the AI key, locked with the owner's password (AES-GCM, key from PBKDF2): useless without the password
-  const ENC_KEY = "__MINT_ENC_KEY__".startsWith("__") ? "" : "__MINT_ENC_KEY__";
+  const ENC_KEY = "F1b5hurwgjV8htdvUCRaMNNFMGV+xOH+wpaFe2GdT7iW/h7ZG1YDXHEtVjuaXYM/CZortWvId5P4XVzrKt83OAc2y/fl2tfPHIH5op48kixDgFOABP3r1U6m1yjpesAPkQ==";
   const b64 = u => btoa(String.fromCharCode(...u)), unb64 = t => Uint8Array.from(atob(t), c => c.charCodeAt(0));
   const kdf = async (pw, salt) => crypto.subtle.deriveKey({ name:"PBKDF2", salt, iterations:250000, hash:"SHA-256" }, await crypto.subtle.importKey("raw", new TextEncoder().encode(pw), "PBKDF2", false, ["deriveKey"]), { name:"AES-GCM", length:256 }, false, ["encrypt","decrypt"]);
   async function seal(text, pw){ const salt = crypto.getRandomValues(new Uint8Array(16)), iv = crypto.getRandomValues(new Uint8Array(12));
