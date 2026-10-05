@@ -670,7 +670,7 @@ header.top,body.solid header.top{background:#FFFFFF!important;backdrop-filter:no
 
 /* visitors see the public site; the Studio, Library and AI tools are for the owner (key saved in this browser) */
 .owlink{font-size:inherit!important;color:inherit!important;font-weight:600!important}
-html.guest [data-tab="studio"], html.guest [data-tab="lib"], html.guest .owner-only, html.guest #aikeyTop, html.guest #bgen, html.guest #mgen, html.guest [data-bstory], html.guest [data-theme-idea], html.guest .askbox{display:none!important}
+html.guest .flink[data-tab="studio"], html.guest [data-tab="lib"], html.guest .owner-only, html.guest #aikeyTop, html.guest #bgen, html.guest #mgen, html.guest [data-bstory], html.guest [data-theme-idea], html.guest .askbox{display:none!important}
 html:not(.guest) .guest-only{display:none!important}
 </style>
 
@@ -947,7 +947,7 @@ let tab="mkt";
 const st = { input: ls.get("radar-input",""), level:"beginner", formats:new Set(["carousel","reel"]), ideas:null, sel:null, content:null, busy:null, err:"", t0:0, ideaMs:0, contentMs:0, pieceId:null, openPiece:null, newsDay:null, picked:new Set(), cat:"", src:"", lang:"en", tone:"playful", own:"", done:0, nmore:false };
 const baseline = () => +ls.get("radar-baseline","120") || 120;
 
-document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>{ tab=b.dataset.tab; st.openPiece=null; animateNext=true; window.scrollTo({top:0}); document.querySelectorAll(".tab[data-tab]").forEach(x=>x.classList.toggle("on",x.dataset.tab===tab)); render(); });
+document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>{ if(!OWNER && (b.dataset.tab==="studio"||b.dataset.tab==="lib")){ if(window.MINT_LOGIN) window.MINT_LOGIN(); return; } tab=b.dataset.tab; st.openPiece=null; animateNext=true; window.scrollTo({top:0}); document.querySelectorAll(".tab[data-tab]").forEach(x=>x.classList.toggle("on",x.dataset.tab===tab)); render(); });
 
 /* ---------- Render ---------- */
 function stats(){
