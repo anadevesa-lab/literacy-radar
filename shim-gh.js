@@ -93,6 +93,15 @@
   const OWNER_HASH = "4767b469b9aeec7201a27cc862ac91446a05fd736e4d08926a2e1649991c1cbe";
   const isOwner = () => { try{ return localStorage.getItem("mint-owner") === OWNER_HASH && !!OWNER_HASH; }catch{ return false; } };
   window.MINT_OWNER = isOwner();
+  // the AI key, locked with the owner's password (AES-GCM, key from PBKDF2): useless without the password
+  const ENC_KEY = "__MINT_ENC_KEY__".startsWith("__") ? "" : "__MINT_ENC_KEY__";
+  const b64 = u => btoa(String.fromCharCode(...u)), unb64 = t => Uint8Array.from(atob(t), c => c.charCodeAt(0));
+  const kdf = async (pw, salt) => crypto.subtle.deriveKey({ name:"PBKDF2", salt, iterations:250000, hash:"SHA-256" }, await crypto.subtle.importKey("raw", new TextEncoder().encode(pw), "PBKDF2", false, ["deriveKey"]), { name:"AES-GCM", length:256 }, false, ["encrypt","decrypt"]);
+  async function seal(text, pw){ const salt = crypto.getRandomValues(new Uint8Array(16)), iv = crypto.getRandomValues(new Uint8Array(12));
+    const ct = new Uint8Array(await crypto.subtle.encrypt({ name:"AES-GCM", iv }, await kdf(pw, salt), new TextEncoder().encode(text)));
+    return b64(new Uint8Array([...salt, ...iv, ...ct])); }
+  async function unseal(code, pw){ const u = unb64(code); const salt = u.slice(0,16), iv = u.slice(16,28), ct = u.slice(28);
+    return new TextDecoder().decode(await crypto.subtle.decrypt({ name:"AES-GCM", iv }, await kdf(pw, salt), ct)); }
   const sha = async t => [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t)))].map(b => b.toString(16).padStart(2,"0")).join("");
   const fp = (e, p) => sha("mint-owner-v1|" + e.trim().toLowerCase() + "|" + p);
   function loginPanel(){
@@ -112,7 +121,14 @@
       if(!e.includes("@") || p.length < 8){ msg.textContent = "Use your email and a password with at least 8 characters."; return; }
       const h = await fp(e, p);
       if(setup){ msg.innerHTML = `Send this code to Claude:<br><code style="user-select:all;word-break:break-all">${h}</code>`; return; }
-      if(h === OWNER_HASH){ try{ localStorage.setItem("mint-owner", h); }catch{} msg.textContent = "Welcome back. Opening the Studio…"; setTimeout(() => { location.hash = ""; location.reload(); }, 800); }
+      if(h === OWNER_HASH){
+        try{ localStorage.setItem("mint-owner", h); }catch{}
+        const done = t => { msg.textContent = t; setTimeout(() => { location.hash = ""; location.reload(); }, 900); };
+        if(ENC_KEY && !getKey()){ try{ localStorage.setItem(KEY, await unseal(ENC_KEY, p)); return done("Welcome back. AI connected, opening the Studio…"); }catch{} }
+        if(!ENC_KEY && getKey()){ const code = await seal(getKey(), p);
+          msg.innerHTML = `Signed in. To have the AI ready on every computer, send Claude this code (it is your AI key locked with your password, safe to share):<br><code style="user-select:all;word-break:break-all;font-size:11px">${code}</code>`;
+          el.querySelector('[data-ow="go"]').textContent = "Continue"; el.querySelector('[data-ow="go"]').onclick = () => { location.hash = ""; location.reload(); }; return; }
+        done("Welcome back. Opening the Studio…"); }
       else msg.textContent = "Email or password not recognised.";
     };
     el.querySelector("#owEmail").focus();
