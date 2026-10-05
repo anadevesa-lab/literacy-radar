@@ -1,113 +1,181 @@
 {
  "auto": true,
  "date": "2026-10-05",
- "basedOn": "2026-10-05T15:19:05.515Z",
- "generatedAt": "2026-10-05T15:19:06.321Z",
- "resumo": "Global markets face pressures from **energy supply concerns**, geopolitical tensions, and rising sovereign debt anxiety.",
+ "basedOn": "2026-10-05T17:18:38.546Z",
+ "generatedAt": "2026-10-05T17:18:41.328Z",
+ "resumo": "Global equity indices and select currencies advanced following political surprises, while bond markets faced rate pressures and tightening concerns. **Markets show mixed momentum** amid shifting political landscapes.",
  "classes": [
   {
    "nome": "Equities",
-   "tendencia": "mixed",
+   "tendencia": "rising",
    "forca": 2,
-   "leitura": "Stocks rose as oil drops offered relief, though technology deals and sector developments drove specific movements.",
+   "leitura": "Stock indices rose in several regions, driven by tech momentum and election outcomes.",
    "a_favor": [
-    "Artificial intelligence deals and chip demand",
-    "Some relief from falling oil prices"
+    "Regional indices higher in Oslo, Tel Aviv and Athens",
+    "Brazilian stocks jump on election outcome"
    ],
    "riscos": [
-    "Public finance concerns in Europe",
-    "Potential AI reality checks and earnings pressures"
+    "Individual corporate debt concerns",
+    "Regulatory scrutiny on artificial intelligence"
    ],
-   "perfil": "Suits investors with a higher risk tolerance seeking long-term capital growth."
+   "perfil": "Suits investors seeking long-term growth willing to accept price volatility."
   },
   {
    "nome": "Bonds",
    "tendencia": "falling",
-   "forca": 2,
-   "leitura": "Global bond markets experienced turbulence and sell-offs, pushing up yields and sparking calls for policy pauses.",
+   "forca": 1,
+   "leitura": "Government yields rose while central banks flagged growing debt and interest rate risks.",
    "a_favor": [
-    "Higher nominal yields for new issuances"
+    "JPMorgan sees high-grade corporate outperformance",
+    "Strong demand for high-grade credit"
    ],
    "riscos": [
-    "Bond market turbulence and rising yields",
-    "Fiscal and political worries impacting sovereign debt"
+    "France at risk of being strangled by rates",
+    "Rising 10-year Treasury yields"
    ],
-   "perfil": "Suits cautious investors seeking regular income who can tolerate capital fluctuation."
+   "perfil": "Suits conservative investors prioritizing regular income preservation."
+  },
+  {
+   "nome": "Foreign Exchange",
+   "tendencia": "rising",
+   "forca": 2,
+   "leitura": "Latin American currencies surged, spearheaded by the Brazilian real after an election surprise.",
+   "a_favor": [
+    "Brazilian real rallies after election surprise",
+    "Latin American currencies lead emerging market gains"
+   ],
+   "riscos": [
+    "US dollar strengthens against the euro",
+    "Slumping euro exchange rates"
+   ],
+   "perfil": "Suits institutional participants and traders managing international exposure."
   },
   {
    "nome": "Commodities",
-   "tendencia": "mixed",
-   "forca": 2,
-   "leitura": "Oil prices fluctuated amid Middle East conflicts, tight stockpiles, and shifting supply routes through the Strait of Hormuz.",
-   "a_favor": [
-    "Depleted global inventories supporting prices",
-    "High energy demand and geopolitical supply risks"
-   ],
-   "riscos": [
-    "Attacks on Gulf energy infrastructure",
-    "Deep price cuts by major producers"
-   ],
-   "perfil": "Suits experienced investors looking to hedge against inflation and supply shocks."
-  },
-  {
-   "nome": "Currencies",
-   "tendencia": "falling",
+   "tendencia": "rising",
    "forca": 1,
-   "leitura": "The euro slid to a 17-month low against the dollar due to regional public finance concerns and energy pressures.",
+   "leitura": "Agricultural futures climbed as currency appreciation lifted export values.",
    "a_favor": [
-    "Dollar strength amid global safe-haven demand"
+    "Soybeans climb as currency rallies",
+    "Stronger currency lifts sugar and coffee futures"
    ],
    "riscos": [
-    "European debt and political uncertainty",
-    "High energy costs weighing on the single currency"
+    "Higher jet fuel prices impacting transport",
+    "Uncertainty in global oil supply restocking"
    ],
-   "perfil": "Suits active traders managing international exposure and foreign exchange risk."
+   "perfil": "Suits tactical traders looking for inflation hedges and cyclical exposure."
   }
  ],
  "temas": [
-  "Sovereign debt and bond yields",
-  "Geopolitical impacts on energy supply",
-  "Artificial intelligence sector dealmaking",
-  "Inflation and currency pressures"
+  "Artificial intelligence budget unpredictability",
+  "Government bond yield dynamics",
+  "Emerging market currency reactions",
+  "Corporate debt and leverage risks"
  ],
  "ai": true,
  "brief": {
-  "one_liner": "Mortgage rates breach the 6% mark as European debt jitters push the euro to a 17-month low.",
+  "one_liner": "Global markets dance to political surprises in Brazil and housing tremors in Europe, while everyday borrowers keep a watchful eye on interest rates.",
   "number": {
-   "value": "6%",
-   "caption": "Average five-year UK mortgage rate hits this mark for the first time in three years"
+   "value": "3.8%",
+   "caption": "Euro area inflation rate recorded in September 2026."
   },
   "stories": [
    {
-    "i": 50,
-    "title": "Five-Year Mortgage Rates Creep Back Up to Six Percent",
-    "whats_going_on": "The average cost of a five-year fixed-rate mortgage has hit the 6% barrier for the first time in three years. Banks and building societies have raised their prices as turmoil in bond markets increases expectations of base rate rises.",
-    "what_it_means": "Lenders face higher borrowing costs themselves, which they quickly pass on to customers looking for home loans. This shift reflects growing anxiety across wider financial markets about government debt and stubborn interest rates.",
-    "why_care": "If you are coming off a fixed deal soon or trying to buy a home, monthly repayments will be noticeably higher than they were a few years ago."
+    "i": 1,
+    "title": "Spanish housing protests erupt as rent pressures mount",
+    "whats_going_on": "Spain's average rent has nearly doubled over the past decade, leaving more than a quarter of renters spending 40% of their income on housing. Widespread protests broke out following the eviction of an 87-year-old woman, prompting political fallout.",
+    "what_it_means": "The affordable housing crunch has become a central political flashpoint across southern Europe. Skyrocketing property costs are severely squeezing urban households.",
+    "why_care": "If you rent or save for property in Europe, soaring housing costs highlight how local property markets can diverge sharply from broader inflation figures."
    },
    {
-    "i": 49,
-    "title": "The Euro Slips to a Seventeen-Month Low",
-    "whats_going_on": "The euro slid to its weakest level against the dollar since May 2025, driven down by high energy prices and growing concerns over France’s public finances. The slide was further fueled by political uncertainty after the announcement of a snap election in Spain.",
-    "what_it_means": "Currencies often reflect how confident global investors feel about a region's economic stability and government debt levels. Political drama combined with fiscal worries makes international traders think twice before holding European cash.",
-    "why_care": "A weaker euro can make imported goods and holidays outside the eurozone more expensive for local savers and everyday consumers."
+    "i": 14,
+    "title": "Brazilian assets surge as election race takes a right turn",
+    "whats_going_on": "Brazilian fintech and stock markets rallied strongly after a surprise first-round result in the presidential election pointed towards a right-wing shift. The Brazilian real soared following the political development, lifting local export and currency values.",
+    "what_it_means": "Latin American currencies outperformed many emerging market peers as investors reacted to the unexpected electoral momentum. Markets often swing sharply when political landscapes face potential shake-ups.",
+    "why_care": "Big moves in emerging market currencies can ripple through global commodity prices and international equity funds held in diversified portfolios."
    },
    {
-    "i": 12,
-    "title": "Brazilian Markets Rally as Investors Eye Spending Cuts",
-    "whats_going_on": "Brazilian assets surged as Flávio Bolsonaro emerged as the surprise favorite in the presidential race. Investors are betting that a right-wing win would lead to faster spending cuts and pave the way for interest-rate cuts.",
-    "what_it_means": "Stock markets often react positively when a candidate is viewed as friendly to fiscal discipline and business interests. Hopes of lower interest rates can breathe fresh life into local equities and corporate bonds.",
-    "why_care": "While mostly relevant to local investors, big shifts in emerging markets can ripple through global portfolios and international mutual funds."
+    "i": 27,
+    "title": "French central bank chief issues strict warning on public debt",
+    "whats_going_on": "Bank of France head Emmanuel Moulin warned that the country risks being strangled by high interest rates. Despite serious and worrying market moves, officials insist France can still reassure bond investors.",
+    "what_it_means": "European governments are grappling with the heavy burden of servicing debt in a higher-rate environment. Central bankers are pushing for fiscal discipline to keep bond markets stable.",
+    "why_care": "Stress in European government bonds can influence broader regional borrowing conditions, which ultimately affect the yields available to everyday savers."
    },
    {
-    "i": 7,
-    "title": "Oil Prices Jitter as Saudi Arabia Cuts Asian Benchmarks",
-    "whats_going_on": "Oil prices fluctuated in jittery trading as Saudi Arabia cut prices for its benchmark grade to Asia. Meanwhile, the state producer warned about the risk of scarily thin global stockpiles while fighting in Yemen intensified.",
-    "what_it_means": "Crude oil is sensitive to both shifting geopolitical tensions in the Middle East and changing demand from major Asian economies. When supplies are tight, any sudden disruption can send energy prices swinging.",
-    "why_care": "Persistent fluctuations in energy costs eventually feed into the price of transport, heating, and goods on supermarket shelves."
+    "i": 54,
+    "title": "Airlines trim flights as jet fuel costs keep climbing",
+    "whats_going_on": "Airlines are cutting capacity as jet fuel prices continue to push higher and holiday bookings pick up. Holiday airplane tickets are already up more than 23% this year according to industry tracking.",
+    "what_it_means": "Rising energy input costs are forcing transport operators to adjust their flight schedules and pricing strategies. Consumers face pricier travel options even as carriers try to protect profit margins.",
+    "why_care": "Higher travel and fuel costs feed directly into household budgets and consumer price pressures, reminding us why keeping an eye on inflation matters."
    }
   ],
-  "basedOn": "2026-10-05T15:19:05.515Z",
-  "generatedAt": "2026-10-05T15:19:12.868Z"
+  "basedOn": "2026-10-05T17:18:38.546Z",
+  "generatedAt": "2026-10-05T17:19:12.475Z"
+ },
+ "pack": {
+  "carousel": {
+   "title": "Why Your Savings Need a Reality Check",
+   "slides": [
+    {
+     "h": "Inflation isn't just a boring spreadsheet number",
+     "t": "In Portugal, September's inflation landed at 3.6%. It shapes everything from your morning coffee to your long-term savings goals. Let's break down what's actually happening."
+    },
+    {
+     "h": "Rent pressures are hitting everyday budgets hard",
+     "t": "Across Europe, housing costs are soaring. In Spain, rents doubled in a decade, with over a quarter of renters spending 40% of their income just on a roof."
+    },
+    {
+     "h": "Holiday getaways are getting much pricier",
+     "t": "Airlines are trimming flights as jet fuel climbs. In fact, holiday airplane tickets are already up over 23% this year, pinching household travel budgets."
+    },
+    {
+     "h": "The ECB is keeping rates steady",
+     "t": "With the deposit rate sitting at 2.5% and new term deposit rates averaging 1.62% in Portugal, savers face a balancing act against rising everyday living costs."
+    },
+    {
+     "h": "What this means for your money",
+     "t": "Headline inflation tells one story, but your personal expenses tell another. Keep your emergency fund topped up and review where your cash is sitting."
+    },
+    {
+     "h": "Want more fresh financial takes?",
+     "t": "Hit follow for simple, no-nonsense money insights delivered daily. No jargon, just clear thinking for everyday savers."
+    }
+   ]
+  },
+  "linkedin": "Ever feel like official inflation numbers don't quite match your receipt at the checkout? You aren't imagining it.\n\nWhile Euro area inflation hit 3.8% and Portugal ticked in at 3.6% for September, everyday costs are telling a sharper story. From airline tickets surging over 23% due to climbing fuel prices, to rental pressures squeezing tenants across Europe, the cost-of-living squeeze is deeply personal.\n\nMeanwhile, the ECB's deposit rate sits at 2.5%, with new Portuguese term deposits averaging 1.62%. For everyday savers, this gap highlights why understanding the mechanics of your savings and local price pressures matters more than ever. Broad economic indicators give us a map, but our monthly budgets test the terrain.\n\nHow are you adjusting your savings strategy as costs rise? Let us know in the comments.\n\n#FinancialLiteracy #PersonalFinance #Inflation #SmartSavers",
+  "reel": {
+   "hook": "Why your grocery bill feels higher than the official inflation rate!",
+   "script": [
+    "Official data says Euro area inflation is 3.8% and Portugal is at 3.6%.",
+    "Sounds manageable, right? But look closer at your everyday life.",
+    "Plane tickets are up over 23% this year as jet fuel costs climb.",
+    "And across Europe, rental pressures are squeezing household budgets dry.",
+    "Macro stats are useful, but your personal inflation rate is what really counts. Follow MINT for more."
+   ],
+   "caption": "Official inflation vs. real life—spot the difference! A quick look at why everyday costs keep climbing. #Inflation #PersonalFinance #MINT"
+  },
+  "faq": [
+   {
+    "q": "What is the current inflation rate in Portugal?",
+    "a": "According to Eurostat, inflation in Portugal was 3.6% in September 2026, with the 12-month average sitting at 2.8%."
+   },
+   {
+    "q": "What is the ECB deposit rate right now?",
+    "a": "The European Central Bank deposit rate has remained at 2.5% since September 16, 2026."
+   },
+   {
+    "q": "Why are airline ticket prices increasing so much?",
+    "a": "Airlines are trimming flights as jet fuel costs climb, pushing holiday airplane tickets up by more than 23% this year."
+   },
+   {
+    "q": "How do rising European rents affect broader inflation?",
+    "a": "Soaring housing costs eat up a massive chunk of household incomes, showing how local living expenses can diverge from national averages."
+   },
+   {
+    "q": "What are new term deposits paying in Portugal?",
+    "a": "Recent data from the ECB and Banco de Portugal shows new term deposit rates averaging 1.62% as of August 2026."
+   }
+  ],
+  "generatedAt": "2026-10-05T17:19:17.372Z"
  }
 }

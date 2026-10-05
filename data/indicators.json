@@ -1,10 +1,99 @@
-{"updatedAt":"2026-10-01T20:00:00Z","items":[
- {"k":"inf_pt","label":"Inflation in Portugal","value":3.6,"unit":"%","dec":1,"period":"Sep 2026 (flash estimate)","prev":3.3,"prevPeriod":"Aug 2026","source":"Statistics Portugal (INE)","url":"https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_main&xlang=en"},
- {"k":"inf_pt_avg","label":"12-month average inflation (PT)","value":2.8,"unit":"%","dec":1,"period":"Sep 2026","source":"Statistics Portugal (INE)","url":"https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_main&xlang=en"},
- {"k":"inf_ea","label":"Euro area inflation","value":3.2,"unit":"%","dec":1,"period":"Aug 2026","prev":2.9,"prevPeriod":"Jul 2026","source":"Eurostat","url":"https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/2-17092026-ap"},
- {"k":"ecb_dep","label":"ECB deposit rate","value":2.5,"unit":"%","dec":2,"period":"since 16 Sep 2026","prev":2.25,"prevPeriod":"before","source":"ECB","url":"https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260910~314e508016.en.html"},
- {"k":"euribor12","label":"12-month Euribor","value":3.243,"unit":"%","dec":3,"period":"Sep 2026 average","prev":2.954,"prevPeriod":"Aug 2026","source":"euriborrates.com","url":"https://euriborrates.com/historical-euribor/2026"},
- {"k":"dep_pt","label":"New term deposit rate (PT)","value":1.63,"unit":"%","dec":2,"period":"Aug 2026","source":"Banco de Portugal","url":"https://bpstat.bportugal.pt/"},
- {"k":"mort_pt","label":"New mortgage rate (PT)","value":3.0,"unit":"%","dec":1,"period":"Aug 2026","source":"Banco de Portugal","url":"https://bpstat.bportugal.pt/"},
- {"k":"pt10y","label":"PT 10-year government bond","value":4.08,"unit":"%","dec":2,"period":"1 Oct 2026","prev":4.02,"prevPeriod":"30 Sep 2026","source":"Trading Economics","url":"https://tradingeconomics.com/portugal/government-bond-yield"}
-]}
+{
+ "updatedAt": "2026-10-05T17:18:41.327Z",
+ "items": [
+  {
+   "k": "inf_pt",
+   "label": "Inflation in Portugal",
+   "value": 3.6,
+   "unit": "%",
+   "dec": 1,
+   "period": "Sep 2026",
+   "prev": 3.6,
+   "prevPeriod": "Aug 2026",
+   "source": "Eurostat (HICP)",
+   "url": "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table"
+  },
+  {
+   "k": "inf_pt_avg",
+   "label": "12-month average inflation (PT)",
+   "value": 2.8,
+   "unit": "%",
+   "dec": 1,
+   "period": "Sep 2026",
+   "source": "Eurostat (HICP)",
+   "url": "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table"
+  },
+  {
+   "k": "inf_ea",
+   "label": "Euro area inflation",
+   "value": 3.8,
+   "unit": "%",
+   "dec": 1,
+   "period": "Sep 2026",
+   "prev": 3.2,
+   "prevPeriod": "Aug 2026",
+   "source": "Eurostat (HICP)",
+   "url": "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table"
+  },
+  {
+   "k": "ecb_dep",
+   "label": "ECB deposit rate",
+   "value": 2.5,
+   "unit": "%",
+   "dec": 2,
+   "period": "since 16 Sep 2026",
+   "prev": 2.25,
+   "prevPeriod": "before",
+   "source": "ECB",
+   "url": "https://data.ecb.europa.eu/data/datasets/FM/FM.D.U2.EUR.4F.KR.DFR.LEV"
+  },
+  {
+   "k": "euribor12",
+   "label": "12-month Euribor",
+   "value": 3.247,
+   "unit": "%",
+   "dec": 3,
+   "period": "Sep 2026 average",
+   "prev": 2.954,
+   "prevPeriod": "Aug 2026",
+   "source": "ECB",
+   "url": "https://data.ecb.europa.eu/data/datasets/FM/FM.M.U2.EUR.RT.MM.EURIBOR1YD_.HSTA"
+  },
+  {
+   "k": "dep_pt",
+   "label": "New term deposit rate (PT)",
+   "value": 1.62,
+   "unit": "%",
+   "dec": 2,
+   "period": "Aug 2026",
+   "source": "ECB / Banco de Portugal",
+   "url": "https://data.ecb.europa.eu/data/datasets/MIR",
+   "prev": 1.59,
+   "prevPeriod": "Jul 2026"
+  },
+  {
+   "k": "mort_pt",
+   "label": "New mortgage rate (PT)",
+   "value": 3,
+   "unit": "%",
+   "dec": 2,
+   "period": "Aug 2026",
+   "source": "ECB / Banco de Portugal",
+   "url": "https://data.ecb.europa.eu/data/datasets/MIR",
+   "prev": 2.97,
+   "prevPeriod": "Jul 2026"
+  },
+  {
+   "k": "pt10y",
+   "label": "PT 10-year government bond",
+   "value": 3.54,
+   "unit": "%",
+   "dec": 2,
+   "period": "Aug 2026 average",
+   "prev": 3.44,
+   "prevPeriod": "Jul 2026",
+   "source": "ECB",
+   "url": "https://data.ecb.europa.eu/data/datasets/IRS"
+  }
+ ]
+}
