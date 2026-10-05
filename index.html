@@ -667,6 +667,11 @@ header.top,body.solid header.top{background:#FFFFFF!important;backdrop-filter:no
 .faq summary::-webkit-details-marker{display:none}
 .faq p{margin-top:var(--s2);color:var(--muted);line-height:1.6;max-width:70ch}
 @media (max-width:760px){.pslides{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* visitors see the public site; the Studio, Library and AI tools are for the owner (key saved in this browser) */
+.owlink{font-size:inherit!important;color:inherit!important;font-weight:600!important}
+html.guest [data-tab="studio"], html.guest [data-tab="lib"], html.guest .owner-only, html.guest #aikeyTop, html.guest #bgen, html.guest #mgen, html.guest [data-bstory], html.guest [data-theme-idea], html.guest .askbox{display:none!important}
+html:not(.guest) .guest-only{display:none!important}
 </style>
 
 <div id="preload" aria-hidden="true"><svg class="mk" viewBox="0 0 24 24" width="48" height="48" aria-hidden="true"><rect x="0" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:0"/><rect x="8" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:1"/><rect x="16" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:2"/><rect x="8" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:3"/><rect x="16" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:4"/><rect x="16" y="2" width="6.4" height="6.4" rx="1.3" fill="#3AA89C" style="--i:5"/></svg></div>
@@ -681,14 +686,14 @@ header.top,body.solid header.top{background:#FFFFFF!important;backdrop-filter:no
     <span class="eyebrow">Made for everyday savers</span>
     <h2 class="mega">A fresh take on finance.</h2>
     <p style="color:rgba(230,241,243,.75);max-width:46ch;font-size:1.0625rem;line-height:1.55">Read what moved today, see what it means for your money, then turn it into content in minutes.</p>
-    <button class="btn primary" data-tab="studio" type="button">Open the Studio</button>
+    <button class="btn primary owner-only" data-tab="studio" type="button">Open the Studio</button><button class="btn primary guest-only" data-tab="mkt" type="button">Read today's Brief</button>
   </div></section>
   <div class="fbot"><div class="in">
     <div><div class="logo"><svg class="mark" viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="0" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:0"/><rect x="8" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:1"/><rect x="16" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:2"/><rect x="8" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:3"/><rect x="16" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:4"/><rect x="16" y="2" width="6.4" height="6.4" rx="1.3" fill="#3AA89C" style="--i:5"/></svg>MINT</div><p>A daily, plain-English read of the financial news, built as a Nova SBE project for the course "Boosting productivity with AI".</p></div>
     <div><h4>Explore</h4><ul><li><button class="flink" data-tab="mkt" type="button">Markets</button></li><li><button class="flink" data-tab="ask" type="button">Ask MINT</button></li><li><button class="flink" data-tab="lib" type="button">Library</button></li><li><button class="flink" data-tab="studio" type="button">Studio</button></li></ul></div>
     <div><h4>Sources</h4><ul><li>Bloomberg · Financial Times</li><li>WSJ · The Economist</li><li>CNBC · MarketWatch · BBC</li><li>ECB · Fed · Eurostat · INE</li></ul></div>
     <div><h4>Good to know</h4><ul><li>Educational only</li><li>No buy or sell calls</li><li>Capital at risk</li></ul></div>
-    <div class="flegal"><span>Educational content generated from public news. Not investment advice. Past performance is not a guide to future returns.</span><span>© 2026 MINT</span></div>
+    <div class="flegal"><span>Educational content generated from public news. Not investment advice. Past performance is not a guide to future returns.</span><span>© 2026 MINT · <button class="flink owlink" id="owLogin" type="button">Owner</button></span></div>
   </div></div>
 </footer>
 <div class="toast" id="toast" hidden></div>
@@ -777,13 +782,44 @@ header.top,body.solid header.top{background:#FFFFFF!important;backdrop-filter:no
       <label class="field"><span class="label">Gemini API key</span><input id="aiKeyIn" type="password" autocomplete="off" placeholder="Paste your key (AIza… or AQ.…)"></label>
       <div class="row"><button class="btn primary" type="button" data-ai="save">Save key</button><button class="btn" type="button" data-ai="close">Close</button>${getKey() ? '<button class="btn" type="button" data-ai="forget">Remove key</button>' : ""}</div>`;
     el.querySelector('[data-ai="close"]').onclick = () => el.remove();
-    el.querySelector('[data-ai="save"]').onclick = () => { const v = el.querySelector("#aiKeyIn").value.trim(); if(v.length < 20) return; try{ localStorage.setItem(KEY, v); }catch{} el.innerHTML = "<b>Key saved</b><p>Try again: press the button you used before.</p>"; setTimeout(() => el.remove(), 2200); };
+    el.querySelector('[data-ai="save"]').onclick = () => { const v = el.querySelector("#aiKeyIn").value.trim(); if(v.length < 20) return; try{ localStorage.setItem(KEY, v); }catch{} el.innerHTML = "<b>Key saved</b><p>Unlocking the Studio…</p>"; setTimeout(() => location.reload(), 1200); };
     const fg = el.querySelector('[data-ai="forget"]'); if(fg) fg.onclick = () => { try{ localStorage.removeItem(KEY); }catch{} el.remove(); };
     el.querySelector("#aiKeyIn").focus();
   }
   // free relay (Cloudflare Worker) that holds MINT's key: visitors need no key of their own
   const PROXY = "__MINT_AI_PROXY__".startsWith("http") ? "__MINT_AI_PROXY__" : "";
   window.MINT_AI_PROXY = PROXY;
+  // owner sign-in: email + password checked against a salted SHA-256 fingerprint (the password itself is never stored)
+  const OWNER_HASH = "__MINT_OWNER_HASH__".length === 64 ? "__MINT_OWNER_HASH__" : "";
+  const isOwner = () => { try{ return localStorage.getItem("mint-owner") === OWNER_HASH && !!OWNER_HASH; }catch{ return false; } };
+  window.MINT_OWNER = isOwner();
+  const sha = async t => [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t)))].map(b => b.toString(16).padStart(2,"0")).join("");
+  const fp = (e, p) => sha("mint-owner-v1|" + e.trim().toLowerCase() + "|" + p);
+  function loginPanel(){
+    let el = document.getElementById("aiPanel");
+    if(!el){ el = document.createElement("div"); el.id = "aiPanel"; el.className = "aipanel"; el.setAttribute("role","dialog"); el.setAttribute("aria-label","Owner sign in"); document.body.appendChild(el); }
+    const setup = !OWNER_HASH;
+    el.innerHTML = `<b>${setup ? "Create your owner password" : "Owner sign in"}</b>
+      <p>${setup ? "Choose the email and password you will use to open the Studio. You'll get a code to send to Claude; the password itself never leaves this page." : "The Studio and Library are private. Sign in to open them."}</p>
+      <label class="field"><span class="label">Email</span><input id="owEmail" type="email" autocomplete="username"></label>
+      <label class="field"><span class="label">Password</span><input id="owPass" type="password" autocomplete="${setup ? "new-password" : "current-password"}"></label>
+      <p id="owMsg" class="muted" style="font-size:.85rem"></p>
+      <div class="row"><button class="btn primary" type="button" data-ow="go">${setup ? "Create code" : "Sign in"}</button><button class="btn" type="button" data-ow="close">Close</button></div>`;
+    const msg = el.querySelector("#owMsg");
+    el.querySelector('[data-ow="close"]').onclick = () => { el.remove(); history.replaceState(null, "", location.pathname + location.search); };
+    el.querySelector('[data-ow="go"]').onclick = async () => {
+      const e = el.querySelector("#owEmail").value, p = el.querySelector("#owPass").value;
+      if(!e.includes("@") || p.length < 8){ msg.textContent = "Use your email and a password with at least 8 characters."; return; }
+      const h = await fp(e, p);
+      if(setup){ msg.innerHTML = `Send this code to Claude:<br><code style="user-select:all;word-break:break-all">${h}</code>`; return; }
+      if(h === OWNER_HASH){ try{ localStorage.setItem("mint-owner", h); }catch{} msg.textContent = "Welcome back. Opening the Studio…"; setTimeout(() => { location.hash = ""; location.reload(); }, 800); }
+      else msg.textContent = "Email or password not recognised.";
+    };
+    el.querySelector("#owEmail").focus();
+  }
+  window.MINT_LOGIN = loginPanel;
+  window.MINT_LOGOUT = () => { try{ localStorage.removeItem("mint-owner"); }catch{} location.reload(); };
+  if(/owner/.test(location.hash) && !window.MINT_OWNER) addEventListener("DOMContentLoaded", () => setTimeout(loginPanel, 300));
   if(!PROXY) window.RADAR_AI_KEY = () => keyPanel();
   const toText = input => typeof input === "string" ? input : (input || []).map(t => t.content).join("\n\n");
   const MODELS = ["gemini-flash-latest", "gemini-2.5-flash", "gemini-flash-lite-latest", "gemini-2.5-flash-lite"];
@@ -829,6 +865,7 @@ header.top,body.solid header.top{background:#FFFFFF!important;backdrop-filter:no
 <script>
 (() => {
 const $ = s => document.querySelector(s);
+const OWNER = !window.RADAR_STANDALONE || !!window.MINT_OWNER; document.documentElement.classList.toggle("guest", !OWNER);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const uid = p => p + Date.now().toString(36) + Math.random().toString(36).slice(2,7);
 const ls = { get(k,d){try{return localStorage.getItem(k)??d}catch{return d}}, set(k,v){try{localStorage.setItem(k,v)}catch{}} };
@@ -1095,7 +1132,7 @@ function vAsk(){
   const day=latestDay();
   let h = `<section class="bleed dhero">${tilesHTML(4)}<div class="in"><span class="eyebrow">Ask MINT</span><h1>Ask anything about today's money news.</h1><p class="muted">Answers use the stories collected today and the verified indicators. Scenarios and risks, never buy or sell calls.</p></div></section>`;
   h += vFaq();
-  h += `<section class="panel"><div class="ptitle"><h2>Your question</h2></div>
+  h += `<section class="panel askbox"><div class="ptitle"><h2>Your question</h2></div>
     <p class="muted" style="font-size:.9rem">Ask anything about today's markets. The answer uses the collected news and shows scenarios and risks, never buy or sell calls.</p>
     <div class="chips">${["What could earn more than a deposit right now?","With rates rising, do bonds make sense to look at?","What does rising oil mean for investors?","Which risks are growing in markets this week?"].map(q=>`<button class="chip" type="button" data-q="${esc(q)}">${esc(q)}</button>`).join("")}</div>
     <div class="row" style="align-items:stretch"><label class="field" style="flex:1;min-width:220px"><span class="label">Your question</span><input id="mq" value="${esc(mk.q)}" placeholder="e.g. where is money flowing this week?"></label>
@@ -1768,6 +1805,7 @@ function render(){
   const m=$("#main");
   if(tab!=="mkt"){ stopRadar(); pauseR3(); }
   else pauseR3();
+  if(!OWNER && (tab==="studio"||tab==="lib")){ tab="mkt"; document.querySelectorAll(".tab[data-tab]").forEach(x=>x.classList.toggle("on",x.dataset.tab===tab)); }
   m.innerHTML = tab==="lib" ? vLib() : tab==="mkt" ? vMarkets() : tab==="ask" ? vAsk() : tab==="rot" ? vRoutine() : vStudio();
   bind(); if(tab==="mkt"||tab==="ask") bindMarkets(); if(tab==="rot") bindRoutine();
   splitWords(m); window.RADAR_TILES?.();
@@ -1834,6 +1872,7 @@ function splitWords(root){
     h.innerHTML=words.map((w,i)=>`<span class="w" aria-hidden="true"><span style="--i:${i}">${esc(w)}</span></span>`).join(" "); });
 }
 function bind(){
+  const ow=document.getElementById("owLogin"); if(ow){ if(!window.MINT_LOGIN) ow.hidden=true; else { ow.textContent=OWNER?"Sign out":"Owner"; ow.onclick=()=>OWNER?window.MINT_LOGOUT():window.MINT_LOGIN(); } }
   document.querySelectorAll("[data-pcopy]").forEach(b=>b.onclick=()=>copy(PACKTXT[b.dataset.pcopy]||"",b));
   const inp=$("#in"); if(inp) inp.oninput=()=>{ st.input=inp.value; ls.set("radar-input",inp.value); };
   const ex=$("#ex"); if(ex) ex.onclick=()=>{ st.input=EXAMPLE; ls.set("radar-input",EXAMPLE); render(); };

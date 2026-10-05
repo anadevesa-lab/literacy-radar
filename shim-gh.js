@@ -82,13 +82,44 @@
       <label class="field"><span class="label">Gemini API key</span><input id="aiKeyIn" type="password" autocomplete="off" placeholder="Paste your key (AIza… or AQ.…)"></label>
       <div class="row"><button class="btn primary" type="button" data-ai="save">Save key</button><button class="btn" type="button" data-ai="close">Close</button>${getKey() ? '<button class="btn" type="button" data-ai="forget">Remove key</button>' : ""}</div>`;
     el.querySelector('[data-ai="close"]').onclick = () => el.remove();
-    el.querySelector('[data-ai="save"]').onclick = () => { const v = el.querySelector("#aiKeyIn").value.trim(); if(v.length < 20) return; try{ localStorage.setItem(KEY, v); }catch{} el.innerHTML = "<b>Key saved</b><p>Try again: press the button you used before.</p>"; setTimeout(() => el.remove(), 2200); };
+    el.querySelector('[data-ai="save"]').onclick = () => { const v = el.querySelector("#aiKeyIn").value.trim(); if(v.length < 20) return; try{ localStorage.setItem(KEY, v); }catch{} el.innerHTML = "<b>Key saved</b><p>Unlocking the Studio…</p>"; setTimeout(() => location.reload(), 1200); };
     const fg = el.querySelector('[data-ai="forget"]'); if(fg) fg.onclick = () => { try{ localStorage.removeItem(KEY); }catch{} el.remove(); };
     el.querySelector("#aiKeyIn").focus();
   }
   // free relay (Cloudflare Worker) that holds MINT's key: visitors need no key of their own
   const PROXY = "__MINT_AI_PROXY__".startsWith("http") ? "__MINT_AI_PROXY__" : "";
   window.MINT_AI_PROXY = PROXY;
+  // owner sign-in: email + password checked against a salted SHA-256 fingerprint (the password itself is never stored)
+  const OWNER_HASH = "__MINT_OWNER_HASH__".length === 64 ? "__MINT_OWNER_HASH__" : "";
+  const isOwner = () => { try{ return localStorage.getItem("mint-owner") === OWNER_HASH && !!OWNER_HASH; }catch{ return false; } };
+  window.MINT_OWNER = isOwner();
+  const sha = async t => [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t)))].map(b => b.toString(16).padStart(2,"0")).join("");
+  const fp = (e, p) => sha("mint-owner-v1|" + e.trim().toLowerCase() + "|" + p);
+  function loginPanel(){
+    let el = document.getElementById("aiPanel");
+    if(!el){ el = document.createElement("div"); el.id = "aiPanel"; el.className = "aipanel"; el.setAttribute("role","dialog"); el.setAttribute("aria-label","Owner sign in"); document.body.appendChild(el); }
+    const setup = !OWNER_HASH;
+    el.innerHTML = `<b>${setup ? "Create your owner password" : "Owner sign in"}</b>
+      <p>${setup ? "Choose the email and password you will use to open the Studio. You'll get a code to send to Claude; the password itself never leaves this page." : "The Studio and Library are private. Sign in to open them."}</p>
+      <label class="field"><span class="label">Email</span><input id="owEmail" type="email" autocomplete="username"></label>
+      <label class="field"><span class="label">Password</span><input id="owPass" type="password" autocomplete="${setup ? "new-password" : "current-password"}"></label>
+      <p id="owMsg" class="muted" style="font-size:.85rem"></p>
+      <div class="row"><button class="btn primary" type="button" data-ow="go">${setup ? "Create code" : "Sign in"}</button><button class="btn" type="button" data-ow="close">Close</button></div>`;
+    const msg = el.querySelector("#owMsg");
+    el.querySelector('[data-ow="close"]').onclick = () => { el.remove(); history.replaceState(null, "", location.pathname + location.search); };
+    el.querySelector('[data-ow="go"]').onclick = async () => {
+      const e = el.querySelector("#owEmail").value, p = el.querySelector("#owPass").value;
+      if(!e.includes("@") || p.length < 8){ msg.textContent = "Use your email and a password with at least 8 characters."; return; }
+      const h = await fp(e, p);
+      if(setup){ msg.innerHTML = `Send this code to Claude:<br><code style="user-select:all;word-break:break-all">${h}</code>`; return; }
+      if(h === OWNER_HASH){ try{ localStorage.setItem("mint-owner", h); }catch{} msg.textContent = "Welcome back. Opening the Studio…"; setTimeout(() => { location.hash = ""; location.reload(); }, 800); }
+      else msg.textContent = "Email or password not recognised.";
+    };
+    el.querySelector("#owEmail").focus();
+  }
+  window.MINT_LOGIN = loginPanel;
+  window.MINT_LOGOUT = () => { try{ localStorage.removeItem("mint-owner"); }catch{} location.reload(); };
+  if(/owner/.test(location.hash) && !window.MINT_OWNER) addEventListener("DOMContentLoaded", () => setTimeout(loginPanel, 300));
   if(!PROXY) window.RADAR_AI_KEY = () => keyPanel();
   const toText = input => typeof input === "string" ? input : (input || []).map(t => t.content).join("\n\n");
   const MODELS = ["gemini-flash-latest", "gemini-2.5-flash", "gemini-flash-lite-latest", "gemini-2.5-flash-lite"];
