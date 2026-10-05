@@ -2,606 +2,6 @@
  "date": "2026-10-05",
  "items": [
   {
-   "source": "Fortune",
-   "category": "Habitação",
-   "published": "5 Oct",
-   "title": "Spain’s lefty government evicted an 87-year-old woman from her home of 70 years and thousands of protesters took the streets",
-   "summary": "Spain’s average rent has nearly doubled in a decade, while more than a quarter of renters spend 40% of their income on housing.",
-   "url": "https://fortune.com/2026/10/05/spain-housing-protests-rent-eviction/"
-  },
-  {
-   "source": "Fortune",
-   "category": "Tecnologia",
-   "published": "5 Oct",
-   "title": "Booking Holdings spends nearly $9 billion a year to reach travelers. Its CFO explains how AI is changing trip planning",
-   "summary": "Ewout Steenbergen says the company is using AI to make travel more personalized and proactive.",
-   "url": "https://fortune.com/2026/10/05/booking-holdings-spends-nearly-9-billion-a-year-reach-travelers-cfo-ai-changing-trip-planning/"
-  },
-  {
-   "source": "Fortune",
-   "category": "Tecnologia",
-   "published": "5 Oct",
-   "title": "NVIDIA Head of Sustainability: how to accelerate America’s nuclear energy renaissance",
-   "summary": "For most of the last few decades, electricity demand in the United States has been relatively flat. That era is ending.",
-   "url": "https://fortune.com/2026/10/05/nvidia-sustainability-nuclear-josh-parker/"
-  },
-  {
-   "source": "Investing.com",
-   "category": "Mercados",
-   "published": "5 Oct",
-   "title": "Starbucks sued over ’sugar-free’ claims for protein beverages",
-   "summary": "",
-   "url": "https://www.investing.com/news/stock-market-news/starbucks-sued-over-sugarfree-claims-for-protein-beverages-4932506"
-  },
-  {
-   "source": "Investing.com",
-   "category": "Bolsa",
-   "published": "5 Oct",
-   "title": "Norway stocks higher at close of trade; Oslo OBX up 0.29%",
-   "summary": "",
-   "url": "https://www.investing.com/news/stock-market-news/norway-stocks-higher-at-close-of-trade-oslo-obx-up-029-4932508"
-  },
-  {
-   "source": "Investing.com",
-   "category": "Bolsa",
-   "published": "5 Oct",
-   "title": "Israel stocks higher at close of trade; TA 35 up 0.13%",
-   "summary": "",
-   "url": "https://www.investing.com/news/stock-market-news/israel-stocks-higher-at-close-of-trade-ta-35-up-013-4932507"
-  },
-  {
-   "source": "Investing.com",
-   "category": "Mercados",
-   "published": "5 Oct",
-   "title": "Sainsbury’s held merger talks with Morrisons earlier this year - report",
-   "summary": "",
-   "url": "https://www.investing.com/news/stock-market-news/sainsburys-held-merger-talks-with-morrisons-earlier-this-year--report-93CH-4932505"
-  },
-  {
-   "source": "Investing.com",
-   "category": "Bolsa",
-   "published": "5 Oct",
-   "title": "Alvotech stock surges after FDA manufacturing approval",
-   "summary": "",
-   "url": "https://www.investing.com/news/stock-market-news/alvotech-stock-surges-after-fda-manufacturing-approval-4932503"
-  },
-  {
-   "source": "Investing.com",
-   "category": "Bolsa",
-   "published": "5 Oct",
-   "title": "Greece stocks higher at close of trade; Athens General Composite up 0.13%",
-   "summary": "",
-   "url": "https://www.investing.com/news/stock-market-news/greece-stocks-higher-at-close-of-trade-athens-general-composite-up-013-4932502"
-  },
-  {
-   "source": "Investing.com",
-   "category": "Bolsa",
-   "published": "5 Oct",
-   "title": "Insmed stock falls as CFO Sara Bonstein to step down",
-   "summary": "",
-   "url": "https://www.investing.com/news/stock-market-news/insmed-stock-falls-as-cfo-sara-bonstein-to-step-down-4932495"
-  },
-  {
-   "source": "Investing.com",
-   "category": "Bolsa",
-   "published": "5 Oct",
-   "title": "HeartBeam stock soars on FDA breakthrough designation",
-   "summary": "",
-   "url": "https://www.investing.com/news/stock-market-news/heartbeam-stock-soars-on-fda-breakthrough-designation-4932489"
-  },
-  {
-   "source": "Investing.com",
-   "category": "Bolsa",
-   "published": "5 Oct",
-   "title": "Intel and Oracle among market cap stock movers on Monday",
-   "summary": "",
-   "url": "https://www.investing.com/news/stock-market-news/intel-and-oracle-among-market-cap-stock-movers-on-monday-93CH-4932486"
-  },
-  {
-   "source": "Investing.com",
-   "category": "Mercados",
-   "published": "5 Oct",
-   "title": "Cenovus tumbles as C$5.7 billion Athabasca deal raises debt concerns",
-   "summary": "",
-   "url": "https://www.investing.com/news/stock-market-news/cenovus-tumbles-as-c57-billion-athabasca-deal-raises-debt-concerns-4932481"
-  },
-  {
-   "source": "Seeking Alpha",
-   "category": "Bolsa",
-   "published": "5 Oct",
-   "title": "Brazilian fintech stocks surge as Bolsonaro's lead puts Brazil on track to shift right",
-   "summary": "",
-   "url": "https://seekingalpha.com/news/4650208-brazilian-fintech-stocks-surge-as-bolsonaros-lead-puts-brazil-on-track-to-shift-right?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news"
-  },
-  {
-   "source": "Seeking Alpha",
-   "category": "Bolsa",
-   "published": "5 Oct",
-   "title": "Ten consumer staples stocks stand out with strong growth grades",
-   "summary": "",
-   "url": "https://seekingalpha.com/news/4650211-ten-consumer-staples-stocks-stand-out-with-strong-growth-grades?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news"
-  },
-  {
-   "source": "Seeking Alpha",
-   "category": "Obrigações",
-   "published": "5 Oct",
-   "title": "Deutsche Bank flags disconnect between European bond, equity stress",
-   "summary": "",
-   "url": "https://seekingalpha.com/news/4650207-deutsche-bank-flags-disconnect-between-european-bond-equity-stress?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news"
-  },
-  {
-   "source": "ECB",
-   "category": "Banca central",
-   "published": "5 Oct",
-   "title": "Philip R. Lane: Diagnostic Challenges for ECB Monetary Policy",
-   "summary": "",
-   "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261005~1d8d998ef4.en.html"
-  },
-  {
-   "source": "Bloomberg",
-   "category": "Obrigações",
-   "published": "5 Oct",
-   "title": "JPMorgan Sees US High-Grade Credit Rallying as Supply Falls",
-   "summary": "JPMorgan Chase & Co. strategists see US investment-grade corporate bonds outperforming Treasuries in the fourth quarter, citing factors including slowing sales from big tech companies and strong corpo",
-   "url": "https://www.bloomberg.com/news/articles/2026-10-05/jpmorgan-sees-us-high-grade-credit-rallying-as-supply-falls"
-  },
-  {
-   "source": "Bloomberg",
-   "category": "Mercados",
-   "published": "5 Oct",
-   "title": "Pedro Sánchez convoca elecciones anticipadas en España tras fracasar plan de vivienda",
-   "summary": "Pedro Sánchez adelanta las elecciones en España tras perder una votación clave sobre vivienda. El PP lidera los sondeos y Vox podría ser decisivo para formar un nuevo gobierno. (Source: Bloomberg)",
-   "url": "https://www.bloomberg.com/news/videos/2026-10-05/pedro-sanchez-convoca-elecciones-anticipadas-en-espana-tras-fracasar-plan-de-vivienda"
-  },
-  {
-   "source": "Bloomberg",
-   "category": "Mercados",
-   "published": "5 Oct",
-   "title": "Soybeans Climb as Brazil’s Currency Rallies After Vote Surprise",
-   "summary": "Soybean futures rose Monday in Chicago after a surprise first-round result in Brazil’s presidential election sent the Brazilian real soaring, making exports of the crop more expensive.",
-   "url": "https://www.bloomberg.com/news/articles/2026-10-05/wheat-edges-higher-on-russia-s-threats-to-escalate-ukraine-war"
-  },
-  {
-   "source": "Bloomberg",
-   "category": "Mercados",
-   "published": "5 Oct",
-   "title": "Latin American Currencies Lead EM Gains With Real Outpeforming",
-   "summary": "Latin American currencies are posting some of the best performances in emerging markets on Monday, with the Brazilian real spearheading gains after right-wing candidate Flávio Bolsonaro surged to a su",
-   "url": "https://www.bloomberg.com/news/articles/2026-10-05/emerging-market-assets-climb-as-fed-hike-bets-cool-oil-drops"
-  },
-  {
-   "source": "Bloomberg",
-   "category": "Mercados",
-   "published": "5 Oct",
-   "title": "Surging Brazil Currency Helps Lift Sugar and Coffee Futures",
-   "summary": "A surprise lead for Flávio Bolsonaro in Brazil’s first round of the presidential election sent the nation’s currency soaring, helping lift prices of the biggest soft commodities exports from South Ame",
-   "url": "https://www.bloomberg.com/news/articles/2026-10-05/sugar-extends-rally-to-highest-level-since-2024-on-weather-risks"
-  },
-  {
-   "source": "Bloomberg",
-   "category": "Mercados",
-   "published": "5 Oct",
-   "title": "CFTC Proposes Registering Crypto Exchanges Offering Leverage",
-   "summary": "The Commodity Futures Trading Commission unveiled a proposal Monday to regulate digital asset transactions and markets.",
-   "url": "https://www.bloomberg.com/news/articles/2026-10-05/cftc-proposes-registering-crypto-exchanges-offering-leverage"
-  },
-  {
-   "source": "Bloomberg",
-   "category": "Mercados",
-   "published": "5 Oct",
-   "title": "Japanese Rivals Study Bids for TK Elevator’s European Assets",
-   "summary": "Japanese elevator makers including Mitsubishi Electric Corp. are among potential suitors set to study bids for European operations being sold by TK Elevator, people with knowledge of the matter said.",
-   "url": "https://www.bloomberg.com/news/articles/2026-10-05/japanese-rivals-study-bids-for-tk-elevator-s-european-assets"
-  },
-  {
-   "source": "Bloomberg",
-   "category": "Obrigações",
-   "published": "5 Oct",
-   "title": "Odd Lots: What Does It Take to Make Bonds Less Risky Again?",
-   "summary": "On this episode of the Odd Lots podcast, Carolin Pflueger, associate professor at the University of Chicago, joins Tracy Alloway and Joe Weisenthal to discuss why Treasury and global bond yields have ",
-   "url": "https://www.bloomberg.com/news/videos/2026-10-05/odd-lots-what-does-it-take-to-make-bonds-less-risky-again"
-  },
-  {
-   "source": "Bloomberg",
-   "category": "Obrigações",
-   "published": "5 Oct",
-   "title": "The Existential Imperative to Borrow",
-   "summary": "More yield-insensitive issuance.",
-   "url": "https://www.bloomberg.com/news/newsletters/2026-10-05/the-existential-imperative-to-borrow"
-  },
-  {
-   "source": "Financial Times",
-   "category": "Obrigações",
-   "published": "5 Oct",
-   "title": "French central bank head warns country at risk of being ‘strangled by interest rates’",
-   "summary": "Emmanuel Moulin says France can still reassure bond investors despite ‘serious and worrying’ market moves in recent days",
-   "url": "https://www.ft.com/content/74c3cc77-1593-4c49-90f9-0d92fa3a2418?syn-25a6b1a6=1"
-  },
-  {
-   "source": "Financial Times",
-   "category": "Bolsa",
-   "published": "5 Oct",
-   "title": "Citi to speed up promotion path for junior bankers as hiring war heats up",
-   "summary": "Length of investment banking analyst programme to be cut to two years to try to stave off poaching of young workers by private equity",
-   "url": "https://www.ft.com/content/41b567dc-50e9-4c41-95bb-e295caaf2340?syn-25a6b1a6=1"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Obrigações",
-   "published": "5 Oct",
-   "title": "Stock Market Today: 10-Year Yield Rises; Nasdaq Poised to Hit New High",
-   "summary": "Dollar strengthens against euro, while Brazilian real rallies after election",
-   "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-10-05-2026?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Fundos",
-   "published": "5 Oct",
-   "title": "Your Index Fund Went Up. Was It Luck Or Smarts?",
-   "summary": "Plus, the euro is slumping",
-   "url": "https://www.wsj.com/finance/stocks/your-index-fund-went-up-was-it-luck-or-smarts-cb64c836?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Bolsa",
-   "published": "5 Oct",
-   "title": "Bank Stocks Are Haunted by the Ghosts of 2023",
-   "summary": "Lenders have stronger balance sheets now as they face a new rate-hiking cycle.",
-   "url": "https://www.wsj.com/finance/banking/bank-stocks-are-haunted-by-the-ghosts-of-2023-a2a64725?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Mercados",
-   "published": "5 Oct",
-   "title": "Warren and Hawley to Probe Insurers Over Zero-Payout Claims",
-   "summary": "The senators, one a Republican and the other a Democrat, question whether companies are driving profits with &#x2018;tactics to delay payments.&#x2019;",
-   "url": "https://www.wsj.com/finance/warren-and-hawley-to-probe-insurers-over-zero-payout-claims-4ee8d046?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Economia",
-   "published": "5 Oct",
-   "title": "Robotics Startup RobCo Hits $1 Billion Valuation",
-   "summary": "The German company aims to capitalize on growing demand for autonomous industrial robots.",
-   "url": "https://www.wsj.com/tech/robotics-startup-robco-hits-1-billion-valuation-784bd6a5?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Mercados",
-   "published": "4 Oct",
-   "title": "How Polymarket&#x2019;s &#x2018;Growth at All Costs&#x2019; Strategy Opened the Door to Fraud",
-   "summary": "Watch WSJ&#x2019;s Katherine Long break down Polymarket&#x2019;s pattern of compliance failures.",
-   "url": "https://www.wsj.com/finance/investing/how-polymarkets-growth-at-all-costs-strategy-opened-the-door-to-fraud-994f7c25?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Mercados",
-   "published": "4 Oct",
-   "title": "Inside Dodgers Owner Mark Walter&#x2019;s Charity, a Funding Shift Led the CEO to Quit",
-   "summary": "Academy Group will be funded by an entity being examined as part of the probe into Walter&#x2019;s insurance lending; the charity says the switch was always the plan.",
-   "url": "https://www.wsj.com/business/inside-dodgers-owner-mark-walters-charity-a-funding-shift-led-the-ceo-to-quit-f7640486?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Mercados",
-   "published": "5 Oct",
-   "title": "Tech, Media & Telecom Roundup: Market Talk",
-   "summary": "Gain insight on BT Group, Schneider Electric&#x2019;s PTC deal and more in the latest Market Talks covering technology, media and telecom.",
-   "url": "https://www.wsj.com/finance/investing/tech-media-telecom-roundup-market-talk-d6dbac74?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Mercados",
-   "published": "5 Oct",
-   "title": "Basic Materials Roundup: Market Talk",
-   "summary": "Find insight on Glencore, Northern Star Resources, Lynas Rare Earths and more in the latest Market Talks covering Basic Materials.",
-   "url": "https://www.wsj.com/business/basic-materials-roundup-market-talk-711dc5e2?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Mercados",
-   "published": "5 Oct",
-   "title": "Auto & Transport Roundup: Market Talk",
-   "summary": "Find insight on Volvo, Napier Port and more in the latest Market Talks covering Auto and Transport.",
-   "url": "https://www.wsj.com/business/auto-transport-roundup-market-talk-8fbed9a4?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "5 Oct",
-   "title": "Mining Unwritten Data for AI&#x2019;s Edge",
-   "summary": "Plus, companies are finding AI costs hard to predict",
-   "url": "https://www.wsj.com/cio-journal/mining-unwritten-data-for-ais-edge-52681e43?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "5 Oct",
-   "title": "The Morning Risk Report: New AI Czar Unveils Goals, Members of White House Task Force",
-   "summary": "Plus: Community banks swing back at Trump regulators over crypto charters, and a near-catastrophe on flight 1073 exposes gaping hole in Dubai&#x2019;s aviation security.",
-   "url": "https://www.wsj.com/risk-compliance-journal/the-morning-risk-report-new-ai-czar-unveils-goals-members-of-white-house-task-force-0141e74e?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Economia",
-   "published": "5 Oct",
-   "title": "Robotics Startup RobCo Hits $1 Billion Valuation",
-   "summary": "The German company aims to capitalize on growing demand for autonomous industrial robots.",
-   "url": "https://www.wsj.com/tech/robotics-startup-robco-hits-1-billion-valuation-784bd6a5?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Economia",
-   "published": "5 Oct",
-   "title": "Spending on AI Is Becoming Almost Impossible for Businesses to Budget",
-   "summary": "AI use is measured in tokens, but the models&#x2019; use of tokens at any given task can be unpredictable.",
-   "url": "https://www.wsj.com/tech/personal-tech/ai-token-spending-businesses-431ee94a?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "4 Oct",
-   "title": "Meet the Swarm Chasers",
-   "summary": "Plus, why AI&#x2019;s &#x2018;thought&#x2019; process can&#x2019;t always be trusted, why teens are losing sense of time, how Google&#x2019;s AI push in schools went too far for some students and more",
-   "url": "https://www.wsj.com/tech/ai/meet-the-swarm-chasers-8bcbe2a9?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "4 Oct",
-   "title": "AI Agents Are Offering to Run Your Life. Should You Let Them?",
-   "summary": "Personal bots, such as Meta&#x2019;s Muse, OpenAI&#x2019;s Dots, and Instinct, are raring to take on your to-do list.",
-   "url": "https://www.wsj.com/tech/ai/ai-agents-guide-5beb4b92?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Poupança",
-   "published": "5 Oct",
-   "title": "Deutsche Telekom Bets on AI to Cut Costs, Boost Revenue",
-   "summary": "The telecommunications group said it expects AI to generate gross savings outside the U.S. of around $1.24 billion by 2027.",
-   "url": "https://www.wsj.com/tech/ai/deutsche-telekom-bets-on-ai-to-cut-costs-boost-revenue-22a289b8?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "5 Oct",
-   "title": "Opinion | The AI Collateral Blind Spot",
-   "summary": "Better data would make risk visible before the funding gap opens.",
-   "url": "https://www.wsj.com/opinion/the-ai-collateral-blind-spot-4ef352ce?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "4 Oct",
-   "title": "Opinion | The End of College as We Know It",
-   "summary": "AI is wreaking havoc in universities, but higher ed&#x2019;s woes long predate ChatGPT.",
-   "url": "https://www.wsj.com/opinion/the-end-of-college-as-we-know-it-e222ab3d?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "4 Oct",
-   "title": "Opinion | Think of Artificial Intelligence Like a Weapon",
-   "summary": "Not all AI is created equal.",
-   "url": "https://www.wsj.com/opinion/think-of-artificial-intelligence-like-a-weapon-0d541abc?mod=rss_Technology"
-  },
-  {
-   "source": "CNBC",
-   "category": "Tecnologia",
-   "published": "5 Oct",
-   "title": "Satya Nadella reinvented Microsoft once. Can he do it again in the AI era?",
-   "summary": "After succeeding Steve Ballmer in 2014, Satya Nadella turned Microsoft into a cloud giant. Now he's tasked with making the company a force in AI.",
-   "url": "https://www.cnbc.com/2026/10/05/satya-nadella-reinvented-microsoft-once-can-he-do-it-in-the-ai-era.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Tecnologia",
-   "published": "5 Oct",
-   "title": "AI researcher warns 'we are racing to build and grow our own adversary' in NYC hearing",
-   "summary": "The leading AI labs facing intensifying scrutiny over their safety and security practices.",
-   "url": "https://www.cnbc.com/2026/10/05/anthropic-openai-google-meta-execs-testify-nyc-council-ai-hearing.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "5 Oct",
-   "title": "David Ellison just brought in a co-CEO to run his new empire: Meet Ynon Kreiz",
-   "summary": "Ynon Kreiz's appointment as co-CEO of Skydance answers a key governance question for Ellison's soon-to-be-merged company.",
-   "url": "https://www.cnbc.com/2026/10/03/david-ellison-ynon-kreiz-skydance.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Bolsa",
-   "published": "5 Oct",
-   "title": "Brazilian stocks jump as Bolsonaro now seen as heavy favorite to win presidency",
-   "summary": "The moves come after the first round results of Brazil's presidential election on Sunday. Bolsonaro will face incumbent Lula da Silva in a run-off on Oct. 25.",
-   "url": "https://www.cnbc.com/2026/10/05/brazilian-stocks-jump-bolsonaro-now-heavy-favorite-to-win-presidency.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "5 Oct",
-   "title": "TNT Sports head Luis Silberwasser to depart Skydance as CBS Sports chief David Berson takes over combined global sports group",
-   "summary": "TNT Sports chief Luis Silberwasser will be leaving a combined Paramount Skydance-Warner Bros. Discovery company, sources tell CNBC.",
-   "url": "https://www.cnbc.com/2026/10/05/cbs-sports-head-david-berson-takes-over-skydance-global-sports-group.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "5 Oct",
-   "title": "Why airfares could rise even more, but airline profits won't",
-   "summary": "Airlines are trimming capacity as jet fuel prices keep climbing and travelers keep booking.",
-   "url": "https://www.cnbc.com/2026/10/05/airfare-prices-airline-profits.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "5 Oct",
-   "title": "These are the cheapest and most expensive U.S. flights this November",
-   "summary": "Holiday airplane tickets are up more than 23% this year, according to Hopper.",
-   "url": "https://www.cnbc.com/2026/10/05/cheapest-most-expensive-us-flights-in-november.html"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Bolsa",
-   "published": "5 Oct",
-   "title": "Microsoft&#x2019;s blazing stock comeback isn&#x2019;t even close to being over, analyst says",
-   "summary": "Microsoft looks like a winning play in an environment where investors are looking for safer bets on the AI trend, according to Melius Research.",
-   "url": "https://www.marketwatch.com/story/microsofts-blazing-stock-comeback-isnt-even-close-to-being-over-analyst-says-265f7b6d?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Poupança",
-   "published": "5 Oct",
-   "title": "&#x2018;I don&#x2019;t want to die on the sales floor&#x2019;: I&#x2019;m 67 and earn $19.50 an hour at a big-box store. When can I finally retire?",
-   "summary": "&#x201c;I started taking Social Security at 66 and receive $2,410 a month. I have $214,000 in my 401(k).&#x201d;",
-   "url": "https://www.marketwatch.com/story/i-dont-want-to-die-on-the-sales-floor-im-67-and-earn-19-50-an-hour-at-a-big-box-store-when-can-i-finally-retire-369abcf9?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Poupança",
-   "published": "5 Oct",
-   "title": "My wife never went back to work after raising our kids. Do I have to share my retirement savings 50/50?",
-   "summary": "&#x201c;For 14 years I have gotten up every morning and gone to work while she has been free to pursue whatever interested her.&#x201d;",
-   "url": "https://www.marketwatch.com/story/my-wife-never-went-back-to-work-after-raising-our-kids-do-i-have-to-share-my-retirement-savings-50-50-f0727f82?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Bolsa",
-   "published": "5 Oct",
-   "title": "Saudi Aramco&#x2019;s CEO may be too downbeat about the road to restocking global oil supplies",
-   "summary": "Some see record oil production and more alternative routes for delivery once the Strait of Hormuz fully opens.",
-   "url": "https://www.marketwatch.com/story/saudi-aramcos-ceo-may-be-too-downbeat-about-the-road-to-restocking-global-oil-supplies-1fdbb70b?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Bolsa",
-   "published": "5 Oct",
-   "title": "SpaceX&#x2019;s stock could actually be a bargain, according to this metric",
-   "summary": "The stock is expensive when valued solely by operating profit, but SpaceX is cheaper than Meta and Alphabet when you bring growth into the mix.",
-   "url": "https://www.marketwatch.com/story/spacexs-stock-could-actually-be-a-bargain-according-to-this-metric-ac3ddf45?mod=mw_rss_topstories"
-  },
-  {
-   "source": "BBC",
-   "category": "Tecnologia",
-   "published": "5 Oct",
-   "title": "Pentagon stops using Anthropic AI tools after blacklisting company, BBC told",
-   "summary": "It labelled Anthropic a \"supply chain risk\" in February after the firm refused to remove safety guardrails from its tools.",
-   "url": "https://www.bbc.co.uk/news/articles/c5j9x9pr0240o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Mercados",
-   "published": "5 Oct",
-   "title": "Sainsbury’s and Morrisons ‘held talks this year’ on multibillion-pound merger",
-   "summary": "<p>Deal would have created a supermarket with a market share of 23.6%, still well behind Tesco’s 27.8%</p><p>Sainsbury’s held merger talks with rival Morrisons this year to discuss a multibillion-poun",
-   "url": "https://www.theguardian.com/business/2026/oct/05/sainsburys-morrisons-merger-talks"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Economia",
-   "published": "5 Oct",
-   "title": "BT’s purchase of TalkTalk is cosy – but probably politically sensible | Nils Pratley",
-   "summary": "<p>For all the howls of a ‘stitch-up’, it’s hard to see what ministers were supposed to do, as the alternatives risked worse outcomes</p><ul><li><p><a href=\"https://www.theguardian.com/business/2026/o",
-   "url": "https://www.theguardian.com/business/nils-pratley-on-finance/2026/oct/05/bt-purchase-talktalk-politically-sensible"
-  },
-  {
-   "source": "New York Times",
-   "category": "Banca central",
-   "published": "5 Oct",
-   "title": "High Interest Rates Aren’t Slowing the A.I. Boom. That’s a Problem for the Fed.",
-   "summary": "Rising borrowing costs are taking a toll on households and businesses. But they are doing little to dampen enthusiasm for investments in A.I. infrastructure, which are contributing to inflation.",
-   "url": "https://www.nytimes.com/2026/10/05/business/ai-boom-interest-rates-fed.html"
-  },
-  {
-   "source": "Fortune",
-   "category": "Mercados",
-   "published": "5 Oct",
-   "title": "U.S. shale executives have no idea when the oil market will go off a cliff",
-   "summary": "While more than half see substantial margin remaining, one-third of oil executives think the SPR is already below or nearly at tank bottoms.",
-   "url": "https://fortune.com/2026/10/05/strategic-petroleum-reserve-minimum-level-spr-tank-bottoms-crude-oil-prices/"
-  },
-  {
-   "source": "Fortune",
-   "category": "Mercados",
-   "published": "5 Oct",
-   "title": "Adam Neumann says a half-hour car ride with Masayoshi Son is when his ego took over—and WeWork’s $47 billion collapse began",
-   "summary": "The WeWork cofounder told Steven Bartlett that by the time he walked back into headquarters after SoftBank’s multibillion-dollar offer, “I forgot what we were all about.”",
-   "url": "https://fortune.com/2026/10/05/adam-neumann-car-ride-with-masayoshi-son-wework-collapse/"
-  },
-  {
-   "source": "Fortune",
-   "category": "Obrigações",
-   "published": "5 Oct",
-   "title": "How Hyperliquid defied crypto’s DAT death spiral—and built a booming digital asset treasury",
-   "summary": "In just 10 months, Hyperliquid Strategies amassed more than 35 million HYPE tokens—one of crypto’s fastest-rising assets.",
-   "url": "https://fortune.com/2026/10/05/hyperliquid-cryptos-dat-death-spiral-industrys-digital-asset-treasury/"
-  },
-  {
-   "source": "Fortune",
-   "category": "Mercados",
-   "published": "5 Oct",
-   "title": "Why ‘China plus one’ is paying off less than Southeast Asia hoped",
-   "summary": "“China plus one” sent billions of dollars of investment into Southeast Asian factories. Yet the region isn’t capturing enough value.",
-   "url": "https://fortune.com/2026/10/05/southeast-asia-china-plus-one-manufacturing/"
-  },
-  {
-   "source": "Fortune",
-   "category": "Tecnologia",
-   "published": "5 Oct",
-   "title": "While OpenAI and Anthropic battle over data privacy, more companies look to open models and ‘sovereign AI’",
-   "summary": "Reports of rogue agents and allegations of IP theft from top tech CEOs are fueling business paranoia about surrendering IP. Here are the options some are exploring to move fast without introducing sig",
-   "url": "https://fortune.com/2026/10/05/openai-and-anthropic-battle-over-zero-data-retention-zdr-data-privacy-companies-look-to-open-models-and-sovereign-ai/"
-  },
-  {
-   "source": "Fortune",
-   "category": "Poupança",
-   "published": "5 Oct",
-   "title": "Just a few years into working, Gen Z is already the most anxious generation about AI derailing their retirement—51% fear it will cut their nest egg",
-   "summary": "As AI disrupts career paths, Gen Z is already far more worried than millennials or Gen Xers about having enough money for their golden years of retirement.",
-   "url": "https://fortune.com/2026/10/05/gen-z-retirement-worries-in-age-of-ai-new-survey-tiaa-run-out-of-money-career-disruption-personal-finance-advice/"
-  },
-  {
-   "source": "Fortune",
-   "category": "Economia",
-   "published": "5 Oct",
-   "title": "Workers feared AI would kill jobs. Instead, it could boost their paychecks: 72% of employers say they’ll pay more for AI skills",
-   "summary": "72% of bosses will boost pay for recruits with AI skills, according to Robert Half—and job-seekers in Silicon Valley have the best odds of earning more.",
-   "url": "https://fortune.com/2026/10/05/workers-fear-ai-kill-jobs-instead-could-boost-paychecks-72-employers-pay-more-for-ai-skills/"
-  },
-  {
-   "source": "Investing.com",
-   "category": "Mercados",
-   "published": "5 Oct",
-   "title": "AstraZeneca to invest over $1 billion in Massachusetts, boost workforce",
-   "summary": "",
-   "url": "https://www.investing.com/news/stock-market-news/astrazeneca-opens-new-massachusetts-rd-center-as-part-of-1-billion-investment-4932601"
-  },
-  {
-   "source": "Investing.com",
-   "category": "Bolsa",
-   "published": "5 Oct",
-   "title": "Why is Whitecap Resources stock gaining today?",
-   "summary": "",
-   "url": "https://www.investing.com/news/stock-market-news/why-is-whitecap-resources-stock-gaining-today-93CH-4932627"
-  },
-  {
-   "source": "Investing.com",
-   "category": "Bolsa",
-   "published": "5 Oct",
-   "title": "US stocks rise ahead of earnings season starting Thursday",
-   "summary": "",
-   "url": "https://www.investing.com/news/stock-market-news/us-stocks-rise-ahead-of-earnings-season-starting-thursday-93CH-4932626"
-  },
-  {
-   "source": "Investing.com",
-   "category": "Mercados",
-   "published": "5 Oct",
-   "title": "CFTC proposes federal registration framework for leveraged retail crypto trades",
-   "summary": "",
-   "url": "https://www.investing.com/news/stock-market-news/cftc-proposes-federal-registration-framework-for-leveraged-retail-crypto-trades-4932623"
-  },
-  {
    "source": "Investing.com",
    "category": "Bolsa",
    "published": "5 Oct",
@@ -800,6 +200,606 @@
    "title": "Agencies publish resolution plan feedback letters for 15 banking organizations",
    "summary": "Agencies publish resolution plan feedback letters for 15 banking organizations",
    "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260929a.htm"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "Latest Oil Market News and Analysis for Oct. 6",
+   "summary": "Oil held a two-day drop, as rising Persian Gulf exports and a steep price cut by Saudi Arabia reinforced signs of a loosening market.",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-05/latest-oil-market-news-and-analysis-for-oct-6"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Obrigações",
+   "published": "5 Oct",
+   "title": "GPU Financing Filters Into ABS With Stonebriar, Wingspire Deals",
+   "summary": "The growing demand for capital to fund artificial intelligence investment is filtering into a little-watched corner of the asset-backed securities market: bonds secured by equipment loans and leases.",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-05/gpu-financing-filters-into-abs-with-stonebriar-wingspire-deals"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "Mark Walter Charity’s CLO Tie-Up Maps Intricacies of His Empire",
+   "summary": "Even at the time, it was considered an unconventional alliance: Mark Walter committing $160 million through his education-focused nonprofit to help a Chicago credit investment firm comply with Dodd-Fr",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-05/mark-walter-charity-s-clo-tie-up-maps-intricacies-of-his-empire"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "Babylist CEO on New NYC Showroom, Growth Targets",
+   "summary": "Babylist CEO Jennifer Hyman discusses the company’s new 20,000-square-foot showroom in Manhattan’s SoHo neighborhood, which opened at the end of September and is its largest retail location yet. Hyman",
+   "url": "https://www.bloomberg.com/news/videos/2026-10-05/babylist-ceo-on-new-nyc-showroom-growth-targets-video"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "Ellison's Skydance Announced Merger Details",
+   "summary": "Paramount Skydance Corp. outlined the executive leadership team that will helm the new company resulting from its acquisition of Warner Bros. Discovery Inc. David Ellison will continue to serve as chi",
+   "url": "https://www.bloomberg.com/news/videos/2026-10-05/ellison-s-skydance-announced-merger-details-video"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Inflação",
+   "published": "5 Oct",
+   "title": "S&P 500 Closes In on Record High as Tech Rallies",
+   "summary": "A rally in giant technology companies drove stocks higher in the Monday session, overshadowing concerns about still-elevated oil prices and bond yields. The S&P 500 rose to a striking distance of a re",
+   "url": "https://www.bloomberg.com/news/videos/2026-10-05/s-p-500-closes-in-on-record-high-as-tech-rallies-video"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "World’s Biggest Business Class Coming to British Airways’ A380s",
+   "summary": "British Airways will introduce what it called the world’s biggest business class on its upgraded double-decker Airbus SE A380 jets, targeting premium passengers as airlines rush to cash in on upscale ",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-05/world-s-biggest-business-class-coming-to-british-airways-a380s"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Obrigações",
+   "published": "5 Oct",
+   "title": "Could High US Bond Yields Spark A Crisis in Europe?",
+   "summary": "Bond yields are rising from the US to Japan — but the pressure is especially acute in France. How central banks could respond. (Source: Bloomberg)",
+   "url": "https://www.bloomberg.com/news/videos/2026-10-05/could-high-us-bond-yields-spark-a-crisis-in-europe-video"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "Gold Steadies as Dollar Strengthens on European Debt Risks",
+   "summary": "Gold steadied after paring earlier gains Monday, pressured by a stronger dollar as European political uncertainty boosted the greenback’s appeal and traders weighed the outlook for interest rates.",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-05/gold-edges-higher-as-markets-weigh-jobs-data-impact-on-fed-path"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "Brazil’s markets surge as investors bet on Bolsonaro win",
+   "summary": "Rightwinger seen as more likely than current president Lula to enact quick spending cuts",
+   "url": "https://www.ft.com/content/47965ed4-5c40-4c91-ab1e-418aa75bb42a?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Obrigações",
+   "published": "5 Oct",
+   "title": "Submit a question: What is driving the global bond sell-off?",
+   "summary": "Alphaville editor Robin Wigglesworth and senior markets correspondent Ian Smith will answer reader questions in a live Q&A on Thursday October 8, at 1pm",
+   "url": "https://www.ft.com/content/d51a78a8-67d8-45bd-b32c-1eafe39a0794?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "Big Oil goes to US Supreme Court over pivotal climate damages claim",
+   "summary": "ExxonMobil and Suncor Energy look to the high court to block state action",
+   "url": "https://www.ft.com/content/4d2078c4-4773-4d4c-8544-c17169362579?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Inflação",
+   "published": "5 Oct",
+   "title": "Trump poised to ease red diesel limits in attempt to quell fuel inflation",
+   "summary": "US president expected to announce move during trip to agricultural state of Nebraska",
+   "url": "https://www.ft.com/content/8a733f73-d506-49ae-9030-2bbf0987bc8d?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "TotalEnergies boss hails ‘opportunities’ created by global market turmoil",
+   "summary": "Patrick Pouyanné says he prefers ‘disruption to the peaceful world’ despite French major being among those most affected by Middle East conflict",
+   "url": "https://www.ft.com/content/ae67bb6f-f227-4679-949f-2e79e2dc33e2?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "Euro slides to 17-month low against dollar",
+   "summary": "High energy prices and concerns over France’s public finances add to pressure on the single currency",
+   "url": "https://www.ft.com/content/8b19b9f7-9237-47bf-bc50-d8b78aa7fe24?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "Yemen launches push to retake territory captured by Houthis",
+   "summary": "Saudi Arabia sends 100 fighter jets to support Yemeni push to recapture Sana’a and the Bab el-Mandab Strait",
+   "url": "https://www.ft.com/content/a48af44e-84fb-4ce9-b7ce-d1895d0a0f05?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Tecnologia",
+   "published": "5 Oct",
+   "title": "What people in AI really think about regulation",
+   "summary": "The tribalism and fragmentation we are seeing in politics may be coming for business too",
+   "url": "https://www.ft.com/content/c8cf8739-837e-4bb3-9fd9-bb54c02b7289?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Obrigações",
+   "published": "5 Oct",
+   "title": "Nasdaq Hits New Record as Bond Yields March Higher",
+   "summary": "The yield on the 10-year Treasury touched a fresh 24-year high, as a global bond rout and AI-investing boom ripple through markets in tandem.",
+   "url": "https://www.wsj.com/finance/investing/stocks-keep-climbingand-so-do-bond-yields-c91d7d75?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Fundos",
+   "published": "5 Oct",
+   "title": "KKR Strikes Deal to Buy Private-Capital Fund Administrator Gen II",
+   "summary": "Private-capital funds have proliferated in recent years as investors seek to reduce reliance on public markets.",
+   "url": "https://www.wsj.com/finance/investing/kkr-strikes-deal-to-buy-private-capital-fund-administrator-gen-ii-40b951a5?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Obrigações",
+   "published": "5 Oct",
+   "title": "Stocks Up, Yields Up",
+   "summary": "Plus, Brent crude nears $100 and a deal shakes up logistics",
+   "url": "https://www.wsj.com/finance/stocks/stocks-up-yields-up-26f7463d?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "WSJ Dollar Index Rises 0.05% to 97.31",
+   "summary": "The WSJ Dollar Index rose 0.1% &#x2014; up 13 of the past 16 trading days.",
+   "url": "https://www.wsj.com/finance/currencies/asian-currencies-consolidate-but-may-be-aided-by-reduced-fed-rate-hike-prospects-e8316bd2?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "5 Oct",
+   "title": "Oil Industry&#x2019;s Bid to Kill Climate Change Lawsuits Faces SCOTUS Skepticism",
+   "summary": "Plus, why the U.S. to abruptly pulled bombers from a U.K. base and new Trump Account rules will put individual stocks kids&#x2019; portfolios.",
+   "url": "https://www.wsj.com/politics/policy/oil-industrys-bid-to-kill-climate-change-lawsuits-faces-scotus-skepticism-a9be9855?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "5 Oct",
+   "title": "Oil Industry&#x2019;s Bid to Kill Climate Change Lawsuits Faces SCOTUS Skepticism",
+   "summary": "Plus, why the U.S. to abruptly pulled bombers from a U.K. base and new Trump Account rules will put individual stocks kids&#x2019; portfolios.",
+   "url": "https://www.wsj.com/politics/policy/oil-industrys-bid-to-kill-climate-change-lawsuits-faces-scotus-skepticism-a9be9855?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "5 Oct",
+   "title": "NYC Lawmakers Grill AI Executives and Former Employees as City Weighs Guardrails",
+   "summary": "Former Anthropic researcher Jacob Coxon repeated his warnings at a hearing Monday.",
+   "url": "https://www.wsj.com/tech/ai/nyc-lawmakers-grill-ai-executives-and-former-employees-as-city-weighs-guardrails-a87cf262?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "5 Oct",
+   "title": "Opinion | If You Want to Understand AI, Get a Dog",
+   "summary": "Ethology studies intelligence radically different from ours.",
+   "url": "https://www.wsj.com/opinion/if-you-want-to-understand-ai-get-a-dog-82ba2de1?mod=rss_Technology"
+  },
+  {
+   "source": "The Economist",
+   "category": "Obrigações",
+   "published": "5 Oct",
+   "title": "The bond market sell-off is helping the dollar",
+   "summary": "But the strength of the greenback is not as reliable as in the past",
+   "url": "https://www.economist.com/finance-and-economics/2026/10/05/the-bond-market-sell-off-is-helping-the-dollar"
+  },
+  {
+   "source": "The Economist",
+   "category": "Mercados",
+   "published": "4 Oct",
+   "title": "The world is facing an almighty LNG crunch",
+   "summary": "In time it could bring about an equally disruptive glut",
+   "url": "https://www.economist.com/finance-and-economics/2026/10/04/the-world-is-facing-an-almighty-lng-crunch"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "'We had a threat': Trump explains U.S. moving long-range bombers from UK",
+   "summary": "The U.S. Air Force B-1 bombers removed from England have been used in strikes on Iran.",
+   "url": "https://www.cnbc.com/2026/10/05/trump-bombers-uk-iran.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "House Democrat targets candidate prediction market trades after opponent’s Kalshi penalty",
+   "summary": "A new bill bans federal candidates from trading prediction market contracts related to their own elections and would result in a fine if violated.",
+   "url": "https://www.cnbc.com/2026/10/05/don-davis-prediction-market-candidate-trading.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Bolsa",
+   "published": "5 Oct",
+   "title": "SpaceX stock climbs to highest since June, returning Musk to trillionaire status",
+   "summary": "SpaceX shares have bounced almost 60% off their low in early August, boosted by the company's AI business and Starship progress.",
+   "url": "https://www.cnbc.com/2026/10/05/spacex-stock-climbs-highest-since-june-returning-musk-to-trillionaire.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "Lucid's Q3 deliveries fall 6.7% as EV maker cuts production to align with demand",
+   "summary": "Lucid delivered 3,806 EVs and produced 2,954 vehicles during the third quarter. That compared with 4,078 deliveries on production of 3,891 vehicles a year earlier.",
+   "url": "https://www.cnbc.com/2026/10/05/lucid-group-lcid-q3-2026-deliveries-production.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "GM says hybrid vehicles are coming: 'We're not tone deaf to our customers'",
+   "summary": "Hybrids are growing in popularity, as sales of the vehicles keep climbing.",
+   "url": "https://www.cnbc.com/2026/10/05/gm-hybrid-vehicles.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "Fairshake crypto PAC network backs 32 House candidates in midterms",
+   "summary": "The CLARITY Act failed in the Senate, raising the stakes for which lawmakers return to Congress to shape crypto regulation after the midterm elections.",
+   "url": "https://www.cnbc.com/2026/10/05/fairshake-crypto-super-pac-house-races.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "4 Oct",
+   "title": "Sports betting is increasingly the norm for Gen Z. Here’s why some financial and mental health experts are worried",
+   "summary": "Surveys show Gen Z increasingly views sports bets as a form of investment, and those who gamble too often face mental health risks.",
+   "url": "https://www.cnbc.com/2026/10/04/gen-z-sports-betting-financial-and-mental-health-risks.html"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Bolsa",
+   "published": "5 Oct",
+   "title": "The case for Nvidia&#x2019;s stock to march even higher after clinching its first record high in months",
+   "summary": "Analysts highlight the stock&#x2019;s cheap valuation and the chip maker&#x2019;s central role in the AI ecosystem.",
+   "url": "https://www.marketwatch.com/story/the-case-for-nvidias-stock-to-march-even-higher-after-clinching-its-first-record-high-in-months-2bb5a937?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Tecnologia",
+   "published": "5 Oct",
+   "title": "This new AI model could help America close a technological gap with China",
+   "summary": "Nvidia-backed Reflection AI announced Beam, a new ultra-efficient open model that boasts capabilities on par with those of Chinese ones",
+   "url": "https://www.marketwatch.com/story/this-new-ai-model-could-help-america-close-a-technological-gap-with-china-c1d74492?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Bolsa",
+   "published": "5 Oct",
+   "title": "Western Digital and Seagate shares bounce back as analysts downplay the Toshiba threat",
+   "summary": "Even if Toshiba doubles its capacity, analysts say it has a ways to go to catch up with Western Digital and Seagate",
+   "url": "https://www.marketwatch.com/story/western-digital-and-seagate-shares-bounce-back-as-analysts-downplay-the-toshiba-threat-4979dbff?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Bolsa",
+   "published": "5 Oct",
+   "title": "This rare stock-market divide means an elevated chance of a big surge &#x2014; or a deep plunge",
+   "summary": "There&#x2019;s a huge and rare divergence between the two-month returns of the Nasdaq and Dow Jones Industrial Average.",
+   "url": "https://www.marketwatch.com/story/this-rare-stock-market-divide-means-an-elevated-chance-of-a-big-surge-or-a-deep-plunge-cf2cb4e5?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "Trump is promising $90 Medicare rebate checks ahead of the midterms. Here&#x2019;s the hidden cost.",
+   "summary": "The president is betting that he can make seniors forget rising healthcare costs",
+   "url": "https://www.marketwatch.com/story/trump-is-promising-90-medicare-rebate-checks-ahead-of-the-midterms-heres-the-hidden-cost-14b7e2ce?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Bolsa",
+   "published": "5 Oct",
+   "title": "Intel&#x2019;s stock drops after Musk hints at an additional partner for big chip venture",
+   "summary": "Intel may not be the only semiconductor company tapped to help with chip manufacturing for the Terafab project, as Elon Musk said discussions with TSMC are ongoing.",
+   "url": "https://www.marketwatch.com/story/musk-hints-tsmc-may-join-his-mega-chip-venture-and-intels-stock-is-taking-a-hit-61c67ef9?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Obrigações",
+   "published": "5 Oct",
+   "title": "Investors see big opportunity in ferocious 2026 bond-market rout",
+   "summary": "The bond market rout of 2026 may be jolting markets, but it&#x2019;s also gaining a important following among savers and the risk averse.",
+   "url": "https://www.marketwatch.com/story/investors-see-big-opportunity-in-ferocious-2026-bond-market-rout-e5cc94f3?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "&#x2018;The pain was excruciating&#x2019;: A friend in her 80s fell down her basement stairs. Could it have been avoided?",
+   "summary": "&#x201c;She developed pleural effusion &#x2014; fluid between the lungs and ribs &#x2014; compressing her lungs and making it hard for her to breathe.&#x201d;",
+   "url": "https://www.marketwatch.com/story/the-pain-was-excruciating-a-friend-in-her-80s-fell-down-her-basement-stairs-could-it-have-been-avoided-ce105db6?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "Go ahead and get that poetry degree. Republican law won&#x2019;t prevent people with humanities majors from getting student loans.",
+   "summary": "The vast majority of bachelor&#x2019;s and graduate degree programs pass new rules meant to hold colleges accountable",
+   "url": "https://www.marketwatch.com/story/go-ahead-and-get-that-poetry-degree-republican-law-wont-prevent-people-with-humanities-majors-from-getting-student-loans-f94587cf?mod=mw_rss_topstories"
+  },
+  {
+   "source": "BBC",
+   "category": "Habitação",
+   "published": "5 Oct",
+   "title": "Average five-year mortgage rate hits 6% for first time in three years",
+   "summary": "The cost of a new fixed-rate mortgage has been rising in recent weeks as lenders face higher costs.",
+   "url": "https://www.bbc.co.uk/news/articles/c8r4yxpry5e9o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Economia",
+   "published": "5 Oct",
+   "title": "The job interview question you don't have to answer",
+   "summary": "Experts explain what you should do if you are asked for your current salary during a job interview.",
+   "url": "https://www.bbc.co.uk/news/articles/cje3r35p0qeno?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Economia",
+   "published": "5 Oct",
+   "title": "Shadow chancellor vows to cut at least one tax in every Tory budget",
+   "summary": "Shadow ministers unveiled a series of policies on day two of the Conservative Party conference in Birmingham.",
+   "url": "https://www.bbc.co.uk/news/articles/cqj9kje82jm1o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Tecnologia",
+   "published": "5 Oct",
+   "title": "Trump chooses top spy boss to run new AI taskforce",
+   "summary": "The US president said his national intelligence chief will lead the group as worries over AI grow.",
+   "url": "https://www.bbc.co.uk/news/articles/cqj6jenp26zyo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Economia",
+   "published": "5 Oct",
+   "title": "How much is your salary?",
+   "summary": "And would you reveal it in a job interview?",
+   "url": "https://www.bbc.co.uk/news/videos/cr4glg9p4188o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Economia",
+   "published": "5 Oct",
+   "title": "BT to buy broadband supplier TalkTalk in £400m rescue deal, saving 900 jobs",
+   "summary": "<p>Virgin Media O2 complains of ‘stitch-up’ over rival provider, which has 1.5m customers</p><ul><li><p><a href=\"https://www.theguardian.com/business/nils-pratley-on-finance/2026/oct/05/bt-purchase-ta",
+   "url": "https://www.theguardian.com/business/2026/oct/05/bt-buy-broadband-supplier-talktalk-jobs"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "Euro falls to 17-month low against dollar amid French debt fears",
+   "summary": "<p>France’s Cac 40 index slides as announcement of snap election in Spain also helps fuel eurozone uncertainty</p><ul><li><p><a href=\"https://www.theguardian.com/business/live/2026/oct/05/bt-strikes-d",
+   "url": "https://www.theguardian.com/business/2026/oct/05/euro-falls-dollar-amid-french-debt-cac-40-spain-eurozone"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Habitação",
+   "published": "5 Oct",
+   "title": "Average five-year fixed mortgage rate hits 6% for first time in three years",
+   "summary": "<p>Banks and building societies raise prices as turmoil in bond markets increases expectations of base rate rise</p><p>The average cost of a five-year fixed-rate mortgage has hit the 6% barrier for th",
+   "url": "https://www.theguardian.com/money/2026/oct/05/five-year-fixed-mortgage-rate-banks-building-societies"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Fundos",
+   "published": "5 Oct",
+   "title": "Conservative plans to slash aid budget would ‘irreparably damage’ UK’s global credibility, charities say",
+   "summary": "<p>Party’s pledge to reduce aid budget from £9bn a year to £1bn to fund new prison places branded as ‘posturing’</p><p>Conservative plans to slash the aid budget by 90% would leave the UK unable to co",
+   "url": "https://www.theguardian.com/global-development/2026/oct/05/conservative-plans-to-slash-aid-budget-by-90-to-irreparably-damage-uks-global-credibility-charities-say"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Tecnologia",
+   "published": "5 Oct",
+   "title": "Accept ‘bad things’ in return for benefits of AI, says Sam Altman",
+   "summary": "<p>Boss of OpenAI calls for a regulatory light touch because of the ‘good stuff’ the technology can deliver</p><p>Sam Altman says he believes the world should accept “bad things” happening with AI in ",
+   "url": "https://www.theguardian.com/technology/2026/oct/05/sam-altman-open-ai-chatgpt-benefits-risks"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Economia",
+   "published": "5 Oct",
+   "title": "UK reviewing whether to impose tariffs on Chinese car imports to align with EU",
+   "summary": "<p>Move would strengthen Britain’s case to be included in new legislation to protect European manufacturing</p><ul><li><p><a href=\"https://www.theguardian.com/business/live/2026/oct/05/bt-strikes-deal",
+   "url": "https://www.theguardian.com/business/2026/oct/05/uk-tariffs-chinese-car-imports-eu-manufacturing"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Inflação",
+   "published": "5 Oct",
+   "title": "Iran’s oil minister resigns as country’s economic crisis worsens",
+   "summary": "<p>Departure comes amid large drop in oil receipts, rampant inflation and shrinking economy</p><p>Iran’s oil minister has resigned days after allegations that an intermediary trust selling Iranian oil",
+   "url": "https://www.theguardian.com/world/2026/oct/05/iran-oil-minister-resigns-economic-crisis"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "The Guardian view on Tory economics: Britain’s future needs more than Thatcher’s past | Editorial",
+   "summary": "<p>The Conservatives blame their failures on abandoning their 1976 principles. But the country needs investment and resilience rather than another round of spending cuts</p><p>The Conservative party w",
+   "url": "https://www.theguardian.com/commentisfree/2026/oct/05/the-guardian-view-on-tory-economics-britains-future-needs-more-than-thatchers-past"
+  },
+  {
+   "source": "New York Times",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "Burst of Attacks in Gulf Heightens Fears Over Fragile Energy Trade",
+   "summary": "Strikes on tankers in the Strait of Hormuz and oil infrastructure in Saudi Arabia came as the region’s exporters were getting more oil to the world market.",
+   "url": "https://www.nytimes.com/2026/10/05/business/hormuz-saudi-iran-houthis.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "Supreme Court Tangles Over a Major Climate Change Case",
+   "summary": "The justices began their new term with a landmark dispute over whether local governments can hold oil companies liable for damages from climate change.",
+   "url": "https://www.nytimes.com/2026/10/05/us/politics/supreme-court-climate-change-oil.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Obrigações",
+   "published": "4 Oct",
+   "title": "Rebuked by Bond Market, Bessent Says ‘House’ Does Not Always Win",
+   "summary": "The Treasury secretary said in an interview with Axios that he cannot control the Treasury market but argued that U.S. bond yields would come back down over time.",
+   "url": "https://www.nytimes.com/2026/10/04/business/bond-market-scott-bessent.html"
+  },
+  {
+   "source": "Fortune",
+   "category": "Tecnologia",
+   "published": "5 Oct",
+   "title": "It’s ‘more likely than not’ humanity loses control: Former AI insiders testify safety fixes may be ‘duct tape that will fall off later’",
+   "summary": "Former insiders warned the New York City Council about losing control of AI, while OpenAI, Anthropic, Meta, and Google couldn’t say how big the risk is.",
+   "url": "https://fortune.com/2026/10/05/new-york-city-council-hearing-openai-anthropic-ai-safety-google-meta/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Fundos",
+   "published": "5 Oct",
+   "title": "Texas businessman gets 13 years in federal prison as feds seize his Lamborghinis, Ferraris, Firebird and dozens more cars to pay back fraud victims",
+   "summary": "Clayton Iley pitched a fake Defense Department loan program and used victims' identities to fund 90-plus collector vehicles, prosecutors say.",
+   "url": "https://fortune.com/2026/10/05/texas-businessman-car-fraud-wire-doj-lawsuit/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "Nvidia-backed Reflection AI unveils its first open model, Beam. Could it be America’s best chance to compete with China?",
+   "summary": "The New York–based company already has deals with U.S. government agencies and billion-dollar compute agreements.",
+   "url": "https://fortune.com/2026/10/05/reflection-ai-unveils-beam-a-new-us-based-open-source-model-to-compete-with-china/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Economia",
+   "published": "5 Oct",
+   "title": "How Christina Zhu turned Sam’s Club into Walmart’s unlikely growth engine in China",
+   "summary": "Walmart China’s first native Chinese CEO is leaning on Sam’s Club, smaller portion sizes, and an ultrafast delivery network to drive growth in a strained consumer economy.",
+   "url": "https://fortune.com/2026/10/05/walmart-china-sams-club-growth-christina-zhu-consumer-slump-fast-delivery/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Inflação",
+   "published": "5 Oct",
+   "title": "MAGAnomics is starting to look uncomfortably like Bidenomics",
+   "summary": "Trump once called Biden-era inflation a “country-buster” and a “colossal tax on American families.” Now the shoe is on the other foot.",
+   "url": "https://fortune.com/2026/10/05/maganomics-is-starting-to-look-uncomfortably-like-bidenomics/"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "5 Oct",
+   "title": "Data centre operator DayOne reveals revenue surge in US IPO filing",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/dayone-data-centers-files-for-us-ipo-4932909"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "5 Oct",
+   "title": "Why is Spyre Therapeutics stock sliding today?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/why-is-spyre-therapeutics-stock-sliding-today-93CH-4932986"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "5 Oct",
+   "title": "Why is Freshworks stock rallying today?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/why-is-freshworks-stock-rallying-today-93CH-4932985"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "5 Oct",
+   "title": "Why is Vaxcyte stock sliding in after-hours trading today?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/why-is-vaxcyte-stock-sliding-in-afterhours-trading-today-93CH-4932984"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "5 Oct",
+   "title": "Why is NeoGenomics stock sliding today?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/why-is-neogenomics-stock-sliding-today-93CH-4932983"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "5 Oct",
+   "title": "Why is Option Care Health stock surging today?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/why-is-option-care-health-stock-surging-today-93CH-4932982"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "L’Oreal explores unloading chemical-related liabilities, WSJ reports",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/loreal-taps-advisers-to-explore-unloading-chemicalrelated-liabilities-wsj-reports-4932948"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "5 Oct",
+   "title": "DayOne Data Centers files for Nasdaq IPO under ticker DODC",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/dayone-data-centers-files-for-nasdaq-ipo-under-ticker-dodc-432SI-4932973"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "5 Oct",
+   "title": "US Supreme Court won’t hear Zillow’s bid to escape investor class action",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/us-supreme-court-wont-hear-zillows-bid-to-escape-investor-class-action-4932371"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Inflação",
+   "published": "5 Oct",
+   "title": "Mexico stocks higher at close of trade; S&P/BMV IPC up 0.69%",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/mexico-stocks-higher-at-close-of-trade-spbmv-ipc-up-069-4932976"
+  },
+  {
+   "source": "Seeking Alpha",
+   "category": "Obrigações",
+   "published": "5 Oct",
+   "title": "Gold little changed as fading likelihood of U.S. rate hike offset by rising dollar and yields",
+   "summary": "",
+   "url": "https://seekingalpha.com/news/4650374-gold-little-changed-as-fading-likelihood-of-us-rate-hike-offset-by-rising-dollar-and-yields?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news"
   }
  ],
  "sources": [
@@ -821,5 +821,5 @@
  "editions": [
   "afternoon"
  ],
- "collectedAt": "2026-10-05T17:18:38.546Z"
+ "collectedAt": "2026-10-05T22:12:27.277Z"
 }
