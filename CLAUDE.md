@@ -22,11 +22,12 @@ Financial-literacy site (Nova SBE project, "Boosting productivity with AI"). Pub
 - Type: Manrope 800 for headings and UI, Instrument Serif italic for accents (the "Mint" in the logo, the second line of titles, footer headings).
 - Logo: lettering only, "Paper" in Manrope 800 + "Mint" in Instrument Serif italic (mint). No symbol.
 - Markets opens like a newspaper front page: giant "PaperMint" masthead, a dateline between rules (date · stories · sources · "Educational, never advice"), then the Brief's one-liner with a mint highlighter sweeping over its key phrase (`hlLead`) and a side column with the number of the day, the biggest move and the CTAs.
-- Stacked pages (`STACK`): each section below the opening is a sheet; on scroll the next sheet slides up over the previous one, which settles back slightly. Long sheets stick by their bottom edge so they are read to the end first. Off with reduced motion.
+- Chrome ribbons (`RIBBONS`, raw WebGL, no library): the common thread of every page, inspired by cyphercapital.com. Liquid-metal strands with a mint/iridescent sheen sweep sharp across the band under the masthead (`.mband`); on scroll they drift up, soften into blurred light (drawn at lower resolution) and twist into a slow swirl behind the sections. Other tabs start soft. Wave strength follows the day's mood. ~30 fps; still frame with reduced motion; nothing without WebGL.
+- Open sections, no cards: a hairline that draws itself from the left (`LINES`), a big title, lists. The Brief is a list: headline left, explanation right.
 - Other tabs open with a section head in the same voice (`.hero2.paperhead`): big two-line title, rule underneath.
 - Menu bar solid white; dark news ticker under it.
 - No small numbered/all-caps eyebrow labels; labels in sentence case.
-- Rejected before (don't bring back): dark/black themes, 3D globes and wireframe planets, film grain and RGB-split effects, particle fields and particle wordmarks, glossy balls, coral wave, bubbles, light font weight, WebGL cube wall, orbiting gradient squares, HUD corner marks, graph-paper grids, numbered eyebrows, decorative wavy lines, connecting rails, side chapter index, reading-progress line under the menu, logo symbols, liquid-glass/rippling lettering, banknote guilloché and paper-stack heroes.
+- Rejected before (don't bring back): dark/black themes, 3D globes and wireframe planets, film grain and RGB-split effects, particle fields and particle wordmarks, glossy balls, coral wave, bubbles, light font weight, WebGL cube wall, orbiting gradient squares, HUD corner marks, graph-paper grids, numbered eyebrows, decorative wavy lines, connecting rails, side chapter index, reading-progress line under the menu, logo symbols, liquid-glass/rippling lettering, stacked-card pages, banknote guilloché and paper-stack heroes.
 
 ## Talk to Ana
 Portuguese (pt-PT), concise, action first.

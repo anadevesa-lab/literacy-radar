@@ -827,19 +827,48 @@ header.top,body.solid header.top{background:#FFFFFF!important;border-bottom:1px 
   .fcta .in{padding:40px 24px!important}
 }
 @media (prefers-reduced-motion:reduce){.mlead mark{animation:none;background-size:100% 100%} #preload .pwm{animation:none}}
-/* stacked pages: sections are sheets that slide over one another */
-.sheet{position:sticky;top:var(--top,120px);background:#FFFFFF!important;border-radius:24px!important;transform-origin:50% 0;
-  transform:scale(calc(1 - var(--k,0) * .05));filter:brightness(calc(1 - var(--k,0) * .04));
-  box-shadow:0 -22px 44px -30px rgba(0,60,59,.3),0 0 0 1px var(--line);will-change:transform}
-.pillgrid.sheet{padding:28px 32px}
-.panel.brief.sheet{padding:32px}
-@media (max-width:760px){.pillgrid.sheet,.panel.brief.sheet{padding:20px}}
 @media (max-width:760px){
   .hero2.bleed{min-height:0}
   .hero2.bleed .in{padding:calc(var(--hh) + 40px) var(--s4) 56px!important}
   .hglobe{width:115vw;right:-45%;top:auto;bottom:-25%;transform:none;opacity:.45}
 }
 @media (prefers-reduced-motion:reduce){.hero2.bleed::before,#preload .pwm{animation:none}}
+
+/* ===================== PaperMint v9: chrome ribbons + open sections =====================
+   One fixed WebGL layer behind every page (RIBBONS). Sections are open, no cards: a hairline that draws itself, a big title, lists. */
+.ribbons{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;display:block;
+  filter:blur(calc(var(--b,0) * 8px));opacity:calc(1 - var(--b,0) * .42)}
+.ribbons.still{position:absolute;height:100vh}
+main.wrap,footer.foot{position:relative;z-index:1}
+footer.foot{background:#FFFFFF}
+.mband{height:clamp(200px,40vh,420px);margin-block:-8px 0}
+.mast .dateline{margin-top:0;background:rgba(255,255,255,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+/* open sections: a rule, a big title */
+section.cy{position:relative;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:40px 0 0!important}
+section.cy::before,.brief .story.cy::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:var(--ink);opacity:.18;transform-origin:0 50%;transform:scaleX(0);transition:transform 1.2s cubic-bezier(.6,0,.2,1)}
+section.cy.on::before,.brief .story.cy.on::before{transform:scaleX(1)}
+.pillgrid .sechead h2,.brief > .row h2{font-size:clamp(2.6rem,6.4vw,5.5rem)!important;font-weight:800;letter-spacing:-.055em;line-height:.95;color:var(--ink)}
+.brief > .row{align-items:flex-end!important;padding-bottom:16px}
+/* the Brief: a list, not cards */
+.brief .stories{display:flex!important;flex-direction:column;gap:0!important}
+.brief .story{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:14px 64px;align-items:start;
+  background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:40px 0!important}
+.brief .story::before{display:block!important}
+.brief .story > .meta{grid-column:1;grid-row:1}
+.brief .story > h3{grid-column:1;grid-row:2 / span 4;margin:0;font-size:clamp(1.6rem,2.7vw,2.5rem);font-weight:800;letter-spacing:-.04em;line-height:1.06;color:var(--ink);text-wrap:balance}
+.brief .story > .q,.brief .story > .acts{grid-column:2}
+.brief .story .q p{color:var(--muted)}
+.brief .story .q.care{background:none!important;border-radius:0;padding:2px 0 2px 16px!important;border-left:2px solid var(--mint)}
+.brief .story .meta span{display:inline-flex;align-items:center;background:var(--ink);color:#FFFFFF;font-size:12px;font-weight:600;padding:3px 8px;border-radius:4px}
+.brief .story .q,.brief .story .acts,.brief .story > h3,.brief .story > .meta{transition:opacity .7s ease .15s,transform .7s cubic-bezier(.2,.7,.2,1) .15s}
+.brief .story.cy:not(.on) > *{opacity:0;transform:translateY(16px)}
+.fcta .in{background:rgba(244,250,248,.85)!important;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+@media (max-width:760px){
+  .mband{height:30vh}
+  .brief .story{grid-template-columns:minmax(0,1fr);gap:12px}
+  .brief .story > .meta,.brief .story > h3,.brief .story > .q,.brief .story > .acts{grid-column:1;grid-row:auto}
+}
+@media (prefers-reduced-motion:reduce){section.cy::before,.brief .story.cy::before{transition:none;transform:none} .brief .story.cy > *{opacity:1!important;transform:none!important;transition:none}}
 
 /* scroll storytelling: a few scrubbed moments (--sp goes 0→1 as the element crosses the viewport; without JS or with reduced motion it stays at the final state) */
 .hero2 .in{transform:translate3d(0,calc(var(--p,0) * -60px),0);opacity:clamp(0,1.35 - var(--p,0) * 1.4,1)}
@@ -1183,6 +1212,7 @@ function vMarkets(){
   const lead=hlLead(one||"What today's news means for your money, in plain English.");
   let h = `<section class="mast" aria-label="Today's front page">
     <h1 class="mastword" data-split="1" aria-label="PaperMint"><span aria-hidden="true">Paper</span><em aria-hidden="true">Mint</em></h1>
+    <div class="mband" aria-hidden="true"></div>
     <div class="dateline"><span>${esc(new Date().toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long",year:"numeric"}))}</span><span>${day?`${nS} stories · ${nSrc} sources`:"Collecting today's stories"}</span><span>Educational, never advice</span></div>
     <div class="mcols"><p class="mlead">${lead}</p>
       <div class="mside">${gNum?`<span><b>Number of the day:</b> ${esc(gNum)}${gCap?` · ${esc(gCap)}`:""}</span>`:""}
@@ -1719,85 +1749,6 @@ ${R.msg.slice(0,4000)}
 }
 
 /* ---------- Motion layer (ticker, reveal, count-up, tab indicator) ---------- */
-/* Living ribbons: translucent sheets of fine strands that twist slowly, drawn with additive light
-   in the palette's teals and blues. Canvas 2D, ~30 fps, pauses off-screen, still frame for reduced motion. */
-/* Cube wall on white: a diagonal field of soft-lit cubes rippling in depth, inspired by calm institutional sites,
-   with depth (far ones smaller and paler) and soft contact shadows. Canvas 2D at full device
-   resolution, so edges stay crisp. ~30 fps, pauses off-screen, still frame for reduced motion. */
-const RIBBONS=(()=>{
-  const T0=performance.now(); let live=[], raf=0, io=null, last=0, mx=0, my=0, tx=0, ty=0;
-  const PAL=["#1F7F7C","#3AA89C","#5BC8B6","#1F6B68","#0F5854","#E6F7F4","#5BC8B6","#3AA89C"];
-  const hex=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16));
-  const mix=(a,b,k)=>a.map((v,i)=>Math.round(v+(b[i]-v)*k));
-  const css=c=>`rgb(${c[0]},${c[1]},${c[2]})`;
-  addEventListener("pointermove",e=>{ tx=e.clientX/innerWidth-.5; ty=e.clientY/innerHeight-.5; },{passive:true});
-  // Cube wall: a diagonal field of soft-lit cubes that ripple in depth, drawn with WebGL (depth buffer,
-  // device resolution, antialiasing). It is a full-bleed backdrop, so it runs off the edges on purpose.
-  function make(cv){
-    const gl=cv.getContext("webgl",{antialias:true,alpha:true,premultipliedAlpha:true}); if(!gl) return null;
-    const sd=+cv.dataset.seed||1; let q=sd*9301+49297; const R=()=>{ q=(q*9301+49297)%233280; return q/233280; };
-    const COLS=26, ROWS=14, cubes=[];
-    for(let i=0;i<COLS;i++) for(let j=0;j<ROWS;j++){ const u=i-(COLS-1)/2, v=j-(ROWS-1)/2;
-      // keep a diagonal band, ragged at the edges, like a wall breaking up
-      const band=Math.abs(v*1.0-u*.18); if(band>3.6+R()*1.4) continue;
-      cubes.push({u,v,ph:R()*6.283,amp:.25+R()*.55,lift:R()<.12?.6+R()*.8:0,tone:.965+R()*.035}); }
-    const HALF=.47;
-    const VS=`attribute vec3 p;attribute vec3 n;attribute vec2 uv;uniform vec3 off;uniform mat3 Rm;uniform vec4 P;uniform float D;varying vec3 vn;varying vec2 vuv;varying float vx;
-      void main(){vec3 w=Rm*(p*${HALF.toFixed(2)}+off);float ww=(D-w.z)/D;vn=Rm*n;vuv=uv;
-      vec4 c=vec4(P.x*ww+w.x*P.z, P.y*ww+w.y*P.w, (-w.z/60.)*ww, ww);vx=c.x/c.w;gl_Position=c;}`;
-    const FS=`precision highp float;varying vec3 vn;varying vec2 vuv;varying float vx;uniform float tone;
-      void main(){vec3 N=normalize(vn);vec3 L=normalize(vec3(-.35,.45,.82));float lam=max(dot(N,L),0.);
-      float e=max(abs(vuv.x),abs(vuv.y));float edge=smoothstep(.9,1.,e);
-      float sh=(.84+.17*lam)*tone-edge*.035;
-      vec3 cool=vec3(.86,.965,.94), warm=vec3(1.,1.,1.);
-      vec3 base=mix(warm,cool,smoothstep(-.2,1.,vx));
-      gl_FragColor=vec4(base*sh,1.);}`;
-    const shd=(t,src)=>{ const o=gl.createShader(t); gl.shaderSource(o,src); gl.compileShader(o); if(!gl.getShaderParameter(o,gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(o)); return o; };
-    const prog=gl.createProgram(); gl.attachShader(prog,shd(gl.VERTEX_SHADER,VS)); gl.attachShader(prog,shd(gl.FRAGMENT_SHADER,FS)); gl.linkProgram(prog);
-    if(!gl.getProgramParameter(prog,gl.LINK_STATUS)) return null; gl.useProgram(prog);
-    const pos=[],nor=[],uvs=[];
-    const FACES=[[[1,0,0],[0,0,-1],[0,1,0]],[[-1,0,0],[0,0,1],[0,1,0]],[[0,1,0],[1,0,0],[0,0,-1]],[[0,-1,0],[1,0,0],[0,0,1]],[[0,0,1],[1,0,0],[0,1,0]],[[0,0,-1],[-1,0,0],[0,1,0]]];
-    for(const [n,u,v] of FACES) for(const [a,b] of [[-1,-1],[1,-1],[1,1],[-1,-1],[1,1],[-1,1]]){ pos.push(...[0,1,2].map(i=>n[i]+u[i]*a+v[i]*b)); nor.push(...n); uvs.push(a,b); }
-    const buf=(data,loc,size)=>{ const bo=gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,bo); gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(data),gl.STATIC_DRAW); const l=gl.getAttribLocation(prog,loc); gl.enableVertexAttribArray(l); gl.vertexAttribPointer(l,size,gl.FLOAT,false,0,0); };
-    buf(pos,"p",3); buf(nor,"n",3); buf(uvs,"uv",2);
-    const U={}; ["off","Rm","P","D","tone"].forEach(k=>U[k]=gl.getUniformLocation(prog,k));
-    gl.enable(gl.DEPTH_TEST); gl.enable(gl.CULL_FACE);
-    const Dd=26;
-    function frame(t){
-      const mob=innerWidth<760, dpr=Math.min(2.5,devicePixelRatio||1);
-      const W=Math.round(cv.clientWidth*dpr), H=Math.round(cv.clientHeight*dpr); if(!W||!H) return;
-      if(cv.width!==W||cv.height!==H){ cv.width=W; cv.height=H; }
-      gl.viewport(0,0,W,H); gl.clearColor(0,0,0,0); gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
-      mx+=(tx-mx)*.05; my+=(ty-my)*.05;
-      const CX=(mob?.62:.72)*W, CY=(mob?.66:.5)*H, Upx=(mob?.07:.046)*Math.max(W*.62,H);
-      // wall plane turned towards the viewer, then rolled onto a diagonal
-      const ry=-.62+mx*.12, rx=.42+my*.08, rz=.62;
-      const cy=Math.cos(ry), sy=Math.sin(ry), cx=Math.cos(rx), sx=Math.sin(rx), cz=Math.cos(rz), sz=Math.sin(rz);
-      // R = Rz * Rx * Ry  (column-major)
-      const Ry=[cy,0,-sy, 0,1,0, sy,0,cy], Rx=[1,0,0, 0,cx,sx, 0,-sx,cx], Rz=[cz,sz,0, -sz,cz,0, 0,0,1];
-      const mul=(A,B)=>{ const o=new Array(9); for(let c=0;c<3;c++) for(let r=0;r<3;r++){ let s=0; for(let k=0;k<3;k++) s+=A[k*3+r]*B[c*3+k]; o[c*3+r]=s; } return o; };
-      gl.uniformMatrix3fv(U.Rm,false,mul(Rz,mul(Rx,Ry))); gl.uniform1f(U.D,Dd);
-      gl.uniform4f(U.P, CX/W*2-1, 1-CY/H*2, Upx/W*2, Upx/H*2);
-      for(const b of cubes){
-        const z=b.amp*Math.sin(t*.5+b.u*.35+b.v*.22+b.ph*.35)+b.lift*(.5-.5*Math.cos(t*.4+b.ph));
-        gl.uniform3f(U.off, b.u*1.0, b.v*1.0, z); gl.uniform1f(U.tone,b.tone); gl.drawArrays(gl.TRIANGLES,0,36); }
-    }
-    return {frame};
-  }
-  const RMq=()=>matchMedia("(prefers-reduced-motion: reduce)").matches;
-  function loop(now){ raf=0; if(now-last>=32){ last=now; const t=(now-T0)/1000; live.forEach(s=>{ if(s.vis&&s.el.isConnected) s.r.frame(t); }); }
-    if(!RMq()&&!document.hidden&&live.some(s=>s.vis&&s.el.isConnected)) raf=requestAnimationFrame(loop); }
-  const kick=()=>{ if(!raf&&!RMq()) raf=requestAnimationFrame(loop); };
-  function mount(root){
-    live=live.filter(s=>s.el.isConnected);
-    io?.disconnect(); io=new IntersectionObserver(es=>{ es.forEach(e=>{ const s=live.find(x=>x.el===e.target); if(s) s.vis=e.isIntersecting; }); kick(); });
-    root.querySelectorAll("canvas.rib").forEach(el=>{ let s=live.find(x=>x.el===el); if(!s){ let r=null; try{ r=make(el); }catch(e){} if(!r) return; s={el,r,vis:true}; live.push(s); } io.observe(el); s.r.frame((performance.now()-T0)/1000); });
-    kick();
-  }
-  document.addEventListener("visibilitychange",()=>{ if(!document.hidden) kick(); });
-  addEventListener("resize",()=>live.forEach(s=>s.el.isConnected&&s.r.frame((performance.now()-T0)/1000)));
-  return {mount};
-})();
 let animateNext=true, tickKey="";
 const RM=()=>matchMedia("(prefers-reduced-motion: reduce)").matches;
 function renderTicker(){
@@ -1840,7 +1791,7 @@ function render(){
   if(!OWNER && (tab==="studio"||tab==="lib")){ tab="mkt"; document.querySelectorAll(".tab[data-tab]").forEach(x=>x.classList.toggle("on",x.dataset.tab===tab)); }
   m.innerHTML = tab==="lib" ? vLib() : tab==="mkt" ? vMarkets() : tab==="ask" ? vAsk() : tab==="rot" ? vRoutine() : vStudio();
   bind(); if(tab==="mkt"||tab==="ask") bindMarkets(); if(tab==="rot") bindRoutine();
-  splitWords(m); window.RADAR_TILES?.(); STACK.build(m); document.body.classList.remove("chap");
+  splitWords(m); window.RADAR_TILES?.(); LINES.mount(m); RIBBONS.mount(m,worldModel().mood);
   m.querySelectorAll("[data-jump]").forEach(b=>b.onclick=()=>{ if(b.dataset.go&&mk.sub!==b.dataset.go){ mk.sub=b.dataset.go; render(); } document.querySelector(b.dataset.jump)?.scrollIntoView({behavior:RM()?"auto":"smooth",block:"start"}); });
   renderTicker(); motion(m); window.RADAR_BAR?.(); scrollFX(document); SCRUB.mount(document);
 }
@@ -1893,23 +1844,129 @@ const SCRUB=(()=>{ const vis=new Set(), gone=new Set(); let raf=0;
     add(".pslides,.slides","1,0.5,0",el=>[...el.children].forEach((c,i)=>c.style.setProperty("--i",i))); } };  // Studio: slides are dealt like cards
 })();
 
-/* stacked pages: each section of a page is a sheet. Scrolling slides the next sheet up over the previous one, which settles back
-   slightly. Long sheets are read to their end before the next arrives (they stick by their bottom edge). Off with reduced motion. */
-const STACK=(()=>{
-  let sheets=[], raf=0; const ro=new ResizeObserver(()=>{ size(); update(); });
+/* chrome ribbons: the common thread of every page. A few liquid-metal strands (raw WebGL, no library) with a mint/iridescent sheen.
+   On Markets they sweep sharp across the band under the masthead; as you scroll they drift up, soften into blurred light and
+   twist into a slow swirl behind the sections. Other tabs start in the soft state. How hard they wave follows the day's mood.
+   Reduced motion: one still frame, no blur or swirl. No WebGL: nothing is drawn and the page is simply white. */
+const RIBBONS=(()=>{
+  const G={cv:null,gl:null,prog:null,u:{},n:0,buf:null,raf:0,t0:performance.now(),last:0,mx:0,my:0,tx:0,ty:0,amp:1,band:null,soft:false,W:0,H:0,hw:0,hh:0,sy:0,lite:false};
   const RMq=()=>matchMedia("(prefers-reduced-motion: reduce)").matches;
-  function size(){ const hh=parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--hh"))||110, vh=innerHeight;
-    sheets.forEach(el=>el.style.setProperty("--top",Math.min(hh+16,vh-el.offsetHeight-16)+"px")); }
-  function update(){ raf=0; const vh=innerHeight;
-    sheets.forEach((el,i)=>{ const nx=sheets[i+1]; const k=nx?Math.max(0,Math.min(1,(vh-nx.getBoundingClientRect().top)/(vh*.85))):0; el.style.setProperty("--k",k.toFixed(3)); }); }
-  addEventListener("scroll",()=>{ if(!raf) raf=requestAnimationFrame(update); },{passive:true});
-  addEventListener("resize",()=>{ size(); update(); });
-  return { build(m){
-    ro.disconnect(); sheets.forEach(el=>{ el.classList.remove("sheet"); el.style.removeProperty("--top"); el.style.removeProperty("--k"); }); sheets=[];
-    if(!m||RMq()) return;
-    const list=[...m.querySelectorAll(":scope > section")].filter(el=>!el.matches(".mast,.paperhead,.bleed")&&el.offsetHeight);
-    if(list.length<2) return; sheets=list; sheets.forEach(el=>{ el.classList.add("sheet"); ro.observe(el); }); size(); update(); } };
+  const VS=`attribute vec3 P;attribute vec3 N;attribute vec2 U;attribute float I;
+  uniform mat4 PM;uniform float t,S,A,TW,OY;uniform vec2 M;
+  varying vec3 vN,vV;varying vec2 vU;varying float vI;
+  vec2 rot(vec2 v,float a){float c=cos(a),s=sin(a);return vec2(c*v.x-s*v.y,s*v.x+c*v.y);}
+  void main(){ vec3 p=P, n=N;
+    float w=sin(p.x*.5+t*.32+I*1.7)*.16*A+sin(p.x*1.15-t*.45+I)*.06*A;
+    p.y+=w; p.z+=cos(p.x*.38+t*.27+I*2.3)*.22*A;
+    p.y+=(I-2.)*S*.45*smoothstep(-3.,5.,p.x);
+    float r=length(p.xy)+.001; float a=TW*(1.6*exp(-r*.22)+.35);
+    p.xy=rot(p.xy,a); n.xy=rot(n.xy,a);
+    p.y+=OY; p.xy+=M*vec2(.35,.22);
+    vec4 mv=vec4(p.x,p.y,p.z-11.,1.);
+    vN=n; vV=-mv.xyz; vU=U; vI=I; gl_Position=PM*mv; }`;
+  const FS=`precision highp float;varying vec3 vN,vV;varying vec2 vU;varying float vI;uniform float t,B;
+  vec3 env(vec3 r){ float y=r.y, x=r.x;
+    vec3 c=mix(vec3(.50,.53,.62),vec3(.96,.97,.99),smoothstep(-.9,.9,y));
+    c+=smoothstep(.22,0.,abs(y-.62))*.28;                      /* big soft box above */
+    c-=smoothstep(.16,0.,abs(y-.25+.08*x))*.22;                 /* dark band (the horizon in the studio) */
+    c+=smoothstep(.07,0.,abs(y-.02))*.30;                      /* thin bright strip */
+    c-=smoothstep(.25,0.,abs(y+.38))*.16;                      /* dark floor */
+    c+=smoothstep(.2,0.,abs(x-.45))*smoothstep(-.3,.3,y)*.18;   /* side light */
+    return c; }
+  void main(){ vec3 n=normalize(vN),v=normalize(vV); if(!gl_FrontFacing) n=-n;
+    vec3 r=reflect(-v,n); float fr=pow(1.-max(dot(n,v),0.),2.);
+    vec3 c=env(r);
+    float h=fr*1.5+vU.x*.9-t*.035+vI*.27+r.y*.55;
+    vec3 film=.5+.5*cos(6.2832*(h+vec3(0.,.33,.67))); film=mix(film,vec3(.55,.92,.85),.45);
+    float m=smoothstep(.3,.75,fr)*smoothstep(.6,.95,dot(c,vec3(.333)))*smoothstep(.2,.9,.5+.5*sin(vU.x*7.+vI*2.1-t*.15));
+    c=mix(c,c*film*1.3,m*.5);
+    c+=pow(.5+.5*sin(vU.x*16.-t*1.1+vI*2.),28.)*.16*(1.-fr);
+    vec3 glow=mix(vec3(.62,.90,.85),vec3(.80,.84,.88),.5+.5*sin(vU.x*5.+vI*1.3));
+    c=mix(c,mix(glow,vec3(1.),fr*.5),B*.8);
+    gl_FragColor=vec4(c,1.); }`;
+  /* strands in screen units (x,y in -1..1 of the band, z depth), branching like a river: one bundle from the left fanning out to the right */
+  const STR=[[[-1.4,-.15,0],[-.6,-.05,.2],[.1,.05,.3],[.7,.45,0],[1.4,.95,-.4]],
+             [[-1.4,-.05,-.2],[-.5,0,.1],[.2,0,.4],[.8,.15,.2],[1.4,.35,0]],
+             [[-1.4,.05,.1],[-.6,.02,0],[0,-.05,.2],[.7,-.35,.1],[1.4,-.6,-.2]],
+             [[-1.3,-.95,-1.2],[-.6,-.45,-.6],[0,-.12,.15],[.6,.25,.3],[1.4,.7,.2]],
+             [[-1.4,.55,-1.6],[-.4,.25,-.8],[.3,.1,-.2],[.9,-.05,-.4],[1.5,-.1,-.9]]];
+  const RAD=[.62,.48,.4,.3,.2];
+  function cr(P,u){ const k=u*(P.length-1), i=Math.min(P.length-2,Math.floor(k)), f=k-i, p0=P[Math.max(0,i-1)], p1=P[i], p2=P[i+1], p3=P[Math.min(P.length-1,i+2)];
+    return [0,1,2].map(j=>.5*((2*p1[j])+(-p0[j]+p2[j])*f+(2*p0[j]-5*p1[j]+4*p2[j]-p3[j])*f*f+(-p0[j]+3*p1[j]-3*p2[j]+p3[j])*f*f*f)); }
+  const sub=(a,b)=>[a[0]-b[0],a[1]-b[1],a[2]-b[2]], cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]], nz=a=>{ const l=Math.hypot(...a)||1; return a.map(x=>x/l); };
+  function geom(){
+    const L=G.lite?90:180, R=G.lite?14:24, out=[], idx=[]; let base=0;
+    STR.forEach((S0,id)=>{ const S=S0.map(p=>[p[0]*G.hw,p[1]*G.hh*.55,p[2]]), rad=RAD[id]*G.hh/3.2;
+      const pts=[...Array(L+1)].map((_,i)=>cr(S,i/L));
+      let nrm=null;
+      pts.forEach((p,i)=>{ const T=nz(sub(pts[Math.min(L,i+1)],pts[Math.max(0,i-1)]));
+        nrm = nrm ? nz(cross(cross(T,nrm),T)) : nz(cross(T,[0,0,1]));   // parallel transport
+        const bn=cross(T,nrm);
+        for(let j=0;j<=R;j++){ const a=j/R*Math.PI*2, c=Math.cos(a), s=Math.sin(a), nx=nrm[0]*c+bn[0]*s, ny=nrm[1]*c+bn[1]*s, nzz=nrm[2]*c+bn[2]*s;
+          out.push(p[0]+nx*rad,p[1]+ny*rad*.82,p[2]+nzz*rad, nx,ny,nzz, i/L,j/R, id); } });
+      for(let i=0;i<L;i++) for(let j=0;j<R;j++){ const a=base+i*(R+1)+j, b=a+R+1; idx.push(a,b,a+1,b,b+1,a+1); }
+      base+=(L+1)*(R+1); });
+    const gl=G.gl; gl.bindBuffer(gl.ARRAY_BUFFER,G.buf); gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(out),gl.STATIC_DRAW);
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,G.ibuf); gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,G.u32?new Uint32Array(idx):new Uint16Array(idx),gl.STATIC_DRAW); G.n=idx.length;
+  }
+  function sh(gl,type,src){ const s=gl.createShader(type); gl.shaderSource(s,src); gl.compileShader(s); if(!gl.getShaderParameter(s,gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s)); return s; }
+  function init(){
+    const cv=document.createElement("canvas"); cv.className="ribbons"; cv.setAttribute("aria-hidden","true");
+    const gl=cv.getContext("webgl",{alpha:true,antialias:true,premultipliedAlpha:true}); if(!gl) return false;
+    G.u32=!!gl.getExtension("OES_element_index_uint"); if(!G.u32) G.lite=true;
+    const prog=gl.createProgram(); gl.attachShader(prog,sh(gl,gl.VERTEX_SHADER,VS)); gl.attachShader(prog,sh(gl,gl.FRAGMENT_SHADER,FS)); gl.linkProgram(prog);
+    if(!gl.getProgramParameter(prog,gl.LINK_STATUS)) return false; gl.useProgram(prog);
+    G.buf=gl.createBuffer(); G.ibuf=gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,G.buf);
+    const st=9*4; [["P",3,0],["N",3,12],["U",2,24],["I",1,32]].forEach(([k,n,o])=>{ const l=gl.getAttribLocation(prog,k); gl.enableVertexAttribArray(l); gl.vertexAttribPointer(l,n,gl.FLOAT,false,st,o); });
+    ["PM","t","S","A","TW","OY","M","B"].forEach(k=>G.u[k]=gl.getUniformLocation(prog,k));
+    gl.enable(gl.DEPTH_TEST); gl.clearColor(0,0,0,0);
+    G.cv=cv; G.gl=gl; G.prog=prog; document.body.prepend(cv);
+    addEventListener("resize",()=>{ size(); kick(); });
+    addEventListener("scroll",()=>kick(),{passive:true});
+    addEventListener("pointermove",e=>{ G.tx=e.clientX/innerWidth*2-1; G.ty=-(e.clientY/innerHeight*2-1); kick(); },{passive:true});
+    document.addEventListener("visibilitychange",kick);
+    return true;
+  }
+  function size(){
+    const lite=innerWidth<768||(navigator.hardwareConcurrency&&navigator.hardwareConcurrency<=2);
+    const W=innerWidth, H=innerHeight; G.dpr=Math.min(lite?1.25:1.75,devicePixelRatio||1); G.lv=0; res(1);
+    const f=1/Math.tan(30*Math.PI/360), asp=W/H, near=.1, far=60;
+    G.gl.uniformMatrix4fv(G.u.PM,false,new Float32Array([f/asp,0,0,0, 0,f,0,0, 0,0,(far+near)/(near-far),-1, 0,0,2*far*near/(near-far),0]));
+    G.hh=11/f; G.hw=G.hh*asp; G.W=W; G.H=H;
+    if(lite!==G.lite||!G.n){ G.lite=lite||!G.u32; geom(); } else geom();
+  }
+  /* softer = fewer pixels: once the strands blur, they are drawn at a fraction of the resolution and stretched, which reads as blur for free */
+  function res(lv){ if(lv===G.lv) return; G.lv=lv; G.cv.width=Math.max(2,Math.round(innerWidth*G.dpr*lv)); G.cv.height=Math.max(2,Math.round(innerHeight*G.dpr*lv)); G.gl.viewport(0,0,G.cv.width,G.cv.height); }
+  const ss=(a,b,x)=>{ const k=Math.max(0,Math.min(1,(x-a)/(b-a))); return k*k*(3-2*k); };
+  function frame(now){
+    G.raf=0; if(!G.gl) return; const gl=G.gl, still=RMq(), t=still?6:(now-G.t0)/1000;
+    if(!still&&now-G.last<30){ G.raf=requestAnimationFrame(frame); return; } G.last=now;
+    const vh=G.H, y=scrollY, s=y/vh;
+    /* where the band sits on screen (world units); the strands ride up with the page at 70% speed */
+    let cy=0; if(G.band&&G.band.isConnected){ const r=G.band.getBoundingClientRect(), mid=r.top+y*(still?1:.3)+r.height/2; cy=(.5-mid/vh)*2*G.hh; }
+    const soft=G.soft?1:still?0:ss(.15,1.1,s), tw=still?0:(G.soft?.6+s*.25:ss(.3,2.2,s)*1.4+Math.max(0,s-2.2)*.18);
+    res(soft<.15?1:soft<.45?.5:soft<.8?.28:.16);
+    G.mx+=(G.tx-G.mx)*.08; G.my+=(G.ty-G.my)*.05;
+    gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
+    gl.uniform1f(G.u.t,t); gl.uniform1f(G.u.S,still?0:Math.min(1,s*1.2)); gl.uniform1f(G.u.A,G.amp); gl.uniform1f(G.u.TW,tw);
+    gl.uniform1f(G.u.OY,G.soft?0:cy*(1-soft)); gl.uniform2f(G.u.M,still?0:G.mx,still?0:G.my); gl.uniform1f(G.u.B,soft);
+    gl.drawElements(gl.TRIANGLES,G.n,G.u32?gl.UNSIGNED_INT:gl.UNSIGNED_SHORT,0);
+    G.cv.style.setProperty("--b",soft.toFixed(3));
+    G.cv.classList.toggle("soft",soft>.02);
+    if(!still&&!document.hidden) G.raf=requestAnimationFrame(frame);
+  }
+  const kick=()=>{ if(!G.raf&&G.gl) G.raf=requestAnimationFrame(frame); };
+  return { mount(root,mood){
+    try{ if(!G.gl&&!init()) return; }catch(e){ console.warn("ribbons",e); G.gl=null; return; }
+    G.band=root.querySelector(".mband"); G.soft=!G.band; G.amp={calm:.7,changeable:1,stormy:1.5}[mood]||1;
+    G.cv.classList.toggle("still",RMq()); if(!G.n) size(); kick(); } };
 })();
+/* section rules draw themselves from the left as each section and Brief story comes into view */
+const LINES=(()=>{ let io=null; return { mount(m){ io?.disconnect();
+  const els=[...m.querySelectorAll(":scope > section:not(.mast):not(.paperhead), .brief .story")]; els.forEach(el=>el.classList.add("cy"));
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches||!("IntersectionObserver" in window)){ els.forEach(el=>el.classList.add("on")); return; }
+  io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("on"); io.unobserve(e.target); } }),{rootMargin:"0px 0px -12% 0px"});
+  els.forEach(el=>io.observe(el)); } }; })();
 /* smooth SVG path through the day's indicator values (also the static art when WebGL is missing) */
 const linePath=(v,W,H)=>{ v=v.length?v:[3.6,2.8,3.8,2.5,3.2,1.6,3,3.5]; const ys=[...v,...v.slice().reverse()].slice(0,12); const lo=Math.min(...ys), hi=Math.max(...ys);
   const pts=ys.map((a,i)=>[i/(ys.length-1)*W, H*.72-(hi>lo?(a-lo)/(hi-lo):.5)*H*.42]); let d=`M${pts[0][0].toFixed(1)},${pts[0][1].toFixed(1)}`;
