@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="MINT, a fresh take on finance: financial news, official indicators and a financial-literacy content studio.">
-<title>MINT · A fresh take on finance</title>
+<meta name="description" content="PaperMint, finance news freshly minted: financial news, official indicators and a financial-literacy content studio.">
+<title>PaperMint · Finance news, freshly minted</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -673,7 +673,7 @@ header.top,body.solid header.top{background:#FFFFFF!important;backdrop-filter:no
 html.guest .flink[data-tab="studio"], html.guest [data-tab="lib"], html.guest .owner-only, html.guest #aikeyTop, html.guest #bgen, html.guest #mgen, html.guest [data-bstory], html.guest [data-theme-idea], html.guest .askbox{display:none!important}
 html:not(.guest) .guest-only{display:none!important}
 
-/* ===================== MINT v2: one design system on top of everything above =====================
+/* ===================== PaperMint v2: one design system on top of everything above =====================
    8px spacing · Manrope 800 display / 700 UI · radii 12 / 24 / 32 · ink and white dominate, mint tint second, brand teal as the accent */
 :root{--ink:#003C3B;--brand:#1F7F7C;--brand2:#3AA89C;--mint:#5BC8B6;--mint2:#8DE6D8;--tint:#F2FAF8;--tint2:#E3F4EF;--line:#DDEDE9;--muted:#4D716E;--r-xl:32px;--r-lg:24px}
 .wrap{max-width:1200px;padding-inline:var(--s5)}
@@ -782,6 +782,53 @@ main.play .hero2 h1 .w>span{animation:rise .95s cubic-bezier(.2,.75,.1,1) both;a
   .seg button{padding:0 14px!important;font-size:14px!important}
 }
 
+/* ===================== PaperMint v3: futuristic white =====================
+   Graph-paper grid, HUD corner marks, mono labels for data and metadata, one live pulse, a mint particle field in the hero. */
+:root{--f-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,monospace;--grid:rgba(31,127,124,.075)}
+::selection{background:#8DE6D8;color:#003C3B}
+.logo .wm{font-weight:800;letter-spacing:-.035em;color:var(--ink)} .logo .wm em{font-style:normal;color:var(--brand)}
+.eyebrow{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.14em;font-weight:500}
+.sechead .muted,.bpmeta,.story .meta,.bnum2 em,.story .q b,.phud{font-family:var(--f-mono)}
+.story .q b{font-weight:500;letter-spacing:.1em}
+.btn:focus-visible,.tab:focus-visible,.seg button:focus-visible,.chip:focus-visible{outline:2px solid var(--mint);outline-offset:3px}
+
+/* hero: graph paper + HUD corners; the particle field lives on the right */
+.hero2{background-color:#F6FBFA;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:40px 40px;background-position:-1px -1px}
+.hero2::after{content:"";position:absolute;inset:18px;z-index:3;pointer-events:none;background-repeat:no-repeat;--hc:linear-gradient(#3AA89C,#3AA89C);
+  background-image:var(--hc),var(--hc),var(--hc),var(--hc),var(--hc),var(--hc),var(--hc),var(--hc);
+  background-size:18px 1.5px,1.5px 18px,18px 1.5px,1.5px 18px,18px 1.5px,1.5px 18px,18px 1.5px,1.5px 18px;
+  background-position:0 0,0 0,100% 0,100% 0,0 100%,0 100%,100% 100%,100% 100%}
+.pfwrap{position:absolute;inset:0 0 0 46%;z-index:1;pointer-events:none;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 18%);mask-image:linear-gradient(90deg,transparent 0,#000 18%)}
+.bento .pfwrap{left:52%}
+.pfield{display:block;width:100%;height:100%}
+.phud{position:absolute;right:36px;bottom:30px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);opacity:.85}
+.hero2.mk .eyebrow::before{width:8px;height:8px;background:#5BC8B6;box-shadow:none;margin-right:12px;animation:pmpulse 2s ease-out infinite}
+@keyframes pmpulse{0%{box-shadow:0 0 0 0 rgba(91,200,182,.6)}70%{box-shadow:0 0 0 10px rgba(91,200,182,0)}100%{box-shadow:0 0 0 0 rgba(91,200,182,0)}}
+
+/* number of the day: dot-matrix display */
+.bnum2{position:relative;overflow:hidden;background-image:radial-gradient(rgba(141,230,216,.16) 1px,transparent 1.5px);background-size:14px 14px}
+.bnum2 b{text-shadow:0 0 36px rgba(141,230,216,.35)}
+.bpulse{position:relative}
+
+/* cards light up on hover */
+.story,.bpulse,.ncard,.idea{transition:border-color .2s ease,box-shadow .2s ease}
+.story:hover{border-color:#5BC8B6;box-shadow:0 0 0 4px rgba(91,200,182,.12)}
+.story::before{content:counter(st,decimal-leading-zero) " /";font-family:var(--f-mono);font-weight:500}
+
+/* ticker: a live tag on the left */
+.ticker{font-family:var(--f-mono);letter-spacing:.01em}
+.ticker::before{content:"● LIVE";position:relative;z-index:2;flex:none;align-self:stretch;display:flex;align-items:center;padding:0 16px;background:#002826;color:#8DE6D8;font:500 11px/1 var(--f-mono);letter-spacing:.14em;box-shadow:12px 0 16px -4px #003C3B}
+
+/* footer card: the same graph paper, inverted */
+.fcta .in{background-image:linear-gradient(rgba(141,230,216,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(141,230,216,.07) 1px,transparent 1px);background-size:40px 40px}
+
+@media (max-width:760px){
+  .pfwrap,.bento .pfwrap{inset:auto 0 0 0;height:220px;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 24%);mask-image:linear-gradient(180deg,transparent 0,#000 24%)}
+  .phud{right:24px;bottom:22px}
+  .hero2 .in,.bento .hero2 .in{padding-bottom:230px}
+}
+@media (prefers-reduced-motion:reduce){.hero2.mk .eyebrow::before{animation:none}}
+
 /* scroll storytelling: a few scrubbed moments (--sp goes 0→1 as the element crosses the viewport; without JS or with reduced motion it stays at the final state) */
 .sprog{position:absolute;left:0;right:0;bottom:-1px;height:2px;background:linear-gradient(90deg,#8DE6D8,#3AA89C);transform-origin:left;transform:scaleX(var(--rp,0));pointer-events:none}
 .hero2 .in{transform:translate3d(0,calc(var(--p,0) * -60px),0);opacity:clamp(0,1.35 - var(--p,0) * 1.4,1)}
@@ -799,8 +846,8 @@ header.top{view-transition-name:hdr} .ticker{view-transition-name:tick}
 
 <div id="preload" aria-hidden="true"><svg class="mk" viewBox="0 0 24 24" width="48" height="48" aria-hidden="true"><rect x="0" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:0"/><rect x="8" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:1"/><rect x="16" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:2"/><rect x="8" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:3"/><rect x="16" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:4"/><rect x="16" y="2" width="6.4" height="6.4" rx="1.3" fill="#3AA89C" style="--i:5"/></svg></div>
 <header class="top"><div class="wrap">
-  <div class="logo"><svg class="mark" viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="0" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:0"/><rect x="8" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:1"/><rect x="16" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:2"/><rect x="8" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:3"/><rect x="16" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:4"/><rect x="16" y="2" width="6.4" height="6.4" rx="1.3" fill="#3AA89C" style="--i:5"/></svg>MINT</div>
-  <div class="sprog" aria-hidden="true"></div><nav class="tabs"><button class="tab on" data-tab="mkt" type="button">Markets</button><button class="tab" data-tab="ask" type="button"><span class="lg-only">Ask MINT</span><span class="sm-only">Ask</span></button><button class="tab" data-tab="lib" type="button">Library</button><button class="tab" data-tab="studio" type="button">Studio</button></nav><button class="aikey-top" id="aikeyTop" type="button" hidden><i></i><span>AI key</span></button>
+  <div class="logo"><svg class="mark" viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="0" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:0"/><rect x="8" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:1"/><rect x="16" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:2"/><rect x="8" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:3"/><rect x="16" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:4"/><rect x="16" y="2" width="6.4" height="6.4" rx="1.3" fill="#3AA89C" style="--i:5"/></svg><span class="wm">Paper<em>Mint</em></span></div>
+  <div class="sprog" aria-hidden="true"></div><nav class="tabs"><button class="tab on" data-tab="mkt" type="button">Markets</button><button class="tab" data-tab="ask" type="button"><span class="lg-only">Ask</span><span class="sm-only">Ask</span></button><button class="tab" data-tab="lib" type="button">Library</button><button class="tab" data-tab="studio" type="button">Studio</button></nav><button class="aikey-top" id="aikeyTop" type="button" hidden><i></i><span>AI key</span></button>
 </div></header>
 <div class="ticker" id="ticker" aria-label="Market ticker"></div>
 <main class="wrap" id="main"></main>
@@ -813,16 +860,16 @@ header.top{view-transition-name:hdr} .ticker{view-transition-name:tick}
     <button class="btn primary owner-only" data-tab="studio" type="button">Open the Studio</button><button class="btn primary guest-only" data-tab="mkt" type="button">Read today's Brief</button>
   </div></section>
   <div class="fbot"><div class="in">
-    <div><div class="logo"><svg class="mark" viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="0" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:0"/><rect x="8" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:1"/><rect x="16" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:2"/><rect x="8" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:3"/><rect x="16" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:4"/><rect x="16" y="2" width="6.4" height="6.4" rx="1.3" fill="#3AA89C" style="--i:5"/></svg>MINT</div><p>A daily, plain-English read of the financial news, built as a Nova SBE project for the course "Boosting productivity with AI".</p></div>
-    <div><h4>Explore</h4><ul><li><button class="flink" data-tab="mkt" type="button">Markets</button></li><li><button class="flink" data-tab="ask" type="button">Ask MINT</button></li><li><button class="flink" data-tab="lib" type="button">Library</button></li><li><button class="flink" data-tab="studio" type="button">Studio</button></li></ul></div>
+    <div><div class="logo"><svg class="mark" viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="0" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:0"/><rect x="8" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:1"/><rect x="16" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:2"/><rect x="8" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:3"/><rect x="16" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:4"/><rect x="16" y="2" width="6.4" height="6.4" rx="1.3" fill="#3AA89C" style="--i:5"/></svg><span class="wm">Paper<em>Mint</em></span></div><p>A daily, plain-English read of the financial news, built as a Nova SBE project for the course "Boosting productivity with AI".</p></div>
+    <div><h4>Explore</h4><ul><li><button class="flink" data-tab="mkt" type="button">Markets</button></li><li><button class="flink" data-tab="ask" type="button">Ask PaperMint</button></li><li><button class="flink" data-tab="lib" type="button">Library</button></li><li><button class="flink" data-tab="studio" type="button">Studio</button></li></ul></div>
     <div><h4>Sources</h4><ul><li>Bloomberg · Financial Times</li><li>WSJ · The Economist</li><li>CNBC · MarketWatch · BBC</li><li>ECB · Fed · Eurostat · INE</li></ul></div>
     <div><h4>Good to know</h4><ul><li>Educational only</li><li>No buy or sell calls</li><li>Capital at risk</li></ul></div>
-    <div class="flegal"><span>Educational content generated from public news. Not investment advice. Past performance is not a guide to future returns.</span><span>© 2026 MINT · <button class="flink owlink" id="owLogin" type="button">Owner</button></span></div>
+    <div class="flegal"><span>Educational content generated from public news. Not investment advice. Past performance is not a guide to future returns.</span><span>© 2026 PaperMint · <button class="flink owlink" id="owLogin" type="button">Owner</button></span></div>
   </div></div>
 </footer>
 <div class="toast" id="toast" hidden></div>
 <script>
-// MINT — standalone runtime for GitHub Pages (100% free).
+// PaperMint — standalone runtime for GitHub Pages (100% free).
 // News, insights and indicators are static JSON files in /data, refreshed by a GitHub Action.
 // Personal data (library, routine, AI results you generate) stays in this browser.
 // AI calls go straight from the browser to Google's free Gemini API with YOUR key, which is
@@ -910,7 +957,7 @@ header.top{view-transition-name:hdr} .ticker{view-transition-name:tick}
     const fg = el.querySelector('[data-ai="forget"]'); if(fg) fg.onclick = () => { try{ localStorage.removeItem(KEY); }catch{} el.remove(); };
     el.querySelector("#aiKeyIn").focus();
   }
-  // free relay (Cloudflare Worker) that holds MINT's key: visitors need no key of their own
+  // free relay (Cloudflare Worker) that holds PaperMint's key: visitors need no key of their own
   const PROXY = "__MINT_AI_PROXY__".startsWith("http") ? "__MINT_AI_PROXY__" : "";
   window.MINT_AI_PROXY = PROXY;
   // owner sign-in: email + password checked against a salted SHA-256 fingerprint (the password itself is never stored)
@@ -1210,7 +1257,7 @@ function vLib(){
     <section class="panel"><span class="label">${esc(new Date(p.createdAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric"}))}</span><h1>${esc(p.idea?.title)}</h1><p class="muted">${esc(p.idea?.hook)}</p></section>`+vContent(p.content,{total:p.totalMs}); }
   const list=[...S.pieces].sort((a,b)=>(b.createdAt||0)-(a.createdAt||0));
   return `<section class="hero2">${tilesHTML(3)}<div class="in"><span class="eyebrow">Library</span><h1>Everything you've made</h1>
-    <label class="field" style="max-width:320px"><span class="label">How long a post takes you without MINT (min)</span><input id="base" type="number" min="5" step="5" value="${baseline()}"></label>${stats()}</div></section>
+    <label class="field" style="max-width:320px"><span class="label">How long a post takes you without PaperMint (min)</span><input id="base" type="number" min="5" step="5" value="${baseline()}"></label>${stats()}</div></section>
     ${!S.persistent?`<p class="notice">This view keeps your pieces in this browser only.</p>`:""}
     ${list.length?`<section class="panel"><div class="lib">${list.map(p=>`<button class="librow" data-piece="${esc(p.id)}" type="button"><span class="mono muted">${esc(new Date(p.createdAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}</span><span style="min-width:0"><b>${esc(p.idea?.title)}</b><div class="muted" style="font-size:.88rem">${esc(Object.keys(p.content||{}).filter(k=>k!=="compliance").map(k=>FORMATS.find(f=>f[0]===k)?.[1]).filter(Boolean).join(" · "))}</div></span><span class="pill ${(+p.content?.compliance?.score||0)>=85?"":(+p.content?.compliance?.score||0)>=60?"warn":"bad"}">${esc(p.content?.compliance?.score??"—")}</span></button>`).join("")}</div></section>`
     :`<div class="empty"><h2>Nothing here yet</h2><p class="muted">Every piece you create in the Studio is saved here, with how long it took and its compliance score.</p><button class="btn primary" id="tostudio" type="button" style="align-self:flex-start">Go to the Studio</button></div>`}`;
@@ -1273,7 +1320,7 @@ function vFaq(){
 }
 function vAsk(){
   const day=latestDay();
-  let h = `<section class="hero2">${tilesHTML(4)}<div class="in"><span class="eyebrow">Ask MINT</span><h1>Ask anything about today's money news.</h1><p class="muted">Answers use the stories collected today and the verified indicators. Scenarios and risks, never buy or sell calls.</p></div></section>`;
+  let h = `<section class="hero2">${tilesHTML(4)}<div class="in"><span class="eyebrow">Ask PaperMint</span><h1>Ask anything about today's money news.</h1><p class="muted">Answers use the stories collected today and the verified indicators. Scenarios and risks, never buy or sell calls.</p></div></section>`;
   h += vFaq();
   h += `<section class="panel askbox"><div class="ptitle"><h2>Your question</h2></div>
     <p class="muted" style="font-size:.9rem">Ask anything about today's markets. The answer uses the collected news and shows scenarios and risks, never buy or sell calls.</p>
@@ -1290,7 +1337,7 @@ function vMarkets(){
   const stale = ins && day.collectedAt && ins.basedOn < day.collectedAt;
   const when = d => new Date(d).toLocaleString("en-GB",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"});
   const iPT=indGet("inf_pt"), dPT=indGet("dep_pt");
-  const head = "A fresh take on finance.";
+  const head = "Finance news, freshly minted.";
   const sub = iPT&&dPT ? `Inflation at ${fmtNum(iPT.value,iPT.dec)}%, term deposits at ${fmtNum(dPT.value,dPT.dec)}%.` : "What today's news says about each type of investment.";
   const SUBS=[["brief","The Brief"],["hoje","Daily map"],["mes","Month"],["sim","Simulator"]]; mk.sub=mk.sub||"brief"; if(mk.sub==="perg") mk.sub="brief";
   const bb=ins0?.brief; const gNum = bb?.number?.value || (iPT?fmtNum(iPT.value,iPT.dec)+"%":""); const gCap = bb?.number?.value ? (bb.number.caption||"") : (iPT?`${indLabel(iPT)} · ${perEN(iPT.period)}`:"");
@@ -1299,19 +1346,19 @@ function vMarkets(){
   const top=Object.entries(cats).sort((a,b)=>b[1]-a[1]).slice(0,4); const tmax=Math.max(1,...top.map(c=>c[1]));
   let h = `<section class="bento">
     <div class="hero2 mk">${tilesHTML(1)}<div class="in">
-      <span class="eyebrow">${esc(new Date().toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"}))}</span>
+      <span class="eyebrow">Live · ${esc(new Date().toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"}))}</span>
       <h1>${esc(head)}</h1>
       <p class="muted">${esc(sub)}</p>
       <div class="row"><button class="btn primary" type="button" data-jump=".seg" data-go="brief">Read The Brief</button><button class="btn" type="button" data-jump=".pillgrid">See the indicators</button></div>
     </div></div>
     ${gNum?`<div class="bcard bnum2"><em>Number of the day</em><b>${esc(gNum)}</b><span>${esc(gCap)}</span></div>`:""}
     <div class="bcard bpulse"><span class="eyebrow">Today's news</span>
-      <b class="bpbig">${day?`${(day.items||[]).length} stories`:"Collecting…"}</b>
-      <span class="bpmeta">${day?`${(day.sources||[]).length} sources${day.collectedAt?` · updated ${esc(new Date(day.collectedAt).toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"}))}`:""}`:"The first collection runs on the next weekday."}</span>
+      <b class="bpbig">${day?`${(day.items||[]).length} stories`:S.newsLoaded?"No stories yet":"Loading…"}</b>
+      <span class="bpmeta">${day?`${(day.sources||[]).length} sources${day.collectedAt?` · updated ${esc(new Date(day.collectedAt).toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"}))}`:""}`:S.newsLoaded?"The next collection runs on the next weekday.":"Fetching today's stories."}</span>
       ${top.length?`<div class="bpbars">${top.map(([c,n])=>`<div class="bpbar"><span>${esc(catEN(c))}</span><span class="n">${n}</span><i style="--w:${Math.round(n/tmax*100)}%"></i></div>`).join("")}</div>`:""}
     </div>
   </section>
-  <section class="pillgrid" aria-label="Verified indicators"><div class="sechead"><div><span class="eyebrow">Official figures</span><h2>Verified indicators</h2></div>${S.ind?`<span class="muted">ECB · Eurostat · Bank of Portugal · checked ${esc(new Date(S.ind.updatedAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}</span>`:""}</div>${vPills()}</section>
+  <section class="pillgrid" aria-label="Verified indicators"><div class="sechead"><div><span class="eyebrow">01 / Official figures</span><h2>Verified indicators</h2></div>${S.ind?`<span class="muted">ECB · Eurostat · Bank of Portugal · checked ${esc(new Date(S.ind.updatedAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}</span>`:""}</div>${vPills()}</section>
   <nav class="seg" role="tablist" aria-label="Markets sections">${SUBS.map(([k,t])=>`<button type="button" role="tab" aria-selected="${mk.sub===k}" class="${mk.sub===k?"on":""}" data-sub="${k}">${t}</button>`).join("")}</nav>`;
   if(mk.sub==="hoje") h += `<section class="panel"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>Daily map</h2>
       <span class="muted" style="font-size:.86rem">${ins?`Analysis from ${esc(when(ins.generatedAt))}${stale?" · new stories since then":""}`:"No analysis for today's news yet."}</span></div>
@@ -1353,9 +1400,9 @@ function vBrief(){
       <button class="btn ${!b||stale?"primary":""}" id="bgen" type="button" ${mk.bBusy||!day?"disabled":""}>${b?"Rewrite the Brief":"Write today's Brief"}</button></div>
     ${mk.bBusy?think("Reading "+((day?.items||[]).length)+" stories and picking the ones that matter…"):""}
     ${mk.bErr?`<p class="notice">${esc(mk.bErr)}</p>`:""}`;
-  if(!b){ h += `<div class="empty"><b>No Brief yet today.</b><p class="muted">${day?"Press the button and MINT picks the four stories that matter most for everyday money, and explains each one in plain English: what's going on, what it means and why you should care.":"The Brief appears after the first news collection."}</p></div></section>`; return h; }
+  if(!b){ h += `<div class="empty"><b>No Brief yet today.</b><p class="muted">${day?"Press the button and PaperMint picks the four stories that matter most for everyday money, and explains each one in plain English: what's going on, what it means and why you should care.":"The Brief appears after the first news collection."}</p></div></section>`; return h; }
   const items=day.items||[];
-  h += `<div class="bhead"><span class="eyebrow">Today in one line</span><p class="bline">${md(b.one_liner||"")}</p></div>
+  h += `<div class="bhead"><span class="eyebrow">02 / Today in one line</span><p class="bline">${md(b.one_liner||"")}</p></div>
     <div class="stories">${(b.stories||[]).map((x,k)=>{ const it=items[(+x.i||0)-1]||{}; return `<article class="story">
       <div class="meta">${it.source?srcTile(it.source):""}<span>${esc(srcEN(it.source||""))}${it.category?" · "+esc(catEN(it.category)):""}</span></div>
       <h3>${esc(x.title)}</h3>
@@ -1701,7 +1748,7 @@ async function ask(){
   if(!sample){ mk.qErr="AI is not available right now."; return render(); }
   const ins=S.insights.find(i=>i.id===day.id);
   mk.qBusy=true; mk.qErr=""; mk.answer=""; mk.ctl=new AbortController(); render();
-  const prompt = `You are MINT's financial-literacy assistant. You answer in clear British English, in a fair and balanced way, for people learning to invest. Light, friendly wit is welcome; never at the expense of accuracy.
+  const prompt = `You are PaperMint's financial-literacy assistant. You answer in clear British English, in a fair and balanced way, for people learning to invest. Light, friendly wit is welcome; never at the expense of accuracy.
 Rules: no personal recommendations or buy/sell calls, name no products, companies or specific funds, promise no returns. Explain scenarios, what today's news shows, the risks, and why time horizon, diversification and an emergency fund matter. Quote numbers from the news where they help. Maximum 220 words, short paragraphs, you may use **bold**. End with one short sentence reminding the reader this is educational information, not personal advice.
 
 ${indText()}${ins?"Daily map:\n"+ins.resumo+"\n"+(ins.classes||[]).map(c=>`- ${clsEN(c.nome)}: ${c.tendencia}. ${c.leitura}`).join("\n")+"\n\n":""}News from ${day.date}:
@@ -1760,7 +1807,7 @@ function vRoutine(){
   const mins = R.timer ? `${String(Math.floor(R.left/60)).padStart(2,"0")}:${String(R.left%60).padStart(2,"0")}` : "15:00";
   return `<section class="hero2">${tilesHTML(5)}<div class="in"><span class="eyebrow">Engagement routine · Instagram and LinkedIn</span>
       <h1>15 minutes a day, always in the same window.</h1>
-      <p class="muted">Replying and commenting is what grows an account most, but only if it's a habit you can keep. The routine is short on purpose. MINT doesn't post or read your messages: you engage in the apps and MINT helps you write the replies.</p>
+      <p class="muted">Replying and commenting is what grows an account most, but only if it's a habit you can keep. The routine is short on purpose. PaperMint doesn't post or read your messages: you engage in the apps and PaperMint helps you write the replies.</p>
     <div class="stats"><div class="stat"><b>${doneN}/4</b><span>steps today</span></div><div class="stat"><b>${weekN}/5</b><span>days done this week</span></div><div class="stat"><b>${esc(win)}</b><span>your daily window</span></div></div></div></section>
   <div style="display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:20px" class="rgrid">
   <section class="panel"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>Today</h2>
@@ -1961,7 +2008,7 @@ function render(){
   if(!OWNER && (tab==="studio"||tab==="lib")){ tab="mkt"; document.querySelectorAll(".tab[data-tab]").forEach(x=>x.classList.toggle("on",x.dataset.tab===tab)); }
   m.innerHTML = tab==="lib" ? vLib() : tab==="mkt" ? vMarkets() : tab==="ask" ? vAsk() : tab==="rot" ? vRoutine() : vStudio();
   bind(); if(tab==="mkt"||tab==="ask") bindMarkets(); if(tab==="rot") bindRoutine();
-  splitWords(m); window.RADAR_TILES?.();
+  splitWords(m); window.RADAR_TILES?.(); PFIELD.mount(m);
   m.querySelectorAll("[data-jump]").forEach(b=>b.onclick=()=>{ if(b.dataset.go&&mk.sub!==b.dataset.go){ mk.sub=b.dataset.go; render(); } document.querySelector(b.dataset.jump)?.scrollIntoView({behavior:RM()?"auto":"smooth",block:"start"}); });
   renderTicker(); motion(m); window.RADAR_BAR?.(); scrollFX(document); SCRUB.mount(document);
 }
@@ -2010,18 +2057,86 @@ const SCRUB=(()=>{ const vis=new Set(), gone=new Set(); let raf=0;
     if(matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const add=(sel,range,prep)=>root.querySelectorAll(sel).forEach(el=>{ if(!el.dataset.scrub){ prep?.(el); el.dataset.scrub=range; } io.observe(el); });
     add(".bline","0.9,0.4,0",el=>el.style.setProperty("--n",words(el)));      // Markets: the Brief's one-liner lights up word by word
-    add(".faq","0.75,0.5,1");                                                  // Ask MINT: a rail fills as you read the questions
+    add(".faq","0.75,0.5,1");                                                  // Ask PaperMint: a rail fills as you read the questions
     add(".pslides,.slides","1,0.5,0",el=>[...el.children].forEach((c,i)=>c.style.setProperty("--i",i))); } };  // Studio: slides are dealt like cards
 })();
 
+/* hero particle field: mint points assemble into the PaperMint mark, then re-form as you scroll (today's indicator bars, a stack of posts…).
+   Canvas 2D and decorative only; fewer points on phones and weak devices; a still frame with reduced motion; paused off-screen. */
+const PFIELD=(()=>{
+  const RMq=()=>matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const lite=()=>innerWidth<760||(navigator.hardwareConcurrency&&navigator.hardwareConcurrency<=2)||(navigator.deviceMemory&&navigator.deviceMemory<=2);
+  const COLS=["#003C3B","#1F7F7C","#3AA89C","#5BC8B6"];
+  const HUD={logo:"Fig. 01 · PaperMint",bars:"Fig. 02 · Today's indicators",stack:"Fig. 02 · Ready to post",ask:"Fig. 01 · Ask"};
+  const mem={}, live=new Set(); let raf=0, last=0, px=-1e4, py=-1e4;
+  const box=(x,X,y,w,h,r,stroke)=>{ x.beginPath(); x.roundRect?x.roundRect(X,y,w,h,r):x.rect(X,y,w,h); stroke?x.stroke():x.fill(); };
+  const SH={
+    logo(x,W,H){ const s=Math.min(W,H)*.68/24, ox=(W-24*s)/2, oy=(H-24*s)/2; [[0,18],[8,18],[16,18],[8,10],[16,10],[16,2]].forEach(([a,b])=>box(x,ox+a*s,oy+b*s,6.4*s,6.4*s,1.3*s)); },
+    bars(x,W,H,v){ v=v.length?v:[3.6,2.8,3.8,2.5,3.2,1.6,3,3.5]; const lo=Math.min(...v), hi=Math.max(...v), n=v.length, pad=W*.1, gw=(W-2*pad)/n, bw=gw*.36, base=H*.8, top=H*.2;
+      v.forEach((a,i)=>{ const h=(.22+.78*(hi>lo?(a-lo)/(hi-lo):1))*(base-top); box(x,pad+i*gw+(gw-bw)/2,base-h,bw,h,Math.min(bw*.2,8)); }); x.fillRect(pad*.7,base+H*.04,W-pad*1.4,Math.max(2,H*.008)); },
+    ask(x,W,H){ x.font=`800 ${Math.min(W,H)*.74}px Manrope, system-ui, sans-serif`; x.textAlign="center"; x.textBaseline="middle"; x.fillText("?",W/2,H*.52); },
+    stack(x,W,H){ const w=Math.min(W*.42,H*.42), h=w*1.25; x.lineWidth=Math.max(6,w*.07); [[-.14,.08],[0,0],[.14,-.08]].forEach(([a,b])=>box(x,W/2-w/2+a*W,H/2-h/2+b*H,w,h,w*.1,true)); }
+  };
+  function targets(name,W,H,vals,N){
+    const c=document.createElement("canvas"); c.width=Math.ceil(W); c.height=Math.ceil(H); const x=c.getContext("2d",{willReadFrequently:true}); x.fillStyle=x.strokeStyle="#000";
+    (SH[name]||SH.logo)(x,W,H,vals); const d=x.getImageData(0,0,c.width,c.height).data;
+    const grab=st=>{ const o=[]; for(let y=0;y<c.height;y+=st) for(let X=0;X<c.width;X+=st) if(d[(y*c.width+X)*4+3]>120) o.push(X,y); return o; };
+    let st=2, pts=grab(st); st=Math.max(2,Math.round(st*Math.sqrt(pts.length/2/(N*1.15)))); pts=grab(st); const n=pts.length/2||1;
+    const out=new Float32Array(N*2); let q=7; for(let i=0;i<N;i++){ q=(q*9301+49297)%233280; const j=Math.floor(q/233280*n); out[i*2]=(pts[j*2]||W/2)+((q%97)/97-.5)*st; out[i*2+1]=(pts[j*2+1]||H/2)+((q%89)/89-.5)*st; }
+    return out;
+  }
+  function size(f){
+    const r=f.cv.getBoundingClientRect(); if(!r.width||!r.height) return; const dpr=Math.min(2,devicePixelRatio||1);
+    f.W=r.width; f.H=r.height; f.cv.width=f.W*dpr; f.cv.height=f.H*dpr; f.ctx.setTransform(dpr,0,0,dpr,0,0);
+    f.N=lite()?900:2400; f.A=targets(f.a,f.W,f.H,f.vals,f.N); f.B=targets(f.b,f.W,f.H,f.vals,f.N);
+    const m=mem[f.key];
+    if(m&&m.P.length===f.N*2){ f.P=m.P; f.V=m.V; }
+    else { f.P=new Float32Array(f.N*2); f.V=new Float32Array(f.N*2); const still=RMq();
+      for(let i=0;i<f.N;i++){ f.P[i*2]=still?f.A[i*2]:Math.random()*f.W*1.6-f.W*.3; f.P[i*2+1]=still?f.A[i*2+1]:f.H+Math.random()*f.H*.8; }
+      mem[f.key]={P:f.P,V:f.V}; }
+    f.bk=[[],[],[],[]]; for(let i=0;i<f.N;i++){ const c=Math.max(0,Math.min(3,Math.floor((1-f.A[i*2+1]/f.H)*4.2-.4))); f.bk[c].push(i); }
+    if(f.k==null) f.k=0;
+  }
+  function draw(f){
+    const x=f.ctx, s=f.N>1500?2.1:2.3; x.clearRect(0,0,f.W,f.H);
+    f.bk.forEach((idx,c)=>{ x.fillStyle=COLS[c]; x.beginPath(); for(const i of idx) x.rect(f.P[i*2]-s/2,f.P[i*2+1]-s/2,s,s); x.fill(); });
+  }
+  function step(f,t){
+    const hero=f.cv.closest(".hero2"); const goal=Math.max(0,Math.min(1,scrollY/Math.max(1,(hero?.offsetHeight||f.H)*.45)));
+    f.k+=(goal-f.k)*.08; const cr=f.cv.getBoundingClientRect(), mx=px-cr.left, my=py-cr.top, R=f.W<500?60:90, R2=R*R;
+    for(let i=0;i<f.N;i++){ const a=i*2, b=a+1;
+      let e=Math.max(0,Math.min(1,f.k*1.5-(i%97)/97*.5)); e=e*e*(3-2*e);
+      const tx=f.A[a]+(f.B[a]-f.A[a])*e+Math.sin(t*1.3+i*.7)*1.2, ty=f.A[b]+(f.B[b]-f.A[b])*e+Math.cos(t*1.1+i*.9)*1.2;
+      let vx=f.V[a]+(tx-f.P[a])*.045, vy=f.V[b]+(ty-f.P[b])*.045;
+      const dx=f.P[a]-mx, dy=f.P[b]-my, d2=dx*dx+dy*dy; if(d2<R2){ const d=Math.sqrt(d2)||1, z=(1-d/R)*3.4; vx+=dx/d*z; vy+=dy/d*z; }
+      vx*=.84; vy*=.84; f.V[a]=vx; f.V[b]=vy; f.P[a]+=vx; f.P[b]+=vy; }
+    const h=HUD[f.k>.5?f.b:f.a]; if(f.hud&&f.hud.textContent!==h) f.hud.textContent=h;
+  }
+  function loop(now){
+    raf=0; if(document.hidden) return; if(lite()&&now-last<30){ raf=requestAnimationFrame(loop); return; } last=now; let any=false;
+    live.forEach(f=>{ if(!f.cv.isConnected){ f.io.disconnect(); f.ro.disconnect(); live.delete(f); return; } if(!f.vis||!f.P) return; any=true; step(f,now/1000); draw(f); });
+    if(any) raf=requestAnimationFrame(loop);
+  }
+  const kick=()=>{ if(!raf&&!RMq()) raf=requestAnimationFrame(loop); };
+  addEventListener("scroll",kick,{passive:true}); addEventListener("pointermove",e=>{ px=e.clientX; py=e.clientY; kick(); },{passive:true});
+  document.addEventListener("pointerleave",()=>{ px=py=-1e4; }); document.addEventListener("visibilitychange",kick);
+  document.fonts?.ready.then(()=>live.forEach(f=>{ if(f.a==="ask"||f.b==="ask"){ size(f); if(RMq()) draw(f); } }));
+  return { mount(root){ root.querySelectorAll("canvas.pfield").forEach(cv=>{ if(cv._pf) return;
+    const f=cv._pf={cv,ctx:cv.getContext("2d"),key:cv.dataset.key,a:cv.dataset.a,b:cv.dataset.b,vals:(cv.dataset.vals||"").split(",").filter(Boolean).map(Number),hud:cv.parentElement.querySelector(".phud"),vis:true};
+    size(f); live.add(f);
+    f.ro=new ResizeObserver(()=>{ size(f); draw(f); kick(); }); f.ro.observe(cv);
+    f.io=new IntersectionObserver(es=>{ f.vis=es[0].isIntersecting; kick(); }); f.io.observe(cv);
+    if(f.P) draw(f); kick(); }); } };
+})();
 /* hero tiles: rounded gradient squares that fly in, drift, follow the pointer and turn as you scroll */
 const TILESETS=[
   [[60,6,13,-28,"#1F7F7C",1.2,40],[4,12,10,26,"#3AA89C",.7,-30],[22,32,15,-18,"#FFFFFF",.35,20],[82,30,12,8,"#5BC8B6",.9,-45],[-5,58,13,34,"#1F7F7C",1.1,35],[46,58,14,-30,"#3AA89C",1.4,-25],[88,72,9,22,"#5BC8B6",.6,50]],
   [[70,8,12,-20,"#3AA89C",1,35],[2,20,9,30,"#5BC8B6",.6,-40],[30,46,13,-12,"#FFFFFF",.4,25],[86,40,13,14,"#1F7F7C",1.2,-30],[52,70,12,-26,"#5BC8B6",1.3,45],[10,72,10,18,"#3AA89C",.8,-20]],
 ];
+const PF_SHAPES={1:["logo","bars","mkt"],2:["logo","stack","studio"],3:["logo","stack","lib"],4:["ask","bars","ask"],5:["logo","bars","rot"]};
 function tilesHTML(seed){
-  const set=TILESETS[(seed||1)%TILESETS.length];
-  return `<div class="tiles" aria-hidden="true">${set.map(([x,y,sz,r,c,k,spin],i)=>`<span style="--x:${x}%;--y:${y}%;--s:${sz}vw;--r:${r}deg;--c:${c};--k:${k};--spin:${spin}deg;--d:${(9+i*1.4).toFixed(1)}s;--dl:-${(i*1.7).toFixed(1)}s;--e:${i*90}ms"><b><i></i></b></span>`).join("")}</div>`;
+  const [A,B,key]=PF_SHAPES[seed]||PF_SHAPES[1]; const vals=(S.ind?.items||[]).map(x=>+x.value).filter(v=>!isNaN(v)).join(",");
+  return `<div class="pfwrap" aria-hidden="true"><canvas class="pfield" data-a="${A}" data-b="${B}" data-key="${key}" data-vals="${vals}"></canvas><span class="phud"></span></div>`;
 }
 (()=>{ if(matchMedia("(prefers-reduced-motion: reduce)").matches) return; let raf=0, mx=0, my=0, tx=0, ty=0;
   const upd=()=>{ raf=0; mx+=(tx-mx)*.12; my+=(ty-my)*.12;
@@ -2032,14 +2147,7 @@ function tilesHTML(seed){
   addEventListener("scroll",kick,{passive:true}); addEventListener("resize",kick);
   addEventListener("pointermove",e=>{ tx=e.clientX/innerWidth-.5; ty=e.clientY/innerHeight-.5; kick(); },{passive:true});
   window.RADAR_TILES=kick; kick();
-  // the wheel: tiles travel slowly round an ellipse, nearer ones (bottom of the ring) a little bigger
-  const T0=performance.now(); let last=0;
-  const spin=now=>{ requestAnimationFrame(spin); if(now-last<33||document.hidden) return; last=now; const t=(now-T0)/1000;
-    document.querySelectorAll(".hero2 .tiles").forEach(g=>{ const W=g.clientWidth, H=g.clientHeight; if(!W) return; g.classList.add("orbit");
-      const mob=innerWidth<760, rx=W*(mob?.42:.44), ry=H*(mob?.36:.38), cx=mob?0:W*.08, cy=mob?H*.04:0; const sp=g.querySelectorAll("span"), n=sp.length;
-      sp.forEach((el,i)=>{ const a=i/n*6.2832+t*.105*(1+.08*(i%3)); const z=(Math.sin(a)+1)/2;
-        el.style.setProperty("--ox",(cx+Math.cos(a)*rx).toFixed(1)+"px"); el.style.setProperty("--oy",(cy+Math.sin(a)*ry).toFixed(1)+"px"); el.style.setProperty("--os",(.78+.34*z).toFixed(3)); el.style.zIndex=Math.round(z*10); }); }); };
-  requestAnimationFrame(spin); })();
+})();
 function splitWords(root){
   root.querySelectorAll(".hero2 h1:not([data-split])").forEach(h=>{ const words=h.textContent.trim().split(/\s+/); h.dataset.split="1"; h.setAttribute("aria-label",h.textContent.trim());
     h.innerHTML=words.map((w,i)=>`<span class="w" aria-hidden="true"><span style="--i:${i}">${esc(w)}</span></span>`).join(" "); });

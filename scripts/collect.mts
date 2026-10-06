@@ -81,7 +81,7 @@ async function main() {
 
 async function readFeed(source: string, url: string, filter: boolean, now: Date): Promise<Item[]> {
   const res = await fetch(url, {
-    headers: { "user-agent": "Mozilla/5.0 (compatible; MINT-news/1.0; +https://anadevesa-lab.github.io/literacy-radar/)", accept: "application/rss+xml, application/xml, text/xml" },
+    headers: { "user-agent": "Mozilla/5.0 (compatible; PaperMint-news/1.0; +https://anadevesa-lab.github.io/literacy-radar/)", accept: "application/rss+xml, application/xml, text/xml" },
     signal: AbortSignal.timeout(12000),
   });
   if (!res.ok) return [];
@@ -318,9 +318,9 @@ async function updateIndicators(old: any) {
 async function aiPack(day: string, items: Item[], brief: any, ind: string) {
   const top = (brief?.stories || []).map((s: any) => `- ${s.title}: ${s.whats_going_on} ${s.why_care}`).join("\n")
     || (items || []).slice(0, 15).map((it) => `- [${it.source}] ${it.title}`).join("\n");
-  const p = `You create MINT's daily ready-to-post pack. MINT is a financial-literacy brand ("A fresh take on finance") for everyday savers and new investors, in British English: warm, clear, a little witty, never preachy.
+  const p = `You create PaperMint's daily ready-to-post pack. PaperMint is a financial-literacy brand ("Finance news, freshly minted") for everyday savers and new investors, in British English: warm, clear, a little witty, never preachy.
 From today's stories below, write:
-1) "carousel": an Instagram carousel on the most useful story for savers: {"title": "max 8 words", "slides":[{"h":"headline max 8 words","t":"body max 30 words"}] (6 slides: hook, 3 explainers, "what it means for you", a gentle CTA to follow MINT)}
+1) "carousel": an Instagram carousel on the most useful story for savers: {"title": "max 8 words", "slides":[{"h":"headline max 8 words","t":"body max 30 words"}] (6 slides: hook, 3 explainers, "what it means for you", a gentle CTA to follow PaperMint)}
 2) "linkedin": a LinkedIn post (120-180 words, short paragraphs, 3 relevant hashtags at the end)
 3) "reel": {"hook":"first 3 seconds, max 12 words","script":["4-6 short lines to say on camera"],"caption":"max 25 words"}
 4) "faq": 5 questions a curious beginner would ask about today's news, each {"q":"max 14 words","a":"2-3 plain sentences"}
