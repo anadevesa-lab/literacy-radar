@@ -1,7 +1,7 @@
 <title>PROJECTO NOVA SBE - RADAR</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
 <style>
 /* Layout: markets map first, library, then the content studio; single column on phones */
 /* Palette: #8DE6D8 #5BC8B6 #3AA89C #1F7F7C #0F5854 #003C3B on a white page */
@@ -662,28 +662,249 @@ header.top,body.solid header.top{background:#FFFFFF!important;backdrop-filter:no
 .owlink{font-size:inherit!important;color:inherit!important;font-weight:600!important}
 html.guest .flink[data-tab="studio"], html.guest [data-tab="lib"], html.guest .owner-only, html.guest #aikeyTop, html.guest #bgen, html.guest #mgen, html.guest [data-bstory], html.guest [data-theme-idea], html.guest .askbox{display:none!important}
 html:not(.guest) .guest-only{display:none!important}
+
+/* ===================== PaperMint v2: one design system on top of everything above =====================
+   8px spacing · Manrope 800 display / 700 UI · radii 12 / 24 / 32 · ink and white dominate, mint tint second, brand teal as the accent */
+:root{--ink:#003C3B;--brand:#1F7F7C;--brand2:#3AA89C;--mint:#5BC8B6;--mint2:#8DE6D8;--tint:#F2FAF8;--tint2:#E3F4EF;--line:#DDEDE9;--muted:#4D716E;--r-xl:32px;--r-lg:24px}
+.wrap{max-width:1200px;padding-inline:var(--s5)}
+main.wrap{gap:var(--s8)!important;padding-bottom:96px}
+h1,h2,h3{font-weight:800}
+h2{font-size:clamp(1.75rem,2.6vw,2.5rem)!important;letter-spacing:-.035em;line-height:1.08}
+.eyebrow{font-size:12px;letter-spacing:.14em;font-weight:800;color:var(--brand)}
+.muted{color:var(--muted)}
+/* menu */
+.tab{text-transform:none!important;letter-spacing:-.005em!important;font-size:15px!important;font-weight:700!important;border-radius:999px!important;padding:0 18px!important}
+.tabind{border-radius:999px!important}
+.aikey-top{border-radius:999px!important;text-transform:none;letter-spacing:0;font-size:13px}
+/* buttons: flat pills, sentence case */
+.btn{text-transform:none;letter-spacing:-.005em;font-size:15px;font-weight:700;min-height:48px;padding:0 22px;border-radius:999px!important;border:1px solid var(--line);background:#fff;color:var(--ink)}
+.btn:hover{transform:none;box-shadow:none;border-color:var(--ink)}
+.btn.small{font-size:13.5px;min-height:36px;padding:0 16px}
+.btn.primary{background:var(--ink)!important;border-color:var(--ink)!important;color:#fff!important}
+.btn.primary:hover{background:var(--brand)!important;border-color:var(--brand)!important}
+.chip{min-height:36px;padding:0 16px;font-weight:700;font-size:14px}
+/* cards */
+.panel{border:1px solid var(--line);border-radius:var(--r-lg);padding:40px;gap:var(--s5);box-shadow:none}
+.ncard,.idea,.acls{border:1px solid var(--line)!important;box-shadow:none!important;border-radius:20px}
+.ncard:hover,.idea:hover{border-color:var(--brand2)!important}
+.sechead{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--s4);flex-wrap:wrap;margin-bottom:var(--s5)}
+.sechead > div{display:flex;flex-direction:column;gap:var(--s2)}
+.sechead .muted{font-size:14px;font-weight:600}
+
+/* hero: a rounded mint card, text on the left, the tiles orbit on the right and never cross the copy */
+.hero2{position:relative;overflow:hidden;isolation:isolate;border-radius:var(--r-xl);background:var(--tint);min-height:520px;display:flex;align-items:flex-end}
+.hero2 .in{position:relative;z-index:2;padding:56px;display:flex;flex-direction:column;gap:var(--s5);max-width:58%;min-width:0}
+.hero2 h1{font-size:clamp(2.75rem,5.4vw,5rem);line-height:.98;letter-spacing:-.05em;color:var(--ink);max-width:12ch}
+.hero2 h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.1em;margin-bottom:-.1em} .hero2 h1 .w>span{display:inline-block}
+main.play .hero2 h1 .w>span{animation:rise .95s cubic-bezier(.2,.75,.1,1) both;animation-delay:calc(var(--i) * 55ms + 80ms)}
+.hero2 p.muted{font-size:18px;line-height:1.55;max-width:44ch}
+.hero2 .row{gap:var(--s3)}
+.hero2 .tiles{left:48%;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 26%);mask-image:linear-gradient(90deg,transparent 0,#000 26%)}
+.hero2 .tiles span{width:clamp(56px,calc(var(--s) * .6),168px)}
+.hero2 .tiles.orbit span{margin:calc(clamp(56px,calc(var(--s) * .6),168px) / -2) 0 0 calc(clamp(56px,calc(var(--s) * .6),168px) / -2)}
+.hero2 .tiles i{box-shadow:0 24px 48px -32px rgba(0,60,59,.45)}
+.hero2 .stats{display:flex!important;flex-direction:row!important;flex-wrap:wrap;gap:var(--s2)!important}
+.hero2 .stat{background:#fff!important;border:1px solid var(--line)!important;box-shadow:none!important;border-radius:999px!important;min-height:44px;margin:0!important;padding:0 var(--s4)!important;display:flex;flex-direction:row-reverse;align-items:center;gap:var(--s2)}
+.hero2 .stat b{font-size:16px;font-weight:800} .hero2 .stat span{color:var(--muted);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.hero2 .field input{background:#fff}
+@media (prefers-reduced-motion:reduce){main.play .hero2 h1 .w>span{animation:none}}
+
+/* Markets: bento of hero + number of the day + today's news mix */
+.bento{display:grid;grid-template-columns:minmax(0,1.9fr) minmax(0,1fr);grid-auto-rows:auto;gap:var(--s4)}
+.bento .hero2{grid-row:span 2;min-height:600px}
+.bento .hero2 .in{max-width:66%;padding:48px} .bento .hero2 .tiles{left:56%}
+.bcard{border-radius:var(--r-xl);padding:var(--s6);display:flex;flex-direction:column;gap:var(--s3);min-width:0}
+.bnum2{background:var(--ink);color:#fff;justify-content:flex-end}
+.bnum2 em{font-style:normal;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--mint2);margin-bottom:auto}
+.bnum2 b{font-size:clamp(3.5rem,6vw,5.5rem);font-weight:800;letter-spacing:-.05em;line-height:.95;font-variant-numeric:tabular-nums;color:#fff;padding-top:var(--s5)}
+.bnum2 span{color:rgba(230,247,244,.8);font-size:15px;line-height:1.5;font-weight:600;max-width:30ch}
+.bpulse{background:#fff;border:1px solid var(--line)}
+.bpbig{font-size:2rem;font-weight:800;letter-spacing:-.035em;line-height:1.1;color:var(--ink)}
+.bpmeta{font-size:14px;font-weight:600;color:var(--muted)}
+.bpbars{display:flex;flex-direction:column;gap:var(--s3);margin-top:var(--s2)}
+.bpbar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px var(--s3);font-size:14px;font-weight:700;color:var(--ink)}
+.bpbar .n{color:var(--muted);font-variant-numeric:tabular-nums}
+.bpbar i{grid-column:1/-1;height:6px;border-radius:99px;background:var(--tint2);overflow:hidden}
+.bpbar i::after{content:"";display:block;height:100%;width:var(--w);border-radius:inherit;background:var(--brand2)}
+@media (max-width:960px){.bento{grid-template-columns:minmax(0,1fr) minmax(0,1fr)} .bento .hero2{grid-column:1/-1;grid-row:auto}}
+
+/* sub-navigation */
+.seg{background:var(--tint)!important;padding:6px!important;border-radius:999px;gap:4px}
+.seg button{font-size:15px!important;min-height:44px;padding:0 20px!important;font-weight:700;color:var(--muted)}
+.seg button.on{background:#fff;color:var(--ink);box-shadow:0 0 0 1px var(--line)}
+
+/* The Brief: a one-line lead, then four equal story cards */
+.panel.brief{border:0;padding:0;background:none;border-radius:0;gap:var(--s5)}
+.brief .bhead{display:flex;flex-direction:column;align-items:flex-start;gap:var(--s3);padding:40px;border-radius:var(--r-xl);background:var(--tint)}
+.brief .bline{font-size:clamp(1.4rem,2.4vw,2rem);font-weight:800;line-height:1.25;letter-spacing:-.03em;max-width:38ch;color:var(--ink)}
+.brief .stories{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:var(--s4);counter-reset:st}
+.brief .stories .story{grid-column:auto!important}
+.brief .stories .story h3{font-size:1.4rem!important;padding-right:var(--s7)}
+.story{border:1px solid var(--line);box-shadow:none;border-radius:var(--r-lg);padding:var(--s6);gap:var(--s4);counter-increment:st;position:relative}
+.story::before{content:counter(st,decimal-leading-zero);position:absolute;top:28px;right:32px;font-weight:800;font-size:14px;letter-spacing:.04em;color:var(--brand2)}
+.story .q{gap:6px} .story .q + .q{border-top:1px solid var(--line);padding-top:var(--s4)}
+.story .q.care{border-top:0;background:var(--tint);border-radius:16px;padding:var(--s4) 20px}
+.story .q b{color:var(--brand);font-size:11.5px}
+.story .q p{font-size:15px;line-height:1.6;color:#1E4846}
+.brief > .row h2{font-size:clamp(2rem,3.4vw,3rem)!important}
+
+/* footer: one dark card with the stepped mark, instead of the hero headline twice */
+.fcta{border-top:0!important;padding:0 var(--s5)}
+.fcta .in{max-width:1152px;margin:0 auto 96px;background:var(--ink);border-radius:var(--r-xl);padding:72px 64px;color:#fff;position:relative;overflow:hidden;gap:var(--s5)}
+.fcta .in > *{position:relative;z-index:1}
+.fcta .mega{color:#fff!important;font-size:clamp(2.25rem,4.6vw,4rem);font-weight:800;letter-spacing:-.045em;line-height:1;max-width:14ch}
+.fcta .eyebrow{color:var(--mint2)!important}
+.fcta p{color:rgba(230,247,244,.8)!important}
+.fcta .btn.primary{background:#fff!important;border-color:#fff!important;color:var(--ink)!important}
+.fcta .btn.primary:hover{background:var(--mint2)!important;border-color:var(--mint2)!important}
+.fcta .in > .fmark{position:absolute;z-index:0;right:-40px;bottom:-60px;width:min(420px,48%);height:auto}
+.fcta .fmark rect{fill:var(--brand)} .fcta .fmark rect:nth-child(n+4){fill:var(--brand2)} .fcta .fmark rect:nth-child(6){fill:var(--mint)}
+.fbot .in{max-width:1200px}
+
+@media (max-width:760px){
+  .wrap{padding-inline:var(--s4)} main.wrap{gap:var(--s7)!important}
+  .hero2{display:block;min-height:0} .hero2 .in,.bento .hero2 .in{max-width:100%;padding:var(--s6) var(--s5) 210px}
+  .hero2 .tiles{left:0;top:auto;height:200px;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 30%);mask-image:linear-gradient(180deg,transparent 0,#000 30%)}
+  .bento{grid-template-columns:minmax(0,1fr)}
+  .bcard{padding:var(--s5)} .panel{padding:var(--s5)}
+  .brief .stories{grid-template-columns:minmax(0,1fr)!important} .brief .bhead{padding:var(--s5)} .story{padding:var(--s5)} .story::before{top:22px;right:24px}
+  .fcta{padding:0 var(--s4)} .fcta .in{padding:48px 24px 160px;margin-bottom:64px} .fcta .in > .fmark{width:200px;right:-20px;bottom:-30px}
+  .seg button{padding:0 14px!important;font-size:14px!important}
+}
+
+/* ===================== PaperMint v8: Front page =====================
+   White and editorial. The lettering is the hero, a dateline between rules, the day's line with a mint highlighter, lots of air. */
+:root{--page:#FFFFFF;--ink:#003C3B;--ink2:#0F5854;--muted:#4D716E;--line:#D7ECE7;--mint:#5BC8B6;--mint2:#8DE6D8;--mint3:#DDF3EF;--tint:#F4FAF8;--f-serif:"Instrument Serif",Georgia,serif}
+html,body{background:#FFFFFF!important;color:var(--ink)}
+#preload{background:#FFFFFF!important}
+#preload .pwm{font:800 34px/1 var(--f-body);letter-spacing:-.035em;color:var(--ink);animation:pmfade 1s ease-in-out infinite alternate}
+#preload .pwm em{font-family:var(--f-serif);font-style:italic;font-weight:400;font-size:1.14em;color:var(--mint)}
+@keyframes pmfade{from{opacity:.45}to{opacity:1}}
+header.top,body.solid header.top{background:#FFFFFF!important;border-bottom:1px solid var(--line)!important}
+.logo{gap:0!important} .logo .wm{font-size:21px;font-weight:800;letter-spacing:-.035em;color:var(--ink)}
+.logo .wm em,h1 em,h2 em{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing:-.01em}
+.logo .wm em{font-size:1.14em;color:var(--mint)}
+/* labels: sentence case, no bullets, no numbering */
+.eyebrow::before{display:none!important}
+.eyebrow{text-transform:none!important;letter-spacing:0!important;font-size:14px!important;font-weight:600!important;color:var(--ink2)!important}
+.sechead .eyebrow,.bhead .eyebrow,.hero2 .eyebrow{display:none!important}
+.label{text-transform:none!important;letter-spacing:0!important;font-size:13px!important;font-weight:600!important;color:var(--muted)!important}
+.story::before{display:none!important}
+.story .q b{text-transform:none!important;letter-spacing:0!important;font-size:13px!important;font-weight:700!important;color:var(--ink2)!important}
+/* Markets: the front page */
+.mast{display:flex;flex-direction:column;container-type:inline-size;padding-top:8px}
+.mastword{margin:0;font-size:clamp(3.6rem,15cqi,13rem);font-weight:800;letter-spacing:-.07em;line-height:.86;color:var(--ink);white-space:nowrap}
+.mastword em{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing:-.03em;color:var(--mint)}
+.dateline{display:flex;justify-content:space-between;gap:8px 16px;flex-wrap:wrap;margin-top:22px;padding-block:12px;border-block:1px solid var(--line);font-size:14px;font-weight:600;color:var(--muted)}
+.mcols{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:48px;padding-top:32px;align-items:start}
+.mlead{margin:0;font-size:clamp(1.6rem,3.1vw,2.6rem);font-weight:800;letter-spacing:-.035em;line-height:1.14;color:var(--ink);text-wrap:balance}
+.mlead mark{color:inherit;background:linear-gradient(transparent 55%,var(--mint2) 55%,var(--mint2) 92%,transparent 92%) no-repeat 0 0/0% 100%;animation:pmhl 1.6s cubic-bezier(.6,0,.2,1) .5s forwards}
+@keyframes pmhl{to{background-size:100% 100%}}
+.mside{display:flex;flex-direction:column;gap:14px;font-size:16px;line-height:1.55;color:var(--muted)} .mside b{color:var(--ink);font-weight:700}
+.mside .row{margin-top:6px;gap:12px}
+/* other tabs: a section head in the same voice */
+.hero2.paperhead{background:none!important;border:0!important;border-radius:0!important;min-height:0!important;display:block;overflow:visible}
+.hero2.paperhead::after{display:none}
+.hero2.paperhead .in{transform:none!important;opacity:1!important}
+.hero2.paperhead .in{max-width:none!important;padding:16px 0 28px!important;border-bottom:1px solid var(--line);gap:var(--s5)}
+.hero2.paperhead h1{font-size:clamp(2.75rem,6.2vw,5.5rem)!important;line-height:.95;letter-spacing:-.05em;color:var(--ink)!important;max-width:14ch}
+.hero2.paperhead h1 em{display:block;color:var(--ink2)}
+.hero2.paperhead p.muted{color:var(--muted)!important;max-width:60ch}
+.hero2 .stat span{text-transform:none!important;letter-spacing:0!important;font-size:13px!important;font-weight:600!important}
+.hero2 .stat span::first-letter{text-transform:uppercase}
+/* footer: a light CTA in the same voice */
+.fcta{background:#FFFFFF!important;border-top:0!important}
+.fcta .in{background:var(--tint)!important;background-image:none!important;color:var(--ink);border:1px solid var(--line);padding:56px 56px!important}
+.fcta .mega{color:var(--ink)!important;font-size:clamp(2rem,4vw,3.25rem);max-width:16ch}
+.fcta .mega em{display:block;color:var(--ink2)}
+.fcta p{color:var(--muted)!important}
+.fcta .btn.primary{background:var(--ink)!important;border-color:var(--ink)!important;color:#FFFFFF!important}
+.fhead{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:var(--s7);align-items:end;width:100%}
+.fcopy,.fside{display:flex;flex-direction:column;gap:var(--s5);align-items:flex-start;min-width:0}
+.fbot h4{text-transform:none!important;letter-spacing:0!important;font-family:var(--f-serif)!important;font-style:italic;font-weight:400!important;font-size:18px!important;color:var(--ink2)!important}
+@media (max-width:760px){
+  .mcols,.fhead{grid-template-columns:minmax(0,1fr);gap:24px}
+  .fcta .in{padding:40px 24px!important}
+}
+@media (prefers-reduced-motion:reduce){.mlead mark{animation:none;background-size:100% 100%} #preload .pwm{animation:none}}
+@media (max-width:760px){
+  .hero2.bleed{min-height:0}
+  .hero2.bleed .in{padding:calc(var(--hh) + 40px) var(--s4) 56px!important}
+  .hglobe{width:115vw;right:-45%;top:auto;bottom:-25%;transform:none;opacity:.45}
+}
+@media (prefers-reduced-motion:reduce){.hero2.bleed::before,#preload .pwm{animation:none}}
+
+/* ===================== PaperMint v9: chrome ribbons + open sections =====================
+   One fixed WebGL layer behind every page (RIBBONS). Sections are open, no cards: a hairline that draws itself, a big title, lists. */
+.ribbons{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;display:block;
+  filter:blur(calc(var(--b,0) * 8px));opacity:calc(1 - var(--b,0) * .42)}
+.ribbons.still{position:absolute;height:100vh}
+main.wrap,footer.foot{position:relative;z-index:1}
+footer.foot{background:#FFFFFF}
+.mband{height:clamp(200px,40vh,420px);margin-block:-8px 0}
+.mast .dateline{margin-top:0;background:rgba(255,255,255,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+/* open sections: a rule, a big title */
+section.cy{position:relative;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:40px 0 0!important}
+section.cy::before,.brief .story.cy::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:var(--ink);opacity:.18;transform-origin:0 50%;transform:scaleX(0);transition:transform 1.2s cubic-bezier(.6,0,.2,1)}
+section.cy.on::before,.brief .story.cy.on::before{transform:scaleX(1)}
+.pillgrid .sechead h2,.brief > .row h2{font-size:clamp(2.6rem,6.4vw,5.5rem)!important;font-weight:800;letter-spacing:-.055em;line-height:.95;color:var(--ink)}
+.brief > .row{align-items:flex-end!important;padding-bottom:16px}
+/* the Brief: a list, not cards */
+.brief .stories{display:flex!important;flex-direction:column;gap:0!important}
+.brief .story{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:14px 64px;align-items:start;
+  background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:40px 0!important}
+.brief .story::before{display:block!important}
+.brief .story > .meta{grid-column:1;grid-row:1}
+.brief .story > h3{grid-column:1;grid-row:2 / span 4;margin:0;font-size:clamp(1.6rem,2.7vw,2.5rem);font-weight:800;letter-spacing:-.04em;line-height:1.06;color:var(--ink);text-wrap:balance}
+.brief .story > .q,.brief .story > .acts{grid-column:2}
+.brief .story .q p{color:var(--muted)}
+.brief .story .q.care{background:none!important;border-radius:0;padding:2px 0 2px 16px!important;border-left:2px solid var(--mint)}
+.brief .story .meta span{display:inline-flex;align-items:center;background:var(--ink);color:#FFFFFF;font-size:12px;font-weight:600;padding:3px 8px;border-radius:4px}
+.brief .story .q,.brief .story .acts,.brief .story > h3,.brief .story > .meta{transition:opacity .7s ease .15s,transform .7s cubic-bezier(.2,.7,.2,1) .15s}
+.brief .story.cy:not(.on) > *{opacity:0;transform:translateY(16px)}
+.fcta .in{background:rgba(244,250,248,.85)!important;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+@media (max-width:760px){
+  .mband{height:30vh}
+  .brief .story{grid-template-columns:minmax(0,1fr);gap:12px}
+  .brief .story > .meta,.brief .story > h3,.brief .story > .q,.brief .story > .acts{grid-column:1;grid-row:auto}
+}
+@media (prefers-reduced-motion:reduce){section.cy::before,.brief .story.cy::before{transition:none;transform:none} .brief .story.cy > *{opacity:1!important;transform:none!important;transition:none}}
+
+/* scroll storytelling: a few scrubbed moments (--sp goes 0→1 as the element crosses the viewport; without JS or with reduced motion it stays at the final state) */
+.hero2 .in{transform:translate3d(0,calc(var(--p,0) * -60px),0);opacity:clamp(0,1.35 - var(--p,0) * 1.4,1)}
+.bline[data-scrub] .w>span,.bline[data-scrub] .sw{opacity:clamp(.18,calc(var(--sp,1) * (var(--n,1) + 4) - var(--i,0)),1);transition-property:opacity,transform}
+.faq[data-scrub]{position:relative;padding-left:var(--s5)}
+.faq[data-scrub]::before,.faq[data-scrub]::after{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;border-radius:2px;background:var(--line)}
+.faq[data-scrub]::after{background:linear-gradient(#5BC8B6,#1F7F7C);transform-origin:top;transform:scaleY(var(--sp,1))}
+.pslides[data-scrub]>*,.slides[data-scrub]>*{transform:translate3d(0,calc((1 - var(--sp,1)) * (28px + var(--i,0) * 18px)),0) rotate(calc((1 - var(--sp,1)) * (var(--i,0) - 1) * 1.6deg))}
+/* tab change: the page underneath cross-fades and rises; menu and ticker stay put */
+header.top{view-transition-name:hdr} .ticker{view-transition-name:tick}
+::view-transition-old(root){animation:vtout .2s ease both} ::view-transition-new(root){animation:vtin .45s cubic-bezier(.2,.7,.2,1) both}
+@keyframes vtout{to{opacity:0}} @keyframes vtin{from{opacity:0;transform:translateY(14px)}}
+@media (prefers-reduced-motion:reduce){.hero2 .in{transform:none;opacity:1} ::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}}
 </style>
 
-<div id="preload" aria-hidden="true"><svg class="mk" viewBox="0 0 24 24" width="48" height="48" aria-hidden="true"><rect x="0" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:0"/><rect x="8" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:1"/><rect x="16" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:2"/><rect x="8" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:3"/><rect x="16" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:4"/><rect x="16" y="2" width="6.4" height="6.4" rx="1.3" fill="#3AA89C" style="--i:5"/></svg></div>
+<div id="preload" aria-hidden="true"><span class="pwm">Paper<em>Mint</em></span></div>
 <header class="top"><div class="wrap">
-  <div class="logo"><svg class="mark" viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="0" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:0"/><rect x="8" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:1"/><rect x="16" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:2"/><rect x="8" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:3"/><rect x="16" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:4"/><rect x="16" y="2" width="6.4" height="6.4" rx="1.3" fill="#3AA89C" style="--i:5"/></svg>MINT</div>
-  <nav class="tabs"><button class="tab on" data-tab="mkt" type="button">Markets</button><button class="tab" data-tab="ask" type="button"><span class="lg-only">Ask MINT</span><span class="sm-only">Ask</span></button><button class="tab" data-tab="lib" type="button">Library</button><button class="tab" data-tab="studio" type="button">Studio</button></nav><button class="aikey-top" id="aikeyTop" type="button" hidden><i></i><span>AI key</span></button>
+  <div class="logo"><span class="wm">Paper<em>Mint</em></span></div>
+  <nav class="tabs"><button class="tab on" data-tab="mkt" type="button">Markets</button><button class="tab" data-tab="ask" type="button"><span class="lg-only">Ask</span><span class="sm-only">Ask</span></button><button class="tab" data-tab="lib" type="button">Library</button><button class="tab" data-tab="studio" type="button">Studio</button></nav><button class="aikey-top" id="aikeyTop" type="button" hidden><i></i><span>AI key</span></button>
 </div></header>
 <div class="ticker" id="ticker" aria-label="Market ticker"></div>
 <main class="wrap" id="main"></main>
 <footer class="foot">
   <section class="fcta"><div class="in">
-    <span class="eyebrow">Made for everyday savers</span>
-    <h2 class="mega">A fresh take on finance.</h2>
-    <p style="color:rgba(230,241,243,.75);max-width:46ch;font-size:1.0625rem;line-height:1.55">Read what moved today, see what it means for your money, then turn it into content in minutes.</p>
-    <button class="btn primary owner-only" data-tab="studio" type="button">Open the Studio</button><button class="btn primary guest-only" data-tab="mkt" type="button">Read today's Brief</button>
+    <div class="fhead">
+      <div class="fcopy"><h2 class="mega">Money news, <em>minus the jargon.</em></h2></div>
+      <div class="fside"><p>Read what moved today, see what it means for your money, then turn it into content in minutes.</p>
+        <div class="row"><button class="btn primary owner-only" data-tab="studio" type="button">Open the Studio</button><button class="btn primary guest-only" data-tab="mkt" type="button">Read today's Brief</button></div></div>
+    </div>
   </div></section>
   <div class="fbot"><div class="in">
-    <div><div class="logo"><svg class="mark" viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="0" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:0"/><rect x="8" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:1"/><rect x="16" y="18" width="6.4" height="6.4" rx="1.3" fill="#003C3B" style="--i:2"/><rect x="8" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:3"/><rect x="16" y="10" width="6.4" height="6.4" rx="1.3" fill="#1F7F7C" style="--i:4"/><rect x="16" y="2" width="6.4" height="6.4" rx="1.3" fill="#3AA89C" style="--i:5"/></svg>MINT</div><p>A daily, plain-English read of the financial news, built as a Nova SBE project for the course "Boosting productivity with AI".</p></div>
-    <div><h4>Explore</h4><ul><li><button class="flink" data-tab="mkt" type="button">Markets</button></li><li><button class="flink" data-tab="ask" type="button">Ask MINT</button></li><li><button class="flink" data-tab="lib" type="button">Library</button></li><li><button class="flink" data-tab="studio" type="button">Studio</button></li></ul></div>
+    <div><div class="logo"><span class="wm">Paper<em>Mint</em></span></div><p>A daily, plain-English read of the financial news, built as a Nova SBE project for the course "Boosting productivity with AI".</p></div>
+    <div><h4>Explore</h4><ul><li><button class="flink" data-tab="mkt" type="button">Markets</button></li><li><button class="flink" data-tab="ask" type="button">Ask PaperMint</button></li><li><button class="flink" data-tab="lib" type="button">Library</button></li><li><button class="flink" data-tab="studio" type="button">Studio</button></li></ul></div>
     <div><h4>Sources</h4><ul><li>Bloomberg · Financial Times</li><li>WSJ · The Economist</li><li>CNBC · MarketWatch · BBC</li><li>ECB · Fed · Eurostat · INE</li></ul></div>
     <div><h4>Good to know</h4><ul><li>Educational only</li><li>No buy or sell calls</li><li>Capital at risk</li></ul></div>
-    <div class="flegal"><span>Educational content generated from public news. Not investment advice. Past performance is not a guide to future returns.</span><span>© 2026 MINT · <button class="flink owlink" id="owLogin" type="button">Owner</button></span></div>
+    <div class="flegal"><span>Educational content generated from public news. Not investment advice. Past performance is not a guide to future returns.</span><span>© 2026 PaperMint · <button class="flink owlink" id="owLogin" type="button">Owner</button></span></div>
   </div></div>
 </footer>
 <div class="toast" id="toast" hidden></div>
@@ -757,8 +978,11 @@ let tab="mkt";
 const st = { input: ls.get("radar-input",""), level:"beginner", formats:new Set(["carousel","reel"]), ideas:null, sel:null, content:null, busy:null, err:"", t0:0, ideaMs:0, contentMs:0, pieceId:null, openPiece:null, newsDay:null, picked:new Set(), cat:"", src:"", lang:"en", tone:"playful", own:"", done:0, nmore:false };
 const baseline = () => +ls.get("radar-baseline","120") || 120;
 
-document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>{ if(!OWNER && (b.dataset.tab==="studio"||b.dataset.tab==="lib")){ if(window.MINT_LOGIN) window.MINT_LOGIN(); return; } tab=b.dataset.tab; st.openPiece=null; animateNext=true; window.scrollTo({top:0}); document.querySelectorAll(".tab[data-tab]").forEach(x=>x.classList.toggle("on",x.dataset.tab===tab)); render(); });
+document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>{ if(!OWNER && (b.dataset.tab==="studio"||b.dataset.tab==="lib")){ if(window.MINT_LOGIN) window.MINT_LOGIN(); return; } tab=b.dataset.tab; st.openPiece=null; animateNext=true;
+  const swap=()=>{ window.scrollTo({top:0}); document.querySelectorAll(".tab[data-tab]").forEach(x=>x.classList.toggle("on",x.dataset.tab===tab)); render(); };
+  if(document.startViewTransition && !matchMedia("(prefers-reduced-motion: reduce)").matches){ vtOn=true; document.startViewTransition(swap).finished.finally(()=>vtOn=false); } else swap(); });
 
+let vtOn=false;
 /* ---------- Render ---------- */
 function stats(){
   const n=S.pieces.length; const avg = n ? S.pieces.reduce((a,p)=>a+(p.totalMs||0),0)/n : 0;
@@ -769,9 +993,9 @@ function stats(){
     <div class="stat"><b>${n?Math.round(saved/3600000*10)/10+" h":"—"}</b><span>saved vs. ${baseline()} min by hand</span></div></div>`;
 }
 function vStudio(){
-  let h = `<section class="bleed dhero">${tilesHTML(2)}<div class="in">
+  let h = `<section class="hero2 paperhead">${tilesHTML(2)}<div class="in">
       <span class="eyebrow">Content studio</span>
-      <h1>From today's news to content ready to post.</h1>
+      <h1 data-split="1" aria-label="From today's news to content ready to post."><span aria-hidden="true">From today's news</span> <em aria-hidden="true">to content ready to post.</em></h1>
       <p class="muted">Pick some news or write your own topic. The Studio suggests ideas and writes Instagram posts, LinkedIn posts and articles, opinion pieces, PowerPoint decks and newsletters, with a regulatory check built in.</p>${window.RADAR_AI_KEY?`<button class="btn small" id="aikey" type="button" style="align-self:flex-start">AI key</button>`:""}${stats()}</div></section>
   ${vPack()}
   ${vNews()}
@@ -892,8 +1116,8 @@ function vLib(){
   if(st.openPiece){ const p=S.pieces.find(x=>x.id===st.openPiece); if(p) return `<button class="btn small" id="back" type="button" style="align-self:flex-start">← Library</button>
     <section class="panel"><span class="label">${esc(new Date(p.createdAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric"}))}</span><h1>${esc(p.idea?.title)}</h1><p class="muted">${esc(p.idea?.hook)}</p></section>`+vContent(p.content,{total:p.totalMs}); }
   const list=[...S.pieces].sort((a,b)=>(b.createdAt||0)-(a.createdAt||0));
-  return `<section class="bleed dhero">${tilesHTML(3)}<div class="in"><span class="eyebrow">Library</span><h1>Everything you've made</h1>
-    <label class="field" style="max-width:320px"><span class="label">How long a post takes you without MINT (min)</span><input id="base" type="number" min="5" step="5" value="${baseline()}"></label>${stats()}</div></section>
+  return `<section class="hero2 paperhead">${tilesHTML(3)}<div class="in"><span class="eyebrow">Library</span><h1 data-split="1" aria-label="Everything you've made"><span aria-hidden="true">Everything</span> <em aria-hidden="true">you've made.</em></h1>
+    <label class="field" style="max-width:320px"><span class="label">How long a post takes you without PaperMint (min)</span><input id="base" type="number" min="5" step="5" value="${baseline()}"></label>${stats()}</div></section>
     ${!S.persistent?`<p class="notice">This view keeps your pieces in this browser only.</p>`:""}
     ${list.length?`<section class="panel"><div class="lib">${list.map(p=>`<button class="librow" data-piece="${esc(p.id)}" type="button"><span class="mono muted">${esc(new Date(p.createdAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}</span><span style="min-width:0"><b>${esc(p.idea?.title)}</b><div class="muted" style="font-size:.88rem">${esc(Object.keys(p.content||{}).filter(k=>k!=="compliance").map(k=>FORMATS.find(f=>f[0]===k)?.[1]).filter(Boolean).join(" · "))}</div></span><span class="pill ${(+p.content?.compliance?.score||0)>=85?"":(+p.content?.compliance?.score||0)>=60?"warn":"bad"}">${esc(p.content?.compliance?.score??"—")}</span></button>`).join("")}</div></section>`
     :`<div class="empty"><h2>Nothing here yet</h2><p class="muted">Every piece you create in the Studio is saved here, with how long it took and its compliance score.</p><button class="btn primary" id="tostudio" type="button" style="align-self:flex-start">Go to the Studio</button></div>`}`;
@@ -956,7 +1180,7 @@ function vFaq(){
 }
 function vAsk(){
   const day=latestDay();
-  let h = `<section class="bleed dhero">${tilesHTML(4)}<div class="in"><span class="eyebrow">Ask MINT</span><h1>Ask anything about today's money news.</h1><p class="muted">Answers use the stories collected today and the verified indicators. Scenarios and risks, never buy or sell calls.</p></div></section>`;
+  let h = `<section class="hero2 paperhead">${tilesHTML(4)}<div class="in"><span class="eyebrow">Ask PaperMint</span><h1 data-split="1" aria-label="Ask anything about today's money news."><span aria-hidden="true">Ask anything</span> <em aria-hidden="true">about today's money news.</em></h1><p class="muted">Answers use the stories collected today and the verified indicators. Scenarios and risks, never buy or sell calls.</p></div></section>`;
   h += vFaq();
   h += `<section class="panel askbox"><div class="ptitle"><h2>Your question</h2></div>
     <p class="muted" style="font-size:.9rem">Ask anything about today's markets. The answer uses the collected news and shows scenarios and risks, never buy or sell calls.</p>
@@ -968,23 +1192,35 @@ function vAsk(){
     <div id="mans" class="answer" ${mk.answer?"":"hidden"}>${md(mk.answer)}</div></section>`;
   return h;
 }
+function hlLead(t){ const e=md(t); if(e.includes("<b>")) return e.replace(/<b>(.+?)<\/b>/,'<mark>$1</mark>');
+  const m=e.match(/\b(while|as|despite|after|amid|because)\s+((?:[^\s,.;]+\s+){0,3}[^\s,.;]+)/i); if(m) return e.replace(m[2],`<mark>${m[2]}</mark>`);
+  const w=e.split(" "); return `<mark>${w.slice(0,3).join(" ")}</mark> ${w.slice(3).join(" ")}`; }
 function vMarkets(){
   const day=latestDay(); const ins0 = day ? S.insights.find(i=>i.id===day.id) : null; const ins = ins0 && (ins0.classes||[]).length ? ins0 : null;
   const stale = ins && day.collectedAt && ins.basedOn < day.collectedAt;
   const when = d => new Date(d).toLocaleString("en-GB",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"});
   const iPT=indGet("inf_pt"), dPT=indGet("dep_pt");
-  const head = "A fresh take on finance.";
+  const head = "Finance news, freshly minted.";
   const sub = iPT&&dPT ? `Inflation at ${fmtNum(iPT.value,iPT.dec)}%, term deposits at ${fmtNum(dPT.value,dPT.dec)}%.` : "What today's news says about each type of investment.";
   const SUBS=[["brief","The Brief"],["hoje","Daily map"],["mes","Month"],["sim","Simulator"]]; mk.sub=mk.sub||"brief"; if(mk.sub==="perg") mk.sub="brief";
   const bb=ins0?.brief; const gNum = bb?.number?.value || (iPT?fmtNum(iPT.value,iPT.dec)+"%":""); const gCap = bb?.number?.value ? (bb.number.caption||"") : (iPT?`${indLabel(iPT)} · ${perEN(iPT.period)}`:"");
   const meta = `${day?`${(day.items||[]).length} stories from ${(day.sources||[]).length} sources`:"Waiting for the first collection"}${S.ind?` · indicators verified ${esc(new Date(S.ind.updatedAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}`:""}${day&&day.collectedAt?` · news at ${esc(new Date(day.collectedAt).toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"}))}`:""}`;
-  let h = `<section class="bleed dhero mk">${tilesHTML(1)}<div class="in">
-      <span class="eyebrow">MINT · ${esc(new Date().toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"}))}</span>
-      <div class="hgrid"><h1>${esc(head)}</h1></div>
-      <div class="hfoot"><div style="display:flex;flex-direction:column;gap:var(--s2)"><p class="muted">${esc(sub)}</p><span class="meta">${meta}</span></div>
-        <div class="row"><button class="btn primary" type="button" data-jump=".seg" data-go="brief">Read The Brief</button><button class="godown" type="button" data-jump=".pillgrid" aria-label="Scroll to the indicators">↓</button></div></div>
-    </div></section>
-  <section class="pillgrid" aria-label="Verified indicators">${vPills()}</section>
+  const vals=(S.ind?.items||[]).map(x=>+x.value).filter(x=>!isNaN(x)); const lp=linePath(vals,1200,600);
+  const inds=(S.ind?.items||[]).slice(0,8); const one=bb?.one_liner||""; const WM=worldModel(), mv=WM.mover;
+  const GLY={up:"▲",down:"▼",mixed:"◆",flat:"–"}, MOOD={calm:"Calm",changeable:"Changeable",stormy:"Stormy"};
+  const nS=day?(day.items||[]).length:0, nSrc=day?(day.sources||[]).length:0, TW={up:"rising",down:"falling",mixed:"mixed",flat:"steady"};
+  const lead=hlLead(one||"What today's news means for your money, in plain English.");
+  let h = `<section class="mast" aria-label="Today's front page">
+    <h1 class="mastword" data-split="1" aria-label="PaperMint"><span aria-hidden="true">Paper</span><em aria-hidden="true">Mint</em></h1>
+    <div class="mband" aria-hidden="true"></div>
+    <div class="dateline"><span>${esc(new Date().toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long",year:"numeric"}))}</span><span>${day?`${nS} stories · ${nSrc} sources`:"Collecting today's stories"}</span><span>Educational, never advice</span></div>
+    <div class="mcols"><p class="mlead">${lead}</p>
+      <div class="mside">${gNum?`<span><b>Number of the day:</b> ${esc(gNum)}${gCap?` · ${esc(gCap)}`:""}</span>`:""}
+        ${mv&&!mv.news?`<span><b>Biggest move:</b> ${esc(mv.name)}, ${TW[mv.trend]||"steady"}.</span>`:""}
+        <span>${esc(sub)}</span>
+        <div class="row"><button class="btn primary" type="button" data-jump=".seg" data-go="brief">Read The Brief</button><button class="btn" type="button" data-jump=".pillgrid">See the indicators</button></div></div></div>
+  </section>
+  <section class="pillgrid" aria-label="Verified indicators"><div class="sechead"><div><h2>Verified indicators</h2></div>${S.ind?`<span class="muted">ECB · Eurostat · Bank of Portugal · checked ${esc(new Date(S.ind.updatedAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}</span>`:""}</div>${vPills()}</section>
   <nav class="seg" role="tablist" aria-label="Markets sections">${SUBS.map(([k,t])=>`<button type="button" role="tab" aria-selected="${mk.sub===k}" class="${mk.sub===k?"on":""}" data-sub="${k}">${t}</button>`).join("")}</nav>`;
   if(mk.sub==="hoje") h += `<section class="panel"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>Daily map</h2>
       <span class="muted" style="font-size:.86rem">${ins?`Analysis from ${esc(when(ins.generatedAt))}${stale?" · new stories since then":""}`:"No analysis for today's news yet."}</span></div>
@@ -1021,14 +1257,14 @@ function vBrief(){
   const day=latestDay(); const ins = day ? S.insights.find(i=>i.id===day.id) : null; const b=ins?.brief;
   const when = d => new Date(d).toLocaleString("en-GB",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"});
   const stale = b && day?.collectedAt && b.basedOn && b.basedOn < day.collectedAt;
-  let h = `<section class="panel"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>The Brief</h2>
+  let h = `<section class="panel brief"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>The Brief</h2>
       <span class="muted" style="font-size:.86rem">${b?`Written ${esc(when(b.generatedAt))}${stale?" · new stories since then":""}`:"Today's money news, minus the jargon."}</span></div>
       <button class="btn ${!b||stale?"primary":""}" id="bgen" type="button" ${mk.bBusy||!day?"disabled":""}>${b?"Rewrite the Brief":"Write today's Brief"}</button></div>
     ${mk.bBusy?think("Reading "+((day?.items||[]).length)+" stories and picking the ones that matter…"):""}
     ${mk.bErr?`<p class="notice">${esc(mk.bErr)}</p>`:""}`;
-  if(!b){ h += `<div class="empty"><b>No Brief yet today.</b><p class="muted">${day?"Press the button and MINT picks the four stories that matter most for everyday money, and explains each one in plain English: what's going on, what it means and why you should care.":"The Brief appears after the first news collection."}</p></div></section>`; return h; }
+  if(!b){ h += `<div class="empty"><b>No Brief yet today.</b><p class="muted">${day?"Press the button and PaperMint picks the four stories that matter most for everyday money, and explains each one in plain English: what's going on, what it means and why you should care.":"The Brief appears after the first news collection."}</p></div></section>`; return h; }
   const items=day.items||[];
-  h += `<div class="bhead"><p class="bline">${md(b.one_liner||"")}</p>${b.number?.value?`<div class="bnum"><em>Number of the day</em><b>${esc(b.number.value)}</b><span>${esc(b.number.caption||"")}</span></div>`:""}</div>
+  h += `
     <div class="stories">${(b.stories||[]).map((x,k)=>{ const it=items[(+x.i||0)-1]||{}; return `<article class="story">
       <div class="meta">${it.source?srcTile(it.source):""}<span>${esc(srcEN(it.source||""))}${it.category?" · "+esc(catEN(it.category)):""}</span></div>
       <h3>${esc(x.title)}</h3>
@@ -1374,7 +1610,7 @@ async function ask(){
   if(!sample){ mk.qErr="AI is not available right now."; return render(); }
   const ins=S.insights.find(i=>i.id===day.id);
   mk.qBusy=true; mk.qErr=""; mk.answer=""; mk.ctl=new AbortController(); render();
-  const prompt = `You are MINT's financial-literacy assistant. You answer in clear British English, in a fair and balanced way, for people learning to invest. Light, friendly wit is welcome; never at the expense of accuracy.
+  const prompt = `You are PaperMint's financial-literacy assistant. You answer in clear British English, in a fair and balanced way, for people learning to invest. Light, friendly wit is welcome; never at the expense of accuracy.
 Rules: no personal recommendations or buy/sell calls, name no products, companies or specific funds, promise no returns. Explain scenarios, what today's news shows, the risks, and why time horizon, diversification and an emergency fund matter. Quote numbers from the news where they help. Maximum 220 words, short paragraphs, you may use **bold**. End with one short sentence reminding the reader this is educational information, not personal advice.
 
 ${indText()}${ins?"Daily map:\n"+ins.resumo+"\n"+(ins.classes||[]).map(c=>`- ${clsEN(c.nome)}: ${c.tendencia}. ${c.leitura}`).join("\n")+"\n\n":""}News from ${day.date}:
@@ -1431,9 +1667,9 @@ function vRoutine(){
   const weekN=days.filter(d=>d.n>=3).length; const doneN=todayDone.filter(Boolean).length;
   const wk=weekId(today); const sig=R.data.signals||{}; const weeks=Object.keys(sig).sort().reverse().slice(0,6); if(!weeks.includes(wk)) weeks.unshift(wk);
   const mins = R.timer ? `${String(Math.floor(R.left/60)).padStart(2,"0")}:${String(R.left%60).padStart(2,"0")}` : "15:00";
-  return `<section class="bleed dhero">${tilesHTML(5)}<div class="in"><span class="eyebrow">Engagement routine · Instagram and LinkedIn</span>
-      <h1>15 minutes a day, always in the same window.</h1>
-      <p class="muted">Replying and commenting is what grows an account most, but only if it's a habit you can keep. The routine is short on purpose. MINT doesn't post or read your messages: you engage in the apps and MINT helps you write the replies.</p>
+  return `<section class="hero2 paperhead">${tilesHTML(5)}<div class="in"><span class="eyebrow">Engagement routine · Instagram and LinkedIn</span>
+      <h1 data-split="1" aria-label="15 minutes a day, always in the same window."><span aria-hidden="true">15 minutes a day,</span> <em aria-hidden="true">always in the same window.</em></h1>
+      <p class="muted">Replying and commenting is what grows an account most, but only if it's a habit you can keep. The routine is short on purpose. PaperMint doesn't post or read your messages: you engage in the apps and PaperMint helps you write the replies.</p>
     <div class="stats"><div class="stat"><b>${doneN}/4</b><span>steps today</span></div><div class="stat"><b>${weekN}/5</b><span>days done this week</span></div><div class="stat"><b>${esc(win)}</b><span>your daily window</span></div></div></div></section>
   <div style="display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:20px" class="rgrid">
   <section class="panel"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>Today</h2>
@@ -1513,85 +1749,6 @@ ${R.msg.slice(0,4000)}
 }
 
 /* ---------- Motion layer (ticker, reveal, count-up, tab indicator) ---------- */
-/* Living ribbons: translucent sheets of fine strands that twist slowly, drawn with additive light
-   in the palette's teals and blues. Canvas 2D, ~30 fps, pauses off-screen, still frame for reduced motion. */
-/* Cube wall on white: a diagonal field of soft-lit cubes rippling in depth, inspired by calm institutional sites,
-   with depth (far ones smaller and paler) and soft contact shadows. Canvas 2D at full device
-   resolution, so edges stay crisp. ~30 fps, pauses off-screen, still frame for reduced motion. */
-const RIBBONS=(()=>{
-  const T0=performance.now(); let live=[], raf=0, io=null, last=0, mx=0, my=0, tx=0, ty=0;
-  const PAL=["#1F7F7C","#3AA89C","#5BC8B6","#1F6B68","#0F5854","#E6F7F4","#5BC8B6","#3AA89C"];
-  const hex=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16));
-  const mix=(a,b,k)=>a.map((v,i)=>Math.round(v+(b[i]-v)*k));
-  const css=c=>`rgb(${c[0]},${c[1]},${c[2]})`;
-  addEventListener("pointermove",e=>{ tx=e.clientX/innerWidth-.5; ty=e.clientY/innerHeight-.5; },{passive:true});
-  // Cube wall: a diagonal field of soft-lit cubes that ripple in depth, drawn with WebGL (depth buffer,
-  // device resolution, antialiasing). It is a full-bleed backdrop, so it runs off the edges on purpose.
-  function make(cv){
-    const gl=cv.getContext("webgl",{antialias:true,alpha:true,premultipliedAlpha:true}); if(!gl) return null;
-    const sd=+cv.dataset.seed||1; let q=sd*9301+49297; const R=()=>{ q=(q*9301+49297)%233280; return q/233280; };
-    const COLS=26, ROWS=14, cubes=[];
-    for(let i=0;i<COLS;i++) for(let j=0;j<ROWS;j++){ const u=i-(COLS-1)/2, v=j-(ROWS-1)/2;
-      // keep a diagonal band, ragged at the edges, like a wall breaking up
-      const band=Math.abs(v*1.0-u*.18); if(band>3.6+R()*1.4) continue;
-      cubes.push({u,v,ph:R()*6.283,amp:.25+R()*.55,lift:R()<.12?.6+R()*.8:0,tone:.965+R()*.035}); }
-    const HALF=.47;
-    const VS=`attribute vec3 p;attribute vec3 n;attribute vec2 uv;uniform vec3 off;uniform mat3 Rm;uniform vec4 P;uniform float D;varying vec3 vn;varying vec2 vuv;varying float vx;
-      void main(){vec3 w=Rm*(p*${HALF.toFixed(2)}+off);float ww=(D-w.z)/D;vn=Rm*n;vuv=uv;
-      vec4 c=vec4(P.x*ww+w.x*P.z, P.y*ww+w.y*P.w, (-w.z/60.)*ww, ww);vx=c.x/c.w;gl_Position=c;}`;
-    const FS=`precision highp float;varying vec3 vn;varying vec2 vuv;varying float vx;uniform float tone;
-      void main(){vec3 N=normalize(vn);vec3 L=normalize(vec3(-.35,.45,.82));float lam=max(dot(N,L),0.);
-      float e=max(abs(vuv.x),abs(vuv.y));float edge=smoothstep(.9,1.,e);
-      float sh=(.84+.17*lam)*tone-edge*.035;
-      vec3 cool=vec3(.86,.965,.94), warm=vec3(1.,1.,1.);
-      vec3 base=mix(warm,cool,smoothstep(-.2,1.,vx));
-      gl_FragColor=vec4(base*sh,1.);}`;
-    const shd=(t,src)=>{ const o=gl.createShader(t); gl.shaderSource(o,src); gl.compileShader(o); if(!gl.getShaderParameter(o,gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(o)); return o; };
-    const prog=gl.createProgram(); gl.attachShader(prog,shd(gl.VERTEX_SHADER,VS)); gl.attachShader(prog,shd(gl.FRAGMENT_SHADER,FS)); gl.linkProgram(prog);
-    if(!gl.getProgramParameter(prog,gl.LINK_STATUS)) return null; gl.useProgram(prog);
-    const pos=[],nor=[],uvs=[];
-    const FACES=[[[1,0,0],[0,0,-1],[0,1,0]],[[-1,0,0],[0,0,1],[0,1,0]],[[0,1,0],[1,0,0],[0,0,-1]],[[0,-1,0],[1,0,0],[0,0,1]],[[0,0,1],[1,0,0],[0,1,0]],[[0,0,-1],[-1,0,0],[0,1,0]]];
-    for(const [n,u,v] of FACES) for(const [a,b] of [[-1,-1],[1,-1],[1,1],[-1,-1],[1,1],[-1,1]]){ pos.push(...[0,1,2].map(i=>n[i]+u[i]*a+v[i]*b)); nor.push(...n); uvs.push(a,b); }
-    const buf=(data,loc,size)=>{ const bo=gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,bo); gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(data),gl.STATIC_DRAW); const l=gl.getAttribLocation(prog,loc); gl.enableVertexAttribArray(l); gl.vertexAttribPointer(l,size,gl.FLOAT,false,0,0); };
-    buf(pos,"p",3); buf(nor,"n",3); buf(uvs,"uv",2);
-    const U={}; ["off","Rm","P","D","tone"].forEach(k=>U[k]=gl.getUniformLocation(prog,k));
-    gl.enable(gl.DEPTH_TEST); gl.enable(gl.CULL_FACE);
-    const Dd=26;
-    function frame(t){
-      const mob=innerWidth<760, dpr=Math.min(2.5,devicePixelRatio||1);
-      const W=Math.round(cv.clientWidth*dpr), H=Math.round(cv.clientHeight*dpr); if(!W||!H) return;
-      if(cv.width!==W||cv.height!==H){ cv.width=W; cv.height=H; }
-      gl.viewport(0,0,W,H); gl.clearColor(0,0,0,0); gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
-      mx+=(tx-mx)*.05; my+=(ty-my)*.05;
-      const CX=(mob?.62:.72)*W, CY=(mob?.66:.5)*H, Upx=(mob?.07:.046)*Math.max(W*.62,H);
-      // wall plane turned towards the viewer, then rolled onto a diagonal
-      const ry=-.62+mx*.12, rx=.42+my*.08, rz=.62;
-      const cy=Math.cos(ry), sy=Math.sin(ry), cx=Math.cos(rx), sx=Math.sin(rx), cz=Math.cos(rz), sz=Math.sin(rz);
-      // R = Rz * Rx * Ry  (column-major)
-      const Ry=[cy,0,-sy, 0,1,0, sy,0,cy], Rx=[1,0,0, 0,cx,sx, 0,-sx,cx], Rz=[cz,sz,0, -sz,cz,0, 0,0,1];
-      const mul=(A,B)=>{ const o=new Array(9); for(let c=0;c<3;c++) for(let r=0;r<3;r++){ let s=0; for(let k=0;k<3;k++) s+=A[k*3+r]*B[c*3+k]; o[c*3+r]=s; } return o; };
-      gl.uniformMatrix3fv(U.Rm,false,mul(Rz,mul(Rx,Ry))); gl.uniform1f(U.D,Dd);
-      gl.uniform4f(U.P, CX/W*2-1, 1-CY/H*2, Upx/W*2, Upx/H*2);
-      for(const b of cubes){
-        const z=b.amp*Math.sin(t*.5+b.u*.35+b.v*.22+b.ph*.35)+b.lift*(.5-.5*Math.cos(t*.4+b.ph));
-        gl.uniform3f(U.off, b.u*1.0, b.v*1.0, z); gl.uniform1f(U.tone,b.tone); gl.drawArrays(gl.TRIANGLES,0,36); }
-    }
-    return {frame};
-  }
-  const RMq=()=>matchMedia("(prefers-reduced-motion: reduce)").matches;
-  function loop(now){ raf=0; if(now-last>=32){ last=now; const t=(now-T0)/1000; live.forEach(s=>{ if(s.vis&&s.el.isConnected) s.r.frame(t); }); }
-    if(!RMq()&&!document.hidden&&live.some(s=>s.vis&&s.el.isConnected)) raf=requestAnimationFrame(loop); }
-  const kick=()=>{ if(!raf&&!RMq()) raf=requestAnimationFrame(loop); };
-  function mount(root){
-    live=live.filter(s=>s.el.isConnected);
-    io?.disconnect(); io=new IntersectionObserver(es=>{ es.forEach(e=>{ const s=live.find(x=>x.el===e.target); if(s) s.vis=e.isIntersecting; }); kick(); });
-    root.querySelectorAll("canvas.rib").forEach(el=>{ let s=live.find(x=>x.el===el); if(!s){ let r=null; try{ r=make(el); }catch(e){} if(!r) return; s={el,r,vis:true}; live.push(s); } io.observe(el); s.r.frame((performance.now()-T0)/1000); });
-    kick();
-  }
-  document.addEventListener("visibilitychange",()=>{ if(!document.hidden) kick(); });
-  addEventListener("resize",()=>live.forEach(s=>s.el.isConnected&&s.r.frame((performance.now()-T0)/1000)));
-  return {mount};
-})();
 let animateNext=true, tickKey="";
 const RM=()=>matchMedia("(prefers-reduced-motion: reduce)").matches;
 function renderTicker(){
@@ -1616,11 +1773,11 @@ function motion(m){
   if(!animateNext||RM()) { animateNext=false; return; }
   if(!S.ind && tab==="mkt") return;
   animateNext=false;
-  m.classList.remove("enter"); void m.offsetWidth; m.classList.add("enter");
+  m.classList.remove("enter"); if(!vtOn){ void m.offsetWidth; m.classList.add("enter"); }
   m.classList.add("play"); clearTimeout(motion._p); motion._p=setTimeout(()=>m.classList.remove("play"),1800);
   rvIO?.disconnect(); rvIO=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("shown"); rvIO.unobserve(e.target); } }),{rootMargin:"0px 0px -6% 0px"});
-  m.querySelectorAll(".panel,.story,.ncard,.idea,.pillgrid .st,.acls,.step,.reply").forEach((el,i)=>{ el.classList.add("rv"); el.style.transitionDelay=Math.min(i%8,7)*45+"ms"; rvIO.observe(el); });
-  m.querySelectorAll(".giant b,.pillgrid .st .v").forEach(el=>{ const v=el.querySelector?el.childNodes[0]:null; if(el.matches(".giant b")) countUp(el); else if(v&&v.nodeType===3){ const sp=document.createElement("span"); sp.textContent=v.textContent; el.replaceChild(sp,v); countUp(sp); } });
+  m.querySelectorAll(".panel,.story,.ncard,.idea,.pillgrid .st,.acls,.step,.reply,.librow").forEach((el,i)=>{ el.classList.add("rv"); el.style.transitionDelay=Math.min(i%8,7)*45+"ms"; rvIO.observe(el); });
+  m.querySelectorAll(".giant b,.bnum2 b,.pillgrid .st .v").forEach(el=>{ const v=el.querySelector?el.childNodes[0]:null; if(el.matches(".giant b,.bnum2 b")) countUp(el); else if(v&&v.nodeType===3){ const sp=document.createElement("span"); sp.textContent=v.textContent; el.replaceChild(sp,v); countUp(sp); } });
 }
 function moveInd(){
   const nav=document.querySelector("nav.tabs"); if(!nav) return; let ind=nav.querySelector(".tabind"); if(!ind){ ind=document.createElement("span"); ind.className="tabind"; nav.prepend(ind); }
@@ -1634,9 +1791,9 @@ function render(){
   if(!OWNER && (tab==="studio"||tab==="lib")){ tab="mkt"; document.querySelectorAll(".tab[data-tab]").forEach(x=>x.classList.toggle("on",x.dataset.tab===tab)); }
   m.innerHTML = tab==="lib" ? vLib() : tab==="mkt" ? vMarkets() : tab==="ask" ? vAsk() : tab==="rot" ? vRoutine() : vStudio();
   bind(); if(tab==="mkt"||tab==="ask") bindMarkets(); if(tab==="rot") bindRoutine();
-  splitWords(m); window.RADAR_TILES?.();
+  splitWords(m); window.RADAR_TILES?.(); LINES.mount(m); RIBBONS.mount(m,worldModel().mood);
   m.querySelectorAll("[data-jump]").forEach(b=>b.onclick=()=>{ if(b.dataset.go&&mk.sub!==b.dataset.go){ mk.sub=b.dataset.go; render(); } document.querySelector(b.dataset.jump)?.scrollIntoView({behavior:RM()?"auto":"smooth",block:"start"}); });
-  renderTicker(); motion(m); window.RADAR_BAR?.(); scrollFX(document);
+  renderTicker(); motion(m); window.RADAR_BAR?.(); scrollFX(document); SCRUB.mount(document);
 }
 
 /* bar height + solid state */
@@ -1667,34 +1824,186 @@ function scrollFX(root){
   root.querySelectorAll(".stats4").forEach(g=>{ g.querySelectorAll(".st").forEach((c,i)=>c.style.setProperty("--i",i)); watch(g,"stats4"); });
 }
 
+/* scroll storytelling: elements with data-scrub="a,b,h" get --sp 0→1 while their top moves from a·vh to b·vh (h=1 also counts their height) */
+const SCRUB=(()=>{ const vis=new Set(), gone=new Set(); let raf=0;
+  const io=new IntersectionObserver(es=>{ es.forEach(e=>{ if(e.isIntersecting) vis.add(e.target); else { vis.delete(e.target); gone.add(e.target); } }); kick(); },{rootMargin:"25% 0px"});
+  const set=(el,vh)=>{ const r=el.getBoundingClientRect(); const [a,b,h]=el.dataset.scrub.split(",").map(Number); const span=(a-b)*vh+(h?r.height:0);
+    el.style.setProperty("--sp",Math.max(0,Math.min(1,(a*vh-r.top)/Math.max(1,span))).toFixed(3)); };
+  function calc(){ raf=0; const vh=innerHeight, de=document.documentElement, max=de.scrollHeight-vh;
+    de.style.setProperty("--rp",max>0?Math.min(1,scrollY/max).toFixed(4):"0");
+    vis.forEach(el=>set(el,vh)); gone.forEach(el=>{ if(el.isConnected) set(el,vh); }); gone.clear(); }
+  function kick(){ if(!raf) raf=requestAnimationFrame(calc); }
+  addEventListener("scroll",kick,{passive:true}); addEventListener("resize",kick);
+  const words=el=>{ const sx=el.querySelectorAll(".w>span"); if(sx.length) return sx.length; let i=0; const tw=document.createTreeWalker(el,NodeFilter.SHOW_TEXT), ns=[]; while(tw.nextNode()) ns.push(tw.currentNode);
+    ns.forEach(n=>{ const f=document.createDocumentFragment(); n.textContent.split(/(\s+)/).forEach(p=>{ if(!p) return; if(!p.trim()){ f.append(p); return; } const s=document.createElement("span"); s.className="sw"; s.style.setProperty("--i",i++); s.textContent=p; f.append(s); }); n.replaceWith(f); }); return i; };
+  return { mount(root){ io.disconnect(); vis.clear(); gone.clear(); kick();
+    if(matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const add=(sel,range,prep)=>root.querySelectorAll(sel).forEach(el=>{ if(!el.dataset.scrub){ prep?.(el); el.dataset.scrub=range; } io.observe(el); });
+    add(".bline","0.9,0.4,0",el=>el.style.setProperty("--n",words(el)));      // Markets: the Brief's one-liner lights up word by word
+    add(".faq","0.75,0.5,1");                                                  // Ask PaperMint: a rail fills as you read the questions
+    add(".pslides,.slides","1,0.5,0",el=>[...el.children].forEach((c,i)=>c.style.setProperty("--i",i))); } };  // Studio: slides are dealt like cards
+})();
+
+/* chrome ribbons: the common thread of every page. A few liquid-metal strands (raw WebGL, no library) with a mint/iridescent sheen.
+   On Markets they sweep sharp across the band under the masthead; as you scroll they drift up, soften into blurred light and
+   twist into a slow swirl behind the sections. Other tabs start in the soft state. How hard they wave follows the day's mood.
+   Reduced motion: one still frame, no blur or swirl. No WebGL: nothing is drawn and the page is simply white. */
+const RIBBONS=(()=>{
+  const G={cv:null,gl:null,prog:null,u:{},n:0,buf:null,raf:0,t0:performance.now(),last:0,mx:0,my:0,tx:0,ty:0,amp:1,band:null,soft:false,W:0,H:0,hw:0,hh:0,sy:0,lite:false};
+  const RMq=()=>matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const VS=`attribute vec3 P;attribute vec3 N;attribute vec2 U;attribute float I;
+  uniform mat4 PM;uniform float t,S,A,TW,OY;uniform vec2 M;
+  varying vec3 vN,vV;varying vec2 vU;varying float vI;
+  vec2 rot(vec2 v,float a){float c=cos(a),s=sin(a);return vec2(c*v.x-s*v.y,s*v.x+c*v.y);}
+  void main(){ vec3 p=P, n=N;
+    float w=sin(p.x*.5+t*.32+I*1.7)*.16*A+sin(p.x*1.15-t*.45+I)*.06*A;
+    p.y+=w; p.z+=cos(p.x*.38+t*.27+I*2.3)*.22*A;
+    p.y+=(I-2.)*S*.45*smoothstep(-3.,5.,p.x);
+    float r=length(p.xy)+.001; float a=TW*(1.6*exp(-r*.22)+.35);
+    p.xy=rot(p.xy,a); n.xy=rot(n.xy,a);
+    p.y+=OY; p.xy+=M*vec2(.35,.22);
+    vec4 mv=vec4(p.x,p.y,p.z-11.,1.);
+    vN=n; vV=-mv.xyz; vU=U; vI=I; gl_Position=PM*mv; }`;
+  const FS=`precision highp float;varying vec3 vN,vV;varying vec2 vU;varying float vI;uniform float t,B;
+  vec3 env(vec3 r){ float y=r.y, x=r.x;
+    vec3 c=mix(vec3(.50,.53,.62),vec3(.96,.97,.99),smoothstep(-.9,.9,y));
+    c+=smoothstep(.22,0.,abs(y-.62))*.28;                      /* big soft box above */
+    c-=smoothstep(.16,0.,abs(y-.25+.08*x))*.22;                 /* dark band (the horizon in the studio) */
+    c+=smoothstep(.07,0.,abs(y-.02))*.30;                      /* thin bright strip */
+    c-=smoothstep(.25,0.,abs(y+.38))*.16;                      /* dark floor */
+    c+=smoothstep(.2,0.,abs(x-.45))*smoothstep(-.3,.3,y)*.18;   /* side light */
+    return c; }
+  void main(){ vec3 n=normalize(vN),v=normalize(vV); if(!gl_FrontFacing) n=-n;
+    vec3 r=reflect(-v,n); float fr=pow(1.-max(dot(n,v),0.),2.);
+    vec3 c=env(r);
+    float h=fr*1.5+vU.x*.9-t*.035+vI*.27+r.y*.55;
+    vec3 film=.5+.5*cos(6.2832*(h+vec3(0.,.33,.67))); film=mix(film,vec3(.55,.92,.85),.45);
+    float m=smoothstep(.3,.75,fr)*smoothstep(.6,.95,dot(c,vec3(.333)))*smoothstep(.2,.9,.5+.5*sin(vU.x*7.+vI*2.1-t*.15));
+    c=mix(c,c*film*1.3,m*.5);
+    c+=pow(.5+.5*sin(vU.x*16.-t*1.1+vI*2.),28.)*.16*(1.-fr);
+    vec3 glow=mix(vec3(.62,.90,.85),vec3(.80,.84,.88),.5+.5*sin(vU.x*5.+vI*1.3));
+    c=mix(c,mix(glow,vec3(1.),fr*.5),B*.8);
+    gl_FragColor=vec4(c,1.); }`;
+  /* strands in screen units (x,y in -1..1 of the band, z depth), branching like a river: one bundle from the left fanning out to the right */
+  const STR=[[[-1.4,-.15,0],[-.6,-.05,.2],[.1,.05,.3],[.7,.45,0],[1.4,.95,-.4]],
+             [[-1.4,-.05,-.2],[-.5,0,.1],[.2,0,.4],[.8,.15,.2],[1.4,.35,0]],
+             [[-1.4,.05,.1],[-.6,.02,0],[0,-.05,.2],[.7,-.35,.1],[1.4,-.6,-.2]],
+             [[-1.3,-.95,-1.2],[-.6,-.45,-.6],[0,-.12,.15],[.6,.25,.3],[1.4,.7,.2]],
+             [[-1.4,.55,-1.6],[-.4,.25,-.8],[.3,.1,-.2],[.9,-.05,-.4],[1.5,-.1,-.9]]];
+  const RAD=[.62,.48,.4,.3,.2];
+  function cr(P,u){ const k=u*(P.length-1), i=Math.min(P.length-2,Math.floor(k)), f=k-i, p0=P[Math.max(0,i-1)], p1=P[i], p2=P[i+1], p3=P[Math.min(P.length-1,i+2)];
+    return [0,1,2].map(j=>.5*((2*p1[j])+(-p0[j]+p2[j])*f+(2*p0[j]-5*p1[j]+4*p2[j]-p3[j])*f*f+(-p0[j]+3*p1[j]-3*p2[j]+p3[j])*f*f*f)); }
+  const sub=(a,b)=>[a[0]-b[0],a[1]-b[1],a[2]-b[2]], cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]], nz=a=>{ const l=Math.hypot(...a)||1; return a.map(x=>x/l); };
+  function geom(){
+    const L=G.lite?90:180, R=G.lite?14:24, out=[], idx=[]; let base=0;
+    STR.forEach((S0,id)=>{ const S=S0.map(p=>[p[0]*G.hw,p[1]*G.hh*.55,p[2]]), rad=RAD[id]*G.hh/3.2;
+      const pts=[...Array(L+1)].map((_,i)=>cr(S,i/L));
+      let nrm=null;
+      pts.forEach((p,i)=>{ const T=nz(sub(pts[Math.min(L,i+1)],pts[Math.max(0,i-1)]));
+        nrm = nrm ? nz(cross(cross(T,nrm),T)) : nz(cross(T,[0,0,1]));   // parallel transport
+        const bn=cross(T,nrm);
+        for(let j=0;j<=R;j++){ const a=j/R*Math.PI*2, c=Math.cos(a), s=Math.sin(a), nx=nrm[0]*c+bn[0]*s, ny=nrm[1]*c+bn[1]*s, nzz=nrm[2]*c+bn[2]*s;
+          out.push(p[0]+nx*rad,p[1]+ny*rad*.82,p[2]+nzz*rad, nx,ny,nzz, i/L,j/R, id); } });
+      for(let i=0;i<L;i++) for(let j=0;j<R;j++){ const a=base+i*(R+1)+j, b=a+R+1; idx.push(a,b,a+1,b,b+1,a+1); }
+      base+=(L+1)*(R+1); });
+    const gl=G.gl; gl.bindBuffer(gl.ARRAY_BUFFER,G.buf); gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(out),gl.STATIC_DRAW);
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,G.ibuf); gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,G.u32?new Uint32Array(idx):new Uint16Array(idx),gl.STATIC_DRAW); G.n=idx.length;
+  }
+  function sh(gl,type,src){ const s=gl.createShader(type); gl.shaderSource(s,src); gl.compileShader(s); if(!gl.getShaderParameter(s,gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s)); return s; }
+  function init(){
+    const cv=document.createElement("canvas"); cv.className="ribbons"; cv.setAttribute("aria-hidden","true");
+    const gl=cv.getContext("webgl",{alpha:true,antialias:true,premultipliedAlpha:true}); if(!gl) return false;
+    G.u32=!!gl.getExtension("OES_element_index_uint"); if(!G.u32) G.lite=true;
+    const prog=gl.createProgram(); gl.attachShader(prog,sh(gl,gl.VERTEX_SHADER,VS)); gl.attachShader(prog,sh(gl,gl.FRAGMENT_SHADER,FS)); gl.linkProgram(prog);
+    if(!gl.getProgramParameter(prog,gl.LINK_STATUS)) return false; gl.useProgram(prog);
+    G.buf=gl.createBuffer(); G.ibuf=gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,G.buf);
+    const st=9*4; [["P",3,0],["N",3,12],["U",2,24],["I",1,32]].forEach(([k,n,o])=>{ const l=gl.getAttribLocation(prog,k); gl.enableVertexAttribArray(l); gl.vertexAttribPointer(l,n,gl.FLOAT,false,st,o); });
+    ["PM","t","S","A","TW","OY","M","B"].forEach(k=>G.u[k]=gl.getUniformLocation(prog,k));
+    gl.enable(gl.DEPTH_TEST); gl.clearColor(0,0,0,0);
+    G.cv=cv; G.gl=gl; G.prog=prog; document.body.prepend(cv);
+    addEventListener("resize",()=>{ size(); kick(); });
+    addEventListener("scroll",()=>kick(),{passive:true});
+    addEventListener("pointermove",e=>{ G.tx=e.clientX/innerWidth*2-1; G.ty=-(e.clientY/innerHeight*2-1); kick(); },{passive:true});
+    document.addEventListener("visibilitychange",kick);
+    return true;
+  }
+  function size(){
+    const lite=innerWidth<768||(navigator.hardwareConcurrency&&navigator.hardwareConcurrency<=2);
+    const W=innerWidth, H=innerHeight; G.dpr=Math.min(lite?1.25:1.75,devicePixelRatio||1); G.lv=0; res(1);
+    const f=1/Math.tan(30*Math.PI/360), asp=W/H, near=.1, far=60;
+    G.gl.uniformMatrix4fv(G.u.PM,false,new Float32Array([f/asp,0,0,0, 0,f,0,0, 0,0,(far+near)/(near-far),-1, 0,0,2*far*near/(near-far),0]));
+    G.hh=11/f; G.hw=G.hh*asp; G.W=W; G.H=H;
+    if(lite!==G.lite||!G.n){ G.lite=lite||!G.u32; geom(); } else geom();
+  }
+  /* softer = fewer pixels: once the strands blur, they are drawn at a fraction of the resolution and stretched, which reads as blur for free */
+  function res(lv){ if(lv===G.lv) return; G.lv=lv; G.cv.width=Math.max(2,Math.round(innerWidth*G.dpr*lv)); G.cv.height=Math.max(2,Math.round(innerHeight*G.dpr*lv)); G.gl.viewport(0,0,G.cv.width,G.cv.height); }
+  const ss=(a,b,x)=>{ const k=Math.max(0,Math.min(1,(x-a)/(b-a))); return k*k*(3-2*k); };
+  function frame(now){
+    G.raf=0; if(!G.gl) return; const gl=G.gl, still=RMq(), t=still?6:(now-G.t0)/1000;
+    if(!still&&now-G.last<30){ G.raf=requestAnimationFrame(frame); return; } G.last=now;
+    const vh=G.H, y=scrollY, s=y/vh;
+    /* where the band sits on screen (world units); the strands ride up with the page at 70% speed */
+    let cy=0; if(G.band&&G.band.isConnected){ const r=G.band.getBoundingClientRect(), mid=r.top+y*(still?1:.3)+r.height/2; cy=(.5-mid/vh)*2*G.hh; }
+    const soft=G.soft?1:still?0:ss(.15,1.1,s), tw=still?0:(G.soft?.6+s*.25:ss(.3,2.2,s)*1.4+Math.max(0,s-2.2)*.18);
+    res(soft<.15?1:soft<.45?.5:soft<.8?.28:.16);
+    G.mx+=(G.tx-G.mx)*.08; G.my+=(G.ty-G.my)*.05;
+    gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
+    gl.uniform1f(G.u.t,t); gl.uniform1f(G.u.S,still?0:Math.min(1,s*1.2)); gl.uniform1f(G.u.A,G.amp); gl.uniform1f(G.u.TW,tw);
+    gl.uniform1f(G.u.OY,G.soft?0:cy*(1-soft)); gl.uniform2f(G.u.M,still?0:G.mx,still?0:G.my); gl.uniform1f(G.u.B,soft);
+    gl.drawElements(gl.TRIANGLES,G.n,G.u32?gl.UNSIGNED_INT:gl.UNSIGNED_SHORT,0);
+    G.cv.style.setProperty("--b",soft.toFixed(3));
+    G.cv.classList.toggle("soft",soft>.02);
+    if(!still&&!document.hidden) G.raf=requestAnimationFrame(frame);
+  }
+  const kick=()=>{ if(!G.raf&&G.gl) G.raf=requestAnimationFrame(frame); };
+  return { mount(root,mood){
+    try{ if(!G.gl&&!init()) return; }catch(e){ console.warn("ribbons",e); G.gl=null; return; }
+    G.band=root.querySelector(".mband"); G.soft=!G.band; G.amp={calm:.7,changeable:1,stormy:1.5}[mood]||1;
+    G.cv.classList.toggle("still",RMq()); if(!G.n) size(); kick(); } };
+})();
+/* section rules draw themselves from the left as each section and Brief story comes into view */
+const LINES=(()=>{ let io=null; return { mount(m){ io?.disconnect();
+  const els=[...m.querySelectorAll(":scope > section:not(.mast):not(.paperhead), .brief .story")]; els.forEach(el=>el.classList.add("cy"));
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches||!("IntersectionObserver" in window)){ els.forEach(el=>el.classList.add("on")); return; }
+  io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("on"); io.unobserve(e.target); } }),{rootMargin:"0px 0px -12% 0px"});
+  els.forEach(el=>io.observe(el)); } }; })();
+/* smooth SVG path through the day's indicator values (also the static art when WebGL is missing) */
+const linePath=(v,W,H)=>{ v=v.length?v:[3.6,2.8,3.8,2.5,3.2,1.6,3,3.5]; const ys=[...v,...v.slice().reverse()].slice(0,12); const lo=Math.min(...ys), hi=Math.max(...ys);
+  const pts=ys.map((a,i)=>[i/(ys.length-1)*W, H*.72-(hi>lo?(a-lo)/(hi-lo):.5)*H*.42]); let d=`M${pts[0][0].toFixed(1)},${pts[0][1].toFixed(1)}`;
+  for(let i=0;i<pts.length-1;i++){ const p0=pts[i-1]||pts[i], p1=pts[i], p2=pts[i+1], p3=pts[i+2]||p2;
+    d+=` C${(p1[0]+(p2[0]-p0[0])/6).toFixed(1)},${(p1[1]+(p2[1]-p0[1])/6).toFixed(1)} ${(p2[0]-(p3[0]-p1[0])/6).toFixed(1)},${(p2[1]-(p3[1]-p1[1])/6).toFixed(1)} ${p2[0].toFixed(1)},${p2[1].toFixed(1)}`; }
+  return d; };
+/* the day as a model: regions from the daily map, the mood, and the biggest move */
+function worldModel(){
+  const day=latestDay(), ins=day?S.insights.find(i=>i.id===day.id):null, cls=(ins?.classes||[]).filter(c=>c&&c.nome);
+  const tr=c=>(TR[c.tendencia]||["mixed"])[0], f=c=>Math.max(1,Math.min(3,+c.forca||2));
+  const regions=cls.map(c=>({name:clsEN(c.nome),trend:tr(c),force:f(c),read:c.leitura||""}));
+  const cats={}; (day?.items||[]).forEach(i=>{ if(i.category) cats[i.category]=(cats[i.category]||0)+1; });
+  Object.entries(cats).sort((a,b)=>b[1]-a[1]).forEach(([c,n])=>{ if(regions.length<7&&!regions.some(r=>r.name.toLowerCase()===catEN(c).toLowerCase())) regions.push({name:catEN(c),trend:"flat",force:Math.min(3,1+n/20),read:"",news:true}); });
+  if(!regions.length) regions.push({name:"Markets",trend:"flat",force:2,read:""});
+  const w=regions.reduce((a,r)=>a+(r.news?0:r.force),0)||1, stress=regions.reduce((a,r)=>a+(r.news?0:(r.trend==="down"?1:r.trend==="mixed"?.5:0)*r.force),0)/w;
+  const mood=stress<.3?"calm":stress<.6?"changeable":"stormy";
+  const mover=regions.filter(r=>!r.news).sort((a,b)=>b.force-a.force||(a.trend==="flat")-(b.trend==="flat"))[0]||regions[0];
+  return {regions,mood,mover,vals:(S.ind?.items||[]).map(x=>+x.value).filter(x=>!isNaN(x)),items:day?.items||[],brief:ins?.brief?.stories||[]};
+}
 /* hero tiles: rounded gradient squares that fly in, drift, follow the pointer and turn as you scroll */
 const TILESETS=[
   [[60,6,13,-28,"#1F7F7C",1.2,40],[4,12,10,26,"#3AA89C",.7,-30],[22,32,15,-18,"#FFFFFF",.35,20],[82,30,12,8,"#5BC8B6",.9,-45],[-5,58,13,34,"#1F7F7C",1.1,35],[46,58,14,-30,"#3AA89C",1.4,-25],[88,72,9,22,"#5BC8B6",.6,50]],
   [[70,8,12,-20,"#3AA89C",1,35],[2,20,9,30,"#5BC8B6",.6,-40],[30,46,13,-12,"#FFFFFF",.4,25],[86,40,13,14,"#1F7F7C",1.2,-30],[52,70,12,-26,"#5BC8B6",1.3,45],[10,72,10,18,"#3AA89C",.8,-20]],
 ];
-function tilesHTML(seed){
-  const set=TILESETS[(seed||1)%TILESETS.length];
-  return `<div class="tiles" aria-hidden="true">${set.map(([x,y,sz,r,c,k,spin],i)=>`<span style="--x:${x}%;--y:${y}%;--s:${sz}vw;--r:${r}deg;--c:${c};--k:${k};--spin:${spin}deg;--d:${(9+i*1.4).toFixed(1)}s;--dl:-${(i*1.7).toFixed(1)}s;--e:${i*90}ms"><b><i></i></b></span>`).join("")}</div>`;
-}
+function tilesHTML(){ return ""; }
 (()=>{ if(matchMedia("(prefers-reduced-motion: reduce)").matches) return; let raf=0, mx=0, my=0, tx=0, ty=0;
   const upd=()=>{ raf=0; mx+=(tx-mx)*.12; my+=(ty-my)*.12;
-    document.querySelectorAll(".dhero").forEach(h=>{ const r=h.getBoundingClientRect(); const p=Math.max(0,Math.min(1.4,-r.top/Math.max(1,r.height)));
+    document.querySelectorAll(".hero2").forEach(h=>{ const r=h.getBoundingClientRect(); const p=Math.max(0,Math.min(1.4,-r.top/Math.max(1,r.height)));
       h.style.setProperty("--p",p.toFixed(3)); h.style.setProperty("--mx",mx.toFixed(3)); h.style.setProperty("--my",my.toFixed(3)); });
     if(Math.abs(tx-mx)>.002||Math.abs(ty-my)>.002) raf=requestAnimationFrame(upd); };
   const kick=()=>{ if(!raf) raf=requestAnimationFrame(upd); };
   addEventListener("scroll",kick,{passive:true}); addEventListener("resize",kick);
   addEventListener("pointermove",e=>{ tx=e.clientX/innerWidth-.5; ty=e.clientY/innerHeight-.5; kick(); },{passive:true});
   window.RADAR_TILES=kick; kick();
-  // the wheel: tiles travel slowly round an ellipse, nearer ones (bottom of the ring) a little bigger
-  const T0=performance.now(); let last=0;
-  const spin=now=>{ requestAnimationFrame(spin); if(now-last<33||document.hidden) return; last=now; const t=(now-T0)/1000;
-    document.querySelectorAll(".dhero .tiles").forEach(g=>{ const h=g.parentElement; const W=h.clientWidth, H=h.clientHeight; if(!W) return; g.classList.add("orbit");
-      const mob=innerWidth<760, rx=W*(mob?.42:.44), ry=H*(mob?.36:.38), cx=mob?0:W*.08, cy=mob?H*.04:0; const sp=g.querySelectorAll("span"), n=sp.length;
-      sp.forEach((el,i)=>{ const a=i/n*6.2832+t*.105*(1+.08*(i%3)); const z=(Math.sin(a)+1)/2;
-        el.style.setProperty("--ox",(cx+Math.cos(a)*rx).toFixed(1)+"px"); el.style.setProperty("--oy",(cy+Math.sin(a)*ry).toFixed(1)+"px"); el.style.setProperty("--os",(.78+.34*z).toFixed(3)); el.style.zIndex=Math.round(z*10); }); }); };
-  requestAnimationFrame(spin); })();
+})();
 function splitWords(root){
-  root.querySelectorAll(".dhero h1:not([data-split])").forEach(h=>{ const words=h.textContent.trim().split(/\s+/); h.dataset.split="1"; h.setAttribute("aria-label",h.textContent.trim());
+  root.querySelectorAll(".hero2 h1:not([data-split]), .phases h1:not([data-split])").forEach(h=>{ const words=h.textContent.trim().split(/\s+/); h.dataset.split="1"; h.setAttribute("aria-label",h.textContent.trim());
     h.innerHTML=words.map((w,i)=>`<span class="w" aria-hidden="true"><span style="--i:${i}">${esc(w)}</span></span>`).join(" "); });
 }
 function bind(){
