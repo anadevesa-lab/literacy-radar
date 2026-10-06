@@ -24,10 +24,10 @@ Financial-literacy site (Nova SBE project, "Boosting productivity with AI"). Pub
 - Every other tab opens the same way (harmony): full-bleed black hero with film grain, a static wireframe globe SVG with the RGB split (`tilesHTML` → `.hglobe`), and a two-line title whose second line is the italic serif.
 - Logo: lettering only, "Paper" in Manrope 800 + "Mint" in Instrument Serif italic (mint). No symbol, no squares.
 - Footer: dark CTA card, then the link columns. Labels are sentence case everywhere.
-- Chapter index (`CHAPTERS`): the page's sections listed in the left margin in the italic serif; the current one lights up, a thin RGB rail fills to it, click to jump. Shown from 1100px (content column narrows to make room), hidden over the opening and the footer.
+- Chapter index (`CHAPTERS`): the page's sections listed in the left margin in the italic serif; the current one lights up (no connecting line), click to jump. Shown from 1100px (content column narrows to make room), hidden over the opening and the footer.
 - Menu bar solid dark; dark ticker with a LIVE tag under it.
 - No small numbered/all-caps eyebrow labels ("03 / …"): titles stand on their own.
-- Rejected before (don't bring back): glossy balls, coral wave, bubbles, light font weight, WebGL cube wall, orbiting gradient squares, blocky particle logos, particle wordmarks, HUD corner marks, graph-paper grids, numbered eyebrows, indicator spires on the globe, decorative wavy lines inside hero cards or down the margin, logo symbols.
+- Rejected before (don't bring back): glossy balls, coral wave, bubbles, light font weight, WebGL cube wall, orbiting gradient squares, blocky particle logos, particle wordmarks, HUD corner marks, graph-paper grids, numbered eyebrows, indicator spires on the globe, decorative wavy lines inside hero cards or down the margin, connecting rails, a reading-progress line under the menu, logo symbols.
 
 ## Talk to Ana
 Portuguese (pt-PT), concise, action first.

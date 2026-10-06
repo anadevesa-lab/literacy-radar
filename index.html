@@ -864,7 +864,6 @@ header.top .logo,.fbot .logo,.logo .wm{color:#F2FBF9} .logo .wm em{color:#8DE6D8
 .aikey-top{color:var(--ink)!important;border-color:var(--line)!important;background:transparent!important}
 .ticker,body.solid .ticker{background:#000F0E!important;border-color:var(--line)!important;color:#BFD9D4}
 .ticker::before{background:#011A19!important;box-shadow:12px 0 16px -4px #000F0E!important}
-.sprog{background:linear-gradient(90deg,#3AA89C,#8DE6D8)}
 /* type and labels: no numbered eyebrows, no dot bullets, no all-caps mono */
 .eyebrow::before{display:none!important}
 .eyebrow{font-family:var(--f-body)!important;text-transform:none!important;letter-spacing:0!important;font-size:14px!important;font-weight:600!important;color:#8DE6D8!important}
@@ -1013,8 +1012,6 @@ h1 em,h2 em,.mega em{font-family:var(--f-serif);font-style:italic;font-weight:40
 /* chapter index in the left margin */
 .chapters{position:fixed;left:28px;top:50%;width:150px;z-index:8;opacity:0;pointer-events:none;transform:translate(-8px,-50%);transition:opacity .45s ease,transform .45s ease}
 .chapters.show{opacity:1;pointer-events:auto;transform:translate(0,-50%)}
-.chapters .rail{position:absolute;left:3px;top:6px;bottom:6px;width:1px;background:rgba(255,255,255,.14)}
-.chapters .rail b{position:absolute;left:0;top:0;width:1px;height:var(--fill,0px);background:#FFFFFF;box-shadow:-1px 0 rgba(255,45,85,.65),1px 0 rgba(0,229,255,.65);transition:height .5s cubic-bezier(.2,.7,.2,1)}
 .chapters ol{list-style:none;margin:0;padding:0 0 0 20px;display:flex;flex-direction:column;gap:16px}
 .chapters li{position:relative}
 .chapters li::before{content:"";position:absolute;left:-20px;top:50%;width:7px;height:7px;margin-top:-3.5px;border-radius:50%;background:#050606;border:1px solid rgba(255,255,255,.35);transition:background .35s,border-color .35s,box-shadow .35s}
@@ -1024,7 +1021,7 @@ h1 em,h2 em,.mega em{font-family:var(--f-serif);font-style:italic;font-weight:40
 .chapters button:focus-visible{outline:2px solid #8DE6D8;outline-offset:3px;border-radius:4px}
 @media (min-width:1100px){body.chap main.wrap{max-width:min(1200px,calc(100vw - 380px))}}
 @media (max-width:1099px){.chapters{display:none}}
-@media (prefers-reduced-motion:reduce){.chapters,.chapters .rail b,.chapters li::before,.chapters button{transition:none}}
+@media (prefers-reduced-motion:reduce){.chapters,.chapters li::before,.chapters button{transition:none}}
 @media (max-width:760px){
   .hero2.bleed{min-height:0}
   .hero2.bleed .in{padding:calc(var(--hh) + 40px) var(--s4) 56px!important}
@@ -1033,7 +1030,6 @@ h1 em,h2 em,.mega em{font-family:var(--f-serif);font-style:italic;font-weight:40
 @media (prefers-reduced-motion:reduce){.hero2.bleed::before,#preload .pwm{animation:none}}
 
 /* scroll storytelling: a few scrubbed moments (--sp goes 0→1 as the element crosses the viewport; without JS or with reduced motion it stays at the final state) */
-.sprog{position:absolute;left:0;right:0;bottom:-1px;height:2px;background:linear-gradient(90deg,#8DE6D8,#3AA89C);transform-origin:left;transform:scaleX(var(--rp,0));pointer-events:none}
 .hero2 .in{transform:translate3d(0,calc(var(--p,0) * -60px),0);opacity:clamp(0,1.35 - var(--p,0) * 1.4,1)}
 .bline[data-scrub] .w>span,.bline[data-scrub] .sw{opacity:clamp(.18,calc(var(--sp,1) * (var(--n,1) + 4) - var(--i,0)),1);transition-property:opacity,transform}
 .faq[data-scrub]{position:relative;padding-left:var(--s5)}
@@ -1044,13 +1040,13 @@ h1 em,h2 em,.mega em{font-family:var(--f-serif);font-style:italic;font-weight:40
 header.top{view-transition-name:hdr} .ticker{view-transition-name:tick}
 ::view-transition-old(root){animation:vtout .2s ease both} ::view-transition-new(root){animation:vtin .45s cubic-bezier(.2,.7,.2,1) both}
 @keyframes vtout{to{opacity:0}} @keyframes vtin{from{opacity:0;transform:translateY(14px)}}
-@media (prefers-reduced-motion:reduce){.sprog{display:none} .hero2 .in{transform:none;opacity:1} ::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}}
+@media (prefers-reduced-motion:reduce){.hero2 .in{transform:none;opacity:1} ::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}}
 </style>
 
 <div id="preload" aria-hidden="true"><span class="pwm">Paper<em>Mint</em></span></div>
 <header class="top"><div class="wrap">
   <div class="logo"><span class="wm">Paper<em>Mint</em></span></div>
-  <div class="sprog" aria-hidden="true"></div><nav class="tabs"><button class="tab on" data-tab="mkt" type="button">Markets</button><button class="tab" data-tab="ask" type="button"><span class="lg-only">Ask</span><span class="sm-only">Ask</span></button><button class="tab" data-tab="lib" type="button">Library</button><button class="tab" data-tab="studio" type="button">Studio</button></nav><button class="aikey-top" id="aikeyTop" type="button" hidden><i></i><span>AI key</span></button>
+  <nav class="tabs"><button class="tab on" data-tab="mkt" type="button">Markets</button><button class="tab" data-tab="ask" type="button"><span class="lg-only">Ask</span><span class="sm-only">Ask</span></button><button class="tab" data-tab="lib" type="button">Library</button><button class="tab" data-tab="studio" type="button">Studio</button></nav><button class="aikey-top" id="aikeyTop" type="button" hidden><i></i><span>AI key</span></button>
 </div></header>
 <div class="ticker" id="ticker" aria-label="Market ticker"></div>
 <main class="wrap" id="main"></main>
@@ -2266,8 +2262,8 @@ const SCRUB=(()=>{ const vis=new Set(), gone=new Set(); let raf=0;
     add(".pslides,.slides","1,0.5,0",el=>[...el.children].forEach((c,i)=>c.style.setProperty("--i",i))); } };  // Studio: slides are dealt like cards
 })();
 
-/* chapter index: the page's sections as a short list in the left margin. The one you are reading lights up, a thin rail
-   fills to it, a click takes you there. Shown from 1100px, hidden over the opening and the footer. */
+/* chapter index: the page's sections as a short list in the left margin. The one you are reading lights up,
+   a click takes you there. Shown from 1100px, hidden over the opening and the footer. */
 const CHAPTERS=(()=>{
   let nav=null, items=[], raf=0, main=null;
   function build(m){
@@ -2275,7 +2271,7 @@ const CHAPTERS=(()=>{
     const hs=[...(m?.querySelectorAll(":scope > section h2")||[])].filter(h=>!h.closest(".bleed")&&!h.closest(".story")&&h.offsetHeight);
     document.body.classList.toggle("chap",hs.length>=2); if(hs.length<2) return;
     nav=document.createElement("nav"); nav.className="chapters"; nav.setAttribute("aria-label","On this page");
-    nav.innerHTML=`<i class="rail" aria-hidden="true"><b></b></i><ol>${hs.map((h,i)=>`<li><button type="button" data-i="${i}">${esc((h.getAttribute("aria-label")||h.textContent).trim())}</button></li>`).join("")}</ol>`;
+    nav.innerHTML=`<ol>${hs.map((h,i)=>`<li><button type="button" data-i="${i}">${esc((h.getAttribute("aria-label")||h.textContent).trim())}</button></li>`).join("")}</ol>`;
     document.body.appendChild(nav); items=hs;
     nav.querySelectorAll("button").forEach(b=>b.onclick=()=>items[+b.dataset.i]?.scrollIntoView({behavior:RM()?"auto":"smooth",block:"start"}));
     update();
@@ -2284,7 +2280,7 @@ const CHAPTERS=(()=>{
     items.forEach((h,i)=>{ if(h.getBoundingClientRect().top<vh*.42) a=i; });
     const show=items[0].getBoundingClientRect().top<vh*.9&&main.getBoundingClientRect().bottom>vh*.55; nav.classList.toggle("show",show);
     const lis=nav.querySelectorAll("li"); lis.forEach((li,i)=>li.classList.toggle("on",i===a));
-    nav.style.setProperty("--fill",a>=0?(lis[a].offsetTop+lis[a].offsetHeight/2-6)+"px":"0px"); }
+  }
   addEventListener("scroll",()=>{ if(!raf) raf=requestAnimationFrame(update); },{passive:true});
   addEventListener("resize",()=>{ if(!raf) raf=requestAnimationFrame(update); });
   return { build };
