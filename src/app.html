@@ -974,6 +974,44 @@ h1 em,h2 em,.mega em{font-family:var(--f-serif);font-style:italic;font-weight:40
 @media (max-width:760px){.wl{font-size:11px;padding:4px 9px} .phases.world .phshade{background:linear-gradient(0deg,rgba(5,6,6,.92) 0%,rgba(5,6,6,.5) 50%,rgba(5,6,6,.1) 100%)} .phases.world .stage{background:radial-gradient(90% 55% at 50% 32%,var(--sky3) 0%,var(--sky2) 40%,#050606 78%)}}
 @media (prefers-reduced-motion:reduce){.phases.world .stage::after{animation:none}}
 
+/* ===================== v7: one opening for every page =====================
+   Full-bleed black, film grain, a wireframe globe with the RGB split, a two-line title with the italic serif. Logo is lettering only. */
+.logo{gap:0!important} .logo .wm{font-size:21px;font-weight:800}
+#preload .pwm{font:800 34px/1 var(--f-body);letter-spacing:-.035em;color:#fff;text-shadow:var(--rgb);animation:pmfade 1s ease-in-out infinite alternate}
+#preload .pwm em{font-family:var(--f-serif);font-style:italic;font-weight:400;font-size:1.14em;color:#8DE6D8}
+@keyframes pmfade{from{opacity:.45}to{opacity:1}}
+.hero2.bleed{border:0!important;border-radius:0!important;min-height:min(88vh,780px);align-items:center;
+  background:#050606!important;background-image:radial-gradient(52% 70% at 76% 50%,#0B2522 0%,#06110F 42%,#050606 76%)!important}
+.hero2.bleed::before{content:"";position:absolute;inset:-60px;z-index:2;pointer-events:none;opacity:.14;mix-blend-mode:screen;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1.4 -.25'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");animation:pmgrain .8s steps(4) infinite}
+.hero2.bleed .in{position:relative;z-index:3;max-width:1200px!important;width:100%;margin:0 auto;padding:calc(var(--hh) + 72px) var(--s5) 80px!important}
+.hero2.bleed .in > *{max-width:600px}
+.hero2.bleed h1{font-size:clamp(3rem,6.8vw,6.25rem)!important;line-height:.94;letter-spacing:-.055em;max-width:12ch;text-shadow:var(--rgb);color:#fff!important}
+.hero2.bleed h1 em{display:block;color:#fff}
+.hglobe{position:absolute;right:-6%;top:50%;width:min(54vw,720px);height:auto;transform:translateY(-50%);z-index:1;pointer-events:none;-webkit-mask-image:radial-gradient(closest-side,#000 72%,transparent 100%);mask-image:radial-gradient(closest-side,#000 72%,transparent 100%)}
+.hglobe g{fill:none;stroke-width:1;vector-effect:non-scaling-stroke}
+.hglobe .w{stroke:rgba(255,255,255,.5)} .hglobe .r{stroke:rgba(255,45,85,.42);transform:translateX(-3px)} .hglobe .c{stroke:rgba(0,229,255,.42);transform:translateX(3px)}
+.hero2 .hline{display:none}
+/* labels in sentence case everywhere */
+.label{text-transform:none!important;letter-spacing:0!important;font-size:13px!important;font-weight:600!important;color:var(--muted)!important}
+.hero2 .stat span{text-transform:none!important;letter-spacing:0!important;font-size:13px!important;font-weight:600!important}
+.hero2 .stat span::first-letter{text-transform:uppercase}
+.fcta .in{padding-bottom:64px!important}
+/* the common thread down the left margin */
+.thread{position:absolute;top:0;z-index:0;pointer-events:none;overflow:visible}
+.thread path{fill:none;stroke-width:1.5;stroke-linecap:round}
+.thread .base{stroke:rgba(255,255,255,.07)}
+.thread .w{stroke:#FFFFFF;filter:drop-shadow(0 0 6px rgba(141,230,216,.6))}
+.thread .r{stroke:rgba(255,45,85,.55);transform:translateX(-1.5px)} .thread .c{stroke:rgba(0,229,255,.55);transform:translateX(1.5px)}
+.thread circle{fill:#050606;stroke:rgba(255,255,255,.28);stroke-width:1.5;transition:fill .45s ease,stroke .45s ease}
+.thread circle.on{fill:#8DE6D8;stroke:#FFFFFF;filter:drop-shadow(0 0 6px rgba(141,230,216,.8))}
+@media (max-width:760px){
+  .hero2.bleed{min-height:0}
+  .hero2.bleed .in{padding:calc(var(--hh) + 40px) var(--s4) 56px!important}
+  .hglobe{width:115vw;right:-45%;top:auto;bottom:-25%;transform:none;opacity:.45}
+}
+@media (prefers-reduced-motion:reduce){.hero2.bleed::before,#preload .pwm{animation:none}}
+
 /* scroll storytelling: a few scrubbed moments (--sp goes 0→1 as the element crosses the viewport; without JS or with reduced motion it stays at the final state) */
 .sprog{position:absolute;left:0;right:0;bottom:-1px;height:2px;background:linear-gradient(90deg,#8DE6D8,#3AA89C);transform-origin:left;transform:scaleX(var(--rp,0));pointer-events:none}
 .hero2 .in{transform:translate3d(0,calc(var(--p,0) * -60px),0);opacity:clamp(0,1.35 - var(--p,0) * 1.4,1)}
@@ -989,9 +1027,9 @@ header.top{view-transition-name:hdr} .ticker{view-transition-name:tick}
 @media (prefers-reduced-motion:reduce){.sprog{display:none} .hero2 .in{transform:none;opacity:1} ::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}}
 </style>
 
-<div id="preload" aria-hidden="true"><svg class="mk" viewBox="0 0 28 28" width="56" height="56" aria-hidden="true"><path d="M3 21.5c4.2 0 5-9.5 9.6-9.5s4.4 6.6 8.4 3.2C23.6 13 24 8.4 25 6.5" fill="none" stroke="#5BC8B6" stroke-width="2.6" stroke-linecap="round"/></svg></div>
+<div id="preload" aria-hidden="true"><span class="pwm">Paper<em>Mint</em></span></div>
 <header class="top"><div class="wrap">
-  <div class="logo"><svg class="mark" viewBox="0 0 28 28" width="28" height="28" aria-hidden="true"><path d="M3 21.5c4.2 0 5-9.5 9.6-9.5s4.4 6.6 8.4 3.2C23.6 13 24 8.4 25 6.5" fill="none" stroke="#5BC8B6" stroke-width="3" stroke-linecap="round"/><circle cx="25" cy="6.5" r="2.7" fill="#8DE6D8"/></svg><span class="wm">Paper<em>Mint</em></span></div>
+  <div class="logo"><span class="wm">Paper<em>Mint</em></span></div>
   <div class="sprog" aria-hidden="true"></div><nav class="tabs"><button class="tab on" data-tab="mkt" type="button">Markets</button><button class="tab" data-tab="ask" type="button"><span class="lg-only">Ask</span><span class="sm-only">Ask</span></button><button class="tab" data-tab="lib" type="button">Library</button><button class="tab" data-tab="studio" type="button">Studio</button></nav><button class="aikey-top" id="aikeyTop" type="button" hidden><i></i><span>AI key</span></button>
 </div></header>
 <div class="ticker" id="ticker" aria-label="Market ticker"></div>
@@ -1003,10 +1041,9 @@ header.top{view-transition-name:hdr} .ticker{view-transition-name:tick}
       <div class="fside"><p>Read what moved today, see what it means for your money, then turn it into content in minutes.</p>
         <div class="row"><button class="btn primary owner-only" data-tab="studio" type="button">Open the Studio</button><button class="btn primary guest-only" data-tab="mkt" type="button">Read today's Brief</button></div></div>
     </div>
-    <div class="fword" aria-hidden="true"><canvas class="pfield" data-a="word" data-b="word" data-key="foot" data-n="4200"></canvas><span class="phud"></span></div>
   </div></section>
   <div class="fbot"><div class="in">
-    <div><div class="logo"><svg class="mark" viewBox="0 0 28 28" width="28" height="28" aria-hidden="true"><path d="M3 21.5c4.2 0 5-9.5 9.6-9.5s4.4 6.6 8.4 3.2C23.6 13 24 8.4 25 6.5" fill="none" stroke="#5BC8B6" stroke-width="3" stroke-linecap="round"/><circle cx="25" cy="6.5" r="2.7" fill="#8DE6D8"/></svg><span class="wm">Paper<em>Mint</em></span></div><p>A daily, plain-English read of the financial news, built as a Nova SBE project for the course "Boosting productivity with AI".</p></div>
+    <div><div class="logo"><span class="wm">Paper<em>Mint</em></span></div><p>A daily, plain-English read of the financial news, built as a Nova SBE project for the course "Boosting productivity with AI".</p></div>
     <div><h4>Explore</h4><ul><li><button class="flink" data-tab="mkt" type="button">Markets</button></li><li><button class="flink" data-tab="ask" type="button">Ask PaperMint</button></li><li><button class="flink" data-tab="lib" type="button">Library</button></li><li><button class="flink" data-tab="studio" type="button">Studio</button></li></ul></div>
     <div><h4>Sources</h4><ul><li>Bloomberg · Financial Times</li><li>WSJ · The Economist</li><li>CNBC · MarketWatch · BBC</li><li>ECB · Fed · Eurostat · INE</li></ul></div>
     <div><h4>Good to know</h4><ul><li>Educational only</li><li>No buy or sell calls</li><li>Capital at risk</li></ul></div>
@@ -1099,9 +1136,9 @@ function stats(){
     <div class="stat"><b>${n?Math.round(saved/3600000*10)/10+" h":"—"}</b><span>saved vs. ${baseline()} min by hand</span></div></div>`;
 }
 function vStudio(){
-  let h = `<section class="hero2">${tilesHTML(2)}<div class="in">
+  let h = `<section class="bleed hero2">${tilesHTML(2)}<div class="in">
       <span class="eyebrow">Content studio</span>
-      <h1>From today's news to content ready to post.</h1>
+      <h1 data-split="1" aria-label="From today's news to content ready to post."><span aria-hidden="true">From today's news</span> <em aria-hidden="true">to content ready to post.</em></h1>
       <p class="muted">Pick some news or write your own topic. The Studio suggests ideas and writes Instagram posts, LinkedIn posts and articles, opinion pieces, PowerPoint decks and newsletters, with a regulatory check built in.</p>${window.RADAR_AI_KEY?`<button class="btn small" id="aikey" type="button" style="align-self:flex-start">AI key</button>`:""}${stats()}</div></section>
   ${vPack()}
   ${vNews()}
@@ -1222,7 +1259,7 @@ function vLib(){
   if(st.openPiece){ const p=S.pieces.find(x=>x.id===st.openPiece); if(p) return `<button class="btn small" id="back" type="button" style="align-self:flex-start">← Library</button>
     <section class="panel"><span class="label">${esc(new Date(p.createdAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric"}))}</span><h1>${esc(p.idea?.title)}</h1><p class="muted">${esc(p.idea?.hook)}</p></section>`+vContent(p.content,{total:p.totalMs}); }
   const list=[...S.pieces].sort((a,b)=>(b.createdAt||0)-(a.createdAt||0));
-  return `<section class="hero2">${tilesHTML(3)}<div class="in"><span class="eyebrow">Library</span><h1>Everything you've made</h1>
+  return `<section class="bleed hero2">${tilesHTML(3)}<div class="in"><span class="eyebrow">Library</span><h1 data-split="1" aria-label="Everything you've made"><span aria-hidden="true">Everything</span> <em aria-hidden="true">you've made.</em></h1>
     <label class="field" style="max-width:320px"><span class="label">How long a post takes you without PaperMint (min)</span><input id="base" type="number" min="5" step="5" value="${baseline()}"></label>${stats()}</div></section>
     ${!S.persistent?`<p class="notice">This view keeps your pieces in this browser only.</p>`:""}
     ${list.length?`<section class="panel"><div class="lib">${list.map(p=>`<button class="librow" data-piece="${esc(p.id)}" type="button"><span class="mono muted">${esc(new Date(p.createdAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}</span><span style="min-width:0"><b>${esc(p.idea?.title)}</b><div class="muted" style="font-size:.88rem">${esc(Object.keys(p.content||{}).filter(k=>k!=="compliance").map(k=>FORMATS.find(f=>f[0]===k)?.[1]).filter(Boolean).join(" · "))}</div></span><span class="pill ${(+p.content?.compliance?.score||0)>=85?"":(+p.content?.compliance?.score||0)>=60?"warn":"bad"}">${esc(p.content?.compliance?.score??"—")}</span></button>`).join("")}</div></section>`
@@ -1286,7 +1323,7 @@ function vFaq(){
 }
 function vAsk(){
   const day=latestDay();
-  let h = `<section class="hero2">${tilesHTML(4)}<div class="in"><span class="eyebrow">Ask PaperMint</span><h1>Ask anything about today's money news.</h1><p class="muted">Answers use the stories collected today and the verified indicators. Scenarios and risks, never buy or sell calls.</p></div></section>`;
+  let h = `<section class="bleed hero2">${tilesHTML(4)}<div class="in"><span class="eyebrow">Ask PaperMint</span><h1 data-split="1" aria-label="Ask anything about today's money news."><span aria-hidden="true">Ask anything</span> <em aria-hidden="true">about today's money news.</em></h1><p class="muted">Answers use the stories collected today and the verified indicators. Scenarios and risks, never buy or sell calls.</p></div></section>`;
   h += vFaq();
   h += `<section class="panel askbox"><div class="ptitle"><h2>Your question</h2></div>
     <p class="muted" style="font-size:.9rem">Ask anything about today's markets. The answer uses the collected news and shows scenarios and risks, never buy or sell calls.</p>
@@ -1323,7 +1360,7 @@ function vMarkets(){
     <div class="phase"><div class="pin"><span class="plabel">Biggest move today</span>
       <h2 class="pbig">${esc(mv.name)}<span class="${mv.trend}">${(TR[mv.trend==="up"?"rising":mv.trend==="down"?"falling":mv.trend==="mixed"?"mixed":"steady"]||["","steady"])[1]}</span></h2>
       <p class="lede">${esc(mv.read||(day?`${(day.items||[]).length} stories from ${(day.sources||[]).length} sources shaped today's map.`:"Fetching today's stories."))}</p></div></div>
-    <div class="phase"><div class="pin"><span class="plabel">Today's indicators</span>${inds.length?`<ul class="pind">${inds.map(x=>`<li><span>${esc(indLabel(x))}</span><b>${fmtNum(x.value,x.dec)}%</b></li>`).join("")}</ul>`:`<p class="lede">Loading the official figures…</p>`}</div></div>
+    <div class="phase"><div class="pin"><span class="plabel">Today's indicators</span>${inds.length?`<ul class="pind">${inds.map(x=>`<li><span>${esc(indLabel(x))}</span><b>${fmtNum(x.value,x.dec)}%</b></li>`).join("")}</ul><p class="lede">The ring around the planet is drawn from these eight official figures.</p>`:`<p class="lede">Loading the official figures…</p>`}</div></div>
     <div class="phase"><div class="pin"><span class="plabel">${day?`The Brief · ${(day.items||[]).length} stories, ${(day.sources||[]).length} sources`:"The Brief"}</span><p class="pline">${one?md(one):"What today's news means for your money, in plain English."}</p><button class="btn primary" type="button" data-jump=".seg" data-go="brief">Read The Brief</button></div></div>
   </section>
   <section class="pillgrid" aria-label="Verified indicators"><div class="sechead"><div><h2>Verified indicators</h2></div>${S.ind?`<span class="muted">ECB · Eurostat · Bank of Portugal · checked ${esc(new Date(S.ind.updatedAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}</span>`:""}</div>${vPills()}</section>
@@ -1773,8 +1810,8 @@ function vRoutine(){
   const weekN=days.filter(d=>d.n>=3).length; const doneN=todayDone.filter(Boolean).length;
   const wk=weekId(today); const sig=R.data.signals||{}; const weeks=Object.keys(sig).sort().reverse().slice(0,6); if(!weeks.includes(wk)) weeks.unshift(wk);
   const mins = R.timer ? `${String(Math.floor(R.left/60)).padStart(2,"0")}:${String(R.left%60).padStart(2,"0")}` : "15:00";
-  return `<section class="hero2">${tilesHTML(5)}<div class="in"><span class="eyebrow">Engagement routine · Instagram and LinkedIn</span>
-      <h1>15 minutes a day, always in the same window.</h1>
+  return `<section class="bleed hero2">${tilesHTML(5)}<div class="in"><span class="eyebrow">Engagement routine · Instagram and LinkedIn</span>
+      <h1 data-split="1" aria-label="15 minutes a day, always in the same window."><span aria-hidden="true">15 minutes a day,</span> <em aria-hidden="true">always in the same window.</em></h1>
       <p class="muted">Replying and commenting is what grows an account most, but only if it's a habit you can keep. The routine is short on purpose. PaperMint doesn't post or read your messages: you engage in the apps and PaperMint helps you write the replies.</p>
     <div class="stats"><div class="stat"><b>${doneN}/4</b><span>steps today</span></div><div class="stat"><b>${weekN}/5</b><span>days done this week</span></div><div class="stat"><b>${esc(win)}</b><span>your daily window</span></div></div></div></section>
   <div style="display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:20px" class="rgrid">
@@ -1976,7 +2013,7 @@ function render(){
   if(!OWNER && (tab==="studio"||tab==="lib")){ tab="mkt"; document.querySelectorAll(".tab[data-tab]").forEach(x=>x.classList.toggle("on",x.dataset.tab===tab)); }
   m.innerHTML = tab==="lib" ? vLib() : tab==="mkt" ? vMarkets() : tab==="ask" ? vAsk() : tab==="rot" ? vRoutine() : vStudio();
   bind(); if(tab==="mkt"||tab==="ask") bindMarkets(); if(tab==="rot") bindRoutine();
-  splitWords(m); window.RADAR_TILES?.(); PFIELD.mount(m); WORLD.mount(m);
+  splitWords(m); window.RADAR_TILES?.(); WORLD.mount(m); THREAD.build(m);
   m.querySelectorAll("[data-jump]").forEach(b=>b.onclick=()=>{ if(b.dataset.go&&mk.sub!==b.dataset.go){ mk.sub=b.dataset.go; render(); } document.querySelector(b.dataset.jump)?.scrollIntoView({behavior:RM()?"auto":"smooth",block:"start"}); });
   renderTicker(); motion(m); window.RADAR_BAR?.(); scrollFX(document); SCRUB.mount(document);
 }
@@ -2029,75 +2066,40 @@ const SCRUB=(()=>{ const vis=new Set(), gone=new Set(); let raf=0;
     add(".pslides,.slides","1,0.5,0",el=>[...el.children].forEach((c,i)=>c.style.setProperty("--i",i))); } };  // Studio: slides are dealt like cards
 })();
 
-/* hero particle field: mint points assemble into the PaperMint mark, then re-form as you scroll (today's indicator bars, a stack of posts…).
-   Canvas 2D and decorative only; fewer points on phones and weak devices; a still frame with reduced motion; paused off-screen. */
-const PFIELD=(()=>{
-  const RMq=()=>matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const lite=()=>innerWidth<760||(navigator.hardwareConcurrency&&navigator.hardwareConcurrency<=2)||(navigator.deviceMemory&&navigator.deviceMemory<=2);
-  const COLS=["#1F7F7C","#3AA89C","#5BC8B6","#8DE6D8"];
-  const HUD={word:"Fig. 03 · Move over the dots",logo:"Fig. 01 · PaperMint",bars:"Fig. 02 · Today's indicators",stack:"Fig. 02 · Ready to post",ask:"Fig. 01 · Ask"};
-  const mem={}, live=new Set(); let raf=0, last=0, px=-1e4, py=-1e4;
-  const box=(x,X,y,w,h,r,stroke)=>{ x.beginPath(); x.roundRect?x.roundRect(X,y,w,h,r):x.rect(X,y,w,h); stroke?x.stroke():x.fill(); };
-  const SH={
-    logo(x,W,H){ const s=Math.min(W,H)*.68/24, ox=(W-24*s)/2, oy=(H-24*s)/2; [[0,18],[8,18],[16,18],[8,10],[16,10],[16,2]].forEach(([a,b])=>box(x,ox+a*s,oy+b*s,6.4*s,6.4*s,1.3*s)); },
-    bars(x,W,H,v){ v=v.length?v:[3.6,2.8,3.8,2.5,3.2,1.6,3,3.5]; const lo=Math.min(...v), hi=Math.max(...v), n=v.length, pad=W*.1, gw=(W-2*pad)/n, bw=gw*.36, base=H*.8, top=H*.2;
-      v.forEach((a,i)=>{ const h=(.22+.78*(hi>lo?(a-lo)/(hi-lo):1))*(base-top); box(x,pad+i*gw+(gw-bw)/2,base-h,bw,h,Math.min(bw*.2,8)); }); x.fillRect(pad*.7,base+H*.04,W-pad*1.4,Math.max(2,H*.008)); },
-    ask(x,W,H){ x.font=`800 ${Math.min(W,H)*.74}px Manrope, system-ui, sans-serif`; x.textAlign="center"; x.textBaseline="middle"; x.fillText("?",W/2,H*.52); },
-    word(x,W,H){ let fs=H*.92; const f=()=>x.font=`800 ${fs}px Manrope, system-ui, sans-serif`; f(); const w=x.measureText("PaperMint").width; if(w>W*.96){ fs*=W*.96/w; f(); } x.textAlign="center"; x.textBaseline="middle"; x.fillText("PaperMint",W/2,H*.56); },
-    stack(x,W,H){ const w=Math.min(W*.42,H*.42), h=w*1.25; x.lineWidth=Math.max(6,w*.07); [[-.14,.08],[0,0],[.14,-.08]].forEach(([a,b])=>box(x,W/2-w/2+a*W,H/2-h/2+b*H,w,h,w*.1,true)); }
-  };
-  function targets(name,W,H,vals,N){
-    const c=document.createElement("canvas"); c.width=Math.ceil(W); c.height=Math.ceil(H); const x=c.getContext("2d",{willReadFrequently:true}); x.fillStyle=x.strokeStyle="#000";
-    (SH[name]||SH.logo)(x,W,H,vals); const d=x.getImageData(0,0,c.width,c.height).data;
-    const grab=st=>{ const o=[]; for(let y=0;y<c.height;y+=st) for(let X=0;X<c.width;X+=st) if(d[(y*c.width+X)*4+3]>120) o.push(X,y); return o; };
-    let st=2, pts=grab(st); st=Math.max(2,Math.round(st*Math.sqrt(pts.length/2/(N*1.15)))); pts=grab(st); const n=pts.length/2||1;
-    const out=new Float32Array(N*2); let q=7; for(let i=0;i<N;i++){ q=(q*9301+49297)%233280; const j=Math.floor(q/233280*n); out[i*2]=(pts[j*2]||W/2)+((q%97)/97-.5)*st; out[i*2+1]=(pts[j*2+1]||H/2)+((q%89)/89-.5)*st; }
-    return out;
+/* the common thread: one line of the day's market (its shape comes from the eight indicators) runs down the left margin of every
+   page, draws itself as you scroll and lights a node beside each section title it reaches. Decorative only; fully drawn with
+   reduced motion; hidden on narrow screens where there is no margin for it. */
+const THREAD=(()=>{
+  let svg=null, paths=[], len=0, nodes=[], top=0, H=0, main=null, raf=0, rb=0;
+  const NS="http://www.w3.org/2000/svg", RMq=()=>matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function build(m){
+    main=m; svg?.remove(); svg=null; nodes=[]; if(!m||innerWidth<1000) return;
+    const r=m.getBoundingClientRect(), gw=Math.max(0,r.left)+24; if(gw<56) return;
+    const first=[...m.children].find(el=>!el.classList.contains("bleed")&&el.offsetHeight>0); if(!first) return;
+    top=first.offsetTop+8; const bottom=m.scrollHeight-48; H=bottom-top; if(H<240) return;
+    const ys=[...m.querySelectorAll(":scope > section h2, :scope > nav.seg")].filter(el=>!el.closest(".bleed")&&el.offsetHeight)
+      .map(el=>el.getBoundingClientRect().top-r.top+el.offsetHeight/2).filter(y=>y>top+24&&y<bottom-24);
+    const v=(S.ind?.items||[]).map(x=>+x.value).filter(x=>!isNaN(x)), vals=v.length?v:[3.6,2.8,3.8,2.5,3.2,1.6,3,3.5], lo=Math.min(...vals), hi=Math.max(...vals);
+    const cx=gw*.5, amp=Math.min(gw*.3,28), step=56, pts=[[cx,top]];
+    for(let y=step,i=0;y<H;y+=step,i++){ const yy=top+y, n=hi>lo?(vals[i%vals.length]-lo)/(hi-lo):.5, near=ys.reduce((a,ay)=>Math.min(a,Math.abs(ay-yy)),1e9);
+      pts.push([cx+(n-.5)*2*amp*Math.min(1,near/110),yy]); }
+    pts.push([cx,bottom]);
+    let d=`M${pts[0][0].toFixed(1)},${pts[0][1].toFixed(1)}`;
+    for(let i=0;i<pts.length-1;i++){ const p0=pts[i-1]||pts[i], p1=pts[i], p2=pts[i+1], p3=pts[i+2]||p2;
+      d+=` C${(p1[0]+(p2[0]-p0[0])/6).toFixed(1)},${(p1[1]+(p2[1]-p0[1])/6).toFixed(1)} ${(p2[0]-(p3[0]-p1[0])/6).toFixed(1)},${(p2[1]-(p3[1]-p1[1])/6).toFixed(1)} ${p2[0].toFixed(1)},${p2[1].toFixed(1)}`; }
+    svg=document.createElementNS(NS,"svg"); svg.setAttribute("class","thread"); svg.setAttribute("aria-hidden","true");
+    svg.setAttribute("width",gw); svg.setAttribute("height",m.scrollHeight); svg.style.left=(-r.left)+"px";
+    paths=["base","r","c","w"].map(k=>{ const p=document.createElementNS(NS,"path"); p.setAttribute("d",d); p.setAttribute("class",k); svg.appendChild(p); return p; });
+    len=paths[3].getTotalLength(); paths.slice(1).forEach(p=>{ p.style.strokeDasharray=len; });
+    nodes=ys.map(y=>{ const c=document.createElementNS(NS,"circle"); c.setAttribute("cx",cx); c.setAttribute("cy",y); c.setAttribute("r",4); svg.appendChild(c); return {c,y}; });
+    m.appendChild(svg); draw();
   }
-  function size(f){
-    const r=f.cv.getBoundingClientRect(); if(!r.width||!r.height) return; const dpr=Math.min(2,devicePixelRatio||1);
-    f.W=r.width; f.H=r.height; f.cv.width=f.W*dpr; f.cv.height=f.H*dpr; f.ctx.setTransform(dpr,0,0,dpr,0,0);
-    const n0=+f.cv.dataset.n||2400; f.N=lite()?Math.round(n0*.38):n0; f.A=targets(f.a,f.W,f.H,f.vals,f.N); f.B=targets(f.b,f.W,f.H,f.vals,f.N);
-    const m=mem[f.key];
-    if(m&&m.P.length===f.N*2){ f.P=m.P; f.V=m.V; }
-    else { f.P=new Float32Array(f.N*2); f.V=new Float32Array(f.N*2); const still=RMq();
-      for(let i=0;i<f.N;i++){ f.P[i*2]=still?f.A[i*2]:Math.random()*f.W*1.6-f.W*.3; f.P[i*2+1]=still?f.A[i*2+1]:f.H+Math.random()*f.H*.8; }
-      mem[f.key]={P:f.P,V:f.V}; }
-    f.bk=[[],[],[],[]]; for(let i=0;i<f.N;i++){ const c=Math.max(0,Math.min(3,Math.floor((1-f.A[i*2+1]/f.H)*4.2-.4))); f.bk[c].push(i); }
-    if(f.k==null) f.k=0;
-  }
-  function draw(f){
-    const x=f.ctx, s=f.N>1500?2.1:2.3; x.clearRect(0,0,f.W,f.H);
-    f.bk.forEach((idx,c)=>{ x.fillStyle=COLS[c]; x.beginPath(); for(const i of idx) x.rect(f.P[i*2]-s/2,f.P[i*2+1]-s/2,s,s); x.fill(); });
-  }
-  function step(f,t){
-    const hero=f.cv.closest(".hero2"); const goal=Math.max(0,Math.min(1,scrollY/Math.max(1,(hero?.offsetHeight||f.H)*.45)));
-    f.k+=(goal-f.k)*.08; const cr=f.cv.getBoundingClientRect(), mx=px-cr.left, my=py-cr.top, R=f.W<500?60:90, R2=R*R;
-    for(let i=0;i<f.N;i++){ const a=i*2, b=a+1;
-      let e=Math.max(0,Math.min(1,f.k*1.5-(i%97)/97*.5)); e=e*e*(3-2*e);
-      const tx=f.A[a]+(f.B[a]-f.A[a])*e+Math.sin(t*1.3+i*.7)*1.2, ty=f.A[b]+(f.B[b]-f.A[b])*e+Math.cos(t*1.1+i*.9)*1.2;
-      let vx=f.V[a]+(tx-f.P[a])*.045, vy=f.V[b]+(ty-f.P[b])*.045;
-      const dx=f.P[a]-mx, dy=f.P[b]-my, d2=dx*dx+dy*dy; if(d2<R2){ const d=Math.sqrt(d2)||1, z=(1-d/R)*3.4; vx+=dx/d*z; vy+=dy/d*z; }
-      vx*=.84; vy*=.84; f.V[a]=vx; f.V[b]=vy; f.P[a]+=vx; f.P[b]+=vy; }
-    const h=HUD[f.k>.5?f.b:f.a]; if(f.hud&&f.hud.textContent!==h) f.hud.textContent=h;
-  }
-  function loop(now){
-    raf=0; if(document.hidden) return; if(lite()&&now-last<30){ raf=requestAnimationFrame(loop); return; } last=now; let any=false;
-    live.forEach(f=>{ if(!f.cv.isConnected){ f.io.disconnect(); f.ro.disconnect(); live.delete(f); return; } if(!f.vis||!f.P) return; any=true; step(f,now/1000); draw(f); });
-    if(any) raf=requestAnimationFrame(loop);
-  }
-  const kick=()=>{ if(!raf&&!RMq()) raf=requestAnimationFrame(loop); };
-  addEventListener("scroll",kick,{passive:true}); addEventListener("pointermove",e=>{ px=e.clientX; py=e.clientY; kick(); },{passive:true});
-  document.addEventListener("pointerleave",()=>{ px=py=-1e4; }); document.addEventListener("visibilitychange",kick);
-  document.fonts?.ready.then(()=>live.forEach(f=>{ if(f.a==="ask"||f.b==="ask"||f.a==="word"){ size(f); if(RMq()) draw(f); } }));
-  return { mount(root){ root.querySelectorAll("canvas.pfield").forEach(cv=>{ if(cv._pf) return;
-    const f=cv._pf={cv,ctx:cv.getContext("2d"),key:cv.dataset.key,a:cv.dataset.a,b:cv.dataset.b,vals:(cv.dataset.vals||"").split(",").filter(Boolean).map(Number),hud:cv.parentElement.querySelector(".phud"),vis:true};
-    size(f); live.add(f);
-    f.ro=new ResizeObserver(()=>{ size(f); draw(f); kick(); }); f.ro.observe(cv);
-    f.io=new IntersectionObserver(es=>{ f.vis=es[0].isIntersecting; kick(); }); f.io.observe(cv);
-    if(f.P) draw(f); kick(); }); } };
+  function draw(){ raf=0; if(!svg||!main) return; const r=main.getBoundingClientRect(), at=RMq()?1e9:innerHeight*.62-r.top, f=Math.max(0,Math.min(1,(at-top)/H));
+    paths.slice(1).forEach(p=>{ p.style.strokeDashoffset=(len*(1-f)).toFixed(1); }); nodes.forEach(n=>n.c.classList.toggle("on",n.y<at)); }
+  addEventListener("scroll",()=>{ if(!raf) raf=requestAnimationFrame(draw); },{passive:true});
+  addEventListener("resize",()=>{ clearTimeout(rb); rb=setTimeout(()=>build(main),150); });
+  let ro=null; return { build(m){ build(m); if(!ro&&m){ let lastH=0; ro=new ResizeObserver(()=>{ const h=m.scrollHeight; if(Math.abs(h-lastH)>4){ lastH=h; clearTimeout(rb); rb=setTimeout(()=>build(main),120); } }); ro.observe(m); } } };
 })();
-PFIELD.mount(document.querySelector("footer.foot"));
 /* smooth SVG path through the day's indicator values (also the static art when WebGL is missing) */
 const linePath=(v,W,H)=>{ v=v.length?v:[3.6,2.8,3.8,2.5,3.2,1.6,3,3.5]; const ys=[...v,...v.slice().reverse()].slice(0,12); const lo=Math.min(...ys), hi=Math.max(...ys);
   const pts=ys.map((a,i)=>[i/(ys.length-1)*W, H*.72-(hi>lo?(a-lo)/(hi-lo):.5)*H*.42]); let d=`M${pts[0][0].toFixed(1)},${pts[0][1].toFixed(1)}`;
@@ -2159,14 +2161,8 @@ const WORLD=(()=>{
     // the market line as an orbit ring, its wobble drawn from the indicators
     const v=M.vals.length?M.vals:[3.6,2.8,3.8,2.5,3.2,1.6,3,3.5], lo=Math.min(...v), hi=Math.max(...v), nz=a=>hi>lo?(a-lo)/(hi-lo):.5;
     const rp=[]; for(let i=0;i<=96;i++){ const a=i/96*Math.PI*2, k=v[Math.floor(i/96*v.length)%v.length]; rp.push(new T.Vector3(Math.cos(a)*(R0*1.55),(nz(k)-.5)*2.4+Math.sin(a*3)*.6,Math.sin(a)*(R0*1.55))); }
-    const ring=new T.CatmullRomCurve3(rp,true); const rg=new T.Group(); rg.rotation.set(.32,0,-.2); sc.add(rg); G.ring=rg;
+    const ring=new T.CatmullRomCurve3(rp,true); const rg=new T.Group(); rg.rotation.set(.32,0,-.2); sc.add(rg); rg.updateMatrixWorld(); G.ring=rg; const ringAt=rg.localToWorld(ring.getPoint(.12).clone());
     [[.1,0xFFFFFF,1],[.45,0x8DE6D8,.18]].forEach(([r,c,o])=>rg.add(new T.Mesh(new T.TubeGeometry(ring,L?220:420,r,6,true),new T.MeshBasicMaterial({color:c,transparent:true,opacity:o,blending:T.AdditiveBlending,depthWrite:false}))));
-    // indicator spires rising out of the surface
-    const tip=glowTex(T,64,"rgba(255,255,255,1)","rgba(141,230,216,.6)"); G.spires=[]; const sp=[];
-    v.forEach((a,i)=>{ const d=dir(-14+i*4.2,72+Math.sin(i*1.3)*5), base=at(d), h=2+nz(a)*7; sp.push(base);
-      const m=new T.Mesh(new T.CylinderGeometry(.07,.07,1,10,1,true).translate(0,.5,0),new T.MeshBasicMaterial({color:0xFFFFFF,transparent:true,opacity:.95,blending:T.AdditiveBlending,depthWrite:false}));
-      m.position.copy(base); m.quaternion.setFromUnitVectors(new T.Vector3(0,1,0),d); m.userData={h}; m.scale.y=.001; planet.add(m); G.spires.push(m);
-      const s=new T.Sprite(new T.SpriteMaterial({map:tip,transparent:true,depthWrite:false,blending:T.AdditiveBlending})); s.scale.set(1.3,1.3,1); s.userData={base,d,h}; s.position.copy(base); planet.add(s); G.spires.push(s); });
     // the day's stories as lights on the surface; the Brief's four are the brightest
     const regionFor=it=>{ const c=catEN(it.category||"").toLowerCase(); return M.regions.find(r=>r.name.toLowerCase()===c)||M.regions.find(r=>c&&(r.name.toLowerCase().includes(c)||c.includes(r.name.toLowerCase())))||null; };
     let q=11; const rnd=()=>{ q=(q*9301+49297)%233280; return q/233280; };
@@ -2184,7 +2180,7 @@ const WORLD=(()=>{
       const view=subj.clone().sub(pos).normalize(), right=view.clone().cross(up).normalize(); const look=mob?subj.clone().add(new T.Vector3(0,-dist*.22,0)):subj.clone().sub(right.multiplyScalar(dist*.32)); return [pos,look]; };
     const mid=arr=>arr.reduce((a,p)=>a.add(p),new T.Vector3()).multiplyScalar(1/arr.length);
     G.K=[[new T.Vector3(0,8,mob?104:88),mob?new T.Vector3(0,-16,0):new T.Vector3(-20,0,0)],
-         shot(at(M.mover.d),24,6), shot(mid(sp.map(p=>p.clone())),24,9,-.75), shot(G.brief.length?mid(G.brief.map(m=>m.position.clone())):at(dir(0,0)),30,10)];
+         shot(at(M.mover.d),24,6), shot(ringAt,16,4,-.35), shot(G.brief.length?mid(G.brief.map(m=>m.position.clone())):at(dir(0,0)),30,10)];
     G.labels=M.regions.map(r=>({p:r.d.clone().multiplyScalar(RR(r.d)+1.8)}));
     G.planet=planet; G.sky=sky; G.scene=sc;
   }
@@ -2194,13 +2190,11 @@ const WORLD=(()=>{
     G.raf=0; if(!G.sec||!G.sec.isConnected||!G.scene) return; const still=RMq(), vh=innerHeight, r=G.sec.getBoundingClientRect();
     const p=Math.max(0,Math.min(1,-r.top/Math.max(1,r.height-vh))), k=still?0:p*(G.K.length-1), i=Math.min(G.K.length-2,Math.floor(k)), e=ss(Math.min(1,k-i));
     const pos=G.K[i][0].clone().lerp(G.K[i+1][0],e), tgt=G.K[i][1].clone().lerp(G.K[i+1][1],e), t=(now-G.t0)/1000;
-    G.mx+=(G.tx-G.mx)*.05; G.my+=(G.ty-G.my)*.05; if(!still){ pos.x+=G.mx*3; pos.y+=-G.my*2; G.planet.rotation.y=Math.sin(t*.08)*.12; G.ring.rotation.y=t*.05; G.dust.rotation.y=t*.006; }
+    G.mx+=(G.tx-G.mx)*.05; G.my+=(G.ty-G.my)*.05; if(!still){ pos.x+=G.mx*3; pos.y+=-G.my*2; G.planet.rotation.y=Math.sin(t*.08)*.12; G.dust.rotation.y=t*.006; }
     G.cam.position.copy(pos); G.cam.lookAt(tgt);
     // chromatic split along the camera's right axis; now and then it glitches
     const right=new (pos.constructor)().setFromMatrixColumn(G.cam.matrixWorld,0), sp=G.sky.split*(!still&&Math.random()<G.sky.glitch?3.5:1), jit=!still&&sp>G.sky.split?(Math.random()-.5)*.5:0;
     G.ghost.forEach(m=>{ m.position.copy(right).multiplyScalar(m.userData.d*sp); m.position.y+=jit; });
-    const grow=still?1:ss(Math.max(0,Math.min(1,(p-.4)/.22)));
-    G.spires.forEach(m=>{ if(m.isSprite) m.position.copy(m.userData.base).addScaledVector(m.userData.d,m.userData.h*grow); else m.scale.y=Math.max(.001,m.userData.h*grow); });
     if(!still) G.brief.forEach(m=>{ const s=2.4+Math.sin(t*2+m.userData.k)*.45; m.scale.set(s,s,1); });
     G.r.render(G.scene,G.cam);
     const box=G.sec.querySelector(".wlabels"); if(box){ const w=box.clientWidth, h=box.clientHeight; G.labels.forEach((l,j)=>{ const el=box.children[j]; if(!el) return;
@@ -2232,8 +2226,11 @@ const TILESETS=[
   [[70,8,12,-20,"#3AA89C",1,35],[2,20,9,30,"#5BC8B6",.6,-40],[30,46,13,-12,"#FFFFFF",.4,25],[86,40,13,14,"#1F7F7C",1.2,-30],[52,70,12,-26,"#5BC8B6",1.3,45],[10,72,10,18,"#3AA89C",.8,-20]],
 ];
 function tilesHTML(){
-  const d=linePath((S.ind?.items||[]).map(x=>+x.value).filter(x=>!isNaN(x)),1200,400);
-  return `<svg class="hline" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true"><path class="g" d="${d}"/><path d="${d}"/></svg>`;
+  const R=280, c=300, L=[], rad=Math.PI/180;
+  for(let k=-75;k<=75;k+=15){ const y=c-R*Math.sin(k*rad), rx=R*Math.cos(k*rad); L.push(`<ellipse cx="${c}" cy="${y.toFixed(1)}" rx="${rx.toFixed(1)}" ry="${(rx*.16).toFixed(1)}"/>`); }
+  for(let k=15;k<180;k+=15){ const rx=Math.abs(R*Math.cos(k*rad)); L.push(rx<1?`<line x1="${c}" y1="${c-R}" x2="${c}" y2="${c+R}"/>`:`<ellipse cx="${c}" cy="${c}" rx="${rx.toFixed(1)}" ry="${R}"/>`); }
+  L.push(`<circle cx="${c}" cy="${c}" r="${R}"/>`); const g=L.join("");
+  return `<svg class="hglobe" viewBox="0 0 600 600" aria-hidden="true"><g class="r">${g}</g><g class="c">${g}</g><g class="w">${g}</g></svg>`;
 }
 (()=>{ if(matchMedia("(prefers-reduced-motion: reduce)").matches) return; let raf=0, mx=0, my=0, tx=0, ty=0;
   const upd=()=>{ raf=0; mx+=(tx-mx)*.12; my+=(ty-my)*.12;

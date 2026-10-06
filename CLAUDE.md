@@ -19,14 +19,15 @@ Financial-literacy site (Nova SBE project, "Boosting productivity with AI"). Pub
 ## Design
 - Direction: dark cinematic (inspired by immersive sites like Jeff Koons Moon Phases, read as a chart). Background #050606 (near black), white type, mint accents. The last CSS layer ("PaperMint v4: dark cinematic") is the source of truth; earlier layers stay underneath.
 - Palette: #8DE6D8 #5BC8B6 #3AA89C #1F7F7C #0F5854 #003C3B, plus the deep background #011A19. Manrope 800 headings.
-- Markets opens with "PaperMint World" (`WORLD`, Three.js r128 via `loadThree`), inspired by unseen.co/world: a white wireframe planet on black with a red/cyan chromatic split and film grain. Its relief comes from the daily map (rising classes lift into mountains, falling ones sink into craters, mixed ones ripple); the market line orbits as a ring of light; indicators rise as spires; the day's stories glow on the surface, the four Brief stories brightest. The day's mood (calm / changeable / stormy, `WORLD_SKY`) sets the glow and how hard it glitches. Scroll flies the camera: overview → biggest move → indicators → the Brief. Copy is real HTML in `.phase` blocks. Lite on phones/weak devices, still frame with reduced motion, static SVG line if WebGL fails.
+- Markets opens with "PaperMint World" (`WORLD`, Three.js r128 via `loadThree`), inspired by unseen.co/world: a white wireframe planet on black with a red/cyan chromatic split and film grain. Its relief comes from the daily map (rising classes lift into mountains, falling ones sink into craters, mixed ones ripple); the market line orbits as a ring of light drawn from the eight indicators; the day's stories glow on the surface, the four Brief stories brightest. The day's mood (calm / changeable / stormy, `WORLD_SKY`) sets the glow and how hard it glitches. Scroll flies the camera: overview → biggest move → the indicator ring → the Brief. Copy is real HTML in `.phase` blocks. Lite on phones/weak devices, still frame with reduced motion, static SVG line if WebGL fails.
 - Type: Manrope 800 plus Instrument Serif italic accents (headline second line, the "Mint" in the wordmark).
-- Other tabs: dark hero card with the day's line drawn across it (`tilesHTML` → `.hline`).
-- Logo: a market curve ending in a point of light + the "PaperMint" wordmark (Mint in mint). No squares anywhere.
-- Footer: the PaperMint wordmark in mint particles (`PFIELD`, canvas 2D) that scatters under the pointer.
+- Every other tab opens the same way (harmony): full-bleed black hero with film grain, a static wireframe globe SVG with the RGB split (`tilesHTML` → `.hglobe`), and a two-line title whose second line is the italic serif.
+- Logo: lettering only, "Paper" in Manrope 800 + "Mint" in Instrument Serif italic (mint). No symbol, no squares.
+- Footer: dark CTA card, then the link columns. Labels are sentence case everywhere.
+- The common thread (`THREAD`): one line of the day's market (shape from the indicators) runs down the left margin of every page, draws itself on scroll with the RGB split and lights a node beside each section title. Hidden under 1000px; fully drawn with reduced motion.
 - Menu bar solid dark; dark ticker with a LIVE tag under it.
 - No small numbered/all-caps eyebrow labels ("03 / …"): titles stand on their own.
-- Rejected before (don't bring back): glossy balls, coral wave, bubbles, light font weight, WebGL cube wall, orbiting gradient squares, blocky particle logos, HUD corner marks, graph-paper grids, numbered eyebrows.
+- Rejected before (don't bring back): glossy balls, coral wave, bubbles, light font weight, WebGL cube wall, orbiting gradient squares, blocky particle logos, particle wordmarks, HUD corner marks, graph-paper grids, numbered eyebrows, indicator spires on the globe, decorative wavy lines inside hero cards, logo symbols.
 
 ## Talk to Ana
 Portuguese (pt-PT), concise, action first.
