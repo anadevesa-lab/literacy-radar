@@ -22,12 +22,11 @@ Financial-literacy site (Nova SBE project, "Boosting productivity with AI"). Pub
 - Type: Manrope 800 for headings and UI, Instrument Serif italic for accents (the "Mint" in the logo, the second line of titles, footer headings).
 - Logo: lettering only, "Paper" in Manrope 800 + "Mint" in Instrument Serif italic (mint). No symbol.
 - Markets opens like a newspaper front page: giant "PaperMint" masthead, a dateline between rules (date · stories · sources · "Educational, never advice"), then the Brief's one-liner with a mint highlighter sweeping over its key phrase (`hlLead`) and a side column with the number of the day, the biggest move and the CTAs.
-- The masthead lettering is liquid glass (`GLASS`, a small raw-WebGL shader over a texture of the real lettering): specular edges, a mint sheen sliding across, water ripples around the pointer and on scroll. The real <h1> stays; reduced motion or no WebGL shows the plain lettering.
+- Stacked pages (`STACK`): each section below the opening is a sheet; on scroll the next sheet slides up over the previous one, which settles back slightly. Long sheets stick by their bottom edge so they are read to the end first. Off with reduced motion.
 - Other tabs open with a section head in the same voice (`.hero2.paperhead`): big two-line title, rule underneath.
-- Chapter index (`CHAPTERS`): the page's sections in the left margin in the italic serif; the current one is marked, click to jump. Shown from 1100px, hidden over the opening and the footer.
 - Menu bar solid white; dark news ticker under it.
 - No small numbered/all-caps eyebrow labels; labels in sentence case.
-- Rejected before (don't bring back): dark/black themes, 3D globes and wireframe planets, film grain and RGB-split effects, particle fields and particle wordmarks, glossy balls, coral wave, bubbles, light font weight, WebGL cube wall, orbiting gradient squares, HUD corner marks, graph-paper grids, numbered eyebrows, decorative wavy lines, connecting rails, reading-progress line under the menu, logo symbols, banknote guilloché and paper-stack heroes.
+- Rejected before (don't bring back): dark/black themes, 3D globes and wireframe planets, film grain and RGB-split effects, particle fields and particle wordmarks, glossy balls, coral wave, bubbles, light font weight, WebGL cube wall, orbiting gradient squares, HUD corner marks, graph-paper grids, numbered eyebrows, decorative wavy lines, connecting rails, side chapter index, reading-progress line under the menu, logo symbols, liquid-glass/rippling lettering, banknote guilloché and paper-stack heroes.
 
 ## Talk to Ana
 Portuguese (pt-PT), concise, action first.

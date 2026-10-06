@@ -837,23 +837,13 @@ header.top,body.solid header.top{background:#FFFFFF!important;border-bottom:1px 
   .fcta .in{padding:40px 24px!important}
 }
 @media (prefers-reduced-motion:reduce){.mlead mark{animation:none;background-size:100% 100%} #preload .pwm{animation:none}}
-/* liquid-glass masthead: the canvas sits exactly over the lettering; the real text stays for screen readers */
-.mastword{position:relative}
-.mastword .glasscv{position:absolute;pointer-events:none;display:block}
-.mastword.glass > span,.mastword.glass > em{color:transparent!important}
-/* chapter index in the left margin */
-.chapters{position:fixed;left:28px;top:50%;width:150px;z-index:8;opacity:0;pointer-events:none;transform:translate(-8px,-50%);transition:opacity .45s ease,transform .45s ease}
-.chapters.show{opacity:1;pointer-events:auto;transform:translate(0,-50%)}
-.chapters ol{list-style:none;margin:0;padding:0 0 0 20px;display:flex;flex-direction:column;gap:16px}
-.chapters li{position:relative}
-.chapters li::before{content:"";position:absolute;left:-20px;top:50%;width:7px;height:7px;margin-top:-3.5px;border-radius:50%;background:#FFFFFF;border:1px solid #9FC9C1;transition:background .35s,border-color .35s,box-shadow .35s}
-.chapters li.on::before{background:#5BC8B6;border-color:#003C3B}
-.chapters button{background:none;border:0;padding:2px 0;cursor:pointer;font-family:var(--f-serif);font-style:italic;font-size:17px;line-height:1.15;color:#6F8F8B;text-align:left;transition:color .3s}
-.chapters button:hover{color:#003C3B} .chapters li.on button{color:#003C3B}
-.chapters button:focus-visible{outline:2px solid #5BC8B6;outline-offset:3px;border-radius:4px}
-@media (min-width:1100px){body.chap main.wrap{max-width:min(1200px,calc(100vw - 380px))}}
-@media (max-width:1099px){.chapters{display:none}}
-@media (prefers-reduced-motion:reduce){.chapters,.chapters li::before,.chapters button{transition:none}}
+/* stacked pages: sections are sheets that slide over one another */
+.sheet{position:sticky;top:var(--top,120px);background:#FFFFFF!important;border-radius:24px!important;transform-origin:50% 0;
+  transform:scale(calc(1 - var(--k,0) * .05));filter:brightness(calc(1 - var(--k,0) * .04));
+  box-shadow:0 -22px 44px -30px rgba(0,60,59,.3),0 0 0 1px var(--line);will-change:transform}
+.pillgrid.sheet{padding:28px 32px}
+.panel.brief.sheet{padding:32px}
+@media (max-width:760px){.pillgrid.sheet,.panel.brief.sheet{padding:20px}}
 @media (max-width:760px){
   .hero2.bleed{min-height:0}
   .hero2.bleed .in{padding:calc(var(--hh) + 40px) var(--s4) 56px!important}
@@ -2040,7 +2030,7 @@ function render(){
   if(!OWNER && (tab==="studio"||tab==="lib")){ tab="mkt"; document.querySelectorAll(".tab[data-tab]").forEach(x=>x.classList.toggle("on",x.dataset.tab===tab)); }
   m.innerHTML = tab==="lib" ? vLib() : tab==="mkt" ? vMarkets() : tab==="ask" ? vAsk() : tab==="rot" ? vRoutine() : vStudio();
   bind(); if(tab==="mkt"||tab==="ask") bindMarkets(); if(tab==="rot") bindRoutine();
-  splitWords(m); window.RADAR_TILES?.(); CHAPTERS.build(m); GLASS.mount(m);
+  splitWords(m); window.RADAR_TILES?.(); STACK.build(m); document.body.classList.remove("chap");
   m.querySelectorAll("[data-jump]").forEach(b=>b.onclick=()=>{ if(b.dataset.go&&mk.sub!==b.dataset.go){ mk.sub=b.dataset.go; render(); } document.querySelector(b.dataset.jump)?.scrollIntoView({behavior:RM()?"auto":"smooth",block:"start"}); });
   renderTicker(); motion(m); window.RADAR_BAR?.(); scrollFX(document); SCRUB.mount(document);
 }
@@ -2093,107 +2083,22 @@ const SCRUB=(()=>{ const vis=new Set(), gone=new Set(); let raf=0;
     add(".pslides,.slides","1,0.5,0",el=>[...el.children].forEach((c,i)=>c.style.setProperty("--i",i))); } };  // Studio: slides are dealt like cards
 })();
 
-/* liquid-glass masthead: the PaperMint lettering is drawn into a texture and rendered through a small WebGL shader. The letters
-   read as glass (specular edges, a mint sheen sliding across) and ripple like water around the pointer and when you scroll.
-   The real <h1> stays in the page for screen readers and search; with reduced motion or without WebGL it is simply shown as is. */
-const GLASS=(()=>{
-  const G={cv:null,gl:null,prog:null,tex:null,u:{},h1:null,W:0,H:0,pad:0,raf:0,vis:true,io:null,ro:null,t0:performance.now(),mx:.5,my:.5,tx:.5,ty:.5,A:.15,TA:.15,lastY:scrollY};
+/* stacked pages: each section of a page is a sheet. Scrolling slides the next sheet up over the previous one, which settles back
+   slightly. Long sheets are read to their end before the next arrives (they stick by their bottom edge). Off with reduced motion. */
+const STACK=(()=>{
+  let sheets=[], raf=0; const ro=new ResizeObserver(()=>{ size(); update(); });
   const RMq=()=>matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const VS="attribute vec2 p;varying vec2 v;void main(){v=p*.5+.5;gl_Position=vec4(p,0.,1.);}";
-  const FS=`precision mediump float;uniform sampler2D T;uniform vec2 R;uniform float t;uniform vec2 M;uniform float A;varying vec2 v;
-  void main(){ vec2 px=v*R;
-    vec2 d=vec2(sin(px.y*.021+t*1.1)+sin(px.y*.009-t*.7),cos(px.x*.017-t*1.2)+sin(px.x*.008+t*.6))*(.2+A*3.2)/R;
-    vec2 mp=M*R; vec2 q=px-mp; float dist=length(q)+.001; float rip=sin(dist*.07-t*5.5)*exp(-dist*.011)*max(A-.15,0.)*16.;
-    d+=q/dist*rip/R;
-    vec2 uv=v+d; vec4 c=texture2D(T,uv); float a=c.a;
-    vec2 e=vec2(2.)/R;
-    float gx=texture2D(T,uv+vec2(e.x,0.)).a-texture2D(T,uv-vec2(e.x,0.)).a;
-    float gy=texture2D(T,uv+vec2(0.,e.y)).a-texture2D(T,uv-vec2(0.,e.y)).a;
-    vec3 n=normalize(vec3(-gx,-gy,.32));
-    vec3 L=normalize(vec3(-.45,.65,.6)); float spec=pow(max(dot(reflect(-L,n),vec3(0.,0.,1.)),0.),22.);
-    float band=smoothstep(.9,1.,.5+.5*sin((v.x*2.4+v.y*1.2)*3.1416-t*.9));
-    float inner=smoothstep(.0,.9,a)*(1.-abs(n.x)-abs(n.y)*.5);
-    vec3 col=c.rgb;
-    col=mix(col,col+vec3(.16,.2,.19),inner*.18);
-    col+=vec3(.6,.97,.92)*band*.32;
-    col=mix(col,vec3(1.),clamp(spec,0.,1.)*.9);
-    gl_FragColor=vec4(col*a,a); }`;
-  function sh(gl,type,src){ const s=gl.createShader(type); gl.shaderSource(s,src); gl.compileShader(s); if(!gl.getShaderParameter(s,gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s)); return s; }
-  function init(){
-    const cv=document.createElement("canvas"); cv.className="glasscv"; cv.setAttribute("aria-hidden","true");
-    const gl=cv.getContext("webgl",{premultipliedAlpha:true,alpha:true,antialias:false}); if(!gl) return false;
-    const prog=gl.createProgram(); gl.attachShader(prog,sh(gl,gl.VERTEX_SHADER,VS)); gl.attachShader(prog,sh(gl,gl.FRAGMENT_SHADER,FS)); gl.linkProgram(prog);
-    if(!gl.getProgramParameter(prog,gl.LINK_STATUS)) return false; gl.useProgram(prog);
-    const b=gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,b); gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
-    const lp=gl.getAttribLocation(prog,"p"); gl.enableVertexAttribArray(lp); gl.vertexAttribPointer(lp,2,gl.FLOAT,false,0,0);
-    G.tex=gl.createTexture(); gl.bindTexture(gl.TEXTURE_2D,G.tex);
-    [gl.TEXTURE_WRAP_S,gl.TEXTURE_WRAP_T].forEach(k=>gl.texParameteri(gl.TEXTURE_2D,k,gl.CLAMP_TO_EDGE)); [gl.TEXTURE_MIN_FILTER,gl.TEXTURE_MAG_FILTER].forEach(k=>gl.texParameteri(gl.TEXTURE_2D,k,gl.LINEAR));
-    ["T","R","t","M","A"].forEach(k=>G.u[k]=gl.getUniformLocation(prog,k));
-    gl.enable(gl.BLEND); gl.blendFunc(gl.ONE,gl.ONE_MINUS_SRC_ALPHA);
-    G.cv=cv; G.gl=gl; G.prog=prog;
-    addEventListener("pointermove",e=>{ if(!G.h1) return; const r=G.cv.getBoundingClientRect(); G.tx=(e.clientX-r.left)/r.width; G.ty=1-(e.clientY-r.top)/r.height;
-      const inside=G.tx>-.05&&G.tx<1.05&&G.ty>-.2&&G.ty<1.2; G.TA=inside?.85:.15; kick(); },{passive:true});
-    addEventListener("scroll",()=>{ const dy=Math.abs(scrollY-G.lastY); G.lastY=scrollY; G.TA=Math.min(1.2,.15+dy*.03); kick(); },{passive:true});
-    document.addEventListener("visibilitychange",kick);
-    return true;
-  }
-  function paint(){
-    const h1=G.h1; if(!h1||!G.gl) return; const r=h1.getBoundingClientRect(); if(!r.width) return;
-    const fs=parseFloat(getComputedStyle(h1).fontSize), pad=Math.round(fs*.18), dpr=Math.min(2,devicePixelRatio||1);
-    G.W=Math.round((r.width+pad*2)*dpr); G.H=Math.round((r.height+pad*2)*dpr); G.pad=pad;
-    Object.assign(G.cv.style,{left:-pad+"px",top:-pad+"px",width:(r.width+pad*2)+"px",height:(r.height+pad*2)+"px"});
-    G.cv.width=G.W; G.cv.height=G.H;
-    const off=document.createElement("canvas"); off.width=G.W; off.height=G.H; const x=off.getContext("2d"); x.scale(dpr,dpr);
-    const root=getComputedStyle(document.documentElement), ink=root.getPropertyValue("--ink").trim()||"#003C3B", mint=root.getPropertyValue("--mint").trim()||"#5BC8B6";
-    h1.querySelectorAll(":scope > span, :scope > em").forEach(el=>{ const cs=getComputedStyle(el), er=el.getBoundingClientRect();
-      x.font=`${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`; if("letterSpacing" in x) x.letterSpacing=cs.letterSpacing; x.fillStyle=el.tagName==="EM"?mint:ink; x.textBaseline="alphabetic";
-      const m=x.measureText(el.textContent); const asc=m.fontBoundingBoxAscent??parseFloat(cs.fontSize)*.9;
-      x.fillText(el.textContent,er.left-r.left+pad,er.top-r.top+pad+asc); });
-    const gl=G.gl; gl.viewport(0,0,G.W,G.H); gl.bindTexture(gl.TEXTURE_2D,G.tex);
-    gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,true); gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL,false);
-    gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,off);
-    gl.uniform2f(G.u.R,G.W,G.H); gl.uniform1i(G.u.T,0);
-  }
-  function frame(now){
-    G.raf=0; if(!G.h1||!G.h1.isConnected||!G.gl) return; const gl=G.gl;
-    G.mx+=(G.tx-G.mx)*.08; G.my+=(G.ty-G.my)*.08; G.A+=(G.TA-G.A)*.06; G.TA+=(.15-G.TA)*.02;
-    gl.clearColor(0,0,0,0); gl.clear(gl.COLOR_BUFFER_BIT);
-    gl.uniform1f(G.u.t,(now-G.t0)/1000); gl.uniform2f(G.u.M,G.mx,G.my); gl.uniform1f(G.u.A,G.A); gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
-    if(G.vis&&!document.hidden) G.raf=requestAnimationFrame(frame);
-  }
-  const kick=()=>{ if(!G.raf&&G.h1?.isConnected) G.raf=requestAnimationFrame(frame); };
-  return { async mount(root){
-    const h1=root.querySelector(".mastword"); G.h1=null; if(!h1||RMq()) return;
-    try{ await document.fonts?.ready; }catch{}
-    if(!h1.isConnected) return;
-    try{ if(!G.gl&&!init()) return; }catch{ G.gl=null; return; }
-    G.h1=h1; h1.appendChild(G.cv); paint(); h1.classList.add("glass");
-    G.ro?.disconnect(); G.ro=new ResizeObserver(()=>{ paint(); kick(); }); G.ro.observe(h1);
-    G.io?.disconnect(); G.io=new IntersectionObserver(es=>{ G.vis=es[0].isIntersecting; kick(); }); G.io.observe(h1);
-    kick(); } };
-})();
-/* chapter index: the page's sections as a short list in the left margin. The one you are reading lights up,
-   a click takes you there. Shown from 1100px, hidden over the opening and the footer. */
-const CHAPTERS=(()=>{
-  let nav=null, items=[], raf=0, main=null;
-  function build(m){
-    main=m; nav?.remove(); nav=null; items=[];
-    const hs=[...(m?.querySelectorAll(":scope > section h2")||[])].filter(h=>!h.closest(".bleed")&&!h.closest(".story")&&h.offsetHeight);
-    document.body.classList.toggle("chap",hs.length>=2); if(hs.length<2) return;
-    nav=document.createElement("nav"); nav.className="chapters"; nav.setAttribute("aria-label","On this page");
-    nav.innerHTML=`<ol>${hs.map((h,i)=>`<li><button type="button" data-i="${i}">${esc((h.getAttribute("aria-label")||h.textContent).trim())}</button></li>`).join("")}</ol>`;
-    document.body.appendChild(nav); items=hs;
-    nav.querySelectorAll("button").forEach(b=>b.onclick=()=>items[+b.dataset.i]?.scrollIntoView({behavior:RM()?"auto":"smooth",block:"start"}));
-    update();
-  }
-  function update(){ raf=0; if(!nav||!main||!main.isConnected) return; const vh=innerHeight; let a=-1;
-    items.forEach((h,i)=>{ if(h.getBoundingClientRect().top<vh*.42) a=i; });
-    const show=items[0].getBoundingClientRect().top<vh*.9&&main.getBoundingClientRect().bottom>vh*.55; nav.classList.toggle("show",show);
-    const lis=nav.querySelectorAll("li"); lis.forEach((li,i)=>li.classList.toggle("on",i===a));
-  }
+  function size(){ const hh=parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--hh"))||110, vh=innerHeight;
+    sheets.forEach(el=>el.style.setProperty("--top",Math.min(hh+16,vh-el.offsetHeight-16)+"px")); }
+  function update(){ raf=0; const vh=innerHeight;
+    sheets.forEach((el,i)=>{ const nx=sheets[i+1]; const k=nx?Math.max(0,Math.min(1,(vh-nx.getBoundingClientRect().top)/(vh*.85))):0; el.style.setProperty("--k",k.toFixed(3)); }); }
   addEventListener("scroll",()=>{ if(!raf) raf=requestAnimationFrame(update); },{passive:true});
-  addEventListener("resize",()=>{ if(!raf) raf=requestAnimationFrame(update); });
-  return { build };
+  addEventListener("resize",()=>{ size(); update(); });
+  return { build(m){
+    ro.disconnect(); sheets.forEach(el=>{ el.classList.remove("sheet"); el.style.removeProperty("--top"); el.style.removeProperty("--k"); }); sheets=[];
+    if(!m||RMq()) return;
+    const list=[...m.querySelectorAll(":scope > section")].filter(el=>!el.matches(".mast,.paperhead,.bleed")&&el.offsetHeight);
+    if(list.length<2) return; sheets=list; sheets.forEach(el=>{ el.classList.add("sheet"); ro.observe(el); }); size(); update(); } };
 })();
 /* smooth SVG path through the day's indicator values (also the static art when WebGL is missing) */
 const linePath=(v,W,H)=>{ v=v.length?v:[3.6,2.8,3.8,2.5,3.2,1.6,3,3.5]; const ys=[...v,...v.slice().reverse()].slice(0,12); const lo=Math.min(...ys), hi=Math.max(...ys);
