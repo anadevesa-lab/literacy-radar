@@ -1,4 +1,4 @@
-// MINT — standalone runtime for GitHub Pages (100% free).
+// PaperMint — standalone runtime for GitHub Pages (100% free).
 // News, insights and indicators are static JSON files in /data, refreshed by a GitHub Action.
 // Personal data (library, routine, AI results you generate) stays in this browser.
 // AI calls go straight from the browser to Google's free Gemini API with YOUR key, which is
@@ -86,7 +86,7 @@
     const fg = el.querySelector('[data-ai="forget"]'); if(fg) fg.onclick = () => { try{ localStorage.removeItem(KEY); }catch{} el.remove(); };
     el.querySelector("#aiKeyIn").focus();
   }
-  // free relay (Cloudflare Worker) that holds MINT's key: visitors need no key of their own
+  // free relay (Cloudflare Worker) that holds PaperMint's key: visitors need no key of their own
   const PROXY = "__MINT_AI_PROXY__".startsWith("http") ? "__MINT_AI_PROXY__" : "";
   window.MINT_AI_PROXY = PROXY;
   // owner sign-in: email + password checked against a salted SHA-256 fingerprint (the password itself is never stored)

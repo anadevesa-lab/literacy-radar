@@ -4,7 +4,7 @@ import re, pathlib
 root = pathlib.Path(__file__).resolve().parent.parent
 src = (root / "src" / "app.html").read_text(encoding="utf-8")
 shim = (root / "src" / "shim-gh.js").read_text(encoding="utf-8")
-title = '<title>MINT · A fresh take on finance</title>'
+title = '<title>PaperMint · Finance news, freshly minted</title>'
 src = re.sub(r'<title>.*?</title>', '', src, count=1)
 links = re.findall(r'<link [^>]+>\n?', src)
 body = src
@@ -15,7 +15,7 @@ html = f'''<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="MINT, a fresh take on finance: financial news, official indicators and a financial-literacy content studio.">
+<meta name="description" content="PaperMint, finance news freshly minted: financial news, official indicators and a financial-literacy content studio.">
 {title}
 {''.join(links)}<style>:root{{color-scheme:light}} body{{margin:0}} img{{max-width:100%}} [hidden]{{display:none!important}}</style>
 </head>
