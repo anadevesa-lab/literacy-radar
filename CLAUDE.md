@@ -17,17 +17,16 @@ Financial-literacy site (Nova SBE project, "Boosting productivity with AI"). Pub
 - Respect `prefers-reduced-motion`; check desktop (1366px) and phone (390px).
 
 ## Design
-- Direction: dark cinematic (inspired by immersive sites like Jeff Koons Moon Phases, read as a chart). Background #050606 (near black), white type, mint accents. The last CSS layer ("PaperMint v4: dark cinematic") is the source of truth; earlier layers stay underneath.
-- Palette: #8DE6D8 #5BC8B6 #3AA89C #1F7F7C #0F5854 #003C3B, plus the deep background #011A19. Manrope 800 headings.
-- Markets opens with "PaperMint World" (`WORLD`, Three.js r128 via `loadThree`), inspired by unseen.co/world: a white wireframe planet on black with a red/cyan chromatic split and film grain. Its relief comes from the daily map (rising classes lift into mountains, falling ones sink into craters, mixed ones ripple); the market line orbits as a ring of light drawn from the eight indicators; the day's stories glow on the surface, the four Brief stories brightest. The day's mood (calm / changeable / stormy, `WORLD_SKY`) sets the glow and how hard it glitches. Scroll flies the camera: overview → biggest move → the indicator ring → the Brief. Copy is real HTML in `.phase` blocks. Lite on phones/weak devices, still frame with reduced motion, static SVG line if WebGL fails.
-- Type: Manrope 800 plus Instrument Serif italic accents (headline second line, the "Mint" in the wordmark).
-- Every other tab opens the same way (harmony): full-bleed black hero with film grain, a static wireframe globe SVG with the RGB split (`tilesHTML` → `.hglobe`), and a two-line title whose second line is the italic serif.
-- Logo: lettering only, "Paper" in Manrope 800 + "Mint" in Instrument Serif italic (mint). No symbol, no squares.
-- Footer: dark CTA card, then the link columns. Labels are sentence case everywhere.
-- Chapter index (`CHAPTERS`): the page's sections listed in the left margin in the italic serif; the current one lights up (no connecting line), click to jump. Shown from 1100px (content column narrows to make room), hidden over the opening and the footer.
-- Menu bar solid dark; dark ticker with a LIVE tag under it.
-- No small numbered/all-caps eyebrow labels ("03 / …"): titles stand on their own.
-- Rejected before (don't bring back): glossy balls, coral wave, bubbles, light font weight, WebGL cube wall, orbiting gradient squares, blocky particle logos, particle wordmarks, HUD corner marks, graph-paper grids, numbered eyebrows, indicator spires on the globe, decorative wavy lines inside hero cards or down the margin, connecting rails, a reading-progress line under the menu, logo symbols.
+- Direction: "Front page". White and editorial, lots of air; the lettering is the hero. The last CSS layer ("PaperMint v8: Front page") is the source of truth, on top of the light v2 design system (8px spacing, pill buttons in sentence case, radii 24/32).
+- Palette: #8DE6D8 #5BC8B6 #3AA89C #1F7F7C #0F5854 #003C3B on white. Mint is an accent (the "Mint" lettering, the highlighter), never a background wash.
+- Type: Manrope 800 for headings and UI, Instrument Serif italic for accents (the "Mint" in the logo, the second line of titles, footer headings).
+- Logo: lettering only, "Paper" in Manrope 800 + "Mint" in Instrument Serif italic (mint). No symbol.
+- Markets opens like a newspaper front page: giant "PaperMint" masthead, a dateline between rules (date · stories · sources · "Educational, never advice"), then the Brief's one-liner with a mint highlighter sweeping over its key phrase (`hlLead`) and a side column with the number of the day, the biggest move and the CTAs.
+- Other tabs open with a section head in the same voice (`.hero2.paperhead`): big two-line title, rule underneath.
+- Chapter index (`CHAPTERS`): the page's sections in the left margin in the italic serif; the current one is marked, click to jump. Shown from 1100px, hidden over the opening and the footer.
+- Menu bar solid white; dark news ticker under it.
+- No small numbered/all-caps eyebrow labels; labels in sentence case.
+- Rejected before (don't bring back): dark/black themes, 3D globes and wireframe planets, film grain and RGB-split effects, particle fields and particle wordmarks, glossy balls, coral wave, bubbles, light font weight, WebGL cube wall, orbiting gradient squares, HUD corner marks, graph-paper grids, numbered eyebrows, decorative wavy lines, connecting rails, reading-progress line under the menu, logo symbols, banknote guilloché and paper-stack heroes.
 
 ## Talk to Ana
 Portuguese (pt-PT), concise, action first.
