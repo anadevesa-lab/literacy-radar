@@ -1007,14 +1007,24 @@ h1 em,h2 em,.mega em{font-family:var(--f-serif);font-style:italic;font-weight:40
 .hero2 .stat span{text-transform:none!important;letter-spacing:0!important;font-size:13px!important;font-weight:600!important}
 .hero2 .stat span::first-letter{text-transform:uppercase}
 .fcta .in{padding-bottom:64px!important}
-/* the common thread down the left margin */
-.thread{position:absolute;top:0;z-index:0;pointer-events:none;overflow:visible}
-.thread path{fill:none;stroke-width:1.5;stroke-linecap:round}
-.thread .base{stroke:rgba(255,255,255,.07)}
-.thread .w{stroke:#FFFFFF;filter:drop-shadow(0 0 6px rgba(141,230,216,.6))}
-.thread .r{stroke:rgba(255,45,85,.55);transform:translateX(-1.5px)} .thread .c{stroke:rgba(0,229,255,.55);transform:translateX(1.5px)}
-.thread circle{fill:#050606;stroke:rgba(255,255,255,.28);stroke-width:1.5;transition:fill .45s ease,stroke .45s ease}
-.thread circle.on{fill:#8DE6D8;stroke:#FFFFFF;filter:drop-shadow(0 0 6px rgba(141,230,216,.8))}
+/* footer: same voice as the rest */
+.fcta .mega em{display:block;font-size:1.08em;color:#FFFFFF}
+.fbot h4{text-transform:none!important;letter-spacing:0!important;font-family:var(--f-serif)!important;font-style:italic;font-weight:400!important;font-size:18px!important;color:#8DE6D8!important}
+/* chapter index in the left margin */
+.chapters{position:fixed;left:28px;top:50%;width:150px;z-index:8;opacity:0;pointer-events:none;transform:translate(-8px,-50%);transition:opacity .45s ease,transform .45s ease}
+.chapters.show{opacity:1;pointer-events:auto;transform:translate(0,-50%)}
+.chapters .rail{position:absolute;left:3px;top:6px;bottom:6px;width:1px;background:rgba(255,255,255,.14)}
+.chapters .rail b{position:absolute;left:0;top:0;width:1px;height:var(--fill,0px);background:#FFFFFF;box-shadow:-1px 0 rgba(255,45,85,.65),1px 0 rgba(0,229,255,.65);transition:height .5s cubic-bezier(.2,.7,.2,1)}
+.chapters ol{list-style:none;margin:0;padding:0 0 0 20px;display:flex;flex-direction:column;gap:16px}
+.chapters li{position:relative}
+.chapters li::before{content:"";position:absolute;left:-20px;top:50%;width:7px;height:7px;margin-top:-3.5px;border-radius:50%;background:#050606;border:1px solid rgba(255,255,255,.35);transition:background .35s,border-color .35s,box-shadow .35s}
+.chapters li.on::before{background:#8DE6D8;border-color:#FFFFFF;box-shadow:0 0 10px rgba(141,230,216,.85)}
+.chapters button{background:none;border:0;padding:2px 0;cursor:pointer;font-family:var(--f-serif);font-style:italic;font-size:17px;line-height:1.15;color:rgba(233,248,245,.42);text-align:left;transition:color .3s}
+.chapters button:hover{color:#E9F8F5} .chapters li.on button{color:#FFFFFF}
+.chapters button:focus-visible{outline:2px solid #8DE6D8;outline-offset:3px;border-radius:4px}
+@media (min-width:1100px){body.chap main.wrap{max-width:min(1200px,calc(100vw - 380px))}}
+@media (max-width:1099px){.chapters{display:none}}
+@media (prefers-reduced-motion:reduce){.chapters,.chapters .rail b,.chapters li::before,.chapters button{transition:none}}
 @media (max-width:760px){
   .hero2.bleed{min-height:0}
   .hero2.bleed .in{padding:calc(var(--hh) + 40px) var(--s4) 56px!important}
@@ -1047,7 +1057,7 @@ header.top{view-transition-name:hdr} .ticker{view-transition-name:tick}
 <footer class="foot">
   <section class="fcta"><div class="in">
     <div class="fhead">
-      <div class="fcopy"><h2 class="mega">Money news, minus the jargon.</h2></div>
+      <div class="fcopy"><h2 class="mega">Money news, <em>minus the jargon.</em></h2></div>
       <div class="fside"><p>Read what moved today, see what it means for your money, then turn it into content in minutes.</p>
         <div class="row"><button class="btn primary owner-only" data-tab="studio" type="button">Open the Studio</button><button class="btn primary guest-only" data-tab="mkt" type="button">Read today's Brief</button></div></div>
     </div>
@@ -2203,7 +2213,7 @@ function render(){
   if(!OWNER && (tab==="studio"||tab==="lib")){ tab="mkt"; document.querySelectorAll(".tab[data-tab]").forEach(x=>x.classList.toggle("on",x.dataset.tab===tab)); }
   m.innerHTML = tab==="lib" ? vLib() : tab==="mkt" ? vMarkets() : tab==="ask" ? vAsk() : tab==="rot" ? vRoutine() : vStudio();
   bind(); if(tab==="mkt"||tab==="ask") bindMarkets(); if(tab==="rot") bindRoutine();
-  splitWords(m); window.RADAR_TILES?.(); WORLD.mount(m); THREAD.build(m);
+  splitWords(m); window.RADAR_TILES?.(); WORLD.mount(m); CHAPTERS.build(m);
   m.querySelectorAll("[data-jump]").forEach(b=>b.onclick=()=>{ if(b.dataset.go&&mk.sub!==b.dataset.go){ mk.sub=b.dataset.go; render(); } document.querySelector(b.dataset.jump)?.scrollIntoView({behavior:RM()?"auto":"smooth",block:"start"}); });
   renderTicker(); motion(m); window.RADAR_BAR?.(); scrollFX(document); SCRUB.mount(document);
 }
@@ -2256,39 +2266,28 @@ const SCRUB=(()=>{ const vis=new Set(), gone=new Set(); let raf=0;
     add(".pslides,.slides","1,0.5,0",el=>[...el.children].forEach((c,i)=>c.style.setProperty("--i",i))); } };  // Studio: slides are dealt like cards
 })();
 
-/* the common thread: one line of the day's market (its shape comes from the eight indicators) runs down the left margin of every
-   page, draws itself as you scroll and lights a node beside each section title it reaches. Decorative only; fully drawn with
-   reduced motion; hidden on narrow screens where there is no margin for it. */
-const THREAD=(()=>{
-  let svg=null, paths=[], len=0, nodes=[], top=0, H=0, main=null, raf=0, rb=0;
-  const NS="http://www.w3.org/2000/svg", RMq=()=>matchMedia("(prefers-reduced-motion: reduce)").matches;
+/* chapter index: the page's sections as a short list in the left margin. The one you are reading lights up, a thin rail
+   fills to it, a click takes you there. Shown from 1100px, hidden over the opening and the footer. */
+const CHAPTERS=(()=>{
+  let nav=null, items=[], raf=0, main=null;
   function build(m){
-    main=m; svg?.remove(); svg=null; nodes=[]; if(!m||innerWidth<1000) return;
-    const r=m.getBoundingClientRect(), gw=Math.max(0,r.left)+24; if(gw<56) return;
-    const first=[...m.children].find(el=>!el.classList.contains("bleed")&&el.offsetHeight>0); if(!first) return;
-    top=first.offsetTop+8; const bottom=m.scrollHeight-48; H=bottom-top; if(H<240) return;
-    const ys=[...m.querySelectorAll(":scope > section h2, :scope > nav.seg")].filter(el=>!el.closest(".bleed")&&el.offsetHeight)
-      .map(el=>el.getBoundingClientRect().top-r.top+el.offsetHeight/2).filter(y=>y>top+24&&y<bottom-24);
-    const v=(S.ind?.items||[]).map(x=>+x.value).filter(x=>!isNaN(x)), vals=v.length?v:[3.6,2.8,3.8,2.5,3.2,1.6,3,3.5], lo=Math.min(...vals), hi=Math.max(...vals);
-    const cx=gw*.5, amp=Math.min(gw*.3,28), step=56, pts=[[cx,top]];
-    for(let y=step,i=0;y<H;y+=step,i++){ const yy=top+y, n=hi>lo?(vals[i%vals.length]-lo)/(hi-lo):.5, near=ys.reduce((a,ay)=>Math.min(a,Math.abs(ay-yy)),1e9);
-      pts.push([cx+(n-.5)*2*amp*Math.min(1,near/110),yy]); }
-    pts.push([cx,bottom]);
-    let d=`M${pts[0][0].toFixed(1)},${pts[0][1].toFixed(1)}`;
-    for(let i=0;i<pts.length-1;i++){ const p0=pts[i-1]||pts[i], p1=pts[i], p2=pts[i+1], p3=pts[i+2]||p2;
-      d+=` C${(p1[0]+(p2[0]-p0[0])/6).toFixed(1)},${(p1[1]+(p2[1]-p0[1])/6).toFixed(1)} ${(p2[0]-(p3[0]-p1[0])/6).toFixed(1)},${(p2[1]-(p3[1]-p1[1])/6).toFixed(1)} ${p2[0].toFixed(1)},${p2[1].toFixed(1)}`; }
-    svg=document.createElementNS(NS,"svg"); svg.setAttribute("class","thread"); svg.setAttribute("aria-hidden","true");
-    svg.setAttribute("width",gw); svg.setAttribute("height",m.scrollHeight); svg.style.left=(-r.left)+"px";
-    paths=["base","r","c","w"].map(k=>{ const p=document.createElementNS(NS,"path"); p.setAttribute("d",d); p.setAttribute("class",k); svg.appendChild(p); return p; });
-    len=paths[3].getTotalLength(); paths.slice(1).forEach(p=>{ p.style.strokeDasharray=len; });
-    nodes=ys.map(y=>{ const c=document.createElementNS(NS,"circle"); c.setAttribute("cx",cx); c.setAttribute("cy",y); c.setAttribute("r",4); svg.appendChild(c); return {c,y}; });
-    m.appendChild(svg); draw();
+    main=m; nav?.remove(); nav=null; items=[];
+    const hs=[...(m?.querySelectorAll(":scope > section h2")||[])].filter(h=>!h.closest(".bleed")&&!h.closest(".story")&&h.offsetHeight);
+    document.body.classList.toggle("chap",hs.length>=2); if(hs.length<2) return;
+    nav=document.createElement("nav"); nav.className="chapters"; nav.setAttribute("aria-label","On this page");
+    nav.innerHTML=`<i class="rail" aria-hidden="true"><b></b></i><ol>${hs.map((h,i)=>`<li><button type="button" data-i="${i}">${esc((h.getAttribute("aria-label")||h.textContent).trim())}</button></li>`).join("")}</ol>`;
+    document.body.appendChild(nav); items=hs;
+    nav.querySelectorAll("button").forEach(b=>b.onclick=()=>items[+b.dataset.i]?.scrollIntoView({behavior:RM()?"auto":"smooth",block:"start"}));
+    update();
   }
-  function draw(){ raf=0; if(!svg||!main) return; const r=main.getBoundingClientRect(), at=RMq()?1e9:innerHeight*.62-r.top, f=Math.max(0,Math.min(1,(at-top)/H));
-    paths.slice(1).forEach(p=>{ p.style.strokeDashoffset=(len*(1-f)).toFixed(1); }); nodes.forEach(n=>n.c.classList.toggle("on",n.y<at)); }
-  addEventListener("scroll",()=>{ if(!raf) raf=requestAnimationFrame(draw); },{passive:true});
-  addEventListener("resize",()=>{ clearTimeout(rb); rb=setTimeout(()=>build(main),150); });
-  let ro=null; return { build(m){ build(m); if(!ro&&m){ let lastH=0; ro=new ResizeObserver(()=>{ const h=m.scrollHeight; if(Math.abs(h-lastH)>4){ lastH=h; clearTimeout(rb); rb=setTimeout(()=>build(main),120); } }); ro.observe(m); } } };
+  function update(){ raf=0; if(!nav||!main||!main.isConnected) return; const vh=innerHeight; let a=-1;
+    items.forEach((h,i)=>{ if(h.getBoundingClientRect().top<vh*.42) a=i; });
+    const show=items[0].getBoundingClientRect().top<vh*.9&&main.getBoundingClientRect().bottom>vh*.55; nav.classList.toggle("show",show);
+    const lis=nav.querySelectorAll("li"); lis.forEach((li,i)=>li.classList.toggle("on",i===a));
+    nav.style.setProperty("--fill",a>=0?(lis[a].offsetTop+lis[a].offsetHeight/2-6)+"px":"0px"); }
+  addEventListener("scroll",()=>{ if(!raf) raf=requestAnimationFrame(update); },{passive:true});
+  addEventListener("resize",()=>{ if(!raf) raf=requestAnimationFrame(update); });
+  return { build };
 })();
 /* smooth SVG path through the day's indicator values (also the static art when WebGL is missing) */
 const linePath=(v,W,H)=>{ v=v.length?v:[3.6,2.8,3.8,2.5,3.2,1.6,3,3.5]; const ys=[...v,...v.slice().reverse()].slice(0,12); const lo=Math.min(...ys), hi=Math.max(...ys);
