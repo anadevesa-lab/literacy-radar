@@ -22,6 +22,7 @@ Financial-literacy site (Nova SBE project, "Boosting productivity with AI"). Pub
 - Type: Manrope 800 for headings and UI, Instrument Serif italic for accents (the "Mint" in the logo, the second line of titles, footer headings).
 - Logo: lettering only, "Paper" in Manrope 800 + "Mint" in Instrument Serif italic (mint). No symbol.
 - Markets opens like a newspaper front page: giant "PaperMint" masthead, a dateline between rules (date · stories · sources · "Educational, never advice"), then the Brief's one-liner with a mint highlighter sweeping over its key phrase (`hlLead`) and a side column with the number of the day, the biggest move and the CTAs.
+- The masthead lettering is liquid glass (`GLASS`, a small raw-WebGL shader over a texture of the real lettering): specular edges, a mint sheen sliding across, water ripples around the pointer and on scroll. The real <h1> stays; reduced motion or no WebGL shows the plain lettering.
 - Other tabs open with a section head in the same voice (`.hero2.paperhead`): big two-line title, rule underneath.
 - Chapter index (`CHAPTERS`): the page's sections in the left margin in the italic serif; the current one is marked, click to jump. Shown from 1100px, hidden over the opening and the footer.
 - Menu bar solid white; dark news ticker under it.
