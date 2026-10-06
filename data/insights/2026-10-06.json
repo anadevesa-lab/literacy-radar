@@ -1,0 +1,176 @@
+{
+ "auto": true,
+ "date": "2026-10-06",
+ "basedOn": "2026-10-06T13:39:24.816Z",
+ "generatedAt": "2026-10-06T13:39:45.664Z",
+ "resumo": "**Markets face rising yields** and tech sector enthusiasm alongside stubborn inflationary pressures.",
+ "classes": [
+  {
+   "nome": "Equities",
+   "tendencia": "mixed",
+   "forca": 3,
+   "leitura": "Major stock indices hit new records driven by technology and artificial intelligence booms, while other regional markets sink.",
+   "a_favor": [
+    "Strong artificial intelligence and tech demand",
+    "Corporate mergers and acquisitions activity"
+   ],
+   "riscos": [
+    "Slowing international markets and equities",
+    "Geopolitical and security risks"
+   ],
+   "perfil": "Suits growth-oriented investors with a high risk tolerance."
+  },
+  {
+   "nome": "Bonds",
+   "tendencia": "falling",
+   "forca": 3,
+   "leitura": "Global bond markets experience a significant sell-off with yields marching higher, including rising government borrowing costs.",
+   "a_favor": [
+    "Higher nominal yields for new buyers",
+    "Government debt issuance demand"
+   ],
+   "riscos": [
+    "Global bond rout lowering existing prices",
+    "High national borrowing costs creating risks"
+   ],
+   "perfil": "Suits income seekers willing to accept price volatility."
+  },
+  {
+   "nome": "Commodities",
+   "tendencia": "rising",
+   "forca": 2,
+   "leitura": "Energy costs surge as Brent crude approaches $100 per barrel and national diesel prices hit historic highs.",
+   "a_favor": [
+    "Strong demand keeping margins high",
+    "Supply disruptions and tanker attacks"
+   ],
+   "riscos": [
+    "Political intervention to lower prices",
+    "High costs squeezing transport and consumers"
+   ],
+   "perfil": "Suits tactical investors seeking inflation hedges."
+  },
+  {
+   "nome": "Cash and Deposits",
+   "tendencia": "steady",
+   "forca": 2,
+   "leitura": "Central bank deposit rates remain anchored at 2.5%, with standard new term deposit rates averaging 1.62%.",
+   "a_favor": [
+    "Predictable short-term returns",
+    "Capital preservation without market risk"
+   ],
+   "riscos": [
+    "Returns lagging behind inflation rates",
+    "Missed growth from broader market rallies"
+   ],
+   "perfil": "Suits conservative savers needing liquid emergency funds."
+  }
+ ],
+ "temas": [],
+ "ai": true,
+ "brief": {
+  "one_liner": "Global bond yields march to multi-year highs while central bank rates hold firm, giving savers and borrowers plenty to chew on.",
+  "number": {
+   "value": "3.8%",
+   "caption": "Euro area inflation rate"
+  },
+  "stories": [
+   {
+    "i": 5,
+    "title": "Nasdaq hits new record as global bond yields climb",
+    "whats_going_on": "Wall Street's tech-heavy Nasdaq reached a fresh record high as a global bond sell-off pushed yields higher. The yield on the US 10-year Treasury touched a fresh 24-year high amid heavy market activity.",
+    "what_it_means": "Rising bond yields generally mean investors are demanding higher returns for lending money to governments, which can ripple through the wider financial system. At the same time, major equity markets continue to find strong momentum from tech and AI investments.",
+    "why_care": "For everyday investors, big swings in global bond yields can influence wider borrowing costs and create turbulence in mixed-asset investment funds."
+   },
+   {
+    "i": 29,
+    "title": "Ex-Bank of England chief warns Britain is on thin ice",
+    "whats_going_on": "A former Bank of England chief economist warned that Britain is on thin ice and must act to appease financial markets. The UK currently faces the highest government borrowing costs in the G7.",
+    "what_it_means": "When a country's borrowing costs climb, the government faces tighter fiscal pressure to reassure international investors and rating agencies. This economic backdrop feeds directly into domestic debates over public spending and taxes.",
+    "why_care": "Higher national borrowing costs can eventually filter down into broader economic pressures, potentially influencing everything from mortgage pricing to the wider cost of living."
+   },
+   {
+    "i": 47,
+    "title": "Average UK five-year mortgage rate hits 6%",
+    "whats_going_on": "The average rate for a new UK five-year fixed mortgage reached 6% for the first time in three years. Lenders have been adjusting their pricing upward as they face persistent funding cost pressures.",
+    "what_it_means": "Borrowing costs for property buyers have crept steadily higher after a period of relative calm, putting additional pressure on household budgets. For comparison, new mortgages in Portugal average around 3%, while 12-month Euribor sits at 3.247%.",
+    "why_care": "Anyone coming to the end of a fixed-rate deal or looking to buy a home will face notably higher monthly repayments than they did a few years ago."
+   },
+   {
+    "i": 55,
+    "title": "BT rescues TalkTalk in £400m broadband deal",
+    "whats_going_on": "BT agreed to buy broadband supplier TalkTalk in a £400 million rescue deal designed to protect 900 jobs and secure 1.5 million customers. Rival broadband providers have raised competition concerns over the tie-up.",
+    "what_it_means": "Corporate consolidation in the telecoms sector often happens when smaller or heavily indebted players face acute financial strain. Regulators and competitors scrutinise these rescue deals closely to ensure consumer choice isn't harmed.",
+    "why_care": "For household bill-payers, shifts in the broadband market can eventually influence broadband and phone package pricing as provider landscapes change."
+   }
+  ],
+  "basedOn": "2026-10-06T13:39:24.816Z",
+  "generatedAt": "2026-10-06T13:40:09.284Z"
+ },
+ "pack": {
+  "carousel": {
+   "title": "Navigating today's rising UK mortgage rates",
+   "slides": [
+    {
+     "h": "UK five-year mortgages hit 6%",
+     "t": "Borrowing costs are making headlines again. If you are buying a home or nearing the end of a fix, here is what is actually going on."
+    },
+    {
+     "h": "Why are mortgage rates rising?",
+     "t": "Lenders are adjusting their pricing upward to manage persistent funding cost pressures across the wider financial markets. It is a bumpy time for the housing sector."
+    },
+    {
+     "h": "What this means for your monthly bills",
+     "t": "Anyone locking in a new deal now will face notably higher monthly repayments than they did a few years ago. Budgets are feeling the squeeze."
+    },
+    {
+     "h": "What you can actually control",
+     "t": "Review your household outgoings early, speak to a whole-of-market broker well before your current deal ends, and give your emergency fund some extra love."
+    },
+    {
+     "h": "Keep a fresh take on your finances",
+     "t": "Market shifts can feel overwhelming, but staying informed is your best superpower. Small, calm steps beat panic every single time."
+    },
+    {
+     "h": "Follow MINT for fresh money insights",
+     "t": "We make personal finance clear, calm, and jargon-free. Hit follow for daily updates that help you navigate the economy with confidence."
+    }
+   ]
+  },
+  "linkedin": "Financial markets are back in the spotlight this week, with global bond yields climbing and the average rate for a new UK five-year fixed mortgage hitting 6% for the first time in three years.\n\nFor everyday savers and homeowners, headlines about rising borrowing costs and volatile bond markets can feel unsettling. Whether it is shifting mortgage pricing or broader economic pressures, these changes highlight why having a solid financial buffer matters.\n\nMarkets move in cycles, and staying grounded with your personal budget is more important than ever. How are you reviewing your household finances amid these rate shifts? Let us know in the comments.\n\n#PersonalFinance #Mortgages #FinancialLiteracy",
+  "reel": {
+   "hook": "Why did UK five-year mortgage rates just hit 6%?",
+   "script": [
+    "If you are looking to buy a home or remortgage soon, you have probably noticed rates climbing.",
+    "The average UK five-year fixed mortgage just hit 6% for the first time in three years.",
+    "Lenders are facing persistent funding cost pressures, pushing monthly repayments higher.",
+    "It is a tough squeeze, but reviewing your budget early can help you stay prepared.",
+    "Follow MINT for more simple, jargon-free money updates."
+   ],
+   "caption": "UK five-year mortgage rates hit 6% amid funding pressures. Here is what it means for your household budget. Follow MINT for daily clarity."
+  },
+  "faq": [
+   {
+    "q": "Why did the average UK five-year mortgage rate hit 6%?",
+    "a": "Lenders have adjusted their pricing upward because they are facing persistent funding cost pressures in the wider financial markets. This reflects broader economic shifts rather than just one single factor."
+   },
+   {
+    "q": "What does a 6% mortgage rate mean for my monthly payments?",
+    "a": "It means anyone coming to the end of a fixed-rate deal or looking to buy a home will face notably higher monthly repayments than they did a few years ago. Planning ahead is key."
+   },
+   {
+    "q": "Why are global bond yields climbing and what does it affect?",
+    "a": "A global bond sell-off has pushed yields higher, even touching a fresh 24-year high for US 10-year Treasuries. These big swings can influence wider borrowing costs and create turbulence in mixed-asset investment funds."
+   },
+   {
+    "q": "How do higher government borrowing costs affect everyday life?",
+    "a": "When national borrowing costs rise, they can eventually filter down into broader economic pressures. This potentially influences everything from mortgage pricing to the wider cost of living."
+   },
+   {
+    "q": "How does BT's rescue deal for TalkTalk affect household bills?",
+    "a": "BT agreed to buy TalkTalk in a £400 million deal to protect jobs and customers. Over time, shifts in the broadband market can influence package pricing as the provider landscape changes."
+   }
+  ],
+  "generatedAt": "2026-10-06T13:40:26.089Z"
+ }
+}
