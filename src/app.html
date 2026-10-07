@@ -1001,7 +1001,8 @@ footer.foot::before{content:"";position:absolute;inset:0;z-index:-1;background:r
 .pmhero .card{max-width:1240px;margin:0 auto;background:#FFFFFF;border-radius:clamp(24px,3vw,40px);padding:clamp(14px,1.8vw,24px);display:flex;flex-direction:column;gap:clamp(24px,3vw,40px)}
 .pmhero .media{position:relative;height:clamp(240px,30vw,400px);border-radius:clamp(18px,2.2vw,28px);overflow:hidden;background:linear-gradient(135deg,#E9F5F2,#CFE7E1)}
 .pmhero .media::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 90% at 78% 40%,rgba(91,200,182,.35),transparent 70%),radial-gradient(50% 80% at 20% 70%,rgba(15,88,84,.18),transparent 70%)}
-.pmhero .media img,.pmhero .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+.pmhero .media img,.pmhero .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pmhero .thumb img{object-position:50% 38%}
 .pmhero .ribbon{position:absolute;left:-4%;top:0;width:108%;height:100%;overflow:visible;pointer-events:none}
 .pmhero .ribbon path{fill:none;stroke:var(--mint2);stroke-width:66}
 .pmhero .ribbon text{font:800 34px var(--f-body);fill:var(--ink);letter-spacing:-.01em;dominant-baseline:central}
@@ -1367,11 +1368,11 @@ function hlLead(t){ const e=md(t); if(e.includes("<b>")) return e.replace(/<b>(.
   const w=e.split(" "); return `<mark>${w.slice(0,3).join(" ")}</mark> ${w.slice(3).join(" ")}`; }
 /* page heroes: one frame for every public page head (Markets, Ask, Studio). A white card on a mint band, a wide photo with a mint
    ribbon whose words travel along a wave (WAVE), the title and call to action, the intro and a dark stat card. Photos come from assets/. */
-const HERO_PHOTOS=false;   // set to true once assets/hero.jpg and assets/hero-thumb.jpg are in the repo
+/* photos per page head: o.photo (wide, behind the ribbon) and o.thumb (small square). Missing ones keep the mint placeholder. */
 const srcTiles = day => { const src=(day?.sources||[]).map(n=>n==="BCE"?"ECB":n), ab=src.map(n=>ABBR[n]||String(n).slice(0,3).toUpperCase()); return (ab.length>=4?ab:["FT","WSJ","BBG","ECB"]).slice(0,4); };
 function heroFrame(o){
   return `<section class="pmhero" aria-label="${esc(o.label)}"><div class="card">
-    <div class="media">${HERO_PHOTOS?`<img src="assets/hero.jpg" alt="" onerror="this.remove()">`:""}
+    <div class="media">${o.photo?`<img src="${o.photo}" alt="" onerror="this.remove()">`:""}
       <svg class="ribbon" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <path id="pmwave" d="M-40,300 C180,330 300,170 520,190 C720,208 760,320 960,250 C1080,208 1140,90 1260,40"/>
         <text><textPath href="#pmwave" startOffset="0">${esc(o.ribbon).repeat(4)}</textPath></text></svg></div>
@@ -1379,7 +1380,7 @@ function heroFrame(o){
       <div class="lead"><h1${(o.title+o.em).length>32?' class="long"':""}>${esc(o.title)} <em>${esc(o.em)}</em></h1>
         <div class="acts">${o.cta?`<button class="btn primary cta" type="button" ${o.cta.attrs}>${esc(o.cta.text)} →</button>`:""}${o.extra||""}</div></div>
       <div class="side"><p>${esc(o.text)}</p>
-        <div class="row"><div class="thumb">${HERO_PHOTOS?`<img src="assets/hero-thumb.jpg" alt="" onerror="this.remove()">`:""}</div>
+        <div class="row"><div class="thumb">${o.thumb?`<img src="${o.thumb}" alt="" onerror="this.remove()">`:""}</div>
           <div class="stat"><div class="srcs" aria-hidden="true">${o.tiles.map(t=>`<i>${esc(t)}</i>`).join("")}</div>
             <div class="num"><b>${esc(o.num)}</b><span>${esc(o.numLabel)}</span></div></div></div></div>
     </div></div></section>`;
@@ -1387,6 +1388,7 @@ function heroFrame(o){
 function heroHTML(day){
   const n=(day?.sources||[]).length||14;
   return heroFrame({label:"PaperMint", ribbon:"What money is doing. Why it matters. · ", title:"Finance news,", em:"freshly minted.",
+    thumb:"assets/markets-thumb.jpg",
     cta:{text:"Read today's Brief", attrs:'data-jump=".seg" data-go="brief"'},
     text:`What today's news means for your money, in plain English. PaperMint reads ${n} trusted sources every weekday, picks the stories that matter for your savings, loans and investments, and explains them. Educational, never advice.`,
     tiles:srcTiles(day), num:String(n), numLabel:`trusted sources, read ${day?"today":"every weekday"}.`});
