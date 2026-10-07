@@ -971,9 +971,6 @@ footer.foot::before{content:"";position:absolute;inset:0;z-index:-1;background:r
 .fbot .logo .wm{color:#FFFFFF} .fbot p,.fbot ul{color:rgba(230,247,244,.62)!important} .fbot h4{color:var(--mint2)!important}
 .flink{color:#E6F7F4} .flink:hover{color:#FFFFFF}
 .flegal{border-top-color:rgba(255,255,255,.1)!important;color:rgba(230,247,244,.5)!important}
-.askai{grid-column:1/-1;display:flex;align-items:center;gap:10px 14px;flex-wrap:wrap;font-size:var(--t-sm);font-weight:600;color:rgba(230,247,244,.7)}
-.askai a{display:inline-flex;align-items:center;min-height:36px;padding:0 14px;border-radius:999px;border:1px solid rgba(255,255,255,.18);color:#E6F7F4;text-decoration:none;background:none!important;transition:border-color .3s var(--ease),background-color .3s var(--ease)}
-.askai a:hover{border-color:var(--mint2);background-color:rgba(141,230,216,.08)!important}
 /* the wordmark, huge, rising out of the bottom edge */
 .bigmark{max-width:1200px;margin:0 auto;padding:8px var(--s5) 0;display:flex;align-items:center;justify-content:space-between;gap:2vw;overflow:hidden;color:#FFFFFF;user-select:none}
 .bigmark .bw{display:block;overflow:hidden;padding:.04em .08em .16em;margin:0 -.08em}
@@ -1007,6 +1004,41 @@ footer.foot::before{content:"";position:absolute;inset:0;z-index:-1;background:r
 .mrv-watch{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:8px}
 @media (max-width:760px){.mrv-sec{grid-template-columns:minmax(0,1fr)} .mrv-themes{grid-template-columns:minmax(0,1fr)} .mrv-time li{grid-template-columns:minmax(0,1fr);gap:2px}}
 @media (prefers-reduced-motion:reduce){.pmark,#preload .pmark{animation:none} .btn::before{transition:none} .mpix{animation:none}}
+/* ===================== Markets hero (from the "Animated Text on Path" template) =====================
+   A white card on a full-bleed mint band: a wide photo with a mint ribbon whose words travel along a wave (WAVE),
+   the title and call to action below, the intro and a dark stat card with the day's sources. Photos: assets/hero.jpg, assets/hero-thumb.jpg. */
+.pmhero{margin-inline:calc(50% - 50vw);margin-top:calc(-1 * var(--s6));background:var(--mint2);padding:clamp(16px,4vw,56px) clamp(16px,4vw,56px)}
+.pmhero .card{max-width:1240px;margin:0 auto;background:#FFFFFF;border-radius:clamp(24px,3vw,40px);padding:clamp(14px,1.8vw,24px);display:flex;flex-direction:column;gap:clamp(24px,3vw,40px)}
+.pmhero .media{position:relative;height:clamp(240px,30vw,400px);border-radius:clamp(18px,2.2vw,28px);overflow:hidden;background:linear-gradient(135deg,#E9F5F2,#CFE7E1)}
+.pmhero .media::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 90% at 78% 40%,rgba(91,200,182,.35),transparent 70%),radial-gradient(50% 80% at 20% 70%,rgba(15,88,84,.18),transparent 70%)}
+.pmhero .media img,.pmhero .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+.pmhero .ribbon{position:absolute;left:-4%;top:0;width:108%;height:100%;overflow:visible;pointer-events:none}
+.pmhero .ribbon path{fill:none;stroke:var(--mint2);stroke-width:66}
+.pmhero .ribbon text{font:800 34px var(--f-body);fill:var(--ink);letter-spacing:-.01em;dominant-baseline:central}
+.pmhero .body{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);padding:0 clamp(4px,1vw,12px) clamp(4px,1vw,12px)}
+.pmhero .lead{display:flex;flex-direction:column;justify-content:space-between;gap:32px;min-width:0}
+.pmhero h1{margin:0;font-weight:800;font-size:clamp(2.6rem,5.6vw,4.6rem);line-height:1;letter-spacing:-.045em;color:var(--ink)}
+.pmhero h1 em{display:block;font:italic 400 1.14em/1 var(--f-serif);letter-spacing:-.01em;color:var(--ink2)}
+.pmhero .cta{align-self:flex-start;border-radius:12px!important;background:var(--mint2)!important;border-color:var(--mint2)!important;color:var(--ink)!important;min-height:52px;padding:0 24px;font-size:17px}
+.pmhero .cta::before{background:var(--ink)!important} .pmhero .cta::after{content:none!important}
+.pmhero .cta:not(:disabled):hover{color:#FFFFFF!important;border-color:var(--ink)!important}
+.pmhero .side{display:flex;flex-direction:column;justify-content:space-between;gap:28px;min-width:0}
+.pmhero .side p{margin:0;font-size:17px;line-height:1.6;color:var(--ink2);max-width:46ch}
+.pmhero .row{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:14px}
+.pmhero .thumb{border-radius:18px;overflow:hidden;position:relative;min-height:150px;background:linear-gradient(160deg,#DDF3EF,#BFE3DB)}
+.pmhero .stat{background:var(--ink);color:#FFFFFF;border-radius:18px;padding:18px 22px;display:flex;flex-direction:column;justify-content:space-between;gap:14px}
+.pmhero .srcs{display:flex}
+.pmhero .srcs i{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:800 10.5px/1 var(--f-body);font-style:normal;letter-spacing:.02em;border:2px solid var(--ink);margin-left:-8px}
+.pmhero .srcs i:first-child{margin-left:0}
+.pmhero .srcs i:nth-child(1){background:var(--mint2);color:var(--ink)} .pmhero .srcs i:nth-child(2){background:var(--mint);color:var(--ink)} .pmhero .srcs i:nth-child(3){background:#3AA89C;color:#fff} .pmhero .srcs i:nth-child(4){background:#1F7F7C;color:#fff}
+.pmhero .num{display:flex;align-items:center;gap:16px}
+.pmhero .num b{font-size:clamp(2.6rem,4vw,3.6rem);font-weight:800;letter-spacing:-.05em;line-height:1;color:var(--mint2)}
+.pmhero .num span{font-size:15px;line-height:1.4;color:rgba(230,247,244,.85);max-width:16ch}
+main.play .pmhero .card{animation:mfade .9s var(--ease) both;animation-delay:var(--introDelay,0s)}
+.pmhero + .mast{padding-top:var(--s6)}
+@media (max-width:820px){.pmhero .body{grid-template-columns:minmax(0,1fr)} .pmhero .lead{gap:22px}}
+@media (max-width:480px){.pmhero .row{grid-template-columns:minmax(0,1fr)} .pmhero .thumb{min-height:120px} .pmhero .ribbon text{font-size:28px} .pmhero .ribbon path{stroke-width:54}}
+
 </style>
 
 <div id="preload" aria-hidden="true"><div class="pl"><span class="plw"><span>Paper</span></span><span class="plw"><em>Mint</em></span></div></div>
@@ -1029,7 +1061,6 @@ footer.foot::before{content:"";position:absolute;inset:0;z-index:-1;background:r
     <div><h4>Explore</h4><ul><li><button class="flink" data-tab="mkt" type="button">Markets</button></li><li><button class="flink" data-tab="ask" type="button">Ask PaperMint</button></li><li><button class="flink" data-tab="lib" type="button">Library</button></li><li><button class="flink" data-tab="studio" type="button">Studio</button></li></ul></div>
     <div><h4>Sources</h4><ul><li>Bloomberg · Financial Times</li><li>WSJ · The Economist</li><li>CNBC · MarketWatch · BBC</li><li>ECB · Fed · Eurostat · INE</li></ul></div>
     <div><h4>Good to know</h4><ul><li>Educational only</li><li>No buy or sell calls</li><li>Capital at risk</li></ul></div>
-    <div class="askai" id="askai"><span>Ask your AI about PaperMint</span><a data-ai="chatgpt" href="https://chatgpt.com/" target="_blank" rel="noopener">ChatGPT</a><a data-ai="claude" href="https://claude.ai/new" target="_blank" rel="noopener">Claude</a><a data-ai="perplexity" href="https://www.perplexity.ai/" target="_blank" rel="noopener">Perplexity</a></div>
     <div class="flegal"><span>Educational content generated from public news. Not investment advice. Past performance is not a guide to future returns.</span><span>© 2026 PaperMint · <button class="flink owlink" id="owLogin" type="button">Owner</button></span></div>
   </div></div>
   <div class="bigmark" aria-hidden="true"><span class="bw"><span>Paper</span></span><span class="bw"><em>Mint</em></span></div>
@@ -1503,6 +1534,40 @@ function vAsk(){
 function hlLead(t){ const e=md(t); if(e.includes("<b>")) return e.replace(/<b>(.+?)<\/b>/,'<mark>$1</mark>');
   const m=e.match(/\b(while|as|despite|after|amid|because)\s+((?:[^\s,.;]+\s+){0,3}[^\s,.;]+)/i); if(m) return e.replace(m[2],`<mark>${m[2]}</mark>`);
   const w=e.split(" "); return `<mark>${w.slice(0,3).join(" ")}</mark> ${w.slice(3).join(" ")}`; }
+/* Markets hero: the day's sources fill the stat card; photos come from assets/ when they exist */
+const RIBBON_TXT="What money is doing. Why it matters. · ";
+const HERO_PHOTOS=false;   // set to true once assets/hero.jpg and assets/hero-thumb.jpg are in the repo
+function heroHTML(day){
+  const src=(day?.sources||[]).map(n=>n==="BCE"?"ECB":n), ab=src.map(n=>ABBR[n]||String(n).slice(0,3).toUpperCase());
+  const tiles=(ab.length>=4?ab:["FT","WSJ","BBG","ECB"]).slice(0,4), n=src.length||14;
+  return `<section class="pmhero" aria-label="PaperMint"><div class="card">
+    <div class="media">${HERO_PHOTOS?`<img src="assets/hero.jpg" alt="" onerror="this.remove()">`:""}
+      <svg class="ribbon" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <path id="pmwave" d="M-40,300 C180,330 300,170 520,190 C720,208 760,320 960,250 C1080,208 1140,90 1260,40"/>
+        <text><textPath href="#pmwave" startOffset="0">${RIBBON_TXT.repeat(4)}</textPath></text></svg></div>
+    <div class="body">
+      <div class="lead"><h1>Finance news, <em>freshly minted.</em></h1>
+        <button class="btn primary cta" type="button" data-jump=".seg" data-go="brief">Read today's Brief →</button></div>
+      <div class="side"><p>What today's news means for your money, in plain English. PaperMint reads ${n} trusted sources every weekday, picks the stories that matter for your savings, loans and investments, and explains them. Educational, never advice.</p>
+        <div class="row"><div class="thumb">${HERO_PHOTOS?`<img src="assets/hero-thumb.jpg" alt="" onerror="this.remove()">`:""}</div>
+          <div class="stat"><div class="srcs" aria-hidden="true">${tiles.map(t=>`<i>${esc(t)}</i>`).join("")}</div>
+            <div class="num"><b>${n}</b><span>trusted sources, read ${day?"today":"every weekday"}.</span></div></div></div></div>
+    </div></div></section>`;
+}
+/* the ribbon's words travel along the wave: startOffset slides left by one repeat of the phrase and wraps, so the loop is seamless;
+   the position survives re-renders; paused off-screen; reduced motion keeps it still */
+const WAVE=(()=>{ let tp=null, unit=0, x=0, last=0, raf=0, on=true, io=null;
+  function tick(now){ raf=0;
+    if(!tp||!tp.isConnected){ tp=document.querySelector(".pmhero textPath"); if(!tp) return; }   // re-rendered: follow the new ribbon instead of stopping
+    const dt=Math.min(.05,(now-last)/1000); last=now;
+    if(on&&unit&&!document.hidden){ x-=dt*70; if(x<=-unit) x+=unit; tp.setAttribute("startOffset",x.toFixed(1)); }
+    raf=requestAnimationFrame(tick); }
+  return { mount(root){ io?.disconnect(); tp=root.querySelector(".pmhero textPath"); if(!tp||matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const t=tp.parentNode, measure=()=>{ unit=t.getComputedTextLength()/4; }; measure(); document.fonts?.ready.then(measure);
+    tp.setAttribute("startOffset",x.toFixed(1));
+    io=new IntersectionObserver(es=>{ on=es[0].isIntersecting; }); io.observe(t.closest(".media"));
+    last=performance.now(); if(!raf) raf=requestAnimationFrame(tick); } };
+})();
 function vMarkets(){
   const day=latestDay(); const ins0 = day ? S.insights.find(i=>i.id===day.id) : null; const ins = ins0 && (ins0.classes||[]).length ? ins0 : null;
   const stale = ins && day.collectedAt && ins.basedOn < day.collectedAt;
@@ -1518,9 +1583,7 @@ function vMarkets(){
   const GLY={up:"▲",down:"▼",mixed:"◆",flat:"–"}, MOOD={calm:"Calm",changeable:"Changeable",stormy:"Stormy"};
   const nS=day?(day.items||[]).length:0, nSrc=day?(day.sources||[]).length:0, TW={up:"rising",down:"falling",mixed:"mixed",flat:"steady"};
   const lead=hlLead(one||"What today's news means for your money, in plain English.");
-  let h = `<section class="mast" aria-label="Today's front page">
-    <div class="mtop">${tilesHTML()}<h1 class="mastword" data-split="1" aria-label="PaperMint"><span aria-hidden="true">Paper</span><em aria-hidden="true">Mint</em></h1>
-    <div class="mband" aria-hidden="true"></div></div>
+  let h = `${heroHTML(day)}<section class="mast" aria-label="Today's front page">
     <div class="dateline"><span>${esc(new Date().toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long",year:"numeric"}))}</span><span>${day?`${nS} stories · ${nSrc} sources`:"Collecting today's stories"}</span><span>Educational, never advice</span></div>
     <div class="mcols"><p class="mlead">${lead}</p>
       <div class="mside">${gNum?`<span><b>Number of the day:</b> ${esc(gNum)}${gCap?` · ${esc(gCap)}`:""}</span>`:""}
@@ -2093,7 +2156,7 @@ function render(){
   if(!OWNER && (tab==="studio"||tab==="lib")){ tab="mkt"; document.querySelectorAll(".tab[data-tab]").forEach(x=>x.classList.toggle("on",x.dataset.tab===tab)); }
   m.innerHTML = tab==="lib" ? vLib() : tab==="mkt" ? vMarkets() : tab==="ask" ? vAsk() : tab==="rot" ? vRoutine() : vStudio();
   bind(); if(tab==="mkt"||tab==="ask") bindMarkets(); if(tab==="rot") bindRoutine();
-  splitWords(m); window.RADAR_TILES?.(); LINES.mount(m); PIXELS.mount(m);
+  splitWords(m); window.RADAR_TILES?.(); LINES.mount(m); PIXELS.mount(m); WAVE.mount(m);
   m.querySelectorAll("[data-jump]").forEach(b=>b.onclick=()=>{ if(b.dataset.go&&mk.sub!==b.dataset.go){ mk.sub=b.dataset.go; render(); } document.querySelector(b.dataset.jump)?.scrollIntoView({behavior:RM()?"auto":"smooth",block:"start"}); });
   renderTicker(); motion(m); window.RADAR_BAR?.(); scrollFX(document); SCRUB.mount(document);
 }
@@ -2119,10 +2182,6 @@ function render(){
   const go=()=>{ pl.classList.add("out"); setTimeout(()=>{ pl.remove(); de.style.removeProperty("--introDelay"); },lift); };
   setTimeout(go, hold);
   const tick=()=>{ if(!pl.isConnected) return; de.style.setProperty("--introDelay",Math.max(0,hold+350-(performance.now()-t0))/1000+"s"); requestAnimationFrame(tick); }; requestAnimationFrame(tick); })();
-/* footer: links that open the visitor's own AI with a question about this page */
-(()=>{ const q=encodeURIComponent(`Summarise what PaperMint (${location.origin+location.pathname}) is and what today's Brief says about everyday money. Keep it educational, not advice.`);
-  const U={chatgpt:"https://chatgpt.com/?q=",claude:"https://claude.ai/new?q=",perplexity:"https://www.perplexity.ai/search?q="};
-  document.querySelectorAll("#askai a[data-ai]").forEach(a=>{ if(U[a.dataset.ai]) a.href=U[a.dataset.ai]+q; }); })();
 /* scroll reveals: split headings, soft fades, drawn rules */
 let sxIO=null; const SXSEEN=new Set();
 function scrollFX(root){
@@ -2205,7 +2264,7 @@ const PIXELS=(()=>{
 })();
 /* section rules draw themselves from the left as each section and Brief story comes into view */
 const LINES=(()=>{ let io=null; return { mount(m){ io?.disconnect();
-  const els=[...m.querySelectorAll(":scope > section:not(.mast):not(.paperhead), .brief .story")]; els.forEach(el=>el.classList.add("cy"));
+  const els=[...m.querySelectorAll(":scope > section:not(.mast):not(.paperhead):not(.pmhero), .brief .story")]; els.forEach(el=>el.classList.add("cy"));
   if(matchMedia("(prefers-reduced-motion: reduce)").matches||!("IntersectionObserver" in window)){ els.forEach(el=>el.classList.add("on")); return; }
   io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("on"); io.unobserve(e.target); } }),{rootMargin:"0px 0px -12% 0px"});
   els.forEach(el=>io.observe(el)); } }; })();
