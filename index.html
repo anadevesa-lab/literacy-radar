@@ -1070,7 +1070,7 @@ footer.foot::before{display:none!important}
 <div id="preload" aria-hidden="true"><div class="pl"><span class="plw"><span>Paper</span></span><span class="plw"><em>Mint</em></span></div></div>
 <header class="top"><div class="wrap">
   <div class="logo"><span class="wm">Paper<em>Mint</em></span></div>
-  <nav class="tabs"><button class="tab on" data-tab="mkt" type="button">Markets</button><button class="tab" data-tab="ask" type="button"><span class="lg-only">Ask</span><span class="sm-only">Ask</span></button><button class="tab" data-tab="lib" type="button">Library</button><button class="tab" data-tab="studio" type="button">Studio</button></nav><button class="aikey-top" id="aikeyTop" type="button" hidden><i></i><span>AI key</span></button>
+  <nav class="tabs"><button class="tab on" data-tab="mkt" type="button">Markets</button><button class="tab" data-tab="ask" type="button"><span class="lg-only">Ask</span><span class="sm-only">Ask</span></button><button class="tab" data-tab="studio" type="button">Studio</button></nav><button class="aikey-top" id="aikeyTop" type="button" hidden><i></i><span>AI key</span></button>
 </div></header>
 <div class="ticker" id="ticker" aria-label="Market ticker"></div>
 <main class="wrap" id="main"></main>
@@ -1084,7 +1084,7 @@ footer.foot::before{display:none!important}
   </div></section>
   <div class="fbot"><div class="in">
     <div><div class="logo"><span class="wm">Paper<em>Mint</em></span></div><p>A daily, plain-English read of the financial news, built as a Nova SBE project for the course "Boosting productivity with AI".</p></div>
-    <div><h4>Explore</h4><ul><li><button class="flink" data-tab="mkt" type="button">Markets</button></li><li><button class="flink" data-tab="ask" type="button">Ask PaperMint</button></li><li><button class="flink" data-tab="lib" type="button">Library</button></li><li><button class="flink" data-tab="studio" type="button">Studio</button></li></ul></div>
+    <div><h4>Explore</h4><ul><li><button class="flink" data-tab="mkt" type="button">Markets</button></li><li><button class="flink" data-tab="ask" type="button">Ask PaperMint</button></li><li><button class="flink" data-tab="studio" type="button">Studio</button></li></ul></div>
     <div><h4>Sources</h4><ul><li>Bloomberg · Financial Times</li><li>WSJ · The Economist</li><li>CNBC · MarketWatch · BBC</li><li>ECB · Fed · Eurostat · INE</li></ul></div>
     <div><h4>Good to know</h4><ul><li>Educational only</li><li>No buy or sell calls</li><li>Capital at risk</li></ul></div>
     <div class="flegal"><span>Educational content generated from public news. Not investment advice. Past performance is not a guide to future returns.</span><span>© 2026 PaperMint · <button class="flink owlink" id="owLogin" type="button">Owner</button></span></div>
@@ -1361,7 +1361,7 @@ function vStudio(){
   const np=S.pieces.length;
   let h = `${heroFrame({label:"Content studio", ribbon:"From today's news to content ready to post. · ", title:"From today's news", em:"to content ready to post.",
     cta:{text:"Start from today's news", attrs:'data-jump="#in"'},
-    extra: window.RADAR_AI_KEY?`<button class="btn small" id="aikey" type="button">AI key</button>`:"",
+    extra: `<button class="btn" type="button" data-golib>Your library (${S.pieces.length})</button>`+(window.RADAR_AI_KEY?`<button class="btn small" id="aikey" type="button">AI key</button>`:""),
     text:"Pick some news or write your own topic. The Studio suggests ideas and writes Instagram posts, LinkedIn posts and articles, opinion pieces, PowerPoint decks and newsletters, with a regulatory check built in.",
     tiles:["IG","IN","PPT","NL"], num:String(np), numLabel:np===1?"piece created so far.":"pieces created so far."})}
   ${vPack()}
@@ -1485,7 +1485,7 @@ function vLib(){
   const list=[...S.pieces].sort((a,b)=>(b.createdAt||0)-(a.createdAt||0));
   const done=list.reduce((a,p)=>a+(p.totalMs||0),0), savedH=list.length?Math.round(Math.max(0,list.length*baseline()*60000-done)/3600000*10)/10:0;
   return `${heroFrame({label:"Library", ribbon:"Everything you've made, in one place. · ", title:"Everything", em:"you've made.",
-    cta:{text:"Open the Studio", attrs:"data-gostudio"},
+    cta:{text:"Back to the Studio", attrs:"data-gostudio"},
     extra:`<label class="field basef"><span class="label">Minutes a post takes by hand</span><input id="base" type="number" min="5" step="5" value="${baseline()}"></label>`,
     text:`Every piece you create in the Studio is saved here, with how long it took and its compliance score. ${list.length} piece${list.length===1?"":"s"} so far.`,
     tiles:["IG","IN","PPT","NL"], num:`${savedH} h`, numLabel:`saved vs. ${baseline()} min by hand.`})}
@@ -2381,6 +2381,10 @@ function bind(){
   const back=$("#back"); if(back) back.onclick=()=>{ st.openPiece=null; render(); };
   const ts=$("#tostudio"); if(ts) ts.onclick=()=>document.querySelector('[data-tab="studio"]').click();
   document.querySelectorAll("[data-gostudio]").forEach(b=>b.onclick=()=>document.querySelector('.tab[data-tab="studio"]').click());
+  // the Library lives inside the Studio: no menu tab of its own, the Studio stays lit while it is open (owner only, like the Studio)
+  document.querySelectorAll("[data-golib]").forEach(b=>b.onclick=()=>{ if(!OWNER){ window.MINT_LOGIN?.(); return; }
+    tab="lib"; st.openPiece=null; animateNext=true; window.scrollTo({top:0});
+    document.querySelectorAll(".tab[data-tab]").forEach(x=>x.classList.toggle("on",x.dataset.tab==="studio")); render(); });
   const ak=$("#aikey"); if(ak) ak.onclick=()=>window.RADAR_AI_KEY();
   const base=$("#base"); if(base) base.onchange=()=>{ ls.set("radar-baseline", String(Math.max(5,+base.value||120))); render(); };
 }
