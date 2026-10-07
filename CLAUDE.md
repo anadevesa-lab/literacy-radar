@@ -19,10 +19,10 @@ Financial-literacy site (Nova SBE project, "Boosting productivity with AI"). Pub
 ## Design
 - Palette: #8DE6D8 #5BC8B6 #3AA89C #1F7F7C #0F5854 #003C3B. White background always. Manrope, bold headings.
 - Menu bar solid white; dark news ticker under it (keep it).
-- Background: white-chrome WebGL ribbons under the Markets masthead (`RIBBONS`); on scroll they fade into a slow white satin swirl (also the backdrop of the other tabs). Neutral greys only, no rainbow/iridescent colour.
+- Background: white page. Behind each page head a pixel mosaic (`PIXELS`, canvas 2D, `.mpix`): soft rectangles from white on the left to mint and teal on the right, breathing in slow diagonal waves and brightening under the pointer.
 - Motion: one easing `--ease: cubic-bezier(.3,0,0,1)`; split-wordmark intro (Paper / Mint) that lifts like a curtain; buttons fill with a left-to-right wipe; footer grows from a card into a dark full-bleed band, with the wordmark huge at the bottom. Footer line: "What money is doing. Why it matters."
 - Logo: wordmark Paper + *Mint* (Instrument Serif italic). Indicators: big-number grid with drawn rules.
-- Rejected before (don't bring back): 3D globes, glossy balls, coral wave, bubbles, light font weight, WebGL cube wall, rainbow/iridescent chrome, the chrome capsule mark.
+- Rejected before (don't bring back): 3D globes, glossy balls, coral wave, bubbles, light font weight, WebGL cube wall, rainbow/iridescent chrome, the chrome capsule mark, the 3D chrome ropes/ribbons and the satin swirl.
 
 ## Talk to Ana
 Portuguese (pt-PT), concise, action first.

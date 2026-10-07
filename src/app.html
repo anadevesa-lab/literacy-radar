@@ -834,11 +834,8 @@ header.top,body.solid header.top{background:#FFFFFF!important;border-bottom:1px 
 }
 @media (prefers-reduced-motion:reduce){.hero2.bleed::before,#preload .pwm{animation:none}}
 
-/* ===================== PaperMint v9: chrome ribbons + open sections =====================
-   One fixed WebGL layer behind every page (RIBBONS). Sections are open, no cards: a hairline that draws itself, a big title, lists. */
-.ribbons{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;display:block;
-  filter:blur(calc(var(--b,0) * 8px));opacity:calc(1 - var(--b,0) * .42)}
-.ribbons.still{position:absolute;height:100vh}
+/* ===================== PaperMint v9: open sections =====================
+   Sections are open, no cards: a hairline that draws itself, a big title, lists. */
 main.wrap,footer.foot{position:relative;z-index:1}
 footer.foot{background:#FFFFFF}
 .mband{height:clamp(200px,40vh,420px);margin-block:-8px 0}
@@ -924,8 +921,16 @@ main.play .hero2 h1 .w>span,main.play .dhero h1 .w>span{animation-duration:.75s;
 .sf{transition:opacity .75s var(--ease-io),transform .75s var(--ease)}
 .rv{transition:opacity .75s var(--ease-io),transform .75s var(--ease)}
 ::view-transition-new(root){animation:vtin .6s var(--ease) both}
-.ribbons{animation:ribin 1.6s var(--ease-io) .2s backwards;filter:none!important;opacity:calc(1 - var(--b,0))!important}
-.swirl{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;display:block;opacity:0}
+/* pixel mosaic behind the page heads (PIXELS): bleeds to the right edge of the window, the copy sits above it */
+.mtop{position:relative}
+.mtop > :not(.mpix){position:relative;z-index:1}
+.mpix{position:absolute;z-index:0;pointer-events:none;top:calc(-1 * var(--s6));right:calc((100% - 100vw) / 2);width:calc(66% + (100vw - 100%) / 2);height:calc(100% + var(--s6));
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 22%);mask-image:linear-gradient(90deg,transparent 0,#000 22%);animation:pixin 1.4s var(--ease-io) .3s backwards}
+.mpix canvas{display:block;width:100%;height:100%}
+.hero2.paperhead .mpix{top:calc(-1 * var(--s6));height:calc(100% + var(--s6) - 1px);width:calc(58% + (100vw - 100%) / 2)}
+.mband{height:clamp(120px,22vh,240px)!important}
+@keyframes pixin{from{opacity:0}}
+@media (max-width:760px){.mpix,.hero2.paperhead .mpix{width:calc(80% + (100vw - 100%) / 2);opacity:.75}}
 @keyframes ribin{from{opacity:0}}
 /* buttons: the fill wipes in from the left and out to the right */
 .btn{position:relative;overflow:hidden;isolation:isolate;transition:color .3s var(--ease),border-color .3s var(--ease),padding .3s var(--ease)}
@@ -991,7 +996,7 @@ footer.foot::before{content:"";position:absolute;inset:0;z-index:-1;background:r
 .mrv-cls .nm{font-weight:800;color:var(--ink)} .mrv-cls .tr{font-size:13px;font-weight:700} .mrv-cls p{grid-column:1/-1}
 .mrv-watch{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:8px}
 @media (max-width:760px){.mrv-sec{grid-template-columns:minmax(0,1fr)} .mrv-themes{grid-template-columns:minmax(0,1fr)} .mrv-time li{grid-template-columns:minmax(0,1fr);gap:2px}}
-@media (prefers-reduced-motion:reduce){.pmark,#preload .pmark{animation:none} .btn::before{transition:none} .ribbons{animation:none}}
+@media (prefers-reduced-motion:reduce){.pmark,#preload .pmark{animation:none} .btn::before{transition:none} .mpix{animation:none}}
 </style>
 
 <div id="preload" aria-hidden="true"><div class="pl"><span class="plw"><span>Paper</span></span><span class="plw"><em>Mint</em></span></div></div>
@@ -1324,8 +1329,8 @@ function vMarkets(){
   const nS=day?(day.items||[]).length:0, nSrc=day?(day.sources||[]).length:0, TW={up:"rising",down:"falling",mixed:"mixed",flat:"steady"};
   const lead=hlLead(one||"What today's news means for your money, in plain English.");
   let h = `<section class="mast" aria-label="Today's front page">
-    <h1 class="mastword" data-split="1" aria-label="PaperMint"><span aria-hidden="true">Paper</span><em aria-hidden="true">Mint</em></h1>
-    <div class="mband" aria-hidden="true"></div>
+    <div class="mtop">${tilesHTML()}<h1 class="mastword" data-split="1" aria-label="PaperMint"><span aria-hidden="true">Paper</span><em aria-hidden="true">Mint</em></h1>
+    <div class="mband" aria-hidden="true"></div></div>
     <div class="dateline"><span>${esc(new Date().toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long",year:"numeric"}))}</span><span>${day?`${nS} stories · ${nSrc} sources`:"Collecting today's stories"}</span><span>Educational, never advice</span></div>
     <div class="mcols"><p class="mlead">${lead}</p>
       <div class="mside">${gNum?`<span><b>Number of the day:</b> ${esc(gNum)}${gCap?` · ${esc(gCap)}`:""}</span>`:""}
@@ -1898,7 +1903,7 @@ function render(){
   if(!OWNER && (tab==="studio"||tab==="lib")){ tab="mkt"; document.querySelectorAll(".tab[data-tab]").forEach(x=>x.classList.toggle("on",x.dataset.tab===tab)); }
   m.innerHTML = tab==="lib" ? vLib() : tab==="mkt" ? vMarkets() : tab==="ask" ? vAsk() : tab==="rot" ? vRoutine() : vStudio();
   bind(); if(tab==="mkt"||tab==="ask") bindMarkets(); if(tab==="rot") bindRoutine();
-  splitWords(m); window.RADAR_TILES?.(); LINES.mount(m); RIBBONS.mount(m,worldModel().mood);
+  splitWords(m); window.RADAR_TILES?.(); LINES.mount(m); PIXELS.mount(m);
   m.querySelectorAll("[data-jump]").forEach(b=>b.onclick=()=>{ if(b.dataset.go&&mk.sub!==b.dataset.go){ mk.sub=b.dataset.go; render(); } document.querySelector(b.dataset.jump)?.scrollIntoView({behavior:RM()?"auto":"smooth",block:"start"}); });
   renderTicker(); motion(m); window.RADAR_BAR?.(); scrollFX(document); SCRUB.mount(document);
 }
@@ -1962,147 +1967,51 @@ const SCRUB=(()=>{ const vis=new Set(), gone=new Set(); let raf=0;
     add(".bigmark","1,1,1"); } };                                         // footer: the wordmark rises out of the bottom edge
 })();
 
-/* chrome ribbons: the common thread of every page. A few liquid-metal strands (raw WebGL, no library) in white chrome with neutral reflections.
-   On Markets they sweep sharp across the band under the masthead; as you scroll they drift up, soften into blurred light and
-   twist into a slow swirl behind the sections. Other tabs start in the soft state. How hard they wave follows the day's mood.
-   Reduced motion: one still frame, no blur or swirl. No WebGL: nothing is drawn and the page is simply white. */
-const RIBBONS=(()=>{
-  const G={cv:null,gl:null,prog:null,u:{},n:0,buf:null,raf:0,t0:performance.now(),last:0,mx:0,my:0,tx:0,ty:0,amp:1,band:null,soft:false,W:0,H:0,hw:0,hh:0,sy:0,lite:false};
-  const RMq=()=>matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const VS=`attribute vec3 P;attribute vec3 N;attribute vec2 U;attribute float I;
-  uniform mat4 PM;uniform float t,S,A,TW,OY;uniform vec2 M;
-  varying vec3 vN,vV;varying vec2 vU;varying float vI;
-  vec2 rot(vec2 v,float a){float c=cos(a),s=sin(a);return vec2(c*v.x-s*v.y,s*v.x+c*v.y);}
-  void main(){ vec3 p=P, n=N;
-    float w=sin(p.x*.45+t*.2+I*1.7)*.12*A+sin(p.x*1.05-t*.28+I)*.04*A;
-    p.y+=w; p.z+=cos(p.x*.34+t*.17+I*2.3)*.18*A;
-    p.y+=(I-2.)*S*.45*smoothstep(-3.,5.,p.x);
-    float r=length(p.xy)+.001; float a=TW*(1.6*exp(-r*.22)+.35);
-    p.xy=rot(p.xy,a); n.xy=rot(n.xy,a);
-    p.y+=OY; p.xy+=M*vec2(.35,.22);
-    vec4 mv=vec4(p.x,p.y,p.z-11.,1.);
-    vN=n; vV=-mv.xyz; vU=U; vI=I; gl_Position=PM*mv; }`;
-  const FS=`precision highp float;varying vec3 vN,vV;varying vec2 vU;varying float vI;uniform float t,B;
-  /* white chrome: a bright studio, neutral greys only (no colour film), so the strands read as polished white metal */
-  vec3 env(vec3 r){ float y=r.y, x=r.x;
-    vec3 c=mix(vec3(.62,.64,.68),vec3(1.,1.,1.),smoothstep(-.9,.6,y));
-    c+=smoothstep(.22,0.,abs(y-.62))*.22;                      /* big soft box above */
-    c-=smoothstep(.2,0.,abs(y-.25+.08*x))*.26;                  /* grey band (the horizon in the studio) */
-    c+=smoothstep(.1,0.,abs(y-.02))*.32;                       /* bright strip */
-    c-=smoothstep(.25,0.,abs(y+.38))*.22;                      /* floor */
-    c+=smoothstep(.2,0.,abs(x-.45))*smoothstep(-.3,.3,y)*.15;   /* side light */
-    return c*vec3(.985,.995,1.); }
-  void main(){ vec3 n=normalize(vN),v=normalize(vV); if(!gl_FrontFacing) n=-n;
-    vec3 r=reflect(-v,n); float fr=pow(1.-max(dot(n,v),0.),2.);
-    vec3 c=env(r);
-    c=mix(c,vec3(1.),.55);                                       /* white chrome: lift the whole studio towards white */
-    c*=mix(1.,.88,smoothstep(.4,1.,fr));                         /* only the very edge greys a touch, so the tube still reads as round */
-    c+=pow(max(dot(r,normalize(vec3(.25,.85,.45))),0.),48.)*.3;  /* sharp key highlight */
-    c+=pow(.5+.5*sin(vU.x*9.-t*.6+vI*2.),12.)*.10*(1.-fr);      /* a soft sheen that travels along the strand */
-    vec3 glow=vec3(.90,.92,.94);
-    c=mix(c,mix(glow,vec3(1.),fr*.5),B*.8);
-    gl_FragColor=vec4(c,1.); }`;
-  /* strands in screen units (x,y in -1..1 of the band, z depth). Each strand keeps its own depth layer, so where they cross
-     on screen one passes cleanly in front of the other instead of melting through it; they gather on the left and fan out to the right */
-  const STR=[[[-1.6,-.5,1.0],[-.8,-.32,1.0],[0,-.1,.95],[.8,.1,.95],[1.6,.16,1.0]],
-             [[-1.6,-.38,.35],[-.7,-.22,.35],[0,.0,.3],[.75,.32,.3],[1.6,.78,.35]],
-             [[-1.6,-.08,-.3],[-.6,-.04,-.3],[.1,.04,-.28],[.85,-.18,-.3],[1.6,-.5,-.3]],
-             [[-1.6,.32,-.95],[-.6,.16,-.95],[.2,.08,-.9],[.95,.36,-.95],[1.6,.98,-.95]],
-             [[-1.6,.62,-1.6],[-.5,.42,-1.6],[.3,.22,-1.6],[1.0,.02,-1.6],[1.6,-.2,-1.6]]];
-  const RAD=[.4,.36,.3,.24,.18];
-  function cr(P,u){ const k=u*(P.length-1), i=Math.min(P.length-2,Math.floor(k)), f=k-i, p0=P[Math.max(0,i-1)], p1=P[i], p2=P[i+1], p3=P[Math.min(P.length-1,i+2)];
-    return [0,1,2].map(j=>.5*((2*p1[j])+(-p0[j]+p2[j])*f+(2*p0[j]-5*p1[j]+4*p2[j]-p3[j])*f*f+(-p0[j]+3*p1[j]-3*p2[j]+p3[j])*f*f*f)); }
-  const sub=(a,b)=>[a[0]-b[0],a[1]-b[1],a[2]-b[2]], cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]], nz=a=>{ const l=Math.hypot(...a)||1; return a.map(x=>x/l); };
-  function geom(){
-    const L=G.lite?90:180, R=G.lite?14:24, out=[], idx=[]; let base=0;
-    STR.forEach((S0,id)=>{ const S=S0.map(p=>[p[0]*G.hw,p[1]*G.hh*.55,p[2]]), rad=RAD[id]*G.hh/3.2;
-      const pts=[...Array(L+1)].map((_,i)=>cr(S,i/L));
-      let nrm=null;
-      pts.forEach((p,i)=>{ const T=nz(sub(pts[Math.min(L,i+1)],pts[Math.max(0,i-1)]));
-        nrm = nrm ? nz(cross(cross(T,nrm),T)) : nz(cross(T,[0,0,1]));   // parallel transport
-        const bn=cross(T,nrm);
-        for(let j=0;j<=R;j++){ const a=j/R*Math.PI*2, c=Math.cos(a), s=Math.sin(a), nx=nrm[0]*c+bn[0]*s, ny=nrm[1]*c+bn[1]*s, nzz=nrm[2]*c+bn[2]*s;
-          out.push(p[0]+nx*rad,p[1]+ny*rad,p[2]+nzz*rad, nx,ny,nzz, i/L,j/R, id); } });
-      for(let i=0;i<L;i++) for(let j=0;j<R;j++){ const a=base+i*(R+1)+j, b=a+R+1; idx.push(a,b,a+1,b,b+1,a+1); }
-      base+=(L+1)*(R+1); });
-    const gl=G.gl; gl.bindBuffer(gl.ARRAY_BUFFER,G.buf); gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(out),gl.STATIC_DRAW);
-    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,G.ibuf); gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,G.u32?new Uint32Array(idx):new Uint16Array(idx),gl.STATIC_DRAW); G.n=idx.length;
+/* pixel mosaic: the backdrop of the page heads. A grid of soft rectangles in the palette, white on the left deepening to teal
+   on the right, breathing in slow diagonal waves and brightening under the pointer. Canvas 2D at ~30 fps, paused off-screen
+   and in hidden tabs. Reduced motion: one still frame. */
+const PIXELS=(()=>{
+  const PAL=["#F2FAF8","#DDF3EF","#BDEDE4","#8DE6D8","#5BC8B6","#3AA89C","#1F7F7C"].map(h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16)));
+  const tint=u=>{ const k=Math.max(0,Math.min(.999,u))*(PAL.length-1), i=Math.floor(k), f=k-i, a=PAL[i], b=PAL[i+1]; return a.map((v,j)=>Math.round(v+(b[j]-v)*f)); };
+  const RM=()=>matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let items=[], raf=0, last=0, io=null, px=-1e4, py=-1e4;
+  addEventListener("pointermove",e=>{ px=e.clientX; py=e.clientY; },{passive:true});
+  document.addEventListener("visibilitychange",()=>kick());
+  addEventListener("resize",()=>{ items.forEach(size); kick(); });
+  function size(it){
+    const r=it.wrap.getBoundingClientRect(), dpr=Math.min(2,devicePixelRatio||1);
+    it.W=r.width; it.H=r.height; it.cv.width=Math.max(2,Math.round(r.width*dpr)); it.cv.height=Math.max(2,Math.round(r.height*dpr)); it.ctx.setTransform(dpr,0,0,dpr,0,0);
+    const cw=r.width<640?44:64, ch=r.width<640?22:30; it.cols=Math.max(1,Math.ceil(r.width/cw)); it.rows=Math.max(1,Math.ceil(r.height/ch)); it.cw=r.width/it.cols; it.ch=r.height/it.rows;
+    let s=7; const rnd=()=>{ s=(s*16807)%2147483647; return s/2147483647; };   // seeded, so the pattern is the same on every visit
+    it.cells=[...Array(it.cols*it.rows)].map(()=>({ph:rnd()*6.283,sp:.35+rnd()*.6,j:rnd(),hole:rnd()}));
   }
-  /* the swirl: white satin folds turning slowly around an off-centre eye (one full-screen fragment shader, drawn at half
-     resolution since it is all soft gradients). It takes over from the strands as you scroll; scrolling also turns it. */
-  const SVS=`attribute vec2 P;void main(){gl_Position=vec4(P,0.,1.);}`;
-  const SFS=`precision mediump float;uniform vec2 R;uniform float t;
-  void main(){ vec2 uv=(gl_FragCoord.xy-.5*R)/R.y;
-    vec2 p=uv-vec2(-.18+.05*sin(t*.07),.04+.04*cos(t*.05)); float r=length(p), a=atan(p.y,p.x);
-    float th=a+1.25/(r+.22)-t*.05;
-    float fold=smoothstep(-.1,1.,sin(th*5.)), lit=.5+.5*sin(th*5.+1.1);
-    float fall=smoothstep(1.5,.15,r)*smoothstep(.0,.2,r);
-    float shade=(1.-lit)*fold*fall;
-    float rim=pow(max(0.,sin(th*5.+.35)),16.)*fall;
-    vec3 c=vec3(1.)-shade*vec3(.12,.11,.095)+rim*.03;
-    gl_FragColor=vec4(min(c,vec3(1.)),1.); }`;
-  function initSwirl(){ try{
-    const cv=document.createElement("canvas"); cv.className="swirl"; cv.setAttribute("aria-hidden","true");
-    const gl=cv.getContext("webgl",{alpha:false,antialias:false}); if(!gl) return;
-    const p=gl.createProgram(); gl.attachShader(p,sh(gl,gl.VERTEX_SHADER,SVS)); gl.attachShader(p,sh(gl,gl.FRAGMENT_SHADER,SFS)); gl.linkProgram(p);
-    if(!gl.getProgramParameter(p,gl.LINK_STATUS)) return; gl.useProgram(p);
-    gl.bindBuffer(gl.ARRAY_BUFFER,gl.createBuffer()); gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
-    const l=gl.getAttribLocation(p,"P"); gl.enableVertexAttribArray(l); gl.vertexAttribPointer(l,2,gl.FLOAT,false,0,0);
-    G.sw={cv,gl,uR:gl.getUniformLocation(p,"R"),ut:gl.getUniformLocation(p,"t")}; document.body.prepend(cv); swSize();
-  }catch(e){ G.sw=null; } }
-  function swSize(){ const s=G.sw; if(!s) return; s.cv.width=Math.max(2,Math.round(innerWidth*.5)); s.cv.height=Math.max(2,Math.round(innerHeight*.5)); s.gl.viewport(0,0,s.cv.width,s.cv.height); s.gl.uniform2f(s.uR,s.cv.width,s.cv.height); }
-  function sh(gl,type,src){ const s=gl.createShader(type); gl.shaderSource(s,src); gl.compileShader(s); if(!gl.getShaderParameter(s,gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s)); return s; }
-  function init(){
-    const cv=document.createElement("canvas"); cv.className="ribbons"; cv.setAttribute("aria-hidden","true");
-    const gl=cv.getContext("webgl",{alpha:true,antialias:true,premultipliedAlpha:true}); if(!gl) return false;
-    G.u32=!!gl.getExtension("OES_element_index_uint"); if(!G.u32) G.lite=true;
-    const prog=gl.createProgram(); gl.attachShader(prog,sh(gl,gl.VERTEX_SHADER,VS)); gl.attachShader(prog,sh(gl,gl.FRAGMENT_SHADER,FS)); gl.linkProgram(prog);
-    if(!gl.getProgramParameter(prog,gl.LINK_STATUS)) return false; gl.useProgram(prog);
-    G.buf=gl.createBuffer(); G.ibuf=gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,G.buf);
-    const st=9*4; [["P",3,0],["N",3,12],["U",2,24],["I",1,32]].forEach(([k,n,o])=>{ const l=gl.getAttribLocation(prog,k); gl.enableVertexAttribArray(l); gl.vertexAttribPointer(l,n,gl.FLOAT,false,st,o); });
-    ["PM","t","S","A","TW","OY","M","B"].forEach(k=>G.u[k]=gl.getUniformLocation(prog,k));
-    gl.enable(gl.DEPTH_TEST); gl.clearColor(0,0,0,0);
-    G.cv=cv; G.gl=gl; G.prog=prog; initSwirl(); document.body.prepend(cv);
-    addEventListener("resize",()=>{ size(); kick(); });
-    addEventListener("scroll",()=>kick(),{passive:true});
-    addEventListener("pointermove",e=>{ G.tx=e.clientX/innerWidth*2-1; G.ty=-(e.clientY/innerHeight*2-1); kick(); },{passive:true});
-    document.addEventListener("visibilitychange",kick);
-    return true;
+  function draw(it,t){
+    const {ctx,cols,rows,cw,ch}=it, r=it.wrap.getBoundingClientRect(); ctx.clearRect(0,0,it.W,it.H);
+    for(let y=0;y<rows;y++) for(let x=0;x<cols;x++){
+      const c=it.cells[y*cols+x], u=(x+.5)/cols, v=(y+.5)/rows;
+      const p=Math.max(0,Math.min(1,(u+(c.j-.5)*.3-.16)/.5));                  // ragged edge: cells thin out towards the left
+      if(p<=0||c.hole<.2*(1-u)) continue;
+      const wave=.5+.5*Math.sin(u*4.2-v*2.2-t*.55), breathe=.5+.5*Math.sin(t*c.sp+c.ph);
+      const dx=r.left+(x+.5)*cw-px, dy=r.top+(y+.5)*ch-py, near=Math.max(0,1-Math.hypot(dx,dy)/180);
+      const [R,G,B]=tint(Math.min(1,u*.88+c.j*.16+wave*.1+near*.25));
+      const a=Math.min(1,p*(.26+.44*breathe*(.55+.45*wave)+.35*near));
+      ctx.fillStyle=`rgba(${R},${G},${B},${a.toFixed(3)})`;
+      ctx.fillRect(Math.floor(x*cw),Math.floor(y*ch),Math.ceil(cw),Math.ceil(ch));
+    }
   }
-  function size(){
-    const lite=innerWidth<768||(navigator.hardwareConcurrency&&navigator.hardwareConcurrency<=2);
-    const W=innerWidth, H=innerHeight; G.dpr=Math.min(lite?1.25:1.75,devicePixelRatio||1); G.lv=0; res(1);
-    const f=1/Math.tan(30*Math.PI/360), asp=W/H, near=.1, far=60;
-    G.gl.uniformMatrix4fv(G.u.PM,false,new Float32Array([f/asp,0,0,0, 0,f,0,0, 0,0,(far+near)/(near-far),-1, 0,0,2*far*near/(near-far),0]));
-    G.hh=11/f; G.hw=G.hh*asp; G.W=W; G.H=H; swSize();
-    if(lite!==G.lite||!G.n){ G.lite=lite||!G.u32; geom(); } else geom();
-  }
-  /* softer = fewer pixels: once the strands blur, they are drawn at a fraction of the resolution and stretched, which reads as blur for free */
-  function res(lv){ if(lv===G.lv) return; G.lv=lv; G.cv.width=Math.max(2,Math.round(innerWidth*G.dpr*lv)); G.cv.height=Math.max(2,Math.round(innerHeight*G.dpr*lv)); G.gl.viewport(0,0,G.cv.width,G.cv.height); }
-  const ss=(a,b,x)=>{ const k=Math.max(0,Math.min(1,(x-a)/(b-a))); return k*k*(3-2*k); };
   function frame(now){
-    G.raf=0; if(!G.gl) return; const gl=G.gl, still=RMq(), t=still?6:(now-G.t0)/1000;
-    if(!still&&G.lite&&now-G.last<30){ G.raf=requestAnimationFrame(frame); return; } G.last=now;   /* full frame rate, except on weak devices */
-    const vh=G.H, y=scrollY, s=y/vh;
-    /* where the band sits on screen (world units); the strands ride up with the page at 70% speed */
-    let cy=0; if(G.band&&G.band.isConnected){ const r=G.band.getBoundingClientRect(), mid=r.top+y*(still?1:.3)+r.height/2; cy=(.5-mid/vh)*2*G.hh; }
-    const soft=G.soft?1:still?0:ss(.15,1.1,s), tw=still?0:(G.soft?.6+s*.25:ss(.3,2.2,s)*1.4+Math.max(0,s-2.2)*.18);
-    res(1);   /* no resolution steps: the strands fade out and the swirl fades in, so nothing pops */
-    G.mx+=(G.tx-G.mx)*.08; G.my+=(G.ty-G.my)*.05;
-    gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
-    gl.uniform1f(G.u.t,t); gl.uniform1f(G.u.S,still?0:Math.min(1,s*1.2)); gl.uniform1f(G.u.A,G.amp); gl.uniform1f(G.u.TW,tw);
-    gl.uniform1f(G.u.OY,G.soft?0:cy*(1-soft)); gl.uniform2f(G.u.M,still?0:G.mx,still?0:G.my); gl.uniform1f(G.u.B,soft);
-    if(soft<.98) gl.drawElements(gl.TRIANGLES,G.n,G.u32?gl.UNSIGNED_INT:gl.UNSIGNED_SHORT,0);
-    G.cv.style.setProperty("--b",soft.toFixed(3));
-    if(G.sw){ G.sw.cv.style.opacity=soft.toFixed(3); if(soft>.01){ G.sw.gl.uniform1f(G.sw.ut,t+(still?0:s*1.4)); G.sw.gl.drawArrays(G.sw.gl.TRIANGLES,0,3); } }
-    G.cv.classList.toggle("soft",soft>.02);
-    if(!still&&!document.hidden) G.raf=requestAnimationFrame(frame);
+    raf=0; items=items.filter(i=>i.wrap.isConnected); const still=RM(), live=items.filter(i=>i.on);
+    if(!live.length||document.hidden) return;
+    if(still||now-last>=33){ last=now; live.forEach(i=>draw(i,still?2:now/1000)); }
+    if(!still) raf=requestAnimationFrame(frame);
   }
-  const kick=()=>{ if(!G.raf&&G.gl) G.raf=requestAnimationFrame(frame); };
-  return { mount(root,mood){
-    try{ if(!G.gl&&!init()) return; }catch(e){ console.warn("ribbons",e); G.gl=null; return; }
-    G.band=root.querySelector(".mband"); G.soft=!G.band; G.amp={calm:.7,changeable:1,stormy:1.5}[mood]||1;
-    G.cv.classList.toggle("still",RMq()); if(!G.n) size(); kick(); } };
+  function kick(){ if(!raf) raf=requestAnimationFrame(frame); }
+  return { mount(root){
+    io?.disconnect(); items=[];
+    io=new IntersectionObserver(es=>{ es.forEach(e=>{ const it=items.find(i=>i.wrap===e.target); if(it) it.on=e.isIntersecting; }); kick(); });
+    root.querySelectorAll(".mpix").forEach(wrap=>{ const cv=wrap.querySelector("canvas")||wrap.appendChild(document.createElement("canvas"));
+      const it={wrap,cv,ctx:cv.getContext("2d"),on:true}; size(it); items.push(it); io.observe(wrap); });
+    kick(); } };
 })();
 /* section rules draw themselves from the left as each section and Brief story comes into view */
 const LINES=(()=>{ let io=null; return { mount(m){ io?.disconnect();
@@ -2134,7 +2043,7 @@ const TILESETS=[
   [[60,6,13,-28,"#1F7F7C",1.2,40],[4,12,10,26,"#3AA89C",.7,-30],[22,32,15,-18,"#FFFFFF",.35,20],[82,30,12,8,"#5BC8B6",.9,-45],[-5,58,13,34,"#1F7F7C",1.1,35],[46,58,14,-30,"#3AA89C",1.4,-25],[88,72,9,22,"#5BC8B6",.6,50]],
   [[70,8,12,-20,"#3AA89C",1,35],[2,20,9,30,"#5BC8B6",.6,-40],[30,46,13,-12,"#FFFFFF",.4,25],[86,40,13,14,"#1F7F7C",1.2,-30],[52,70,12,-26,"#5BC8B6",1.3,45],[10,72,10,18,"#3AA89C",.8,-20]],
 ];
-function tilesHTML(){ return ""; }
+function tilesHTML(){ return `<div class="mpix" aria-hidden="true"><canvas></canvas></div>`; }
 (()=>{ if(matchMedia("(prefers-reduced-motion: reduce)").matches) return; let raf=0, mx=0, my=0, tx=0, ty=0;
   const upd=()=>{ raf=0; mx+=(tx-mx)*.12; my+=(ty-my)*.12;
     document.querySelectorAll(".hero2").forEach(h=>{ const r=h.getBoundingClientRect(); const p=Math.max(0,Math.min(1.4,-r.top/Math.max(1,r.height)));
