@@ -1003,6 +1003,7 @@ footer.foot::before{content:"";position:absolute;inset:0;z-index:-1;background:r
 .pmhero .media::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 90% at 78% 40%,rgba(91,200,182,.35),transparent 70%),radial-gradient(50% 80% at 20% 70%,rgba(15,88,84,.18),transparent 70%)}
 .pmhero .media img,.pmhero .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .pmhero .thumb img{object-position:50% 38%}
+.pmhero .media img{object-position:55% 36%}
 .pmhero .ribbon{position:absolute;left:-4%;top:0;width:108%;height:100%;overflow:visible;pointer-events:none}
 .pmhero .ribbon path{fill:none;stroke:var(--mint2);stroke-width:66}
 .pmhero .ribbon text{font:800 34px var(--f-body);fill:var(--ink);letter-spacing:-.01em;dominant-baseline:central}
@@ -1401,7 +1402,7 @@ function heroFrame(o){
 function heroHTML(day){
   const n=(day?.sources||[]).length||14;
   return heroFrame({label:"PaperMint", ribbon:"What money is doing. Why it matters. · ", title:"Finance news,", em:"freshly minted.",
-    thumb:"assets/markets-thumb.jpg",
+    photo:"assets/markets-hero.webp", thumb:"assets/markets-thumb.jpg",
     cta:{text:"Read today's Brief", attrs:'data-jump=".seg" data-go="brief"'},
     text:`What today's news means for your money, in plain English. PaperMint reads ${n} trusted sources every weekday, picks the stories that matter for your savings, loans and investments, and explains them. Educational, never advice.`,
     tiles:srcTiles(day), num:String(n), numLabel:`trusted sources, read ${day?"today":"every weekday"}.`});
