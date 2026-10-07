@@ -1041,6 +1041,19 @@ footer.foot::before{content:"";position:absolute;inset:0;z-index:-1;background:r
 main.play .pmhero .card{animation:mfade .9s var(--ease) both;animation-delay:var(--introDelay,0s)}
 .pmhero + .mast{padding-top:var(--s6)}
 @media (max-width:820px){.pmhero .body{grid-template-columns:minmax(0,1fr)} .pmhero .lead{gap:22px}}
+/* phones: a one-row menu (wordmark left, tabs right), the ticker scrolls away with the page instead of staying pinned, a shorter hero photo */
+@media (max-width:640px){
+  header.top .wrap{flex-wrap:nowrap!important;padding-block:0!important;min-height:58px;gap:8px}
+  header.top .logo{order:0!important;flex:none;min-height:58px!important} header.top .logo .wm{font-size:18px}
+  .tabs{order:1!important;flex:1 1 auto;min-width:0;width:auto!important;margin-left:auto!important;padding-bottom:0!important;justify-content:flex-start!important;gap:2px;flex-wrap:nowrap;overflow-x:auto!important;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tabs .tab:first-of-type{margin-left:auto}
+  .tab{font-size:13px!important;padding:0 10px!important;min-height:34px!important}
+  .tabind{height:34px}
+  .aikey-top{order:2!important;flex:none;margin-left:2px!important;min-height:34px;padding:0 10px} .aikey-top span{display:none}
+  .ticker{position:absolute!important;top:var(--th)!important}
+  .pmhero .media{height:200px}
+}
 /* footer in the same frame as the hero, inverted: white page around it, the footer itself a dark green rounded card with light type */
 footer.foot{padding:clamp(16px,4vw,56px);background:#FFFFFF!important}
 footer.foot::before{display:none!important}
