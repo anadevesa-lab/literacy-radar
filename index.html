@@ -971,9 +971,6 @@ footer.foot::before{content:"";position:absolute;inset:0;z-index:-1;background:r
 .fbot .logo .wm{color:#FFFFFF} .fbot p,.fbot ul{color:rgba(230,247,244,.62)!important} .fbot h4{color:var(--mint2)!important}
 .flink{color:#E6F7F4} .flink:hover{color:#FFFFFF}
 .flegal{border-top-color:rgba(255,255,255,.1)!important;color:rgba(230,247,244,.5)!important}
-.askai{grid-column:1/-1;display:flex;align-items:center;gap:10px 14px;flex-wrap:wrap;font-size:var(--t-sm);font-weight:600;color:rgba(230,247,244,.7)}
-.askai a{display:inline-flex;align-items:center;min-height:36px;padding:0 14px;border-radius:999px;border:1px solid rgba(255,255,255,.18);color:#E6F7F4;text-decoration:none;background:none!important;transition:border-color .3s var(--ease),background-color .3s var(--ease)}
-.askai a:hover{border-color:var(--mint2);background-color:rgba(141,230,216,.08)!important}
 /* the wordmark, huge, rising out of the bottom edge */
 .bigmark{max-width:1200px;margin:0 auto;padding:8px var(--s5) 0;display:flex;align-items:center;justify-content:space-between;gap:2vw;overflow:hidden;color:#FFFFFF;user-select:none}
 .bigmark .bw{display:block;overflow:hidden;padding:.04em .08em .16em;margin:0 -.08em}
@@ -1064,7 +1061,6 @@ main.play .pmhero .card{animation:mfade .9s var(--ease) both;animation-delay:var
     <div><h4>Explore</h4><ul><li><button class="flink" data-tab="mkt" type="button">Markets</button></li><li><button class="flink" data-tab="ask" type="button">Ask PaperMint</button></li><li><button class="flink" data-tab="lib" type="button">Library</button></li><li><button class="flink" data-tab="studio" type="button">Studio</button></li></ul></div>
     <div><h4>Sources</h4><ul><li>Bloomberg · Financial Times</li><li>WSJ · The Economist</li><li>CNBC · MarketWatch · BBC</li><li>ECB · Fed · Eurostat · INE</li></ul></div>
     <div><h4>Good to know</h4><ul><li>Educational only</li><li>No buy or sell calls</li><li>Capital at risk</li></ul></div>
-    <div class="askai" id="askai"><span>Ask your AI about PaperMint</span><a data-ai="chatgpt" href="https://chatgpt.com/" target="_blank" rel="noopener">ChatGPT</a><a data-ai="claude" href="https://claude.ai/new" target="_blank" rel="noopener">Claude</a><a data-ai="perplexity" href="https://www.perplexity.ai/" target="_blank" rel="noopener">Perplexity</a></div>
     <div class="flegal"><span>Educational content generated from public news. Not investment advice. Past performance is not a guide to future returns.</span><span>© 2026 PaperMint · <button class="flink owlink" id="owLogin" type="button">Owner</button></span></div>
   </div></div>
   <div class="bigmark" aria-hidden="true"><span class="bw"><span>Paper</span></span><span class="bw"><em>Mint</em></span></div>
@@ -2186,10 +2182,6 @@ function render(){
   const go=()=>{ pl.classList.add("out"); setTimeout(()=>{ pl.remove(); de.style.removeProperty("--introDelay"); },lift); };
   setTimeout(go, hold);
   const tick=()=>{ if(!pl.isConnected) return; de.style.setProperty("--introDelay",Math.max(0,hold+350-(performance.now()-t0))/1000+"s"); requestAnimationFrame(tick); }; requestAnimationFrame(tick); })();
-/* footer: links that open the visitor's own AI with a question about this page */
-(()=>{ const q=encodeURIComponent(`Summarise what PaperMint (${location.origin+location.pathname}) is and what today's Brief says about everyday money. Keep it educational, not advice.`);
-  const U={chatgpt:"https://chatgpt.com/?q=",claude:"https://claude.ai/new?q=",perplexity:"https://www.perplexity.ai/search?q="};
-  document.querySelectorAll("#askai a[data-ai]").forEach(a=>{ if(U[a.dataset.ai]) a.href=U[a.dataset.ai]+q; }); })();
 /* scroll reveals: split headings, soft fades, drawn rules */
 let sxIO=null; const SXSEEN=new Set();
 function scrollFX(root){
