@@ -1037,6 +1037,14 @@ footer.foot::before{content:"";position:absolute;inset:0;z-index:-1;background:r
 main.play .pmhero .card{animation:mfade .9s var(--ease) both;animation-delay:var(--introDelay,0s)}
 .pmhero + .mast{padding-top:var(--s6)}
 @media (max-width:820px){.pmhero .body{grid-template-columns:minmax(0,1fr)} .pmhero .lead{gap:22px}}
+/* footer in the same frame as the hero, inverted: white page around it, the footer itself a dark green rounded card with light type */
+footer.foot{padding:clamp(16px,4vw,56px);background:#FFFFFF!important}
+footer.foot::before{display:none!important}
+.fcard{max-width:1240px;margin:0 auto;border-radius:clamp(24px,3vw,40px);padding:clamp(8px,1.4vw,16px) clamp(16px,2.4vw,32px) 0;overflow:hidden;
+  background:radial-gradient(110% 70% at 85% 0%,#0F5854 0%,#062B2A 55%,#041F1E 100%);color:#E6F7F4}
+.fcard .fcta .in{padding:clamp(40px,7vh,72px) 0 clamp(32px,5vh,48px)!important}
+.fcard .fbot .in{padding-inline:0}
+.fcard .bigmark{padding-inline:0}
 @media (max-width:480px){.pmhero .row{grid-template-columns:minmax(0,1fr)} .pmhero .thumb{min-height:120px} .pmhero .ribbon text{font-size:28px} .pmhero .ribbon path{stroke-width:54}}
 
 </style>
@@ -1048,7 +1056,7 @@ main.play .pmhero .card{animation:mfade .9s var(--ease) both;animation-delay:var
 </div></header>
 <div class="ticker" id="ticker" aria-label="Market ticker"></div>
 <main class="wrap" id="main"></main>
-<footer class="foot">
+<footer class="foot"><div class="fcard">
   <section class="fcta"><div class="in">
     <div class="fhead">
       <div class="fcopy"><h2 class="mega">What money is doing. <em>Why it matters.</em></h2></div>
@@ -1064,7 +1072,7 @@ main.play .pmhero .card{animation:mfade .9s var(--ease) both;animation-delay:var
     <div class="flegal"><span>Educational content generated from public news. Not investment advice. Past performance is not a guide to future returns.</span><span>© 2026 PaperMint · <button class="flink owlink" id="owLogin" type="button">Owner</button></span></div>
   </div></div>
   <div class="bigmark" aria-hidden="true"><span class="bw"><span>Paper</span></span><span class="bw"><em>Mint</em></span></div>
-</footer>
+</div></footer>
 <div class="toast" id="toast" hidden></div>
 <script>
 // PaperMint — standalone runtime for GitHub Pages (100% free).
