@@ -1552,7 +1552,7 @@ function vFaq(){
 function vAsk(){
   const day=latestDay();
   const nq=(latestPack()?.faq||[]).length;
-  let h = heroFrame({label:"Ask PaperMint", ribbon:"Ask anything. Get it in plain English. · ", title:"Ask anything", em:"about today's money news.",
+  let h = heroFrame({label:"Ask PaperMint", photo:"assets/ask-hero.webp", photoPos:"50% 50%", title:"Ask anything", em:"about today's money news.",
     cta:{text:nq?"See today's questions":"Ask your question", attrs:`data-jump="${nq?".faq":".askbox"}"`},
     text:"Answers use the stories collected today and the verified indicators. Scenarios and risks, never buy or sell calls.",
     tiles:srcTiles(day), num:String(nq||(day?.items||[]).length||0), numLabel:nq?"questions answered today, from today's news.":"stories behind today's answers."});
@@ -1577,9 +1577,9 @@ const srcTiles = day => { const src=(day?.sources||[]).map(n=>n==="BCE"?"ECB":n)
 function heroFrame(o){
   return `<section class="pmhero" aria-label="${esc(o.label)}"><div class="card">
     <div class="media">${o.photo?`<img src="${o.photo}" alt="" style="--pos:${o.photoPos||"50% 50%"}" onerror="this.remove()">`:""}
-      <svg class="ribbon" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      ${o.ribbon?`<svg class="ribbon" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <path id="pmwave" d="${o.wave||"M-40,300 C180,330 300,170 520,190 C720,208 760,320 960,250 C1080,208 1140,90 1260,40"}"/>
-        <text><textPath href="#pmwave" startOffset="0">${esc(o.ribbon).repeat(4)}</textPath></text></svg></div>
+        <text><textPath href="#pmwave" startOffset="0">${esc(o.ribbon).repeat(4)}</textPath></text></svg>`:""}</div>
     <div class="body">
       <div class="lead"><h1${(o.title+o.em).length>32?' class="long"':""}>${esc(o.title)} <em>${esc(o.em)}</em></h1>
         <div class="acts">${o.cta?`<button class="btn primary cta" type="button" ${o.cta.attrs}>${esc(o.cta.text)} →</button>`:""}${o.extra||""}</div></div>
