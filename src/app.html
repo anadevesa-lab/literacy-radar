@@ -1014,6 +1014,7 @@ footer.foot::before{content:"";position:absolute;inset:0;z-index:-1;background:r
 .pmhero .cta:not(:disabled):hover{color:#FFFFFF!important;border-color:var(--ink)!important}
 .pmhero .acts{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
 .pmhero h1.long{font-size:clamp(2.2rem,4.2vw,3.6rem)}
+.pmhero .basef{flex-direction:row;align-items:center;gap:10px} .pmhero .basef input{width:88px;min-height:44px}
 .pmhero .side{display:flex;flex-direction:column;justify-content:space-between;gap:28px;min-width:0}
 .pmhero .side p{margin:0;font-size:17px;line-height:1.6;color:var(--ink2);max-width:46ch}
 .pmhero .row{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:14px}
@@ -1277,8 +1278,12 @@ function vLib(){
   if(st.openPiece){ const p=S.pieces.find(x=>x.id===st.openPiece); if(p) return `<button class="btn small" id="back" type="button" style="align-self:flex-start">← Library</button>
     <section class="panel"><span class="label">${esc(new Date(p.createdAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric"}))}</span><h1>${esc(p.idea?.title)}</h1><p class="muted">${esc(p.idea?.hook)}</p></section>`+vContent(p.content,{total:p.totalMs}); }
   const list=[...S.pieces].sort((a,b)=>(b.createdAt||0)-(a.createdAt||0));
-  return `<section class="hero2 paperhead">${tilesHTML(3)}<div class="in"><span class="eyebrow">Library</span><h1 data-split="1" aria-label="Everything you've made"><span aria-hidden="true">Everything</span> <em aria-hidden="true">you've made.</em></h1>
-    <label class="field" style="max-width:320px"><span class="label">How long a post takes you without PaperMint (min)</span><input id="base" type="number" min="5" step="5" value="${baseline()}"></label>${stats()}</div></section>
+  const done=list.reduce((a,p)=>a+(p.totalMs||0),0), savedH=list.length?Math.round(Math.max(0,list.length*baseline()*60000-done)/3600000*10)/10:0;
+  return `${heroFrame({label:"Library", ribbon:"Everything you've made, in one place. · ", title:"Everything", em:"you've made.",
+    cta:{text:"Open the Studio", attrs:"data-gostudio"},
+    extra:`<label class="field basef"><span class="label">Minutes a post takes by hand</span><input id="base" type="number" min="5" step="5" value="${baseline()}"></label>`,
+    text:`Every piece you create in the Studio is saved here, with how long it took and its compliance score. ${list.length} piece${list.length===1?"":"s"} so far.`,
+    tiles:["IG","IN","PPT","NL"], num:`${savedH} h`, numLabel:`saved vs. ${baseline()} min by hand.`})}
     ${!S.persistent?`<p class="notice">This view keeps your pieces in this browser only.</p>`:""}
     ${list.length?`<section class="panel"><div class="lib">${list.map(p=>`<button class="librow" data-piece="${esc(p.id)}" type="button"><span class="mono muted">${esc(new Date(p.createdAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}</span><span style="min-width:0"><b>${esc(p.idea?.title)}</b><div class="muted" style="font-size:.88rem">${esc(Object.keys(p.content||{}).filter(k=>k!=="compliance").map(k=>FORMATS.find(f=>f[0]===k)?.[1]).filter(Boolean).join(" · "))}</div></span><span class="pill ${(+p.content?.compliance?.score||0)>=85?"":(+p.content?.compliance?.score||0)>=60?"warn":"bad"}">${esc(p.content?.compliance?.score??"—")}</span></button>`).join("")}</div></section>`
     :`<div class="empty"><h2>Nothing here yet</h2><p class="muted">Every piece you create in the Studio is saved here, with how long it took and its compliance score.</p><button class="btn primary" id="tostudio" type="button" style="align-self:flex-start">Go to the Studio</button></div>`}`;
@@ -2168,6 +2173,7 @@ function bind(){
   document.querySelectorAll("[data-piece]").forEach(b=>b.onclick=()=>{ st.openPiece=b.dataset.piece; render(); window.scrollTo({top:0}); });
   const back=$("#back"); if(back) back.onclick=()=>{ st.openPiece=null; render(); };
   const ts=$("#tostudio"); if(ts) ts.onclick=()=>document.querySelector('[data-tab="studio"]').click();
+  document.querySelectorAll("[data-gostudio]").forEach(b=>b.onclick=()=>document.querySelector('.tab[data-tab="studio"]').click());
   const ak=$("#aikey"); if(ak) ak.onclick=()=>window.RADAR_AI_KEY();
   const base=$("#base"); if(base) base.onchange=()=>{ ls.set("radar-baseline", String(Math.max(5,+base.value||120))); render(); };
 }
