@@ -1,0 +1,159 @@
+{
+ "auto": true,
+ "date": "2026-10-07",
+ "basedOn": "2026-10-07T13:59:38.450Z",
+ "generatedAt": "2026-10-07T13:59:50.683Z",
+ "resumo": "Today's talk is mostly about **stocks and central-bank rates**. Rising: stocks, tech, commodities.",
+ "classes": [
+  {
+   "nome": "Ações",
+   "tendencia": "a subir",
+   "forca": 3,
+   "leitura": "19 stories today. Top one: The S&P 500 Hits a New Record High, Powered by Tech&#x2014;and Not Much Else (Wall Street Journal).",
+   "a_favor": [
+    "The S&P 500 Hits a New Record High, Powered by Tech&#x2014;…"
+   ],
+   "riscos": [
+    "Trading platform Webull's China ties create national securi…"
+   ],
+   "perfil": "Long horizon and tolerance for temporary losses."
+  },
+  {
+   "nome": "Juros (bancos centrais)",
+   "tendencia": "misto",
+   "forca": 3,
+   "leitura": "16 stories today. Top one: U.S. Dollar Gains Could Be Extended by Fed Minutes Readout (Wall Street Journal).",
+   "a_favor": [
+    "U.S. Dollar Gains Could Be Extended by Fed Minutes Readout"
+   ],
+   "riscos": [
+    "Wall St opens lower as bond yields and oil rebound; Fed min…"
+   ],
+   "perfil": "Affects everyone's deposits, loans and bonds."
+  },
+  {
+   "nome": "Tecnologia",
+   "tendencia": "a subir",
+   "forca": 3,
+   "leitura": "13 stories today. Top one: AI Cyber Pressure Is on the Rise (Wall Street Journal).",
+   "a_favor": [
+    "AI Cyber Pressure Is on the Rise"
+   ],
+   "riscos": [],
+   "perfil": "Long horizon and tolerance for high volatility."
+  },
+  {
+   "nome": "Obrigações",
+   "tendencia": "misto",
+   "forca": 3,
+   "leitura": "11 stories today. Top one: Dow Lower, Treasury Yields Hit Fresh 24-Year Highs (Wall Street Journal).",
+   "a_favor": [
+    "Dow Lower, Treasury Yields Hit Fresh 24-Year Highs"
+   ],
+   "riscos": [
+    "10-year Treasury note yield hits highest level since 2002 a…"
+   ],
+   "perfil": "Medium horizon and tolerance for price swings."
+  },
+  {
+   "nome": "Economia",
+   "tendencia": "estável",
+   "forca": 3,
+   "leitura": "6 stories today. Top one: ICE came to town and left behind weakened economies (CNBC).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Background for saving and investing decisions."
+  },
+  {
+   "nome": "Fundos",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "5 stories today. Top one: Venture Firm Behind Chip Startup Groq Targets $10 Billion Megafund (Wall Street Journal).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "People who want to diversify with professional management."
+  },
+  {
+   "nome": "Matérias-primas",
+   "tendencia": "a subir",
+   "forca": 2,
+   "leitura": "5 stories today. Top one: Oil edges higher as concerns over Houthi attacks on Saudi Arabia eclipse supply recovery (CNBC).",
+   "a_favor": [
+    "Oil edges higher as concerns over Houthi attacks on Saudi A…"
+   ],
+   "riscos": [],
+   "perfil": "A small slice of a portfolio, for diversification only."
+  }
+ ],
+ "temas": [
+  "Volatility is not the same as losing money",
+  "What the ECB does and why it touches your money",
+  "Concentration: the risk of betting on one sector"
+ ],
+ "pack": {
+  "carousel": {
+   "title": "Why Stocks Keep Winning",
+   "slides": [
+    {
+     "h": "Why stocks keep winning right now",
+     "t": "Markets are making headlines again. But what is actually driving these moves, and how should everyday savers look at the noise? Let's break it down."
+    },
+    {
+     "h": "The S&P 500 hits a new record",
+     "t": "Wall Street's main stock index just reached a fresh record high. The catch? It is largely powered by technology giants, leaving the rest of the market behind."
+    },
+    {
+     "h": "Bonds or stocks? History says both",
+     "t": "While Treasury yields have hit fresh highs, recent market analysis suggests that over the long run, stocks have a strong track record regardless of bond market twists."
+    },
+    {
+     "h": "Tech steals the spotlight again",
+     "t": "From AI startups raising billions to chips and data centres, tech remains the main engine of market growth. Remember: past performance is never a guide to the future."
+    },
+    {
+     "h": "What this means for your money",
+     "t": "Big market milestones can feel exciting or overwhelming. For a everyday saver, sticking to a steady plan and ignoring daily market drama is usually the smartest move."
+    },
+    {
+     "h": "Fresh finance news, minted daily",
+     "t": "We keep your money life clear and jargon-free. Hit follow for your daily dose of calm, sensible financial insights from PaperMint."
+    }
+   ]
+  },
+  "linkedin": "Stock markets are making fresh headlines this week, with the S&P 500 hitting a new record high.\n\nInterestingly, this rally is heavily powered by technology companies rather than a broad-based surge across every sector. At the same time, US Treasury yields have hit fresh 24-year highs, showing that bond markets are moving to a very different rhythm.\n\nFor everyday savers and investors, moments like this are a great reminder to focus on the long picture. Market concentration in a few big tech names sounds exciting, but balance and patience remain your best friends. Remember that past performance is never a guide to future returns.\n\nHow are you viewing the current market highs? Let us know in the comments.\n\n#Finance #Investing #StockMarket #PaperMint #FinancialLiteracy",
+  "reel": {
+   "hook": "Why the stock market is hitting record highs right now.",
+   "script": [
+    "The S&P 500 just hit a brand new record high on Wall Street.",
+    "But there is a twist: it is mostly being powered by big tech companies.",
+    "Meanwhile, bond yields are hitting fresh 24-year highs.",
+    "So what does this mean for your savings? Keep calm and look long-term.",
+    "Follow PaperMint for fresh finance news every single day."
+   ],
+   "caption": "Stock markets are hitting records, but tech is doing the heavy lifting. Here is what you need to know as an everyday saver."
+  },
+  "faq": [
+   {
+    "q": "Why is the S&P 500 hitting new records?",
+    "a": "The index recently reached a record high because a handful of large technology companies saw strong gains. When a few massive tech firms rise sharply, they pull the whole index up with them."
+   },
+   {
+    "q": "Does a record high mean stocks are safe?",
+    "a": "Not necessarily. Record highs simply show where prices are today compared to the past. Markets can still fluctuate, and past performance is never a guide to future results."
+   },
+   {
+    "q": "What is happening with bond yields?",
+    "a": "US Treasury yields recently hit fresh 24-year highs. Bond yields move inversely to bond prices, reflecting shifting expectations around interest rates and the wider economy."
+   },
+   {
+    "q": "Why is tech dominating the market news?",
+    "a": "Technology remains a massive driver of corporate growth, with huge funding rounds for AI startups and chip makers. This concentration means tech headlines often overshadow the rest of the economy."
+   },
+   {
+    "q": "How should a beginner react to market records?",
+    "a": "Beginners should generally avoid chasing short-term hype or trying to time the market. Sticking to a consistent, diversified saving plan helps you ignore the daily noise."
+   }
+  ],
+  "generatedAt": "2026-10-07T14:01:22.974Z"
+ }
+}
