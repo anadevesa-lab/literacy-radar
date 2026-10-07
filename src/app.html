@@ -1012,6 +1012,8 @@ footer.foot::before{content:"";position:absolute;inset:0;z-index:-1;background:r
 .pmhero .cta{align-self:flex-start;border-radius:12px!important;background:var(--mint2)!important;border-color:var(--mint2)!important;color:var(--ink)!important;min-height:52px;padding:0 24px;font-size:17px}
 .pmhero .cta::before{background:var(--ink)!important} .pmhero .cta::after{content:none!important}
 .pmhero .cta:not(:disabled):hover{color:#FFFFFF!important;border-color:var(--ink)!important}
+.pmhero .acts{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.pmhero h1.long{font-size:clamp(2.2rem,4.2vw,3.6rem)}
 .pmhero .side{display:flex;flex-direction:column;justify-content:space-between;gap:28px;min-width:0}
 .pmhero .side p{margin:0;font-size:17px;line-height:1.6;color:var(--ink2);max-width:46ch}
 .pmhero .row{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:14px}
@@ -1150,10 +1152,12 @@ function stats(){
     <div class="stat"><b>${n?Math.round(saved/3600000*10)/10+" h":"—"}</b><span>saved vs. ${baseline()} min by hand</span></div></div>`;
 }
 function vStudio(){
-  let h = `<section class="hero2 paperhead">${tilesHTML(2)}<div class="in">
-      <span class="eyebrow">Content studio</span>
-      <h1 data-split="1" aria-label="From today's news to content ready to post."><span aria-hidden="true">From today's news</span> <em aria-hidden="true">to content ready to post.</em></h1>
-      <p class="muted">Pick some news or write your own topic. The Studio suggests ideas and writes Instagram posts, LinkedIn posts and articles, opinion pieces, PowerPoint decks and newsletters, with a regulatory check built in.</p>${window.RADAR_AI_KEY?`<button class="btn small" id="aikey" type="button" style="align-self:flex-start">AI key</button>`:""}${stats()}</div></section>
+  const np=S.pieces.length;
+  let h = `${heroFrame({label:"Content studio", ribbon:"From today's news to content ready to post. · ", title:"From today's news", em:"to content ready to post.",
+    cta:{text:"Start from today's news", attrs:'data-jump="#in"'},
+    extra: window.RADAR_AI_KEY?`<button class="btn small" id="aikey" type="button">AI key</button>`:"",
+    text:"Pick some news or write your own topic. The Studio suggests ideas and writes Instagram posts, LinkedIn posts and articles, opinion pieces, PowerPoint decks and newsletters, with a regulatory check built in.",
+    tiles:["IG","IN","PPT","NL"], num:String(np), numLabel:np===1?"piece created so far.":"pieces created so far."})}
   ${vPack()}
   ${vNews()}
   <section class="panel">
@@ -1337,7 +1341,11 @@ function vFaq(){
 }
 function vAsk(){
   const day=latestDay();
-  let h = `<section class="hero2 paperhead">${tilesHTML(4)}<div class="in"><span class="eyebrow">Ask PaperMint</span><h1 data-split="1" aria-label="Ask anything about today's money news."><span aria-hidden="true">Ask anything</span> <em aria-hidden="true">about today's money news.</em></h1><p class="muted">Answers use the stories collected today and the verified indicators. Scenarios and risks, never buy or sell calls.</p></div></section>`;
+  const nq=(latestPack()?.faq||[]).length;
+  let h = heroFrame({label:"Ask PaperMint", ribbon:"Ask anything. Get it in plain English. · ", title:"Ask anything", em:"about today's money news.",
+    cta:{text:nq?"See today's questions":"Ask your question", attrs:`data-jump="${nq?".faq":".askbox"}"`},
+    text:"Answers use the stories collected today and the verified indicators. Scenarios and risks, never buy or sell calls.",
+    tiles:srcTiles(day), num:String(nq||(day?.items||[]).length||0), numLabel:nq?"questions answered today, from today's news.":"stories behind today's answers."});
   h += vFaq();
   h += `<section class="panel askbox"><div class="ptitle"><h2>Your question</h2></div>
     <p class="muted" style="font-size:.9rem">Ask anything about today's markets. The answer uses the collected news and shows scenarios and risks, never buy or sell calls.</p>
@@ -1352,25 +1360,31 @@ function vAsk(){
 function hlLead(t){ const e=md(t); if(e.includes("<b>")) return e.replace(/<b>(.+?)<\/b>/,'<mark>$1</mark>');
   const m=e.match(/\b(while|as|despite|after|amid|because)\s+((?:[^\s,.;]+\s+){0,3}[^\s,.;]+)/i); if(m) return e.replace(m[2],`<mark>${m[2]}</mark>`);
   const w=e.split(" "); return `<mark>${w.slice(0,3).join(" ")}</mark> ${w.slice(3).join(" ")}`; }
-/* Markets hero: the day's sources fill the stat card; photos come from assets/ when they exist */
-const RIBBON_TXT="What money is doing. Why it matters. · ";
+/* page heroes: one frame for every public page head (Markets, Ask, Studio). A white card on a mint band, a wide photo with a mint
+   ribbon whose words travel along a wave (WAVE), the title and call to action, the intro and a dark stat card. Photos come from assets/. */
 const HERO_PHOTOS=false;   // set to true once assets/hero.jpg and assets/hero-thumb.jpg are in the repo
-function heroHTML(day){
-  const src=(day?.sources||[]).map(n=>n==="BCE"?"ECB":n), ab=src.map(n=>ABBR[n]||String(n).slice(0,3).toUpperCase());
-  const tiles=(ab.length>=4?ab:["FT","WSJ","BBG","ECB"]).slice(0,4), n=src.length||14;
-  return `<section class="pmhero" aria-label="PaperMint"><div class="card">
+const srcTiles = day => { const src=(day?.sources||[]).map(n=>n==="BCE"?"ECB":n), ab=src.map(n=>ABBR[n]||String(n).slice(0,3).toUpperCase()); return (ab.length>=4?ab:["FT","WSJ","BBG","ECB"]).slice(0,4); };
+function heroFrame(o){
+  return `<section class="pmhero" aria-label="${esc(o.label)}"><div class="card">
     <div class="media">${HERO_PHOTOS?`<img src="assets/hero.jpg" alt="" onerror="this.remove()">`:""}
       <svg class="ribbon" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <path id="pmwave" d="M-40,300 C180,330 300,170 520,190 C720,208 760,320 960,250 C1080,208 1140,90 1260,40"/>
-        <text><textPath href="#pmwave" startOffset="0">${RIBBON_TXT.repeat(4)}</textPath></text></svg></div>
+        <text><textPath href="#pmwave" startOffset="0">${esc(o.ribbon).repeat(4)}</textPath></text></svg></div>
     <div class="body">
-      <div class="lead"><h1>Finance news, <em>freshly minted.</em></h1>
-        <button class="btn primary cta" type="button" data-jump=".seg" data-go="brief">Read today's Brief →</button></div>
-      <div class="side"><p>What today's news means for your money, in plain English. PaperMint reads ${n} trusted sources every weekday, picks the stories that matter for your savings, loans and investments, and explains them. Educational, never advice.</p>
+      <div class="lead"><h1${(o.title+o.em).length>32?' class="long"':""}>${esc(o.title)} <em>${esc(o.em)}</em></h1>
+        <div class="acts">${o.cta?`<button class="btn primary cta" type="button" ${o.cta.attrs}>${esc(o.cta.text)} →</button>`:""}${o.extra||""}</div></div>
+      <div class="side"><p>${esc(o.text)}</p>
         <div class="row"><div class="thumb">${HERO_PHOTOS?`<img src="assets/hero-thumb.jpg" alt="" onerror="this.remove()">`:""}</div>
-          <div class="stat"><div class="srcs" aria-hidden="true">${tiles.map(t=>`<i>${esc(t)}</i>`).join("")}</div>
-            <div class="num"><b>${n}</b><span>trusted sources, read ${day?"today":"every weekday"}.</span></div></div></div></div>
+          <div class="stat"><div class="srcs" aria-hidden="true">${o.tiles.map(t=>`<i>${esc(t)}</i>`).join("")}</div>
+            <div class="num"><b>${esc(o.num)}</b><span>${esc(o.numLabel)}</span></div></div></div></div>
     </div></div></section>`;
+}
+function heroHTML(day){
+  const n=(day?.sources||[]).length||14;
+  return heroFrame({label:"PaperMint", ribbon:"What money is doing. Why it matters. · ", title:"Finance news,", em:"freshly minted.",
+    cta:{text:"Read today's Brief", attrs:'data-jump=".seg" data-go="brief"'},
+    text:`What today's news means for your money, in plain English. PaperMint reads ${n} trusted sources every weekday, picks the stories that matter for your savings, loans and investments, and explains them. Educational, never advice.`,
+    tiles:srcTiles(day), num:String(n), numLabel:`trusted sources, read ${day?"today":"every weekday"}.`});
 }
 /* the ribbon's words travel along the wave: startOffset slides left by one repeat of the phrase and wraps, so the loop is seamless;
    the position survives re-renders; paused off-screen; reduced motion keeps it still */
