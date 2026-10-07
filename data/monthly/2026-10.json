@@ -1,97 +1,101 @@
 {
- "titulo": "Bond Yield Surges Shake Markets as Tech Leads Stock Records",
- "resumo": "Financial markets faced intense turbulence in October 2026 as **soaring global bond yields** and energy shocks pressured traditional assets. Long-term borrowing costs reached multi-decade highs, driven by stubborn inflation concerns and massive government debt supply. Despite these headwinds, **technology stocks and artificial intelligence enthusiasm** powered major indices like the S&P 500 to new record highs. Meanwhile, geopolitical tensions kept oil and diesel prices volatile, prompting coordinated emergency reserve releases by global leaders.",
+ "titulo": "Bond Yields Surge and Oil Shocks Shake Global Markets",
+ "resumo": "Financial markets faced extreme turbulence in October 2026 as **soaring government bond yields** reached multi-decade highs, driven by persistent inflation and resilient economic data. Energy markets experienced severe volatility, with Brent crude nearing **$100 a barrel** and diesel shortages triggering emergency stock releases by the G7. Despite these mounting economic pressures and a sharp slowdown in US job creation, major stock indices managed to reach **new record highs**, heavily supported by artificial intelligence investments. Meanwhile, central banks maintained a cautious stance on interest rates amid ongoing global trade and fiscal concerns.",
  "themes": [
   {
-   "titulo": "Global Bond Yield Volatility",
-   "texto": "Long-term borrowing costs surged globally, with US Treasury 10-year yields and UK long-term bond yields hitting multi-year peaks not seen in decades. The bond rout reflected rising investor anxiety over persistent inflation, heavy fiscal deficits, and geopolitical risks."
-  },
-  {
-   "titulo": "AI Momentum Drives Equities",
-   "texto": "Despite mounting macro pressures and high borrowing costs, major stock indices reached record territory. Investor enthusiasm for artificial intelligence infrastructure, mega-deals, and resilient corporate earnings helped giant technology firms lift the broader market."
+   "titulo": "Global Bond Market Turmoil",
+   "texto": "Long-term government bond yields surged across major economies, with US 10-year Treasury yields hitting their highest levels since 2002. The relentless debt sell-off increased borrowing costs for governments and corporations alike, though strong demand at subsequent auctions provided occasional relief."
   },
   {
    "titulo": "Energy Shock and Diesel Crisis",
-   "texto": "Soaring fuel prices and tightening refining capacity stoked severe energy inflation concerns across Europe and the United States. In response, G7 nations agreed to release up to 100 million barrels of emergency oil and diesel stocks to stabilize markets."
+   "texto": "Geopolitical conflicts and refining constraints pushed oil prices higher, with Brent crude approaching $100 per barrel. In response to soaring fuel costs and threatened export bans, G7 nations agreed to release up to 100 million barrels of emergency reserves."
+  },
+  {
+   "titulo": "Slowing Labour Market Growth",
+   "texto": "Economic data revealed a sharp deceleration in hiring, as the US economy added just 29,000 jobs in September and unemployment ticked up to 4.2%. The softer labour figures led traders to scale back expectations for immediate further interest rate hikes."
+  },
+  {
+   "titulo": "Artificial Intelligence Dominance",
+   "texto": "Technology stocks continued to drive market momentum, with the S&P 500 touching record highs despite broader economic headwinds. Corporations across sectors aggressively pursued AI integration, hardware deals, and specialised agent software despite lingering questions over immediate financial returns."
   }
  ],
  "momentos": [
   {
    "data": "1 Oct",
-   "facto": "US 10-year Treasury yields and UK long-term bond yields reached their highest levels since 2002 and 1998, respectively."
+   "facto": "US 10-year Treasury yields hit their highest level since 2002 while UK long-term bond yields reached 6% for the first time since 1998."
   },
   {
    "data": "2 Oct",
-   "facto": "The US jobs report showed the economy added just 29,000 jobs in September while unemployment ticked up to 4.2%."
+   "facto": "The US jobs report showed the economy added just 29,000 jobs in September and unemployment rose to 4.2%."
   },
   {
    "data": "2 Oct",
-   "facto": "G7 nations agreed to a coordinated release of up to 100 million barrels of emergency oil and diesel supplies."
+   "facto": "G7 nations agreed to a coordinated release of up to 100 million barrels of emergency oil and diesel stocks to combat surging fuel prices."
   },
   {
    "data": "5 Oct",
-   "facto": "The average UK five-year fixed mortgage rate hit the 6% threshold for the first time in three years."
+   "facto": "The average five-year fixed mortgage rate in the UK hit the 6% barrier for the first time in three years."
   },
   {
    "data": "6 Oct",
-   "facto": "The S&P 500 climbed to a record high, driven by a strong tech rally and earnings optimism despite elevated bond yields."
+   "facto": "The S&P 500 climbed to a record high, boosted by corporate earnings optimism and a rally in artificial intelligence stocks."
+  },
+  {
+   "data": "7 Oct",
+   "facto": "Federal Reserve minutes from the September meeting revealed hawkish unity among policymakers regarding ongoing inflation risks."
   }
  ],
  "numeros": [
   {
    "valor": "3.6%",
-   "contexto": "Inflation rate in Portugal in September 2026, measuring consumer price pressures."
-  },
-  {
-   "valor": "2.8%",
-   "contexto": "The 12-month average inflation rate in Portugal as of September 2026."
-  },
-  {
-   "valor": "3.8%",
-   "contexto": "Euro area inflation rate recorded in September 2026 by Eurostat."
+   "contexto": "Euro area HICP inflation rate for Portugal in September 2026, indicating ongoing domestic price pressures."
   },
   {
    "valor": "2.5%",
-   "contexto": "The ECB deposit rate maintained since September 16, 2026."
+   "contexto": "The ECB deposit rate maintained since September 16, 2026, anchoring European monetary policy."
   },
   {
    "valor": "3.247%",
-   "contexto": "The average 12-month Euribor rate for September 2026."
+   "contexto": "The average 12-month Euribor rate for September 2026, influencing variable-rate borrowing costs."
   },
   {
    "valor": "3%",
-   "contexto": "The new mortgage rate in Portugal as of August 2026."
+   "contexto": "The new mortgage rate in Portugal recorded as of August 2026 by the ECB and Banco de Portugal."
+  },
+  {
+   "valor": "3.54%",
+   "contexto": "The average yield on Portugal's 10-year government bonds in August 2026."
   }
  ],
  "classes": [
   {
    "nome": "Government Bonds",
    "balanco": "falling",
-   "leitura": "Heavy selling pushed global bond yields higher and prices lower amid fiscal and inflation concerns."
+   "leitura": "Heavy selling pushed long-term yields to multi-decade highs, though late-month auctions found solid investor demand."
   },
   {
    "nome": "Equities",
-   "balanco": "rising",
-   "leitura": "Major indices like the S&P 500 touched record highs supported by strong tech sector earnings."
+   "balanco": "mixed",
+   "leitura": "Major indices like the S&P 500 reached record highs driven by AI tech strength, while European stocks faced local fiscal pressures."
   },
   {
    "nome": "Energy Commodities",
-   "balanco": "mixed",
-   "leitura": "Oil and diesel prices fluctuated heavily near highs before easing after emergency reserve releases."
+   "balanco": "rising",
+   "leitura": "Brent crude pushed toward $100 per barrel amid refining bottlenecks and Middle East tensions before easing on emergency reserve releases."
   },
   {
-   "nome": "Precious Metals",
-   "balanco": "steady",
-   "leitura": "Gold held relatively steady as traders weighed rising bond yields against currency strength."
+   "nome": "Foreign Exchange",
+   "balanco": "mixed",
+   "leitura": "The US dollar strengthened on rising yields and European political risks, pushing the euro down to multi-month lows."
   }
  ],
  "vigiar": [
-  "The trajectory of global bond yields and whether central banks adjust monetary policy paths.",
-  "Upcoming inflation data prints across the Euro area and the United States.",
-  "Geopolitical developments affecting Middle East oil supplies and shipping routes.",
-  "Corporate earnings reports to gauge whether AI infrastructure spending yields expected returns."
+  "Monitor whether central banks adjust interest rates further in response to cooling employment data and sticky inflation.",
+  "Track energy supply developments in the Middle East and the practical impact of emergency G7 diesel releases.",
+  "Observe sovereign debt markets and fiscal policy debates in France and other European nations.",
+  "Watch for upcoming third-quarter corporate earnings reports to gauge the return on heavy artificial intelligence investments."
  ],
- "days": 4,
+ "days": 5,
  "final": false,
- "generatedAt": "2026-10-06T20:35:35.228Z"
+ "generatedAt": "2026-10-07T20:48:51.547Z"
 }
