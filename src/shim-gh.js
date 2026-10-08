@@ -74,6 +74,15 @@
   // ---------- AI: Google Gemini free tier, key kept in this browser ----------
   const KEY = "radar-gemini-key";
   const getKey = () => { try{ return localStorage.getItem(KEY) || ""; }catch{ return ""; } };
+  // every panel closes from its Close button, a cross in the corner, or the Escape key
+  function closable(el, close){
+    el.insertAdjacentHTML("afterbegin", '<button class="x" type="button" aria-label="Close">×</button>');
+    el.querySelector(".x").onclick = close;
+    el.querySelectorAll('[data-ai="close"],[data-ow="close"]').forEach(b => b.onclick = close);
+    document.removeEventListener("keydown", el._esc);
+    el._esc = e => { if(!el.isConnected) return document.removeEventListener("keydown", el._esc); if(e.key === "Escape") close(); };
+    document.addEventListener("keydown", el._esc);
+  }
   function keyPanel(reason){
     let el = document.getElementById("aiPanel");
     if(!el){ el = document.createElement("div"); el.id = "aiPanel"; el.className = "aipanel"; el.setAttribute("role","dialog"); el.setAttribute("aria-label","AI key"); document.body.appendChild(el); }
@@ -81,7 +90,7 @@
       <p>The Studio, Ask and The Brief use Google's free Gemini AI. Create a free key at <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com/apikey</a> (Google account, 2 minutes) and paste it here. It stays only in this browser.</p>
       <label class="field"><span class="label">Gemini API key</span><input id="aiKeyIn" type="password" autocomplete="off" placeholder="Paste your key (AIza… or AQ.…)"></label>
       <div class="row"><button class="btn primary" type="button" data-ai="save">Save key</button><button class="btn" type="button" data-ai="close">Close</button>${getKey() ? '<button class="btn" type="button" data-ai="forget">Remove key</button>' : ""}</div>`;
-    el.querySelector('[data-ai="close"]').onclick = () => el.remove();
+    closable(el, () => el.remove());
     el.querySelector('[data-ai="save"]').onclick = () => { const v = el.querySelector("#aiKeyIn").value.trim(); if(v.length < 20) return; try{ localStorage.setItem(KEY, v); }catch{} el.innerHTML = "<b>Key saved</b><p>Unlocking the Studio…</p>"; setTimeout(() => location.reload(), 1200); };
     const fg = el.querySelector('[data-ai="forget"]'); if(fg) fg.onclick = () => { try{ localStorage.removeItem(KEY); }catch{} el.remove(); };
     el.querySelector("#aiKeyIn").focus();
@@ -115,7 +124,7 @@
       <p id="owMsg" class="muted" style="font-size:.85rem"></p>
       <div class="row"><button class="btn primary" type="button" data-ow="go">${setup ? "Create code" : "Sign in"}</button><button class="btn" type="button" data-ow="close">Close</button></div>`;
     const msg = el.querySelector("#owMsg");
-    el.querySelector('[data-ow="close"]').onclick = () => { el.remove(); history.replaceState(null, "", location.pathname + location.search); };
+    closable(el, () => { el.remove(); history.replaceState(null, "", location.pathname + location.search); });
     el.querySelector('[data-ow="go"]').onclick = async () => {
       const e = el.querySelector("#owEmail").value, p = el.querySelector("#owPass").value;
       if(!e.includes("@") || p.length < 8){ msg.textContent = "Use your email and a password with at least 8 characters."; return; }
