@@ -1093,6 +1093,20 @@ footer.foot::before{display:none!important}
 /* the carousel and deck previews in the client's look */
 .slides.branded .slide{font-family:var(--bfb)}
 .slides.branded .slide h4{font-family:var(--bfh)}
+.slide{justify-content:flex-start} .slide h4{font-weight:800!important;letter-spacing:-.02em}
+.slide.k-hook h4{font-size:1.9rem!important;line-height:1.05!important;margin-top:auto}
+.slide.k-hook{padding-bottom:44px}
+.slide .swipe{position:absolute;left:var(--s5);bottom:16px;font:800 12px/1 var(--bfb,inherit);letter-spacing:.06em;text-transform:uppercase;color:var(--slide-hi)}
+.slide .big{display:block;margin-top:auto;font:800 3.4rem/1 var(--bfh,inherit);letter-spacing:-.04em;color:var(--slide-hi)}
+.slides.branded .slide:nth-child(even) .big{color:var(--accent)}
+.slide.k-stat h4,.slide.k-point h4,.slide.k-myth h4{font-size:1.3rem!important;line-height:1.15!important}
+.slide.k-point h4,.slide.k-myth h4{margin-top:auto}
+.slide .tag{align-self:flex-start;margin-top:22px;font:800 11px/1 var(--bfb,inherit);letter-spacing:.1em;text-transform:uppercase;padding:6px 10px;border-radius:999px;background:var(--slide-hi);color:var(--slide)}
+.slides.branded .slide:nth-child(even) .tag{background:var(--accent);color:#fff}
+.slide.k-myth h4{text-decoration:line-through;text-decoration-thickness:2px;text-decoration-color:var(--slide-hi);opacity:.9}
+.slide p{font-size:.95rem;line-height:1.4}
+.slide.k-cta h4{font-size:1.6rem!important;line-height:1.08!important;margin-top:auto}
+.slide .acts3{display:flex;gap:6px;flex-wrap:wrap} .slide .acts3 i{font:800 11px/1 var(--bfb,inherit);font-style:normal;padding:7px 10px;border-radius:999px;border:1.5px solid currentColor}
 .slides.branded .slide:nth-child(even){background:var(--page);color:var(--slide);border-color:transparent}
 .bmark{position:absolute;top:12px;right:12px;font:800 11px/1 var(--bfb);letter-spacing:.04em;max-width:45%;text-align:right;z-index:1}
 .bmark img{display:block;height:20px;width:auto;max-width:100%;background:#FFFFFF;border-radius:6px;padding:3px 6px;box-sizing:content-box}
@@ -1109,6 +1123,8 @@ footer.foot::before{display:none!important}
 .rframe .rt{font-size:11px;font-weight:800;opacity:.75} .rframe b{font:800 15px/1.2 var(--bfh)} .rframe .rv{font-size:11px;line-height:1.35;opacity:.75;margin-top:auto}
 .rframe .bmark{top:10px;right:10px;font-size:9px} .rframe .bmark img{height:12px;padding:2px 4px}
 .rframe .rt{max-width:55%}
+.btn.canva{border-color:#7D2AE8!important;color:#7D2AE8!important} .btn.canva:not(:disabled):hover{color:#FFFFFF!important}
+.btn.canva::before{background:#7D2AE8!important}
 .bbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;padding:14px 16px;border-radius:16px;background:var(--tint);border:1px solid var(--line)}
 .bbar .bchips{flex:1;min-width:0}
 .chk{display:flex;gap:10px;align-items:center;font-size:var(--t-sm);font-weight:600;color:var(--ink);cursor:pointer} .chk input{width:18px;height:18px;accent-color:var(--ink)}
@@ -1476,6 +1492,17 @@ const liPost=(b,text)=>`<div class="lipost branded" style="${brandVars(b)}"><div
   <div><b>${esc(b.name)}</b><span>Financial literacy · now</span></div>${logoTR(b)}</div>
   <div class="litext">${String(text||"").split(/\n{2,}/).map(t=>`<p>${md(t.trim()).replace(/\n/g,"<br>")}</p>`).join("")}</div>
   <div class="lifoot"><span>Like</span><span>Comment</span><span>Repost</span><span>Send</span></div></div>`;
+/* Instagram carousel slides built to stop the scroll: a short hook cover with a swipe cue, one big number,
+   one idea per slide, a myth/fact slide, and a save-and-follow close. Old pieces (headline/body only) still render. */
+function carSlide(s, k, n, b, foot){
+  const kind=s.kind||(k===0?"hook":k===n-1?"cta":"point"), head=s.headline??s.h??"", body=s.body??s.t??"", big=s.big||"";
+  return `<div class="slide k-${esc(kind)}"><span class="n">${k+1}/${n}</span>
+    ${kind==="myth"?`<span class="tag">${st.lang==="pt"?"Mito":"Myth"}</span>`:""}
+    ${big?`<span class="big">${esc(big)}</span>`:""}<h4>${hi(head)}</h4>${body?`<p>${kind==="myth"?`<b>${st.lang==="pt"?"Facto":"Fact"}:</b> `:""}${esc(body)}</p>`:""}
+    ${kind==="hook"?`<span class="swipe">${st.lang==="pt"?"Desliza":"Swipe"} →</span>`:""}
+    ${kind==="cta"?`<span class="acts3"><i>${st.lang==="pt"?"Guardar":"Save"}</i><i>${st.lang==="pt"?"Partilhar":"Share"}</i><i>${st.lang==="pt"?"Seguir":"Follow"}</i></span>`:""}
+    ${foot?`<span class="foot">${esc(foot)}</span>`:""}${logoTR(b)}</div>`;
+}
 /* switch the client or open the kit editor from right above the content */
 function brandBar(){ const b=brand(); return `<div class="bbar"><span class="label">Design for</span><div class="bchips">${BR.list.map(x=>`<button type="button" class="bchip ${x.id===b.id?"on":""}" data-brand="${esc(x.id)}"><i style="background:${x.primary}"></i><i style="background:${x.secondary}"></i><i style="background:${x.accent}"></i><span>${esc(x.name)}</span></button>`).join("")}</div><button class="btn small" type="button" data-goedit>Edit colours, logo and voice</button></div>`; }
 function vContent(c, t){
@@ -1488,8 +1515,8 @@ function vContent(c, t){
     ${comp.disclaimer?`<div class="out"><span class="label">Disclaimer to include</span><pre>${esc(comp.disclaimer)}</pre></div>`:""}</section>`;
   if(c.carousel){
     const sl=c.carousel.slides||[];
-    h += `<section class="panel"><div class="row between"><h2>Instagram carousel</h2><button class="btn small" data-copy="carousel" type="button">Copy text</button></div>
-      <div class="slides branded" style="${brandVars(b)}">${sl.map((s,k)=>`<div class="slide"><span class="n">${k+1}/${sl.length}</span><h4>${hi(s.headline)}</h4>${s.body?`<p>${esc(s.body)}</p>`:""}${k===sl.length-1&&comp.disclaimer?`<span class="foot">${esc(comp.disclaimer.slice(0,140))}</span>`:""}${logoTR(b)}</div>`).join("")}</div>
+    h += `<section class="panel"><div class="row between"><h2>Instagram carousel</h2><div class="row"><button class="btn small" data-copy="carousel" type="button">Copy text</button><button class="btn small canva" type="button" data-canva="carousel" title="Downloads a file Canva imports with editable text, and opens Canva">Open in Canva</button></div></div>
+      <div class="slides branded" style="${brandVars(b)}">${sl.map((s,k)=>carSlide(s,k,sl.length,b,k===sl.length-1&&comp.disclaimer?comp.disclaimer.slice(0,140):"")).join("")}</div>
       <div class="out"><span class="label">Caption</span><pre>${esc(c.carousel.caption)}\n\n${esc((c.carousel.hashtags||[]).map(x=>x.startsWith("#")?x:"#"+x).join(" "))}</pre></div></section>`;
   }
   if(c.reel){
@@ -1505,7 +1532,7 @@ function vContent(c, t){
     <article class="prose bpage branded" style="${brandVars(b)};--ink:${b.ink}"><div class="bphead" style="background:${b.primary};color:${onColor(b.primary)}">${logoTR(b)}</div><div class="bpbody"><span class="bpkicker">${st.lang==="pt"?"Opinião":"Opinion"}</span><h2>${esc(c.opinion.title)}</h2>${c.opinion.lead?`<p class="lead">${esc(c.opinion.lead)}</p>`:""}${prose(c.opinion.body)}${c.opinion.author_line?`<p class="dek"><i>${esc(c.opinion.author_line)}</i></p>`:""}</div></article></section>`;
   if(c.presentation){ const P=c.presentation, sl=P.slides||[];
     h += `<section class="panel"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>PowerPoint deck</h2><span class="muted" style="font-size:.86rem">${sl.length+1} slides, with speaker notes</span></div>
-      <div class="row"><button class="btn small" data-copy="presentation" type="button">Copy text</button><button class="btn small" id="pptx" type="button">Download .pptx</button></div></div>
+      <div class="row"><button class="btn small" data-copy="presentation" type="button">Copy text</button><button class="btn small" id="pptx" type="button">Download .pptx</button><button class="btn small canva" type="button" data-canva="deck" title="Downloads a file Canva imports with editable text, and opens Canva">Open in Canva</button></div></div>
       <div class="pslides branded" style="${brandVars(b)}"><div class="pslide">${logoTR(b)}<span class="n">1</span><b style="font-size:.95rem">${esc(P.title)}</b>${P.subtitle?`<span style="font-size:.7rem;opacity:.85">${esc(P.subtitle)}</span>`:""}</div>
       ${sl.map((x,k)=>`<div class="pslide">${logoTR(b)}<span class="n">${k+2}</span><b>${esc(x.title)}</b><ul>${(x.bullets||[]).slice(0,5).map(b=>`<li>${esc(b)}</li>`).join("")}</ul></div>`).join("")}</div>
       <details><summary>Speaker notes</summary><ol class="notes">${sl.map(x=>`<li><b>${esc(x.title)}:</b> ${esc(x.notes||"")}</li>`).join("")}</ol></details></section>`; }
@@ -1519,7 +1546,7 @@ function vContent(c, t){
 const prose = t => String(t||"").split(/\n{2,}|\n(?=## )/).map(p=>p.trim()).filter(Boolean).map(p=>p.startsWith("## ")?`<h3>${esc(p.slice(3))}</h3>`:`<p>${md(p).replace(/\n/g,"<br>")}</p>`).join("");
 const hi = s => esc(s).replace(/\*\*(.+?)\*\*/g,'<span class="hi">$1</span>');
 function textOf(c,k){
-  if(k==="carousel") return (c.carousel.slides||[]).map((s,i)=>`Slide ${i+1}\n${String(s.headline).replace(/\*\*/g,"")}\n${s.body||""}`).join("\n\n")+`\n\nCaption:\n${c.carousel.caption}\n${(c.carousel.hashtags||[]).map(x=>x.startsWith("#")?x:"#"+x).join(" ")}`;
+  if(k==="carousel") return (c.carousel.slides||[]).map((s,i)=>`Slide ${i+1}${s.big?"\n"+s.big:""}\n${String(s.headline).replace(/\*\*/g,"")}\n${s.body||""}`).join("\n\n")+`\n\nCaption:\n${c.carousel.caption}\n${(c.carousel.hashtags||[]).map(x=>x.startsWith("#")?x:"#"+x).join(" ")}`;
   if(k==="reel") return `Reel (${c.reel.duration||""})\n\n`+(c.reel.scenes||[]).map(s=>`[${s.time}] Visual: ${s.visual}\nVO: ${s.voiceover}\nOn-screen: ${s.onscreen}`).join("\n\n");
   if(k==="linkedin") return c.linkedin.text;
   if(k==="article") return `${c.article.title}\n${c.article.subtitle||""}\n\n${String(c.article.body||"").replace(/^## /gm,"")}`;
@@ -1586,12 +1613,12 @@ function vPack(){
   const p=latestPack(); if(!p) return ""; const b=brand(); loadFont(b);
   const when=new Date(p.generatedAt||p.day).toLocaleString("en-GB",{weekday:"long",day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"});
   const car=p.carousel||{}, reel=p.reel||{};
-  PACKTXT={ carousel:[car.title,...(car.slides||[]).map((s,i)=>`${i+1}. ${s.h}\n${s.t}`)].filter(Boolean).join("\n\n"), linkedin:p.linkedin||"", reel:[reel.hook,...(reel.script||[]),"",reel.caption?"Caption: "+reel.caption:""].filter(x=>x!==undefined).join("\n") };
+  PACKTXT={ carousel:[car.title,...(car.slides||[]).map((s,i)=>`${i+1}. ${s.big?s.big+" · ":""}${String(s.h||"").replace(/\*\*/g,"")}\n${s.t||""}`)].filter(Boolean).join("\n\n"), linkedin:p.linkedin||"", reel:[reel.hook,...(reel.script||[]),"",reel.caption?"Caption: "+reel.caption:""].filter(x=>x!==undefined).join("\n") };
   return `<section class="panel pack"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><span class="eyebrow">Ready to post · ${esc(when)}</span><h2>Today's content pack</h2>
       <span class="muted" style="font-size:.9rem">Written from today's Brief. Copy, tweak, post. No key needed.</span></div></div>
     ${brandBar()}
-    ${car.slides?.length?`<div class="row between"><h3 class="ui">Instagram carousel · ${esc(car.title||"")}</h3><button class="btn small" data-pcopy="carousel" type="button">Copy text</button></div>
-    <div class="slides branded" style="${brandVars(b)}">${car.slides.map((s,i)=>`<div class="slide"><span class="n">${i+1}/${car.slides.length}</span><h4>${esc(s.h)}</h4>${s.t?`<p>${esc(s.t)}</p>`:""}${logoTR(b)}</div>`).join("")}</div>`:""}
+    ${car.slides?.length?`<div class="row between"><h3 class="ui">Instagram carousel · ${esc(car.title||"")}</h3><div class="row"><button class="btn small" data-pcopy="carousel" type="button">Copy text</button><button class="btn small canva" type="button" data-canva="pack" title="Downloads a file Canva imports with editable text, and opens Canva">Open in Canva</button></div></div>
+    <div class="slides branded" style="${brandVars(b)}">${car.slides.map((s,i)=>carSlide(s,i,car.slides.length,b,"")).join("")}</div>`:""}
     ${p.linkedin?`<div class="row between"><h3 class="ui">LinkedIn post</h3><button class="btn small" data-pcopy="linkedin" type="button">Copy</button></div>${liPost(b,p.linkedin)}`:""}
     ${reel.hook?`<div class="row between"><h3 class="ui">Reel script</h3><button class="btn small" data-pcopy="reel" type="button">Copy script</button></div><div class="out"><p><b>Hook:</b> ${esc(reel.hook)}</p><ol>${(reel.script||[]).map(l=>`<li>${esc(l)}</li>`).join("")}</ol>${reel.caption?`<p class="muted">Caption: ${esc(reel.caption)}</p>`:""}</div>`:""}
     <p class="disc">Educational content generated automatically from public news. Not investment advice. Check it before you post.</p></section>`;
@@ -2427,6 +2454,13 @@ function bind(){
   document.querySelectorAll("[data-tone]").forEach(b=>b.onclick=()=>{ st.tone=b.dataset.tone; render(); });
   const own=$("#own"); if(own) own.oninput=()=>st.own=own.value;
   const uo=$("#useown"); if(uo) uo.onclick=()=>{ const t=st.own.trim(); if(t.length<5){ st.err="Write a topic with at least a few words."; return render(); } st.ideas=[{title:t,hook:t,key_concept:"Own topic",why_now:"Your own topic.",analogy:"",source:""}]; st.sel=0; st.content=null; st.err=""; st.ideaMs=0; render(); document.querySelector(".idea.on")?.scrollIntoView({block:"center"}); };
+  // Open in Canva: Canva opens in a new tab at once (inside the click, so it isn't blocked), then the file downloads for Canva's "Import file"
+  document.querySelectorAll("[data-canva]").forEach(bt=>bt.onclick=async()=>{ const kind=bt.dataset.canva, c=tab==="lib"?S.pieces.find(x=>x.id===st.openPiece)?.content:st.content;
+    window.open("https://www.canva.com/","_blank","noopener");
+    if(kind==="deck"){ if(c) await downloadPptx(c,bt); }
+    else if(kind==="carousel"){ if(c?.carousel) await canvaCarousel(c.carousel.slides||[], st.ideas?.[st.sel]?.title||"carousel", c.compliance?.disclaimer||"", bt); }
+    else { const pk=latestPack(); if(pk?.carousel) await canvaCarousel(pk.carousel.slides||[], pk.carousel.title||"carousel", "", bt); }
+    toast("In Canva: Create a design → Import file → choose the downloaded file"); });
   const dl=$("#pptx"); if(dl) dl.onclick=()=>{ const c = tab==="lib" ? S.pieces.find(x=>x.id===st.openPiece)?.content : st.content; if(c) downloadPptx(c, dl); };
   if(tab==="studio") bindBrand();
   const curC=()=>tab==="lib" ? S.pieces.find(x=>x.id===st.openPiece)?.content : st.content;
@@ -2518,7 +2552,16 @@ ${(st.input||"").slice(0,6000)}
 
 Rules: educational, fair, clear and not misleading; balanced benefits and risks; no promised or implied returns; past performance never presented as a guide; not personal advice; never push a specific product.`;
   const JSONF = {
-    carousel:`Create an Instagram carousel. Reply with only JSON: {"slides":[{"headline":"max 10 words; wrap the 1-3 key words in **double asterisks**","body":"max 30 words, may be empty on the cover"}],"caption":"60-120 words, ends with a question","hashtags":["8 hashtags"]}. 6 to 8 slides: cover hook, 4-6 teaching slides, final takeaway.`,
+    carousel:`Create an Instagram carousel that stops the scroll: very few words, big ideas, one idea per slide. Reply with only JSON: {"slides":[{"kind":"hook|stat|point|myth|cta","headline":"","big":"","body":""}],"caption":"","hashtags":[""]}.
+Exactly 6 slides, in this order:
+1. kind "hook": headline only (no body), max 7 words. Open a curiosity gap: a surprising number, a sharp question, or a bold claim the reader wants to check. Never start with "Did you know".
+2. kind "stat": "big" is the one number that matters (e.g. "2.8%", "€1 in €5", "10 years"), taken only from the indicators or the news; headline max 7 words saying what it means; body max 12 words.
+3. kind "point": one idea; headline max 7 words; body max 14 words.
+4. kind "myth": headline is a common belief in quotes, max 7 words; body is the fact, max 14 words.
+5. kind "point": what it means for you, concrete and practical; headline max 7 words; body max 14 words.
+6. kind "cta": headline max 6 words asking to save or share; body max 10 words inviting to follow for more.
+In every headline wrap the 1-2 most important words in **double asterisks**. Write like a person talking: short everyday words, active verbs, no jargon, no emojis or hashtags on the slides. Count the words; never go over the limits.
+"caption": first line is a hook of max 10 words, then 2-3 short lines, then one question; max 60 words in total. "hashtags": 5 relevant hashtags.`,
     reel:`Create a short-video (reel) script. Reply with only JSON: {"duration":"e.g. 30 s","scenes":[{"time":"0-3 s","visual":"what we see","voiceover":"what is said","onscreen":"short text overlay"}]}. 5-7 scenes; the first 3 seconds must hook.`,
     presentation:`Create a presentation deck. Reply with only JSON: {"title":"deck title","subtitle":"one line","slides":[{"title":"max 8 words","bullets":["3-5 bullets, max 12 words each"],"notes":"speaker notes, 40-80 words"}]}. 8 to 10 slides telling a clear story: context, the key concept explained simply, data from the context, risks, practical takeaways, final slide with the main message.`
   };
@@ -2582,6 +2625,52 @@ function loadPptx(){
   if(pptxLib) return pptxLib;
   pptxLib = new Promise((res,rej)=>{ const sc=document.createElement("script"); sc.src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"; sc.onload=()=>window.PptxGenJS?res(window.PptxGenJS):rej(); sc.onerror=()=>{ pptxLib=null; rej(); }; document.head.appendChild(sc); });
   return pptxLib;
+}
+/* the carousel as a 4:5 Instagram file (1080×1350) with editable text, in the brand kit, for Canva's "Import file" */
+async function canvaCarousel(slides, title, disc, btn){
+  if(!slides.length) return;
+  btn.disabled=true; const old=btn.textContent; btn.textContent="Preparing…";
+  try{
+    const downloads=await claude.use("downloads").catch(()=>null); if(!downloads){ toast("Download isn't available here."); return; }
+    const Pptx=await loadPptx(), pptx=new Pptx(); pptx.defineLayout({name:"IG45",width:5.4,height:6.75}); pptx.layout="IG45"; pptx.title=title;
+    const bk=curBrand(), hx=v=>String(v).replace("#","").toUpperCase(), FF=fontCSS(bk).ppt, S=pptx.ShapeType;
+    const N=hx(bk.primary), ON=hx(onColor(bk.primary)), A=hx(bk.accent), T=hx(bk.secondary), D=hx(bk.ink), BG=hx(bk.bg);
+    const img=(bk.logo&&/^data:image\/(png|jpe?g)/.test(bk.logo))?bk.logo:null;
+    const ratio=img?await new Promise(r=>{ const im=new Image(); im.onload=()=>r(im.naturalWidth/Math.max(1,im.naturalHeight)); im.onerror=()=>r(3); im.src=img; }):3;
+    const runs=(t,base,hi)=>String(t||"").split(/\*\*(.+?)\*\*/).map((x,i)=>({text:x,options:{color:i%2?hi:base}})).filter(r=>r.text);
+    const L=st.lang==="pt", n=slides.length;
+    slides.forEach((raw,k)=>{
+      const sl=pptx.addSlide(), dark=k%2===0, kind=raw.kind||(k===0?"hook":k===n-1?"cta":"point");
+      const head=raw.headline??raw.h??"", body=raw.body??raw.t??"", big=raw.big||"";
+      const bg=dark?N:BG, fg=dark?ON:D, hi=dark?A:T, soft=dark?hx(mix(onColor(bk.primary),bk.primary,.25)):hx(mix(bk.ink,"#FFFFFF",.25));
+      sl.background={color:bg};
+      sl.addText(`${k+1}/${n}`,{x:0.4,y:0.35,w:1.2,h:0.3,fontFace:FF,fontSize:10,bold:true,color:soft});
+      if(showLogo(bk)){ if(img){ const h=0.3, w=Math.min(1.6,h*ratio), x=5.0-w;
+          sl.addShape(S.roundRect,{x:x-0.08,y:0.3,w:w+0.16,h:h+0.12,rectRadius:0.06,fill:{color:"FFFFFF"},line:{color:"FFFFFF"}}); sl.addImage({data:img,x,y:0.36,w,h}); }
+        else sl.addText(bk.name||"",{x:2.4,y:0.32,w:2.6,h:0.35,fontFace:FF,fontSize:11,bold:true,color:hi,align:"right"}); }
+      if(kind==="hook"){
+        sl.addText(runs(head,fg,hi),{x:0.4,y:2.2,w:4.6,h:3.4,fontFace:FF,fontSize:34,bold:true,valign:"bottom",lineSpacingMultiple:0.95});
+        sl.addText((L?"DESLIZA":"SWIPE")+" →",{x:0.4,y:6.0,w:3,h:0.35,fontFace:FF,fontSize:11,bold:true,color:hi,charSpacing:2});
+      } else if(kind==="stat"){
+        if(big) sl.addText(big,{x:0.4,y:1.7,w:4.6,h:1.5,fontFace:FF,fontSize:72,bold:true,color:hi,valign:"bottom"});
+        sl.addText(runs(head,fg,hi),{x:0.4,y:3.35,w:4.6,h:1.3,fontFace:FF,fontSize:22,bold:true,valign:"top"});
+        if(body) sl.addText(body,{x:0.4,y:4.75,w:4.6,h:1.2,fontFace:FF,fontSize:14,color:fg,valign:"top"});
+      } else if(kind==="cta"){
+        sl.addText(runs(head,fg,hi),{x:0.4,y:2.0,w:4.6,h:2.6,fontFace:FF,fontSize:30,bold:true,valign:"bottom"});
+        if(body) sl.addText(body,{x:0.4,y:4.75,w:4.6,h:0.8,fontFace:FF,fontSize:14,color:fg,valign:"top"});
+        (L?["Guardar","Partilhar","Seguir"]:["Save","Share","Follow"]).forEach((t,i)=>sl.addText(t,{x:0.4+i*1.3,y:5.65,w:1.15,h:0.38,fontFace:FF,fontSize:11,bold:true,color:fg,align:"center",shape:S.roundRect,rectRadius:0.19,line:{color:fg,width:1.25}}));
+        if(disc) sl.addText(disc.slice(0,160),{x:0.4,y:6.15,w:4.6,h:0.45,fontFace:FF,fontSize:7,color:soft,valign:"top"});
+      } else {   // point or myth
+        if(kind==="myth") sl.addText(L?"MITO":"MYTH",{x:0.4,y:0.95,w:0.95,h:0.34,fontFace:FF,fontSize:10,bold:true,color:dark?N:"FFFFFF",align:"center",shape:S.roundRect,rectRadius:0.17,fill:{color:dark?A:T}});
+        sl.addText(kind==="myth"?[{text:head.replace(/\*\*/g,""),options:{color:fg,strike:"sngStrike"}}]:runs(head,fg,hi),{x:0.4,y:2.1,w:4.6,h:2.5,fontFace:FF,fontSize:26,bold:true,valign:"bottom"});
+        if(body) sl.addText(kind==="myth"?[{text:(L?"Facto: ":"Fact: "),options:{bold:true,color:hi}},{text:body,options:{color:fg}}]:body,{x:0.4,y:4.75,w:4.6,h:1.4,fontFace:FF,fontSize:15,color:fg,valign:"top"});
+      }
+    });
+    const blob=await pptx.write({outputType:"blob"});
+    const name=(String(title)||"carousel").normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^\w\- ]+/g,"").trim().slice(0,50).replace(/\s+/g,"-")||"carousel";
+    await downloads.save({filename:name+"-instagram.pptx", data:blob});
+  }catch(e){ console.error("canva", e); toast("Couldn't build the file for Canva ("+(e?.message||e?.code||"error")+")."); }
+  finally{ btn.disabled=false; btn.textContent=old; }
 }
 async function downloadPptx(c, btn){
   const P=c.presentation; if(!P) return;
