@@ -1023,6 +1023,9 @@ footer.foot::before{content:"";position:absolute;inset:0;z-index:-1;background:r
 .pmhero .media img,.pmhero .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .pmhero .thumb img{object-position:50% 38%}
 .pmhero .media img{object-position:var(--pos,50% 50%)}
+/* a collage that must be seen whole: the picture sits smaller in the middle, on its own paper colour, edges faded into it */
+.pmhero .media.contain{background:var(--mbg)} .pmhero .media.contain::before{display:none}
+.pmhero .media.contain img{left:50%;right:auto;width:auto;max-width:none;height:100%;transform:translateX(-50%) scale(.92);-webkit-mask-image:radial-gradient(farthest-side at 50% 50%,#000 68%,transparent 100%);mask-image:radial-gradient(farthest-side at 50% 50%,#000 68%,transparent 100%)}
 .pmhero .ribbon{position:absolute;left:-4%;top:0;width:108%;height:100%;overflow:visible;pointer-events:none}
 .pmhero .ribbon path{fill:none;stroke:var(--mint2);stroke-opacity:.72;stroke-width:52}
 .pmhero .ribbon text{font:800 28px var(--f-body);fill:var(--ink);letter-spacing:-.01em;dominant-baseline:central}
@@ -1564,7 +1567,7 @@ const srcTile = n => { n=n==="BCE"?"ECB":n; const ab=ABBR[n]||String(n||"?").sli
 /* the News tab: today's stories for everyone, to read at the source. Picking stories for content happens only in the Studio (vNews with pick) */
 function vNewsPage(){
   const day=S.news.find(n=>n.id===st.newsDay)||latestDay(), items=day?.items||[], srcs=new Set(items.map(i=>i.source).filter(Boolean));
-  return heroFrame({label:"Today's news", ribbon:"Today's money news, sorted. · ", photo:"assets/news-hero.webp", photoPos:"50% 50%", thumb:"assets/news-thumb.webp",
+  return heroFrame({label:"Today's news", ribbon:"Today's money news, sorted. · ", photo:"assets/news-hero.webp", contain:"#F2EEEA", thumb:"assets/news-thumb.webp",
     title:"Today's money news,", em:"sorted for you.",
     cta:{text:"Read the stories", attrs:'data-jump=".newslist"'},
     text:"Every weekday morning and afternoon PaperMint gathers the money stories from trusted sources and sorts them by topic. Filter by topic or source and open any story at the original.",
@@ -1741,7 +1744,7 @@ function vFaq(){
 function vAsk(){
   const day=latestDay();
   const nq=(latestPack()?.faq||[]).length;
-  let h = heroFrame({label:"Ask PaperMint", photo:"assets/ask-hero.webp", photoPos:"50% 50%", title:"Ask anything", em:"about today's money news.",
+  let h = heroFrame({label:"Ask PaperMint", photo:"assets/ask-hero.webp", contain:"#E2E2E0", title:"Ask anything", em:"about today's money news.",
     cta:{text:nq?"See today's questions":"Ask your question", attrs:`data-jump="${nq?".faq":".askbox"}"`},
     text:"Answers use the stories collected today and the verified indicators. Scenarios and risks, never buy or sell calls.",
     tiles:srcTiles(day), num:String(nq||(day?.items||[]).length||0), numLabel:nq?"questions answered today, from today's news.":"stories behind today's answers."});
@@ -1765,7 +1768,7 @@ function hlLead(t){ const e=md(t); if(e.includes("<b>")) return e.replace(/<b>(.
 const srcTiles = day => { const src=(day?.sources||[]).map(n=>n==="BCE"?"ECB":n), ab=src.map(n=>ABBR[n]||String(n).slice(0,3).toUpperCase()); return (ab.length>=4?ab:["FT","WSJ","BBG","ECB"]).slice(0,4); };
 function heroFrame(o){
   return `<section class="pmhero" aria-label="${esc(o.label)}"><div class="card">
-    <div class="media">${o.photo?`<img src="${o.photo}" alt="" style="--pos:${o.photoPos||"50% 50%"}" onerror="this.remove()">`:""}
+    <div class="media${o.contain?" contain":""}"${o.contain?` style="--mbg:${o.contain}"`:""}>${o.photo?`<img src="${o.photo}" alt="" style="--pos:${o.photoPos||"50% 50%"}" onerror="this.remove()">`:""}
       ${o.ribbon?`<svg class="ribbon" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <path id="pmwave" d="${o.wave||"M-40,300 C180,330 300,170 520,190 C720,208 760,320 960,250 C1080,208 1140,90 1260,40"}"/>
         <text><textPath href="#pmwave" startOffset="0">${esc(o.ribbon).repeat(4)}</textPath></text></svg>`:""}</div>
@@ -1781,7 +1784,7 @@ function heroFrame(o){
 function heroHTML(day){
   const n=(day?.sources||[]).length||14;
   return heroFrame({label:"PaperMint", ribbon:"Finance news, freshly minted. · ", title:"Daily fresh", em:"market insights.",
-    photo:"assets/markets-hero.png", photoPos:"50% 40%", thumb:"assets/markets-thumb.jpg",
+    photo:"assets/markets-hero.png", contain:"#EAE4D6", thumb:"assets/markets-thumb.jpg",
     cta:{text:"Read today's Brief", attrs:'data-jump=".seg" data-go="brief"'},
     text:`What today's news means for your money, in plain English. PaperMint reads ${n} trusted sources every weekday, picks the stories that matter for your savings, loans and investments, and explains them. Educational, never advice.`,
     tiles:srcTiles(day), num:String(n), numLabel:`trusted sources, read ${day?"today":"every weekday"}.`});
