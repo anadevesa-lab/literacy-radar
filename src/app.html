@@ -1545,7 +1545,7 @@ function vFaq(){
 function vAsk(){
   const day=latestDay();
   const nq=(latestPack()?.faq||[]).length;
-  let h = heroFrame({label:"Ask PaperMint", photo:"assets/ask-hero.webp", photoPos:"50% 50%", title:"Ask anything", em:"about today's money news.",
+  let h = heroFrame({label:"Ask PaperMint", photo:"assets/ask-hero.webp", contain:"#E2E2E0", title:"Ask anything", em:"about today's money news.",
     cta:{text:nq?"See today's questions":"Ask your question", attrs:`data-jump="${nq?".faq":".askbox"}"`},
     text:"Answers use the stories collected today and the verified indicators. Scenarios and risks, never buy or sell calls.",
     tiles:srcTiles(day), num:String(nq||(day?.items||[]).length||0), numLabel:nq?"questions answered today, from today's news.":"stories behind today's answers."});
@@ -1585,7 +1585,7 @@ function heroFrame(o){
 function heroHTML(day){
   const n=(day?.sources||[]).length||14;
   return heroFrame({label:"PaperMint", ribbon:"Finance news, freshly minted. · ", title:"Daily fresh", em:"market insights.",
-    photo:"assets/markets-hero.png", photoPos:"50% 40%", thumb:"assets/markets-thumb.jpg",
+    photo:"assets/markets-hero.png", contain:"#EAE4D6", thumb:"assets/markets-thumb.jpg",
     cta:{text:"Read today's Brief", attrs:'data-jump=".seg" data-go="brief"'},
     text:`What today's news means for your money, in plain English. PaperMint reads ${n} trusted sources every weekday, picks the stories that matter for your savings, loans and investments, and explains them. Educational, never advice.`,
     tiles:srcTiles(day), num:String(n), numLabel:`trusted sources, read ${day?"today":"every weekday"}.`});
