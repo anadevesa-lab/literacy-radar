@@ -1,165 +1,210 @@
 {
  "auto": true,
  "date": "2026-10-08",
- "basedOn": "2026-10-08T14:04:35.078Z",
- "generatedAt": "2026-10-08T14:04:38.923Z",
- "resumo": "**Global markets face pressure** as rising bond yields, energy spikes, and inflation concerns weigh on stocks.",
+ "basedOn": "2026-10-08T20:51:55.158Z",
+ "generatedAt": "2026-10-08T20:51:57.768Z",
+ "resumo": "Today's talk is mostly about **central-bank rates and stocks**. Rising: stocks, mortgages, commodities. Falling: bonds.",
  "classes": [
   {
-   "nome": "Equities",
-   "tendencia": "falling",
+   "nome": "Juros (bancos centrais)",
+   "tendencia": "misto",
    "forca": 3,
-   "leitura": "Stocks drop from records as rising yields and energy prices hammer many sectors.",
+   "leitura": "19 stories today. Top one: US mortgage rates rise for seventh straight week to hit highest since 2023 (Financial Times).",
    "a_favor": [
-    "Some tech sectors maintain gains",
-    "Household wealth flowing into stocks"
+    "US mortgage rates rise for seventh straight week to hit hig…"
    ],
    "riscos": [
-    "Surging bond yields erode valuations",
-    "Middle East shipping risks disrupt trade"
+    "Treasury yields are lower after reaching multiyear highs, t…"
    ],
-   "perfil": "Suitable for long-term investors accepting high volatility."
+   "perfil": "Affects everyone's deposits, loans and bonds."
   },
   {
-   "nome": "Government Bonds",
-   "tendencia": "falling",
+   "nome": "Ações",
+   "tendencia": "a subir",
    "forca": 3,
-   "leitura": "Global bond yields are surging as investors offload debt amid inflation fears.",
+   "leitura": "19 stories today. Top one: vTv Therapeutics stock jumps on FDA orphan drug status (Investing.com).",
    "a_favor": [
-    "Options traders call bottom after auctions",
-    "Higher yields offer new entry points"
+    "vTv Therapeutics stock jumps on FDA orphan drug status"
    ],
    "riscos": [
-    "French bonds suffer worst decade since 1803",
-    "Rising inflation erodes fixed returns"
+    "S&P 500 Falls as Reports on OpenAI Sink Chipmakers: Markets…"
    ],
-   "perfil": "Suitable for conservative investors prioritising regular income."
+   "perfil": "Long horizon and tolerance for temporary losses."
   },
   {
-   "nome": "Commodities",
-   "tendencia": "rising",
+   "nome": "Obrigações",
+   "tendencia": "a descer",
    "forca": 3,
-   "leitura": "Natural gas, oil, copper and sugar prices climb on supply risks and tariffs.",
+   "leitura": "12 stories today. Top one: Treasuries Rise as Lofty Yields Lure Demand to 30-Year Sale (Bloomberg).",
    "a_favor": [
-    "Geopolitical tensions boost energy values",
-    "High demand for AI-related materials"
+    "U.S. stocks open in the red as oil prices surge, bond rout…"
    ],
    "riscos": [
-    "Shipping attacks raise delivery uncertainties",
-    "Tariffs create market distortions"
+    "Treasuries Rise as Lofty Yields Lure Demand to 30-Year Sale"
    ],
-   "perfil": "Suitable for experienced investors seeking inflation hedges."
+   "perfil": "Medium horizon and tolerance for price swings."
+  },
+  {
+   "nome": "Tecnologia",
+   "tendencia": "estável",
+   "forca": 3,
+   "leitura": "10 stories today. Top one: AWS pricing team turns 18-tab Excel model into an AI chatbot to evaluate customer deals, CFO says (Fortune).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Long horizon and tolerance for high volatility."
+  },
+  {
+   "nome": "Depósitos e poupança",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "5 stories today. Top one: UK investors face three-month wait to recoup money from property funds (Financial Times).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Emergency fund and short-term goals."
+  },
+  {
+   "nome": "Crédito à habitação",
+   "tendencia": "a subir",
+   "forca": 2,
+   "leitura": "4 stories today. Top one: Oil prices jump 5% on Middle East tensions and US hurricane threat (The Guardian).",
+   "a_favor": [
+    "Oil prices jump 5% on Middle East tensions and US hurricane…"
+   ],
+   "riscos": [],
+   "perfil": "Anyone with, or about to take, a mortgage."
+  },
+  {
+   "nome": "Matérias-primas",
+   "tendencia": "a subir",
+   "forca": 2,
+   "leitura": "3 stories today. Top one: Oil prices jump on tanker attacks and slowing flows through Strait of Hormuz (Financial Times).",
+   "a_favor": [
+    "Oil prices jump on tanker attacks and slowing flows through…"
+   ],
+   "riscos": [],
+   "perfil": "A small slice of a portfolio, for diversification only."
   }
  ],
  "temas": [
-  "Understanding bond yields and interest rates",
-  "Inflation drivers and tariff impacts",
-  "Navigating equity market volatility"
+  "What the ECB does and why it touches your money",
+  "Volatility is not the same as losing money",
+  "Why bond prices fall when rates rise"
  ],
- "ai": true,
  "brief": {
-  "one_liner": "Surging energy prices and hawkish central bankers gave global bond markets an almighty headache, keeping borrowing costs stubbornly high.",
+  "one_liner": "Oil prices surged and tech stocks slipped as a global bond rout and inflation worries kept markets on edge.",
   "number": {
-   "value": "€80/MWh",
-   "caption": "European natural gas price as Gulf shipping risks rattled energy markets."
+   "value": "3.8%",
+   "caption": "Euro area annual inflation rate recorded in September 2026."
   },
   "stories": [
    {
-    "i": 2,
-    "title": "Winter Is Coming, and So Are Higher Gas Bills",
-    "whats_going_on": "European natural gas prices climbed back above €80 per megawatt-hour following attacks on shipping tankers in the Gulf. At the same time, Brent crude pushed past $105 a barrel as Middle East tensions sparked fresh supply fears.",
-    "what_it_means": "Wholesale energy spikes feed straight into headline inflation, which already stands at 3.8% across the euro area. If gas prices stay elevated, central banks may pause any plans to ease interest rates further.",
-    "why_care": "Higher wholesale fuel costs eventually filter through into household utility bills and keep everyday living expenses uncomfortably high."
+    "i": 14,
+    "title": "Wall Street opens lower as oil jump and high yields fuel inflation",
+    "whats_going_on": "Wall Street opened lower as a sharp jump in oil prices and climbing bond yields reignited concerns over persistent inflation. Fresh geopolitical tensions and tanker attacks in the Middle East drove crude prices up significantly.",
+    "what_it_means": "Energy costs directly influence the broader cost of living, making it harder for central banks to tame price growth. When energy and bond yields rise together, it puts pressure on corporate earnings and investor sentiment alike.",
+    "why_care": "For everyday savers, renewed inflation pressure means the cost of driving, heating, and groceries could stay higher for longer, affecting household budgets."
    },
    {
-    "i": 34,
-    "title": "Fed Flags Another Rate Hike as Patience Runs Thin",
-    "whats_going_on": "Minutes from the Federal Reserve's latest meeting revealed that officials still expect another interest rate increase ahead, though they gave no firm timeline. The disclosure fuelled a fresh bond sell-off, pushing sovereign yields higher across global markets.",
-    "what_it_means": "Policymakers in Washington remain worried that stubborn inflation will take root if they loosen monetary policy too soon. Because US Treasuries anchor world finance, higher American yields drag up borrowing costs across the globe.",
-    "why_care": "Stubbornly high central bank rates mean mortgage rates are unlikely to drop quickly, though savers benefit from better returns on deposits."
+    "i": 38,
+    "title": "Nasdaq drops as OpenAI warning deepens tech and chipmaker bubble fears",
+    "whats_going_on": "The Nasdaq 100 dropped 1.4% as a selloff in chipmakers and major technology leaders weighed heavily on markets. Fresh speculation and warnings regarding OpenAI's revenue revival sparked investor worries about the sustainability of the massive artificial-intelligence spending spree.",
+    "what_it_means": "Tech giants have been the primary engine of stock market gains for years, meaning any stumble in their valuations reverberates across global portfolios. Investors are increasingly questioning whether the billions being poured into AI infrastructure will yield immediate profits.",
+    "why_care": "If you hold broad index funds or pension plans, your savings are likely exposed to these tech heavyweights, making tech sector wobbles worth watching calmly from the sidelines."
    },
    {
-    "i": 37,
-    "title": "French Bonds Endure Their Roughest Run Since Napoleon",
-    "whats_going_on": "French government debt is suffering through its worst decade since 1803, with markets bracing for extended volatility. The yield gap between French 10-year bonds and benchmark German debt widened to its largest spread since records began in 1990.",
-    "what_it_means": "Investors are demanding a higher risk premium to lend to Paris amid widening fiscal deficits and political friction. When a core euro area nation faces higher funding costs, it puts upward pressure on borrowing across the bloc, where Portugal's 10-year yield sits at 3.54%.",
-    "why_care": "Higher sovereign borrowing costs eventually flow into the broader banking system, influencing consumer loan terms and mortgage pricing."
+    "i": 48,
+    "title": "US mortgage rates climb for seventh straight week to hit highest since 2023",
+    "whats_going_on": "Benchmark US mortgage borrowing costs rose for the seventh consecutive week, hitting their highest level since 2023. The climb is driven by a backdrop of surging Treasury yields, elevated energy prices, and expected monetary tightening.",
+    "what_it_means": "Higher bond yields directly feed into the cost of fixed-rate consumer loans, making borrowing significantly more expensive. This trend cools housing market activity as buyers face steeper monthly repayments.",
+    "why_care": "While this specific data is American, global borrowing costs tend to move in tandem during bond market routs, serving as a reminder to check how variable or fixed rates impact your personal loans."
    },
    {
-    "i": 52,
-    "title": "UK Borrowing Costs Climb to a 19-Year High",
-    "whats_going_on": "Medium-term borrowing costs for the UK government surged to a 19-year high as investors dumped sovereign bonds around the world. The sell-off was triggered by mounting fears over persistent inflation ahead of the British government's upcoming budget.",
-    "what_it_means": "Government yields reflect the return investors demand to lend to the state over multiple years. When gilt yields spike, financing national debt becomes vastly more expensive and commercial lending benchmarks tick upwards.",
-    "why_care": "Rising government bond yields directly influence the pricing of fixed-rate consumer mortgages, keeping debt repayments elevated."
+    "i": 13,
+    "title": "PepsiCo slashes forecast and deepens cost cuts as North American recovery drags",
+    "whats_going_on": "PepsiCo slashed its full-year forecast and deepened cost-cutting measures as its North American recovery continues to drag. The beverage and snack giant noted that budget-conscious shoppers are pulling back on spending amid lingering economic pressures.",
+    "what_it_means": "When major consumer brands struggle with sluggish volume and lower sales, it signals that everyday shoppers are tightening their purse strings. Companies are responding by trimming expenses to protect their profit margins.",
+    "why_care": "It highlights how persistent inflation and higher living costs are forcing real changes in household shopping habits, which eventually shows up in corporate earnings."
    }
   ],
-  "basedOn": "2026-10-08T14:04:35.078Z",
-  "generatedAt": "2026-10-08T14:05:12.998Z"
+  "basedOn": "2026-10-08T20:51:55.158Z",
+  "generatedAt": "2026-10-08T20:52:57.768Z"
  },
  "pack": {
   "carousel": {
-   "title": "Why Central Bank Rates Matter to You",
+   "title": "Why Your Grocery Bills Stay High",
    "slides": [
     {
-     "h": "Why central bank rates matter",
-     "t": "Interest rates affect everything from your mortgage to your savings account. Here is a quick, painless guide to what is actually happening right now."
+     "kind": "hook",
+     "h": "Your **grocery bills** are not dropping",
+     "big": "",
+     "t": ""
     },
     {
-     "h": "The ECB deposit rate sits at 2.5%",
-     "t": "Across the euro area, the European Central Bank's key deposit rate has been holding at 2.5% since September 2026. This shapes the broader borrowing climate."
+     "kind": "stat",
+     "h": "Oil prices are driving fresh **inflation**",
+     "big": "3.6%",
+     "t": "Portugal annual inflation rate recorded in September 2026."
     },
     {
-     "h": "Mortgages vs. savings right now",
-     "t": "In Portugal, new mortgages averaged 3% in August 2026, while new term deposits averaged 1.62%. Borrowing remains costlier than saving pays out."
+     "kind": "point",
+     "h": "Energy costs push up everyday **prices**",
+     "big": "",
+     "t": "Recent tanker attacks and oil jumps mean heating and driving cost more."
     },
     {
-     "h": "Inflation is still lingering",
-     "t": "Portugal's inflation rate reached 3.6% in September 2026, with a 12-month average of 2.8%. Euro area inflation came in slightly higher at 3.8%."
+     "kind": "myth",
+     "h": "\"Big companies absorb all extra **costs**\"",
+     "big": "",
+     "t": "Brands like PepsiCo are cutting costs as budget shoppers pull back."
     },
     {
-     "h": "What this means for your money",
-     "t": "Stubborn rates and rising energy costs mean keeping a close eye on your household budget is more important than ever. Protect your cash buffer."
+     "kind": "point",
+     "h": "Protect your household **budget** now",
+     "big": "",
+     "t": "Focus on building a buffer for essentials while living costs stay elevated."
     },
     {
-     "h": "Stay financially fresh with us",
-     "t": "We break down the financial news without the jargon. Hit follow for daily updates that actually make sense for your everyday wallet."
+     "kind": "cta",
+     "h": "Save this and **follow** PaperMint",
+     "big": "",
+     "t": "Get fresh finance news without the jargon every single day."
     }
    ]
   },
-  "linkedin": "Global borrowing costs are making headlines again, from UK yields hitting 19-year highs to market jitters over French sovereign debt. But what does this mean for everyday savers sitting closer to home?\n\nIn the euro area, inflation ticked to 3.8% in September, while Portugal's inflation rate stands at 3.6% (with a 12-month average of 2.8%). Meanwhile, the ECB deposit rate is holding at 2.5%.\n\nFor consumers, this translates to a financial balancing act: new mortgages in Portugal averaged 3% in August, while new term deposits offered around 1.62%. With energy prices also feeling global supply pressures, keeping a watchful eye on household budgets and emergency cash remains the smartest strategy.\n\nHow are you adjusting your savings goals this autumn? Let us know in the comments.\n\n#FinanceNews #PersonalFinance #PaperMint",
+  "linkedin": "Why do your grocery bills refuse to budge? Fresh headlines from global markets point straight back to energy and inflation. Wall Street dipped as a sharp jump in oil prices and climbing bond yields reignited concerns over persistent cost pressures. When crude prices rise due to geopolitical tensions, the ripple effect hits everyday expenses like transport, heating, and food.\n\nMeanwhile, corporate giants are feeling the pinch. PepsiCo just slashed its full-year forecast as budget-conscious shoppers pull back on spending. It is a clear reminder that macro economics and household budgets are deeply connected.\n\nFor everyday savers, this is not a time to panic about market wobbles or tech stock drops. Instead, it is a sensible moment to review your emergency buffer and ensure your monthly spending plan can handle sticky living costs. Keep a steady head, watch your own numbers, and stay informed.\n\n#FinanceNews #PersonalFinance #PaperMint",
   "reel": {
-   "hook": "Why your grocery and energy bills refuse to calm down.",
+   "hook": "Why are your weekly grocery bills still so stubbornly high?",
    "script": [
-    "European gas prices just climbed back above eighty euros following shipping tanker attacks.",
-    "At the same time, Brent crude pushed past one hundred and five dollars a barrel.",
-    "Wholesale fuel costs always filter through to household utility bills eventually.",
-    "Meanwhile, euro area inflation reached three point eight percent in September.",
-    "Keep an eye on your budget this season and follow PaperMint for more."
+    "Wall Street opened lower this week.",
+    "Oil prices jumped due to fresh Middle East tensions.",
+    "That means higher costs for transport and heating.",
+    "Big brands are already feeling budget-conscious shoppers pull back.",
+    "Protect your savings by keeping a close eye on your household buffer."
    ],
-   "caption": "Energy prices are climbing again as global supply fears hit the markets. Here is what it means for your bills. #EnergyPrices #PaperMint"
+   "caption": "Oil jumps and sticky inflation are keeping everyday costs high. Here is what it means for your household budget this week."
   },
   "faq": [
    {
-    "q": "What is the current inflation rate in Portugal?",
-    "a": "Portugal's inflation rate was 3.6% in September 2026, according to Eurostat. The 12-month average inflation sat at 2.8%."
+    "q": "Why are oil prices affecting my grocery bills?",
+    "a": "Higher crude prices increase transport, production, and heating costs. Businesses often pass these extra expenses directly on to everyday shoppers."
    },
    {
-    "q": "What is the ECB deposit rate right now?",
-    "a": "The European Central Bank deposit rate has been holding steady at 2.5% since September 2026."
+    "q": "What is driving the latest inflation concerns?",
+    "a": "A sharp jump in oil prices and climbing bond yields have reignited fears that living costs will stay elevated for longer."
    },
    {
-    "q": "How do rising wholesale gas prices affect me?",
-    "a": "When natural gas and crude oil prices jump due to global supply concerns, those higher wholesale costs eventually filter down into household utility bills."
+    "q": "Why did major technology stocks drop recently?",
+    "a": "Markets reacted to speculative warnings about artificial intelligence spending and revenue sustainability, leading to a selloff in chipmakers."
    },
    {
-    "q": "What are typical mortgage and deposit rates in Portugal?",
-    "a": "Data from August 2026 shows that new mortgages in Portugal averaged 3%, while new term deposits averaged 1.62%."
+    "q": "How do corporate earnings affect everyday people?",
+    "a": "When companies like PepsiCo slash forecasts because shoppers are spending less, it reflects broader economic pressure on household budgets."
    },
    {
-    "q": "Why are global bond yields rising?",
-    "a": "Central bank caution over persistent inflation, upcoming government budgets, and international market jitters have caused investors to sell sovereign bonds, pushing yields higher."
+    "q": "What should everyday savers do during market volatility?",
+    "a": "Focus on what you can control by reviewing your personal spending plan and maintaining a solid emergency cash buffer."
    }
   ],
-  "generatedAt": "2026-10-08T14:05:21.218Z"
+  "generatedAt": "2026-10-08T20:54:01.435Z"
  }
 }
