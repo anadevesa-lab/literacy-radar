@@ -1065,6 +1065,11 @@ footer.foot::before{display:none!important}
 .fcard .fcta .in{padding:clamp(40px,7vh,72px) 0 clamp(32px,5vh,48px)!important}
 .fcard .fbot .in{padding-inline:0}
 .fcard .bigmark{padding-inline:0}
+/* footer: LinkedIn and Instagram buttons under the PaperMint blurb */
+.fsocial{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.soc{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:999px;border:1px solid rgba(230,247,244,.28);color:#E6F7F4;text-decoration:none;font-weight:700;font-size:14px;transition:background .25s var(--ease),color .25s var(--ease),border-color .25s var(--ease)}
+.soc svg{width:18px;height:18px;fill:currentColor}
+.soc:hover{background:var(--mint2);border-color:var(--mint2);color:var(--ink)} .soc:focus-visible{outline:2px solid var(--mint2);outline-offset:2px}
 @media (max-width:480px){.pmhero .row{grid-template-columns:minmax(0,1fr)} .pmhero .thumb{min-height:120px} .pmhero .ribbon text{font-size:24px} .pmhero .ribbon path{stroke-width:44}}
 
 /* ===================== Brand kits (Studio) =====================
@@ -1104,6 +1109,8 @@ footer.foot::before{display:none!important}
 .rframe .rt{font-size:11px;font-weight:800;opacity:.75} .rframe b{font:800 15px/1.2 var(--bfh)} .rframe .rv{font-size:11px;line-height:1.35;opacity:.75;margin-top:auto}
 .rframe .bmark{top:10px;right:10px;font-size:9px} .rframe .bmark img{height:12px;padding:2px 4px}
 .rframe .rt{max-width:55%}
+.bbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;padding:14px 16px;border-radius:16px;background:var(--tint);border:1px solid var(--line)}
+.bbar .bchips{flex:1;min-width:0}
 .chk{display:flex;gap:10px;align-items:center;font-size:var(--t-sm);font-weight:600;color:var(--ink);cursor:pointer} .chk input{width:18px;height:18px;accent-color:var(--ink)}
 /* LinkedIn post as it will look in the feed */
 .lipost{max-width:560px;border:1px solid var(--line);border-radius:14px;background:#fff;overflow:hidden;font-family:var(--bfb)}
@@ -1139,7 +1146,9 @@ footer.foot::before{display:none!important}
     </div>
   </div></section>
   <div class="fbot"><div class="in">
-    <div><div class="logo"><span class="wm">Paper<em>Mint</em></span></div><p>A daily, plain-English read of the financial news, built as a Nova SBE project for the course "Boosting productivity with AI".</p></div>
+    <div><div class="logo"><span class="wm">Paper<em>Mint</em></span></div><p>A daily, plain-English read of the financial news, built as a Nova SBE project for the course "Boosting productivity with AI".</p>
+      <div class="fsocial"><a class="soc" data-social="linkedin" href="#" target="_blank" rel="noopener" aria-label="PaperMint on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg><span>LinkedIn</span></a>
+        <a class="soc" data-social="instagram" href="#" target="_blank" rel="noopener" aria-label="PaperMint on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.3a4.7 4.7 0 1 0 0 9.4 4.7 4.7 0 0 0 0-9.4zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm6-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM12 3c-2.4 0-2.7 0-3.7.06-3.3.15-5.1 1.98-5.25 5.25C3 9.3 3 9.6 3 12s0 2.7.06 3.7c.15 3.27 1.95 5.1 5.25 5.25 1 .05 1.3.05 3.7.05s2.7 0 3.7-.05c3.26-.15 5.1-1.96 5.24-5.25.05-1 .05-1.3.05-3.7s0-2.7-.05-3.7C20.8 5.04 18.98 3.2 15.7 3.06 14.7 3 14.4 3 12 3z"/></svg><span>Instagram</span></a></div></div>
     <div><h4>Explore</h4><ul><li><button class="flink" data-tab="news" type="button">News</button></li><li><button class="flink" data-tab="mkt" type="button">Markets</button></li><li><button class="flink" data-tab="ask" type="button">Ask PaperMint</button></li><li><button class="flink" data-tab="studio" type="button">Studio</button></li></ul></div>
     <div><h4>Sources</h4><ul><li>Bloomberg · Financial Times</li><li>WSJ · The Economist</li><li>CNBC · MarketWatch · BBC</li><li>ECB · Fed · Eurostat · INE</li></ul></div>
     <div><h4>Good to know</h4><ul><li>Educational only</li><li>No buy or sell calls</li><li>Capital at risk</li></ul></div>
@@ -1297,7 +1306,8 @@ function vBrand(){
       <div class="row"><label class="field" style="flex:1;min-width:200px"><span class="label">Website (newsletter button)</span><input id="burl" type="url" placeholder="https://" value="${esc(b.url||"")}"></label>
         <label class="field" style="flex:1;min-width:200px"><span class="label">Footer line (company, address)</span><input id="bfoot" value="${esc(b.footer||"")}"></label></div>
       <div class="row"><span class="label">Start from a palette</span><div class="chips">${BRAND_PRESETS.map(p=>`<button type="button" class="chip" data-bpreset="${p.id}"><i class="dot3" style="background:linear-gradient(90deg,${p.primary} 0 33%,${p.secondary} 0 66%,${p.accent} 0)"></i>${esc(p.name)}</button>`).join("")}</div></div>
-      ${BR.list.length>1?`<button class="btn small danger" id="bdel" type="button" style="align-self:flex-start">Delete this kit</button>`:""}
+      <div class="row">${b.id==="papermint"&&["primary","secondary","accent","bg","ink","font"].some(k=>b[k]!==BRAND_PRESETS[0][k])?`<button class="btn small" id="breset" type="button">Restore PaperMint colours</button>`:""}
+      ${BR.list.length>1&&b.id!=="papermint"?`<button class="btn small danger" id="bdel" type="button">Delete this kit</button>`:""}</div>
       ${BR.msg?`<p class="notice">${esc(BR.msg)}</p>`:""}</div>`:""}
   </section>`;
 }
@@ -1314,7 +1324,11 @@ function bindBrand(){
   const bv=$("#bvoice"); if(bv) bv.onchange=()=>upd("voice",bv.value.trim());
   const ba=$("#bavoid"); if(ba) ba.onchange=()=>upd("avoid",ba.value.trim());
   const ft=$("#bfoot"); if(ft) ft.onchange=()=>upd("footer",ft.value.trim());
-  document.querySelectorAll("[data-bpreset]").forEach(x=>x.onclick=()=>{ const p=BRAND_PRESETS.find(q=>q.id===x.dataset.bpreset); ["primary","secondary","accent","bg","ink","font"].forEach(k=>b[k]=p[k]); saveBrands(); render(); });
+  document.querySelectorAll("[data-bpreset]").forEach(x=>x.onclick=()=>{ const p=BRAND_PRESETS.find(q=>q.id===x.dataset.bpreset);
+    if(b.id==="papermint"&&p.id!=="papermint"){ const n={...p,id:uid("b"),name:p.name}; BR.list.push(n); BR.active=n.id; saveBrands(); render(); toast("New kit made from "+p.name+". PaperMint keeps its colours"); return; }
+    ["primary","secondary","accent","bg","ink","font"].forEach(k=>b[k]=p[k]); saveBrands(); render(); });
+  const rs=$("#breset"); if(rs) rs.onclick=()=>{ Object.assign(b,{...BRAND_PRESETS[0]},{logo:b.logo}); if(!b.logo) delete b.logo; saveBrands(); render(); toast("PaperMint colours restored"); };
+  document.querySelectorAll("[data-goedit]").forEach(x=>x.onclick=()=>{ BR.edit=true; render(); document.querySelector(".brandkit")?.scrollIntoView({behavior:"smooth",block:"start"}); });
   const lg=$("#blogo"); if(lg) lg.onchange=()=>{ const fl=lg.files?.[0]; if(!fl) return; if(fl.size>300*1024){ BR.msg="That logo is over 300 KB. Export a smaller version and try again."; return render(); }
     const r=new FileReader(); r.onload=()=>upd("logo",r.result); r.readAsDataURL(fl); };
   const nl=$("#bnologo"); if(nl) nl.onclick=()=>{ delete b.logo; saveBrands(); render(); };
@@ -1458,8 +1472,14 @@ function newsLines(keys){
 }
 const think = t => `<div class="thinking"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span>${esc(t)}</span></div>`;
 
+const liPost=(b,text)=>`<div class="lipost branded" style="${brandVars(b)}"><div class="lihead"><span class="liav" style="${b.logo?"background:#FFFFFF;border:1px solid #E3E8E6":`background:${b.primary};color:${onColor(b.primary)}`}">${b.logo?`<img src="${b.logo}" alt="">`:esc((b.name||"?").trim().charAt(0))}</span>
+  <div><b>${esc(b.name)}</b><span>Financial literacy · now</span></div>${logoTR(b)}</div>
+  <div class="litext">${String(text||"").split(/\n{2,}/).map(t=>`<p>${md(t.trim()).replace(/\n/g,"<br>")}</p>`).join("")}</div>
+  <div class="lifoot"><span>Like</span><span>Comment</span><span>Repost</span><span>Send</span></div></div>`;
+/* switch the client or open the kit editor from right above the content */
+function brandBar(){ const b=brand(); return `<div class="bbar"><span class="label">Design for</span><div class="bchips">${BR.list.map(x=>`<button type="button" class="bchip ${x.id===b.id?"on":""}" data-brand="${esc(x.id)}"><i style="background:${x.primary}"></i><i style="background:${x.secondary}"></i><i style="background:${x.accent}"></i><span>${esc(x.name)}</span></button>`).join("")}</div><button class="btn small" type="button" data-goedit>Edit colours, logo and voice</button></div>`; }
 function vContent(c, t){
-  let h = ""; const b=curBrand(); loadFont(b);
+  let h = tab==="studio"?brandBar():""; const b=curBrand(); loadFont(b);
   const comp=c.compliance||{}; const sc=Math.max(0,Math.min(100,+comp.score||0));
   const tone = sc>=85?["var(--ok-soft)","var(--ok)","Ready to publish"]: sc>=60?["var(--warn-soft)","var(--warn)","Review before publishing"]:["var(--bad-soft)","var(--bad)","Do not publish without changes"];
   h += `<section class="panel"><div class="row between"><h2>Compliance check</h2>${t?`<span class="mono muted">news to post: ${esc(fmtMin(t.total))}</span>`:""}</div>
@@ -1478,11 +1498,7 @@ function vContent(c, t){
       <div class="tscroll"><table class="scenes"><thead><tr><th>Time</th><th>Visual</th><th>Voiceover</th><th>On-screen text</th></tr></thead><tbody>
       ${(c.reel.scenes||[]).map(s=>`<tr><td class="mono">${esc(s.time)}</td><td>${esc(s.visual)}</td><td>${esc(s.voiceover)}</td><td>${esc(s.onscreen)}</td></tr>`).join("")}</tbody></table></div></section>`;
   }
-  if(c.linkedin) h += `<section class="panel"><div class="row between"><h2>LinkedIn post</h2><button class="btn small" data-copy="linkedin" type="button">Copy</button></div>
-    <div class="lipost branded" style="${brandVars(b)}"><div class="lihead"><span class="liav" style="${b.logo?"background:#FFFFFF;border:1px solid #E3E8E6":`background:${b.primary};color:${onColor(b.primary)}`}">${b.logo?`<img src="${b.logo}" alt="">`:esc((b.name||"?").trim().charAt(0))}</span>
-      <div><b>${esc(b.name)}</b><span>Financial literacy · now</span></div>${logoTR(b)}</div>
-      <div class="litext">${String(c.linkedin.text||"").split(/\n{2,}/).map(t=>`<p>${md(t.trim()).replace(/\n/g,"<br>")}</p>`).join("")}</div>
-      <div class="lifoot"><span>Like</span><span>Comment</span><span>Repost</span><span>Send</span></div></div></section>`;
+  if(c.linkedin) h += `<section class="panel"><div class="row between"><h2>LinkedIn post</h2><button class="btn small" data-copy="linkedin" type="button">Copy</button></div>${liPost(b,c.linkedin.text)}</section>`;
   if(c.article) h += `<section class="panel"><div class="row between"><h2>LinkedIn article</h2><button class="btn small" data-copy="article" type="button">Copy</button></div>
     <article class="prose bpage branded" style="${brandVars(b)};--ink:${b.ink}"><div class="bphead" style="background:${b.primary};color:${onColor(b.primary)}">${logoTR(b)}</div><div class="bpbody"><span class="bpkicker">${st.lang==="pt"?"Artigo":"Article"}</span><h2>${esc(c.article.title)}</h2>${c.article.subtitle?`<p class="dek">${esc(c.article.subtitle)}</p>`:""}${prose(c.article.body)}</div></article></section>`;
   if(c.opinion) h += `<section class="panel"><div class="row between"><h2>Opinion piece</h2><button class="btn small" data-copy="opinion" type="button">Copy</button></div>
@@ -1567,15 +1583,16 @@ function newsBlock(day){ return (day.items||[]).map(it=>`- [${it.source}, ${it.p
 let PACKTXT={};
 function latestPack(){ const l=(S.insights||[]).filter(i=>i&&i.pack).sort((a,b)=>a.id<b.id?1:-1)[0]; return l?{...l.pack,day:l.id}:null; }
 function vPack(){
-  const p=latestPack(); if(!p) return "";
+  const p=latestPack(); if(!p) return ""; const b=brand(); loadFont(b);
   const when=new Date(p.generatedAt||p.day).toLocaleString("en-GB",{weekday:"long",day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"});
   const car=p.carousel||{}, reel=p.reel||{};
   PACKTXT={ carousel:[car.title,...(car.slides||[]).map((s,i)=>`${i+1}. ${s.h}\n${s.t}`)].filter(Boolean).join("\n\n"), linkedin:p.linkedin||"", reel:[reel.hook,...(reel.script||[]),"",reel.caption?"Caption: "+reel.caption:""].filter(x=>x!==undefined).join("\n") };
   return `<section class="panel pack"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><span class="eyebrow">Ready to post · ${esc(when)}</span><h2>Today's content pack</h2>
       <span class="muted" style="font-size:.9rem">Written from today's Brief. Copy, tweak, post. No key needed.</span></div></div>
+    ${brandBar()}
     ${car.slides?.length?`<div class="row between"><h3 class="ui">Instagram carousel · ${esc(car.title||"")}</h3><button class="btn small" data-pcopy="carousel" type="button">Copy text</button></div>
-    <div class="pslides">${car.slides.map((s,i)=>`<div class="pslide2"><span class="n">${i+1}/${car.slides.length}</span><b>${esc(s.h)}</b><p>${esc(s.t)}</p></div>`).join("")}</div>`:""}
-    ${p.linkedin?`<div class="row between"><h3 class="ui">LinkedIn post</h3><button class="btn small" data-pcopy="linkedin" type="button">Copy</button></div><div class="out"><pre>${esc(p.linkedin)}</pre></div>`:""}
+    <div class="slides branded" style="${brandVars(b)}">${car.slides.map((s,i)=>`<div class="slide"><span class="n">${i+1}/${car.slides.length}</span><h4>${esc(s.h)}</h4>${s.t?`<p>${esc(s.t)}</p>`:""}${logoTR(b)}</div>`).join("")}</div>`:""}
+    ${p.linkedin?`<div class="row between"><h3 class="ui">LinkedIn post</h3><button class="btn small" data-pcopy="linkedin" type="button">Copy</button></div>${liPost(b,p.linkedin)}`:""}
     ${reel.hook?`<div class="row between"><h3 class="ui">Reel script</h3><button class="btn small" data-pcopy="reel" type="button">Copy script</button></div><div class="out"><p><b>Hook:</b> ${esc(reel.hook)}</p><ol>${(reel.script||[]).map(l=>`<li>${esc(l)}</li>`).join("")}</ol>${reel.caption?`<p class="muted">Caption: ${esc(reel.caption)}</p>`:""}</div>`:""}
     <p class="disc">Educational content generated automatically from public news. Not investment advice. Check it before you post.</p></section>`;
 }
@@ -2246,6 +2263,11 @@ function render(){
   addEventListener("resize",()=>{ size(); solid(); }); addEventListener("scroll",solid,{passive:true});
   new ResizeObserver(()=>{ size(); solid(); }).observe(hd); if(tk) new ResizeObserver(size).observe(tk);
   window.RADAR_BAR=()=>{ size(); solid(); }; size(); solid(); })();
+
+/* PaperMint's social accounts: paste the profile links here once they exist; until then the footer buttons say "coming soon" */
+const SOCIAL={ linkedin:"", instagram:"" };
+document.querySelectorAll("[data-social]").forEach(a=>{ const u=SOCIAL[a.dataset.social];
+  if(u) a.href=u; else { a.removeAttribute("target"); a.title="Coming soon"; a.onclick=e=>{ e.preventDefault(); toast("PaperMint on "+a.querySelector("span").textContent+": coming soon"); }; } });
 
 (()=>{ const b=document.getElementById("aikeyTop"); if(!b||!window.RADAR_AI_KEY) return; b.hidden=false;
   const upd=()=>{ let k=""; try{ k=localStorage.getItem("radar-gemini-key")||""; }catch{} b.classList.toggle("ok",!!k); b.title=k?"AI connected in this browser":"Connect the free AI"; b.querySelector("span").textContent=k?"AI on":"AI key"; };
