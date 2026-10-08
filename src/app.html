@@ -1365,7 +1365,7 @@ const srcTile = n => { n=n==="BCE"?"ECB":n; const ab=ABBR[n]||String(n||"?").sli
 /* the News tab: today's stories for everyone, to read at the source. Picking stories for content happens only in the Studio (vNews with pick) */
 function vNewsPage(){
   const day=S.news.find(n=>n.id===st.newsDay)||latestDay(), items=day?.items||[], srcs=new Set(items.map(i=>i.source).filter(Boolean));
-  return heroFrame({label:"Today's news", ribbon:"Today's money news, sorted. · ", photo:"assets/news-hero.webp", photoPos:"50% 58%", thumb:"assets/news-thumb.webp",
+  return heroFrame({label:"Today's news", ribbon:"Today's money news, sorted. · ", photo:"assets/news-hero.webp", photoPos:"50% 50%", thumb:"assets/news-thumb.webp",
     title:"Today's money news,", em:"sorted for you.",
     cta:{text:"Read the stories", attrs:'data-jump=".newslist"'},
     text:"Every weekday morning and afternoon PaperMint gathers the money stories from trusted sources and sorts them by topic. Filter by topic or source and open any story at the original.",
