@@ -1392,7 +1392,7 @@ const pieceBrand=p=>(p?.brand&&brandById(p.brand.id))||p?.brand||brand();
 const curBrand=()=>tab==="lib"?pieceBrand(S.pieces.find(x=>x.id===st.openPiece)):brand();
 function vStudio(){
   const np=S.pieces.length;
-  let h = `${heroFrame({label:"Content studio", ribbon:"From today's news to content ready to post. · ", title:"From today's news", em:"to content ready to post.",
+  let h = `${heroFrame({label:"Content studio", ribbon:"From today's news to content ready to post. · ", photo:"assets/studio-hero.webp", contain:"#EAE4D6", title:"From today's news", em:"to content ready to post.",
     cta:{text:"Start from today's news", attrs:'data-jump="#in"'},
     extra: `<button class="btn" type="button" data-golib>Your library (${S.pieces.length})</button>`+(window.RADAR_AI_KEY?`<button class="btn small" id="aikey" type="button">AI key</button>`:"")+(window.MINT_LOGOUT?`<button class="btn small" id="owLogin" type="button">Sign out</button>`:""),
     text:"Pick some news or write your own topic. The Studio suggests ideas and writes Instagram posts, LinkedIn posts and articles, opinion pieces, PowerPoint decks and newsletters, with a regulatory check built in.",
