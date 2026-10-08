@@ -1014,8 +1014,8 @@ footer.foot::before{content:"";position:absolute;inset:0;z-index:-1;background:r
 .pmhero .thumb img{object-position:50% 38%}
 .pmhero .media img{object-position:var(--pos,50% 50%)}
 .pmhero .ribbon{position:absolute;left:-4%;top:0;width:108%;height:100%;overflow:visible;pointer-events:none}
-.pmhero .ribbon path{fill:none;stroke:var(--mint2);stroke-width:66}
-.pmhero .ribbon text{font:800 34px var(--f-body);fill:var(--ink);letter-spacing:-.01em;dominant-baseline:central}
+.pmhero .ribbon path{fill:none;stroke:var(--mint2);stroke-opacity:.72;stroke-width:52}
+.pmhero .ribbon text{font:800 28px var(--f-body);fill:var(--ink);letter-spacing:-.01em;dominant-baseline:central}
 .pmhero .body{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);padding:0 clamp(4px,1vw,12px) clamp(4px,1vw,12px)}
 .pmhero .lead{display:flex;flex-direction:column;justify-content:space-between;gap:32px;min-width:0}
 .pmhero h1{margin:0;font-weight:800;font-size:clamp(2.6rem,5.6vw,4.6rem);line-height:1;letter-spacing:-.045em;color:var(--ink)}
@@ -1062,7 +1062,7 @@ footer.foot::before{display:none!important}
 .fcard .fcta .in{padding:clamp(40px,7vh,72px) 0 clamp(32px,5vh,48px)!important}
 .fcard .fbot .in{padding-inline:0}
 .fcard .bigmark{padding-inline:0}
-@media (max-width:480px){.pmhero .row{grid-template-columns:minmax(0,1fr)} .pmhero .thumb{min-height:120px} .pmhero .ribbon text{font-size:28px} .pmhero .ribbon path{stroke-width:54}}
+@media (max-width:480px){.pmhero .row{grid-template-columns:minmax(0,1fr)} .pmhero .thumb{min-height:120px} .pmhero .ribbon text{font-size:24px} .pmhero .ribbon path{stroke-width:44}}
 
 /* ===================== Brand kits (Studio) =====================
    A client's palette, type and logo: chips to switch client, a live preview, an editor; the carousel, deck and newsletter read it. */
@@ -1366,7 +1366,7 @@ const srcTile = n => { n=n==="BCE"?"ECB":n; const ab=ABBR[n]||String(n||"?").sli
 function vNewsPage(){
   const day=S.news.find(n=>n.id===st.newsDay)||latestDay(), items=day?.items||[], srcs=new Set(items.map(i=>i.source).filter(Boolean));
   return heroFrame({label:"Today's news", ribbon:"Today's money news, sorted. · ", photo:"assets/news-hero.webp", photoPos:"50% 58%", thumb:"assets/news-thumb.webp",
-    wave:"M-40,374 C300,390 700,392 950,362 C1090,345 1160,250 1260,150", title:"Today's money news,", em:"sorted for you.",
+    title:"Today's money news,", em:"sorted for you.",
     cta:{text:"Read the stories", attrs:'data-jump=".newslist"'},
     text:"Every weekday morning and afternoon PaperMint gathers the money stories from trusted sources and sorts them by topic. Filter by topic or source and open any story at the original.",
     tiles:srcTiles(day), num:String(items.length||0), numLabel:`stories from ${srcs.size||0} sources${day?", "+(day.id===latestDay()?.id?"today":"that day"):""}.`}) + vNews(false);
@@ -1583,7 +1583,6 @@ function heroHTML(day){
   const n=(day?.sources||[]).length||14;
   return heroFrame({label:"PaperMint", ribbon:"Finance news, freshly minted. · ", title:"Daily fresh", em:"market insights.",
     photo:"assets/markets-hero.png", photoPos:"50% 40%", thumb:"assets/markets-thumb.jpg",
-    wave:"M-40,374 C300,390 700,392 950,362 C1090,345 1160,250 1260,150",   // along the bottom edge, rising only to the right of the typewriter
     cta:{text:"Read today's Brief", attrs:'data-jump=".seg" data-go="brief"'},
     text:`What today's news means for your money, in plain English. PaperMint reads ${n} trusted sources every weekday, picks the stories that matter for your savings, loans and investments, and explains them. Educational, never advice.`,
     tiles:srcTiles(day), num:String(n), numLabel:`trusted sources, read ${day?"today":"every weekday"}.`});
