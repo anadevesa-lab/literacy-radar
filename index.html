@@ -1103,6 +1103,20 @@ footer.foot::before{display:none!important}
 /* the carousel and deck previews in the client's look */
 .slides.branded .slide{font-family:var(--bfb)}
 .slides.branded .slide h4{font-family:var(--bfh)}
+.slide{justify-content:flex-start} .slide h4{font-weight:800!important;letter-spacing:-.02em}
+.slide.k-hook h4{font-size:1.9rem!important;line-height:1.05!important;margin-top:auto}
+.slide.k-hook{padding-bottom:44px}
+.slide .swipe{position:absolute;left:var(--s5);bottom:16px;font:800 12px/1 var(--bfb,inherit);letter-spacing:.06em;text-transform:uppercase;color:var(--slide-hi)}
+.slide .big{display:block;margin-top:auto;font:800 3.4rem/1 var(--bfh,inherit);letter-spacing:-.04em;color:var(--slide-hi)}
+.slides.branded .slide:nth-child(even) .big{color:var(--accent)}
+.slide.k-stat h4,.slide.k-point h4,.slide.k-myth h4{font-size:1.3rem!important;line-height:1.15!important}
+.slide.k-point h4,.slide.k-myth h4{margin-top:auto}
+.slide .tag{align-self:flex-start;margin-top:22px;font:800 11px/1 var(--bfb,inherit);letter-spacing:.1em;text-transform:uppercase;padding:6px 10px;border-radius:999px;background:var(--slide-hi);color:var(--slide)}
+.slides.branded .slide:nth-child(even) .tag{background:var(--accent);color:#fff}
+.slide.k-myth h4{text-decoration:line-through;text-decoration-thickness:2px;text-decoration-color:var(--slide-hi);opacity:.9}
+.slide p{font-size:.95rem;line-height:1.4}
+.slide.k-cta h4{font-size:1.6rem!important;line-height:1.08!important;margin-top:auto}
+.slide .acts3{display:flex;gap:6px;flex-wrap:wrap} .slide .acts3 i{font:800 11px/1 var(--bfb,inherit);font-style:normal;padding:7px 10px;border-radius:999px;border:1.5px solid currentColor}
 .slides.branded .slide:nth-child(even){background:var(--page);color:var(--slide);border-color:transparent}
 .bmark{position:absolute;top:12px;right:12px;font:800 11px/1 var(--bfb);letter-spacing:.04em;max-width:45%;text-align:right;z-index:1}
 .bmark img{display:block;height:20px;width:auto;max-width:100%;background:#FFFFFF;border-radius:6px;padding:3px 6px;box-sizing:content-box}
@@ -1675,6 +1689,17 @@ const liPost=(b,text)=>`<div class="lipost branded" style="${brandVars(b)}"><div
   <div><b>${esc(b.name)}</b><span>Financial literacy · now</span></div>${logoTR(b)}</div>
   <div class="litext">${String(text||"").split(/\n{2,}/).map(t=>`<p>${md(t.trim()).replace(/\n/g,"<br>")}</p>`).join("")}</div>
   <div class="lifoot"><span>Like</span><span>Comment</span><span>Repost</span><span>Send</span></div></div>`;
+/* Instagram carousel slides built to stop the scroll: a short hook cover with a swipe cue, one big number,
+   one idea per slide, a myth/fact slide, and a save-and-follow close. Old pieces (headline/body only) still render. */
+function carSlide(s, k, n, b, foot){
+  const kind=s.kind||(k===0?"hook":k===n-1?"cta":"point"), head=s.headline??s.h??"", body=s.body??s.t??"", big=s.big||"";
+  return `<div class="slide k-${esc(kind)}"><span class="n">${k+1}/${n}</span>
+    ${kind==="myth"?`<span class="tag">${st.lang==="pt"?"Mito":"Myth"}</span>`:""}
+    ${big?`<span class="big">${esc(big)}</span>`:""}<h4>${hi(head)}</h4>${body?`<p>${kind==="myth"?`<b>${st.lang==="pt"?"Facto":"Fact"}:</b> `:""}${esc(body)}</p>`:""}
+    ${kind==="hook"?`<span class="swipe">${st.lang==="pt"?"Desliza":"Swipe"} →</span>`:""}
+    ${kind==="cta"?`<span class="acts3"><i>${st.lang==="pt"?"Guardar":"Save"}</i><i>${st.lang==="pt"?"Partilhar":"Share"}</i><i>${st.lang==="pt"?"Seguir":"Follow"}</i></span>`:""}
+    ${foot?`<span class="foot">${esc(foot)}</span>`:""}${logoTR(b)}</div>`;
+}
 /* switch the client or open the kit editor from right above the content */
 function brandBar(){ const b=brand(); return `<div class="bbar"><span class="label">Design for</span><div class="bchips">${BR.list.map(x=>`<button type="button" class="bchip ${x.id===b.id?"on":""}" data-brand="${esc(x.id)}"><i style="background:${x.primary}"></i><i style="background:${x.secondary}"></i><i style="background:${x.accent}"></i><span>${esc(x.name)}</span></button>`).join("")}</div><button class="btn small" type="button" data-goedit>Edit colours, logo and voice</button></div>`; }
 function vContent(c, t){
@@ -1688,7 +1713,7 @@ function vContent(c, t){
   if(c.carousel){
     const sl=c.carousel.slides||[];
     h += `<section class="panel"><div class="row between"><h2>Instagram carousel</h2><button class="btn small" data-copy="carousel" type="button">Copy text</button></div>
-      <div class="slides branded" style="${brandVars(b)}">${sl.map((s,k)=>`<div class="slide"><span class="n">${k+1}/${sl.length}</span><h4>${hi(s.headline)}</h4>${s.body?`<p>${esc(s.body)}</p>`:""}${k===sl.length-1&&comp.disclaimer?`<span class="foot">${esc(comp.disclaimer.slice(0,140))}</span>`:""}${logoTR(b)}</div>`).join("")}</div>
+      <div class="slides branded" style="${brandVars(b)}">${sl.map((s,k)=>carSlide(s,k,sl.length,b,k===sl.length-1&&comp.disclaimer?comp.disclaimer.slice(0,140):"")).join("")}</div>
       <div class="out"><span class="label">Caption</span><pre>${esc(c.carousel.caption)}\n\n${esc((c.carousel.hashtags||[]).map(x=>x.startsWith("#")?x:"#"+x).join(" "))}</pre></div></section>`;
   }
   if(c.reel){
@@ -1718,7 +1743,7 @@ function vContent(c, t){
 const prose = t => String(t||"").split(/\n{2,}|\n(?=## )/).map(p=>p.trim()).filter(Boolean).map(p=>p.startsWith("## ")?`<h3>${esc(p.slice(3))}</h3>`:`<p>${md(p).replace(/\n/g,"<br>")}</p>`).join("");
 const hi = s => esc(s).replace(/\*\*(.+?)\*\*/g,'<span class="hi">$1</span>');
 function textOf(c,k){
-  if(k==="carousel") return (c.carousel.slides||[]).map((s,i)=>`Slide ${i+1}\n${String(s.headline).replace(/\*\*/g,"")}\n${s.body||""}`).join("\n\n")+`\n\nCaption:\n${c.carousel.caption}\n${(c.carousel.hashtags||[]).map(x=>x.startsWith("#")?x:"#"+x).join(" ")}`;
+  if(k==="carousel") return (c.carousel.slides||[]).map((s,i)=>`Slide ${i+1}${s.big?"\n"+s.big:""}\n${String(s.headline).replace(/\*\*/g,"")}\n${s.body||""}`).join("\n\n")+`\n\nCaption:\n${c.carousel.caption}\n${(c.carousel.hashtags||[]).map(x=>x.startsWith("#")?x:"#"+x).join(" ")}`;
   if(k==="reel") return `Reel (${c.reel.duration||""})\n\n`+(c.reel.scenes||[]).map(s=>`[${s.time}] Visual: ${s.visual}\nVO: ${s.voiceover}\nOn-screen: ${s.onscreen}`).join("\n\n");
   if(k==="linkedin") return c.linkedin.text;
   if(k==="article") return `${c.article.title}\n${c.article.subtitle||""}\n\n${String(c.article.body||"").replace(/^## /gm,"")}`;
@@ -1785,12 +1810,12 @@ function vPack(){
   const p=latestPack(); if(!p) return ""; const b=brand(); loadFont(b);
   const when=new Date(p.generatedAt||p.day).toLocaleString("en-GB",{weekday:"long",day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"});
   const car=p.carousel||{}, reel=p.reel||{};
-  PACKTXT={ carousel:[car.title,...(car.slides||[]).map((s,i)=>`${i+1}. ${s.h}\n${s.t}`)].filter(Boolean).join("\n\n"), linkedin:p.linkedin||"", reel:[reel.hook,...(reel.script||[]),"",reel.caption?"Caption: "+reel.caption:""].filter(x=>x!==undefined).join("\n") };
+  PACKTXT={ carousel:[car.title,...(car.slides||[]).map((s,i)=>`${i+1}. ${s.big?s.big+" · ":""}${String(s.h||"").replace(/\*\*/g,"")}\n${s.t||""}`)].filter(Boolean).join("\n\n"), linkedin:p.linkedin||"", reel:[reel.hook,...(reel.script||[]),"",reel.caption?"Caption: "+reel.caption:""].filter(x=>x!==undefined).join("\n") };
   return `<section class="panel pack"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><span class="eyebrow">Ready to post · ${esc(when)}</span><h2>Today's content pack</h2>
       <span class="muted" style="font-size:.9rem">Written from today's Brief. Copy, tweak, post. No key needed.</span></div></div>
     ${brandBar()}
     ${car.slides?.length?`<div class="row between"><h3 class="ui">Instagram carousel · ${esc(car.title||"")}</h3><button class="btn small" data-pcopy="carousel" type="button">Copy text</button></div>
-    <div class="slides branded" style="${brandVars(b)}">${car.slides.map((s,i)=>`<div class="slide"><span class="n">${i+1}/${car.slides.length}</span><h4>${esc(s.h)}</h4>${s.t?`<p>${esc(s.t)}</p>`:""}${logoTR(b)}</div>`).join("")}</div>`:""}
+    <div class="slides branded" style="${brandVars(b)}">${car.slides.map((s,i)=>carSlide(s,i,car.slides.length,b,"")).join("")}</div>`:""}
     ${p.linkedin?`<div class="row between"><h3 class="ui">LinkedIn post</h3><button class="btn small" data-pcopy="linkedin" type="button">Copy</button></div>${liPost(b,p.linkedin)}`:""}
     ${reel.hook?`<div class="row between"><h3 class="ui">Reel script</h3><button class="btn small" data-pcopy="reel" type="button">Copy script</button></div><div class="out"><p><b>Hook:</b> ${esc(reel.hook)}</p><ol>${(reel.script||[]).map(l=>`<li>${esc(l)}</li>`).join("")}</ol>${reel.caption?`<p class="muted">Caption: ${esc(reel.caption)}</p>`:""}</div>`:""}
     <p class="disc">Educational content generated automatically from public news. Not investment advice. Check it before you post.</p></section>`;
@@ -2717,7 +2742,16 @@ ${(st.input||"").slice(0,6000)}
 
 Rules: educational, fair, clear and not misleading; balanced benefits and risks; no promised or implied returns; past performance never presented as a guide; not personal advice; never push a specific product.`;
   const JSONF = {
-    carousel:`Create an Instagram carousel. Reply with only JSON: {"slides":[{"headline":"max 10 words; wrap the 1-3 key words in **double asterisks**","body":"max 30 words, may be empty on the cover"}],"caption":"60-120 words, ends with a question","hashtags":["8 hashtags"]}. 6 to 8 slides: cover hook, 4-6 teaching slides, final takeaway.`,
+    carousel:`Create an Instagram carousel that stops the scroll: very few words, big ideas, one idea per slide. Reply with only JSON: {"slides":[{"kind":"hook|stat|point|myth|cta","headline":"","big":"","body":""}],"caption":"","hashtags":[""]}.
+Exactly 6 slides, in this order:
+1. kind "hook": headline only (no body), max 7 words. Open a curiosity gap: a surprising number, a sharp question, or a bold claim the reader wants to check. Never start with "Did you know".
+2. kind "stat": "big" is the one number that matters (e.g. "2.8%", "€1 in €5", "10 years"), taken only from the indicators or the news; headline max 7 words saying what it means; body max 12 words.
+3. kind "point": one idea; headline max 7 words; body max 14 words.
+4. kind "myth": headline is a common belief in quotes, max 7 words; body is the fact, max 14 words.
+5. kind "point": what it means for you, concrete and practical; headline max 7 words; body max 14 words.
+6. kind "cta": headline max 6 words asking to save or share; body max 10 words inviting to follow for more.
+In every headline wrap the 1-2 most important words in **double asterisks**. Write like a person talking: short everyday words, active verbs, no jargon, no emojis or hashtags on the slides. Count the words; never go over the limits.
+"caption": first line is a hook of max 10 words, then 2-3 short lines, then one question; max 60 words in total. "hashtags": 5 relevant hashtags.`,
     reel:`Create a short-video (reel) script. Reply with only JSON: {"duration":"e.g. 30 s","scenes":[{"time":"0-3 s","visual":"what we see","voiceover":"what is said","onscreen":"short text overlay"}]}. 5-7 scenes; the first 3 seconds must hook.`,
     presentation:`Create a presentation deck. Reply with only JSON: {"title":"deck title","subtitle":"one line","slides":[{"title":"max 8 words","bullets":["3-5 bullets, max 12 words each"],"notes":"speaker notes, 40-80 words"}]}. 8 to 10 slides telling a clear story: context, the key concept explained simply, data from the context, risks, practical takeaways, final slide with the main message.`
   };
