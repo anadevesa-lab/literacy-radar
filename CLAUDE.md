@@ -13,7 +13,7 @@ Financial-literacy site (Nova SBE project, "Boosting productivity with AI"). Pub
 - English everywhere; only credible English sources (no Portuguese outlets, no idealista).
 - Educational only: no buy/sell calls, no products, no promised returns (CMVM).
 - Never put an API key in code. Visitors need no key: news, Brief, pack and FAQ are pre-generated.
-- Owner sign-in: email+password checked against `OWNER_HASH` (salted SHA-256) in `src/shim-gh.js`; `ENC_KEY` is the owner's Gemini key encrypted with her password (AES-GCM/PBKDF2). Menu: Markets, Ask, Studio. Visitors see Markets and Ask; the Studio tab opens the sign-in. The Library has no tab: it lives inside the Studio ("Your library" button), owner only.
+- Owner sign-in: email+password checked against `OWNER_HASH` (salted SHA-256) in `src/shim-gh.js`; `ENC_KEY` is the owner's Gemini key encrypted with her password (AES-GCM/PBKDF2). Menu: News, Markets, Ask, Studio. Visitors see News, Markets and Ask; the Studio tab opens the sign-in (Sign out sits in the Studio head, not the footer). The Library has no tab: it lives inside the Studio ("Your library" button), owner only. The News tab is read-only (stories open at the source); picking stories to make content exists only in the Studio. Studio brand kits (palette, type, logo, kept in localStorage `mint-brands`) style the carousel, the .pptx deck and the newsletter, which is built as email-ready HTML (tables, inline styles).
 - Respect `prefers-reduced-motion`; check desktop (1366px) and phone (390px).
 
 ## Design
