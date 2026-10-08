@@ -1086,13 +1086,39 @@ footer.foot::before{display:none!important}
 .btn.danger{color:var(--bad)!important}
 @media (max-width:640px){.swatches{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* the carousel and deck previews in the client's look */
-.slides.branded .slide{font-family:var(--bfb);padding-bottom:44px}
+.slides.branded .slide{font-family:var(--bfb)}
 .slides.branded .slide h4{font-family:var(--bfh)}
 .slides.branded .slide:nth-child(even){background:var(--page);color:var(--slide);border-color:transparent}
-.slide .bmark{position:absolute;left:var(--s5);bottom:14px;font:800 11px/1 var(--bfb);letter-spacing:.04em;opacity:.85}
-.slide .bmark img{height:18px;width:auto;display:block}
-.slides.branded .slide:not(:nth-child(even)) .bmark img{filter:brightness(0) invert(1)}
-.pslides.branded .pslide b{font-family:var(--bfh)}
+.bmark{position:absolute;top:12px;right:12px;font:800 11px/1 var(--bfb);letter-spacing:.04em;max-width:45%;text-align:right;z-index:1}
+.bmark img{display:block;height:20px;width:auto;max-width:100%;background:#FFFFFF;border-radius:6px;padding:3px 6px;box-sizing:content-box}
+.slide .n{max-width:50%} .pslide{position:relative}
+.pslide .bmark{top:8px;right:8px;font-size:9px} .pslide .bmark img{height:12px;padding:2px 4px}
+.lihead{position:relative} .lihead .bmark{top:14px;right:16px;color:var(--slide)}
+.bphead{justify-content:flex-end;min-height:56px} .bphead .bmark{position:static;font-size:16px} .bphead .bmark img{height:28px}.pslides.branded .pslide b{font-family:var(--bfh)}
+.pslides.branded .pslide:not(:first-child){background:var(--page);border-color:transparent;border-top:4px solid var(--slide-hi)}
+.pslides.branded .pslide:not(:first-child) b{color:var(--slide)} .pslides.branded .pslide:not(:first-child) .n{color:var(--accent)}
+/* reel storyboard: 9:16 frames in the brand colours */
+.reelboard{display:flex;gap:12px;overflow-x:auto;padding-bottom:6px}
+.rframe{flex:0 0 150px;aspect-ratio:9/16;border-radius:16px;background:var(--slide);color:var(--slide-ink);padding:12px;display:flex;flex-direction:column;gap:8px;position:relative;font-family:var(--bfb)}
+.rframe:nth-child(even){background:var(--page);color:var(--slide)}
+.rframe .rt{font-size:11px;font-weight:800;opacity:.75} .rframe b{font:800 15px/1.2 var(--bfh)} .rframe .rv{font-size:11px;line-height:1.35;opacity:.75;margin-top:auto}
+.rframe .bmark{top:10px;right:10px;font-size:9px} .rframe .bmark img{height:12px;padding:2px 4px}
+.rframe .rt{max-width:55%}
+.chk{display:flex;gap:10px;align-items:center;font-size:var(--t-sm);font-weight:600;color:var(--ink);cursor:pointer} .chk input{width:18px;height:18px;accent-color:var(--ink)}
+/* LinkedIn post as it will look in the feed */
+.lipost{max-width:560px;border:1px solid var(--line);border-radius:14px;background:#fff;overflow:hidden;font-family:var(--bfb)}
+.lihead{display:flex;gap:10px;align-items:center;padding:14px 16px} .lihead b{display:block;font-size:15px;color:#191919} .lihead span{font-size:12px;color:#666}
+.liav{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font:800 18px var(--bfh);overflow:hidden;flex:0 0 44px} .liav img{width:80%;height:80%;object-fit:contain}
+.litext{padding:0 16px 12px;font-size:15px;line-height:1.55;color:#191919} .litext p{margin:0 0 10px}
+.lifoot{display:flex;justify-content:space-around;border-top:1px solid #e8e8e8;padding:10px;font-size:13px;font-weight:700;color:#666}
+/* article and opinion as the client's blog page */
+.bpage{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;max-width:760px}
+.bphead{padding:14px 24px;font:800 16px var(--bfh);display:flex;align-items:center} .bphead img{height:26px;width:auto;display:block}
+.bpbody{padding:28px 32px 32px;font-family:var(--bfb);color:var(--ink)}
+.bpbody .bpkicker{display:block;font:800 12px var(--bfb);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.bpbody h2{font:800 clamp(1.5rem,2.6vw,2rem)/1.15 var(--bfh)!important;color:var(--ink);margin:0 0 12px;padding-bottom:14px;border-bottom:3px solid var(--slide-hi)}
+.bpbody h3{font-family:var(--bfh);color:var(--slide)} .bpbody p{color:var(--ink)} .bpbody .dek,.bpbody .lead{color:var(--accent)}
+.bp-voice{font-size:13px!important;opacity:.85;border-top:1px solid rgba(0,0,0,.08);padding-top:8px;margin-top:4px!important} .bp-body .bp-voice b{font-size:inherit;margin-right:4px}
 .nlframe{width:100%;min-height:600px;border:1px solid var(--line);border-radius:16px;background:#fff;display:block}
 
 </style>
@@ -1217,14 +1243,16 @@ const FONTS={
   safe:{label:"Email-safe · Arial + Georgia", head:"Georgia", body:"Arial", g:"", ppt:"Arial"}
 };
 const BRAND_PRESETS=[
-  {id:"papermint", name:"PaperMint", primary:"#0F5854", secondary:"#1F7F7C", accent:"#5BC8B6", bg:"#F4FAF8", ink:"#003C3B", font:"modern", url:"https://anadevesa-lab.github.io/literacy-radar/", footer:"PaperMint · Financial news, freshly minted."},
-  {id:"p-navy", name:"Navy & gold", primary:"#0B1F3A", secondary:"#23406B", accent:"#C9A227", bg:"#F6F4EE", ink:"#0B1F3A", font:"classic", url:"", footer:""},
-  {id:"p-coral", name:"Charcoal & coral", primary:"#26262B", secondary:"#4A4A55", accent:"#FF6B57", bg:"#FAF7F5", ink:"#1B1B1F", font:"geometric", url:"", footer:""},
-  {id:"p-forest", name:"Forest & sand", primary:"#1E3B2F", secondary:"#3F6B54", accent:"#D9A35B", bg:"#F7F3EA", ink:"#16261F", font:"editorial", url:"", footer:""},
-  {id:"p-plum", name:"Plum & blush", primary:"#4B1D52", secondary:"#7A3E82", accent:"#F2A7B8", bg:"#FBF6F8", ink:"#2A1030", font:"modern", url:"", footer:""}
+  {id:"papermint", voice:"Witty and warm, plain English, like a smart friend explaining money over coffee. Short sentences, one idea at a time.", avoid:"jargon without an explanation, hype, exclamation marks", name:"PaperMint", primary:"#0F5854", secondary:"#1F7F7C", accent:"#5BC8B6", bg:"#F4FAF8", ink:"#003C3B", font:"modern", url:"https://anadevesa-lab.github.io/literacy-radar/", footer:"PaperMint · Financial news, freshly minted."},
+  {id:"p-navy", voice:"Calm, discreet and authoritative, like a private banker. Measured sentences, precise numbers, no slang.", avoid:"jokes, emojis, hype", name:"Navy & gold", primary:"#0B1F3A", secondary:"#23406B", accent:"#C9A227", bg:"#F6F4EE", ink:"#0B1F3A", font:"classic", url:"", footer:""},
+  {id:"p-coral", voice:"Direct, energetic and modern. Short punchy sentences, active verbs, a confident point of view.", avoid:"long paragraphs, corporate filler", name:"Charcoal & coral", primary:"#26262B", secondary:"#4A4A55", accent:"#FF6B57", bg:"#FAF7F5", ink:"#1B1B1F", font:"geometric", url:"", footer:""},
+  {id:"p-forest", voice:"Thoughtful and grounded, focused on the long term. Patient explanations, everyday examples, no rush.", avoid:"get-rich-quick language, urgency", name:"Forest & sand", primary:"#1E3B2F", secondary:"#3F6B54", accent:"#D9A35B", bg:"#F7F3EA", ink:"#16261F", font:"editorial", url:"", footer:""},
+  {id:"p-plum", voice:"Warm, inclusive and encouraging, written for first-time investors. Reassuring, never condescending.", avoid:"intimidating jargon, judgement", name:"Plum & blush", primary:"#4B1D52", secondary:"#7A3E82", accent:"#F2A7B8", bg:"#FBF6F8", ink:"#2A1030", font:"modern", url:"", footer:""}
 ];
 const BR={ list:(()=>{ try{ const l=JSON.parse(localStorage.getItem("mint-brands")||"null"); if(Array.isArray(l)&&l.length) return l; }catch{} return [{...BRAND_PRESETS[0]}]; })(),
   active: ls.get("mint-brand","papermint"), edit:false, msg:"" };
+// kits saved before brand voice existed get their preset's voice
+BR.list.forEach(b=>{ const p=BRAND_PRESETS.find(x=>x.id===b.id); if(p&&b.voice==null){ b.voice=p.voice; b.avoid=p.avoid; } });
 const saveBrands=()=>{ try{ localStorage.setItem("mint-brands",JSON.stringify(BR.list)); }catch{ BR.msg="Couldn't save: the logo may be too big. Try a smaller image."; } ls.set("mint-brand",BR.active); };
 const brandById=id=>BR.list.find(b=>b.id===id);
 const brand=()=>brandById(BR.active)||BR.list[0]||BRAND_PRESETS[0];
@@ -1238,6 +1266,9 @@ const loadFont=b=>{ const f=fontCSS(b); if(!f.g||document.getElementById("bf-"+b
 /* the CSS variables the previews read, so the carousel and deck take the client's look */
 const brandVars=b=>{ const f=fontCSS(b); return `--slide:${b.primary};--slide-ink:${onColor(b.primary)};--slide-hi:${b.accent};--page:${b.bg};--accent:${b.secondary};--bfh:'${f.head}',Georgia,serif;--bfb:'${f.body}',Arial,sans-serif`; };
 const brandMark=b=>b.logo?`<img src="${b.logo}" alt="${esc(b.name)}">`:`<span>${esc(b.name)}</span>`;
+/* the logo sits in the top-right corner of every piece (carousel, reel, deck, LinkedIn, article, newsletter); the kit can switch it off */
+const showLogo=b=>b.showLogo!==false;
+const logoTR=b=>showLogo(b)?`<span class="bmark">${brandMark(b)}</span>`:"";
 /* suggest a palette from the logo: quantise the pixels, drop near-white and transparent ones, keep the most common distinct colours */
 function paletteFromImage(src){ return new Promise(res=>{ const im=new Image(); im.onload=()=>{ const c=document.createElement("canvas"); c.width=c.height=64; const x=c.getContext("2d"); x.drawImage(im,0,0,64,64);
   const d=x.getImageData(0,0,64,64).data, cnt={}; for(let i=0;i<d.length;i+=4){ if(d[i+3]<128) continue; const r=d[i],g=d[i+1],b=d[i+2]; if(r>235&&g>235&&b>235) continue; const k=[r,g,b].map(v=>v>>4).join(","); cnt[k]=(cnt[k]||0)+1; }
@@ -1253,11 +1284,14 @@ function vBrand(){
       <div class="row"><button class="btn small" id="bnew" type="button">New client</button><button class="btn small" id="bedit" type="button" aria-expanded="${BR.edit}">${BR.edit?"Done":"Edit this kit"}</button></div></div>
     <div class="bchips">${BR.list.map(x=>`<button type="button" class="bchip ${x.id===b.id?"on":""}" data-brand="${esc(x.id)}"><i style="background:${x.primary}"></i><i style="background:${x.secondary}"></i><i style="background:${x.accent}"></i><span>${esc(x.name)}</span></button>`).join("")}</div>
     <div class="bpreview"><div class="bp-head" style="background:${b.primary};color:${onColor(b.primary)}">${brandMark(b)}</div>
-      <div class="bp-body" style="background:${b.bg};color:${b.ink}"><b style="font-family:var(--bfh)">Headline in ${esc(f.head)}</b><p style="font-family:var(--bfb)">Body text in ${esc(f.body)}, with a <span style="color:${b.secondary};font-weight:700">link colour</span> and an <span style="background:${b.accent};color:${onColor(b.accent)};padding:0 6px;border-radius:4px">accent</span>.</p></div></div>
+      <div class="bp-body" style="background:${b.bg};color:${b.ink}"><b style="font-family:var(--bfh)">Headline in ${esc(f.head)}</b><p style="font-family:var(--bfb)">Body text in ${esc(f.body)}, with a <span style="color:${b.secondary};font-weight:700">link colour</span> and an <span style="background:${b.accent};color:${onColor(b.accent)};padding:0 6px;border-radius:4px">accent</span>.</p>${b.voice?`<p class="bp-voice" style="font-family:var(--bfb)"><b>Voice</b> ${esc(b.voice)}</p>`:""}</div></div>
     ${BR.edit?`<div class="bedit">
       <div class="row"><label class="field" style="flex:1;min-width:200px"><span class="label">Client name</span><input id="bname" value="${esc(b.name)}"></label>
         <label class="field" style="flex:1;min-width:220px"><span class="label">Typography</span><select id="bfont">${Object.entries(FONTS).map(([k,v])=>`<option value="${k}" ${b.font===k?"selected":""}>${esc(v.label)}</option>`).join("")}</select></label></div>
       <div class="swatches">${["primary","secondary","accent","bg","ink"].map(sw).join("")}</div>
+      <label class="chk"><input type="checkbox" id="blogoon" ${showLogo(b)?"checked":""}> Logo in the top-right corner of every piece (Instagram, reel, LinkedIn, article, deck, newsletter)</label>
+      <label class="field"><span class="label">Brand voice: how this client sounds (the AI follows it in every format)</span><textarea id="bvoice" rows="3" placeholder="e.g. Calm and expert, short sentences, explains every term">${esc(b.voice||"")}</textarea></label>
+      <label class="field"><span class="label">Words and habits to avoid</span><input id="bavoid" value="${esc(b.avoid||"")}" placeholder="e.g. jargon, emojis, exclamation marks"></label>
       <div class="row"><label class="field" style="flex:1;min-width:200px"><span class="label">Logo (PNG, JPG or SVG, up to 300 KB)</span><input id="blogo" type="file" accept="image/png,image/jpeg,image/svg+xml,image/webp"></label>
         ${b.logo?`<button class="btn small" id="bfromlogo" type="button">Suggest colours from the logo</button><button class="btn small" id="bnologo" type="button">Remove logo</button>`:""}</div>
       <div class="row"><label class="field" style="flex:1;min-width:200px"><span class="label">Website (newsletter button)</span><input id="burl" type="url" placeholder="https://" value="${esc(b.url||"")}"></label>
@@ -1276,6 +1310,9 @@ function bindBrand(){
   const nm=$("#bname"); if(nm) nm.onchange=()=>upd("name",nm.value.trim()||"Client");
   const fo=$("#bfont"); if(fo) fo.onchange=()=>upd("font",fo.value);
   const ur=$("#burl"); if(ur) ur.onchange=()=>upd("url",ur.value.trim());
+  const lo=$("#blogoon"); if(lo) lo.onchange=()=>upd("showLogo",lo.checked);
+  const bv=$("#bvoice"); if(bv) bv.onchange=()=>upd("voice",bv.value.trim());
+  const ba=$("#bavoid"); if(ba) ba.onchange=()=>upd("avoid",ba.value.trim());
   const ft=$("#bfoot"); if(ft) ft.onchange=()=>upd("footer",ft.value.trim());
   document.querySelectorAll("[data-bpreset]").forEach(x=>x.onclick=()=>{ const p=BRAND_PRESETS.find(q=>q.id===x.dataset.bpreset); ["primary","secondary","accent","bg","ink","font"].forEach(k=>b[k]=p[k]); saveBrands(); render(); });
   const lg=$("#blogo"); if(lg) lg.onchange=()=>{ const fl=lg.files?.[0]; if(!fl) return; if(fl.size>300*1024){ BR.msg="That logo is over 300 KB. Export a smaller version and try again."; return render(); }
@@ -1301,8 +1338,8 @@ ${f.g?`<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=${f
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${b.bg}"><tr><td align="center" style="padding:28px 12px">
 <table role="presentation" class="wrap" width="600" cellpadding="0" cellspacing="0" style="width:600px;max-width:600px;background:#FFFFFF;border-radius:18px;overflow:hidden">
 <tr><td class="pad" style="background:${b.primary};padding:22px 40px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
-  <td style="font:800 20px/1 ${H};color:${on}">${b.logo?`<img src="${b.logo}" alt="${esc(b.name)}" height="36" style="display:block;height:36px;width:auto;border:0">`:esc(b.name)}</td>
-  <td align="right" style="font:600 12px/1 ${B};color:${on};opacity:.8;letter-spacing:.04em">${esc(date)}</td></tr></table></td></tr>
+  <td style="font:600 12px/1 ${B};color:${on};opacity:.8;letter-spacing:.04em">${esc(date)}</td>
+  <td align="right" style="font:800 20px/1 ${H};color:${on}">${showLogo(b)?(b.logo?`<span style="display:inline-block;background:#FFFFFF;border-radius:8px;padding:6px 10px"><img src="${b.logo}" alt="${esc(b.name)}" height="28" style="display:block;height:28px;width:auto;border:0"></span>`:esc(b.name)):""}</td></tr></table></td></tr>
 <tr><td style="height:6px;background:${b.accent};font-size:0;line-height:0">&nbsp;</td></tr>
 <tr><td class="pad" style="padding:40px 40px 8px">
   <div style="font:800 12px/1 ${B};letter-spacing:.12em;text-transform:uppercase;color:${b.secondary};margin:0 0 14px">${st.lang==="pt"?"A newsletter":"The newsletter"}</div>
@@ -1432,24 +1469,29 @@ function vContent(c, t){
   if(c.carousel){
     const sl=c.carousel.slides||[];
     h += `<section class="panel"><div class="row between"><h2>Instagram carousel</h2><button class="btn small" data-copy="carousel" type="button">Copy text</button></div>
-      <div class="slides branded" style="${brandVars(b)}">${sl.map((s,k)=>`<div class="slide"><span class="n">${k+1}/${sl.length}</span><h4>${hi(s.headline)}</h4>${s.body?`<p>${esc(s.body)}</p>`:""}${k===sl.length-1&&comp.disclaimer?`<span class="foot">${esc(comp.disclaimer.slice(0,140))}</span>`:""}<span class="bmark">${brandMark(b)}</span></div>`).join("")}</div>
+      <div class="slides branded" style="${brandVars(b)}">${sl.map((s,k)=>`<div class="slide"><span class="n">${k+1}/${sl.length}</span><h4>${hi(s.headline)}</h4>${s.body?`<p>${esc(s.body)}</p>`:""}${k===sl.length-1&&comp.disclaimer?`<span class="foot">${esc(comp.disclaimer.slice(0,140))}</span>`:""}${logoTR(b)}</div>`).join("")}</div>
       <div class="out"><span class="label">Caption</span><pre>${esc(c.carousel.caption)}\n\n${esc((c.carousel.hashtags||[]).map(x=>x.startsWith("#")?x:"#"+x).join(" "))}</pre></div></section>`;
   }
   if(c.reel){
     h += `<section class="panel"><div class="row between"><h2>Reel script <span class="muted" style="font-family:var(--f-body);font-weight:500;font-size:.9rem">· ${esc(c.reel.duration||"")}</span></h2><button class="btn small" data-copy="reel" type="button">Copy script</button></div>
+      <div class="reelboard branded" style="${brandVars(b)}">${(c.reel.scenes||[]).map((s,k)=>`<div class="rframe"><span class="rt">${esc(s.time)}</span><b>${esc(s.onscreen||"")}</b><span class="rv">${esc(s.visual||"")}</span>${logoTR(b)}</div>`).join("")}</div>
       <div class="tscroll"><table class="scenes"><thead><tr><th>Time</th><th>Visual</th><th>Voiceover</th><th>On-screen text</th></tr></thead><tbody>
       ${(c.reel.scenes||[]).map(s=>`<tr><td class="mono">${esc(s.time)}</td><td>${esc(s.visual)}</td><td>${esc(s.voiceover)}</td><td>${esc(s.onscreen)}</td></tr>`).join("")}</tbody></table></div></section>`;
   }
-  if(c.linkedin) h += `<section class="panel"><div class="row between"><h2>LinkedIn post</h2><button class="btn small" data-copy="linkedin" type="button">Copy</button></div><div class="out"><pre>${esc(c.linkedin.text)}</pre></div></section>`;
+  if(c.linkedin) h += `<section class="panel"><div class="row between"><h2>LinkedIn post</h2><button class="btn small" data-copy="linkedin" type="button">Copy</button></div>
+    <div class="lipost branded" style="${brandVars(b)}"><div class="lihead"><span class="liav" style="${b.logo?"background:#FFFFFF;border:1px solid #E3E8E6":`background:${b.primary};color:${onColor(b.primary)}`}">${b.logo?`<img src="${b.logo}" alt="">`:esc((b.name||"?").trim().charAt(0))}</span>
+      <div><b>${esc(b.name)}</b><span>Financial literacy · now</span></div>${logoTR(b)}</div>
+      <div class="litext">${String(c.linkedin.text||"").split(/\n{2,}/).map(t=>`<p>${md(t.trim()).replace(/\n/g,"<br>")}</p>`).join("")}</div>
+      <div class="lifoot"><span>Like</span><span>Comment</span><span>Repost</span><span>Send</span></div></div></section>`;
   if(c.article) h += `<section class="panel"><div class="row between"><h2>LinkedIn article</h2><button class="btn small" data-copy="article" type="button">Copy</button></div>
-    <article class="prose"><h2 style="font-size:1.3rem">${esc(c.article.title)}</h2>${c.article.subtitle?`<p class="dek">${esc(c.article.subtitle)}</p>`:""}${prose(c.article.body)}</article></section>`;
+    <article class="prose bpage branded" style="${brandVars(b)};--ink:${b.ink}"><div class="bphead" style="background:${b.primary};color:${onColor(b.primary)}">${logoTR(b)}</div><div class="bpbody"><span class="bpkicker">${st.lang==="pt"?"Artigo":"Article"}</span><h2>${esc(c.article.title)}</h2>${c.article.subtitle?`<p class="dek">${esc(c.article.subtitle)}</p>`:""}${prose(c.article.body)}</div></article></section>`;
   if(c.opinion) h += `<section class="panel"><div class="row between"><h2>Opinion piece</h2><button class="btn small" data-copy="opinion" type="button">Copy</button></div>
-    <article class="prose"><h2 style="font-size:1.3rem">${esc(c.opinion.title)}</h2>${c.opinion.lead?`<p class="lead">${esc(c.opinion.lead)}</p>`:""}${prose(c.opinion.body)}${c.opinion.author_line?`<p class="dek"><i>${esc(c.opinion.author_line)}</i></p>`:""}</article></section>`;
+    <article class="prose bpage branded" style="${brandVars(b)};--ink:${b.ink}"><div class="bphead" style="background:${b.primary};color:${onColor(b.primary)}">${logoTR(b)}</div><div class="bpbody"><span class="bpkicker">${st.lang==="pt"?"Opinião":"Opinion"}</span><h2>${esc(c.opinion.title)}</h2>${c.opinion.lead?`<p class="lead">${esc(c.opinion.lead)}</p>`:""}${prose(c.opinion.body)}${c.opinion.author_line?`<p class="dek"><i>${esc(c.opinion.author_line)}</i></p>`:""}</div></article></section>`;
   if(c.presentation){ const P=c.presentation, sl=P.slides||[];
     h += `<section class="panel"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>PowerPoint deck</h2><span class="muted" style="font-size:.86rem">${sl.length+1} slides, with speaker notes</span></div>
       <div class="row"><button class="btn small" data-copy="presentation" type="button">Copy text</button><button class="btn small" id="pptx" type="button">Download .pptx</button></div></div>
-      <div class="pslides branded" style="${brandVars(b)}"><div class="pslide"><span class="n">1</span><b style="font-size:.95rem">${esc(P.title)}</b>${P.subtitle?`<span style="font-size:.7rem;opacity:.85">${esc(P.subtitle)}</span>`:""}</div>
-      ${sl.map((x,k)=>`<div class="pslide"><span class="n">${k+2}</span><b>${esc(x.title)}</b><ul>${(x.bullets||[]).slice(0,5).map(b=>`<li>${esc(b)}</li>`).join("")}</ul></div>`).join("")}</div>
+      <div class="pslides branded" style="${brandVars(b)}"><div class="pslide">${logoTR(b)}<span class="n">1</span><b style="font-size:.95rem">${esc(P.title)}</b>${P.subtitle?`<span style="font-size:.7rem;opacity:.85">${esc(P.subtitle)}</span>`:""}</div>
+      ${sl.map((x,k)=>`<div class="pslide">${logoTR(b)}<span class="n">${k+2}</span><b>${esc(x.title)}</b><ul>${(x.bullets||[]).slice(0,5).map(b=>`<li>${esc(b)}</li>`).join("")}</ul></div>`).join("")}</div>
       <details><summary>Speaker notes</summary><ol class="notes">${sl.map(x=>`<li><b>${esc(x.title)}:</b> ${esc(x.notes||"")}</li>`).join("")}</ol></details></section>`; }
   if(c.newsletter){ const n=nlParts(c.newsletter);
     h += `<section class="panel"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>Newsletter</h2><span class="muted" style="font-size:.86rem">Designed for ${esc(b.name)} · email-ready HTML for Mailchimp, Brevo or Outlook</span></div>
@@ -2224,7 +2266,7 @@ function scrollFX(root){
   if(matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   if(!sxIO) sxIO=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("sxin"); SXSEEN.add(e.target.dataset.sxk||""); sxIO.unobserve(e.target); } }),{rootMargin:"0px 0px -6% 0px"});
   const watch=(el,key)=>{ el.dataset.sxk=key; if(SXSEEN.has(key)) el.classList.add("sxin"); else sxIO.observe(el); };
-  root.querySelectorAll(".panel h2, .mega, .bline").forEach(h=>{ if(h.dataset.sx) return; if(h.querySelector("*")) return; const words=h.textContent.trim().split(/\s+/); h.dataset.sx="1"; h.setAttribute("aria-label",h.textContent.trim()); h.classList.add("sx");
+  root.querySelectorAll(".panel h2:not(.bpbody h2), .mega, .bline").forEach(h=>{ if(h.dataset.sx) return; if(h.querySelector("*")) return; const words=h.textContent.trim().split(/\s+/); h.dataset.sx="1"; h.setAttribute("aria-label",h.textContent.trim()); h.classList.add("sx");
     h.innerHTML=words.map((w,i)=>`<span class="w" aria-hidden="true"><span style="--i:${i}">${esc(w)}</span></span>`).join(" "); watch(h,"h:"+words.join(" ")); });
   root.querySelectorAll(".panel > p.muted, .fcta p, .fbot p, .disc").forEach(p=>{ if(!p.classList.contains("sf")){ p.classList.add("sf"); watch(p,"p:"+p.textContent.trim().slice(0,60)); } });
   root.querySelectorAll(".stats4").forEach(g=>{ g.querySelectorAll(".st").forEach((c,i)=>c.style.setProperty("--i",i)); watch(g,"stats4"); });
@@ -2398,6 +2440,8 @@ const errCopy = e => e?.code==="no_key" ? "Add your free Google AI key to use th
   : `Couldn't generate right now. Try again in a moment.${e?.code?" (code: "+e.code+")":""}`;
 const TONE_TXT = { playful:"Tone: witty and warm, like a smart friend who explains money over coffee. Light humour, a playful headline or a pun is welcome; never mock the reader, never trivialise risk, never joke about losses.", neutral:"Tone: clear, friendly and neutral.", serious:"Tone: sober and professional, no jokes." };
 
+/* the client's brand voice, from the active brand kit, added to every prompt */
+const voiceTxt=()=>{ const b=brand(); return (b.voice||b.avoid)?`Write for ${b.name}. Brand voice (follow it closely): ${b.voice||"clear and friendly"}.${b.avoid?" Avoid: "+b.avoid+".":""} Compliance rules always win over the voice.\n`:""; };
 async function genIdeas(){
   st.err="";
   if(st.input.trim().length<15){ st.err="Paste at least one headline or a question from your audience."; return render(); }
@@ -2405,7 +2449,7 @@ async function genIdeas(){
   st.busy="ideas"; st.ideas=null; st.sel=null; st.content=null; st.t0=performance.now(); render();
   const prompt = `You are the content strategist for a regulated investment fund manager in Portugal (supervised by the CMVM). The audience is the general public learning to manage money and invest. Level: ${st.level}.
 ${TONE_TXT[st.tone]||""}
-
+${voiceTxt()}
 From the news and questions below, suggest exactly 3 financial-literacy content ideas. Each idea links a real story or question to one clear concept.
 
 Reply with only JSON, everything in clear British English:
@@ -2440,7 +2484,7 @@ async function makeContent(){
   const L = st.lang==="pt" ? "European Portuguese (Portugal), natural and fluent, not a translation" : "British English";
   const base = `You write financial-literacy content for a regulated investment fund manager in Portugal (ESMA rules, supervised by the CMVM). Audience: general public, level ${st.level}. Language of the content: ${L}.
 ${TONE_TXT[st.tone]||""}
-
+${voiceTxt()}
 Topic: ${i.title}
 Hook: ${i.hook}
 ${i.key_concept&&!["Tema próprio","Own topic"].includes(i.key_concept)?"Key concept: "+i.key_concept+"\n":""}${i.analogy?"Analogy you may use: "+i.analogy+"\n":""}
@@ -2525,26 +2569,62 @@ async function downloadPptx(c, btn){
     if(!downloads){ toast("Download isn't available here."); return; }
     const Pptx = await loadPptx();
     const pptx = new Pptx(); pptx.layout="LAYOUT_WIDE"; pptx.title=P.title||"Presentation";
-    // the deck takes the client's brand kit: primary for the cover, secondary for the rail, accent for numbers, their text colour and type
+    // the deck takes the client's brand kit, laid out like an editorial deck: a cover on the primary colour with two soft circles,
+    // content slides on alternating light tones with an eyebrow, a big title and the points as numbered cards (a list past four),
+    // the last slide as a statement on the primary colour, and the disclaimer to close
     const bk=curBrand(), hx=v=>String(v).replace("#","").toUpperCase(), FF=fontCSS(bk).ppt;
-    const D=hx(bk.ink), N=hx(bk.primary), T=hx(bk.secondary), T2=hx(bk.accent), B=hx(bk.accent), S2=hx(mix(bk.ink,"#FFFFFF",.18)), ON=hx(onColor(bk.primary));
+    const D=hx(bk.ink), N=hx(bk.primary), T=hx(bk.secondary), A=hx(bk.accent), ON=hx(onColor(bk.primary));
+    const BG1=hx(bk.bg), BG2=hx(mix(bk.bg,"#FFFFFF",.75)), BODY=hx(mix(bk.ink,"#FFFFFF",.18)), SOFT=hx(mix(bk.accent,"#FFFFFF",.55)), LIGHT=hx(mix(onColor(bk.primary),bk.primary,.22));
+    const S=pptx.ShapeType, pad=n=>String(n).padStart(2,"0"), list=P.slides||[], total=list.length+1;
+    // the logo (or the brand name) in the top-right corner of every slide; an image sits on a small white chip so it reads on any colour
+    const img=(bk.logo&&/^data:image\/(png|jpe?g)/.test(bk.logo))?bk.logo:null;
+    const ratio=img?await new Promise(r=>{ const im=new Image(); im.onload=()=>r(im.naturalWidth/Math.max(1,im.naturalHeight)); im.onerror=()=>r(3); im.src=img; }):3;
+    const corner=(sl,dark)=>{ if(!showLogo(bk)) return;
+      if(img){ const h=0.42, w=Math.min(2.4,h*ratio), x=12.43-w;
+        sl.addShape(S.roundRect,{x:x-0.14,y:0.42,w:w+0.28,h:h+0.2,rectRadius:0.08,fill:{color:"FFFFFF"},line:{color:dark?"FFFFFF":SOFT,width:0.75}});
+        sl.addImage({data:img,x,y:0.52,w,h}); }
+      else sl.addText(bk.name||"",{x:7.9,y:0.45,w:4.53,h:0.45,fontFace:FF,fontSize:14,bold:true,color:dark?A:T,align:"right"}); };
+    const foot=(sl,n,dark)=>{ sl.addText(bk.name||"",{x:0.9,y:6.85,w:6,h:0.35,fontFace:FF,fontSize:10,bold:true,color:dark?LIGHT:T,charSpacing:1});
+      sl.addText(`${pad(n)} / ${pad(total)}`,{x:9.4,y:6.85,w:3,h:0.35,fontFace:FF,fontSize:10,color:dark?LIGHT:T,align:"right"}); };
     let s1=pptx.addSlide(); s1.background={color:N};
-    s1.addShape(pptx.ShapeType.rect,{x:0,y:6.9,w:13.33,h:0.6,fill:{color:T2}});
-    if(bk.logo&&/^data:image\/(png|jpe?g)/.test(bk.logo)) s1.addImage({data:bk.logo,x:0.8,y:0.7,h:0.8,w:2.4,sizing:{type:"contain",w:2.4,h:0.8}});
-    else s1.addText(bk.name||"",{x:0.8,y:0.7,w:8,h:0.6,fontFace:FF,fontSize:16,bold:true,color:ON});
-    s1.addText(P.title||"",{x:0.8,y:2.2,w:11.7,h:1.8,fontFace:FF,fontSize:40,bold:true,color:ON,valign:"bottom"});
-    if(P.subtitle) s1.addText(P.subtitle,{x:0.8,y:4.1,w:11.7,h:0.8,fontFace:FF,fontSize:20,color:B});
-    (P.slides||[]).forEach((x,k)=>{
-      const sl=pptx.addSlide(); sl.background={color:"FFFFFF"};
-      sl.addShape(pptx.ShapeType.rect,{x:0,y:0,w:0.18,h:7.5,fill:{color:T}});
-      sl.addText(String(k+2).padStart(2,"0"),{x:0.6,y:0.4,w:1.2,h:0.4,fontFace:FF,fontSize:12,color:T2,bold:true});
-      sl.addText(x.title||"",{x:0.6,y:0.8,w:12,h:1,fontFace:FF,fontSize:30,bold:true,color:D});
-      sl.addText((x.bullets||[]).map(b=>({text:b,options:{bullet:{code:"25A0"},paraSpaceAfter:10}})),{x:0.8,y:2.1,w:11.6,h:4.4,fontFace:FF,fontSize:20,color:S2,valign:"top"});
-      sl.addText(bk.name||"",{x:9.3,y:6.95,w:3.6,h:0.35,fontFace:FF,fontSize:10,color:T,align:"right"});
-      if(x.notes) sl.addNotes(x.notes);
+    s1.addShape(S.ellipse,{x:8.4,y:-2.4,w:7,h:7,fill:{color:T},line:{color:T}});
+    s1.addShape(S.ellipse,{x:10.7,y:4.5,w:4,h:4,fill:{color:A,transparency:55},line:{color:A,transparency:55}});
+    corner(s1,true);
+    s1.addText(P.title||"",{x:0.9,y:2.0,w:8.6,h:2.7,fontFace:FF,fontSize:44,bold:true,color:ON,valign:"bottom",lineSpacingMultiple:0.95});
+    if(P.subtitle) s1.addText(P.subtitle,{x:0.9,y:4.85,w:8.6,h:1,fontFace:FF,fontSize:22,italic:true,color:LIGHT,valign:"top"});
+    s1.addText(new Date().toLocaleDateString(st.lang==="pt"?"pt-PT":"en-GB",{day:"numeric",month:"long",year:"numeric"}),{x:0.9,y:6.75,w:6,h:0.4,fontFace:FF,fontSize:12,color:LIGHT});
+    list.forEach((x,k)=>{
+      const sl=pptx.addSlide(), n=k+2, last=k===list.length-1&&list.length>2, bl=(x.bullets||[]).filter(Boolean);
+      if(last){   // the closing message as a statement slide
+        sl.background={color:N};
+        sl.addShape(S.rect,{x:0.9,y:1.2,w:0.12,h:1.6,fill:{color:A},line:{color:A}});
+        sl.addText(x.title||"",{x:1.3,y:1.0,w:10.8,h:2.2,fontFace:FF,fontSize:40,bold:true,color:ON,valign:"middle"});
+        sl.addText(bl.map(t=>({text:t,options:{paraSpaceAfter:12}})),{x:1.3,y:3.5,w:10.5,h:2.9,fontFace:FF,fontSize:20,color:LIGHT,valign:"top"});
+        corner(sl,true); foot(sl,n,true); if(x.notes) sl.addNotes(x.notes); return; }
+      const bg=k%2?BG2:BG1, card=k%2?BG1:BG2;
+      sl.background={color:bg};
+      corner(sl,false);
+      sl.addText(`${pad(n)} · ${(P.title||"").toUpperCase()}`,{x:0.9,y:0.55,w:8.6,h:0.4,fontFace:FF,fontSize:12,bold:true,color:T,charSpacing:2});
+      sl.addText(x.title||"",{x:0.9,y:0.95,w:11.5,h:1.25,fontFace:FF,fontSize:32,bold:true,color:D,valign:"top"});
+      if(bl.length&&bl.length<=4){   // numbered cards
+        const cols=bl.length===3?3:Math.min(2,bl.length), rows=Math.ceil(bl.length/cols), gap=0.3, X=0.9, Y=2.45, W=11.53, H=3.95;
+        const cw=(W-gap*(cols-1))/cols, ch=(H-gap*(rows-1))/rows;
+        bl.forEach((t,i)=>{ const cx=X+(i%cols)*(cw+gap), cy=Y+Math.floor(i/cols)*(ch+gap);
+          sl.addShape(S.roundRect,{x:cx,y:cy,w:cw,h:ch,rectRadius:0.12,fill:{color:card},line:{color:SOFT,width:1}});
+          sl.addShape(S.rect,{x:cx+0.35,y:cy+0.35,w:0.6,h:0.08,fill:{color:A},line:{color:A}});
+          sl.addText(pad(i+1),{x:cx+0.35,y:cy+0.5,w:1.2,h:0.5,fontFace:FF,fontSize:16,bold:true,color:T});
+          sl.addText(t,{x:cx+0.35,y:cy+1.0,w:cw-0.7,h:ch-1.25,fontFace:FF,fontSize:cols===3?17:19,color:BODY,valign:"top"}); });
+      } else {   // a list, each point with an accent mark
+        bl.slice(0,7).forEach((t,i)=>{ const y=2.45+i*0.62;
+          sl.addShape(S.rect,{x:0.9,y:y+0.17,w:0.14,h:0.14,fill:{color:A},line:{color:A}});
+          sl.addText(t,{x:1.25,y,w:11.1,h:0.5,fontFace:FF,fontSize:19,color:BODY,valign:"middle"}); });
+      }
+      foot(sl,n,false); if(x.notes) sl.addNotes(x.notes);
     });
     const disc=c.compliance?.disclaimer;
-    if(disc){ const ls2=pptx.addSlide(); ls2.background={color:N}; ls2.addText(disc,{x:0.8,y:2.5,w:11.7,h:2.5,fontFace:FF,fontSize:18,color:ON,align:"center",valign:"middle"}); }
+    if(disc){ const ls2=pptx.addSlide(); ls2.background={color:D}; corner(ls2,true);
+      ls2.addShape(S.rect,{x:0.9,y:2.6,w:0.12,h:2.2,fill:{color:A},line:{color:A}});
+      ls2.addText(disc,{x:1.3,y:2.4,w:10.8,h:2.6,fontFace:FF,fontSize:20,color:hx(onColor(bk.ink)),valign:"middle"}); }
     const blob = await pptx.write({outputType:"blob"});
     const name = (P.title||"presentation").normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^\w\- ]+/g,"").trim().slice(0,60).replace(/\s+/g,"-")||"presentation";
     await downloads.save({filename:name+".pptx", data:blob});
