@@ -742,9 +742,12 @@ main.play .hero2 h1 .w>span{animation:rise .95s cubic-bezier(.2,.75,.1,1) both;a
 @media (max-width:960px){.bento{grid-template-columns:minmax(0,1fr) minmax(0,1fr)} .bento .hero2{grid-column:1/-1;grid-row:auto}}
 
 /* sub-navigation */
-.seg{background:var(--tint)!important;padding:6px!important;border-radius:999px;gap:4px}
-.seg button{font-size:15px!important;min-height:44px;padding:0 20px!important;font-weight:700;color:var(--muted)}
-.seg button.on{background:#fff;color:var(--ink);box-shadow:0 0 0 1px var(--line)}
+/* Markets sections: a full-width mint bar of four equal tabs, the open one filled in dark ink so it reads at a glance */
+.seg{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));align-self:stretch!important;width:100%;background:var(--mint2)!important;padding:6px!important;border-radius:20px!important;gap:6px;overflow:visible!important}
+.seg button{font-size:17px!important;min-height:56px;padding:0 20px!important;font-weight:800;letter-spacing:-.01em;color:var(--ink)!important;border-radius:14px!important;transition:background .25s var(--ease),color .25s var(--ease)}
+.seg button:hover{background:rgba(255,255,255,.55)}
+.seg button.on{background:var(--ink)!important;color:#fff!important;box-shadow:0 6px 16px rgba(0,60,59,.22)}
+.seg button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 
 /* The Brief: a one-line lead, then four equal story cards */
 .panel.brief{border:0;padding:0;background:none;border-radius:0;gap:var(--s5)}
@@ -782,7 +785,7 @@ main.play .hero2 h1 .w>span{animation:rise .95s cubic-bezier(.2,.75,.1,1) both;a
   .bcard{padding:var(--s5)} .panel{padding:var(--s5)}
   .brief .stories{grid-template-columns:minmax(0,1fr)!important} .brief .bhead{padding:var(--s5)} .story{padding:var(--s5)} .story::before{top:22px;right:24px}
   .fcta{padding:0 var(--s4)} .fcta .in{padding:48px 24px 160px;margin-bottom:64px} .fcta .in > .fmark{width:200px;right:-20px;bottom:-30px}
-  .seg button{padding:0 14px!important;font-size:14px!important}
+  .seg{grid-template-columns:repeat(2,minmax(0,1fr))} .seg button{padding:0 10px!important;font-size:15px!important;min-height:48px;white-space:normal}
 }
 
 /* ===================== PaperMint v8: Front page =====================
@@ -1090,7 +1093,7 @@ footer.foot::before{display:none!important}
     <div><h4>Explore</h4><ul><li><button class="flink" data-tab="mkt" type="button">Markets</button></li><li><button class="flink" data-tab="ask" type="button">Ask PaperMint</button></li><li><button class="flink" data-tab="studio" type="button">Studio</button></li></ul></div>
     <div><h4>Sources</h4><ul><li>Bloomberg · Financial Times</li><li>WSJ · The Economist</li><li>CNBC · MarketWatch · BBC</li><li>ECB · Fed · Eurostat · INE</li></ul></div>
     <div><h4>Good to know</h4><ul><li>Educational only</li><li>No buy or sell calls</li><li>Capital at risk</li></ul></div>
-    <div class="flegal"><span>Educational content generated from public news. Not investment advice. Past performance is not a guide to future returns.</span><span>© 2026 PaperMint · <button class="flink owlink" id="owLogin" type="button">Owner</button></span></div>
+    <div class="flegal"><span>Educational content generated from public news. Not investment advice. Past performance is not a guide to future returns.</span><span>© 2026 PaperMint</span></div>
   </div></div>
   <div class="bigmark" aria-hidden="true"><span class="bw"><span>Paper</span></span><span class="bw"><em>Mint</em></span></div>
 </div></footer>
@@ -1373,7 +1376,7 @@ function vStudio(){
   const np=S.pieces.length;
   let h = `${heroFrame({label:"Content studio", ribbon:"From today's news to content ready to post. · ", title:"From today's news", em:"to content ready to post.",
     cta:{text:"Start from today's news", attrs:'data-jump="#in"'},
-    extra: `<button class="btn" type="button" data-golib>Your library (${S.pieces.length})</button>`+(window.RADAR_AI_KEY?`<button class="btn small" id="aikey" type="button">AI key</button>`:""),
+    extra: `<button class="btn" type="button" data-golib>Your library (${S.pieces.length})</button>`+(window.RADAR_AI_KEY?`<button class="btn small" id="aikey" type="button">AI key</button>`:"")+(window.MINT_LOGOUT?`<button class="btn small" id="owLogin" type="button">Sign out</button>`:""),
     text:"Pick some news or write your own topic. The Studio suggests ideas and writes Instagram posts, LinkedIn posts and articles, opinion pieces, PowerPoint decks and newsletters, with a regulatory check built in.",
     tiles:["IG","IN","PPT","NL"], num:String(np), numLabel:np===1?"piece created so far.":"pieces created so far."})}
   ${vPack()}
@@ -2364,7 +2367,7 @@ function splitWords(root){
     h.innerHTML=words.map((w,i)=>`<span class="w" aria-hidden="true"><span style="--i:${i}">${esc(w)}</span></span>`).join(" "); });
 }
 function bind(){
-  const ow=document.getElementById("owLogin"); if(ow){ if(!window.MINT_LOGIN) ow.hidden=true; else { ow.textContent=OWNER?"Sign out":"Owner"; ow.onclick=()=>OWNER?window.MINT_LOGOUT():window.MINT_LOGIN(); } }
+  const ow=document.getElementById("owLogin"); if(ow) ow.onclick=()=>window.MINT_LOGOUT?.();
   document.querySelectorAll("[data-pcopy]").forEach(b=>b.onclick=()=>copy(PACKTXT[b.dataset.pcopy]||"",b));
   const inp=$("#in"); if(inp) inp.oninput=()=>{ st.input=inp.value; ls.set("radar-input",inp.value); };
   const ex=$("#ex"); if(ex) ex.onclick=()=>{ st.input=EXAMPLE; ls.set("radar-input",EXAMPLE); render(); };
