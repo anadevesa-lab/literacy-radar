@@ -241,6 +241,9 @@ a.ncard.read:hover .ext{color:var(--accent)}
 .aipanel{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:min(560px,calc(100% - 32px));background:var(--surface);color:var(--ink);border-radius:var(--r-md);box-shadow:0 8px 24px rgba(0,60,59,.18);padding:var(--s5);z-index:30;display:flex;flex-direction:column;gap:var(--s3)}
 .aipanel p{font-size:var(--t-sm);color:var(--muted)}
 .aipanel a.btn{text-decoration:none}
+/* the sign-in and AI key boxes open as a centred window over a dimmed page, on every screen; on phones the keyboard can't cover them */
+.aipanel{top:50%!important;bottom:auto!important;transform:translate(-50%,-50%)!important;max-height:calc(100dvh - 32px);overflow:auto;box-shadow:0 0 0 100vmax rgba(0,30,29,.5),0 18px 48px rgba(0,30,29,.35)!important;z-index:60!important}
+@media (max-width:640px){.aipanel{top:16px!important;transform:translateX(-50%)!important}}
 .aipanel .x{position:absolute;top:10px;right:10px;width:36px;height:36px;border:0;border-radius:50%;background:transparent;color:var(--muted);font-size:24px;line-height:1;cursor:pointer;display:grid;place-items:center}
 .aipanel .x:hover{background:var(--tint);color:var(--ink)} .aipanel .x:focus-visible{outline:2px solid var(--ink2);outline-offset:2px}
 .aipanel > b{padding-right:40px}
@@ -1151,6 +1154,17 @@ footer.foot::before{display:none!important}
 .pillgrid .stats4 .st b em{color:var(--mint2)} .pillgrid .stats4 .st b em.dn{color:#F4B860}
 .pillgrid .stats4 .st .k{color:#FFFFFF} .pillgrid .stats4 .st small{color:rgba(230,247,244,.6)}
 @media (max-width:900px){.pillgrid .stats4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* phones: the menu keeps all four tabs whole (the AI key lives in the Studio and Ask), tighter indicator tiles, a simulator table that fits */
+@media (max-width:640px){
+  .aikey-top{display:none!important}
+  .pillgrid .stats4{gap:8px}
+  .pillgrid .stats4 .st{padding:14px 14px 16px;gap:6px}
+  .pillgrid .stats4 .st .tg{font-size:9px;letter-spacing:.06em;padding:3px 7px;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+  .pillgrid .stats4 .st b{flex-wrap:wrap;font-size:1.75rem;row-gap:2px}
+  .pillgrid .stats4 .st b em{flex-basis:100%;margin-left:0;font-size:11px}
+  .pillgrid .stats4 .st .k{font-size:13px}
+  .restab{font-size:12px} .restab td,.restab th{padding:8px 4px} .restab th{font-size:10px;letter-spacing:.03em}
+}
 .btn.canva{border-color:#7D2AE8!important;color:#7D2AE8!important} .btn.canva:not(:disabled):hover{color:#FFFFFF!important}
 .btn.canva::before{background:#7D2AE8!important}
 .bbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;padding:14px 16px;border-radius:16px;background:var(--tint);border:1px solid var(--line)}
