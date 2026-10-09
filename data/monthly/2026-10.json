@@ -1,101 +1,113 @@
 {
- "titulo": "Bond Yields Surge and Oil Shocks Shake Markets",
- "resumo": "October 2026 brought intense turbulence to global financial markets as **soaring bond yields** hit multi-year highs and renewed geopolitical conflict pushed Brent crude near $100. Central bank minutes revealed a **hawkish unity** over ongoing inflation pressures, prompting mortgage rates to climb significantly. Meanwhile, AI sentiment cooled amid valuation and revenue questions, though major indexes found occasional support from dip-buyers.",
+ "titulo": "Global Bond Rout and Energy Shocks Dominate Markets in October",
+ "resumo": "October 2026 brought intense turbulence to financial markets as a relentless **global bond sell-off** pushed yields to multi-decade highs. Meanwhile, severe supply strains and geopolitical tensions sent **oil and diesel prices surging**, threatening broader economic stability. Central banks faced mounting pressure as weak labour reports clashed with stubborn inflation readings. Despite these headwinds, equities demonstrated resilience, with indices clawing back ground towards record highs amid AI optimism. **Households and savers** confronted rising borrowing costs, while policymakers scrambled to address escalating fiscal anxieties in Europe and the US.",
  "themes": [
   {
-   "titulo": "Global Bond Yields Surge",
-   "texto": "Government debt markets experienced severe downward pressure, driving benchmark yields to levels not seen in decades. The sell-off reflected persistent worries about government borrowing and stubborn inflation readings."
+   "titulo": "Bond Market Turmoil",
+   "texto": "Global sovereign bond yields surged to multi-decade highs, driven by persistent inflation fears and worries over swelling government debt. Investors demanded higher returns, creating a ripple effect across corporate borrowing and commercial loans."
   },
   {
-   "titulo": "Energy Shock and Oil Volatility",
-   "texto": "Crude prices spiked toward $100 following supply restrictions and Middle East tensions, prompting G7 discussions over emergency fuel reserves. The energy surge added fresh cost pressures for consumers and businesses alike."
+   "titulo": "Energy Supply Shock",
+   "texto": "Fuel supplies faced severe disruption due to Middle Eastern tensions, export curbs, and weather events like Hurricane Isaias. G7 nations and world leaders intervened to manage emergency stockpiles as diesel and crude prices spiked."
   },
   {
-   "titulo": "AI Sentiment and Tech Reality Check",
-   "texto": "High-flying artificial intelligence stocks faced a reality check after revenue reports and canceled public offerings stirred bubble fears. Investors began scrutinizing the actual monetary payoffs behind heavy infrastructure spending."
+   "titulo": "Tech and AI Momentum",
+   "texto": "Technology stocks experienced bouts of volatility amid valuation concerns and revenue scrutiny. However, artificial intelligence infrastructure deals and major chip investments continued to dominate corporate spending."
   },
   {
-   "titulo": "Cooling Labor Market Data",
-   "texto": "Economic data revealed a sharp slowdown in hiring as the US added just 29,000 jobs in September and unemployment ticked up to 4.2%. The weaker labor figures altered market expectations regarding near-term central bank actions."
+   "titulo": "Labour Market Cooling",
+   "texto": "Economic data revealed a sharp slowdown in hiring across the United States. The softening labour figures altered expectations for future central bank policy adjustments."
   }
  ],
  "momentos": [
   {
    "data": "1 Oct",
-   "facto": "Treasury 10-year yields hit their highest level since 2002 while UK long-term bond yields reached 6% for the first time since 1998."
+   "facto": "Global bond yields hit multi-decade highs, with UK long-term bond yields reaching 6% for the first time since 1998."
+  },
+  {
+   "data": "2 Const",
+   "facto": "US job growth slowed sharply in September as the economy added just 29,000 jobs and unemployment ticked up to 4.2%."
   },
   {
    "data": "2 Oct",
-   "facto": "US jobs data showed growth slowed sharply to 29,000 in September as the unemployment rate rose to 4.2%."
+   "facto": "G7 nations agreed to release up to 100 million barrels of emergency oil and diesel reserves to combat fuel shortages."
   },
   {
    "data": "5 Oct",
-   "facto": "The euro slid to a 17-month low against the dollar amid growing fiscal turmoil and debt fears in France."
+   "facto": "The average five-year fixed mortgage rate in the UK hit 6% for the first time in three years."
   },
   {
    "data": "6 Oct",
-   "facto": "The S&P 500 climbed to a record high as tech and AI bulls drove a brief market recovery."
+   "facto": "The S&P 500 climbed to a record high as AI bulls and earnings optimism helped equities shrug off the bond market slump."
   },
   {
    "data": "7 Oct",
-   "facto": "Federal Reserve minutes from the September meeting revealed hawkish unity behind maintaining a tight stance against inflation."
+   "facto": "Federal Reserve minutes from the September meeting showed hawkish unity behind maintaining restrictive policy rates."
   },
   {
    "data": "8 Oct",
-   "facto": "US mortgage rates climbed for the seventh straight week, reaching their highest levels since 2023."
+   "facto": "US mortgage rates rose for the seventh consecutive week, pushing borrowing costs to their highest levels since 2023."
+  },
+  {
+   "data": "9 Oct",
+   "facto": "Hurricane Isaias barrelled toward the US Gulf Coast, shutting down a significant share of regional oil output."
   }
  ],
  "numeros": [
   {
    "valor": "3.6%",
-   "contexto": "Inflation rate in Portugal for September 2026, highlighting ongoing cost-of-living pressures."
+   "contexto": "The headline inflation rate in Portugal as of September 2026, highlighting ongoing price pressures."
+  },
+  {
+   "valor": "3.8%",
+   "contexto": "The Euro area inflation rate recorded in September 2026 by Eurostat."
   },
   {
    "valor": "2.5%",
-   "contexto": "The ECB deposit rate maintained since September 2026 as central banks navigate economic shocks."
+   "contexto": "The ECB deposit rate maintained since mid-September 2026 amid ongoing monetary policy reviews."
   },
   {
    "valor": "3.247%",
-   "contexto": "The 12-month Euribor average for September 2026, impacting variable-rate borrowers."
+   "contexto": "The 12-month Euribor average for September 2026, driving borrowing expenses across the eurozone."
   },
   {
-   "valor": "4.2%",
-   "contexto": "The US unemployment rate for September following a notable slowdown in monthly job creation."
+   "valor": "1.62%",
+   "contexto": "The new term deposit rate in Portugal recorded in August 2026."
   },
   {
    "valor": "3%",
-   "contexto": "The new mortgage rate in Portugal recorded in August 2026 by the ECB and Banco de Portugal."
+   "contexto": "The new mortgage rate in Portugal recorded in August 2026 by official regulators."
   }
  ],
  "classes": [
   {
    "nome": "Government Bonds",
    "balanco": "falling",
-   "leitura": "Global debt markets suffered a severe sell-off, pushing yields to multi-decade highs."
+   "leitura": "Sovereign debt suffered a brutal sell-off worldwide, driving yields significantly higher as investors demanded larger risk premiums."
   },
   {
-   "nome": "Equities",
+   "nome": "Global Equities",
    "balanco": "mixed",
-   "leitura": "Stocks fluctuated between record highs driven by tech and sharp pullbacks caused by bond and energy pressures."
+   "leitura": "Stocks swung between record highs driven by AI optimism and sharp tech pullbacks triggered by rising bond yields and energy costs."
   },
   {
-   "nome": "Crude Oil",
+   "nome": "Oil and Energy",
    "balanco": "rising",
-   "leitura": "Energy prices pushed higher toward $100 amid supply constraints and geopolitical disruptions."
+   "leitura": "Crude and diesel prices jumped significantly due to geopolitical disruptions, export restrictions, and hurricane threats to production."
   },
   {
-   "nome": "Foreign Exchange",
-   "balanco": "mixed",
-   "leitura": "The US dollar strengthened significantly while the euro slumped to multi-month lows."
+   "nome": "Real Estate",
+   "balanco": "falling",
+   "leitura": "Rising mortgage rates and elevated borrowing costs cooled housing markets and dampened buyer demand significantly."
   }
  ],
  "vigiar": [
-  "Whether bond yields stabilize or continue their multi-decade climb.",
-  "Geopolitical developments affecting Strait of Hormuz oil shipments and Brent crude prices.",
-  "Upcoming corporate earnings reports for concrete signs of AI monetization.",
-  "Further central bank commentary regarding interest rate paths for late 2026."
+  "The trajectory of global sovereign bond yields and whether central interventions stabilize debt markets.",
+  "Developments in Middle Eastern shipping lanes and their ongoing impact on global crude and diesel prices.",
+  "Upcoming third-quarter corporate earnings reports for clearer signals on tech sector profitability and AI spending payoffs.",
+  "Further labour market data releases to gauge the pace of economic cooling and anticipated central bank rate moves."
  ],
  "days": 7,
  "final": false,
- "generatedAt": "2026-10-09T13:51:38.069Z"
+ "generatedAt": "2026-10-09T20:22:51.844Z"
 }
