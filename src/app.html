@@ -1126,6 +1126,21 @@ footer.foot::before{display:none!important}
 .rframe .rt{font-size:11px;font-weight:800;opacity:.75} .rframe b{font:800 15px/1.2 var(--bfh)} .rframe .rv{font-size:11px;line-height:1.35;opacity:.75;margin-top:auto}
 .rframe .bmark{top:10px;right:10px;font-size:9px} .rframe .bmark img{height:12px;padding:2px 4px}
 .rframe .rt{max-width:55%}
+/* Markets: the verified indicators as one dark panel, title inside, eight tiles tagged by theme */
+.pillgrid .indpanel{background:var(--ink);border-radius:clamp(22px,2.6vw,32px);padding:clamp(22px,3.2vw,44px);display:flex;flex-direction:column;gap:clamp(18px,2.4vw,28px)}
+.pillgrid .indhead{display:flex;justify-content:space-between;align-items:flex-end;gap:12px 24px;flex-wrap:wrap}
+.pillgrid .indhead h2{margin:0;font-size:clamp(1.8rem,3.4vw,2.8rem)!important;font-weight:800;letter-spacing:-.04em;line-height:1;color:#FFFFFF!important}
+.pillgrid .indhead span{font-size:13px;font-weight:600;color:rgba(230,247,244,.65)}
+.pillgrid .stats4{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;border:0}
+.pillgrid .stats4::before{content:none}
+.pillgrid .stats4 .st{background:rgba(255,255,255,.05);border:1px solid rgba(141,230,216,.16);border-radius:18px;padding:18px 20px 20px;gap:8px;color:#E6F7F4;transition:background .25s,border-color .25s}
+.pillgrid .stats4 .st::after{content:none}
+.pillgrid .stats4 .st:hover{background:rgba(255,255,255,.09);border-color:rgba(141,230,216,.4)}
+.pillgrid .stats4 .st .tg{align-self:flex-start;font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);background:var(--mint2);padding:4px 8px;border-radius:999px}
+.pillgrid .stats4 .st b{color:#FFFFFF;font-size:clamp(2rem,3vw,2.7rem)} .pillgrid .stats4 .st b i{color:rgba(230,247,244,.6)}
+.pillgrid .stats4 .st b em{color:var(--mint2)} .pillgrid .stats4 .st b em.dn{color:#F4B860}
+.pillgrid .stats4 .st .k{color:#FFFFFF} .pillgrid .stats4 .st small{color:rgba(230,247,244,.6)}
+@media (max-width:900px){.pillgrid .stats4{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .btn.canva{border-color:#7D2AE8!important;color:#7D2AE8!important} .btn.canva:not(:disabled):hover{color:#FFFFFF!important}
 .btn.canva::before{background:#7D2AE8!important}
 .bbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;padding:14px 16px;border-radius:16px;background:var(--tint);border:1px solid var(--line)}
@@ -1592,11 +1607,13 @@ const indGet = k => (S.ind?.items||[]).find(x=>x.k===k);
 function applyIndDefaults(){ if(mk.touched) return; const d=indGet("dep_pt"), b=indGet("pt10y"), i=indGet("inf_pt_avg"); if(d) mk.scen[1].r=+d.value; if(b) mk.scen[2].r=Math.round(+b.value*10)/10; if(i) mk.infl=+i.value; }
 function indText(){ const it=S.ind?.items||[]; if(!it.length) return ""; return "Verified indicators (use these values; do not use other figures from memory):\n"+it.map(x=>`- ${indLabel(x)}: ${x.value}${x.unit||""} (${perEN(x.period)}; source: ${srcEN(x.source)})`).join("\n")+"\n"; }
 const fmtNum = (v,dec) => Number(v).toLocaleString("en-GB",{minimumFractionDigits:dec??1,maximumFractionDigits:dec??2});
+/* each indicator's theme, shown as a small tag on its tile */
+const IND_GROUP={inf_pt:"Inflation",inf_pt_avg:"Inflation",inf_ea:"Inflation",ecb_dep:"Interest rates",euribor12:"Interest rates",dep_pt:"Savings",mort_pt:"Loans",pt10y:"Bonds"};
 function vPills(){
   const it=S.ind?.items||[]; if(!it.length) return `<div class="stats4"><div class="st"><b>…</b><span>Loading indicators</span></div></div>`;
   return `<div class="stats4">${it.map(x=>{ const ch = x.prev!=null ? (+x.value-+x.prev) : null;
     return `<a class="st" ${x.url?`href="${esc(x.url)}" target="_blank" rel="noopener"`:""} title="Source: ${esc(srcEN(x.source))}">
-      <b><span class="v">${fmtNum(x.value,x.dec)}</span><i>%</i>${ch?`<em class="${ch>0?"up":"dn"}">${ch>0?"▲":"▼"} ${fmtNum(Math.abs(ch),x.dec)}</em>`:""}</b>
+      <span class="tg">${esc(IND_GROUP[x.k]||"Indicator")}</span><b><span class="v">${fmtNum(x.value,x.dec)}</span><i>%</i>${ch?`<em class="${ch>0?"up":"dn"}">${ch>0?"▲":"▼"} ${fmtNum(Math.abs(ch),x.dec)}</em>`:""}</b>
       <span class="k">${esc(indLabel(x))}</span><small>${esc(perEN(x.period))} · ${esc(srcEN(x.source))}</small></a>`; }).join("")}</div>`;
 }
 function vInd(){
@@ -1716,7 +1733,7 @@ function vMarkets(){
         <span>${esc(sub)}</span>
         <div class="row"><button class="btn primary" type="button" data-jump=".seg" data-go="brief">Read The Brief</button><button class="btn" type="button" data-jump=".pillgrid">See the indicators</button></div></div></div>
   </section>
-  <section class="pillgrid" aria-label="Verified indicators"><div class="sechead"><div><h2>Verified indicators</h2></div>${S.ind?`<span class="muted">ECB · Eurostat · Bank of Portugal · checked ${esc(new Date(S.ind.updatedAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}</span>`:""}</div>${vPills()}</section>
+  <section class="pillgrid" aria-label="Verified indicators"><div class="indpanel"><div class="indhead"><h2>Verified indicators</h2>${S.ind?`<span>ECB · Eurostat · Bank of Portugal · checked ${esc(new Date(S.ind.updatedAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}</span>`:""}</div>${vPills()}</div></section>
   <nav class="seg" role="tablist" aria-label="Markets sections">${SUBS.map(([k,t])=>`<button type="button" role="tab" aria-selected="${mk.sub===k}" class="${mk.sub===k?"on":""}" data-sub="${k}">${t}</button>`).join("")}</nav>`;
   if(mk.sub==="hoje") h += `<section class="panel"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>Daily map</h2>
       <span class="muted" style="font-size:.86rem">${ins?`Analysis from ${esc(when(ins.generatedAt))}${stale?" · new stories since then":""}`:"No analysis for today's news yet."}</span></div>
