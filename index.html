@@ -1281,28 +1281,29 @@ html.guest .subf[data-off]{display:none}
 @media (max-width:480px){.subf .row{flex-wrap:wrap}.subf .row .btn{width:100%}}
 .mrv > .subf{margin-top:var(--s5);padding-top:var(--s5);border-top:1px solid var(--line);max-width:none} .mrv > .subf .row{max-width:520px}
 
-/* ---- front page photo hero: full width, headline over the sky, the first sheet slides over its foot ---- */
-.phero{position:relative;margin-inline:calc(50% - 50vw);margin-top:calc(-1 * var(--s6));min-height:clamp(520px,86vh,860px);overflow:hidden;background:#3C93D6;color:#FFFFFF;display:flex}
-.phero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;transform-origin:0 0;transform:scale(1.25)}
-.phero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(0,60,59,.42) 0%,rgba(0,60,59,.14) 42%,transparent 70%);pointer-events:none}
+/* ---- front page photo hero: full width, a pale mint sky with a paper plane, the dark headline over the sky (as on DutchWind) ---- */
+.phero{position:relative;margin-inline:calc(50% - 50vw);margin-top:calc(-1 * var(--s6));min-height:clamp(540px,88vh,880px);overflow:hidden;background:#CFE9E6;color:var(--ink);display:flex}
+.phero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:28% 62%}
+.phero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.28) 0%,transparent 45%);pointer-events:none}
 .phero .in{position:relative;z-index:1;width:100%;max-width:1240px;margin:0 auto;padding:clamp(40px,7vw,96px) clamp(16px,4vw,56px) calc(clamp(28px,3.4vw,48px) + clamp(24px,3vw,40px));display:flex;flex-direction:column;justify-content:space-between;gap:40px}
 .phero .top{display:flex;flex-direction:column;align-items:flex-start;gap:clamp(20px,2.6vw,32px)}
-.phero h1{margin:0;max-width:11.5ch;font-size:clamp(2.8rem,7.2vw,6.4rem);font-weight:800;letter-spacing:-.05em;line-height:.96;color:#FFFFFF;text-wrap:balance;text-shadow:0 2px 30px rgba(0,40,60,.18)}
-.phero h1 em{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing:-.015em;color:#8DE6D8}
-.phero .btn.phcta{background:#8DE6D8;color:#003C3B;border-color:#8DE6D8}
-.phero .btn.phcta:hover{background:#FFFFFF;border-color:#FFFFFF}
-.phero .phfoot{display:flex;flex-direction:column;gap:2px;font-size:.92rem;color:#FFFFFF} .phero .phfoot b{font-size:1rem} .phero .phfoot span{opacity:.88}
+.phero h1{margin:0;max-width:11.5ch;font-size:clamp(2.8rem,7.2vw,6.4rem);font-weight:800;letter-spacing:-.05em;line-height:.96;color:var(--ink);text-wrap:balance}
+.phero h1 em{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing:-.015em;color:#1F7F7C}
+.phero .phlead{margin:0;max-width:44ch;font-size:clamp(1rem,1.3vw,1.12rem);line-height:1.6;color:#1F4F4D}
+.phero .btn.phcta{background:var(--ink);color:#FFFFFF;border-color:var(--ink)}
+.phero .btn.phcta:hover{background:#1F7F7C;border-color:#1F7F7C}
+.phero .phfoot{align-self:flex-end;text-align:right;display:flex;flex-direction:column;gap:2px;font-size:.92rem;color:var(--ink)} .phero .phfoot b{font-size:1rem} .phero .phfoot span{color:#1F6B68}
 .phero + .sheets{margin-top:calc(-1 * clamp(28px,3.4vw,48px))}
 @media (prefers-reduced-motion: no-preference){
-  .phero .bg{animation:phZoom 2.4s var(--ease) both}
-  @keyframes phZoom{from{transform:scale(1.4)} to{transform:scale(1.25)}}
-  .phero .top > *{animation:mfade .9s var(--ease) both} .phero .top > *:nth-child(2){animation-delay:.15s}
+  .phero .bg{animation:phZoom 2.4s var(--ease) both;transform-origin:25% 65%}
+  @keyframes phZoom{from{transform:scale(1.12)} to{transform:none}}
+  .phero .top > *{animation:mfade .9s var(--ease) both} .phero .top > *:nth-child(2){animation-delay:.12s} .phero .top > *:nth-child(3){animation-delay:.24s}
   @supports (animation-timeline: scroll()){
     .phero .in{animation:phLift linear both;animation-timeline:scroll();animation-range:0 70vh}
     @keyframes phLift{to{transform:translateY(-12vh);opacity:.2}}
   }
 }
-@media (max-width:640px){.phero{min-height:78vh} .phero .bg{object-position:50% 50%;transform:scale(1.1)} .phero::before{background:linear-gradient(180deg,rgba(0,60,59,.40) 0%,rgba(0,60,59,.10) 55%,transparent 80%)}}
+@media (max-width:640px){.phero{min-height:80vh} .phero .bg{object-position:18% 70%}}
 
 /* ---- front page sheets: full-width bands with rounded tops, each sliding over the one before (calm, editorial) ---- */
 .sheets{margin-inline:calc(50% - 50vw);margin-top:calc(-1 * var(--s8));display:flex;flex-direction:column}
@@ -1873,7 +1874,8 @@ function vNewsPage(){
   return `<section class="phero" aria-label="Today's financial news">
       <img class="bg" src="assets/news-plane.webp" srcset="assets/news-plane-960.webp 960w, assets/news-plane.webp 1920w" sizes="100vw" alt="" fetchpriority="high">
       <div class="in">
-        <div class="top"><h1>Today's financial news, <em>sorted for you.</em></h1>
+        <div class="top"><h1>Today's money news, <em>sorted for you.</em></h1>
+          <p class="phlead">Every weekday morning and afternoon PaperMint gathers the money stories from trusted sources and sorts them by topic. Filter by topic or source and open any story at the original.</p>
           <button class="btn cta phcta" type="button" data-jump=".newslist">Read the stories</button></div>
         <div class="phfoot"><b>${items.length||0} stories · ${srcs.size||0} sources</b><span>${t?`Updated ${esc(t)}`:"Updated every weekday, morning and afternoon"}</span></div>
       </div></section>`
