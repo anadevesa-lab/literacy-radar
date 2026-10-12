@@ -1309,10 +1309,10 @@ const OWNER = !window.RADAR_STANDALONE || !!window.MINT_OWNER; document.document
    The Brevo API key is never in the site: it lives only in the GitHub secret BREVO_API_KEY, used by the robot. */
 const BREVO_FORM = "https://5f87ee63.sibforms.com/serve/MUIFAHvSnNOhnplVEp_F7YxSfcwIhklupaQ_mT3cc27ZdtR8UQgY0N63frU0Mrg7zEO1sqtbjaOIlBzotSNpsu4_Wtd8CmKQ02IPFIb78t16ERd8qZfWlKWyPaWtWGKptwD2KFIVPo0BSFDAFP2Bd8756-Hs0BOpA_N7_rAfqRun3bsb5aTttmbfNTAJS_XdauFPujyRdlmhh0pViw==";
 const subHTML = (where) => `<form class="subf" data-subf="${where}" ${BREVO_FORM?"":"data-off"} novalidate>
-  <span class="lbl">Get The Brief by email, every weekday morning</span>
+  <span class="lbl">Get the Monthly Brief by email</span>
   <div class="row"><input type="email" name="EMAIL" required autocomplete="email" placeholder="you@email.com" aria-label="Your email"><button class="btn primary" type="submit">Subscribe</button></div>
   <input class="hp" type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true">
-  <p class="note">${BREVO_FORM?"Free. One short email a day. Unsubscribe in one click.":"Owner note: paste the Brevo form URL into BREVO_FORM to switch this on."}</p></form>`;
+  <p class="note">${BREVO_FORM?"Free. The month in markets, in one email at the start of each month. Unsubscribe in one click.":"Owner note: paste the Brevo form URL into BREVO_FORM to switch this on."}</p></form>`;
 document.addEventListener("submit", async e => {
   const f=e.target.closest?.(".subf"); if(!f) return; e.preventDefault();
   const em=f.querySelector("input[type=email]"), v=em.value.trim(), note=f.querySelector(".note");
@@ -1914,7 +1914,7 @@ function vBrief(){
       <div class="q"><b>What does this mean?</b><p>${md(x.what_it_means)}</p></div>
       <div class="q care"><b>Why should I care?</b><p>${md(x.why_care)}</p></div>
       <div class="acts"><button class="btn small" type="button" data-bstory="${k}">Turn into content</button>${it.url?`<a class="btn small" href="${esc(it.url)}" target="_blank" rel="noopener">Read the source ↗</a>`:""}</div></article>`; }).join("")}</div>
-    <p class="disc">Written automatically from public news for financial education. Not investment advice. Capital is at risk.</p>${subHTML("brief")}</section>`;
+    <p class="disc">Written automatically from public news for financial education. Not investment advice. Capital is at risk.</p></section>`;
   return h;
 }
 async function serverRefresh(){
@@ -1985,6 +1985,7 @@ function vMonth(){
     ${mm.busy?think(`Reading ${nItems} stories from ${days.length} days…`):""}
     ${mm.err?`<p class="notice">${esc(mm.err)}</p>`:""}
     ${body}
+    ${subHTML("month")}
   </section>`;
 }
 /* the factsheet's sum-up: the month in one big sentence, the mood in a word, and the three biggest market moves as giant numbers */
@@ -2030,8 +2031,8 @@ function factsheetEmail(sum){
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${TINT}"><tr><td align="center" style="padding:24px 10px">
 <table role="presentation" width="640" cellpadding="0" cellspacing="0" style="width:640px;max-width:640px;background:#FFFFFF;border-radius:18px;overflow:hidden">
 <tr><td style="background:${INK};padding:20px 32px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
-  <td style="font:800 20px/1 ${F};color:#FFFFFF">Paper<span style="font:italic 400 22px ${SERIF};color:${MINT}">Mint</span></td>
-  <td align="right" style="font:700 11px/1 ${F};letter-spacing:1.5px;text-transform:uppercase;color:${MINT}">Monthly factsheet · ${esc(month)}</td></tr></table></td></tr>
+  <td><img src="https://anadevesa-lab.github.io/literacy-radar/assets/email-logo-light.png" width="97" height="22" alt="PaperMint" style="display:block;border:0;width:97px;height:22px"></td>
+  <td align="right" style="font:700 11px/1 ${F};letter-spacing:1.5px;text-transform:uppercase;color:${MINT}">The Monthly Brief · ${esc(month)}</td></tr></table></td></tr>
 <tr><td style="background:${INK};padding:8px 32px 30px">
   <div style="font:800 11px/1 ${F};letter-spacing:2px;text-transform:uppercase;color:${MINT};margin:0 0 12px">The month in one line</div>
   <div style="font:italic 400 32px/1.15 ${SERIF};color:#FFFFFF;margin:0 0 18px">${esc(line).replace(/\*\*(.+?)\*\*/g,`<span style="color:${MINT}">$1</span>`)}</div>
