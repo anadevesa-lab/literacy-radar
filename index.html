@@ -1279,6 +1279,70 @@ footer.foot::before{display:none!important}
 html.guest .subf[data-off]{display:none}
 .fcta .subf{margin-top:var(--s4)} .fcta .subf .lbl,.fcta .subf .note{color:inherit} .fcta .subf .note{opacity:.75}
 @media (max-width:480px){.subf .row{flex-wrap:wrap}.subf .row .btn{width:100%}}
+.mrv > .subf{margin-top:var(--s5);padding-top:var(--s5);border-top:1px solid var(--line);max-width:none} .mrv > .subf .row{max-width:520px}
+
+/* ---- front page sheets: full-width bands with rounded tops, each sliding over the one before (calm, editorial) ---- */
+.sheets{margin-inline:calc(50% - 50vw);margin-top:calc(-1 * var(--s8));display:flex;flex-direction:column}
+.sheet{position:relative;border-radius:clamp(28px,3.4vw,48px) clamp(28px,3.4vw,48px) 0 0;margin-top:calc(-1 * clamp(28px,3.4vw,48px));padding:clamp(48px,6vw,88px) clamp(16px,4vw,56px) calc(clamp(48px,6vw,88px) + clamp(28px,3.4vw,48px))}
+.sheet:first-child{margin-top:0}
+.sheet:last-child{padding-bottom:clamp(56px,7vw,104px)}
+.s-white{background:#FFFFFF} .s-tint{background:#F4FAF8} .s-mint{background:#E3F4EF}
+.sheet + .sheet{box-shadow:0 -1px 0 rgba(0,60,59,.06)}
+.sh-in,.sheet > .panel{max-width:1240px;margin:0 auto;width:100%}
+.sheet > .panel{background:transparent;border:0;padding:0;border-radius:0}
+@supports (animation-timeline: view()){
+  @media (prefers-reduced-motion: no-preference){
+    .sheet + .sheet{animation:shUp linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
+    @keyframes shUp{from{transform:translateY(64px)} to{transform:none}}
+  }
+}
+.sh-h{margin:0;font-size:clamp(2rem,4.4vw,3.4rem);font-weight:800;letter-spacing:-.04em;line-height:1.02;color:var(--ink);text-wrap:balance}
+.sh-h em,.sh-h .wm em{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing:-.01em;color:#3AA89C}
+.sh-h .wm{font-size:1em;letter-spacing:-.045em}
+.sh-2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,80px);align-items:start}
+.sh-txt{display:flex;flex-direction:column;gap:14px;max-width:56ch}
+.sh-txt p{margin:0;font-size:1.06rem;line-height:1.65;color:#2E5A57}
+.sh-txt p b{color:var(--ink)}
+.sh-more,.sh-link{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;border:0;background:none;padding:6px 0;font:inherit;font-weight:800;color:#1F7F7C;cursor:pointer}
+.sh-more span,.sh-link span{transition:transform .35s var(--ease)}
+.sh-more:hover span,.sh-link:hover span,.sh-more:focus-visible span,.sh-link:focus-visible span{transform:translateX(5px)}
+.sh-more:focus-visible,.sh-link:focus-visible,.sh-card:focus-visible,.ar:focus-visible{outline:2px solid #3AA89C;outline-offset:4px;border-radius:12px}
+.sh-figs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:clamp(40px,6vw,80px);border-top:1px solid var(--line)}
+.sh-figs > div{display:flex;flex-direction:column;gap:6px;padding:26px 18px 0 0;text-align:left}
+.sh-figs > div + div{padding-left:clamp(12px,2vw,28px);border-left:1px solid var(--line)}
+.sh-figs b{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:800;letter-spacing:-.05em;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+.sh-figs span{font-size:.92rem;color:var(--muted)}
+.sh-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:clamp(24px,3.5vw,44px);flex-wrap:wrap}
+.sh-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,24px)}
+.sh-card{position:relative;display:flex;flex-direction:column;gap:6px;text-align:left;border:0;padding:0;background:none;font:inherit;color:var(--ink);cursor:pointer}
+.sh-card .ph{position:relative;display:block;aspect-ratio:4/5;border-radius:22px;overflow:hidden;background:var(--mbg,#F4FAF8);margin-bottom:12px}
+/* big lettering on the photo: one word in Manrope 800 and its partner in the serif italic, sitting on a soft fade of the photo's paper colour */
+.sh-card .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--mbg) 4%,color-mix(in srgb,var(--mbg) 70%,transparent) 30%,transparent 58%);pointer-events:none}
+.sh-card .ph .big{position:absolute;z-index:1;left:clamp(14px,1.6vw,22px);right:12px;bottom:clamp(8px,1vw,14px);display:flex;flex-direction:column;font-size:clamp(3rem,6.4vw,5.8rem);font-weight:800;letter-spacing:-.06em;line-height:.84;color:var(--ink);transition:transform .7s var(--ease)}
+.sh-card .ph .big em{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing:-.02em;color:#1F7F7C;font-size:1.06em;line-height:.9}
+.sh-card:hover .ph .big{transform:translateY(-6px)}
+.sh-card .ph img{width:100%;height:100%;object-fit:cover;object-position:var(--p,50% 30%);display:block;transition:transform .9s var(--ease)}
+.sh-card:hover .ph img{transform:scale(1.05)}
+.sh-card .tt{font-size:1.22rem;font-weight:800;letter-spacing:-.02em}
+.sh-card .tx{font-size:.95rem;line-height:1.5;color:#2E5A57;max-width:38ch}
+.sh-card .go{position:absolute;top:14px;right:14px;width:42px;height:42px;border-radius:50%;background:#FFFFFF;color:var(--ink);display:grid;place-items:center;font-weight:800;transform:scale(.85);opacity:0;transition:transform .45s var(--ease),opacity .3s}
+.sh-card:hover .go,.sh-card:focus-visible .go{transform:none;opacity:1}
+.sh-k{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.sh-n{font-size:.95rem;color:var(--muted);font-variant-numeric:tabular-nums} .sh-n b{color:var(--ink)}
+.sh-quote{min-height:clamp(180px,22vw,260px)}
+.sh-quote .q{margin:0;display:flex;flex-direction:column;gap:18px;opacity:0;transform:translateY(14px);transition:opacity .5s var(--ease),transform .6s var(--ease)}
+.sh-quote .q.on{opacity:1;transform:none}
+.sh-quote blockquote{margin:0;font-size:clamp(1.7rem,3.8vw,3rem);font-weight:800;letter-spacing:-.035em;line-height:1.12;color:var(--ink);max-width:24ch;text-wrap:balance}
+.sh-quote figcaption{font-size:1.02rem;line-height:1.6;color:#2E5A57;max-width:62ch}
+.sh-qfoot{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-top:clamp(28px,4vw,48px);padding-top:22px;border-top:1px solid var(--line);flex-wrap:wrap}
+.sh-num{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap} .sh-num b{font-size:1.6rem;font-weight:800;letter-spacing:-.03em;color:#1F7F7C} .sh-num span{font-size:.92rem;color:var(--muted);max-width:40ch}
+.sh-arrows{display:flex;gap:10px}
+.sh-arrows .ar{width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:#FFFFFF;color:var(--ink);font-size:18px;cursor:pointer;transition:background .25s,color .25s,transform .25s var(--ease)}
+.sh-arrows .ar.on{background:var(--ink);color:#FFFFFF;border-color:var(--ink)}
+.sh-arrows .ar:hover{transform:translateY(-2px)}
+@media (max-width:860px){.sh-2{grid-template-columns:minmax(0,1fr)} .sh-cards{grid-template-columns:minmax(0,1fr)} .sh-card .ph{aspect-ratio:16/9}
+  .sh-figs{grid-template-columns:repeat(2,minmax(0,1fr))} .sh-figs > div:nth-child(3){border-left:0;padding-left:0} .sh-figs > div:nth-child(n+3){margin-top:18px}
+  .sh-card .go{opacity:1;transform:none}}
 </style>
 
 <div id="preload" aria-hidden="true"><div class="pl"><span class="plw"><span>Paper</span></span><span class="plw"><em>Mint</em></span></div></div>
@@ -1577,7 +1641,7 @@ async function initStore(){
       db.doc("indicators/current").onSnapshot(d=>{ S.ind=d.exists?d.data():null; applyIndDefaults(); if((tab==="mkt"||tab==="ask") && !mk.busy && !mk.qBusy) render(); },()=>{});
       db.doc("data/users/"+id+"/routine").onSnapshot(d=>{ R.data=d.exists?{...d.data()}:{}; R.loaded=true; const ae=document.activeElement; if(tab==="rot" && !(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))) render(); },()=>{ R.loaded=true; });
       db.collection("monthly").onSnapshot(s=>{ S.monthly=s.docs.map(d=>({id:d.id,...d.data()})); if(tab==="mkt" && !mm.busy) render(); },()=>{});
-      db.collection("insights").orderBy("basedOn","desc").limit(10).onSnapshot(s=>{ S.insights=s.docs.map(d=>({id:d.id,...d.data()})); const ae=document.activeElement; if((tab==="mkt"||tab==="studio"||tab==="ask") && !mk.busy && !(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))) render(); },()=>{});
+      db.collection("insights").orderBy("basedOn","desc").limit(10).onSnapshot(s=>{ S.insights=s.docs.map(d=>({id:d.id,...d.data()})); const ae=document.activeElement; if((tab==="mkt"||tab==="studio"||tab==="ask"||tab==="news") && !mk.busy && !(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))) render(); },()=>{});
       return; }
   }catch{}
   S.ready=true; render();
@@ -1785,7 +1849,55 @@ function vNewsPage(){
     title:"Today's money news,", em:"sorted for you.",
     cta:{text:"Read the stories", attrs:'data-jump=".newslist"'},
     text:"Every weekday morning and afternoon PaperMint gathers the money stories from trusted sources and sorts them by topic. Filter by topic or source and open any story at the original.",
-    tiles:srcTiles(day), num:String(items.length||0), numLabel:`stories from ${srcs.size||0} sources${day?", "+(day.id===latestDay()?.id?"today":"that day"):""}.`}) + vNews(false);
+    tiles:srcTiles(day), num:String(items.length||0), numLabel:`stories from ${srcs.size||0} sources${day?", "+(day.id===latestDay()?.id?"today":"that day"):""}.`})
+    + `<div class="sheets">${shAbout(items.length, srcs.size)}<section class="sheet s-tint" aria-label="Today's stories">${vNews(false)}</section>${shExplore()}${shBrief()}</div>`;
+}
+/* the front page below the hero, as stacked sheets (rounded tops that slide over the one before):
+   about + key figures, the stories, where to go next with photos, and The Brief's stories one at a time */
+function shAbout(n, s){
+  const fig=(v,l,count)=>`<div><b ${count?`data-count="${v}"`:""}>${count?"0":esc(v)}</b><span>${esc(l)}</span></div>`;
+  return `<section class="sheet s-white" aria-label="About PaperMint"><div class="sh-in">
+    <div class="sh-2"><h2 class="sh-h">About <span class="wm">Paper<em>Mint</em></span></h2>
+      <div class="sh-txt"><p><b>PaperMint</b> turns the day's financial news into something you can actually use. Every weekday morning and afternoon it reads ${s||14} trusted sources, keeps the stories that matter for your savings, loans and investments, and explains them in plain English.</p>
+        <p>Educational, never advice. Built as a Nova SBE project on AI and productivity.</p>
+        <button type="button" class="sh-more" data-tabgo="mkt" data-sub="brief">Read today's Brief <span aria-hidden="true">→</span></button></div></div>
+    <div class="sh-figs">${fig(n||0,"Stories today",1)}${fig(s||14,"Trusted sources",1)}${fig("2×","Updates every weekday")}${fig("0 €","To read, always")}</div>
+  </div></section>`;
+}
+function shExplore(){
+  const card=(img,pos,k,t,p,go,sub,word)=>`<button type="button" class="sh-card" data-tabgo="${go}"${sub?` data-sub="${sub}"`:""}><span class="ph" style="--mbg:${k}"><img src="${img}" alt="" loading="lazy" style="object-position:${pos}" onerror="this.remove()"><span class="big" aria-hidden="true">${word}</span></span>
+    <span class="tt">${t}</span><span class="tx">${p}</span><span class="go" aria-hidden="true">→</span></button>`;
+  return `<section class="sheet s-mint" aria-label="Explore PaperMint"><div class="sh-in">
+    <div class="sh-head"><h2 class="sh-h">Go <em>deeper</em></h2><button type="button" class="sh-link" data-tabgo="mkt">All of Markets <span aria-hidden="true">→</span></button></div>
+    <div class="sh-cards">
+      ${card("assets/markets-thumb.webp","50% 60%","#FBF0DE","The Brief","The day's four stories that matter for your money, minus the jargon.","mkt","brief","Daily<em>brief</em>")}
+      ${card("assets/markets-hero.webp","50% 50%","#FBF0DE","The Monthly Brief","The month in markets: the numbers, the factors and what to watch.","mkt","mes","Monthly<em>brief</em>")}
+      ${card("assets/ask-hero.webp","50% 50%","#D3CDC1","Ask PaperMint","Questions people ask about today's news, answered in plain English.","ask","","Ask<em>away</em>")}
+    </div></div></section>`;
+}
+function shBrief(){
+  const day=latestDay(), b=day?S.insights.find(i=>i.id===day.id)?.brief:null, ss=(b?.stories||[]).filter(x=>x.title);
+  if(!ss.length) return "";
+  return `<section class="sheet s-white" aria-label="From today's Brief"><div class="sh-in">
+    <div class="sh-head"><span class="sh-k">From today's Brief</span><span class="sh-n" aria-live="polite"><b>1</b>/${ss.length}</span></div>
+    <div class="sh-quote" data-quotes>${ss.map((x,i)=>`<figure class="q${i?"":" on"}" ${i?"hidden":""}><blockquote>${esc(x.title)}</blockquote>
+      <figcaption>${md(x.why_care||x.what_it_means||"")}</figcaption></figure>`).join("")}</div>
+    <div class="sh-qfoot">${b.number?.value?`<div class="sh-num"><b>${esc(b.number.value)}</b><span>${esc(b.number.caption||"")}</span></div>`:"<span></span>"}
+      <div class="sh-arrows"><button type="button" class="ar" data-q="-1" aria-label="Previous story">←</button><button type="button" class="ar on" data-q="1" aria-label="Next story">→</button></div></div>
+  </div></section>`;
+}
+/* sheets: numbers count up once when seen; the Brief quotes step with the arrows; cards open their tab */
+function sheetsFX(root){
+  root.querySelectorAll("[data-tabgo]").forEach(b=>b.onclick=()=>{ if(b.dataset.sub) mk.sub=b.dataset.sub; document.querySelector(`.tab[data-tab="${b.dataset.tabgo}"]`)?.click(); });
+  const qs=root.querySelector("[data-quotes]");
+  if(qs){ const all=[...qs.children], n=root.querySelector(".sh-n b"); let k=0;
+    root.querySelectorAll(".sh-arrows .ar").forEach(a=>a.onclick=()=>{ all[k].hidden=true; all[k].classList.remove("on"); k=(k+ +a.dataset.q+all.length)%all.length; all[k].hidden=false; requestAnimationFrame(()=>all[k].classList.add("on")); n.textContent=k+1; }); }
+  const els=root.querySelectorAll("[data-count]"); if(!els.length) return;
+  const run=el=>{ const to=+el.dataset.count; if(RM()){ el.textContent=to; return; } const t0=performance.now(), d=1100;
+    const f=t=>{ const p=Math.min(1,(t-t0)/d); el.textContent=Math.round(to*(1-Math.pow(1-p,3))); if(p<1) requestAnimationFrame(f); }; requestAnimationFrame(f);
+    setTimeout(()=>{ el.textContent=to; }, d+150); };   // lands on the real number even if the tab stops drawing frames
+  const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ run(e.target); io.unobserve(e.target); } }),{threshold:.6});
+  els.forEach(el=>io.observe(el));
 }
 function vNews(pick=true){
   const day = S.news.find(n=>n.id===st.newsDay);
@@ -2734,7 +2846,7 @@ function render(){
   bind(); if(tab==="mkt"||tab==="ask") bindMarkets(); if(tab==="rot") bindRoutine();
   splitWords(m); window.RADAR_TILES?.(); LINES.mount(m); PIXELS.mount(m); WAVE.mount(m);
   m.querySelectorAll("[data-jump]").forEach(b=>b.onclick=()=>{ if(b.dataset.go&&mk.sub!==b.dataset.go){ mk.sub=b.dataset.go; render(); } document.querySelector(b.dataset.jump)?.scrollIntoView({behavior:RM()?"auto":"smooth",block:"start"}); });
-  renderTicker(); motion(m); window.RADAR_BAR?.(); scrollFX(document); SCRUB.mount(document);
+  renderTicker(); motion(m); window.RADAR_BAR?.(); scrollFX(document); SCRUB.mount(document); sheetsFX(m);
 }
 
 /* bar height + solid state */
