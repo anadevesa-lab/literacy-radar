@@ -1764,7 +1764,7 @@ function vContent(c, t){
     ${comp.disclaimer?`<div class="out"><span class="label">Disclaimer to include</span><pre>${esc(comp.disclaimer)}</pre></div>`:""}</section>`;
   if(c.carousel){
     const sl=c.carousel.slides||[];
-    h += `<section class="panel"><div class="row between"><h2>Instagram carousel</h2><div class="row"><button class="btn small" data-copy="carousel" type="button">Copy text</button><button class="btn small canva" type="button" data-canva="carousel" title="Downloads a file Canva imports with editable text, and opens Canva">Open in Canva</button></div></div>
+    h += `<section class="panel"><div class="row between"><h2>Instagram carousel</h2><div class="row"><button class="btn small" data-copy="carousel" type="button">Copy text</button><button class="btn small canva" type="button" data-canva="carousel" title="Downloads a file Canva imports with editable text, and opens Canva">Open in Canva</button><button class="btn small" type="button" data-exp="pdf">PDF</button><button class="btn small" type="button" data-exp="png">PNG</button></div></div>
       <div class="slides branded" style="${brandVars(b)}">${sl.map((s,k)=>carSlide(s,k,sl.length,b,k===sl.length-1&&comp.disclaimer?comp.disclaimer.slice(0,140):"")).join("")}</div>
       <div class="out"><span class="label">Caption</span><pre>${esc(c.carousel.caption)}\n\n${esc((c.carousel.hashtags||[]).map(x=>x.startsWith("#")?x:"#"+x).join(" "))}</pre></div></section>`;
   }
@@ -1781,7 +1781,7 @@ function vContent(c, t){
     <article class="prose bpage branded" style="${brandVars(b)};--ink:${b.ink}"><div class="bphead" style="background:${b.primary};color:${onColor(b.primary)}">${logoTR(b)}</div><div class="bpbody"><span class="bpkicker">${st.lang==="pt"?"Opinião":"Opinion"}</span><h2>${esc(c.opinion.title)}</h2>${c.opinion.lead?`<p class="lead">${esc(c.opinion.lead)}</p>`:""}${prose(c.opinion.body)}${c.opinion.author_line?`<p class="dek"><i>${esc(c.opinion.author_line)}</i></p>`:""}</div></article></section>`;
   if(c.presentation){ const P=c.presentation, sl=P.slides||[];
     h += `<section class="panel"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>PowerPoint deck</h2><span class="muted" style="font-size:.86rem">${sl.length+1} slides, with speaker notes</span></div>
-      <div class="row"><button class="btn small" data-copy="presentation" type="button">Copy text</button><button class="btn small" id="pptx" type="button">Download .pptx</button><button class="btn small canva" type="button" data-canva="deck" title="Downloads a file Canva imports with editable text, and opens Canva">Open in Canva</button></div></div>
+      <div class="row"><button class="btn small" data-copy="presentation" type="button">Copy text</button><button class="btn small" id="pptx" type="button">Download .pptx</button><button class="btn small canva" type="button" data-canva="deck" title="Downloads a file Canva imports with editable text, and opens Canva">Open in Canva</button><button class="btn small" type="button" data-exp="deckpdf">PDF</button></div></div>
       <div class="pslides branded" style="${brandVars(b)}"><div class="pslide">${logoTR(b)}<span class="n">1</span><b style="font-size:.95rem">${esc(P.title)}</b>${P.subtitle?`<span style="font-size:.7rem;opacity:.85">${esc(P.subtitle)}</span>`:""}</div>
       ${sl.map((x,k)=>`<div class="pslide">${logoTR(b)}<span class="n">${k+2}</span><b>${esc(x.title)}</b><ul>${(x.bullets||[]).slice(0,5).map(b=>`<li>${esc(b)}</li>`).join("")}</ul></div>`).join("")}</div>
       <details><summary>Speaker notes</summary><ol class="notes">${sl.map(x=>`<li><b>${esc(x.title)}:</b> ${esc(x.notes||"")}</li>`).join("")}</ol></details></section>`; }
@@ -1868,7 +1868,7 @@ function vPack(){
   return `<section class="panel pack"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><span class="eyebrow">Ready to post · ${esc(when)}</span><h2>Today's content pack</h2>
       <span class="muted" style="font-size:.9rem">Written from today's Brief. Copy, tweak, post. No key needed.</span></div></div>
     ${brandBar()}
-    ${car.slides?.length?`<div class="row between"><h3 class="ui">Instagram carousel · ${esc(car.title||"")}</h3><div class="row"><button class="btn small" data-pcopy="carousel" type="button">Copy text</button><button class="btn small canva" type="button" data-canva="pack" title="Downloads a file Canva imports with editable text, and opens Canva">Open in Canva</button></div></div>
+    ${car.slides?.length?`<div class="row between"><h3 class="ui">Instagram carousel · ${esc(car.title||"")}</h3><div class="row"><button class="btn small" data-pcopy="carousel" type="button">Copy text</button><button class="btn small canva" type="button" data-canva="pack" title="Downloads a file Canva imports with editable text, and opens Canva">Open in Canva</button><button class="btn small" type="button" data-exp="pdf">PDF</button><button class="btn small" type="button" data-exp="png">PNG</button></div></div>
     <div class="slides branded" style="${brandVars(b)}">${car.slides.map((s,i)=>carSlide(s,i,car.slides.length,b,"")).join("")}</div>`:""}
     ${p.linkedin?`<div class="row between"><h3 class="ui">LinkedIn post</h3><button class="btn small" data-pcopy="linkedin" type="button">Copy</button></div>${liPost(b,p.linkedin)}`:""}
     ${reel.hook?`<div class="row between"><h3 class="ui">Reel script</h3><button class="btn small" data-pcopy="reel" type="button">Copy script</button></div><div class="out"><p><b>Hook:</b> ${esc(reel.hook)}</p><ol>${(reel.script||[]).map(l=>`<li>${esc(l)}</li>`).join("")}</ol>${reel.caption?`<p class="muted">Caption: ${esc(reel.caption)}</p>`:""}</div>`:""}
@@ -2713,6 +2713,10 @@ function bind(){
   document.querySelectorAll("[data-tone]").forEach(b=>b.onclick=()=>{ st.tone=b.dataset.tone; render(); });
   const own=$("#own"); if(own) own.oninput=()=>st.own=own.value;
   const uo=$("#useown"); if(uo) uo.onclick=()=>{ const t=st.own.trim(); if(t.length<5){ st.err="Write a topic with at least a few words."; return render(); } st.ideas=[{title:t,hook:t,key_concept:"Own topic",why_now:"Your own topic.",analogy:"",source:""}]; st.sel=0; st.content=null; st.err=""; st.ideaMs=0; render(); document.querySelector(".idea.on")?.scrollIntoView({block:"center"}); };
+  // exports: the carousel as a PDF (LinkedIn carousels) or PNG images in a zip (Instagram); the deck as a PDF
+  document.querySelectorAll("[data-exp]").forEach(bt=>bt.onclick=async()=>{ const kind=bt.dataset.exp, c=tab==="lib"?S.pieces.find(x=>x.id===st.openPiece)?.content:st.content;
+    if(kind==="deckpdf"){ if(c?.presentation) await deckPdf(c,bt); return; }
+    const box=bt.closest("section")?.querySelector(".slides"); if(box) await exportCarousel(box, kind, bt); });
   // Open in Canva: Canva opens in a new tab at once (inside the click, so it isn't blocked), then the file downloads for Canva's "Import file"
   document.querySelectorAll("[data-canva]").forEach(bt=>bt.onclick=async()=>{ const kind=bt.dataset.canva, c=tab==="lib"?S.pieces.find(x=>x.id===st.openPiece)?.content:st.content;
     window.open("https://www.canva.com/","_blank","noopener");
@@ -2886,6 +2890,75 @@ function loadPptx(){
   return pptxLib;
 }
 /* the carousel as a 4:5 Instagram file (1080×1350) with editable text, in the brand kit, for Canva's "Import file" */
+/* libraries loaded only when an export is asked for */
+const LIBS={};
+const loadLib=(src,glob)=>window[glob]?Promise.resolve(window[glob]):(LIBS[src]||(LIBS[src]=new Promise((res,rej)=>{ const sc=document.createElement("script"); sc.src=src; sc.onload=()=>window[glob]?res(window[glob]):rej(new Error("library didn't load")); sc.onerror=()=>{ delete LIBS[src]; rej(new Error("library didn't load")); }; document.head.appendChild(sc); })));
+const H2C="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js", JSPDF="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js", JSZIP="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js";
+const fileName=(t,fb)=>String(t||fb).normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^\w\- ]+/g,"").trim().slice(0,50).replace(/\s+/g,"-")||fb;
+const saveFile=async(name,blob)=>{ const d=await claude.use("downloads").catch(()=>null); if(!d){ toast("Download isn't available here."); return false; } await d.save({filename:name,data:blob}); return true; };
+/* each carousel slide drawn at 1080×1350, exactly as it shows on screen (brand colours, type and logo), off-screen so the page doesn't move */
+async function carouselCanvases(box){
+  const h2c=await loadLib(H2C,"html2canvas"); await document.fonts?.ready;
+  const wrap=document.createElement("div"); wrap.className=box.className;
+  wrap.setAttribute("style",(box.getAttribute("style")||"")+";position:fixed;left:-20000px;top:0;display:flex;flex-direction:column;gap:20px;overflow:visible;width:270px;padding:0");
+  box.querySelectorAll(".slide").forEach(sl=>{ const c=sl.cloneNode(true); c.style.cssText+=";width:270px;flex:none;transform:none;opacity:1"; wrap.appendChild(c); });
+  document.body.appendChild(wrap);
+  try{ const out=[]; for(const c of wrap.children) out.push(await h2c(c,{scale:1080/c.offsetWidth,backgroundColor:null,logging:false})); return out; }
+  finally{ wrap.remove(); }
+}
+async function exportCarousel(box, kind, btn){
+  btn.disabled=true; const old=btn.textContent; btn.textContent="Preparing…";
+  try{
+    const cvs=await carouselCanvases(box), name=fileName((st.ideas?.[st.sel]?.title)||latestPack()?.carousel?.title,"carousel");
+    if(kind==="pdf"){ const {jsPDF}=await loadLib(JSPDF,"jspdf"); const doc=new jsPDF({unit:"px",format:[1080,1350],hotfixes:["px_scaling"]});
+      cvs.forEach((cv,i)=>{ if(i) doc.addPage([1080,1350]); doc.addImage(cv.toDataURL("image/jpeg",.93),"JPEG",0,0,1080,1350); });
+      if(await saveFile(name+"-carousel.pdf",doc.output("blob"))) toast("PDF downloaded: ready for a LinkedIn carousel"); }
+    else { const JSZip=await loadLib(JSZIP,"JSZip"), zip=new JSZip();
+      for(let i=0;i<cvs.length;i++) zip.file(`${String(i+1).padStart(2,"0")}-slide.png`, await new Promise(r=>cvs[i].toBlob(r,"image/png")));
+      if(await saveFile(name+"-instagram.zip",await zip.generateAsync({type:"blob"}))) toast("Images downloaded: one PNG per slide, ready for Instagram"); }
+  }catch(e){ console.error("export",e); toast("Couldn't export ("+(e?.message||"error")+")."); }
+  finally{ btn.disabled=false; btn.textContent=old; }
+}
+/* the deck as a PDF, laid out like the .pptx: cover on the primary colour, numbered cards, a closing statement, the disclaimer */
+async function deckPdf(c, btn){
+  const P=c.presentation; if(!P) return; btn.disabled=true; const old=btn.textContent; btn.textContent="Preparing…";
+  try{
+    const {jsPDF}=await loadLib(JSPDF,"jspdf"), W=1280, H=720, doc=new jsPDF({orientation:"landscape",unit:"px",format:[W,H],hotfixes:["px_scaling"]});
+    const bk=curBrand(), rgb=h=>hexRGB(h), F=(h)=>doc.setFillColor(...rgb(h)), T=(h)=>doc.setTextColor(...rgb(h)), D=(h)=>doc.setDrawColor(...rgb(h));
+    const N=bk.primary, ON=onColor(bk.primary), A=bk.accent, SEC=bk.secondary, INK=bk.ink, BG1=bk.bg, BG2=mix(bk.bg,"#FFFFFF",.75), BODY=mix(bk.ink,"#FFFFFF",.18), LIGHT=mix(onColor(bk.primary),bk.primary,.22), SOFT=mix(bk.accent,"#FFFFFF",.55);
+    const list=P.slides||[], total=list.length+1, pad=n=>String(n).padStart(2,"0");
+    const img=(bk.logo&&/^data:image\/(png|jpe?g)/.test(bk.logo))?bk.logo:null;
+    const ratio=img?await new Promise(r=>{ const im=new Image(); im.onload=()=>r(im.naturalWidth/Math.max(1,im.naturalHeight)); im.onerror=()=>r(3); im.src=img; }):3;
+    const txt=(t,x,y,w,size,col,style="normal",lh=1.25)=>{ doc.setFont("helvetica",style); doc.setFontSize(size); T(col); const lines=doc.splitTextToSize(String(t||""),w); doc.text(lines,x,y,{baseline:"top",lineHeightFactor:lh}); return lines.length*size*lh*4/3; };   // font sizes are points, the page is pixels
+    const corner=dark=>{ if(!showLogo(bk)) return; if(img){ const h=40, w=Math.min(220,h*ratio), x=W-80-w; F("#FFFFFF"); doc.roundedRect(x-12,40,w+24,h+16,8,8,"F"); doc.addImage(img,/png/.test(img)?"PNG":"JPEG",x,48,w,h); }
+      else { doc.setFont("helvetica","bold"); doc.setFontSize(18); T(dark?A:SEC); doc.text(bk.name||"",W-80,52,{align:"right",baseline:"top"}); } };
+    const foot=(n,dark)=>{ doc.setFont("helvetica","bold"); doc.setFontSize(13); T(dark?LIGHT:SEC); doc.text(bk.name||"",80,H-50,{baseline:"top"}); doc.setFont("helvetica","normal"); doc.text(`${pad(n)} / ${pad(total)}`,W-80,H-50,{align:"right",baseline:"top"}); };
+    // cover
+    F(N); doc.rect(0,0,W,H,"F"); F(SEC); doc.circle(1160,120,330,"F"); F(mix(A,N,.45)); doc.circle(1210,640,170,"F");
+    corner(true);
+    const th=txt(P.title,80,250,760,54,ON,"bold",1.1);
+    if(P.subtitle) txt(P.subtitle,80,250+th+28,760,26,LIGHT,"italic");
+    txt(new Date().toLocaleDateString(st.lang==="pt"?"pt-PT":"en-GB",{day:"numeric",month:"long",year:"numeric"}),80,H-60,500,15,LIGHT);
+    list.forEach((x,k)=>{
+      doc.addPage([W,H],"landscape"); const n=k+2, last=k===list.length-1&&list.length>2, bl=(x.bullets||[]).filter(Boolean);
+      if(last){ F(N); doc.rect(0,0,W,H,"F"); F(A); doc.rect(80,170,10,150,"F"); corner(true);
+        txt(x.title,120,170,1000,46,ON,"bold",1.1); let y=350; bl.forEach(b=>{ y+=txt(b,120,y,1000,24,LIGHT)+14; }); foot(n,true); return; }
+      const bg=k%2?BG2:BG1, card=k%2?BG1:BG2; F(bg); doc.rect(0,0,W,H,"F"); corner(false);
+      txt(`${pad(n)} · ${(P.title||"").toUpperCase()}`,80,56,820,14,SEC,"bold");
+      txt(x.title,80,88,1000,38,INK,"bold",1.1);
+      if(bl.length&&bl.length<=4){ const cols=bl.length===3?3:Math.min(2,bl.length), rows=Math.ceil(bl.length/cols), gap=24, X=80, Y=220, AW=W-160, AH=H-220-110;
+        const cw=(AW-gap*(cols-1))/cols, ch=(AH-gap*(rows-1))/rows;
+        bl.forEach((b,i)=>{ const cx=X+(i%cols)*(cw+gap), cy=Y+Math.floor(i/cols)*(ch+gap); F(card); D(SOFT); doc.setLineWidth(1.5); doc.roundedRect(cx,cy,cw,ch,16,16,"FD");
+          F(A); doc.rect(cx+28,cy+28,48,6,"F"); txt(pad(i+1),cx+28,cy+46,100,20,SEC,"bold"); txt(b,cx+28,cy+84,cw-56,cols===3?20:22,BODY); });
+      } else { let y=220; bl.slice(0,7).forEach(b=>{ F(A); doc.rect(80,y+8,12,12,"F"); y+=Math.max(36,txt(b,112,y,1080,22,BODY))+10; }); }
+      foot(n,false);
+    });
+    const disc=c.compliance?.disclaimer;
+    if(disc){ doc.addPage([W,H],"landscape"); F(INK); doc.rect(0,0,W,H,"F"); F(A); doc.rect(80,260,10,180,"F"); corner(true); txt(disc,120,280,1000,24,onColor(INK)); }
+    if(await saveFile(fileName(P.title,"presentation")+".pdf",doc.output("blob"))) toast("PDF downloaded");
+  }catch(e){ console.error("deckpdf",e); toast("Couldn't build the PDF ("+(e?.message||"error")+")."); }
+  finally{ btn.disabled=false; btn.textContent=old; }
+}
 async function canvaCarousel(slides, title, disc, btn){
   if(!slides.length) return;
   btn.disabled=true; const old=btn.textContent; btn.textContent="Preparing…";
