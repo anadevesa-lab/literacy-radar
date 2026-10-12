@@ -1,0 +1,14 @@
+name: Brevo setup
+# Manual, one-off: English double opt-in email in Brevo.
+on: { workflow_dispatch: {} }
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24 }
+      - run: node scripts/brevo-templates.mts
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_SENDER_EMAIL: ${{ secrets.BREVO_SENDER_EMAIL }}
