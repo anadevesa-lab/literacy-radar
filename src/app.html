@@ -1269,6 +1269,116 @@ footer.foot::before{display:none!important}
 html.guest .subf[data-off]{display:none}
 .fcta .subf{margin-top:var(--s4)} .fcta .subf .lbl,.fcta .subf .note{color:inherit} .fcta .subf .note{opacity:.75}
 @media (max-width:480px){.subf .row{flex-wrap:wrap}.subf .row .btn{width:100%}}
+.mrv > .subf{margin-top:var(--s5);padding-top:var(--s5);border-top:1px solid var(--line);max-width:none} .mrv > .subf .row{max-width:520px}
+
+/* ---- front page photo hero: full width, a pale mint sky with a paper plane, the dark headline over the sky (as on DutchWind) ---- */
+.phero{position:relative;margin-inline:calc(50% - 50vw);margin-top:calc(-1 * var(--s6));min-height:clamp(540px,88vh,880px);overflow:hidden;background:#CFE9E6;color:var(--ink);display:flex}
+.phero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:72% 62%}
+.phero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.28) 0%,transparent 45%);pointer-events:none}
+.phero .in{position:relative;z-index:1;width:100%;max-width:1240px;margin:0 auto;padding:clamp(40px,7vw,96px) clamp(16px,4vw,56px) calc(clamp(28px,3.4vw,48px) + clamp(24px,3vw,40px));display:flex;flex-direction:column;justify-content:space-between;gap:40px}
+.phero .top{display:flex;flex-direction:column;align-items:flex-start;gap:clamp(20px,2.6vw,32px)}
+.phero h1{margin:0;max-width:11.5ch;font-size:clamp(2.8rem,7.2vw,6.4rem);font-weight:800;letter-spacing:-.05em;line-height:.96;color:var(--ink);text-wrap:balance}
+.phero h1 em{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing:-.015em;color:#1F7F7C}
+.phero .phlead{margin:0;max-width:44ch;font-size:clamp(1rem,1.3vw,1.12rem);line-height:1.6;color:#1F4F4D}
+.phero .btn.phcta{background:var(--ink);color:#FFFFFF;border-color:var(--ink)}
+.phero .btn.phcta:hover{background:#1F7F7C;border-color:#1F7F7C}
+.phero .phfoot{align-self:flex-start;display:flex;flex-direction:column;gap:2px;font-size:.92rem;color:var(--ink)} .phero .phfoot b{font-size:1rem} .phero .phfoot span{color:#1F6B68}
+.phero + .sheets{margin-top:calc(-1 * clamp(28px,3.4vw,48px))}
+@media (prefers-reduced-motion: no-preference){
+  .phero .bg{animation:phZoom 2.4s var(--ease) both;transform-origin:75% 65%}
+  @keyframes phZoom{from{transform:scale(1.12)} to{transform:none}}
+  .phero .top > *{animation:mfade .9s var(--ease) both} .phero .top > *:nth-child(2){animation-delay:.12s} .phero .top > *:nth-child(3){animation-delay:.24s}
+  @supports (animation-timeline: scroll()){
+    .phero .in{animation:phLift linear both;animation-timeline:scroll();animation-range:0 70vh}
+    @keyframes phLift{to{transform:translateY(-12vh);opacity:.2}}
+  }
+}
+@media (max-width:640px){.phero{min-height:80vh} .phero .bg{object-position:82% 70%}}
+/* the photo runs up under the menu and the ticker: both turn see-through over it, and solid again once you scroll past */
+.phero{margin-top:calc(-1 * (var(--hh) + var(--s6)))}
+.phero .in{padding-top:calc(var(--hh) + clamp(36px,6vw,84px))}
+body:not(.solid):has(#main > .phero:first-child) header.top:not(.open){background:rgba(255,255,255,.2)!important;backdrop-filter:blur(14px) saturate(1.2)!important;-webkit-backdrop-filter:blur(14px) saturate(1.2)!important;border-bottom:1px solid rgba(255,255,255,.4)!important;transition:background-color .4s ease}
+body:not(.solid):has(#main > .phero:first-child) .ticker{background:rgba(0,60,59,.42)!important;backdrop-filter:blur(10px)!important;-webkit-backdrop-filter:blur(10px)!important}
+/* the other tabs: the illustration sits on its own paper colour, on the right half */
+.phero.ph-ill{background:var(--pbg);min-height:clamp(520px,78vh,780px)}
+.phero.ph-ill::before{display:none}
+.phero.ph-ill .bg{left:auto;right:0;width:56%;object-fit:contain;object-position:100% 60%;-webkit-mask-image:radial-gradient(70% 62% at 62% 58%,#000 55%,transparent 100%);mask-image:radial-gradient(70% 62% at 62% 58%,#000 55%,transparent 100%)}
+.phero.ph-ill .top{max-width:min(46%,620px)}
+.phero.ph-ill h1{font-size:clamp(2.6rem,6vw,5.6rem)}
+.phero .phacts{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.phero .phfoot.phfig{flex-direction:row;align-items:baseline;gap:10px;max-width:46ch}
+.phero .phfoot.phfig b{font-size:clamp(1.6rem,2.6vw,2.2rem);font-weight:800;letter-spacing:-.04em}
+/* over the mint photo the logo's "Mint" takes the deeper teal so it stays readable */
+body:not(.solid):has(#main > .phero:first-child) header.top:not(.open) .logo .wm em{color:#1F7F7C}
+@media (max-width:860px){
+  .phero.ph-ill{min-height:0}
+  .phero.ph-ill .in{padding-bottom:calc(clamp(28px,3.4vw,48px) + 46vw)}
+  .phero.ph-ill .top,.phero.ph-ill .phfoot{max-width:none}
+  .phero.ph-ill .bg{top:auto;bottom:clamp(28px,3.4vw,48px);width:100%;height:46vw;object-position:50% 100%}
+}
+
+/* ---- front page sheets: full-width bands with rounded tops, each sliding over the one before (calm, editorial) ---- */
+.sheets{margin-inline:calc(50% - 50vw);margin-top:calc(-1 * var(--s8));display:flex;flex-direction:column}
+.sheet{position:relative;border-radius:clamp(28px,3.4vw,48px) clamp(28px,3.4vw,48px) 0 0;margin-top:calc(-1 * clamp(28px,3.4vw,48px));padding:clamp(48px,6vw,88px) clamp(16px,4vw,56px) calc(clamp(48px,6vw,88px) + clamp(28px,3.4vw,48px))}
+.sheet:first-child{margin-top:0}
+.sheet:last-child{padding-bottom:clamp(56px,7vw,104px)}
+.s-white{background:#FFFFFF} .s-tint{background:#F4FAF8} .s-mint{background:#E3F4EF}
+.sheet + .sheet{box-shadow:0 -1px 0 rgba(0,60,59,.06)}
+.sh-in,.sheet > .panel{max-width:1240px;margin:0 auto;width:100%}
+.sheet > .panel{background:transparent;border:0;padding:0;border-radius:0}
+@supports (animation-timeline: view()){
+  @media (prefers-reduced-motion: no-preference){
+    .sheet + .sheet{animation:shUp linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
+    @keyframes shUp{from{transform:translateY(64px)} to{transform:none}}
+  }
+}
+.sh-h{margin:0;font-size:clamp(2rem,4.4vw,3.4rem);font-weight:800;letter-spacing:-.04em;line-height:1.02;color:var(--ink);text-wrap:balance}
+.sh-h em,.sh-h .wm em{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing:-.01em;color:#3AA89C}
+.sh-h .wm{font-size:1em;letter-spacing:-.045em}
+.sh-2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,80px);align-items:start}
+.sh-txt{display:flex;flex-direction:column;gap:14px;max-width:56ch}
+.sh-txt p{margin:0;font-size:1.06rem;line-height:1.65;color:#2E5A57}
+.sh-txt p b{color:var(--ink)}
+.sh-more,.sh-link{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;border:0;background:none;padding:6px 0;font:inherit;font-weight:800;color:#1F7F7C;cursor:pointer}
+.sh-more span,.sh-link span{transition:transform .35s var(--ease)}
+.sh-more:hover span,.sh-link:hover span,.sh-more:focus-visible span,.sh-link:focus-visible span{transform:translateX(5px)}
+.sh-more:focus-visible,.sh-link:focus-visible,.sh-card:focus-visible,.ar:focus-visible{outline:2px solid #3AA89C;outline-offset:4px;border-radius:12px}
+.sh-figs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:clamp(40px,6vw,80px);border-top:1px solid var(--line)}
+.sh-figs > div{display:flex;flex-direction:column;gap:6px;padding:26px 18px 0 0;text-align:left}
+.sh-figs > div + div{padding-left:clamp(12px,2vw,28px);border-left:1px solid var(--line)}
+.sh-figs b{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:800;letter-spacing:-.05em;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+.sh-figs span{font-size:.92rem;color:var(--muted)}
+.sh-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:clamp(24px,3.5vw,44px);flex-wrap:wrap}
+.sh-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,24px)}
+.sh-card{position:relative;display:flex;flex-direction:column;gap:6px;text-align:left;border:0;padding:0;background:none;font:inherit;color:var(--ink);cursor:pointer}
+.sh-card .ph{position:relative;display:block;aspect-ratio:4/5;border-radius:22px;overflow:hidden;background:var(--mbg,#F4FAF8);margin-bottom:12px}
+/* big lettering on the photo: one word in Manrope 800 and its partner in the serif italic, sitting on a soft fade of the photo's paper colour */
+.sh-card .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--mbg) 4%,color-mix(in srgb,var(--mbg) 70%,transparent) 30%,transparent 58%);pointer-events:none}
+.sh-card .ph .big{position:absolute;z-index:1;left:clamp(14px,1.6vw,22px);right:12px;bottom:clamp(8px,1vw,14px);display:flex;flex-direction:column;font-size:clamp(3rem,6.4vw,5.8rem);font-weight:800;letter-spacing:-.06em;line-height:.84;color:var(--ink);transition:transform .7s var(--ease)}
+.sh-card .ph .big em{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing:-.02em;color:#1F7F7C;font-size:1.06em;line-height:.9}
+.sh-card:hover .ph .big{transform:translateY(-6px)}
+.sh-card .ph img{width:100%;height:100%;object-fit:cover;object-position:var(--p,50% 30%);display:block;transition:transform .9s var(--ease)}
+.sh-card:hover .ph img{transform:scale(1.05)}
+.sh-card .tt{font-size:1.22rem;font-weight:800;letter-spacing:-.02em}
+.sh-card .tx{font-size:.95rem;line-height:1.5;color:#2E5A57;max-width:38ch}
+.sh-card .go{position:absolute;top:14px;right:14px;width:42px;height:42px;border-radius:50%;background:#FFFFFF;color:var(--ink);display:grid;place-items:center;font-weight:800;transform:scale(.85);opacity:0;transition:transform .45s var(--ease),opacity .3s}
+.sh-card:hover .go,.sh-card:focus-visible .go{transform:none;opacity:1}
+.sh-k{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.sh-n{font-size:.95rem;color:var(--muted);font-variant-numeric:tabular-nums} .sh-n b{color:var(--ink)}
+.sh-quote{min-height:clamp(180px,22vw,260px)}
+.sh-quote .q{margin:0;display:flex;flex-direction:column;gap:18px;opacity:0;transform:translateY(14px);transition:opacity .5s var(--ease),transform .6s var(--ease)}
+.sh-quote .q.on{opacity:1;transform:none}
+.sh-quote blockquote{margin:0;font-size:clamp(1.7rem,3.8vw,3rem);font-weight:800;letter-spacing:-.035em;line-height:1.12;color:var(--ink);max-width:24ch;text-wrap:balance}
+.sh-quote figcaption{font-size:1.02rem;line-height:1.6;color:#2E5A57;max-width:62ch}
+.sh-qfoot{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-top:clamp(28px,4vw,48px);padding-top:22px;border-top:1px solid var(--line);flex-wrap:wrap}
+.sh-num{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap} .sh-num b{font-size:1.6rem;font-weight:800;letter-spacing:-.03em;color:#1F7F7C} .sh-num span{font-size:.92rem;color:var(--muted);max-width:40ch}
+.sh-arrows{display:flex;gap:10px}
+.sh-arrows .ar{width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:#FFFFFF;color:var(--ink);font-size:18px;cursor:pointer;transition:background .25s,color .25s,transform .25s var(--ease)}
+.sh-arrows .ar.on{background:var(--ink);color:#FFFFFF;border-color:var(--ink)}
+.sh-arrows .ar:hover{transform:translateY(-2px)}
+@media (max-width:860px){.sh-2{grid-template-columns:minmax(0,1fr)} .sh-cards{grid-template-columns:minmax(0,1fr)} .sh-card .ph{aspect-ratio:16/9}
+  .sh-figs{grid-template-columns:repeat(2,minmax(0,1fr))} .sh-figs > div:nth-child(3){border-left:0;padding-left:0} .sh-figs > div:nth-child(n+3){margin-top:18px}
+  .sh-card .go{opacity:1;transform:none}}
 </style>
 
 <div id="preload" aria-hidden="true"><div class="pl"><span class="plw"><span>Paper</span></span><span class="plw"><em>Mint</em></span></div></div>
@@ -1378,7 +1488,7 @@ async function initStore(){
       db.doc("indicators/current").onSnapshot(d=>{ S.ind=d.exists?d.data():null; applyIndDefaults(); if((tab==="mkt"||tab==="ask") && !mk.busy && !mk.qBusy) render(); },()=>{});
       db.doc("data/users/"+id+"/routine").onSnapshot(d=>{ R.data=d.exists?{...d.data()}:{}; R.loaded=true; const ae=document.activeElement; if(tab==="rot" && !(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))) render(); },()=>{ R.loaded=true; });
       db.collection("monthly").onSnapshot(s=>{ S.monthly=s.docs.map(d=>({id:d.id,...d.data()})); if(tab==="mkt" && !mm.busy) render(); },()=>{});
-      db.collection("insights").orderBy("basedOn","desc").limit(10).onSnapshot(s=>{ S.insights=s.docs.map(d=>({id:d.id,...d.data()})); const ae=document.activeElement; if((tab==="mkt"||tab==="studio"||tab==="ask") && !mk.busy && !(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))) render(); },()=>{});
+      db.collection("insights").orderBy("basedOn","desc").limit(10).onSnapshot(s=>{ S.insights=s.docs.map(d=>({id:d.id,...d.data()})); const ae=document.activeElement; if((tab==="mkt"||tab==="studio"||tab==="ask"||tab==="news") && !mk.busy && !(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))) render(); },()=>{});
       return; }
   }catch{}
   S.ready=true; render();
@@ -1539,7 +1649,7 @@ const pieceBrand=p=>(p?.brand&&brandById(p.brand.id))||p?.brand||brand();
 const curBrand=()=>tab==="lib"?pieceBrand(S.pieces.find(x=>x.id===st.openPiece)):brand();
 function vStudio(){
   const np=S.pieces.length;
-  let h = `${heroFrame({label:"Content studio", ribbon:"From today's news to content ready to post. · ", thumb:"assets/studio-thumb.webp", thumbPos:"50% 45%", title:"From today's news", em:"to content ready to post.",
+  let h = `${heroFrame({label:"Content studio", sky:"sky-studio", ribbon:"From today's news to content ready to post. · ", thumb:"assets/studio-thumb.webp", thumbPos:"50% 45%", title:"From today's news", em:"to content ready to post.",
     cta:{text:"Start from today's news", attrs:'data-jump="#in"'},
     extra: `<button class="btn" type="button" data-golib>Your library (${S.pieces.length})</button>`+(window.RADAR_AI_KEY?`<button class="btn small" id="aikey" type="button">AI key</button>`:"")+(window.MINT_LOGOUT?`<button class="btn small" id="owLogin" type="button">Sign out</button>`:""),
     text:"Pick some news or write your own topic. The Studio suggests ideas and writes Instagram posts, LinkedIn posts and articles, opinion pieces, PowerPoint decks and newsletters, with a regulatory check built in.",
@@ -1582,11 +1692,64 @@ const srcTile = n => { n=n==="BCE"?"ECB":n; const ab=ABBR[n]||String(n||"?").sli
 /* the News tab: today's stories for everyone, to read at the source. Picking stories for content happens only in the Studio (vNews with pick) */
 function vNewsPage(){
   const day=S.news.find(n=>n.id===st.newsDay)||latestDay(), items=day?.items||[], srcs=new Set(items.map(i=>i.source).filter(Boolean));
-  return heroFrame({label:"Today's news", ribbon:"Today's money news, sorted. · ", photo:"assets/news-hero.webp", contain:"#F2EEEA", thumb:"assets/news-thumb.webp", thumbPos:"50% 50%",
-    title:"Today's money news,", em:"sorted for you.",
-    cta:{text:"Read the stories", attrs:'data-jump=".newslist"'},
-    text:"Every weekday morning and afternoon PaperMint gathers the money stories from trusted sources and sorts them by topic. Filter by topic or source and open any story at the original.",
-    tiles:srcTiles(day), num:String(items.length||0), numLabel:`stories from ${srcs.size||0} sources${day?", "+(day.id===latestDay()?.id?"today":"that day"):""}.`}) + vNews(false);
+  const t=day?.collectedAt?new Date(day.collectedAt).toLocaleString("en-GB",{weekday:"short",day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"}):"";
+  /* the front page opens on one big photo (a paper plane in the sky), the headline over the sky and the day's count at the foot */
+  return `<section class="phero" aria-label="Today's financial news">
+      <img class="bg" src="assets/news-plane.webp" srcset="assets/news-plane-960.webp 960w, assets/news-plane.webp 1920w" sizes="100vw" alt="" fetchpriority="high">
+      <div class="in">
+        <div class="top"><h1>Today's money news, <em>sorted for you.</em></h1>
+          <p class="phlead">Every weekday morning and afternoon PaperMint gathers the money stories from trusted sources and sorts them by topic. Filter by topic or source and open any story at the original.</p>
+          <button class="btn cta phcta" type="button" data-jump=".newslist">Read the news</button></div>
+        <div class="phfoot"><b>${items.length||0} stories · ${srcs.size||0} sources</b><span>${t?`Updated ${esc(t)}`:"Updated every weekday, morning and afternoon"}</span></div>
+      </div></section>`
+    + `<div class="sheets">${shAbout(items.length, srcs.size)}<section class="sheet s-tint" aria-label="Today's stories">${vNews(false)}</section>${shExplore()}${shBrief()}</div>`;
+}
+/* the front page below the hero, as stacked sheets (rounded tops that slide over the one before):
+   about + key figures, the stories, where to go next with photos, and The Brief's stories one at a time */
+function shAbout(n, s){
+  const fig=(v,l,count)=>`<div><b ${count?`data-count="${v}"`:""}>${count?"0":esc(v)}</b><span>${esc(l)}</span></div>`;
+  return `<section class="sheet s-white" aria-label="About PaperMint"><div class="sh-in">
+    <div class="sh-2"><h2 class="sh-h">About <span class="wm">Paper<em>Mint</em></span></h2>
+      <div class="sh-txt"><p><b>PaperMint</b> turns the day's financial news into something you can actually use. Every weekday morning and afternoon it reads ${s||14} trusted sources, keeps the stories that matter for your savings, loans and investments, and explains them in plain English.</p>
+        <p>Educational, never advice. Built as a Nova SBE project on AI and productivity.</p>
+        <button type="button" class="sh-more" data-tabgo="mkt" data-sub="brief">Read today's Brief <span aria-hidden="true">→</span></button></div></div>
+    <div class="sh-figs">${fig(n||0,"Stories today",1)}${fig(s||14,"Trusted sources",1)}${fig("2×","Updates every weekday")}${fig("0 €","To read, always")}</div>
+  </div></section>`;
+}
+function shExplore(){
+  const card=(img,pos,k,t,p,go,sub,word)=>`<button type="button" class="sh-card" data-tabgo="${go}"${sub?` data-sub="${sub}"`:""}><span class="ph" style="--mbg:${k}"><img src="${img}" alt="" loading="lazy" style="object-position:${pos}" onerror="this.remove()"><span class="big" aria-hidden="true">${word}</span></span>
+    <span class="tt">${t}</span><span class="tx">${p}</span><span class="go" aria-hidden="true">→</span></button>`;
+  return `<section class="sheet s-mint" aria-label="Explore PaperMint"><div class="sh-in">
+    <div class="sh-head"><h2 class="sh-h">Go <em>deeper</em></h2><button type="button" class="sh-link" data-tabgo="mkt">All of Markets <span aria-hidden="true">→</span></button></div>
+    <div class="sh-cards">
+      ${card("assets/markets-thumb.webp","50% 60%","#FBF0DE","The Brief","The day's four stories that matter for your money, minus the jargon.","mkt","brief","Daily<em>brief</em>")}
+      ${card("assets/markets-hero.webp","50% 50%","#FBF0DE","The Monthly Brief","The month in markets: the numbers, the factors and what to watch.","mkt","mes","Monthly<em>brief</em>")}
+      ${card("assets/ask-hero.webp","50% 50%","#D3CDC1","Ask PaperMint","Questions people ask about today's news, answered in plain English.","ask","","Ask<em>away</em>")}
+    </div></div></section>`;
+}
+function shBrief(){
+  const day=latestDay(), b=day?S.insights.find(i=>i.id===day.id)?.brief:null, ss=(b?.stories||[]).filter(x=>x.title);
+  if(!ss.length) return "";
+  return `<section class="sheet s-white" aria-label="From today's Brief"><div class="sh-in">
+    <div class="sh-head"><span class="sh-k">From today's Brief</span><span class="sh-n" aria-live="polite"><b>1</b>/${ss.length}</span></div>
+    <div class="sh-quote" data-quotes>${ss.map((x,i)=>`<figure class="q${i?"":" on"}" ${i?"hidden":""}><blockquote>${esc(x.title)}</blockquote>
+      <figcaption>${md(x.why_care||x.what_it_means||"")}</figcaption></figure>`).join("")}</div>
+    <div class="sh-qfoot">${b.number?.value?`<div class="sh-num"><b>${esc(b.number.value)}</b><span>${esc(b.number.caption||"")}</span></div>`:"<span></span>"}
+      <div class="sh-arrows"><button type="button" class="ar" data-q="-1" aria-label="Previous story">←</button><button type="button" class="ar on" data-q="1" aria-label="Next story">→</button></div></div>
+  </div></section>`;
+}
+/* sheets: numbers count up once when seen; the Brief quotes step with the arrows; cards open their tab */
+function sheetsFX(root){
+  root.querySelectorAll("[data-tabgo]").forEach(b=>b.onclick=()=>{ if(b.dataset.sub) mk.sub=b.dataset.sub; document.querySelector(`.tab[data-tab="${b.dataset.tabgo}"]`)?.click(); });
+  const qs=root.querySelector("[data-quotes]");
+  if(qs){ const all=[...qs.children], n=root.querySelector(".sh-n b"); let k=0;
+    root.querySelectorAll(".sh-arrows .ar").forEach(a=>a.onclick=()=>{ all[k].hidden=true; all[k].classList.remove("on"); k=(k+ +a.dataset.q+all.length)%all.length; all[k].hidden=false; requestAnimationFrame(()=>all[k].classList.add("on")); n.textContent=k+1; }); }
+  const els=root.querySelectorAll("[data-count]"); if(!els.length) return;
+  const run=el=>{ const to=+el.dataset.count; if(RM()){ el.textContent=to; return; } const t0=performance.now(), d=1100;
+    const f=t=>{ const p=Math.min(1,(t-t0)/d); el.textContent=Math.round(to*(1-Math.pow(1-p,3))); if(p<1) requestAnimationFrame(f); }; requestAnimationFrame(f);
+    setTimeout(()=>{ el.textContent=to; }, d+150); };   // lands on the real number even if the tab stops drawing frames
+  const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ run(e.target); io.unobserve(e.target); } }),{threshold:.6});
+  els.forEach(el=>io.observe(el));
 }
 function vNews(pick=true){
   const day = S.news.find(n=>n.id===st.newsDay);
@@ -1709,7 +1872,7 @@ function vLib(){
     <section class="panel"><span class="label">${esc(new Date(p.createdAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric"}))}</span><h1>${esc(p.idea?.title)}</h1><p class="muted">${esc(p.idea?.hook)}</p></section>`+vContent(p.content,{total:p.totalMs}); }
   const list=[...S.pieces].sort((a,b)=>(b.createdAt||0)-(a.createdAt||0));
   const done=list.reduce((a,p)=>a+(p.totalMs||0),0), savedH=list.length?Math.round(Math.max(0,list.length*baseline()*60000-done)/3600000*10)/10:0;
-  return `${heroFrame({label:"Library", ribbon:"Everything you've made, in one place. · ", title:"Everything", em:"you've made.",
+  return `${heroFrame({label:"Library", sky:"sky-studio", ribbon:"Everything you've made, in one place. · ", title:"Everything", em:"you've made.",
     cta:{text:"Back to the Studio", attrs:"data-gostudio"},
     extra:`<label class="field basef"><span class="label">Minutes a post takes by hand</span><input id="base" type="number" min="5" step="5" value="${baseline()}"></label>`,
     text:`Every piece you create in the Studio is saved here, with how long it took and its compliance score. ${list.length} piece${list.length===1?"":"s"} so far.`,
@@ -1780,7 +1943,7 @@ function vFaq(){
 function vAsk(){
   const day=latestDay();
   const nq=(latestPack()?.faq||[]).length;
-  let h = heroFrame({label:"Ask PaperMint", photo:"assets/ask-hero.webp", contain:"#D3CDC1", title:"Ask anything", em:"about today's money news.",
+  let h = heroFrame({label:"Ask PaperMint", sky:"sky-ask", photo:"assets/ask-hero.webp", contain:"#D3CDC1", title:"Ask anything", em:"about today's money news.",
     cta:{text:nq?"See today's questions":"Ask your question", attrs:`data-jump="${nq?".faq":".askbox"}"`},
     text:"Answers use the stories collected today and the verified indicators. Scenarios and risks, never buy or sell calls.",
     tiles:srcTiles(day), num:String(nq||(day?.items||[]).length||0), numLabel:nq?"questions answered today, from today's news.":"stories behind today's answers."});
@@ -1802,7 +1965,20 @@ function hlLead(t){ const e=md(t); if(e.includes("<b>")) return e.replace(/<b>(.
    ribbon whose words travel along a wave (WAVE), the title and call to action, the intro and a dark stat card. Photos come from assets/. */
 /* photos per page head: o.photo (wide, behind the ribbon) and o.thumb (small square). Missing ones keep the mint placeholder. */
 const srcTiles = day => { const src=(day?.sources||[]).map(n=>n==="BCE"?"ECB":n), ab=src.map(n=>ABBR[n]||String(n).slice(0,3).toUpperCase()); return (ab.length>=4?ab:["FT","WSJ","BBG","ECB"]).slice(0,4); };
+/* every tab opens like the front page: a full-width band in the illustration's paper colour, the picture on the right,
+   the big headline, the text and the buttons on the left, the key figure at the foot (same words as before) */
 function heroFrame(o){
+  const img=o.photo||o.thumb;
+  /* o.sky: the same mint sky as the front page (no hand, no plane), full width behind the words */
+  return `<section class="phero${o.sky?"":" ph-ill"}" aria-label="${esc(o.label)}" style="--pbg:${o.contain||"#F2EEEA"}">
+    ${o.sky?`<img class="bg" src="assets/${o.sky}.webp" srcset="assets/${o.sky}-960.webp 960w, assets/${o.sky}.webp 1200w" sizes="100vw" alt="" style="object-position:50% 45%">`
+      :img?`<img class="bg" src="${img}" alt="" onerror="this.remove()">`:""}
+    <div class="in"><div class="top"><h1>${esc(o.title)} <em>${esc(o.em)}</em></h1>
+      <p class="phlead">${esc(o.text)}</p>
+      <div class="phacts">${o.cta?`<button class="btn cta phcta" type="button" ${o.cta.attrs}>${esc(o.cta.text)}</button>`:""}${o.extra||""}</div></div>
+      <div class="phfoot phfig"><b>${esc(o.num)}</b><span>${esc(o.numLabel)}</span></div></div></section>`;
+}
+function heroFrameOld(o){
   return `<section class="pmhero" aria-label="${esc(o.label)}"><div class="card">
     <div class="media${o.contain?" contain":""}"${o.contain?` style="--mbg:${o.contain}"`:""}>${o.photo?`<img src="${o.photo}" alt="" style="--pos:${o.photoPos||"50% 50%"}" onerror="this.remove()">`:""}
       ${o.ribbon?`<svg class="ribbon" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -1819,7 +1995,7 @@ function heroFrame(o){
 }
 function heroHTML(day){
   const n=(day?.sources||[]).length||14;
-  return heroFrame({label:"PaperMint", ribbon:"Finance news, freshly minted. · ", title:"Daily fresh", em:"market insights.",
+  return heroFrame({label:"PaperMint", sky:"sky-markets", ribbon:"Finance news, freshly minted. · ", title:"Daily fresh", em:"market insights.",
     photo:"assets/markets-hero.webp", contain:"#FBF0DE", thumb:"assets/markets-thumb.webp", thumbPos:"50% 60%",
     cta:{text:"Read today's Brief", attrs:'data-jump=".seg" data-go="brief"'},
     text:`What today's news means for your money, in plain English. PaperMint reads ${n} trusted sources every weekday, picks the stories that matter for your savings, loans and investments, and explains them. Educational, never advice.`,
@@ -2535,13 +2711,13 @@ function render(){
   bind(); if(tab==="mkt"||tab==="ask") bindMarkets(); if(tab==="rot") bindRoutine();
   splitWords(m); window.RADAR_TILES?.(); LINES.mount(m); PIXELS.mount(m); WAVE.mount(m);
   m.querySelectorAll("[data-jump]").forEach(b=>b.onclick=()=>{ if(b.dataset.go&&mk.sub!==b.dataset.go){ mk.sub=b.dataset.go; render(); } document.querySelector(b.dataset.jump)?.scrollIntoView({behavior:RM()?"auto":"smooth",block:"start"}); });
-  renderTicker(); motion(m); window.RADAR_BAR?.(); scrollFX(document); SCRUB.mount(document);
+  renderTicker(); motion(m); window.RADAR_BAR?.(); scrollFX(document); SCRUB.mount(document); sheetsFX(m);
 }
 
 /* bar height + solid state */
 (()=>{ const hd=document.querySelector("header.top"), tk=document.getElementById("ticker");
   const size=()=>{ const th=hd.offsetHeight, hh=th+(tk&&tk.offsetHeight||0); document.documentElement.style.setProperty("--th",th+"px"); document.documentElement.style.setProperty("--hh",hh+"px"); };
-  const solid=()=>{ const hero=document.querySelector("#main > .dhero"); const lim=hero?hero.offsetHeight-(hd.offsetHeight+(tk?.offsetHeight||0)):0; document.body.classList.toggle("solid", scrollY>Math.max(8,lim)); };
+  const solid=()=>{ const hero=document.querySelector("#main > .dhero, #main > .phero"); const lim=hero?hero.offsetHeight-(hd.offsetHeight+(tk?.offsetHeight||0)):0; document.body.classList.toggle("solid", scrollY>Math.max(8,lim)); };
   addEventListener("resize",()=>{ size(); solid(); }); addEventListener("scroll",solid,{passive:true});
   new ResizeObserver(()=>{ size(); solid(); }).observe(hd); if(tk) new ResizeObserver(size).observe(tk);
   window.RADAR_BAR=()=>{ size(); solid(); }; size(); solid(); })();
@@ -2654,7 +2830,7 @@ const PIXELS=(()=>{
 })();
 /* section rules draw themselves from the left as each section and Brief story comes into view */
 const LINES=(()=>{ let io=null; return { mount(m){ io?.disconnect();
-  const els=[...m.querySelectorAll(":scope > section:not(.mast):not(.paperhead):not(.pmhero), .brief .story")]; els.forEach(el=>el.classList.add("cy"));
+  const els=[...m.querySelectorAll(":scope > section:not(.mast):not(.paperhead):not(.pmhero):not(.phero), .brief .story")]; els.forEach(el=>el.classList.add("cy"));
   if(matchMedia("(prefers-reduced-motion: reduce)").matches||!("IntersectionObserver" in window)){ els.forEach(el=>el.classList.add("on")); return; }
   io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("on"); io.unobserve(e.target); } }),{rootMargin:"0px 0px -12% 0px"});
   els.forEach(el=>io.observe(el)); } }; })();
