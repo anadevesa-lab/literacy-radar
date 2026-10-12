@@ -309,7 +309,7 @@ async function aiMonth(ym: string, indDoc: any) {
 Use ONLY the market data, the verified indicators and the news stories below (${files.length} days collected). Quote exact figures from them, invent nothing, no buy or sell calls, name no products.
 Reply with only JSON:
 {"titulo":"a sharp headline for the month, max 10 words","resumo":"4-6 sentences: the story of the month; you may use **bold** on 2-3 phrases",
-"sumup":{"frase":"the month in one memorable sentence, max 14 words; wrap the 1-2 key words in **double asterisks**","palavra":"the market mood in 1-2 words, e.g. Risk-on, Jittery, Cautious, Relief rally"},
+"sumup":{"frase":"the month in one memorable sentence, max 14 words; wrap the 1-2 key words in **double asterisks**","palavra":"the market mood, exactly one of: Risk-on, Risk-off, Cautious, Confident, Nervous, Relief rally","porque":"one plain-English sentence, max 18 words, explaining that mood with what happened"},
 "drivers":[{"factor":"what moved markets, max 6 words (e.g. ECB holds rates)","efeito":"positive|negative|mixed|neutral (its effect on markets)","texto":"2-3 sentences with the concrete numbers: what happened, how prices reacted and by how much"}],
 "themes":[{"titulo":"key theme, max 6 words","texto":"3-4 sentences of analysis: what is happening, why, what it means for rates, equities, bonds or currencies, with numbers"}],
 "questoes":[{"q":"a question investors and analysts are asking now, max 14 words","porque":"1-2 sentences on why it matters","sinais":"1 sentence: what data or event would answer it"}],
