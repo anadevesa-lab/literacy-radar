@@ -1279,6 +1279,21 @@ footer.foot::before{display:none!important}
 html.guest .subf[data-off]{display:none}
 .fcta .subf{margin-top:var(--s4)} .fcta .subf .lbl,.fcta .subf .note{color:inherit} .fcta .subf .note{opacity:.75}
 @media (max-width:480px){.subf .row{flex-wrap:wrap}.subf .row .btn{width:100%}}
+/* Go deeper: lettering-only cards in the mint tones, the last one dark */
+.deeper h2 em{font-family:var(--f-serif);font-style:italic;font-weight:400;color:#3AA89C}
+.dp-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,24px)}
+.dp-card{position:relative;display:flex;flex-direction:column;gap:6px;text-align:left;border:0;padding:0;background:none;font:inherit;color:var(--ink);cursor:pointer}
+.dp-big{position:relative;display:flex;flex-direction:column;justify-content:flex-end;aspect-ratio:4/5;border-radius:22px;background:var(--dbg);padding:clamp(16px,1.8vw,24px);margin-bottom:12px;overflow:hidden;
+  font-size:clamp(3rem,6.4vw,5.8rem);font-weight:800;letter-spacing:-.06em;line-height:.84;color:var(--ink);transition:transform .7s var(--ease)}
+.dp-big em{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing:-.02em;color:#1F7F7C;font-size:1.06em;line-height:.9}
+.dp-card[style*="#003C3B"] .dp-big{color:#FFFFFF} .dp-card[style*="#003C3B"] .dp-big em{color:#8DE6D8}
+.dp-card:hover .dp-big{transform:translateY(-4px)}
+.dp-go{position:absolute;top:14px;right:14px;width:42px;height:42px;border-radius:50%;background:#FFFFFF;color:var(--ink);display:grid;place-items:center;font-weight:800;transform:scale(.85);opacity:0;transition:transform .45s var(--ease),opacity .3s}
+.dp-card:hover .dp-go,.dp-card:focus-visible .dp-go{transform:none;opacity:1}
+.dp-card:focus-visible{outline:2px solid #3AA89C;outline-offset:4px;border-radius:22px}
+.dp-tt{font-size:1.22rem;font-weight:800;letter-spacing:-.02em}
+.dp-tx{font-size:.95rem;line-height:1.5;color:#2E5A57;max-width:38ch}
+@media (max-width:860px){.dp-cards{grid-template-columns:minmax(0,1fr)} .dp-big{aspect-ratio:16/9} .dp-go{opacity:1;transform:none}}
 </style>
 
 <div id="preload" aria-hidden="true"><div class="pl"><span class="plw"><span>Paper</span></span><span class="plw"><em>Mint</em></span></div></div>
@@ -1785,7 +1800,19 @@ function vNewsPage(){
     title:"Today's money news,", em:"sorted for you.",
     cta:{text:"Read the stories", attrs:'data-jump=".newslist"'},
     text:"Every weekday morning and afternoon PaperMint gathers the money stories from trusted sources and sorts them by topic. Filter by topic or source and open any story at the original.",
-    tiles:srcTiles(day), num:String(items.length||0), numLabel:`stories from ${srcs.size||0} sources${day?", "+(day.id===latestDay()?.id?"today":"that day"):""}.`}) + vNews(false);
+    tiles:srcTiles(day), num:String(items.length||0), numLabel:`stories from ${srcs.size||0} sources${day?", "+(day.id===latestDay()?.id?"today":"that day"):""}.`}) + vNews(false) + vDeeper();
+}
+/* Go deeper: three lettering cards (no pictures) that open The Brief, the Monthly Brief and Ask */
+function vDeeper(){
+  const card=(bg,word,t,p,go,sub)=>`<button type="button" class="dp-card" style="--dbg:${bg}" data-tabgo="${go}"${sub?` data-sub="${sub}"`:""}>
+    <span class="dp-big" aria-hidden="true">${word}</span><span class="dp-go" aria-hidden="true">→</span>
+    <span class="dp-tt">${t}</span><span class="dp-tx">${p}</span></button>`;
+  return `<section class="panel deeper" aria-label="Go deeper"><div class="row between"><h2>Go <em>deeper</em></h2></div>
+    <div class="dp-cards">
+      ${card("#E3F4EF","Daily<em>brief</em>","The Brief","The day's four stories that matter for your money, minus the jargon.","mkt","brief")}
+      ${card("#CFEDE7","Monthly<em>brief</em>","The Monthly Brief","The month in markets: the numbers, the factors and what to watch.","mkt","mes")}
+      ${card("#003C3B","Ask<em>away</em>","Ask PaperMint","Questions people ask about today's news, answered in plain English.","ask","")}
+    </div></section>`;
 }
 function vNews(pick=true){
   const day = S.news.find(n=>n.id===st.newsDay);
@@ -2735,6 +2762,7 @@ function render(){
   splitWords(m); window.RADAR_TILES?.(); LINES.mount(m); PIXELS.mount(m); WAVE.mount(m);
   m.querySelectorAll("[data-jump]").forEach(b=>b.onclick=()=>{ if(b.dataset.go&&mk.sub!==b.dataset.go){ mk.sub=b.dataset.go; render(); } document.querySelector(b.dataset.jump)?.scrollIntoView({behavior:RM()?"auto":"smooth",block:"start"}); });
   renderTicker(); motion(m); window.RADAR_BAR?.(); scrollFX(document); SCRUB.mount(document);
+  m.querySelectorAll("[data-tabgo]").forEach(b=>b.onclick=()=>{ if(b.dataset.sub) mk.sub=b.dataset.sub; document.querySelector(`.tab[data-tab="${b.dataset.tabgo}"]`)?.click(); });
 }
 
 /* bar height + solid state */
