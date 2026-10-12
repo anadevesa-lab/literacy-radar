@@ -69,12 +69,6 @@ async function main() {
   }
   if (!doc.brief && prev?.brief) doc.brief = prev.brief;
   if (!doc.pack && prev?.pack) doc.pack = prev.pack;
-  if (prev?.mailed) doc.mailed = prev.mailed;
-  // morning edition: email today's Brief to the Brevo list (once a day)
-  if (edition === "morning" && !doc.mailed && doc.brief?.stories?.length && doc.brief.basedOn === cur.collectedAt) {
-    try { const id = await mailBrief(day, doc.brief, cur.items); if (id) doc.mailed = { campaign: id, at: new Date().toISOString() }; }
-    catch (e) { console.log("email skipped:", String(e)); }
-  }
   await writeJSON(insPath, doc);
 
   // month in review: a structured news summary of the month so far, rewritten every afternoon;
@@ -435,49 +429,6 @@ Today's stories (${day}):
 ${top}`;
   const j = await gemini(p);
   return j && j.carousel && j.faq ? j : null;
-}
-
-// ---------- The Brief by email (Brevo, free plan: 300 emails/day) ----------
-// Repo secrets: BREVO_API_KEY, BREVO_LIST_ID (number), BREVO_SENDER_EMAIL (a sender verified in Brevo).
-// Optional: BREVO_SENDER_NAME. Without them this step is skipped.
-const SITE = "https://anadevesa-lab.github.io/literacy-radar/";
-async function mailBrief(day: string, brief: any, items: Item[]) {
-  const key = process.env.BREVO_API_KEY, list = Number(process.env.BREVO_LIST_ID), from = process.env.BREVO_SENDER_EMAIL;
-  if (!key || !list || !from) { console.log("email: Brevo not configured"); return null; }
-  const e = (x: any) => String(x ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]!));
-  const b = (x: any) => e(x).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
-  const date = new Date(day + "T12:00:00Z").toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" });
-  const F = "Manrope,Helvetica,Arial,sans-serif";
-  const story = (s: any) => { const it = items[(+s.i || 0) - 1] || ({} as Item); return `
-<tr><td style="padding:22px 0;border-top:1px solid #D3EAE6">
-<div style="font:700 11px/1 ${F};letter-spacing:.1em;text-transform:uppercase;color:#1F7F7C;margin:0 0 8px">${e(it.source || "")}</div>
-<div style="font:800 21px/1.25 ${F};color:#003C3B;margin:0 0 12px">${e(s.title)}</div>
-<p style="font:400 15px/1.6 ${F};color:#1F3F3E;margin:0 0 10px"><b>What's going on?</b> ${b(s.whats_going_on)}</p>
-<p style="font:400 15px/1.6 ${F};color:#1F3F3E;margin:0 0 10px"><b>What does it mean?</b> ${b(s.what_it_means)}</p>
-<p style="font:400 15px/1.6 ${F};color:#003C3B;margin:0 0 10px;background:#EEF8F6;padding:12px 14px;border-radius:10px"><b>Why should I care?</b> ${b(s.why_care)}</p>
-${it.url ? `<a href="${e(it.url)}" style="font:700 13px ${F};color:#1F7F7C">Read the source &rarr;</a>` : ""}
-</td></tr>`; };
-  const html = `<!doctype html><html><body style="margin:0;background:#EEF8F6">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#EEF8F6"><tr><td align="center" style="padding:24px 12px">
-<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#FFFFFF;border-radius:18px"><tr><td style="padding:32px 32px 8px">
-<div style="font:800 22px/1 ${F};color:#003C3B">Paper<i style="font-family:Georgia,serif;font-weight:400;color:#1F7F7C">Mint</i></div>
-<div style="font:600 13px/1.4 ${F};color:#1F6B68;margin:6px 0 22px">The Brief &middot; ${e(date)}</div>
-${brief.one_liner ? `<div style="font:700 19px/1.4 ${F};color:#003C3B;margin:0 0 18px">${b(brief.one_liner)}</div>` : ""}
-${brief.number?.value ? `<table role="presentation" cellpadding="0" cellspacing="0" style="background:#003C3B;border-radius:14px;margin:0 0 8px"><tr><td style="padding:16px 20px"><div style="font:800 34px/1 ${F};color:#8DE6D8">${e(brief.number.value)}</div><div style="font:500 13px/1.4 ${F};color:#E6F7F4;margin-top:6px">${e(brief.number.caption)}</div></td></tr></table>` : ""}
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0">${(brief.stories || []).map(story).join("")}</table>
-<p style="text-align:center;margin:18px 0 26px"><a href="${SITE}" style="display:inline-block;background:#003C3B;color:#FFFFFF;font:700 14px ${F};padding:13px 26px;border-radius:999px;text-decoration:none">Open PaperMint</a></p>
-<p style="font:400 11px/1.5 ${F};color:#5E8583;margin:0 0 24px">Written automatically from public news for financial education. Not investment advice. Capital is at risk.<br>A Nova SBE student project. <a href="{{ unsubscribe }}" style="color:#1F7F7C">Unsubscribe</a></p>
-</td></tr></table></td></tr></table></body></html>`;
-  const api = async (path: string, body: any) => {
-    const r = await fetch("https://api.brevo.com/v3" + path, { method: "POST", headers: { "api-key": key, "content-type": "application/json", accept: "application/json" }, body: JSON.stringify(body), signal: AbortSignal.timeout(20000) });
-    const t = await r.text(); if (!r.ok) throw new Error(`Brevo ${path} ${r.status}: ${t.slice(0, 200)}`); return t ? JSON.parse(t) : {};
-  };
-  const subject = `The Brief: ${String(brief.stories[0]?.title || "today's money news").slice(0, 80)}`;
-  const c = await api("/emailCampaigns", { name: `The Brief ${day}`, subject, previewText: String(brief.one_liner || "").slice(0, 140),
-    sender: { name: process.env.BREVO_SENDER_NAME || "PaperMint", email: from }, htmlContent: html, recipients: { listIds: [list] } });
-  await api(`/emailCampaigns/${c.id}/sendNow`, {});
-  console.log("email: The Brief sent, campaign", c.id);
-  return c.id;
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });

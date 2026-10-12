@@ -1,7 +1,7 @@
-// The monthly factsheet by email (Brevo): sent once, when the robot writes a month's final version
-// in the first days of the next month. Same list and secrets as The Brief (BREVO_API_KEY, BREVO_LIST_ID,
-// BREVO_SENDER_EMAIL). The email mirrors factsheetEmail() in src/app.html: keep the two in step.
-const SITE = "https://anadevesa-lab.github.io/literacy-radar/";
+// The Monthly Brief (the monthly factsheet by email, Brevo): sent once, when the robot writes a month's final
+// version in the first days of the next month. Repo secrets: BREVO_API_KEY, BREVO_LIST_ID, BREVO_SENDER_EMAIL.
+// The email mirrors factsheetEmail() in src/app.html: keep the two in step.
+import { SITE, HEAD, logo, footer } from "./email-kit.mts";
 const MOODS: Record<string, string> = {
   "risk-on": "Investors felt confident and bought riskier assets such as shares.", "risk-off": "Investors moved away from risk towards safer assets such as bonds and gold.",
   "cautious": "Investors held back, waiting for clearer signals before making big moves.", "confident": "Markets were calm and steady, with prices broadly moving up.",
@@ -13,7 +13,7 @@ const monthName = (ym: string) => { const [y, m] = ym.split("-"); return new Dat
 
 export function factsheetHTML(ym: string, sum: any) {
   const INK = "#003C3B", MINT = "#8DE6D8", TEAL = "#1F7F7C", TINT = "#F4FAF8", LINE = "#D7ECE7", BODY = "#2E5A57", MUTED = "#4D716E", AMBER = "#B26B00";
-  const F = "Arial,Helvetica,sans-serif", SERIF = "Georgia,'Times New Roman',serif";
+  const F = "Manrope,'Helvetica Neue',Helvetica,Arial,sans-serif", SERIF = "'Instrument Serif',Georgia,'Times New Roman',serif";
   const site = SITE + "#month";
   const mdE = (t: any) => esc(t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
   const line = sum.sumup?.frase || sum.titulo || "", mood = sum.sumup?.palavra || "", why = sum.sumup?.porque || MOODS[(mood || "").toLowerCase()] || "";
@@ -26,13 +26,13 @@ export function factsheetHTML(ym: string, sum: any) {
   const EFF: Record<string, [string, string]> = { positive: ["▲ Positive", TEAL], negative: ["▼ Negative", AMBER], mixed: ["◆ Mixed", MUTED], neutral: ["■ Neutral", MUTED] };
   const drivers = (sum.drivers || []).length ? sum.drivers : (sum.themes || []).map((t: any) => ({ factor: t.titulo, efeito: "mixed", texto: t.texto }));
   const month = monthName(ym);
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PaperMint · ${esc(month)} factsheet</title></head>
+  return `<!doctype html><html lang="en"><head>${HEAD}<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&display=swap" rel="stylesheet"><title>The Monthly Brief · ${esc(month)}</title></head>
 <body style="margin:0;padding:0;background:${TINT}">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${TINT}"><tr><td align="center" style="padding:24px 10px">
 <table role="presentation" width="640" cellpadding="0" cellspacing="0" style="width:640px;max-width:640px;background:#FFFFFF;border-radius:18px;overflow:hidden">
 <tr><td style="background:${INK};padding:20px 32px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
-  <td style="font:800 20px/1 ${F};color:#FFFFFF">Paper<span style="font:italic 400 22px ${SERIF};color:${MINT}">Mint</span></td>
-  <td align="right" style="font:700 11px/1 ${F};letter-spacing:1.5px;text-transform:uppercase;color:${MINT}">Monthly factsheet · ${esc(month)}</td></tr></table></td></tr>
+  <td>${logo(true, 22)}</td>
+  <td align="right" style="font:700 11px/1 ${F};letter-spacing:1.5px;text-transform:uppercase;color:${MINT}">The Monthly Brief · ${esc(month)}</td></tr></table></td></tr>
 <tr><td style="background:${INK};padding:8px 32px 30px">
   <div style="font:800 11px/1 ${F};letter-spacing:2px;text-transform:uppercase;color:${MINT};margin:0 0 12px">The month in one line</div>
   <div style="font:italic 400 32px/1.15 ${SERIF};color:#FFFFFF;margin:0 0 18px">${esc(line).replace(/\*\*(.+?)\*\*/g, `<span style="color:${MINT}">$1</span>`)}</div>
@@ -46,7 +46,8 @@ ${(sum.themes || []).length && (sum.drivers || []).length ? block(h5("Key themes
 ${(sum.questoes || []).length ? block(h5("Questions the market is asking") + sum.questoes.map((q: any, i: number) => `<div style="margin:0 0 14px"><div style="font:800 15px/1.35 ${F};color:${INK}"><span style="color:${TEAL}">Q${i + 1}</span>&nbsp; ${esc(q.q)}</div><div style="font:400 14px/1.55 ${F};color:${BODY};margin-top:4px">${mdE(q.porque)}</div>${q.sinais ? `<div style="font:400 13px/1.5 ${F};color:${MUTED};margin-top:4px"><b>What would answer it:</b> ${esc(q.sinais)}</div>` : ""}</div>`).join("")) : ""}
 ${(sum.vigiar || []).length ? block(`<div style="font:800 12px/1 ${F};letter-spacing:1.5px;text-transform:uppercase;color:${MINT};margin:0 0 12px">What to watch next month</div>` + sum.vigiar.map((v: any) => `<div style="font:400 14px/1.55 ${F};color:#E6F7F4;margin:0 0 8px">→ ${esc(v)}</div>`).join(""), INK) : ""}
 <tr><td align="left" style="padding:8px 32px 28px"><a href="${esc(site)}" style="display:inline-block;background:${MINT};color:${INK};font:800 15px/1 ${F};text-decoration:none;padding:15px 24px;border-radius:10px">Read the full factsheet &rarr;</a></td></tr>
-<tr><td style="padding:0 32px 30px"><div style="border-top:1px solid ${LINE};padding-top:16px;font:400 11px/1.55 ${F};color:${MUTED}">Market data: S&amp;P Dow Jones Indices, Nasdaq, Cboe, US Treasury, US Energy Information Administration and ICE BofA (published by the Federal Reserve), European Central Bank. Indicators: ECB, Eurostat, Bank of Portugal. For education only. Not investment advice. Past performance is not a guide to future returns.<br>A Nova SBE student project. <a href="{{ unsubscribe }}" style="color:${TEAL}">Unsubscribe</a></div></td></tr>
+${footer({ unsub: true, reason: "You're receiving the Monthly Brief because you subscribed on PaperMint. One email at the start of each month.",
+  sources: "Sources: market data from S&amp;P Dow Jones Indices, Nasdaq, Cboe, the US Treasury, the US Energy Information Administration and ICE BofA (published by the Federal Reserve) and the European Central Bank; official indicators from the ECB, Eurostat and Bank of Portugal; analysis of public financial news. Written with the help of AI and checked against official data." })}
 </table></td></tr></table></body></html>`;
 }
 
@@ -59,10 +60,10 @@ export async function mailFactsheet(ym: string, sum: any) {
     const t = await r.text(); if (!r.ok) throw new Error(`Brevo ${path} ${r.status}: ${t.slice(0, 200)}`); return t ? JSON.parse(t) : {};
   };
   const month = monthName(ym);
-  const c = await api("/emailCampaigns", { name: `Monthly factsheet ${ym}`, subject: `Your ${month} factsheet: ${String(sum.titulo || "the month in markets").slice(0, 70)}`,
+  const c = await api("/emailCampaigns", { name: `Monthly Brief ${ym}`, subject: `The Monthly Brief · ${month}: ${String(sum.titulo || "the month in markets").slice(0, 70)}`,
     previewText: String(sum.sumup?.frase || sum.resumo || "").replace(/\*\*/g, "").slice(0, 140),
     sender: { name: process.env.BREVO_SENDER_NAME || "PaperMint", email: from }, htmlContent: factsheetHTML(ym, sum), recipients: { listIds: [list] } });
   await api(`/emailCampaigns/${c.id}/sendNow`, {});
-  console.log("email: factsheet sent,", ym, "campaign", c.id);
+  console.log("email: Monthly Brief sent,", ym, "campaign", c.id);
   return c.id;
 }
