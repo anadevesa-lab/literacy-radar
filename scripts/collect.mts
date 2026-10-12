@@ -5,6 +5,7 @@
 // Run locally: node scripts/collect.mts   (Node 23.6+ runs TypeScript type annotations natively)
 import { readFile, writeFile, readdir, unlink, mkdir } from "node:fs/promises";
 import { join } from "node:path";
+import { mailFactsheet } from "./factsheet-mail.mts";
 
 type Item = { source: string; category: string; published: string; title: string; summary: string; url: string };
 const DATA = join(import.meta.dirname, "..", "data");
@@ -85,7 +86,13 @@ async function main() {
     if (edition === "afternoon" || !(await readJSON(join(DATA, "monthly", `${ym}.json`)))) todo.push({ ym, final: false });
     if (pym !== ym && !(await readJSON(join(DATA, "monthly", `${pym}.json`)))?.final) todo.push({ ym: pym, final: true });
     for (const t of todo) {
-      try { const m = await aiMonth(t.ym, ind); if (m) await writeJSON(join(DATA, "monthly", `${t.ym}.json`), { ...m, final: t.final, generatedAt: new Date().toISOString() }); }
+      try {
+        const m = await aiMonth(t.ym, ind); if (!m) continue;
+        const doc: any = { ...m, final: t.final, generatedAt: new Date().toISOString() };
+        // the final version of a month goes out once by email to the Brevo list
+        if (t.final) { try { const id = await mailFactsheet(t.ym, doc); if (id) doc.mailed = { campaign: id, at: new Date().toISOString() }; } catch (e) { console.log("factsheet email skipped:", String(e)); } }
+        await writeJSON(join(DATA, "monthly", `${t.ym}.json`), doc);
+      }
       catch (e) { console.log("month skipped:", t.ym, String(e)); }
     }
   }
