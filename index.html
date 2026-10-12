@@ -1316,8 +1316,10 @@ body:not(.solid):has(#main > .phero:first-child) .ticker{background:rgba(0,60,59
 .phero.ph-ill .top{max-width:min(46%,620px)}
 .phero.ph-ill h1{font-size:clamp(2.6rem,6vw,5.6rem)}
 .phero .phacts{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.phero.ph-ill .phfoot{flex-direction:row;align-items:baseline;gap:10px;max-width:46%}
-.phero.ph-ill .phfoot b{font-size:clamp(1.6rem,2.6vw,2.2rem);font-weight:800;letter-spacing:-.04em}
+.phero .phfoot.phfig{flex-direction:row;align-items:baseline;gap:10px;max-width:46ch}
+.phero .phfoot.phfig b{font-size:clamp(1.6rem,2.6vw,2.2rem);font-weight:800;letter-spacing:-.04em}
+/* over the mint photo the logo's "Mint" takes the deeper teal so it stays readable */
+body:not(.solid):has(#main > .phero:first-child) header.top:not(.open) .logo .wm em{color:#1F7F7C}
 @media (max-width:860px){
   .phero.ph-ill{min-height:0}
   .phero.ph-ill .in{padding-bottom:calc(clamp(28px,3.4vw,48px) + 46vw)}
@@ -1846,7 +1848,7 @@ const pieceBrand=p=>(p?.brand&&brandById(p.brand.id))||p?.brand||brand();
 const curBrand=()=>tab==="lib"?pieceBrand(S.pieces.find(x=>x.id===st.openPiece)):brand();
 function vStudio(){
   const np=S.pieces.length;
-  let h = `${heroFrame({label:"Content studio", ribbon:"From today's news to content ready to post. · ", thumb:"assets/studio-thumb.webp", thumbPos:"50% 45%", title:"From today's news", em:"to content ready to post.",
+  let h = `${heroFrame({label:"Content studio", sky:"sky-studio", ribbon:"From today's news to content ready to post. · ", thumb:"assets/studio-thumb.webp", thumbPos:"50% 45%", title:"From today's news", em:"to content ready to post.",
     cta:{text:"Start from today's news", attrs:'data-jump="#in"'},
     extra: `<button class="btn" type="button" data-golib>Your library (${S.pieces.length})</button>`+(window.RADAR_AI_KEY?`<button class="btn small" id="aikey" type="button">AI key</button>`:"")+(window.MINT_LOGOUT?`<button class="btn small" id="owLogin" type="button">Sign out</button>`:""),
     text:"Pick some news or write your own topic. The Studio suggests ideas and writes Instagram posts, LinkedIn posts and articles, opinion pieces, PowerPoint decks and newsletters, with a regulatory check built in.",
@@ -2069,7 +2071,7 @@ function vLib(){
     <section class="panel"><span class="label">${esc(new Date(p.createdAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric"}))}</span><h1>${esc(p.idea?.title)}</h1><p class="muted">${esc(p.idea?.hook)}</p></section>`+vContent(p.content,{total:p.totalMs}); }
   const list=[...S.pieces].sort((a,b)=>(b.createdAt||0)-(a.createdAt||0));
   const done=list.reduce((a,p)=>a+(p.totalMs||0),0), savedH=list.length?Math.round(Math.max(0,list.length*baseline()*60000-done)/3600000*10)/10:0;
-  return `${heroFrame({label:"Library", ribbon:"Everything you've made, in one place. · ", title:"Everything", em:"you've made.",
+  return `${heroFrame({label:"Library", sky:"sky-studio", ribbon:"Everything you've made, in one place. · ", title:"Everything", em:"you've made.",
     cta:{text:"Back to the Studio", attrs:"data-gostudio"},
     extra:`<label class="field basef"><span class="label">Minutes a post takes by hand</span><input id="base" type="number" min="5" step="5" value="${baseline()}"></label>`,
     text:`Every piece you create in the Studio is saved here, with how long it took and its compliance score. ${list.length} piece${list.length===1?"":"s"} so far.`,
@@ -2140,7 +2142,7 @@ function vFaq(){
 function vAsk(){
   const day=latestDay();
   const nq=(latestPack()?.faq||[]).length;
-  let h = heroFrame({label:"Ask PaperMint", photo:"assets/ask-hero.webp", contain:"#D3CDC1", title:"Ask anything", em:"about today's money news.",
+  let h = heroFrame({label:"Ask PaperMint", sky:"sky-ask", photo:"assets/ask-hero.webp", contain:"#D3CDC1", title:"Ask anything", em:"about today's money news.",
     cta:{text:nq?"See today's questions":"Ask your question", attrs:`data-jump="${nq?".faq":".askbox"}"`},
     text:"Answers use the stories collected today and the verified indicators. Scenarios and risks, never buy or sell calls.",
     tiles:srcTiles(day), num:String(nq||(day?.items||[]).length||0), numLabel:nq?"questions answered today, from today's news.":"stories behind today's answers."});
@@ -2166,12 +2168,14 @@ const srcTiles = day => { const src=(day?.sources||[]).map(n=>n==="BCE"?"ECB":n)
    the big headline, the text and the buttons on the left, the key figure at the foot (same words as before) */
 function heroFrame(o){
   const img=o.photo||o.thumb;
-  return `<section class="phero ph-ill" aria-label="${esc(o.label)}" style="--pbg:${o.contain||"#F2EEEA"}">
-    ${img?`<img class="bg" src="${img}" alt="" onerror="this.remove()">`:""}
+  /* o.sky: the same mint sky as the front page (no hand, no plane), full width behind the words */
+  return `<section class="phero${o.sky?"":" ph-ill"}" aria-label="${esc(o.label)}" style="--pbg:${o.contain||"#F2EEEA"}">
+    ${o.sky?`<img class="bg" src="assets/${o.sky}.webp" srcset="assets/${o.sky}-960.webp 960w, assets/${o.sky}.webp 1200w" sizes="100vw" alt="" style="object-position:50% 45%">`
+      :img?`<img class="bg" src="${img}" alt="" onerror="this.remove()">`:""}
     <div class="in"><div class="top"><h1>${esc(o.title)} <em>${esc(o.em)}</em></h1>
       <p class="phlead">${esc(o.text)}</p>
       <div class="phacts">${o.cta?`<button class="btn cta phcta" type="button" ${o.cta.attrs}>${esc(o.cta.text)}</button>`:""}${o.extra||""}</div></div>
-      <div class="phfoot"><b>${esc(o.num)}</b><span>${esc(o.numLabel)}</span></div></div></section>`;
+      <div class="phfoot phfig"><b>${esc(o.num)}</b><span>${esc(o.numLabel)}</span></div></div></section>`;
 }
 function heroFrameOld(o){
   return `<section class="pmhero" aria-label="${esc(o.label)}"><div class="card">
@@ -2190,7 +2194,7 @@ function heroFrameOld(o){
 }
 function heroHTML(day){
   const n=(day?.sources||[]).length||14;
-  return heroFrame({label:"PaperMint", ribbon:"Finance news, freshly minted. · ", title:"Daily fresh", em:"market insights.",
+  return heroFrame({label:"PaperMint", sky:"sky-markets", ribbon:"Finance news, freshly minted. · ", title:"Daily fresh", em:"market insights.",
     photo:"assets/markets-hero.webp", contain:"#FBF0DE", thumb:"assets/markets-thumb.webp", thumbPos:"50% 60%",
     cta:{text:"Read today's Brief", attrs:'data-jump=".seg" data-go="brief"'},
     text:`What today's news means for your money, in plain English. PaperMint reads ${n} trusted sources every weekday, picks the stories that matter for your savings, loans and investments, and explains them. Educational, never advice.`,
