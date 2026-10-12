@@ -40,7 +40,7 @@ for (const id of [1, 2, 3, 4]) {
   // keep every link placeholder the original had and ours lacks
   const keep = [...new Set([...String(t.htmlContent || "").matchAll(/href="(\{\{\s*[\w.]+\s*\}\})"/g)].map((m) => m[1]))]
     .filter((ph) => !T[id].html.includes(ph.replace(/\s+/g, " ")) && !T[id].html.includes(ph));
-  const extra = keep.map((ph) => `<p style="margin:12px 0 0"><a href="${ph}" style="font:700 13px ${F};color:#1F7F7C">${/resub|subscribe/i.test(ph) ? "Subscribe again" : "Manage my subscription"}</a></p>`).join("");
+  const extra = keep.map((ph) => `<p style="margin:12px 0 0"><a href="${ph}" style="font:700 13px ${F};color:#1F7F7C">${/unsub/i.test(ph) ? "Unsubscribe" : /resub|subscribe/i.test(ph) ? "Subscribe again" : "Manage my subscription"}</a></p>`).join("");
   if (keep.length) console.log(`template ${id}: keeping`, keep.join(", "));
   const html = extra ? T[id].html.replace("</td></tr></table></td></tr></table></body>", `${extra}</td></tr></table></td></tr></table></body>`) : T[id].html;
   await api("PUT", `/smtp/templates/${id}`, { subject: T[id].subject, htmlContent: html, sender: { name: "PaperMint", email: process.env.BREVO_SENDER_EMAIL }, templateName: T[id].name, isActive: true });
