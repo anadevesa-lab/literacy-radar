@@ -1271,6 +1271,29 @@ html.guest .subf[data-off]{display:none}
 @media (max-width:480px){.subf .row{flex-wrap:wrap}.subf .row .btn{width:100%}}
 .mrv > .subf{margin-top:var(--s5);padding-top:var(--s5);border-top:1px solid var(--line);max-width:none} .mrv > .subf .row{max-width:520px}
 
+/* ---- front page photo hero: full width, headline over the sky, the first sheet slides over its foot ---- */
+.phero{position:relative;margin-inline:calc(50% - 50vw);margin-top:calc(-1 * var(--s6));min-height:clamp(520px,86vh,860px);overflow:hidden;background:#3C93D6;color:#FFFFFF;display:flex}
+.phero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;transform-origin:0 0;transform:scale(1.25)}
+.phero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(0,60,59,.42) 0%,rgba(0,60,59,.14) 42%,transparent 70%);pointer-events:none}
+.phero .in{position:relative;z-index:1;width:100%;max-width:1240px;margin:0 auto;padding:clamp(40px,7vw,96px) clamp(16px,4vw,56px) calc(clamp(28px,3.4vw,48px) + clamp(24px,3vw,40px));display:flex;flex-direction:column;justify-content:space-between;gap:40px}
+.phero .top{display:flex;flex-direction:column;align-items:flex-start;gap:clamp(20px,2.6vw,32px)}
+.phero h1{margin:0;max-width:11.5ch;font-size:clamp(2.8rem,7.2vw,6.4rem);font-weight:800;letter-spacing:-.05em;line-height:.96;color:#FFFFFF;text-wrap:balance;text-shadow:0 2px 30px rgba(0,40,60,.18)}
+.phero h1 em{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing:-.015em;color:#8DE6D8}
+.phero .btn.phcta{background:#8DE6D8;color:#003C3B;border-color:#8DE6D8}
+.phero .btn.phcta:hover{background:#FFFFFF;border-color:#FFFFFF}
+.phero .phfoot{display:flex;flex-direction:column;gap:2px;font-size:.92rem;color:#FFFFFF} .phero .phfoot b{font-size:1rem} .phero .phfoot span{opacity:.88}
+.phero + .sheets{margin-top:calc(-1 * clamp(28px,3.4vw,48px))}
+@media (prefers-reduced-motion: no-preference){
+  .phero .bg{animation:phZoom 2.4s var(--ease) both}
+  @keyframes phZoom{from{transform:scale(1.4)} to{transform:scale(1.25)}}
+  .phero .top > *{animation:mfade .9s var(--ease) both} .phero .top > *:nth-child(2){animation-delay:.15s}
+  @supports (animation-timeline: scroll()){
+    .phero .in{animation:phLift linear both;animation-timeline:scroll();animation-range:0 70vh}
+    @keyframes phLift{to{transform:translateY(-12vh);opacity:.2}}
+  }
+}
+@media (max-width:640px){.phero{min-height:78vh} .phero .bg{object-position:50% 50%;transform:scale(1.1)} .phero::before{background:linear-gradient(180deg,rgba(0,60,59,.40) 0%,rgba(0,60,59,.10) 55%,transparent 80%)}}
+
 /* ---- front page sheets: full-width bands with rounded tops, each sliding over the one before (calm, editorial) ---- */
 .sheets{margin-inline:calc(50% - 50vw);margin-top:calc(-1 * var(--s8));display:flex;flex-direction:column}
 .sheet{position:relative;border-radius:clamp(28px,3.4vw,48px) clamp(28px,3.4vw,48px) 0 0;margin-top:calc(-1 * clamp(28px,3.4vw,48px));padding:clamp(48px,6vw,88px) clamp(16px,4vw,56px) calc(clamp(48px,6vw,88px) + clamp(28px,3.4vw,48px))}
@@ -1646,11 +1669,15 @@ const srcTile = n => { n=n==="BCE"?"ECB":n; const ab=ABBR[n]||String(n||"?").sli
 /* the News tab: today's stories for everyone, to read at the source. Picking stories for content happens only in the Studio (vNews with pick) */
 function vNewsPage(){
   const day=S.news.find(n=>n.id===st.newsDay)||latestDay(), items=day?.items||[], srcs=new Set(items.map(i=>i.source).filter(Boolean));
-  return heroFrame({label:"Today's news", ribbon:"Today's money news, sorted. · ", photo:"assets/news-hero.webp", contain:"#F2EEEA", thumb:"assets/news-thumb.webp", thumbPos:"50% 50%",
-    title:"Today's money news,", em:"sorted for you.",
-    cta:{text:"Read the stories", attrs:'data-jump=".newslist"'},
-    text:"Every weekday morning and afternoon PaperMint gathers the money stories from trusted sources and sorts them by topic. Filter by topic or source and open any story at the original.",
-    tiles:srcTiles(day), num:String(items.length||0), numLabel:`stories from ${srcs.size||0} sources${day?", "+(day.id===latestDay()?.id?"today":"that day"):""}.`})
+  const t=day?.collectedAt?new Date(day.collectedAt).toLocaleString("en-GB",{weekday:"short",day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"}):"";
+  /* the front page opens on one big photo (a paper plane in the sky), the headline over the sky and the day's count at the foot */
+  return `<section class="phero" aria-label="Today's financial news">
+      <img class="bg" src="assets/news-plane.webp" srcset="assets/news-plane-960.webp 960w, assets/news-plane.webp 1920w" sizes="100vw" alt="" fetchpriority="high">
+      <div class="in">
+        <div class="top"><h1>Today's financial news, <em>sorted for you.</em></h1>
+          <button class="btn cta phcta" type="button" data-jump=".newslist">Read the stories</button></div>
+        <div class="phfoot"><b>${items.length||0} stories · ${srcs.size||0} sources</b><span>${t?`Updated ${esc(t)}`:"Updated every weekday, morning and afternoon"}</span></div>
+      </div></section>`
     + `<div class="sheets">${shAbout(items.length, srcs.size)}<section class="sheet s-tint" aria-label="Today's stories">${vNews(false)}</section>${shExplore()}${shBrief()}</div>`;
 }
 /* the front page below the hero, as stacked sheets (rounded tops that slide over the one before):
