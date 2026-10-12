@@ -1294,6 +1294,26 @@ html.guest .subf[data-off]{display:none}
   }
 }
 @media (max-width:640px){.phero{min-height:80vh} .phero .bg{object-position:82% 70%}}
+/* the photo runs up under the menu and the ticker: both turn see-through over it, and solid again once you scroll past */
+.phero{margin-top:calc(-1 * (var(--hh) + var(--s6)))}
+.phero .in{padding-top:calc(var(--hh) + clamp(36px,6vw,84px))}
+body:not(.solid):has(#main > .phero:first-child) header.top:not(.open){background:rgba(255,255,255,.2)!important;backdrop-filter:blur(14px) saturate(1.2)!important;-webkit-backdrop-filter:blur(14px) saturate(1.2)!important;border-bottom:1px solid rgba(255,255,255,.4)!important;transition:background-color .4s ease}
+body:not(.solid):has(#main > .phero:first-child) .ticker{background:rgba(0,60,59,.42)!important;backdrop-filter:blur(10px)!important;-webkit-backdrop-filter:blur(10px)!important}
+/* the other tabs: the illustration sits on its own paper colour, on the right half */
+.phero.ph-ill{background:var(--pbg);min-height:clamp(520px,78vh,780px)}
+.phero.ph-ill::before{display:none}
+.phero.ph-ill .bg{left:auto;right:0;width:56%;object-fit:contain;object-position:100% 60%;-webkit-mask-image:radial-gradient(70% 62% at 62% 58%,#000 55%,transparent 100%);mask-image:radial-gradient(70% 62% at 62% 58%,#000 55%,transparent 100%)}
+.phero.ph-ill .top{max-width:min(46%,620px)}
+.phero.ph-ill h1{font-size:clamp(2.6rem,6vw,5.6rem)}
+.phero .phacts{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.phero.ph-ill .phfoot{flex-direction:row;align-items:baseline;gap:10px;max-width:46%}
+.phero.ph-ill .phfoot b{font-size:clamp(1.6rem,2.6vw,2.2rem);font-weight:800;letter-spacing:-.04em}
+@media (max-width:860px){
+  .phero.ph-ill{min-height:0}
+  .phero.ph-ill .in{padding-bottom:calc(clamp(28px,3.4vw,48px) + 46vw)}
+  .phero.ph-ill .top,.phero.ph-ill .phfoot{max-width:none}
+  .phero.ph-ill .bg{top:auto;bottom:clamp(28px,3.4vw,48px);width:100%;height:46vw;object-position:50% 100%}
+}
 
 /* ---- front page sheets: full-width bands with rounded tops, each sliding over the one before (calm, editorial) ---- */
 .sheets{margin-inline:calc(50% - 50vw);margin-top:calc(-1 * var(--s8));display:flex;flex-direction:column}
@@ -1943,7 +1963,18 @@ function hlLead(t){ const e=md(t); if(e.includes("<b>")) return e.replace(/<b>(.
    ribbon whose words travel along a wave (WAVE), the title and call to action, the intro and a dark stat card. Photos come from assets/. */
 /* photos per page head: o.photo (wide, behind the ribbon) and o.thumb (small square). Missing ones keep the mint placeholder. */
 const srcTiles = day => { const src=(day?.sources||[]).map(n=>n==="BCE"?"ECB":n), ab=src.map(n=>ABBR[n]||String(n).slice(0,3).toUpperCase()); return (ab.length>=4?ab:["FT","WSJ","BBG","ECB"]).slice(0,4); };
+/* every tab opens like the front page: a full-width band in the illustration's paper colour, the picture on the right,
+   the big headline, the text and the buttons on the left, the key figure at the foot (same words as before) */
 function heroFrame(o){
+  const img=o.photo||o.thumb;
+  return `<section class="phero ph-ill" aria-label="${esc(o.label)}" style="--pbg:${o.contain||"#F2EEEA"}">
+    ${img?`<img class="bg" src="${img}" alt="" onerror="this.remove()">`:""}
+    <div class="in"><div class="top"><h1>${esc(o.title)} <em>${esc(o.em)}</em></h1>
+      <p class="phlead">${esc(o.text)}</p>
+      <div class="phacts">${o.cta?`<button class="btn cta phcta" type="button" ${o.cta.attrs}>${esc(o.cta.text)}</button>`:""}${o.extra||""}</div></div>
+      <div class="phfoot"><b>${esc(o.num)}</b><span>${esc(o.numLabel)}</span></div></div></section>`;
+}
+function heroFrameOld(o){
   return `<section class="pmhero" aria-label="${esc(o.label)}"><div class="card">
     <div class="media${o.contain?" contain":""}"${o.contain?` style="--mbg:${o.contain}"`:""}>${o.photo?`<img src="${o.photo}" alt="" style="--pos:${o.photoPos||"50% 50%"}" onerror="this.remove()">`:""}
       ${o.ribbon?`<svg class="ribbon" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -2682,7 +2713,7 @@ function render(){
 /* bar height + solid state */
 (()=>{ const hd=document.querySelector("header.top"), tk=document.getElementById("ticker");
   const size=()=>{ const th=hd.offsetHeight, hh=th+(tk&&tk.offsetHeight||0); document.documentElement.style.setProperty("--th",th+"px"); document.documentElement.style.setProperty("--hh",hh+"px"); };
-  const solid=()=>{ const hero=document.querySelector("#main > .dhero"); const lim=hero?hero.offsetHeight-(hd.offsetHeight+(tk?.offsetHeight||0)):0; document.body.classList.toggle("solid", scrollY>Math.max(8,lim)); };
+  const solid=()=>{ const hero=document.querySelector("#main > .dhero, #main > .phero"); const lim=hero?hero.offsetHeight-(hd.offsetHeight+(tk?.offsetHeight||0)):0; document.body.classList.toggle("solid", scrollY>Math.max(8,lim)); };
   addEventListener("resize",()=>{ size(); solid(); }); addEventListener("scroll",solid,{passive:true});
   new ResizeObserver(()=>{ size(); solid(); }).observe(hd); if(tk) new ResizeObserver(size).observe(tk);
   window.RADAR_BAR=()=>{ size(); solid(); }; size(); solid(); })();
@@ -2795,7 +2826,7 @@ const PIXELS=(()=>{
 })();
 /* section rules draw themselves from the left as each section and Brief story comes into view */
 const LINES=(()=>{ let io=null; return { mount(m){ io?.disconnect();
-  const els=[...m.querySelectorAll(":scope > section:not(.mast):not(.paperhead):not(.pmhero), .brief .story")]; els.forEach(el=>el.classList.add("cy"));
+  const els=[...m.querySelectorAll(":scope > section:not(.mast):not(.paperhead):not(.pmhero):not(.phero), .brief .story")]; els.forEach(el=>el.classList.add("cy"));
   if(matchMedia("(prefers-reduced-motion: reduce)").matches||!("IntersectionObserver" in window)){ els.forEach(el=>el.classList.add("on")); return; }
   io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("on"); io.unobserve(e.target); } }),{rootMargin:"0px 0px -12% 0px"});
   els.forEach(el=>io.observe(el)); } }; })();
