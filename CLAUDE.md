@@ -16,6 +16,8 @@ Financial-literacy site (Nova SBE project, "Boosting productivity with AI"). Pub
 - Owner sign-in: email+password checked against `OWNER_HASH` (salted SHA-256) in `src/shim-gh.js`; `ENC_KEY` is the owner's Gemini key encrypted with her password (AES-GCM/PBKDF2). Menu: News, Markets, Ask, Studio. News is the front page; the PaperMint logo links to ./ (reloads onto News, at the top). Visitors see News, Markets and Ask; the Studio tab opens the sign-in (Sign out sits in the Studio head, not the footer). The Library has no tab: it lives inside the Studio ("Your library" button), owner only. The News tab is read-only (stories open at the source); picking stories to make content exists only in the Studio. Studio brand kits (palette, type, logo, kept in localStorage `mint-brands`) style the carousel, the .pptx deck and the newsletter, which is built as email-ready HTML (tables, inline styles).
 - Respect `prefers-reduced-motion`; check desktop (1366px) and phone (390px).
 
+- Email (Brevo, free): the Subscribe box (footer + end of The Brief) posts to Ana's Brevo form URL in `BREVO_FORM` (src/app.html; empty = hidden for visitors). Each morning run, the robot emails The Brief to the Brevo list as a campaign (`mailBrief` in collect.mts), once a day (`mailed` in the insights file). Repo secrets: `BREVO_API_KEY`, `BREVO_LIST_ID`, `BREVO_SENDER_EMAIL`. Never put the Brevo key in the site.
+
 ## Design
 - Palette: #8DE6D8 #5BC8B6 #3AA89C #1F7F7C #0F5854 #003C3B. White background always. Manrope, bold headings.
 - Menu bar solid white; dark news ticker under it (keep it).

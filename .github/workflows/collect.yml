@@ -21,6 +21,9 @@ jobs:
       - name: Collect news, daily map and The Brief
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_LIST_ID: ${{ secrets.BREVO_LIST_ID }}
+          BREVO_SENDER_EMAIL: ${{ secrets.BREVO_SENDER_EMAIL }}
         run: node scripts/collect.mts
       - name: Save
         run: |

@@ -1264,6 +1264,21 @@ footer.foot::before{display:none!important}
 .bp-voice{font-size:13px!important;opacity:.85;border-top:1px solid rgba(0,0,0,.08);padding-top:8px;margin-top:4px!important} .bp-body .bp-voice b{font-size:inherit;margin-right:4px}
 .nlframe{width:100%;min-height:600px;border:1px solid var(--line);border-radius:16px;background:#fff;display:block}
 
+
+/* subscribe box (Brevo form; no key in the site) */
+.subf{display:flex;flex-direction:column;gap:var(--s2);width:100%;max-width:460px}
+.subf .lbl{font-size:var(--t-sm);font-weight:700;color:var(--ink)}
+.subf .row{display:flex;gap:var(--s2);flex-wrap:nowrap}
+.subf input[type=email]{flex:1;min-width:0;font:inherit;padding:12px 16px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink)}
+.subf input[type=email]:focus{outline:2px solid #3AA89C;outline-offset:1px}
+.subf .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.subf .note{font-size:12px;color:var(--muted);margin:0}
+.subf.done .row{display:none}
+.brief .subf{margin-top:var(--s5);padding-top:var(--s5);border-top:1px solid var(--line);max-width:none}
+.brief .subf .row{max-width:520px}
+html.guest .subf[data-off]{display:none}
+.fcta .subf{margin-top:var(--s4)} .fcta .subf .lbl,.fcta .subf .note{color:inherit} .fcta .subf .note{opacity:.75}
+@media (max-width:480px){.subf .row{flex-wrap:wrap}.subf .row .btn{width:100%}}
 </style>
 
 <div id="preload" aria-hidden="true"><div class="pl"><span class="plw"><span>Paper</span></span><span class="plw"><em>Mint</em></span></div></div>
@@ -1279,7 +1294,8 @@ footer.foot::before{display:none!important}
     <div class="fhead">
       <div class="fcopy"><h2 class="mega">Stay curious. <em>Stay ahead.</em></h2></div>
       <div class="fside"><p class="guest-only">Read what moved today and see what it means for your money, in plain English, every weekday.</p><p class="owner-only">Read what moved today, see what it means for your money, then turn it into content in minutes.</p>
-        <div class="row"><button class="btn primary owner-only" data-tab="studio" type="button">Open the Studio</button><button class="btn primary guest-only" data-tab="mkt" type="button">Read today's Brief</button></div></div>
+        <div class="row"><button class="btn primary owner-only" data-tab="studio" type="button">Open the Studio</button><button class="btn primary guest-only" data-tab="mkt" type="button">Read today's Brief</button></div>
+        <!--SUBF--></div>
     </div>
   </div></section>
   <div class="fbot"><div class="in">
@@ -1488,6 +1504,25 @@ footer.foot::before{display:none!important}
 (() => {
 const $ = s => document.querySelector(s);
 const OWNER = !window.RADAR_STANDALONE || !!window.MINT_OWNER; document.documentElement.classList.toggle("guest", !OWNER);
+/* Subscribe: posts to Ana's Brevo subscription form (Brevo > Contacts > Forms > Share > "URL of the form").
+   The Brevo API key is never in the site: it lives only in the GitHub secret BREVO_API_KEY, used by the robot. */
+const BREVO_FORM = "";
+const subHTML = (where) => `<form class="subf" data-subf="${where}" ${BREVO_FORM?"":"data-off"} novalidate>
+  <span class="lbl">Get The Brief by email, every weekday morning</span>
+  <div class="row"><input type="email" name="EMAIL" required autocomplete="email" placeholder="you@email.com" aria-label="Your email"><button class="btn primary" type="submit">Subscribe</button></div>
+  <input class="hp" type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <p class="note">${BREVO_FORM?"Free. One short email a day. Unsubscribe in one click.":"Owner note: paste the Brevo form URL into BREVO_FORM to switch this on."}</p></form>`;
+document.addEventListener("submit", async e => {
+  const f=e.target.closest?.(".subf"); if(!f) return; e.preventDefault();
+  const em=f.querySelector("input[type=email]"), v=em.value.trim(), note=f.querySelector(".note");
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){ em.focus(); note.textContent="Please check your email address."; return; }
+  if(!BREVO_FORM){ note.textContent="Sign-ups open soon."; return; }
+  const fd=new FormData(); fd.append("EMAIL",v); fd.append("email_address_check",""); fd.append("locale","en");
+  f.querySelector("button").disabled=true;
+  try{ await fetch(BREVO_FORM,{method:"POST",mode:"no-cors",body:fd}); f.classList.add("done"); note.textContent="Almost there: check your inbox and confirm your email."; }
+  catch{ f.querySelector("button").disabled=false; note.textContent="Something went wrong. Please try again."; }
+});
+document.querySelectorAll("footer .fside").forEach(el=>{ el.innerHTML=el.innerHTML.replace("<!--SUBF-->",subHTML("footer")); });
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const uid = p => p + Date.now().toString(36) + Math.random().toString(36).slice(2,7);
 const ls = { get(k,d){try{return localStorage.getItem(k)??d}catch{return d}}, set(k,v){try{localStorage.setItem(k,v)}catch{}} };
@@ -2077,7 +2112,7 @@ function vBrief(){
       <div class="q"><b>What does this mean?</b><p>${md(x.what_it_means)}</p></div>
       <div class="q care"><b>Why should I care?</b><p>${md(x.why_care)}</p></div>
       <div class="acts"><button class="btn small" type="button" data-bstory="${k}">Turn into content</button>${it.url?`<a class="btn small" href="${esc(it.url)}" target="_blank" rel="noopener">Read the source ↗</a>`:""}</div></article>`; }).join("")}</div>
-    <p class="disc">Written automatically from public news for financial education. Not investment advice. Capital is at risk.</p></section>`;
+    <p class="disc">Written automatically from public news for financial education. Not investment advice. Capital is at risk.</p>${subHTML("brief")}</section>`;
   return h;
 }
 async function serverRefresh(){
