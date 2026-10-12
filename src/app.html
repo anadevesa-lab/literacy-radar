@@ -1317,44 +1317,6 @@ body:not(.solid):has(#main > .phero:first-child) header.top:not(.open) .logo .wm
   .phero.ph-ill .bg{top:auto;bottom:clamp(28px,3.4vw,48px);width:100%;height:46vw;object-position:50% 100%}
 }
 
-/* ---- dark heroes (October 2026): the footer's deep green at the top of every tab, only white and mint lettering,
-   played big: the plain words heavy and white, the serif italic larger still in mint, the page's name as a giant faint word ---- */
-.phero,.phero.ph-ill{background:radial-gradient(120% 90% at 88% 0%,#0F5854 0%,#062B2A 52%,#041F1E 100%)!important;color:#E6F7F4;min-height:clamp(560px,92vh,920px)}
-.phero::before{display:none}
-.phero .phmark{position:absolute;right:-.06em;bottom:-.2em;font-size:clamp(7rem,27vw,26rem);font-weight:800;letter-spacing:-.07em;line-height:.8;color:rgba(141,230,216,.075);white-space:nowrap;pointer-events:none;user-select:none}
-.phero .top,.phero.ph-ill .top{max-width:min(1100px,100%)}
-.phero h1,.phero.ph-ill h1{max-width:none;font-size:clamp(3.4rem,10vw,9.6rem);line-height:.86;letter-spacing:-.065em;color:#FFFFFF;display:flex;flex-direction:column;align-items:flex-start}
-.phero h1 em{display:block;font-size:1.12em;line-height:.92;letter-spacing:-.025em;color:#8DE6D8;margin-left:clamp(0px,6vw,96px)}
-.phero .phlead{font-size:clamp(1.05rem,1.5vw,1.3rem);line-height:1.55;color:rgba(230,247,244,.82);max-width:48ch}
-.phero .btn.phcta{background:#8DE6D8;color:#003C3B;border-color:#8DE6D8;font-size:1rem;padding-inline:26px;min-height:52px}
-.phero .btn.phcta:hover{background:#FFFFFF;border-color:#FFFFFF}
-.phero .phacts .btn:not(.phcta){background:transparent;color:#E6F7F4;border:1px solid rgba(230,247,244,.35)}
-.phero .phacts .btn:not(.phcta):hover{border-color:#8DE6D8;color:#8DE6D8}
-.phero .phfoot,.phero .phfoot span{color:rgba(230,247,244,.78)}
-.phero .phfoot b{color:#FFFFFF}
-.phero .phfoot.phfig b{font-size:clamp(2.6rem,5vw,4.2rem);color:#8DE6D8;line-height:1}
-.phero .basef .label{color:rgba(230,247,244,.8)}
-/* menu and ticker over the dark band: see-through, light type, mint pill on the open tab */
-body:not(.solid):has(#main > .phero:first-child) header.top:not(.open){background:rgba(4,31,30,.25)!important;border-bottom:1px solid rgba(230,247,244,.12)!important}
-body:not(.solid):has(#main > .phero:first-child) header.top:not(.open) .logo .wm{color:#FFFFFF}
-body:not(.solid):has(#main > .phero:first-child) header.top:not(.open) .logo .wm em{color:#8DE6D8}
-body:not(.solid):has(#main > .phero:first-child) header.top:not(.open) .tab{color:rgba(230,247,244,.82)}
-body:not(.solid):has(#main > .phero:first-child) header.top:not(.open) .tab:hover{color:#FFFFFF;background:rgba(230,247,244,.08)}
-body:not(.solid):has(#main > .phero:first-child) header.top:not(.open) .tab.on{color:#003C3B!important}
-body:not(.solid):has(#main > .phero:first-child) header.top:not(.open) .tabind,
-body:not(.solid):has(#main > .phero:first-child) header.top:not(.open) .tabs.noind .tab.on{background:#8DE6D8!important}
-body:not(.solid):has(#main > .phero:first-child) header.top:not(.open) .burger span{background:#FFFFFF}
-body:not(.solid):has(#main > .phero:first-child) header.top:not(.open) #aikeyTop{color:#E6F7F4;background:transparent;border-color:rgba(230,247,244,.35)}
-body:not(.solid):has(#main > .phero:first-child) .ticker{background:rgba(4,31,30,.35)!important}
-@media (max-width:640px){.phero h1 em{margin-left:0} .phero{min-height:86vh}}
-
-/* footer: the dark green band runs the full width and down to the very end of the page */
-footer.foot{padding:0!important}
-.fcard{max-width:none!important;border-radius:clamp(28px,3.4vw,48px) clamp(28px,3.4vw,48px) 0 0!important;padding:clamp(8px,1.4vw,16px) clamp(16px,4vw,56px) 0!important}
-.fcard > *{max-width:1240px;margin-inline:auto}
-main.wrap:has(> .sheets){padding-bottom:0!important}
-main.wrap:has(> .sheets) + footer.foot .fcard{margin-top:calc(-1 * clamp(28px,3.4vw,48px));position:relative}
-
 /* ---- front page sheets: full-width bands with rounded tops, each sliding over the one before (calm, editorial) ---- */
 .sheets{margin-inline:calc(50% - 50vw);margin-top:calc(-1 * var(--s8));display:flex;flex-direction:column}
 .sheet{position:relative;border-radius:clamp(28px,3.4vw,48px) clamp(28px,3.4vw,48px) 0 0;margin-top:calc(-1 * clamp(28px,3.4vw,48px));padding:clamp(48px,6vw,88px) clamp(16px,4vw,56px) calc(clamp(48px,6vw,88px) + clamp(28px,3.4vw,48px))}
@@ -1687,7 +1649,7 @@ const pieceBrand=p=>(p?.brand&&brandById(p.brand.id))||p?.brand||brand();
 const curBrand=()=>tab==="lib"?pieceBrand(S.pieces.find(x=>x.id===st.openPiece)):brand();
 function vStudio(){
   const np=S.pieces.length;
-  let h = `${heroFrame({label:"Content studio", mark:"Studio", ribbon:"From today's news to content ready to post. · ", thumb:"assets/studio-thumb.webp", thumbPos:"50% 45%", title:"From today's news", em:"to content ready to post.",
+  let h = `${heroFrame({label:"Content studio", sky:"sky-studio", ribbon:"From today's news to content ready to post. · ", thumb:"assets/studio-thumb.webp", thumbPos:"50% 45%", title:"From today's news", em:"to content ready to post.",
     cta:{text:"Start from today's news", attrs:'data-jump="#in"'},
     extra: `<button class="btn" type="button" data-golib>Your library (${S.pieces.length})</button>`+(window.RADAR_AI_KEY?`<button class="btn small" id="aikey" type="button">AI key</button>`:"")+(window.MINT_LOGOUT?`<button class="btn small" id="owLogin" type="button">Sign out</button>`:""),
     text:"Pick some news or write your own topic. The Studio suggests ideas and writes Instagram posts, LinkedIn posts and articles, opinion pieces, PowerPoint decks and newsletters, with a regulatory check built in.",
@@ -1732,7 +1694,8 @@ function vNewsPage(){
   const day=S.news.find(n=>n.id===st.newsDay)||latestDay(), items=day?.items||[], srcs=new Set(items.map(i=>i.source).filter(Boolean));
   const t=day?.collectedAt?new Date(day.collectedAt).toLocaleString("en-GB",{weekday:"short",day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"}):"";
   /* the front page opens on one big photo (a paper plane in the sky), the headline over the sky and the day's count at the foot */
-  return `<section class="phero" aria-label="Today's financial news"><span class="phmark" aria-hidden="true">News</span>
+  return `<section class="phero" aria-label="Today's financial news">
+      <img class="bg" src="assets/news-plane.webp" srcset="assets/news-plane-960.webp 960w, assets/news-plane.webp 1920w" sizes="100vw" alt="" fetchpriority="high">
       <div class="in">
         <div class="top"><h1>Today's money news, <em>sorted for you.</em></h1>
           <p class="phlead">Every weekday morning and afternoon PaperMint gathers the money stories from trusted sources and sorts them by topic. Filter by topic or source and open any story at the original.</p>
@@ -1909,7 +1872,7 @@ function vLib(){
     <section class="panel"><span class="label">${esc(new Date(p.createdAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric"}))}</span><h1>${esc(p.idea?.title)}</h1><p class="muted">${esc(p.idea?.hook)}</p></section>`+vContent(p.content,{total:p.totalMs}); }
   const list=[...S.pieces].sort((a,b)=>(b.createdAt||0)-(a.createdAt||0));
   const done=list.reduce((a,p)=>a+(p.totalMs||0),0), savedH=list.length?Math.round(Math.max(0,list.length*baseline()*60000-done)/3600000*10)/10:0;
-  return `${heroFrame({label:"Library", mark:"Library", ribbon:"Everything you've made, in one place. · ", title:"Everything", em:"you've made.",
+  return `${heroFrame({label:"Library", sky:"sky-studio", ribbon:"Everything you've made, in one place. · ", title:"Everything", em:"you've made.",
     cta:{text:"Back to the Studio", attrs:"data-gostudio"},
     extra:`<label class="field basef"><span class="label">Minutes a post takes by hand</span><input id="base" type="number" min="5" step="5" value="${baseline()}"></label>`,
     text:`Every piece you create in the Studio is saved here, with how long it took and its compliance score. ${list.length} piece${list.length===1?"":"s"} so far.`,
@@ -1980,7 +1943,7 @@ function vFaq(){
 function vAsk(){
   const day=latestDay();
   const nq=(latestPack()?.faq||[]).length;
-  let h = heroFrame({label:"Ask PaperMint", mark:"Ask", photo:"assets/ask-hero.webp", contain:"#D3CDC1", title:"Ask anything", em:"about today's money news.",
+  let h = heroFrame({label:"Ask PaperMint", sky:"sky-ask", photo:"assets/ask-hero.webp", contain:"#D3CDC1", title:"Ask anything", em:"about today's money news.",
     cta:{text:nq?"See today's questions":"Ask your question", attrs:`data-jump="${nq?".faq":".askbox"}"`},
     text:"Answers use the stories collected today and the verified indicators. Scenarios and risks, never buy or sell calls.",
     tiles:srcTiles(day), num:String(nq||(day?.items||[]).length||0), numLabel:nq?"questions answered today, from today's news.":"stories behind today's answers."});
@@ -2007,8 +1970,9 @@ const srcTiles = day => { const src=(day?.sources||[]).map(n=>n==="BCE"?"ECB":n)
 function heroFrame(o){
   const img=o.photo||o.thumb;
   /* o.sky: the same mint sky as the front page (no hand, no plane), full width behind the words */
-  /* the dark green of the footer, white and mint lettering only, the page's name as a giant faint word */
-  return `<section class="phero" aria-label="${esc(o.label)}"><span class="phmark" aria-hidden="true">${esc(o.mark||o.label)}</span>
+  return `<section class="phero${o.sky?"":" ph-ill"}" aria-label="${esc(o.label)}" style="--pbg:${o.contain||"#F2EEEA"}">
+    ${o.sky?`<img class="bg" src="assets/${o.sky}.webp" srcset="assets/${o.sky}-960.webp 960w, assets/${o.sky}.webp 1200w" sizes="100vw" alt="" style="object-position:50% 45%">`
+      :img?`<img class="bg" src="${img}" alt="" onerror="this.remove()">`:""}
     <div class="in"><div class="top"><h1>${esc(o.title)} <em>${esc(o.em)}</em></h1>
       <p class="phlead">${esc(o.text)}</p>
       <div class="phacts">${o.cta?`<button class="btn cta phcta" type="button" ${o.cta.attrs}>${esc(o.cta.text)}</button>`:""}${o.extra||""}</div></div>
@@ -2031,7 +1995,7 @@ function heroFrameOld(o){
 }
 function heroHTML(day){
   const n=(day?.sources||[]).length||14;
-  return heroFrame({label:"PaperMint", mark:"Markets", ribbon:"Finance news, freshly minted. · ", title:"Daily fresh", em:"market insights.",
+  return heroFrame({label:"PaperMint", sky:"sky-markets", ribbon:"Finance news, freshly minted. · ", title:"Daily fresh", em:"market insights.",
     photo:"assets/markets-hero.webp", contain:"#FBF0DE", thumb:"assets/markets-thumb.webp", thumbPos:"50% 60%",
     cta:{text:"Read today's Brief", attrs:'data-jump=".seg" data-go="brief"'},
     text:`What today's news means for your money, in plain English. PaperMint reads ${n} trusted sources every weekday, picks the stories that matter for your savings, loans and investments, and explains them. Educational, never advice.`,
