@@ -1307,7 +1307,7 @@ const $ = s => document.querySelector(s);
 const OWNER = !window.RADAR_STANDALONE || !!window.MINT_OWNER; document.documentElement.classList.toggle("guest", !OWNER);
 /* Subscribe: posts to Ana's Brevo subscription form (Brevo > Contacts > Forms > Share > "URL of the form").
    The Brevo API key is never in the site: it lives only in the GitHub secret BREVO_API_KEY, used by the robot. */
-const BREVO_FORM = "";
+const BREVO_FORM = "https://5f87ee63.sibforms.com/serve/MUIFAHvSnNOhnplVEp_F7YxSfcwIhklupaQ_mT3cc27ZdtR8UQgY0N63frU0Mrg7zEO1sqtbjaOIlBzotSNpsu4_Wtd8CmKQ02IPFIb78t16ERd8qZfWlKWyPaWtWGKptwD2KFIVPo0BSFDAFP2Bd8756-Hs0BOpA_N7_rAfqRun3bsb5aTttmbfNTAJS_XdauFPujyRdlmhh0pViw==";
 const subHTML = (where) => `<form class="subf" data-subf="${where}" ${BREVO_FORM?"":"data-off"} novalidate>
   <span class="lbl">Get The Brief by email, every weekday morning</span>
   <div class="row"><input type="email" name="EMAIL" required autocomplete="email" placeholder="you@email.com" aria-label="Your email"><button class="btn primary" type="submit">Subscribe</button></div>
