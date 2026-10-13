@@ -1269,6 +1269,93 @@ footer.foot::before{display:none!important}
 html.guest .subf[data-off]{display:none}
 .fcta .subf{margin-top:var(--s4)} .fcta .subf .lbl,.fcta .subf .note{color:inherit} .fcta .subf .note{opacity:.75}
 @media (max-width:480px){.subf .row{flex-wrap:wrap}.subf .row .btn{width:100%}}
+/* ===== Readability and calm transitions (senior review, Oct 2026) ===== */
+/* reading: comfortable line length and leading for every block of running text */
+.panel > p.muted,.brief .story .q p,.faq p,.mrv .fs-lead p,.fs-drv p,.fs-qs p{line-height:1.65;max-width:68ch}
+.brief .story .q p{font-size:1.02rem}
+/* the Brief: the headline sits at the top of its column, next to its label, and stays in view while you read the answers */
+.brief .story > h3{align-self:start;grid-row:1 / span 5!important;margin-top:42px!important;position:sticky;top:calc(var(--hh,110px) + 24px)}
+.brief .story > .meta{align-self:start}
+@media (max-width:760px){.brief .story > h3{grid-row:auto!important;margin-top:0!important;position:static}}
+/* news cards: three per row on desktop, a clearer title and two lines of summary, all cards the same height */
+.ncards{grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))!important;gap:16px!important}
+.ncard{padding:18px!important;align-content:start;height:100%}
+.ncard .tt{font-size:15.5px!important;font-weight:700!important;line-height:1.4!important;letter-spacing:-.01em}
+.ncard .sum{font-size:14px;line-height:1.5;color:#2E5A57;-webkit-line-clamp:2}
+.ncard .meta{font-size:12px}
+.ncard:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,60,59,.08)}
+.ncard{transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .2s!important}
+/* sections arrive gently as you scroll: a soft fade and a short rise, driven by the scroll itself so nothing can stay hidden */
+@media (prefers-reduced-motion: no-preference){
+  html{scroll-behavior:smooth}
+  @supports (animation-timeline: view()){
+    #main > section.cy,#main > .panel{animation:secIn linear both;animation-timeline:view();animation-range:entry 0% entry 30%}
+    .ncards > *{animation:secIn linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
+    @keyframes secIn{from{opacity:0;transform:translateY(36px)} to{opacity:1;transform:none}}
+  }
+}
+/* a lower hero on desktop, so the first row of news shows without scrolling (ribbon and picture kept) */
+@media (min-width:821px){
+  .pmhero{padding-block:clamp(10px,1.4vw,20px)}
+  .pmhero .card{gap:clamp(14px,1.6vw,20px);padding:clamp(12px,1.4vw,18px)}
+  .pmhero .media{height:clamp(140px,10.5vw,170px)}
+  .pmhero h1{font-size:clamp(2.4rem,3.4vw,3.2rem)!important}
+  .pmhero .lead,.pmhero .side{gap:14px}
+  .pmhero .side p{font-size:16px;line-height:1.5}
+  .pmhero .thumb{min-height:96px}
+  .pmhero .stat{padding:12px 18px;gap:8px}
+  .pmhero .num b{font-size:clamp(2.2rem,3vw,2.8rem)}
+}
+.pmhero + section.cy{margin-top:-40px;padding-top:36px!important}
+/* ===== Small phones (mobile review, Oct 2026): no zoom on focus, 44px tap targets, nothing too small to read ===== */
+@media (max-width:640px){
+  input,select,textarea{font-size:16px!important}
+  .btn.small{min-height:44px;padding-inline:16px}
+  .ncard .ext{min-width:44px;min-height:44px;display:grid;place-items:center;top:0!important;right:0!important}
+  .flink{display:inline-flex;align-items:center;min-height:44px}
+  .aipanel .x{width:44px;height:44px}
+  .pillgrid .stats4 .st .tg{font-size:11px!important;letter-spacing:.03em!important;white-space:normal!important;line-height:1.2;overflow:visible!important}
+  .stats4 .st small,.fs-mkt td small{font-size:12px}
+  .ncard .sum,.ncard.read .sum{font-size:14px}
+  .ncard .meta{font-size:12.5px}
+}
+/* ===== Quiet luxury: same words, colours and fonts, finer finish ===== */
+/* 1 · type: bigger, tighter section titles with one word in the Instrument Serif italic */
+#main h2 em{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing:-.015em;color:#3AA89C}
+.pillgrid .indhead h2 em{color:var(--mint2)}
+.newslist > .row h2,.panel > .row h2,.panel > div > h2{font-size:clamp(2rem,3.6vw,3.25rem)!important;letter-spacing:-.045em;line-height:1}
+.pmhero h1{letter-spacing:-.05em;line-height:.98}
+.pmhero h1 em{letter-spacing:-.02em}
+.mono,.ncard .meta,.dateline,.stat b,.num b,.fs-mkt td{font-variant-numeric:tabular-nums}
+.label,.eyebrow{letter-spacing:.02em!important}
+/* 2 · air: more room around sections and between blocks */
+#main > section.cy{padding:clamp(56px,7vw,96px) 0!important}
+.pmhero + section.cy{padding-top:clamp(36px,4vw,56px)!important}
+.newslist > .row,.panel > .row{margin-bottom:clamp(16px,2vw,28px)}
+.ncards{gap:clamp(16px,1.8vw,24px)!important}
+/* 3 · finish: hairline borders instead of shadows, one corner radius, slow calm buttons */
+.ncard,.chip,.pbar,.step,.idea,.mtile,.pmhero .thumb,.pmhero .stat,.subf input{border-radius:16px}
+.ncard{border:1px solid var(--line)!important;box-shadow:none!important;background:#FFFFFF}
+.ncard:hover{border-color:#8DE6D8!important;box-shadow:0 1px 0 #8DE6D8!important;transform:translateY(-2px)}
+.btn,.cta,.tab,.dp-card{transition:background-color .5s var(--ease),color .5s var(--ease),border-color .5s var(--ease),transform .5s var(--ease)!important}
+.btn:active,.cta:active{transform:scale(.98)}
+::selection{background:#8DE6D8;color:#003C3B}
+/* 4 · motion: the hero picture settles in with a very slow zoom; the ribbon drifts slower (in the script) */
+@media (prefers-reduced-motion: no-preference){
+  .pmhero .media img{animation:pmSettle 2.4s cubic-bezier(.2,.7,.2,1) both}
+  .pmhero .media.contain img{animation-name:pmSettleC}
+  @keyframes pmSettle{from{transform:scale(1.06);opacity:0} to{transform:none;opacity:1}}
+  @keyframes pmSettleC{from{transform:translateX(-50%) scale(.98);opacity:0} to{transform:translateX(-50%) scale(.92);opacity:1}}
+  .pmhero .thumb img{transition:transform 1.2s var(--ease)} .pmhero .thumb:hover img{transform:scale(1.04)}
+}
+/* secondary text (dates, captions, notes) one tone darker for contrast, same palette */
+:root:not([data-theme="dark"]){--muted:#3B5F5C}
+.ncard .sum,.brief .story .q p{color:#284F4C}
+/* section rhythm: white and very light mint bands take over from the hairlines */
+section.cy::before,.brief .story.cy::before{display:none!important}
+#main > section.cy{padding:56px 0 56px!important}
+#main > section.cy:nth-of-type(even){background:#F4FAF8!important;box-shadow:0 0 0 100vmax #F4FAF8!important;clip-path:inset(0 -100vmax)}
+#main > section.cy + section.cy{margin-top:0}
 /* Go deeper: lettering-only cards in the mint tones, the last one dark */
 .deeper h2 em{font-family:var(--f-serif);font-style:italic;font-weight:400;color:#3AA89C}
 .dp-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,24px)}
@@ -1598,7 +1685,7 @@ const srcTile = n => { n=n==="BCE"?"ECB":n; const ab=ABBR[n]||String(n||"?").sli
 function vNewsPage(){
   const day=S.news.find(n=>n.id===st.newsDay)||latestDay(), items=day?.items||[], srcs=new Set(items.map(i=>i.source).filter(Boolean));
   return heroFrame({label:"Today's news", ribbon:"Today's money news, sorted. · ", photo:"assets/news-hero.webp", contain:"#F2EEEA", thumb:"assets/news-thumb.webp", thumbPos:"50% 50%",
-    title:"Today's money news,", em:"sorted for you.",
+    title:"Market insights,", em:"freshly minted.",
     cta:{text:"Read the stories", attrs:'data-jump=".newslist"'},
     text:"Every weekday morning and afternoon PaperMint gathers the money stories from trusted sources and sorts them by topic. Filter by topic or source and open any story at the original.",
     tiles:srcTiles(day), num:String(items.length||0), numLabel:`stories from ${srcs.size||0} sources${day?", "+(day.id===latestDay()?.id?"today":"that day"):""}.`}) + vNews(false) + vDeeper();
@@ -1629,7 +1716,7 @@ function vNews(pick=true){
   const lim = st.nmore ? shown.length : 12;
   const t = day.collectedAt ? new Date(day.collectedAt).toLocaleString("en-GB",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"}) : day.date;
   if(!pick) return `<section class="panel newslist">
-    <div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>${day.id===latestDay()?.id?"Today's stories":"Stories of the day"}</h2>
+    <div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>${day.id===latestDay()?.id?"Today's <em>stories</em>":"Stories of the <em>day</em>"}</h2>
       <span class="muted" style="font-size:.86rem">${items.length} stories · ${srcs.length} sources · updated ${esc(t)}</span></div>
       <div class="row">${srcs.length>1?`<label class="field"><select id="nsrc" aria-label="Source"><option value="">All sources</option>${srcs.map(x=>`<option value="${esc(x)}" ${st.src===x?"selected":""}>${esc(srcEN(x))}</option>`).join("")}</select></label>`:""}
       ${S.news.length>1?`<label class="field"><select id="nday" aria-label="Day">${S.news.slice(0,14).map(n=>`<option value="${esc(n.id)}" ${n.id===st.newsDay?"selected":""}>${esc(new Date(n.date+"T12:00:00").toLocaleDateString("en-GB",{weekday:"short",day:"2-digit",month:"short"}))}</option>`).join("")}</select></label>`:""}</div></div>
@@ -1801,7 +1888,7 @@ function vPack(){
 }
 function vFaq(){
   const p=latestPack(); if(!p?.faq?.length) return "";
-  return `<section class="panel"><div style="display:flex;flex-direction:column;gap:2px"><span class="eyebrow">Answered today</span><h2>Today's questions</h2><span class="muted" style="font-size:.9rem">What beginners are asking about today's news, answered from the collected stories.</span></div>
+  return `<section class="panel"><div style="display:flex;flex-direction:column;gap:2px"><span class="eyebrow">Answered today</span><h2>Today's <em>questions</em></h2><span class="muted" style="font-size:.9rem">What beginners are asking about today's news, answered from the collected stories.</span></div>
     <div class="faq">${p.faq.map((f,i)=>`<details ${i===0?"open":""}><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join("")}</div></section>`;
 }
 function vAsk(){
@@ -1831,7 +1918,7 @@ function hlLead(t){ const e=md(t); if(e.includes("<b>")) return e.replace(/<b>(.
 const srcTiles = day => { const src=(day?.sources||[]).map(n=>n==="BCE"?"ECB":n), ab=src.map(n=>ABBR[n]||String(n).slice(0,3).toUpperCase()); return (ab.length>=4?ab:["FT","WSJ","BBG","ECB"]).slice(0,4); };
 function heroFrame(o){
   return `<section class="pmhero" aria-label="${esc(o.label)}"><div class="card">
-    <div class="media${o.contain?" contain":""}"${o.contain?` style="--mbg:${o.contain}"`:""}>${o.photo?`<img src="${o.photo}" alt="" style="--pos:${o.photoPos||"50% 50%"}" onerror="this.remove()">`:""}
+    <div class="media${o.contain?" contain":""}"${o.contain?` style="--mbg:${o.contain}"`:""}>${o.photo?`<img src="${o.photo}" alt="" style="--pos:${o.photoPos||"50% 50%"}" fetchpriority="high" decoding="async" onerror="this.remove()">`:""}
       ${o.ribbon?`<svg class="ribbon" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <path id="pmwave" d="${o.wave||"M-40,300 C180,330 300,170 520,190 C720,208 760,320 960,250 C1080,208 1140,90 1260,40"}"/>
         <text><textPath href="#pmwave" startOffset="0">${esc(o.ribbon).repeat(4)}</textPath></text></svg>`:""}</div>
@@ -1839,7 +1926,7 @@ function heroFrame(o){
       <div class="lead"><h1${(o.title+o.em).length>32?' class="long"':""}>${esc(o.title)} <em>${esc(o.em)}</em></h1>
         <div class="acts">${o.cta?`<button class="btn primary cta" type="button" ${o.cta.attrs}>${esc(o.cta.text)} →</button>`:""}${o.extra||""}</div></div>
       <div class="side"><p>${esc(o.text)}</p>
-        <div class="row"><div class="thumb">${o.thumb?`<img src="${o.thumb}" alt="" onerror="this.remove()"${o.thumbPos?` style="object-position:${o.thumbPos}"`:""}>`:""}</div>
+        <div class="row"><div class="thumb">${o.thumb?`<img src="${o.thumb}" alt="" loading="lazy" decoding="async" onerror="this.remove()"${o.thumbPos?` style="object-position:${o.thumbPos}"`:""}>`:""}</div>
           <div class="stat"><div class="srcs" aria-hidden="true">${o.tiles.map(t=>`<i>${esc(t)}</i>`).join("")}</div>
             <div class="num"><b>${esc(o.num)}</b><span>${esc(o.numLabel)}</span></div></div></div></div>
     </div></div></section>`;
@@ -1858,7 +1945,7 @@ const WAVE=(()=>{ let tp=null, unit=0, x=0, last=0, raf=0, on=true, io=null;
   function tick(now){ raf=0;
     if(!tp||!tp.isConnected){ tp=document.querySelector(".pmhero textPath"); if(!tp) return; }   // re-rendered: follow the new ribbon instead of stopping
     const dt=Math.min(.05,(now-last)/1000); last=now;
-    if(on&&unit&&!document.hidden){ x-=dt*70; if(x<=-unit) x+=unit; tp.setAttribute("startOffset",x.toFixed(1)); }
+    if(on&&unit&&!document.hidden){ x-=dt*42; if(x<=-unit) x+=unit; tp.setAttribute("startOffset",x.toFixed(1)); }
     raf=requestAnimationFrame(tick); }
   return { mount(root){ io?.disconnect(); tp=root.querySelector(".pmhero textPath"); if(!tp||matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const t=tp.parentNode, measure=()=>{ unit=t.getComputedTextLength()/4; }; measure(); document.fonts?.ready.then(measure);
@@ -1889,9 +1976,9 @@ function vMarkets(){
         <span>${esc(sub)}</span>
         <div class="row"><button class="btn primary" type="button" data-jump=".seg" data-go="brief">Read The Brief</button><button class="btn" type="button" data-jump=".pillgrid">See the indicators</button></div></div></div>
   </section>
-  <section class="pillgrid" aria-label="Verified indicators"><div class="indpanel"><div class="indhead"><h2>Verified indicators</h2>${S.ind?`<span>ECB · Eurostat · Bank of Portugal · checked ${esc(new Date(S.ind.updatedAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}</span>`:""}</div>${vPills()}</div></section>
+  <section class="pillgrid" aria-label="Verified indicators"><div class="indpanel"><div class="indhead"><h2>Verified <em>indicators</em></h2>${S.ind?`<span>ECB · Eurostat · Bank of Portugal · checked ${esc(new Date(S.ind.updatedAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}</span>`:""}</div>${vPills()}</div></section>
   <nav class="seg" role="tablist" aria-label="Markets sections">${SUBS.map(([k,t])=>`<button type="button" role="tab" aria-selected="${mk.sub===k}" class="${mk.sub===k?"on":""}" data-sub="${k}">${t}</button>`).join("")}</nav>`;
-  if(mk.sub==="hoje") h += `<section class="panel"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>Daily map</h2>
+  if(mk.sub==="hoje") h += `<section class="panel"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>Daily <em>map</em></h2>
       <span class="muted" style="font-size:.86rem">${ins?`Analysis from ${esc(when(ins.generatedAt))}${stale?" · new stories since then":""}`:"No analysis for today's news yet."}</span></div>
       ${(false)?``:`<button class="btn ${!ins||stale?"primary":""}" id="mgen" type="button" ${mk.busy||!day?"disabled":""}>${ins?"Refresh analysis":"Analyse today"}</button>`}</div>
     ${mk.busy?think("Reading "+((day?.items||[]).length)+" stories and building the map…"):""}
@@ -1926,7 +2013,7 @@ function vBrief(){
   const day=latestDay(); const ins = day ? S.insights.find(i=>i.id===day.id) : null; const b=ins?.brief;
   const when = d => new Date(d).toLocaleString("en-GB",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"});
   const stale = b && day?.collectedAt && b.basedOn && b.basedOn < day.collectedAt;
-  let h = `<section class="panel brief"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>The Brief</h2>
+  let h = `<section class="panel brief"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>The <em>Brief</em></h2>
       <span class="muted" style="font-size:.86rem">${b?`Written ${esc(when(b.generatedAt))}${stale?" · new stories since then":""}`:"Today's money news, minus the jargon."}</span></div>
       <button class="btn ${!b||stale?"primary":""}" id="bgen" type="button" ${mk.bBusy||!day?"disabled":""}>${b?"Rewrite the Brief":"Write today's Brief"}</button></div>
     ${mk.bBusy?think("Reading "+((day?.items||[]).length)+" stories and picking the ones that matter…"):""}
@@ -2004,7 +2091,7 @@ function vMonth(){
       <p class="fs-disc">Sources: market data from S&amp;P Dow Jones Indices, Nasdaq, Cboe, the US Treasury, the US Energy Information Administration and ICE BofA (published by the Federal Reserve) and from the European Central Bank; official indicators from the ECB, Eurostat and Bank of Portugal; analysis of public financial news collected by PaperMint (Bloomberg, Financial Times, WSJ, Reuters and others). For education only. Not investment advice. Past performance is not a guide to future returns.</p>
     </div>`
     : `<p class="muted">${days.length?"The month in review is written automatically every afternoon from the stories collected. Check back later today.":"No news collected this month yet."}</p>`;
-  return `<section class="panel mrv"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>Month in review</h2>
+  return `<section class="panel mrv"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>Month in <em>review</em></h2>
       <span class="muted" style="font-size:.86rem">A monthly factsheet of what moved the markets</span></div>
       <div class="row">${months.length>1?`<label class="field"><select id="mmonth" aria-label="Month">${months.map(m=>`<option value="${m}" ${m===mm.month?"selected":""}>${esc(monthName(m))}</option>`).join("")}</select></label>`:`<span class="pill">${esc(monthName(mm.month))}</span>`}
       ${sum?`<button class="btn small" id="fspdf" type="button">Download PDF</button><button class="btn small" id="fsmail" type="button">Copy for email</button><button class="btn small" id="fshtml" type="button">Download .html</button>`:""}
@@ -2606,8 +2693,10 @@ function scrollFX(root){
   if(matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   if(!sxIO) sxIO=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("sxin"); SXSEEN.add(e.target.dataset.sxk||""); sxIO.unobserve(e.target); } }),{rootMargin:"0px 0px -6% 0px"});
   const watch=(el,key)=>{ el.dataset.sxk=key; if(SXSEEN.has(key)) el.classList.add("sxin"); else sxIO.observe(el); };
-  root.querySelectorAll(".panel h2:not(.bpbody h2), .mega, .bline").forEach(h=>{ if(h.dataset.sx) return; if(h.querySelector("*")) return; const words=h.textContent.trim().split(/\s+/); h.dataset.sx="1"; h.setAttribute("aria-label",h.textContent.trim()); h.classList.add("sx");
-    h.innerHTML=words.map((w,i)=>`<span class="w" aria-hidden="true"><span style="--i:${i}">${esc(w)}</span></span>`).join(" "); watch(h,"h:"+words.join(" ")); });
+  root.querySelectorAll(".panel h2:not(.bpbody h2), .mega, .bline").forEach(h=>{ if(h.dataset.sx) return; if(h.querySelector("*:not(em)")) return;
+    const parts=[]; h.childNodes.forEach(n=>{ const em=n.nodeType===1&&n.tagName==="EM"; String(n.textContent).trim().split(/\s+/).filter(Boolean).forEach(w=>parts.push([w,em])); });   // an italic <em> word keeps its italics
+    const words=parts.map(p=>p[0]); h.dataset.sx="1"; h.setAttribute("aria-label",h.textContent.trim()); h.classList.add("sx");
+    h.innerHTML=parts.map(([w,em],i)=>`<span class="w" aria-hidden="true"><span style="--i:${i}">${em?`<em>${esc(w)}</em>`:esc(w)}</span></span>`).join(" "); watch(h,"h:"+words.join(" ")); });
   root.querySelectorAll(".panel > p.muted, .fcta p, .fbot p, .disc").forEach(p=>{ if(!p.classList.contains("sf")){ p.classList.add("sf"); watch(p,"p:"+p.textContent.trim().slice(0,60)); } });
   root.querySelectorAll(".stats4").forEach(g=>{ g.querySelectorAll(".st").forEach((c,i)=>c.style.setProperty("--i",i)); watch(g,"stats4"); });
 }
