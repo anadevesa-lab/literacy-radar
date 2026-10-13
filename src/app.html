@@ -1294,6 +1294,27 @@ html.guest .subf[data-off]{display:none}
     @keyframes secIn{from{opacity:0;transform:translateY(36px)} to{opacity:1;transform:none}}
   }
 }
+/* a lower hero on desktop, so the first row of news shows without scrolling (ribbon and picture kept) */
+@media (min-width:821px){
+  .pmhero{padding-block:clamp(10px,1.4vw,20px)}
+  .pmhero .card{gap:clamp(14px,1.6vw,20px);padding:clamp(12px,1.4vw,18px)}
+  .pmhero .media{height:clamp(140px,10.5vw,170px)}
+  .pmhero h1{font-size:clamp(2.4rem,3.4vw,3.2rem)!important}
+  .pmhero .lead,.pmhero .side{gap:14px}
+  .pmhero .side p{font-size:16px;line-height:1.5}
+  .pmhero .thumb{min-height:96px}
+  .pmhero .stat{padding:12px 18px;gap:8px}
+  .pmhero .num b{font-size:clamp(2.2rem,3vw,2.8rem)}
+}
+.pmhero + section.cy{margin-top:-40px;padding-top:36px!important}
+/* secondary text (dates, captions, notes) one tone darker for contrast, same palette */
+:root:not([data-theme="dark"]){--muted:#3B5F5C}
+.ncard .sum,.brief .story .q p{color:#284F4C}
+/* section rhythm: white and very light mint bands take over from the hairlines */
+section.cy::before,.brief .story.cy::before{display:none!important}
+#main > section.cy{padding:56px 0 56px!important}
+#main > section.cy:nth-of-type(even){background:#F4FAF8!important;box-shadow:0 0 0 100vmax #F4FAF8!important;clip-path:inset(0 -100vmax)}
+#main > section.cy + section.cy{margin-top:0}
 /* Go deeper: lettering-only cards in the mint tones, the last one dark */
 .deeper h2 em{font-family:var(--f-serif);font-style:italic;font-weight:400;color:#3AA89C}
 .dp-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,24px)}
