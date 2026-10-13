@@ -127,8 +127,6 @@ main.wrap{display:flex;flex-direction:column}
 .row{display:flex;gap:var(--s3);flex-wrap:wrap;align-items:center}
 .between{justify-content:space-between}
 
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s2);cursor:pointer;line-height:1.2}
-.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
 
 .field{display:flex;flex-direction:column;gap:var(--s2);min-width:0}
 .field textarea,.field select,.field input{border:1px solid var(--line);padding:10px var(--s3);width:100%;font-size:var(--t-sm);transition:border-color .15s ease-out}
@@ -245,9 +243,7 @@ main.wrap{display:flex;flex-direction:column}
 .pbar i{display:block;height:4px;border-radius:2px;background:var(--c2)}
 .pbar.on i{background:var(--accent)}
 .ncards{display:grid}
-.ncard{position:relative;display:grid;grid-template-columns:40px minmax(0,1fr);gap:var(--s3);align-items:start;cursor:pointer;min-width:0}
 
-.ncard.on{border-color:var(--accent)}
 .mtile{width:40px;height:40px;display:grid;place-items:center;color:#FFFFFF;font:700 11px/1 var(--f-body);letter-spacing:.02em}
 .ncard .meta{color:var(--muted);display:flex;gap:var(--s1);align-items:center;flex-wrap:wrap}
 .ncard .tt{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin-top:var(--s1)}
@@ -330,11 +326,9 @@ main.wrap{padding-block:var(--s6) var(--s8)}
 /* surfaces */
 .panel .panel,.panel .acls,.panel .ncard,.panel .idea,.panel .step,.panel .reply,.panel .pbar,.panel .out,.panel .aud div,.panel .answer{background:var(--surface)}
 
-.idea.on,.ncard.on{box-shadow:0 0 0 2px var(--ink)}
-.ncard:hover,.idea:hover,.acls:hover{box-shadow:0 0 0 1px var(--line),var(--shadow-sm)}
+.idea.on{box-shadow:0 0 0 2px var(--ink)}
+.idea:hover,.acls:hover{box-shadow:0 0 0 1px var(--line),var(--shadow-sm)}
 
-.btn{border-color:var(--line)}
-.btn.primary:hover{color:#FFFFFF}
 .chip{background:var(--surface)}
 .chip.on{background:var(--ink);color:var(--page);border-color:var(--ink)}
 .field textarea,.field select,.field input{border-radius:var(--r-sm);background:var(--surface)}
@@ -450,8 +444,6 @@ header.top{-webkit-backdrop-filter:blur(14px) saturate(1.3)}
 header.top .logo{font-weight:800}
 .ticker{border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
 /* buttons: uppercase pills with a travelling arrow */
-.btn.primary::after{content:"→";font-size:var(--t-xs2);letter-spacing:0;transition:transform .25s cubic-bezier(.2,.7,.2,1)}
-.btn.primary:hover::after{transform:translateX(3px)}
 /* headings and section rhythm */
 
 .eyebrow{display:inline-flex;align-items:center;gap:0}
@@ -528,9 +520,6 @@ body.solid header.top{border-bottom-color:var(--line)}
 
 .dhero h1,.mega{color:var(--ink)}
 .dhero .eyebrow,.fcta .eyebrow{color:var(--muted)} .dhero .muted{color:var(--muted)}
-.dhero .btn{background:#fff;color:var(--ink);border-color:var(--line)} .dhero .btn:hover{border-color:var(--ink)}
-.dhero .btn.primary,.fcta .btn.primary{color:#fff}
-.dhero .btn.primary:hover,.fcta .btn.primary:hover{background:var(--brand);border-color:var(--brand);color:#fff}
 .dhero .field .label{color:var(--muted)} .dhero .field input{background:#fff;border-color:var(--line);color:var(--ink)}
 .dhero .stat{background:rgba(255,255,255,.75)!important;border:1px solid var(--line)!important;color:var(--ink);backdrop-filter:blur(8px)}
 .dhero .stat span{color:var(--muted)}
@@ -562,7 +551,6 @@ header.top,body.solid header.top{backdrop-filter:none!important;-webkit-backdrop
 .dhero .in > *{max-width:100%!important}
 .dhero .in > h1,.dhero .in > p,.dhero .in > .eyebrow,.dhero .in > .stats,.dhero .in > .field{max-width:min(680px,56%)!important}
  .dhero .stat{border-radius:var(--r-xs)!important}
-.btn.primary,.dhero .btn.primary,.fcta .btn.primary{background:var(--ink);border-color:var(--ink)}
  
 /* stat grid, numbers first */
 .stats4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
@@ -643,7 +631,8 @@ html:not(.guest) .guest-only{display:none!important}
 .wrap{max-width:1200px;padding-inline:var(--s5)}
 main.wrap{gap:var(--s8)!important;padding-bottom:96px}
 h1,h2,h3{font-weight:800}
-h2{font-size:clamp(1.75rem,2.6vw,2.5rem)!important;letter-spacing:-.035em;line-height:1.08}
+/* ===== Component: headings ===== h2 default; section titles and the footer CTA override below, no !important needed */
+h2{font-size:clamp(1.75rem,2.6vw,2.5rem);letter-spacing:-.035em;line-height:1.08}
 
 .muted{color:var(--muted)}
 /* menu */
@@ -651,16 +640,26 @@ h2{font-size:clamp(1.75rem,2.6vw,2.5rem)!important;letter-spacing:-.035em;line-h
 .tabind{border-radius:var(--r-pill)!important}
 .aikey-top{border-radius:var(--r-pill)!important;text-transform:none;letter-spacing:0;font-size:var(--t-xs2)}
 /* buttons: flat pills, sentence case */
-.btn{text-transform:none;letter-spacing:-.005em;font-size:var(--t-sm2);font-weight:700;min-height:48px;padding:0 22px;border-radius:var(--r-pill)!important;border:1px solid var(--line);background:#fff;color:var(--ink)}
+/* ===== Component: button (.btn) ===== base, hover sweep, primary, small. Variants (.mast, .fcta, .danger, .canva) live with their sections. */
+.btn{position:relative;overflow:hidden;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;gap:var(--s2);min-height:48px;padding:0 22px;border:1px solid var(--line);border-radius:var(--r-pill)!important;background:#fff;color:var(--ink);font-size:var(--t-sm2);font-weight:700;line-height:1.2;letter-spacing:-.005em;text-transform:none;cursor:pointer;transition:background-color .5s var(--ease),color .5s var(--ease),border-color .5s var(--ease),transform .5s var(--ease)!important}
+.btn::before{content:"";position:absolute;inset:-1px;z-index:-1;border-radius:inherit;background:var(--ink);transform:scaleX(0);transform-origin:100% 50%;transition:transform .5s var(--ease)}
 .btn:hover{transform:none;box-shadow:none;border-color:var(--ink)}
+.btn:not(:disabled):hover::before{transform:scaleX(1);transform-origin:0 50%}
+.btn:not(.primary):not(:disabled):hover{color:#FFFFFF}
+.btn:active{transform:scale(.98)}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.btn:disabled::before{display:none}
 .btn.small{font-size:13.5px;min-height:36px;padding:0 var(--s4)}
 .btn.primary{background:var(--ink)!important;border-color:var(--ink)!important;color:#fff!important}
-.btn.primary:hover{background:var(--brand)!important;border-color:var(--brand)!important}
+.btn.primary::before{background:var(--mint2)}
+.btn.primary::after{content:"→";font-size:var(--t-xs2);letter-spacing:0;transition:transform .25s cubic-bezier(.2,.7,.2,1)}
+.btn.primary:not(:disabled):hover{background:var(--ink)!important;color:var(--ink)!important}
+.btn.primary:hover::after{transform:translateX(3px)}
 .chip{min-height:36px;padding:0 var(--s4);font-weight:700;font-size:var(--t-sm)}
 /* cards */
 .panel{border:1px solid var(--line);border-radius:var(--r-lg);padding:40px;gap:var(--s5);box-shadow:none}
-.ncard,.idea,.acls{border:1px solid var(--line)!important;box-shadow:none!important;border-radius:var(--r-md)}
-.ncard:hover,.idea:hover{border-color:var(--brand2)!important}
+.idea,.acls{border:1px solid var(--line)!important;box-shadow:none!important;border-radius:var(--r-md)}
+.idea:hover{border-color:var(--brand2)!important}
 /* hero: a rounded mint card, text on the left, the tiles orbit on the right and never cross the copy */
 .hero2{position:relative;overflow:hidden;isolation:isolate;border-radius:var(--r-xl);background:var(--tint);min-height:520px;display:flex;align-items:flex-end}
 .hero2 .in{position:relative;z-index:2;padding:56px;display:flex;flex-direction:column;gap:var(--s5);max-width:58%;min-width:0}
@@ -711,7 +710,6 @@ main.play .hero2 h1 .w>span{animation:rise .95s cubic-bezier(.2,.75,.1,1) both;a
 .fcta .in > *{position:relative;z-index:1}
 .fcta .mega{font-weight:800;letter-spacing:-.045em;line-height:1}
 .fcta .eyebrow{color:var(--mint2)!important}
-.fcta .btn.primary:hover{background:var(--mint2)!important;border-color:var(--mint2)!important}
 .fbot .in{max-width:1200px}
 
 @media (max-width:760px){
@@ -789,7 +787,7 @@ main.wrap,footer.foot{position:relative;z-index:1}
 section.cy{position:relative;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:40px 0 0!important}
 section.cy::before,.brief .story.cy::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:var(--ink);opacity:.18;transform-origin:0 50%;transform:scaleX(0);transition:transform 1.2s cubic-bezier(.6,0,.2,1)}
 section.cy.on::before,.brief .story.cy.on::before{transform:scaleX(1)}
-.brief > .row h2{font-size:clamp(2.6rem,6.4vw,5.5rem)!important;font-weight:800;letter-spacing:-.055em;line-height:.95;color:var(--ink)}
+.brief > .row h2{color:var(--ink)}
 .brief > .row{align-items:flex-end!important;padding-bottom:var(--s4)}
 /* the Brief: a list, not cards */
 .brief .stories{display:flex!important;flex-direction:column;gap:0!important}
@@ -870,13 +868,6 @@ main.play .hero2 h1 .w>span,main.play .dhero h1 .w>span{animation-duration:.75s;
 @media (max-width:760px){.mpix,.hero2.paperhead .mpix{width:calc(80% + (100vw - 100%) / 2);opacity:.75}}
 
 /* buttons: the fill wipes in from the left and out to the right */
-.btn{position:relative;overflow:hidden;isolation:isolate}
-.btn::before{content:"";position:absolute;inset:-1px;z-index:-1;border-radius:inherit;background:var(--ink);transform:scaleX(0);transform-origin:100% 50%;transition:transform .5s var(--ease)}
-.btn:not(:disabled):hover::before{transform:scaleX(1);transform-origin:0 50%}
-.btn:not(.primary):not(:disabled):hover{color:#FFFFFF;border-color:var(--ink)}
-.btn.primary::before{background:var(--mint2)}
-.btn.primary:not(:disabled):hover{background:var(--ink)!important;border-color:var(--ink)!important;color:var(--ink)!important}
-.btn:disabled::before{display:none}
 /* the masthead's second action is a ruled link, like an index entry */
 .mast .mside .btn:not(.primary){border:0;border-radius:0!important;background:none;padding:0 26px 0 0;min-height:48px;color:var(--ink);font-weight:700}
 .mast .mside .btn:not(.primary)::before{inset:auto 0 10px 0;height:1px;background:currentColor;transform:scaleX(1);transform-origin:0 50%;opacity:.35}
@@ -890,7 +881,7 @@ footer.foot::before{content:"";position:absolute;inset:0;z-index:-1;background:r
   clip-path:inset(calc((1 - var(--sp,1)) * 72px) calc((1 - var(--sp,1)) * 5vw) 0 round calc((1 - var(--sp,1)) * 44px) calc((1 - var(--sp,1)) * 44px) 0 0)}
 .fcta{background:transparent!important}
 .fcta .in{background:transparent!important;border:0!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;color:var(--lt);padding:clamp(72px,12vh,128px) 0 56px!important;margin-bottom:0}
-.fcta .mega{color:#FFFFFF!important;font-size:clamp(2.4rem,5.6vw,4.6rem)} .fcta .mega em{color:var(--mint2)!important}
+.fcta .mega{color:#FFFFFF!important;font-size:clamp(1.75rem,2.6vw,2.5rem)} .fcta .mega em{color:var(--mint2)!important}
 .fcta p{color:rgba(230,247,244,.72)!important}
 .fcta .btn.primary{background:#FFFFFF!important;border-color:#FFFFFF!important;color:#062B2A!important}
 .fcta .btn.primary:not(:disabled):hover{background:#FFFFFF!important;border-color:var(--mint2)!important;color:#062B2A!important}
@@ -1054,7 +1045,7 @@ footer.foot::before{display:none!important}
 /* Markets: the verified indicators as one dark panel, title inside, eight tiles tagged by theme */
 .pillgrid .indpanel{background:var(--ink);border-radius:clamp(22px,2.6vw,32px);padding:clamp(22px,3.2vw,44px);display:flex;flex-direction:column;gap:clamp(18px,2.4vw,28px)}
 .pillgrid .indhead{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--s3) var(--s5);flex-wrap:wrap}
-.pillgrid .indhead h2{margin:0;font-size:clamp(1.8rem,3.4vw,2.8rem)!important;font-weight:800;letter-spacing:-.04em;line-height:1;color:#FFFFFF!important}
+.pillgrid .indhead h2{margin:0;font-size:clamp(1.8rem,3.4vw,2.8rem);font-weight:800;letter-spacing:-.04em;line-height:1;color:#FFFFFF}
 .pillgrid .indhead span{font-size:var(--t-xs2);font-weight:600;color:rgba(230,247,244,.65)}
 .pillgrid .stats4{grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s3);border:0}
 .pillgrid .stats4::before{content:none}
@@ -1182,12 +1173,13 @@ html.guest .subf[data-off]{display:none}
 @media (max-width:760px){.brief .story > h3{grid-row:auto!important;margin-top:0!important;position:static}}
 /* news cards: three per row on desktop, a clearer title and two lines of summary, all cards the same height */
 .ncards{grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))!important}
-.ncard{padding:18px!important;align-content:start;height:100%}
-.ncard .tt{font-size:15.5px!important;font-weight:700!important;line-height:1.4!important;letter-spacing:-.01em}
+/* ===== Component: news card (.ncard) ===== parts (.meta .tt .sum .ext .ck) are styled with the card grid above */
+.ncard{position:relative;display:grid;grid-template-columns:40px minmax(0,1fr);gap:var(--s3);align-items:start;align-content:start;min-width:0;height:100%;padding:18px!important;border:1px solid var(--line)!important;border-radius:var(--r-base);background:#FFFFFF;box-shadow:none!important;cursor:pointer;transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .2s!important}
+.ncard:hover{border-color:var(--mint2)!important;box-shadow:0 1px 0 var(--mint2)!important;transform:translateY(-2px)}
+.ncard .tt{font-size:15.5px;font-weight:700;line-height:1.4;letter-spacing:-.01em}
 .ncard .sum{font-size:var(--t-sm);line-height:1.5;-webkit-line-clamp:2}
 .ncard .meta{font-size:var(--t-xs)}
 
-.ncard{transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .2s!important}
 /* sections arrive gently as you scroll: a soft fade and a short rise, driven by the scroll itself so nothing can stay hidden */
 @media (prefers-reduced-motion: no-preference){
   html{scroll-behavior:smooth}
@@ -1235,7 +1227,7 @@ main:focus{outline:none}
 /* 1 · type: bigger, tighter section titles with one word in the Instrument Serif italic */
 #main h2 em{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing:-.015em;color:var(--brand)}
 .pillgrid .indhead h2 em{color:var(--mint2)}
-.newslist > .row h2,.panel > .row h2,.panel > div > h2{font-size:clamp(2rem,3.6vw,3.25rem)!important;letter-spacing:-.045em;line-height:1}
+.newslist > .row h2,.panel > .row h2,.panel > div > h2{font-size:clamp(2rem,3.6vw,3.25rem);letter-spacing:-.045em;line-height:1}
 .pmhero h1{letter-spacing:-.05em;line-height:.98}
 .pmhero h1 em{letter-spacing:-.02em}
 .mono,.ncard .meta,.dateline,.stat b,.num b,.fs-mkt td{font-variant-numeric:tabular-nums}
@@ -1246,11 +1238,9 @@ main:focus{outline:none}
 .newslist > .row,.panel > .row{margin-bottom:clamp(16px,2vw,28px)}
 .ncards{gap:clamp(16px,1.8vw,24px)!important}
 /* 3 · finish: hairline borders instead of shadows, one corner radius, slow calm buttons */
-.ncard,.chip,.pbar,.step,.idea,.mtile,.pmhero .thumb,.pmhero .stat,.subf input{border-radius:var(--r-base)}
-.ncard{border:1px solid var(--line)!important;box-shadow:none!important;background:#FFFFFF}
-.ncard:hover{border-color:var(--mint2)!important;box-shadow:0 1px 0 var(--mint2)!important;transform:translateY(-2px)}
-.btn,.cta,.tab,.dp-card{transition:background-color .5s var(--ease),color .5s var(--ease),border-color .5s var(--ease),transform .5s var(--ease)!important}
-.btn:active,.cta:active{transform:scale(.98)}
+.chip,.pbar,.step,.idea,.mtile,.pmhero .thumb,.pmhero .stat,.subf input{border-radius:var(--r-base)}
+.cta,.tab,.dp-card{transition:background-color .5s var(--ease),color .5s var(--ease),border-color .5s var(--ease),transform .5s var(--ease)!important}
+.cta:active{transform:scale(.98)}
 ::selection{background:var(--mint2);color:var(--ink)}
 /* 4 · motion: the hero picture settles in with a very slow zoom; the ribbon drifts slower (in the script) */
 @media (prefers-reduced-motion: no-preference){
