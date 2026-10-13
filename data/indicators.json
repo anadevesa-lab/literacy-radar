@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-09T20:20:43.315Z",
+ "updatedAt": "2026-10-13T14:36:59.793Z",
  "items": [
   {
    "k": "inf_pt",
@@ -86,12 +86,12 @@
   {
    "k": "pt10y",
    "label": "PT 10-year government bond",
-   "value": 3.54,
+   "value": 3.85,
    "unit": "%",
    "dec": 2,
-   "period": "Aug 2026 average",
-   "prev": 3.44,
-   "prevPeriod": "Jul 2026",
+   "period": "Sep 2026 average",
+   "prev": 3.54,
+   "prevPeriod": "Aug 2026",
    "source": "ECB",
    "url": "https://data.ecb.europa.eu/data/datasets/IRS"
   }
