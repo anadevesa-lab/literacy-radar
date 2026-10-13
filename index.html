@@ -1317,6 +1317,35 @@ html.guest .subf[data-off]{display:none}
   .pmhero .num b{font-size:clamp(2.2rem,3vw,2.8rem)}
 }
 .pmhero + section.cy{margin-top:-40px;padding-top:36px!important}
+/* ===== Quiet luxury: same words, colours and fonts, finer finish ===== */
+/* 1 · type: bigger, tighter section titles with one word in the Instrument Serif italic */
+#main h2 em{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing:-.015em;color:#3AA89C}
+.pillgrid .indhead h2 em{color:var(--mint2)}
+.newslist > .row h2,.panel > .row h2,.panel > div > h2{font-size:clamp(2rem,3.6vw,3.25rem)!important;letter-spacing:-.045em;line-height:1}
+.pmhero h1{letter-spacing:-.05em;line-height:.98}
+.pmhero h1 em{letter-spacing:-.02em}
+.mono,.ncard .meta,.dateline,.stat b,.num b,.fs-mkt td{font-variant-numeric:tabular-nums}
+.label,.eyebrow{letter-spacing:.02em!important}
+/* 2 · air: more room around sections and between blocks */
+#main > section.cy{padding:clamp(56px,7vw,96px) 0!important}
+.pmhero + section.cy{padding-top:clamp(36px,4vw,56px)!important}
+.newslist > .row,.panel > .row{margin-bottom:clamp(16px,2vw,28px)}
+.ncards{gap:clamp(16px,1.8vw,24px)!important}
+/* 3 · finish: hairline borders instead of shadows, one corner radius, slow calm buttons */
+.ncard,.chip,.pbar,.step,.idea,.mtile,.pmhero .thumb,.pmhero .stat,.subf input{border-radius:16px}
+.ncard{border:1px solid var(--line)!important;box-shadow:none!important;background:#FFFFFF}
+.ncard:hover{border-color:#8DE6D8!important;box-shadow:0 1px 0 #8DE6D8!important;transform:translateY(-2px)}
+.btn,.cta,.tab,.dp-card{transition:background-color .5s var(--ease),color .5s var(--ease),border-color .5s var(--ease),transform .5s var(--ease)!important}
+.btn:active,.cta:active{transform:scale(.98)}
+::selection{background:#8DE6D8;color:#003C3B}
+/* 4 · motion: the hero picture settles in with a very slow zoom; the ribbon drifts slower (in the script) */
+@media (prefers-reduced-motion: no-preference){
+  .pmhero .media img{animation:pmSettle 2.4s cubic-bezier(.2,.7,.2,1) both}
+  .pmhero .media.contain img{animation-name:pmSettleC}
+  @keyframes pmSettle{from{transform:scale(1.06);opacity:0} to{transform:none;opacity:1}}
+  @keyframes pmSettleC{from{transform:translateX(-50%) scale(.98);opacity:0} to{transform:translateX(-50%) scale(.92);opacity:1}}
+  .pmhero .thumb img{transition:transform 1.2s var(--ease)} .pmhero .thumb:hover img{transform:scale(1.04)}
+}
 /* secondary text (dates, captions, notes) one tone darker for contrast, same palette */
 :root:not([data-theme="dark"]){--muted:#3B5F5C}
 .ncard .sum,.brief .story .q p{color:#284F4C}
@@ -1874,7 +1903,7 @@ function vNews(pick=true){
   const lim = st.nmore ? shown.length : 12;
   const t = day.collectedAt ? new Date(day.collectedAt).toLocaleString("en-GB",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"}) : day.date;
   if(!pick) return `<section class="panel newslist">
-    <div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>${day.id===latestDay()?.id?"Today's stories":"Stories of the day"}</h2>
+    <div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>${day.id===latestDay()?.id?"Today's <em>stories</em>":"Stories of the <em>day</em>"}</h2>
       <span class="muted" style="font-size:.86rem">${items.length} stories · ${srcs.length} sources · updated ${esc(t)}</span></div>
       <div class="row">${srcs.length>1?`<label class="field"><select id="nsrc" aria-label="Source"><option value="">All sources</option>${srcs.map(x=>`<option value="${esc(x)}" ${st.src===x?"selected":""}>${esc(srcEN(x))}</option>`).join("")}</select></label>`:""}
       ${S.news.length>1?`<label class="field"><select id="nday" aria-label="Day">${S.news.slice(0,14).map(n=>`<option value="${esc(n.id)}" ${n.id===st.newsDay?"selected":""}>${esc(new Date(n.date+"T12:00:00").toLocaleDateString("en-GB",{weekday:"short",day:"2-digit",month:"short"}))}</option>`).join("")}</select></label>`:""}</div></div>
@@ -2046,7 +2075,7 @@ function vPack(){
 }
 function vFaq(){
   const p=latestPack(); if(!p?.faq?.length) return "";
-  return `<section class="panel"><div style="display:flex;flex-direction:column;gap:2px"><span class="eyebrow">Answered today</span><h2>Today's questions</h2><span class="muted" style="font-size:.9rem">What beginners are asking about today's news, answered from the collected stories.</span></div>
+  return `<section class="panel"><div style="display:flex;flex-direction:column;gap:2px"><span class="eyebrow">Answered today</span><h2>Today's <em>questions</em></h2><span class="muted" style="font-size:.9rem">What beginners are asking about today's news, answered from the collected stories.</span></div>
     <div class="faq">${p.faq.map((f,i)=>`<details ${i===0?"open":""}><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join("")}</div></section>`;
 }
 function vAsk(){
@@ -2103,7 +2132,7 @@ const WAVE=(()=>{ let tp=null, unit=0, x=0, last=0, raf=0, on=true, io=null;
   function tick(now){ raf=0;
     if(!tp||!tp.isConnected){ tp=document.querySelector(".pmhero textPath"); if(!tp) return; }   // re-rendered: follow the new ribbon instead of stopping
     const dt=Math.min(.05,(now-last)/1000); last=now;
-    if(on&&unit&&!document.hidden){ x-=dt*70; if(x<=-unit) x+=unit; tp.setAttribute("startOffset",x.toFixed(1)); }
+    if(on&&unit&&!document.hidden){ x-=dt*42; if(x<=-unit) x+=unit; tp.setAttribute("startOffset",x.toFixed(1)); }
     raf=requestAnimationFrame(tick); }
   return { mount(root){ io?.disconnect(); tp=root.querySelector(".pmhero textPath"); if(!tp||matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const t=tp.parentNode, measure=()=>{ unit=t.getComputedTextLength()/4; }; measure(); document.fonts?.ready.then(measure);
@@ -2134,9 +2163,9 @@ function vMarkets(){
         <span>${esc(sub)}</span>
         <div class="row"><button class="btn primary" type="button" data-jump=".seg" data-go="brief">Read The Brief</button><button class="btn" type="button" data-jump=".pillgrid">See the indicators</button></div></div></div>
   </section>
-  <section class="pillgrid" aria-label="Verified indicators"><div class="indpanel"><div class="indhead"><h2>Verified indicators</h2>${S.ind?`<span>ECB · Eurostat · Bank of Portugal · checked ${esc(new Date(S.ind.updatedAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}</span>`:""}</div>${vPills()}</div></section>
+  <section class="pillgrid" aria-label="Verified indicators"><div class="indpanel"><div class="indhead"><h2>Verified <em>indicators</em></h2>${S.ind?`<span>ECB · Eurostat · Bank of Portugal · checked ${esc(new Date(S.ind.updatedAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}</span>`:""}</div>${vPills()}</div></section>
   <nav class="seg" role="tablist" aria-label="Markets sections">${SUBS.map(([k,t])=>`<button type="button" role="tab" aria-selected="${mk.sub===k}" class="${mk.sub===k?"on":""}" data-sub="${k}">${t}</button>`).join("")}</nav>`;
-  if(mk.sub==="hoje") h += `<section class="panel"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>Daily map</h2>
+  if(mk.sub==="hoje") h += `<section class="panel"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>Daily <em>map</em></h2>
       <span class="muted" style="font-size:.86rem">${ins?`Analysis from ${esc(when(ins.generatedAt))}${stale?" · new stories since then":""}`:"No analysis for today's news yet."}</span></div>
       ${(false)?``:`<button class="btn ${!ins||stale?"primary":""}" id="mgen" type="button" ${mk.busy||!day?"disabled":""}>${ins?"Refresh analysis":"Analyse today"}</button>`}</div>
     ${mk.busy?think("Reading "+((day?.items||[]).length)+" stories and building the map…"):""}
@@ -2171,7 +2200,7 @@ function vBrief(){
   const day=latestDay(); const ins = day ? S.insights.find(i=>i.id===day.id) : null; const b=ins?.brief;
   const when = d => new Date(d).toLocaleString("en-GB",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"});
   const stale = b && day?.collectedAt && b.basedOn && b.basedOn < day.collectedAt;
-  let h = `<section class="panel brief"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>The Brief</h2>
+  let h = `<section class="panel brief"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>The <em>Brief</em></h2>
       <span class="muted" style="font-size:.86rem">${b?`Written ${esc(when(b.generatedAt))}${stale?" · new stories since then":""}`:"Today's money news, minus the jargon."}</span></div>
       <button class="btn ${!b||stale?"primary":""}" id="bgen" type="button" ${mk.bBusy||!day?"disabled":""}>${b?"Rewrite the Brief":"Write today's Brief"}</button></div>
     ${mk.bBusy?think("Reading "+((day?.items||[]).length)+" stories and picking the ones that matter…"):""}
@@ -2249,7 +2278,7 @@ function vMonth(){
       <p class="fs-disc">Sources: market data from S&amp;P Dow Jones Indices, Nasdaq, Cboe, the US Treasury, the US Energy Information Administration and ICE BofA (published by the Federal Reserve) and from the European Central Bank; official indicators from the ECB, Eurostat and Bank of Portugal; analysis of public financial news collected by PaperMint (Bloomberg, Financial Times, WSJ, Reuters and others). For education only. Not investment advice. Past performance is not a guide to future returns.</p>
     </div>`
     : `<p class="muted">${days.length?"The month in review is written automatically every afternoon from the stories collected. Check back later today.":"No news collected this month yet."}</p>`;
-  return `<section class="panel mrv"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>Month in review</h2>
+  return `<section class="panel mrv"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>Month in <em>review</em></h2>
       <span class="muted" style="font-size:.86rem">A monthly factsheet of what moved the markets</span></div>
       <div class="row">${months.length>1?`<label class="field"><select id="mmonth" aria-label="Month">${months.map(m=>`<option value="${m}" ${m===mm.month?"selected":""}>${esc(monthName(m))}</option>`).join("")}</select></label>`:`<span class="pill">${esc(monthName(mm.month))}</span>`}
       ${sum?`<button class="btn small" id="fspdf" type="button">Download PDF</button><button class="btn small" id="fsmail" type="button">Copy for email</button><button class="btn small" id="fshtml" type="button">Download .html</button>`:""}
@@ -2851,8 +2880,10 @@ function scrollFX(root){
   if(matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   if(!sxIO) sxIO=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("sxin"); SXSEEN.add(e.target.dataset.sxk||""); sxIO.unobserve(e.target); } }),{rootMargin:"0px 0px -6% 0px"});
   const watch=(el,key)=>{ el.dataset.sxk=key; if(SXSEEN.has(key)) el.classList.add("sxin"); else sxIO.observe(el); };
-  root.querySelectorAll(".panel h2:not(.bpbody h2), .mega, .bline").forEach(h=>{ if(h.dataset.sx) return; if(h.querySelector("*")) return; const words=h.textContent.trim().split(/\s+/); h.dataset.sx="1"; h.setAttribute("aria-label",h.textContent.trim()); h.classList.add("sx");
-    h.innerHTML=words.map((w,i)=>`<span class="w" aria-hidden="true"><span style="--i:${i}">${esc(w)}</span></span>`).join(" "); watch(h,"h:"+words.join(" ")); });
+  root.querySelectorAll(".panel h2:not(.bpbody h2), .mega, .bline").forEach(h=>{ if(h.dataset.sx) return; if(h.querySelector("*:not(em)")) return;
+    const parts=[]; h.childNodes.forEach(n=>{ const em=n.nodeType===1&&n.tagName==="EM"; String(n.textContent).trim().split(/\s+/).filter(Boolean).forEach(w=>parts.push([w,em])); });   // an italic <em> word keeps its italics
+    const words=parts.map(p=>p[0]); h.dataset.sx="1"; h.setAttribute("aria-label",h.textContent.trim()); h.classList.add("sx");
+    h.innerHTML=parts.map(([w,em],i)=>`<span class="w" aria-hidden="true"><span style="--i:${i}">${em?`<em>${esc(w)}</em>`:esc(w)}</span></span>`).join(" "); watch(h,"h:"+words.join(" ")); });
   root.querySelectorAll(".panel > p.muted, .fcta p, .fbot p, .disc").forEach(p=>{ if(!p.classList.contains("sf")){ p.classList.add("sf"); watch(p,"p:"+p.textContent.trim().slice(0,60)); } });
   root.querySelectorAll(".stats4").forEach(g=>{ g.querySelectorAll(".st").forEach((c,i)=>c.style.setProperty("--i",i)); watch(g,"stats4"); });
 }
