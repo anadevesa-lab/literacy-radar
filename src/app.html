@@ -1269,6 +1269,31 @@ footer.foot::before{display:none!important}
 html.guest .subf[data-off]{display:none}
 .fcta .subf{margin-top:var(--s4)} .fcta .subf .lbl,.fcta .subf .note{color:inherit} .fcta .subf .note{opacity:.75}
 @media (max-width:480px){.subf .row{flex-wrap:wrap}.subf .row .btn{width:100%}}
+/* ===== Readability and calm transitions (senior review, Oct 2026) ===== */
+/* reading: comfortable line length and leading for every block of running text */
+.panel > p.muted,.brief .story .q p,.faq p,.mrv .fs-lead p,.fs-drv p,.fs-qs p{line-height:1.65;max-width:68ch}
+.brief .story .q p{font-size:1.02rem}
+/* the Brief: the headline sits at the top of its column, next to its label, and stays in view while you read the answers */
+.brief .story > h3{align-self:start;grid-row:1 / span 5!important;margin-top:42px!important;position:sticky;top:calc(var(--hh,110px) + 24px)}
+.brief .story > .meta{align-self:start}
+@media (max-width:760px){.brief .story > h3{grid-row:auto!important;margin-top:0!important;position:static}}
+/* news cards: three per row on desktop, a clearer title and two lines of summary, all cards the same height */
+.ncards{grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))!important;gap:16px!important}
+.ncard{padding:18px!important;align-content:start;height:100%}
+.ncard .tt{font-size:15.5px!important;font-weight:700!important;line-height:1.4!important;letter-spacing:-.01em}
+.ncard .sum{font-size:14px;line-height:1.5;color:#2E5A57;-webkit-line-clamp:2}
+.ncard .meta{font-size:12px}
+.ncard:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,60,59,.08)}
+.ncard{transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .2s!important}
+/* sections arrive gently as you scroll: a soft fade and a short rise, driven by the scroll itself so nothing can stay hidden */
+@media (prefers-reduced-motion: no-preference){
+  html{scroll-behavior:smooth}
+  @supports (animation-timeline: view()){
+    #main > section.cy,#main > .panel{animation:secIn linear both;animation-timeline:view();animation-range:entry 0% entry 30%}
+    .ncards > *{animation:secIn linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
+    @keyframes secIn{from{opacity:0;transform:translateY(36px)} to{opacity:1;transform:none}}
+  }
+}
 /* Go deeper: lettering-only cards in the mint tones, the last one dark */
 .deeper h2 em{font-family:var(--f-serif);font-style:italic;font-weight:400;color:#3AA89C}
 .dp-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,24px)}
