@@ -1307,6 +1307,18 @@ html.guest .subf[data-off]{display:none}
   .pmhero .num b{font-size:clamp(2.2rem,3vw,2.8rem)}
 }
 .pmhero + section.cy{margin-top:-40px;padding-top:36px!important}
+/* ===== Small phones (mobile review, Oct 2026): no zoom on focus, 44px tap targets, nothing too small to read ===== */
+@media (max-width:640px){
+  input,select,textarea{font-size:16px!important}
+  .btn.small{min-height:44px;padding-inline:16px}
+  .ncard .ext{min-width:44px;min-height:44px;display:grid;place-items:center;top:0!important;right:0!important}
+  .flink{display:inline-flex;align-items:center;min-height:44px}
+  .aipanel .x{width:44px;height:44px}
+  .pillgrid .stats4 .st .tg{font-size:11px!important;letter-spacing:.03em!important;white-space:normal!important;line-height:1.2;overflow:visible!important}
+  .stats4 .st small,.fs-mkt td small{font-size:12px}
+  .ncard .sum,.ncard.read .sum{font-size:14px}
+  .ncard .meta{font-size:12.5px}
+}
 /* ===== Quiet luxury: same words, colours and fonts, finer finish ===== */
 /* 1 · type: bigger, tighter section titles with one word in the Instrument Serif italic */
 #main h2 em{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing:-.015em;color:#3AA89C}
@@ -1906,7 +1918,7 @@ function hlLead(t){ const e=md(t); if(e.includes("<b>")) return e.replace(/<b>(.
 const srcTiles = day => { const src=(day?.sources||[]).map(n=>n==="BCE"?"ECB":n), ab=src.map(n=>ABBR[n]||String(n).slice(0,3).toUpperCase()); return (ab.length>=4?ab:["FT","WSJ","BBG","ECB"]).slice(0,4); };
 function heroFrame(o){
   return `<section class="pmhero" aria-label="${esc(o.label)}"><div class="card">
-    <div class="media${o.contain?" contain":""}"${o.contain?` style="--mbg:${o.contain}"`:""}>${o.photo?`<img src="${o.photo}" alt="" style="--pos:${o.photoPos||"50% 50%"}" onerror="this.remove()">`:""}
+    <div class="media${o.contain?" contain":""}"${o.contain?` style="--mbg:${o.contain}"`:""}>${o.photo?`<img src="${o.photo}" alt="" style="--pos:${o.photoPos||"50% 50%"}" fetchpriority="high" decoding="async" onerror="this.remove()">`:""}
       ${o.ribbon?`<svg class="ribbon" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <path id="pmwave" d="${o.wave||"M-40,300 C180,330 300,170 520,190 C720,208 760,320 960,250 C1080,208 1140,90 1260,40"}"/>
         <text><textPath href="#pmwave" startOffset="0">${esc(o.ribbon).repeat(4)}</textPath></text></svg>`:""}</div>
@@ -1914,7 +1926,7 @@ function heroFrame(o){
       <div class="lead"><h1${(o.title+o.em).length>32?' class="long"':""}>${esc(o.title)} <em>${esc(o.em)}</em></h1>
         <div class="acts">${o.cta?`<button class="btn primary cta" type="button" ${o.cta.attrs}>${esc(o.cta.text)} →</button>`:""}${o.extra||""}</div></div>
       <div class="side"><p>${esc(o.text)}</p>
-        <div class="row"><div class="thumb">${o.thumb?`<img src="${o.thumb}" alt="" onerror="this.remove()"${o.thumbPos?` style="object-position:${o.thumbPos}"`:""}>`:""}</div>
+        <div class="row"><div class="thumb">${o.thumb?`<img src="${o.thumb}" alt="" loading="lazy" decoding="async" onerror="this.remove()"${o.thumbPos?` style="object-position:${o.thumbPos}"`:""}>`:""}</div>
           <div class="stat"><div class="srcs" aria-hidden="true">${o.tiles.map(t=>`<i>${esc(t)}</i>`).join("")}</div>
             <div class="num"><b>${esc(o.num)}</b><span>${esc(o.numLabel)}</span></div></div></div></div>
     </div></div></section>`;
