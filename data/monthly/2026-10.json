@@ -1,113 +1,267 @@
 {
- "titulo": "Global Bond Rout and Energy Shocks Dominate Markets in October",
- "resumo": "October 2026 brought intense turbulence to financial markets as a relentless **global bond sell-off** pushed yields to multi-decade highs. Meanwhile, severe supply strains and geopolitical tensions sent **oil and diesel prices surging**, threatening broader economic stability. Central banks faced mounting pressure as weak labour reports clashed with stubborn inflation readings. Despite these headwinds, equities demonstrated resilience, with indices clawing back ground towards record highs amid AI optimism. **Households and savers** confronted rising borrowing costs, while policymakers scrambled to address escalating fiscal anxieties in Europe and the US.",
+ "titulo": "Oil Surges and Yields Bite Despite Record Equity Highs",
+ "resumo": "Global markets navigated crosscurrents in October as persistent inflation and severe energy disruptions collided with corporate resilience. **Brent crude escalated to 125.44 dollars a barrel**, posting an 8.2% monthly rise following Strait of Hormuz tanker attacks and Gulf production halts. Despite multi-decade highs in sovereign yields earlier in the month, the **S&P 500 climbed 2%** to reach 7807.24, buoyed by mega-cap technology and robust artificial intelligence capital expenditure. However, labour momentum cooled significantly as United States payroll growth dropped to just 29,000 jobs in September, with unemployment rising to 4.2%. In Europe, fiscal strain in France and euro area inflation of 3.8% weighed heavily on the single currency, driving the euro down 1.5% against the US dollar.",
+ "sumup": {
+  "frase": "Record equity gains contend with **surging oil** and elevated sovereign borrowing costs.",
+  "palavra": "Nervous",
+  "porque": "Escalating crude prices and multi-decade bond yields rattled sentiment despite resilient equity indices."
+ },
+ "drivers": [
+  {
+   "factor": "Surging oil and geopolitical tension",
+   "efeito": "negative",
+   "texto": "Brent crude climbed 8.2% month to date to 125.44 dollars a barrel, extending its yearly advance to 104.5%. Escalating tanker attacks around the Strait of Hormuz and a strike on Saudi Aramco headquarters intensified supply bottlenecks. Even emergency plans by G7 nations to release up to 100 million barrels of fuel failed to halt the energy advance."
+  },
+  {
+   "factor": "Cooling US employment data",
+   "efeito": "positive",
+   "texto": "US non-farm payroll additions slowed sharply to 29,000 in September, pushing the unemployment rate up to 4.2%. The surprisingly weak print curbed expectations of aggressive Federal Reserve interest-rate increases in October. Benchmark US 10-year Treasury yields eased back by 5 basis points during the month to 5.24%."
+  },
+  {
+   "factor": "Technology and AI earnings momentum",
+   "efeito": "positive",
+   "texto": "Equities pushed to fresh records as technology leaders capitalised on sustained artificial intelligence investment. The Nasdaq Composite advanced 1.4% this month to 27245.9, lifting its annual gain to 17.2%. Meanwhile, equity market volatility fell, with the Cboe VIX dropping 6.9% to 15.21."
+  },
+  {
+   "factor": "European fiscal and inflation pressures",
+   "efeito": "negative",
+   "texto": "Euro area inflation stood at 3.8% in September, while French budget turmoil stoked sovereign credit jitters. The EUR/USD currency pair slid 1.5% across the month to 1.1188, touching a 17-month trough. Benchmark euro area 10-year AAA yields declined 8 basis points to 3.4987% as investors sought safe-haven German paper."
+  },
+  {
+   "factor": "Persistent central bank hawkishness",
+   "efeito": "negative",
+   "texto": "Minutes from the Federal Open Market Committee revealed broad policymaker consensus that further tightening may be necessary to tame inflation. US 2-year Treasury yields remained elevated at 4.8% despite an 8 basis point decline this month. In Europe, the ECB maintained its deposit rate at 2.5%, keeping borrowing costs firm."
+  }
+ ],
  "themes": [
   {
-   "titulo": "Bond Market Turmoil",
-   "texto": "Global sovereign bond yields surged to multi-decade highs, driven by persistent inflation fears and worries over swelling government debt. Investors demanded higher returns, creating a ripple effect across corporate borrowing and commercial loans."
+   "titulo": "Energy shock clouds inflation trajectory",
+   "texto": "Crude oil hitting 125.44 dollars a barrel has revived fears of an entrenched refining crisis and transport fuel spikes, with UK diesel hitting 2 pounds a litre. The energy run-up complicates central bank easing cycles, as euro area headline inflation reached 3.8% and Portugal printed 3.6%. While G7 governments co-ordinated reserve releases of 100 million barrels, persistent supply disruptions in the Middle East keep upside price pressures acute."
   },
   {
-   "titulo": "Energy Supply Shock",
-   "texto": "Fuel supplies faced severe disruption due to Middle Eastern tensions, export curbs, and weather events like Hurricane Isaias. G7 nations and world leaders intervened to manage emergency stockpiles as diesel and crude prices spiked."
+   "titulo": "Sovereign debt under vigilante pressure",
+   "texto": "Long-term government bond yields hovered near multi-decade peaks, with the US 10-year Treasury yield at 5.24% and the UK long-term bond reaching 6% earlier in the month. High sovereign debt piles in France generated widening spreads, prompting warnings of potential bank stress and deposit flight. Bond investors are demanding higher term premia, forcing corporate borrowers to navigate steep debt refinancing costs."
   },
   {
-   "titulo": "Tech and AI Momentum",
-   "texto": "Technology stocks experienced bouts of volatility amid valuation concerns and revenue scrutiny. However, artificial intelligence infrastructure deals and major chip investments continued to dominate corporate spending."
+   "titulo": "Divergence between equities and macro fundamentals",
+   "texto": "Despite elevated borrowing costs, US equity indices attained record levels, with the S&P 500 up 14% year to date at 7807.24. Corporate sentiment remains insulated by AI hardware demand, reflected in third-quarter US IPO volumes reaching 36.1 billion dollars. However, market commentary from figures such as Broadcom's leadership cautioning against casino-like exuberance underscores growing anxiety over whether corporate earnings can justify stretched valuations."
+  }
+ ],
+ "questoes": [
+  {
+   "q": "Can US corporate earnings withstand benchmark Treasury yields holding above 5%?",
+   "porque": "Prolonged high debt costs threaten corporate margins and consumer credit quality as refinancing walls approach.",
+   "sinais": "Third-quarter corporate earnings reports and bank net interest income disclosures."
   },
   {
-   "titulo": "Labour Market Cooling",
-   "texto": "Economic data revealed a sharp slowdown in hiring across the United States. The softening labour figures altered expectations for future central bank policy adjustments."
+   "q": "Will geopolitical supply constraints push crude oil towards 200 dollars a barrel?",
+   "porque": "Severe energy price inflation could compel central banks to deliver additional unexpected interest-rate hikes.",
+   "sinais": "Tanker transit volumes through the Strait of Hormuz and emergency fuel release impacts."
+  },
+  {
+   "q": "Can European bond markets stabilise without emergency intervention from the ECB?",
+   "porque": "Mounting French fiscal friction and German flight-to-safety flows threaten to fragment euro area borrowing rates.",
+   "sinais": "French sovereign bond yield spreads against German AAA debt and ECB governing council statements."
+  }
+ ],
+ "mercados": [
+  {
+   "k": "spx",
+   "name": "S&P 500",
+   "source": "S&P Dow Jones Indices",
+   "kind": "price",
+   "value": 7807.24,
+   "asOf": "2026-10-12",
+   "chg": 2,
+   "ytd": 14,
+   "unit": "%"
+  },
+  {
+   "k": "ndq",
+   "name": "Nasdaq Composite",
+   "source": "Nasdaq",
+   "kind": "price",
+   "value": 27245.9,
+   "asOf": "2026-10-12",
+   "chg": 1.4,
+   "ytd": 17.2,
+   "unit": "%"
+  },
+  {
+   "k": "vix",
+   "name": "VIX (US equity volatility)",
+   "source": "Cboe",
+   "kind": "level",
+   "value": 15.21,
+   "asOf": "2026-10-12",
+   "chg": -6.9,
+   "ytd": 1.7,
+   "unit": "%"
+  },
+  {
+   "k": "ust2",
+   "name": "US Treasury 2-year yield",
+   "source": "US Treasury / Federal Reserve",
+   "kind": "yield",
+   "value": 4.8,
+   "asOf": "2026-10-09",
+   "chg": -8,
+   "ytd": 133,
+   "unit": "bp"
+  },
+  {
+   "k": "ust10",
+   "name": "US Treasury 10-year yield",
+   "source": "US Treasury / Federal Reserve",
+   "kind": "yield",
+   "value": 5.24,
+   "asOf": "2026-10-09",
+   "chg": -5,
+   "ytd": 106,
+   "unit": "bp"
+  },
+  {
+   "k": "ea2",
+   "name": "Euro area 2-year yield (AAA)",
+   "source": "European Central Bank",
+   "kind": "yield",
+   "value": 3.0661,
+   "asOf": "2026-10-12",
+   "chg": -9,
+   "ytd": 96,
+   "unit": "bp"
+  },
+  {
+   "k": "ea10",
+   "name": "Euro area 10-year yield (AAA)",
+   "source": "European Central Bank",
+   "kind": "yield",
+   "value": 3.4987,
+   "asOf": "2026-10-12",
+   "chg": -8,
+   "ytd": 55,
+   "unit": "bp"
+  },
+  {
+   "k": "eurusd",
+   "name": "EUR/USD",
+   "source": "European Central Bank",
+   "kind": "fx",
+   "value": 1.1188,
+   "asOf": "2026-10-13",
+   "chg": -1.5,
+   "ytd": -4.8,
+   "unit": "%"
+  },
+  {
+   "k": "brent",
+   "name": "Brent crude (USD a barrel)",
+   "source": "US Energy Information Administration",
+   "kind": "price",
+   "value": 125.44,
+   "asOf": "2026-10-06",
+   "chg": 8.2,
+   "ytd": 104.5,
+   "unit": "%"
+  },
+  {
+   "k": "hy",
+   "name": "US high-yield credit spread",
+   "source": "ICE BofA",
+   "kind": "yield",
+   "value": 3.11,
+   "asOf": "2026-10-12",
+   "chg": -1,
+   "ytd": 30,
+   "unit": "bp"
   }
  ],
  "momentos": [
   {
    "data": "1 Oct",
-   "facto": "Global bond yields hit multi-decade highs, with UK long-term bond yields reaching 6% for the first time since 1998."
-  },
-  {
-   "data": "2 Const",
-   "facto": "US job growth slowed sharply in September as the economy added just 29,000 jobs and unemployment ticked up to 4.2%."
+   "facto": "The US 10-year Treasury yield hit its highest level since 2002 while UK long-term bond yields reached 6% for the first time since 1998."
   },
   {
    "data": "2 Oct",
-   "facto": "G7 nations agreed to release up to 100 million barrels of emergency oil and diesel reserves to combat fuel shortages."
+   "facto": "US non-farm payrolls showed an increase of just 29,000 jobs for September, as G7 nations agreed to release up to 100 million barrels of emergency fuel."
   },
   {
    "data": "5 Oct",
-   "facto": "The average five-year fixed mortgage rate in the UK hit 6% for the first time in three years."
+   "facto": "The euro dropped to a 17-month low against the dollar amid escalating investor concerns over French sovereign debt stability."
   },
   {
    "data": "6 Oct",
-   "facto": "The S&P 500 climbed to a record high as AI bulls and earnings optimism helped equities shrug off the bond market slump."
+   "facto": "The S&P 500 reached a fresh all-time record high while Brent crude rose to 125.44 dollars a barrel."
   },
   {
    "data": "7 Oct",
-   "facto": "Federal Reserve minutes from the September meeting showed hawkish unity behind maintaining restrictive policy rates."
-  },
-  {
-   "data": "8 Oct",
-   "facto": "US mortgage rates rose for the seventh consecutive week, pushing borrowing costs to their highest levels since 2023."
+   "facto": "Federal Reserve minutes revealed hawkish policymaker unity behind the September rate increase, even as strong demand met a US 10-year Treasury auction."
   },
   {
    "data": "9 Oct",
-   "facto": "Hurricane Isaias barrelled toward the US Gulf Coast, shutting down a significant share of regional oil output."
+   "facto": "Hurricane Isaias shut down nearly three-quarters of US Gulf oil output, adding further pressure to global fuel supply."
+  },
+  {
+   "data": "13 Oct",
+   "facto": "Saudi Aramco headquarters was struck during regional attacks, while Bank of America received a 1.2 billion dollar regulatory penalty."
   }
  ],
  "numeros": [
   {
-   "valor": "3.6%",
-   "contexto": "The headline inflation rate in Portugal as of September 2026, highlighting ongoing price pressures."
+   "valor": "125.44",
+   "contexto": "Dollars per barrel of Brent crude on 6 October, representing a 104.5% rise year to date."
+  },
+  {
+   "valor": "29,000",
+   "contexto": "US jobs added in September, missing expectations and raising the unemployment rate to 4.2%."
   },
   {
    "valor": "3.8%",
-   "contexto": "The Euro area inflation rate recorded in September 2026 by Eurostat."
+   "contexto": "Euro area harmonised inflation rate recorded in September 2026, well above central bank targets."
   },
   {
-   "valor": "2.5%",
-   "contexto": "The ECB deposit rate maintained since mid-September 2026 amid ongoing monetary policy reviews."
+   "valor": "5.24%",
+   "contexto": "Yield on the US 10-year Treasury bond as of 9 October, down 5 basis points month to date."
   },
   {
-   "valor": "3.247%",
-   "contexto": "The 12-month Euribor average for September 2026, driving borrowing expenses across the eurozone."
-  },
-  {
-   "valor": "1.62%",
-   "contexto": "The new term deposit rate in Portugal recorded in August 2026."
-  },
-  {
-   "valor": "3%",
-   "contexto": "The new mortgage rate in Portugal recorded in August 2026 by official regulators."
+   "valor": "7807.24",
+   "contexto": "S&P 500 level on 12 October, marking a 2% monthly advance and a 14% year-to-date gain."
   }
  ],
  "classes": [
   {
-   "nome": "Government Bonds",
-   "balanco": "falling",
-   "leitura": "Sovereign debt suffered a brutal sell-off worldwide, driving yields significantly higher as investors demanded larger risk premiums."
-  },
-  {
-   "nome": "Global Equities",
-   "balanco": "mixed",
-   "leitura": "Stocks swung between record highs driven by AI optimism and sharp tech pullbacks triggered by rising bond yields and energy costs."
-  },
-  {
-   "nome": "Oil and Energy",
+   "nome": "US Equities",
    "balanco": "rising",
-   "leitura": "Crude and diesel prices jumped significantly due to geopolitical disruptions, export restrictions, and hurricane threats to production."
+   "leitura": "The S&P 500 gained 2% to 7807.24, driven by mega-cap technology and mega-deal momentum, with the VIX dropping to 15.21."
   },
   {
-   "nome": "Real Estate",
+   "nome": "Government Bonds",
+   "balanco": "rising",
+   "leitura": "Government debt saw modest relief buying after multidecade yield peaks, with US 10-year yields easing 5 basis points to 5.24%."
+  },
+  {
+   "nome": "Commodities",
+   "balanco": "rising",
+   "leitura": "Brent crude surged 8.2% to 125.44 dollars a barrel amid refinery bottlenecks, tanker strikes, and production shutdowns."
+  },
+  {
+   "nome": "Currencies",
    "balanco": "falling",
-   "leitura": "Rising mortgage rates and elevated borrowing costs cooled housing markets and dampened buyer demand significantly."
+   "leitura": "The euro weakened 1.5% this month to 1.1188 against the US dollar as fiscal anxiety in Paris undermined European currency assets."
+  },
+  {
+   "nome": "Corporate Credit",
+   "balanco": "steady",
+   "leitura": "US high-yield credit spreads tightened by 1 basis point to 3.11, showing minimal stress despite rising broader borrowing rates."
   }
  ],
  "vigiar": [
-  "The trajectory of global sovereign bond yields and whether central interventions stabilize debt markets.",
-  "Developments in Middle Eastern shipping lanes and their ongoing impact on global crude and diesel prices.",
-  "Upcoming third-quarter corporate earnings reports for clearer signals on tech sector profitability and AI spending payoffs.",
-  "Further labour market data releases to gauge the pace of economic cooling and anticipated central bank rate moves."
+  "Upcoming inflation data releases across the United States and the euro area following the crude oil price spike.",
+  "Federal Reserve policy deliberations in light of September's weak 29,000 payrolls number and sticky services inflation.",
+  "The evolution of French fiscal debates and sovereign spread movements against German benchmark debt.",
+  "Disruptions to maritime trade and physical tanker traffic through the Strait of Hormuz."
  ],
- "days": 7,
+ "days": 8,
  "final": false,
- "generatedAt": "2026-10-09T20:22:51.844Z"
+ "generatedAt": "2026-10-13T20:50:53.505Z"
 }
