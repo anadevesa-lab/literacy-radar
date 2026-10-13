@@ -1644,7 +1644,7 @@ const srcTile = n => { n=n==="BCE"?"ECB":n; const ab=ABBR[n]||String(n||"?").sli
 function vNewsPage(){
   const day=S.news.find(n=>n.id===st.newsDay)||latestDay(), items=day?.items||[], srcs=new Set(items.map(i=>i.source).filter(Boolean));
   return heroFrame({label:"Today's news", ribbon:"Today's money news, sorted. · ", photo:"assets/news-hero.webp", contain:"#F2EEEA", thumb:"assets/news-thumb.webp", thumbPos:"50% 50%",
-    title:"Today's money news,", em:"sorted for you.",
+    title:"Market insights,", em:"freshly minted.",
     cta:{text:"Read the stories", attrs:'data-jump=".newslist"'},
     text:"Every weekday morning and afternoon PaperMint gathers the money stories from trusted sources and sorts them by topic. Filter by topic or source and open any story at the original.",
     tiles:srcTiles(day), num:String(items.length||0), numLabel:`stories from ${srcs.size||0} sources${day?", "+(day.id===latestDay()?.id?"today":"that day"):""}.`}) + vNews(false) + vDeeper();
