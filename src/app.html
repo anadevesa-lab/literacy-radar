@@ -1310,6 +1310,15 @@ html.guest .subf[data-off]{display:none}
   .pmhero .num b{font-size:clamp(2.2rem,3vw,2.8rem)}
 }
 .pmhero + section.cy{margin-top:-40px;padding-top:36px!important}
+/* ===== Accessibility (WCAG 2.2 AA) ===== */
+/* the italic mint words were #3AA89C (2.9:1 on white, below AA); #1F7F7C is the same family at 4.8:1 */
+#main h2 em,.deeper h2 em{color:#1F7F7C}
+/* one clear focus ring for keyboard users everywhere */
+:focus-visible{outline:2px solid var(--ink)!important;outline-offset:3px!important}
+.pillgrid :focus-visible,.pmhero .stat :focus-visible{outline-color:var(--mint2)!important}
+main:focus{outline:none}
+.skip{position:fixed;left:16px;top:-60px;z-index:100;background:var(--ink);color:#FFFFFF;font-weight:700;padding:12px 18px;border-radius:12px;text-decoration:none;transition:top .2s var(--ease)}
+.skip:focus{top:12px}
 /* ===== Small phones (mobile review, Oct 2026): no zoom on focus, 44px tap targets, nothing too small to read ===== */
 @media (max-width:640px){
   input,select,textarea{font-size:16px!important}
@@ -1324,7 +1333,7 @@ html.guest .subf[data-off]{display:none}
 }
 /* ===== Quiet luxury: same words, colours and fonts, finer finish ===== */
 /* 1 · type: bigger, tighter section titles with one word in the Instrument Serif italic */
-#main h2 em{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing:-.015em;color:#3AA89C}
+#main h2 em{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing:-.015em;color:#1F7F7C}
 .pillgrid .indhead h2 em{color:var(--mint2)}
 .newslist > .row h2,.panel > .row h2,.panel > div > h2{font-size:clamp(2rem,3.6vw,3.25rem)!important;letter-spacing:-.045em;line-height:1}
 .pmhero h1{letter-spacing:-.05em;line-height:.98}
@@ -1360,7 +1369,7 @@ section.cy::before,.brief .story.cy::before{display:none!important}
 #main > section.cy:nth-of-type(even){background:#F4FAF8!important;box-shadow:0 0 0 100vmax #F4FAF8!important;clip-path:inset(0 -100vmax)}
 #main > section.cy + section.cy{margin-top:0}
 /* Go deeper: lettering-only cards in the mint tones, the last one dark */
-.deeper h2 em{font-family:var(--f-serif);font-style:italic;font-weight:400;color:#3AA89C}
+.deeper h2 em{font-family:var(--f-serif);font-style:italic;font-weight:400;color:#1F7F7C}
 .dp-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,24px)}
 .dp-card{position:relative;display:flex;flex-direction:column;gap:6px;text-align:left;border:0;padding:0;background:none;font:inherit;color:var(--ink);cursor:pointer}
 .dp-big{position:relative;display:flex;flex-direction:column;justify-content:flex-end;aspect-ratio:4/5;border-radius:22px;background:var(--dbg);padding:clamp(16px,1.8vw,24px);margin-bottom:12px;overflow:hidden;
@@ -1376,6 +1385,7 @@ section.cy::before,.brief .story.cy::before{display:none!important}
 @media (max-width:860px){.dp-cards{grid-template-columns:minmax(0,1fr)} .dp-big{aspect-ratio:16/9} .dp-go{opacity:1;transform:none}}
 </style>
 
+<a class="skip" href="#main">Skip to content</a>
 <div id="preload" aria-hidden="true"><div class="pl"><span class="plw"><span>Paper</span></span><span class="plw"><em>Mint</em></span></div></div>
 <header class="top"><div class="wrap">
   <a class="logo" href="./" aria-label="PaperMint, back to the front page" style="text-decoration:none;color:inherit"><span class="wm">Paper<em>Mint</em></span></a>
@@ -1383,7 +1393,7 @@ section.cy::before,.brief .story.cy::before{display:none!important}
   <nav class="tabs" id="mainnav"><button class="tab on" data-tab="news" type="button">News</button><button class="tab" data-tab="mkt" type="button">Markets</button><button class="tab" data-tab="ask" type="button"><span class="lg-only">Ask</span><span class="sm-only">Ask</span></button><button class="tab" data-tab="studio" type="button">Studio</button></nav><button class="aikey-top" id="aikeyTop" type="button" hidden><i></i><span>AI key</span></button>
 </div></header>
 <div class="ticker" id="ticker" aria-label="Market ticker"></div>
-<main class="wrap" id="main"></main>
+<main class="wrap" id="main" tabindex="-1"></main>
 <footer class="foot"><div class="fcard">
   <section class="fcta"><div class="in">
     <div class="fhead">
@@ -1404,8 +1414,9 @@ section.cy::before,.brief .story.cy::before{display:none!important}
   </div></div>
   <div class="bigmark" aria-hidden="true"><span class="bw"><span>Paper</span></span><span class="bw"><em>Mint</em></span></div>
 </div></footer>
-<div class="toast" id="toast" hidden></div>
-<script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<!--runtime--><!-- the PowerPoint library (466 KB) is no longer loaded up front: loadPptx() fetches it the first time a deck is downloaded -->
+
 <script>
 (() => {
 const $ = s => document.querySelector(s);
@@ -2671,6 +2682,11 @@ function render(){
   document.querySelectorAll("#mainnav .tab").forEach(t=>t.addEventListener("click",()=>set(false)));
   document.addEventListener("click",e=>{ if(hd.classList.contains("open")&&!hd.contains(e.target)) set(false); });
   document.addEventListener("keydown",e=>{ if(e.key==="Escape"&&hd.classList.contains("open")){ set(false); bt.focus(); } });
+})();
+/* screen readers hear which page is open: aria-current follows the .on tab */
+(()=>{ const nav=document.getElementById("mainnav"); if(!nav) return;
+  const sync=()=>nav.querySelectorAll(".tab[data-tab]").forEach(t=>{ const v=t.classList.contains("on")?"page":"false"; if(t.getAttribute("aria-current")!==v) t.setAttribute("aria-current",v); });
+  new MutationObserver(sync).observe(nav,{subtree:true,attributes:true,attributeFilter:["class"]}); sync();
 })();
 /* PaperMint's social accounts: paste the profile links here once they exist; until then the footer buttons say "coming soon" */
 const SOCIAL={ linkedin:"", instagram:"" };
