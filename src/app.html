@@ -649,7 +649,7 @@ h2{font-size:clamp(1.75rem,2.6vw,2.5rem);letter-spacing:-.035em;line-height:1.08
 .btn:active{transform:scale(.98)}
 .btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
 .btn:disabled::before{display:none}
-.btn.small{font-size:13.5px;min-height:36px;padding:0 var(--s4)}
+.btn.small{font-size:var(--t-sm);min-height:36px;padding:0 var(--s4)}
 .btn.primary{background:var(--ink)!important;border-color:var(--ink)!important;color:#fff!important}
 .btn.primary::before{background:var(--mint2)}
 .btn.primary::after{content:"→";font-size:var(--t-xs2);letter-spacing:0;transition:transform .25s cubic-bezier(.2,.7,.2,1)}
@@ -1088,7 +1088,7 @@ footer.foot::before{display:none!important}
 .fs-box.dark{background:var(--ink);color:var(--lt)} .fs-box.dark h5{color:var(--mint2)} .fs-box.dark ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:6px;font-size:var(--t-sm);line-height:1.5}
 .fs-drv{display:flex;flex-direction:column;gap:var(--s3)} .fs-drv > div{border-top:1px solid var(--line);padding-top:10px} .fs-drv > div:first-child{border-top:0;padding-top:0}
 .fs-dh{display:flex;justify-content:space-between;gap:10px;align-items:baseline} .fs-dh b{font-size:var(--t-sm2);color:var(--ink)}
-.fs-drv p,.fs-tab p,.fs-nums p,.fs-time p{margin:var(--s1) 0 0;font-size:13.5px;line-height:1.5;color:var(--ink2)}
+.fs-drv p,.fs-tab p,.fs-nums p,.fs-time p{margin:var(--s1) 0 0;font-size:var(--t-sm);line-height:1.5;color:var(--ink2)}
 .fs .tr{font-size:11.5px;font-weight:800;white-space:nowrap;padding:3px var(--s2);border-radius:var(--r-pill);background:#FFFFFF}
 .fs .tr.up{color:var(--brand)} .fs .tr.down{color:#B26B00} .fs .tr.mixed,.fs .tr.flat{color:var(--muted)}
 .fs-time{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:var(--s2)} .fs-time li{display:grid;grid-template-columns:62px minmax(0,1fr);gap:10px}
@@ -1118,7 +1118,7 @@ footer.foot::before{display:none!important}
 .fs-big .l{font-size:var(--t-sm2);font-weight:700;color:#FFFFFF} .fs-big .s{font-size:var(--t-2xs);color:rgba(230,247,244,.55)}
 @media (max-width:760px){.fs-hero{grid-template-columns:minmax(0,1fr)} .fs-big{border-left:0;padding-left:0;border-top:1px solid rgba(141,230,216,.25);padding-top:18px}}
 .fs-tscroll{overflow-x:auto}
-.fs-mkt{width:100%;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums;min-width:560px}
+.fs-mkt{width:100%;border-collapse:collapse;font-size:var(--t-sm);font-variant-numeric:tabular-nums;min-width:560px}
 .fs-mkt th{font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:right;padding:6px var(--s2);border-bottom:2px solid var(--ink)}
 .fs-mkt th:first-child,.fs-mkt td:first-child{text-align:left;padding-left:0}
 .fs-mkt td{padding:var(--s2);border-bottom:1px solid var(--line);text-align:right;color:var(--ink)} .fs-mkt td b{font-weight:700}
@@ -1126,7 +1126,7 @@ footer.foot::before{display:none!important}
 .fs-mkt .up{color:var(--brand);font-weight:800} .fs-mkt .dn{color:#B26B00;font-weight:800}
 .fs-qs{display:flex;flex-direction:column;gap:var(--s3)} .fs-qs > div{display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px}
 .fs-qs .n{width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--mint2);font-size:var(--t-2xs);font-weight:800;display:grid;place-items:center}
-.fs-qs b{font-size:14.5px;color:var(--ink)} .fs-qs p{margin:var(--s1) 0 0;font-size:13.5px;color:var(--ink2)} .fs-qs .sig{color:var(--muted)} .fs-qs .sig b{font-size:var(--t-xs2)}
+.fs-qs b{font-size:var(--t-sm2);color:var(--ink)} .fs-qs p{margin:var(--s1) 0 0;font-size:var(--t-sm);color:var(--ink2)} .fs-qs .sig{color:var(--muted)} .fs-qs .sig b{font-size:var(--t-xs2)}
 @media (max-width:900px){.fs-figs{grid-template-columns:repeat(3,minmax(0,1fr))} .fs-grid{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:480px){.fs-figs{grid-template-columns:repeat(2,minmax(0,1fr))} .fs-nums{grid-template-columns:minmax(0,1fr)}}
 .btn.canva{border-color:#7D2AE8!important;color:#7D2AE8!important} .btn.canva:not(:disabled):hover{color:#FFFFFF!important}
@@ -1174,9 +1174,9 @@ html.guest .subf[data-off]{display:none}
 /* news cards: three per row on desktop, a clearer title and two lines of summary, all cards the same height */
 .ncards{grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))!important}
 /* ===== Component: news card (.ncard) ===== parts (.meta .tt .sum .ext .ck) are styled with the card grid above */
-.ncard{position:relative;display:grid;grid-template-columns:40px minmax(0,1fr);gap:var(--s3);align-items:start;align-content:start;min-width:0;height:100%;padding:18px!important;border:1px solid var(--line)!important;border-radius:var(--r-base);background:#FFFFFF;box-shadow:none!important;cursor:pointer;transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .2s!important}
+.ncard{position:relative;display:grid;grid-template-columns:40px minmax(0,1fr);gap:var(--s3);align-items:start;align-content:start;min-width:0;height:100%;padding:var(--s4)!important;border:1px solid var(--line)!important;border-radius:var(--r-base);background:#FFFFFF;box-shadow:none!important;cursor:pointer;transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .2s!important}
 .ncard:hover{border-color:var(--mint2)!important;box-shadow:0 1px 0 var(--mint2)!important;transform:translateY(-2px)}
-.ncard .tt{font-size:15.5px;font-weight:700;line-height:1.4;letter-spacing:-.01em}
+.ncard .tt{font-size:var(--t-md);font-weight:700;line-height:1.4;letter-spacing:-.01em}
 .ncard .sum{font-size:var(--t-sm);line-height:1.5;-webkit-line-clamp:2}
 .ncard .meta{font-size:var(--t-xs)}
 
@@ -1221,7 +1221,7 @@ main:focus{outline:none}
   .pillgrid .stats4 .st .tg{font-size:var(--t-2xs)!important;letter-spacing:.03em!important;white-space:normal!important;line-height:1.2;overflow:visible!important}
   .stats4 .st small,.fs-mkt td small{font-size:var(--t-xs)}
   .ncard .sum,.ncard.read .sum{font-size:var(--t-sm)}
-  .ncard .meta{font-size:12.5px}
+  .ncard .meta{font-size:var(--t-xs)}
 }
 /* ===== Quiet luxury: same words, colours and fonts, finer finish ===== */
 /* 1 · type: bigger, tighter section titles with one word in the Instrument Serif italic */
