@@ -1,97 +1,178 @@
 {
  "auto": true,
  "date": "2026-10-14",
- "basedOn": "2026-10-14T12:27:31.702Z",
- "generatedAt": "2026-10-14T12:27:34.205Z",
- "resumo": "Today's talk is mostly about **stocks and central-bank rates**. Rising: stocks, central-bank rates, tech, the economy, inflation, commodities. Falling: bonds.",
+ "basedOn": "2026-10-14T19:44:21.587Z",
+ "generatedAt": "2026-10-14T19:44:24.572Z",
+ "resumo": "Markets face mixed pressures as **AI growth boosts profits** while inflation worries persist.",
  "classes": [
   {
-   "nome": "Ações",
-   "tendencia": "a subir",
+   "nome": "Equities",
+   "tendencia": "mixed",
    "forca": 3,
-   "leitura": "17 stories today. Top one: Charles Schwab and DoorDash ranked among bargain stocks that could lead the market higher (MarketWatch).",
+   "leitura": "Chipmakers and AI-driven banking profits rise, but chip routs and consumer margins pressure indices.",
    "a_favor": [
-    "Charles Schwab and DoorDash ranked among bargain stocks tha…"
+    "Strong semiconductor supplier earnings",
+    "Investment banking profits up"
    ],
    "riscos": [
-    "Chip Stocks Tumble on A.I. Spending Fears and Rising Chines…"
+    "Chip maker selloffs",
+    "Inflation and interest rate fears"
    ],
-   "perfil": "Long horizon and tolerance for temporary losses."
+   "perfil": "Suits investors willing to accept volatility for long-term growth potential."
   },
   {
-   "nome": "Juros (bancos centrais)",
-   "tendencia": "a subir",
-   "forca": 3,
-   "leitura": "14 stories today. Top one: Higher rates could be needed to avoid 'inflationary mindset' taking hold, says Fed's Hammack (CNBC).",
-   "a_favor": [
-    "Higher rates could be needed to avoid 'inflationary mindset…"
-   ],
-   "riscos": [],
-   "perfil": "Affects everyone's deposits, loans and bonds."
-  },
-  {
-   "nome": "Tecnologia",
-   "tendencia": "a subir",
-   "forca": 3,
-   "leitura": "11 stories today. Top one: AI Business Use Rises Despite Growing Concern (Wall Street Journal).",
-   "a_favor": [
-    "AI Business Use Rises Despite Growing Concern"
-   ],
-   "riscos": [],
-   "perfil": "Long horizon and tolerance for high volatility."
-  },
-  {
-   "nome": "Economia",
-   "tendencia": "a subir",
-   "forca": 3,
-   "leitura": "9 stories today. Top one: UK growth forecast upgraded but higher energy prices to hit economy next year (BBC).",
-   "a_favor": [
-    "UK growth forecast upgraded but higher energy prices to hit…"
-   ],
-   "riscos": [],
-   "perfil": "Background for saving and investing decisions."
-  },
-  {
-   "nome": "Obrigações",
-   "tendencia": "a descer",
-   "forca": 3,
-   "leitura": "8 stories today. Top one: Japanese banks and insurers return to domestic bonds as yields surge (Financial Times).",
-   "a_favor": [
-    "Europe, U.S. futures rise as semiconductor supplier ASML be…"
-   ],
-   "riscos": [
-    "Japanese banks and insurers return to domestic bonds as yie…"
-   ],
-   "perfil": "Medium horizon and tolerance for price swings."
-  },
-  {
-   "nome": "Inflação",
-   "tendencia": "a subir",
-   "forca": 3,
-   "leitura": "8 stories today. Top one: S&P 500 futures edge higher ahead of CPI data, more bank earnings (Investing.com).",
-   "a_favor": [
-    "S&P 500 futures edge higher ahead of CPI data, more bank ea…"
-   ],
-   "riscos": [
-    "English and Welsh water firms could be forced to return £10…"
-   ],
-   "perfil": "Affects everyone's purchasing power."
-  },
-  {
-   "nome": "Matérias-primas",
-   "tendencia": "a subir",
+   "nome": "Commodities",
+   "tendencia": "rising",
    "forca": 2,
-   "leitura": "5 stories today. Top one: Oil Prices Rise as Iran Steps Up Attacks and Fighting Intensifies (New York Times).",
+   "leitura": "Oil gains as geopolitical hostilities threaten supply flows, while copper eases slightly after strike fears.",
    "a_favor": [
-    "Oil Prices Rise as Iran Steps Up Attacks and Fighting Inten…"
+    "Intensified geopolitical supply threats",
+    "Strong data center demand"
    ],
-   "riscos": [],
-   "perfil": "A small slice of a portfolio, for diversification only."
+   "riscos": [
+    "Volatile supply chain updates",
+    "Refinery margin pressures"
+   ],
+   "perfil": "Suits experienced investors seeking tactical exposure to raw materials."
+  },
+  {
+   "nome": "Government Bonds",
+   "tendencia": "mixed",
+   "forca": 2,
+   "leitura": "European bond markets face scrutiny over national debt, while borrowing costs reflect persistent inflation worries.",
+   "a_favor": [
+    "Stable baseline yields",
+    "Safe-haven demand"
+   ],
+   "riscos": [
+    "Fiscal debt concerns in Europe",
+    "Potential rate hikes"
+   ],
+   "perfil": "Suits conservative investors prioritizing capital preservation over high returns."
   }
  ],
  "temas": [
-  "Volatility is not the same as losing money",
-  "What the ECB does and why it touches your money",
-  "Concentration: the risk of betting on one sector"
- ]
+  "Understanding equity market volatility",
+  "How geopolitical events impact commodities",
+  "Interpreting central bank inflation concerns",
+  "Assessing risk in diverse asset classes"
+ ],
+ "ai": true,
+ "brief": {
+  "one_liner": "Sticky inflation and climbing mortgage forecasts dampened market spirits today, even as fuel warnings and record fund flows kept investors on their toes.",
+  "number": {
+   "value": "3.8%",
+   "caption": "Euro area annual inflation rate recorded in September 2026"
+  },
+  "stories": [
+   {
+    "i": 38,
+    "title": "Running on Fumes: Diesel Deficit Looms Until Mid-2027",
+    "whats_going_on": "The International Energy Agency has warned that global diesel prices are poised to climb again as supply tightens. According to the energy watchdog, this worldwide shortage of refined fuel is expected to persist until mid-2027.",
+    "what_it_means": "Diesel is the primary workhorse of the global economy, powering freight logistics, farming machinery, and manufacturing supply chains. When fuel supplies fall short, the added shipping and operating expenses quickly trickle down into shop prices.",
+    "why_care": "Higher fuel prices risk keeping broader inflation sticky, which could delay further interest rate cuts and keep consumer borrowing costs elevated."
+   },
+   {
+    "i": 29,
+    "title": "Tech Stumbles as Sticky Inflation Keeps Rate Bets High",
+    "whats_going_on": "Global share prices dropped as a steep sell-off in semiconductor companies spread across broader equity indices. The downturn was accelerated by resurgent inflation worries, which spurred traders to wager that the Federal Reserve will continue raising interest rates.",
+    "what_it_means": "Technology and growth shares rely heavily on future earnings, making them particularly sensitive to rising borrowing costs. When investors suspect that central banks must remain aggressive to curb price growth, equity valuations often undergo a swift repricing.",
+    "why_care": "If your pension or personal savings are invested in global stock funds, persistent inflation chatter means you should prepare for continued market volatility."
+   },
+   {
+    "i": 56,
+    "title": "Home Loan Hopes Dashed as Mortgage Forecasts Climb",
+    "whats_going_on": "Fannie Mae has sharply increased its mortgage rate forecast through 2027, revising its outlook upwards from earlier estimates. The updated projection signals that the era of noticeably cheaper home financing will take far longer to arrive than previously hoped.",
+    "what_it_means": "Mortgage underwriters are adjusting to persistent economic resilience and stubborn price pressures, which prevent long-term bond yields from declining. Consequently, lenders are locking in elevated financing terms across the housing market for the foreseeable future.",
+    "why_care": "Anyone planning to purchase property or renegotiate a fixed-rate loan will face higher borrowing charges, keeping monthly repayments stretched."
+   },
+   {
+    "i": 39,
+    "title": "BlackRock Pulls in $205 Billion to Hit Record High",
+    "whats_going_on": "BlackRock gathered $205 billion in net client inflows over the quarter, propelling its total assets under management to a fresh record high. The expansion was supported by big strategic pushes into private capital, including acquisitions of HPS and Global Infrastructure Partners.",
+    "what_it_means": "Institutional wealth is concentrating inside giant asset managers capable of offering everything from everyday index trackers to private loans and infrastructure. It reveals that substantial cash reserves are actively seeking returns across global markets rather than lingering on the sidelines.",
+    "why_care": "Observing where massive institutions steer capital provides a useful compass for understanding which areas of the global economy are securing long-term funding."
+   }
+  ],
+  "basedOn": "2026-10-14T19:44:21.587Z",
+  "generatedAt": "2026-10-14T19:44:52.350Z"
+ },
+ "pack": {
+  "carousel": {
+   "title": "Why cheaper mortgages are now delayed",
+   "slides": [
+    {
+     "kind": "hook",
+     "h": "Cheaper home loans won't **arrive** soon",
+     "big": "",
+     "t": ""
+    },
+    {
+     "kind": "stat",
+     "h": "Average **new mortgage** rate today",
+     "big": "3%",
+     "t": "Borrowing costs are staying higher for longer than many hoped."
+    },
+    {
+     "kind": "point",
+     "h": "Lenders are **hiking** future forecasts",
+     "big": "",
+     "t": "New projections show cheaper financing will take much longer to appear."
+    },
+    {
+     "kind": "myth",
+     "h": "\"Interest rates will **plummet** soon\"",
+     "big": "",
+     "t": "Persistent inflation pressures mean borrowing costs may linger well into 2027."
+    },
+    {
+     "kind": "point",
+     "h": "Prepare your **household budget**",
+     "big": "",
+     "t": "Anyone buying or remortgaging must brace for higher monthly loan repayments."
+    },
+    {
+     "kind": "cta",
+     "h": "**Save this** post today",
+     "big": "",
+     "t": "Follow PaperMint for daily finance updates made simple."
+    }
+   ]
+  },
+  "linkedin": "If you have been holding out for mortgage rates to tumble, you might want to rethink your timeline.\n\nFresh forecasts from Fannie Mae show that expectations for cheaper home loans have been pushed back through 2027. The dream of a rapid return to rock-bottom borrowing is fading fast.\n\nWhy the sudden change? Persistent inflation is refusing to budge quietly. A global shortage of diesel fuel is now expected to drag on until mid-2027, according to the International Energy Agency. Higher fuel costs feed directly into transport and goods, keeping inflation sticky and giving central banks reason to keep borrowing rates elevated.\n\nFor households, this means patience is key. Whether you are planning to buy your first home or preparing to renegotiate a fixed-rate deal, high borrowing charges will remain the reality for some time. In Portugal, the average new mortgage rate sits at 3%, while Euro area inflation remains stubborn at 3.8%.\n\nBudgeting for today's reality, rather than tomorrow's rate cuts, is your safest bet.\n\n#PersonalFinance #MortgageRates #Inflation",
+  "reel": {
+   "hook": "Hoping for cheap mortgage rates soon? Here is the bad news.",
+   "script": [
+    "If you plan to buy a home, brace yourself.",
+    "Lenders have sharply increased their mortgage rate forecasts all the way through 2027.",
+    "A looming global diesel shortage could keep inflation stubbornly high.",
+    "That means central banks are unlikely to slash borrowing costs quickly.",
+    "Do not wait on rate cuts—budget for today's borrowing costs instead."
+   ],
+   "caption": "Cheaper home loans have been delayed through 2027. Here is what persistent inflation means for your property plans."
+  },
+  "faq": [
+   {
+    "q": "Why are mortgage rate forecasts rising again?",
+    "a": "Forecasters like Fannie Mae have revised their outlook upwards because inflation remains sticky across the globe. Central banks may keep borrowing costs elevated for longer than previously hoped. This delays the arrival of significantly cheaper home loans."
+   },
+   {
+    "q": "How does a diesel shortage affect my mortgage?",
+    "a": "Diesel powers global transport and shipping, so fuel shortages push up the cost of everyday goods. When inflation stays high, central banks hesitate to lower interest rates. This keeps consumer borrowing charges, including home loans, stretched."
+   },
+   {
+    "q": "What is the current average mortgage rate in Portugal?",
+    "a": "According to central bank data, the average new mortgage rate in Portugal was 3% in August 2026. This reflects elevated benchmark rates designed to tame inflation. Borrowers should expect financing costs to stay around these levels for now."
+   },
+   {
+    "q": "Should I wait for interest rates to drop before buying?",
+    "a": "Waiting for rates to fall could take longer than expected, as projections now stretch into 2027. It is often wiser to buy based on what you can afford right now. Always run your numbers using existing rates rather than banking on future cuts."
+   },
+   {
+    "q": "Why did global stock markets fall today?",
+    "a": "Equities dropped due to a sharp sell-off in semiconductor shares and renewed inflation worries. Traders worry that stubborn inflation will force central banks to keep rates high or raise them further. Remember that past performance is not a reliable guide to future returns."
+   }
+  ],
+  "generatedAt": "2026-10-14T19:45:18.965Z"
+ }
 }

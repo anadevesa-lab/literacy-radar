@@ -2,606 +2,6 @@
  "date": "2026-10-14",
  "items": [
   {
-   "source": "Financial Times",
-   "category": "Mercados",
-   "published": "14 Oct",
-   "title": "Patrick Drahi’s creditors strike back",
-   "summary": "Lenders have sued Altice International in the latest escalation of a long-running battle between the heavily indebted telecoms group and its creditors",
-   "url": "https://www.ft.com/content/cd8b1aaf-abd8-4c75-afb2-11683c675016?syn-25a6b1a6=1"
-  },
-  {
-   "source": "Financial Times",
-   "category": "Mercados",
-   "published": "14 Oct",
-   "title": "Germany puts Ukrainian ex-officer in the dock over Nord Stream sabotage",
-   "summary": "Serhii Kuznietsov is accused of leading group of divers who placed explosives on the Russian gas pipelines in the Baltic Sea",
-   "url": "https://www.ft.com/content/8c3c631c-e37f-4209-aefd-112c4c58020c?syn-25a6b1a6=1"
-  },
-  {
-   "source": "Financial Times",
-   "category": "Obrigações",
-   "published": "14 Oct",
-   "title": "Japanese banks and insurers return to domestic bonds as yields surge",
-   "summary": "Investors are closely watching for signs that the country’s institutions may be starting to repatriate capital after decades hunting for returns overseas",
-   "url": "https://www.ft.com/content/8c7ded63-6232-44df-98ba-25a46422e56f?syn-25a6b1a6=1"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Banca central",
-   "published": "14 Oct",
-   "title": "CPI Report Today: Investors Await Inflation Data as Bank Earnings Roll In",
-   "summary": "Annual inflation expected at 3.6% in September; unexpectedly hot reading could shake up Fed rate path",
-   "url": "https://www.wsj.com/livecoverage/stock-market-cpi-inflation-10-14-2026?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Inflação",
-   "published": "14 Oct",
-   "title": "Fund Managers Are Bullish&#x2014;Watch Out",
-   "summary": "Plus, investors await inflation data",
-   "url": "https://www.wsj.com/finance/investing/fund-managers-are-bullishwatch-out-0597c06b?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Habitação",
-   "published": "14 Oct",
-   "title": "Stubborn Sellers Are the Last Thing Propping Up Home Prices",
-   "summary": "Mortgage rates above 7% might not be enough to crack home values if owners hold the line.",
-   "url": "https://www.wsj.com/economy/housing/stubborn-sellers-are-the-last-thing-propping-up-home-prices-da1a26c9?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Bolsa",
-   "published": "14 Oct",
-   "title": "Failure of Australia&#x2019;s Largest IPO in Decades Sends Tremors Through AI Trade",
-   "summary": "High interest rates and political uncertainty have data-center startups and other tech companies rethinking their go-public timing: &#x201c;Are We Screwed?&#x201d;",
-   "url": "https://www.wsj.com/finance/firmus-ipo-ai-trade-f490c240?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Bolsa",
-   "published": "13 Oct",
-   "title": "Financial Services Roundup: Market Talk",
-   "summary": "Find insight on major Gulf stocks, JP Morgan Chase, Goldman Sachs and more in the latest Market Talks covering financial services.",
-   "url": "https://www.wsj.com/business/financial-services-roundup-market-talk-51c2b458?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Bolsa",
-   "published": "13 Oct",
-   "title": "Rising Interest Rates Threaten to Spoil the Party for Big Banks",
-   "summary": "Goldman Sachs and JPMorgan post higher profit, but the mood on Wall Street is becoming more cautious.",
-   "url": "https://www.wsj.com/finance/banking/rising-interest-rates-threaten-to-spoil-the-party-for-big-banks-0ef3e7c0?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Bolsa",
-   "published": "13 Oct",
-   "title": "Bank Earnings Look Strong, But Markets Shrug",
-   "summary": "Plus, memory stocks fall, and private equity is facing a reckoning.",
-   "url": "https://www.wsj.com/finance/stocks/bank-earnings-look-strong-but-markets-shrug-26533199?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Mercados",
-   "published": "13 Oct",
-   "title": "Gulf Hurricane Not Big Enough to Reset Insurance Market",
-   "summary": "Capital flowing into insurance might actually be weakening the sector.",
-   "url": "https://www.wsj.com/finance/gulf-hurricane-not-big-enough-to-reset-insurance-market-024deafa?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Mercados",
-   "published": "14 Oct",
-   "title": "Bank of America Settlement Charge Hits Profit, Morgan Stanley Profit Climbs",
-   "summary": "Bank of America reported a lower third-quarter profit, mostly tied to a regulatory settlement charge, while Morgan Stanley&#x2019;s overall profit and revenue climbed",
-   "url": "https://www.wsj.com/business/earnings/bank-of-america-settlement-charge-hits-profit-morgan-stanley-profit-climbs-d9cde716?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Obrigações",
-   "published": "13 Oct",
-   "title": "Bank of America to Pay $1.2 Billion to Settle Violations of Money Laundering, Sanctions Laws",
-   "summary": "The Treasury Department and regulators say bank missed $5 billion of suspicious activity.",
-   "url": "https://www.wsj.com/finance/regulation/bank-of-america-to-pay-1-21-billion-to-settle-violations-of-money-laundering-sanctions-laws-203b5fdf?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "13 Oct",
-   "title": "AI Chips&#x2019; New Secret Sauce Is Packaging",
-   "summary": "Plus, Meta releases a new model it says it cutting-edge, and OpenAI may be closing the gap with Anthropic.",
-   "url": "https://www.wsj.com/tech/ai/ai-chips-new-secret-sauce-is-packaging-a144a348?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "13 Oct",
-   "title": "AI Business Use Rises Despite Growing Concern",
-   "summary": "Plus, Meta&#x2019;s new model.",
-   "url": "https://www.wsj.com/cio-journal/ai-business-use-rises-despite-growing-concern-74f5e7d7?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "13 Oct",
-   "title": "My First Impressions of Apple&#x2019;s New Smart Home Display",
-   "summary": "HomeView is a square-shaped screen for smart home control, hands-free FaceTime calls and access to Siri AI.",
-   "url": "https://www.wsj.com/tech/personal-tech/apple-homeview-first-impressions-615ac94c?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Mercados",
-   "published": "14 Oct",
-   "title": "Tech, Media & Telecom Roundup: Market Talk",
-   "summary": "Find insight on Samsung Electronics, ASML Holding, Apple and more in the latest Market Talks covering Technology, Media and Telecom.",
-   "url": "https://www.wsj.com/business/tech-media-telecom-roundup-market-talk-e9bd3bcd?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Economia",
-   "published": "14 Oct",
-   "title": "To Get This Job at McKinsey, You&#x2019;ll Need to Survive a Debate With AI First",
-   "summary": "The elite consulting firm is rolling out a new avatar that plays the part of a client in some consulting interviews.",
-   "url": "https://www.wsj.com/lifestyle/careers/mckinsey-interview-process-ai-7d08a69e?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "13 Oct",
-   "title": "Character.ai Maker Files for Chapter 11 Bankruptcy",
-   "summary": "Character.ai, which lets users interact with AI avatars that include fictional characters and real public figures, had come under scrutiny for the platform&#x2019;s effects on teen mental health.",
-   "url": "https://www.wsj.com/tech/ai/character-ai-maker-files-for-chapter-11-bankruptcy-740e6fb1?mod=rss_Technology"
-  },
-  {
-   "source": "The Economist",
-   "category": "Mercados",
-   "published": "13 Oct",
-   "title": "How to lose money betting against Europe",
-   "summary": "In a sovereign-debt crisis, even understanding politics may not be enough",
-   "url": "https://www.economist.com/finance-and-economics/2026/10/13/how-to-lose-money-betting-against-europe"
-  },
-  {
-   "source": "CNBC",
-   "category": "Inflação",
-   "published": "13 Oct",
-   "title": "The latest inflation data is expected to show price increases are accelerating",
-   "summary": "Economists expect the consumer price index for September to rise 0.6% on the month and 3.6% year over year.",
-   "url": "https://www.cnbc.com/2026/10/13/september-consumer-price-index-inflation.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "14 Oct",
-   "title": "Iran says it’s ‘counting the moments’ until it can attack American warships; Saudi Aramco facilities attacked as Houthi attacks escalate",
-   "summary": "Meanwhile, Saudi Arabia's Aramco reportedly came under fresh attack overnight.",
-   "url": "https://www.cnbc.com/2026/10/14/us-iran-war-trump-hormuz-saudi.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Obrigações",
-   "published": "14 Oct",
-   "title": "Bank of America shares drop more than 5% after third-quarter revenue miss and regulatory penalty",
-   "summary": "Bank of America shares fell Wednesday after posting weaker-than-expected trading revenue and the impact of a $1.2 billion Treasury fine.",
-   "url": "https://www.cnbc.com/2026/10/14/bank-of-america-bac-q3-2026-earnings.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Bolsa",
-   "published": "14 Oct",
-   "title": "Morgan Stanley tops estimates as equities trading revenue exceeds expectations by $909 million",
-   "summary": "Morgan Stanley is expected to benefit from robust investment banking and equities trading revenue.",
-   "url": "https://www.cnbc.com/2026/10/14/morgan-stanley-ms-q3-2026-earnings.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "14 Oct",
-   "title": "Delta's business-class revamp: New seats, menus, plates and more Porsches",
-   "summary": "Delta is upgrading its top-tier Delta One cabin with new suites for its largest A350 plane, starting next year.",
-   "url": "https://www.cnbc.com/2026/10/14/delta-one-revamp.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "14 Oct",
-   "title": "Ukraine warns Starlink limits are disrupting military operations as Russia pounds its energy infrastructure",
-   "summary": "A ballistic missile has struck energy infrastructure supposedly covered by the \"energy ceasefire\" announced by Trump on Sunday, Zelenskyy said.",
-   "url": "https://www.cnbc.com/2026/10/14/russia-ukraine-energy-ceasefire-power-outages.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "14 Oct",
-   "title": "ASML says it's getting order interest through 2030 as profit smashes expectations",
-   "summary": "ASML said some customers are \"expressing an interest\" in placing orders with the company in 2029 and 2030, giving investors a view into longer-term demand.",
-   "url": "https://www.cnbc.com/2026/10/14/asml-3q-earnings-ai-demand-orders-capacity.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Tecnologia",
-   "published": "14 Oct",
-   "title": "Tech giants race to get AI gadgets on shelves for holiday rush",
-   "summary": "With the holidays just a couple months away, tech companies are betting this is finally the year that AI gadgets make the shopping list.",
-   "url": "https://www.cnbc.com/2026/10/14/tech-giants-race-to-get-ai-gadgets-on-shelves-for-holiday-rush.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "14 Oct",
-   "title": "How Trump’s tariffs and Iran war are becoming liabilities in Michigan’s Senate race",
-   "summary": "Republicans are largely leaving Trump out of general election ads, with some battleground candidates breaking from him on tariffs and Iran.",
-   "url": "https://www.cnbc.com/2026/10/14/mike-rogers-trump-tariffs-michigan-senate-election.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "14 Oct",
-   "title": "FBI arrests Saudi OpenAI employee who allegedly planted recording device in conference room",
-   "summary": "The Tuesday incident comes as the ChatGPT-maker, along with competitors, faces heightened scrutiny over its safety practices.",
-   "url": "https://www.cnbc.com/2026/10/13/openai-employee-arrested-recording-device.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "14 Oct",
-   "title": "China's exports and imports surge past expectations in September",
-   "summary": "The country's customs agency released September trade data on Wednesday.",
-   "url": "https://www.cnbc.com/2026/10/14/chinas-exports-likely-grew-by-double-digits-in-september.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "14 Oct",
-   "title": "Goldman says investors are looking for 'profitable' Chinese business growth overseas",
-   "summary": "Sluggish consumer demand in China has pushed many companies, such as electric car brands, to accelerate plans for entering other countries.",
-   "url": "https://www.cnbc.com/2026/10/14/goldman-says-investors-seek-profitable-chinese-business-growth-abroad.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Banca central",
-   "published": "13 Oct",
-   "title": "Williams says Fed may not have to hike rates in 2027, at odds with traders",
-   "summary": "New York Fed President John Williams sees one more rate hike in 2026 but no additional increase in 2027 as inflation pressures ease.",
-   "url": "https://www.cnbc.com/2026/10/13/john-williams-fed-rate-hikes-2027.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Tecnologia",
-   "published": "13 Oct",
-   "title": "JPMorgan Chase blocks outside AI agents like Muse, Instinct from directly accessing accounts",
-   "summary": "JPMorgan Chase CEO Jamie Dimon warned of rogue agents operating at scale and said the bank is building defensive tools.",
-   "url": "https://www.cnbc.com/2026/10/13/jpmorgan-ai-agents-account-access.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "13 Oct",
-   "title": "Visa gets Beijing's green light for bank card business after 40 years of working with China",
-   "summary": "The incremental approval comes as the U.S. and Chinese presidents are due to meet for a third time this year next month.",
-   "url": "https://www.cnbc.com/2026/10/13/visa-china-green-light-bank-card-business-.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "13 Oct",
-   "title": "'Boring is not bad': CEO of Southeast Asia's largest bank pitches Singapore as a haven amid global turmoil",
-   "summary": "Singapore is a bastion of safety amid global turmoil, according to the CEO of DBS.",
-   "url": "https://www.cnbc.com/2026/10/13/singapore-war-geopolitics-dbs-bank-ceo.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Banca central",
-   "published": "13 Oct",
-   "title": "Higher rates could be needed to avoid 'inflationary mindset' taking hold, says Fed's Hammack",
-   "summary": "The Cleveland Fed president said that tighter monetary policy would be needed to bring down inflation.",
-   "url": "https://www.cnbc.com/2026/10/12/beth-hammack-fed-inflation-policy.html"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Mercados",
-   "published": "14 Oct",
-   "title": "My sister moved in with our mother, 78, and now says she deserves the $925,000 family home. Is she right?",
-   "summary": "&#x201c;The house is worth $925,000 and mom owns it outright. She also has $480,000 in investments.&#x201d;",
-   "url": "https://www.marketwatch.com/story/my-sister-moved-in-with-our-widowed-mother-78-and-says-she-deserves-the-family-home-is-she-right-7981835d?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Bolsa",
-   "published": "14 Oct",
-   "title": "Charles Schwab and DoorDash ranked among bargain stocks that could lead the market higher",
-   "summary": "Third-quarter earnings growth is expected to be driven by energy and semiconductor companies, but what if the rest of the market shows up? HSBC envisages a stock market finally broadening out.",
-   "url": "https://www.marketwatch.com/story/from-charles-schwab-to-doordash-why-these-bargain-stocks-could-lead-the-market-higher-4d99fb97?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Mercados",
-   "published": "14 Oct",
-   "title": "How to read your body&#x2019;s warning signs years before you get sick&#xa0;",
-   "summary": "Most of us don&#x2019;t just want to live longer lives. We want to live longer and healthier lives.",
-   "url": "https://www.marketwatch.com/story/how-to-read-your-bodys-warning-signs-years-before-you-get-sick-3fb8c82d?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Mercados",
-   "published": "14 Oct",
-   "title": "What analysts are watching with key semiconductor maker TSMC set to report results",
-   "summary": "Analysts at JPMorgan and Citigroup see further revenue growth for the semiconductor foundry, even after already posting a record-breaking figure for the third quarter.",
-   "url": "https://www.marketwatch.com/story/what-analysts-are-watching-with-key-semiconductor-maker-tsmc-set-to-report-results-c161e86b?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Bolsa",
-   "published": "14 Oct",
-   "title": "Bank of America adds a profit miss to the misery of a $1.2 billion government fine",
-   "summary": "Bank of America&#x2019;s stock falls as investor disappointment over the $1.2 billion government fine added to the bank&#x2019;s downbeat earnings report.",
-   "url": "https://www.marketwatch.com/story/bank-of-america-adds-a-profit-miss-to-the-misery-of-a-1-2-billion-government-fine-d4420bfa?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Banca central",
-   "published": "14 Oct",
-   "title": "Here&#x2019;s how much the AI boom is really contributing to inflation, according to Goldman Sachs calculations",
-   "summary": "Goldman believes the core inflation rate will revert toward the Fed&#x2019;s 2% target in 2027.",
-   "url": "https://www.marketwatch.com/story/heres-how-much-the-ai-boom-is-contributing-to-inflation-according-to-goldman-sachs-calculations-5ec717ff?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Mercados",
-   "published": "14 Oct",
-   "title": "&#x2018;I am a pretty cautious person&#x2019;: My financial adviser wants me to invest $350,000 in a UAE data center. Is this risky?",
-   "summary": "&#x201c;I like my life, but I also like the idea of a big return after years of putting money into my 401(k).&#x201d;",
-   "url": "https://www.marketwatch.com/story/the-prospectus-looks-impressive-my-financial-adviser-wants-me-to-invest-350-000-in-a-uae-data-center-is-this-risky-d5d3747c?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Fundos",
-   "published": "14 Oct",
-   "title": "BlackRock&#x2019;s assets equal half the size of the U.S. economy after 15% growth",
-   "summary": "Fund-management giant BlackRock said Wednesday that assets under management are nearly $15.5 trillion after growth of 15%.",
-   "url": "https://www.marketwatch.com/story/blackrock-now-has-assets-equal-to-half-the-size-of-the-u-s-economy-after-15-growth-c382b289?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Inflação",
-   "published": "14 Oct",
-   "title": "My wife says we can&#x2019;t afford to retire, so I vetoed her $8,000 trip to Italy. We have $4 million saved. Do I keep working?",
-   "summary": "&#x201c;I worry about healthcare, long-term care, inflation, a long bear market and living to 95.&#x201d;",
-   "url": "https://www.marketwatch.com/story/my-wife-says-we-cant-afford-to-retire-we-have-4-million-do-i-just-keep-working-f1b6b085?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Poupança",
-   "published": "14 Oct",
-   "title": "The truth about being a landlord in retirement",
-   "summary": "Investing in rental property isn&#x2019;t easy or &#x2018;passive&#x2019;",
-   "url": "https://www.marketwatch.com/story/the-truth-about-being-a-landlord-in-retirement-5d1daf4c?mod=mw_rss_topstories"
-  },
-  {
-   "source": "BBC",
-   "category": "Economia",
-   "published": "14 Oct",
-   "title": "Faisal Islam: What surprise praise for UK economy tells us about the Budget",
-   "summary": "On three occasions in the past 24 hours, top IMF officials have praised UK plans to reduce its annual levels of borrowing.",
-   "url": "https://www.bbc.co.uk/news/articles/cx30eq0vyed4o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-   "source": "BBC",
-   "category": "Economia",
-   "published": "14 Oct",
-   "title": "Civil servant faked illness with make-up to juggle five jobs, court hears",
-   "summary": "Kashim Chowdhury is accused of fraudulently juggling multiple government jobs while working from home.",
-   "url": "https://www.bbc.co.uk/news/articles/cqgkvdyx5d6jo?at_medium=RSS&at_campaign=rss"
-  },
-  {
-   "source": "BBC",
-   "category": "Mercados",
-   "published": "14 Oct",
-   "title": "Wayfair among firms fined millions for misleading sales tactics",
-   "summary": "The Competition and Markets Authority has fined Wayfair, Appliances Direct, and Gold's Gym £6m in total.",
-   "url": "https://www.bbc.co.uk/news/articles/cqx298e5rr3po?at_medium=RSS&at_campaign=rss"
-  },
-  {
-   "source": "BBC",
-   "category": "Economia",
-   "published": "14 Oct",
-   "title": "'I applied for 200 jobs' - How 'spray and pray' AI job applications can backfire",
-   "summary": "Graduates are increasingly using AI to misrepresent themselves in job applications, research suggests. But some say their peer group has no choice.",
-   "url": "https://www.bbc.co.uk/news/articles/c623dnkn8pkyo?at_medium=RSS&at_campaign=rss"
-  },
-  {
-   "source": "BBC",
-   "category": "Tecnologia",
-   "published": "14 Oct",
-   "title": "How long will humans be needed for translation?",
-   "summary": "AI dominates the translation business, but for high-stakes work, humans are still needed.",
-   "url": "https://www.bbc.co.uk/news/articles/c1wxdjx27ypo?at_medium=RSS&at_campaign=rss"
-  },
-  {
-   "source": "BBC",
-   "category": "Obrigações",
-   "published": "14 Oct",
-   "title": "Bank of America hit with $1.2bn fine for money laundering failings",
-   "summary": "The bank inadequately flagged transactions linked to potential Chinese money laundering networks, the Treasury said.",
-   "url": "https://www.bbc.co.uk/news/articles/cm3wvxy6n3z8o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-   "source": "BBC",
-   "category": "Economia",
-   "published": "13 Oct",
-   "title": "Three things we've learnt about the UK economy from the IMF",
-   "summary": "The influential economics body has upgraded its UK growth forecast for this year, but risks remain.",
-   "url": "https://www.bbc.co.uk/news/articles/cmly05l1g15yo?at_medium=RSS&at_campaign=rss"
-  },
-  {
-   "source": "BBC",
-   "category": "Economia",
-   "published": "13 Oct",
-   "title": "UK growth forecast upgraded but higher energy prices to hit economy next year",
-   "summary": "The prediction from the IMF comes as final preparations are being made for the first Budget under Prime Minister Andy Burnham.",
-   "url": "https://www.bbc.co.uk/news/articles/cmglw0r21zexo?at_medium=RSS&at_campaign=rss"
-  },
-  {
-   "source": "BBC",
-   "category": "Fundos",
-   "published": "14 Oct",
-   "title": "Job cuts could fund diesel price drop says deputy",
-   "summary": "With the ongoing war in the Middle East increasing prices, one deputy is ask for duty to be frozen.",
-   "url": "https://www.bbc.co.uk/news/articles/c6x2qw2xn1x4o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-   "source": "BBC",
-   "category": "Economia",
-   "published": "14 Oct",
-   "title": "'It's definitely tight trying to budget on maternity leave'",
-   "summary": "An estimated 47,500 people in Sheffield are unable to make ends meet and pay their bills.",
-   "url": "https://www.bbc.co.uk/news/articles/c3ewegye0g0qo?at_medium=RSS&at_campaign=rss"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Inflação",
-   "published": "14 Oct",
-   "title": "Diesel squeeze expected to continue into 2027 despite Trump’s deal with Russia – business live",
-   "summary": "<p>Rolling coverage of the latest economic and financial news, including the IMF meeting in Thailand and the IEA’s new oil market report</p><ul><li><p><a href=\"https://www.theguardian.com/politics/202",
-   "url": "https://www.theguardian.com/business/live/2026/oct/14/imf-rising-government-borrowing-costs-inflation-oil-stock-markets-latest-news-updates"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Inflação",
-   "published": "14 Oct",
-   "title": "Bank of England and IMF bosses warn of cyber threat to trust in financial system",
-   "summary": "<p>Kristalina Georgieva says online fraud could lead people to opt out of system and turn to ‘shoeboxes under their bed’</p><ul><li><p><a href=\"https://www.theguardian.com/business/live/2026/oct/14/im",
-   "url": "https://www.theguardian.com/business/2026/oct/14/bank-of-england-imf-bosses-warning-cyber-threat-to-trust"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Obrigações",
-   "published": "14 Oct",
-   "title": "John Healey ‘targets tax crackdown on online marketplaces’ in first budget",
-   "summary": "<p>Move aimed at firms such as Amazon and eBay could raise up to £1bn more for Treasury, says report</p><p>A tax crackdown on online marketplaces such as Amazon and eBay that could raise up to £1bn mo",
-   "url": "https://www.theguardian.com/business/2026/oct/14/john-healey-tax-crackdown-online-marketplaces-amazon-ebay-budget"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Tecnologia",
-   "published": "14 Oct",
-   "title": "Nvidia, worth $5.5tn, donates $250m to UK for AI safety research",
-   "summary": "<p>Pledge spanning five years from world’s most valuable firm comes as concerns about AI agents have risen</p><p>The $5.5tn (£4.1tn) US chipmaker Nvidia is donating $250m worth of computing power to t",
-   "url": "https://www.theguardian.com/technology/2026/oct/14/nvidia-donates-to-uk-ai-safety-research"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Inflação",
-   "published": "14 Oct",
-   "title": "English and Welsh water firms could be forced to return £107m via lower bills",
-   "summary": "<p>Yorkshire and Thames among providers facing penalties for missing performance targets, but bills could rise elsewhere</p><ul><li><p><a href=\"https://www.theguardian.com/business/live/2026/oct/14/im",
-   "url": "https://www.theguardian.com/business/2026/oct/14/water-firms-england-wales-cuts-bills-thames-yorkshire-ofwat"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Obrigações",
-   "published": "14 Oct",
-   "title": "Bank of America fined $1.2bn for money laundering failures",
-   "summary": "<p>Third largest fine in US treasury’s history, due to failure to report suspicious activity, may affect third-quarter earnings</p><p>Bank of America (BAC.N), has been fined $1.21bn by US regulators f",
-   "url": "https://www.theguardian.com/business/2026/oct/14/bank-of-america-fined-money-laundering"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Bolsa",
-   "published": "14 Oct",
-   "title": "Scale back on hake and coley, seafood charity tells shoppers",
-   "summary": "<p>Declining stocks and increased fishing pressure have led to lower sustainability ratings for two popular cod alternatives</p><p>UK shoppers have previously been urged to <a href=\"https://www.thegua",
-   "url": "https://www.theguardian.com/environment/2026/oct/14/scale-back-on-hake-and-coley-seafood-charity-tells-shoppers"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Mercados",
-   "published": "14 Oct",
-   "title": "I work for a major insurer. Much of my industry is fudging the numbers in the face of the climate crisis | Anonymous",
-   "summary": "<p>Insurers are taking on more risk than they should. If – or when – a major disaster hits, the catastrophe will have far-reaching consequences</p><p>I work for a major insurer, assessing the risk pos",
-   "url": "https://www.theguardian.com/commentisfree/2026/oct/14/climate-crisis-insurance-risk-disaster-catastrophe"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Economia",
-   "published": "14 Oct",
-   "title": "Palantir is worming its way into the British state – it’s time to curb this controversial US company’s influence | George Monbiot",
-   "summary": "<p>Tom Watson has said ‘mob rule’ must not decide public contracts. Perhaps he should take a look at his new employer</p><p>What a world we live in. Imagine: gangs dragging civil servants off commuter",
-   "url": "https://www.theguardian.com/commentisfree/2026/oct/14/palantir-british-state-controversial-us-company-tom-watson"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Tecnologia",
-   "published": "14 Oct",
-   "title": "AI overlords say they want to democratise their technology. Here’s how | Richard Wilson and Clara Long",
-   "summary": "<p>A fight over a datacentre in Utah has been a testing ground for citizens’ assemblies, paving the way to oversight</p><p>What’s your “(p)doom” – the percentage chance that rogue AI will create an ex",
-   "url": "https://www.theguardian.com/commentisfree/2026/oct/14/ai-overlords-democratise-technology"
-  },
-  {
-   "source": "New York Times",
-   "category": "Mercados",
-   "published": "14 Oct",
-   "title": "Oil Prices Rise as Iran Steps Up Attacks and Fighting Intensifies",
-   "summary": "In a volatile moment for energy markets, more vessels are being hit while transiting the Strait of Hormuz, while the Houthis and Saudi Arabia traded attacks.",
-   "url": "https://www.nytimes.com/2026/10/14/business/saudi-houthi-hormuz-oil.html"
-  },
-  {
-   "source": "New York Times",
-   "category": "Banca central",
-   "published": "14 Oct",
-   "title": "Trump’s Latest Effort to Fire a Fed Official Underscores Political Motives",
-   "summary": "President Trump tapped his political appointees to determine whether he could oust Lisa Cook, a Fed governor he had already tried to oust.",
-   "url": "https://www.nytimes.com/2026/10/14/business/trump-lisa-cook-federal-reserve-hearing.html"
-  },
-  {
-   "source": "New York Times",
-   "category": "Banca central",
-   "published": "14 Oct",
-   "title": "Lawyer for Fed Governor Cook Denounces Trump’s New Investigation",
-   "summary": "A lawyer for Lisa Cook raised “significant concerns” over the “objectivity and fitness of the committee” assembled by President Trump as a way to remove her as a governor at the Federal Reserve.",
-   "url": "https://www.nytimes.com/2026/10/13/business/fed-governor-lisa-cook-trump-investigation.html"
-  },
-  {
-   "source": "New York Times",
-   "category": "Mercados",
-   "published": "13 Oct",
-   "title": "Judy Markey, Frank and Funny Voice on Chicago Radio, Dies at 82",
-   "summary": "She and Kathy O’Malley — known as “the Girlfriends” — were the rare female hosts in a major market. Their freewheeling segments included “Sex Thursday.”",
-   "url": "https://www.nytimes.com/2026/10/13/business/media/judy-markey-dead.html"
-  },
-  {
-   "source": "New York Times",
-   "category": "Mercados",
-   "published": "13 Oct",
-   "title": "War Collides With Saudi Ambition at a Gathering of Oil Powers",
-   "summary": "The tone of the WPC Energy Congress in Riyadh this week was defiant even as delegates were forced to redirect travel or address the audience from afar.",
-   "url": "https://www.nytimes.com/2026/10/13/business/saudi-arabia-houthi-oil.html"
-  },
-  {
-   "source": "New York Times",
-   "category": "Bolsa",
-   "published": "13 Oct",
-   "title": "Chip Stocks Tumble on A.I. Spending Fears and Rising Chinese Competition",
-   "summary": "South Korean stocks tumbled in particular, as reports of a breakthrough by a Chinese chip rival heightened concerns about competition.",
-   "url": "https://www.nytimes.com/2026/10/13/business/technology-stocks-ai-nasdaq.html"
-  },
-  {
-   "source": "New York Times",
-   "category": "Obrigações",
-   "published": "13 Oct",
-   "title": "The Forces Driving Up Bond Yields Take a Troubling Turn",
-   "summary": "Some analysts say investors are demanding a higher “term premium” to buy government debt, reflecting growing worries about debt levels and deficits.",
-   "url": "https://www.nytimes.com/2026/10/13/business/term-premium-bond-yields.html"
-  },
-  {
-   "source": "Fortune",
-   "category": "Mercados",
-   "published": "14 Oct",
-   "title": "Current price of oil as of October 14, 2026",
-   "summary": "When oil prices change, it affects your energy costs—and even the price of everyday items. Here’s why.",
-   "url": "https://fortune.com/article/price-of-oil-10-14-2026/"
-  },
-  {
    "source": "Fortune",
    "category": "Economia",
    "published": "14 Oct",
@@ -800,6 +200,606 @@
    "title": "Federal Reserve Board announces enforcement action against American Express Company to address, among other things, the firm’s failure to sufficiently detect and report certain suspicious activity related to money launde",
    "summary": "Federal Reserve Board announces enforcement action against American Express Company to address, among other things, the firm’s failure to sufficiently detect and report certain suspicious activity rel",
    "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261008a.htm"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "Copper Edges Lower After World’s Biggest Mine Averts Strike",
+   "summary": "Copper slipped after BHP Group’s Escondida mine in Chile, the world’s largest, averted a strike that would have tightened supply as the industry struggles to keep pace with demand from data centers an",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-14/copper-climbs-to-three-week-high-on-strike-threat-fed-comments"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "13 Oct",
+   "title": "Latest Oil Market News and Analysis for Oct. 14",
+   "summary": "Oil gained as hostilities intensified from Russia to the Middle East, threatening supply flows that only recently recovered to near pre-war levels.",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-13/latest-oil-market-news-and-analysis-for-oct-14"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "Financial M&A Is About Scale: Reilly and Naydenova",
+   "summary": "Nina Naydenova, head of FIG M&A for the Americas at Jefferies, and Elyse Reilly, partner at EY-Parthenon Financial Services, join Scarlet Fu on \"Bloomberg Deals.\" (Source: Bloomberg)",
+   "url": "https://www.bloomberg.com/news/videos/2026-10-14/financial-m-a-is-about-scale-reilly-and-naydenova-video"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Banca central",
+   "published": "13 Oct",
+   "title": "Stocks Fall on Inflation Woes as Chip Rout Deepens: Markets Wrap",
+   "summary": "A renewed selloff in chipmakers dragged down stocks, extending a decline fueled by bets the Federal Reserve will keep boosting interest rates to fight inflation.",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-13/stock-market-today-dow-s-p-live-updates"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "Reese Witherspoon Buys Back Production Firm With Mediawan",
+   "summary": "Bloomberg's Chris Palmeri joins Scarlet Fu on \"Bloomberg Deals.\" Actress Reese Witherspoon is repurchasing her film and TV production company Hello Sunshine from Candle Media in partnership with Media",
+   "url": "https://www.bloomberg.com/news/videos/2026-10-14/reese-witherspoon-buys-back-production-firm-video"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Tecnologia",
+   "published": "14 Oct",
+   "title": "Starbucks Says It’s Not Buying Chipotle",
+   "summary": "Bloomberg's Daniela Sirtori joins Scarlet Fu on \"Bloomberg Deals.\" Starbucks said it’s not buying Chipotle Mexican Grill, tamping down speculation about what could have been one of the restaurant sect",
+   "url": "https://www.bloomberg.com/news/videos/2026-10-14/starbucks-says-it-s-not-buying-chipotle-video"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "Bumble Said to Near $1B Sale to Ithaca",
+   "summary": "Bloomberg's Liana Baker joins Scarlet Fu on \"Bloomberg Deals.\" Dating-app provider Bumble is in talks to be sold to upstart investment firm Ithaca Holdings for around $1 billion, according to people f",
+   "url": "https://www.bloomberg.com/news/videos/2026-10-14/bumble-said-to-near-1b-sale-to-ithaca-video"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "Time to Worry About Tomorrow’s Trade War",
+   "summary": "Where Europe stands after trade talks with China.",
+   "url": "https://www.bloomberg.com/news/newsletters/2026-10-14/time-to-worry-about-tomorrow-s-trade-war"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "BofA Takes US Regulatory Fines Seriously, CEO Moynihan Says",
+   "summary": "Bank of America Corp. Chief Executive Officer Brian Moynihan addresses the $1.2 billion in fines levied against the company by the US government. He says the bank takes the fines seriously and there i",
+   "url": "https://www.bloomberg.com/news/videos/2026-10-14/bofa-takes-us-regulatory-fines-seriously-moynihan-says-video"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "Cargo Ship Sinks in Strait of Hormuz After Strike Triggers Fire",
+   "summary": "A cargo ship sank in the Strait of Hormuz after a strike that sparked a fire and the evacuation of crew members, the Maritime and Port Authority of Singapore said.",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-14/cargo-ship-sinks-in-strait-of-hormuz-after-strike-triggers-fire"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Bolsa",
+   "published": "14 Oct",
+   "title": "Berkshire Hathaway adds $330mn to stake in tech group Bending Spoons",
+   "summary": "Shares of conglomerate that owns AOL and Vimeo jumped more than 40% on news of expanded investment before dropping back",
+   "url": "https://www.ft.com/content/3f821be4-f137-4cc9-b0b0-b2014f2607c2?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "Houthis attack Saudi Aramco headquarters",
+   "summary": "Iran-backed militants retaliate after Riyadh-led coalition targets sites in Yemen’s capital",
+   "url": "https://www.ft.com/content/a25417b3-d4e4-4b89-b14d-6370a85ce3c4?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "Global diesel prices set to rise again, warns IEA",
+   "summary": "Global shortage of fuel will last until mid-2027",
+   "url": "https://www.ft.com/content/b06d00da-9df7-405b-9410-b5485c267397?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "BlackRock pulls in $205bn to take assets to record high",
+   "summary": "World’s largest asset manager has become an increasingly powerful force in private capital after acquisitions of HPS and Global Infrastructure Partners",
+   "url": "https://www.ft.com/content/63e3c39b-357f-4a87-adf0-090c60c929a7?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Fundos",
+   "published": "14 Oct",
+   "title": "General Atlantic plans IPO at up to $10bn valuation",
+   "summary": "Private capital group looks to fund ambitious expansion plan to keep pace with rivals Blackstone and Apollo Global",
+   "url": "https://www.ft.com/content/0f7511ee-efb1-4bf0-8f87-67f572193fd3?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "Crypto exchange Kraken owner to buy European bank",
+   "summary": "Payward is purchasing Lithuania’s Saldo Bank as it seeks to become broader financial services company",
+   "url": "https://www.ft.com/content/8e82ae33-cc11-4731-826a-bcd0752f79bf?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "European oil refineries’ margins collapse as input costs soar",
+   "summary": "Slump in profits raises prospect of output cuts even as continent faces soaring prices for refined products",
+   "url": "https://www.ft.com/content/c69ef2f5-0644-4ec3-accb-cbc8d633e008?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "Gold Fields mounts charm offensive to woo Northern Star investors",
+   "summary": "South African miner’s chief meets Australian shareholders to promote merits of creating global gold ‘powerhouse’",
+   "url": "https://www.ft.com/content/3cad49d9-4c88-46bc-bddd-7b237a399a7b?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "The rollout of 24-hour* trading",
+   "summary": "*It’s actually 23 hours",
+   "url": "https://www.ft.com/content/694aa230-fbad-40f2-b2dc-e663f24583d1?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "14 Oct",
+   "title": "Wall Street Worries Bank of America&#x2019;s Problems Will Linger",
+   "summary": "Weak earnings coupled with a fine has analysts pressing executives about whether there is more pain to come.",
+   "url": "https://www.wsj.com/finance/banking/wall-street-worries-bank-of-americas-problems-will-linger-a564492f?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "14 Oct",
+   "title": "The AI Boom Is Supercharging Wall Street&#x2019;s Profits",
+   "summary": "Investment banking revenues are up, and wealth-management divisions are winning new AI millionaires as clients.",
+   "url": "https://www.wsj.com/finance/banking/the-ai-boom-is-supercharging-wall-streets-profits-2a2d9747?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "Debanking Probe Finds JPMorgan, Banks Cut Off MAGA Sellers and Democrat Groups",
+   "summary": "An investigation by a Trump regulator detailed examples of businesses and individuals getting shut out by the nation&#x2019;s biggest banks.",
+   "url": "https://www.wsj.com/finance/regulation/debanking-probe-finds-jpmorgan-banks-cut-off-maga-sellers-and-democrat-groups-c170d0a5?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "Financial Services Roundup: Market Talk",
+   "summary": "Find insight on Morgan Stanley, Bank of America, State Street and more in the latest Market Talks covering Financial Services.",
+   "url": "https://www.wsj.com/business/financial-services-roundup-market-talk-23402b4f?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "Fairfax Financial Buying Majority Stake in India&#x2019;s IDBI Bank",
+   "summary": "Canada&#x2019;s Fairfax Financial is positioning itself in India&#x2019;s fast-growing financial services industry with the acquisition of a majority stake in IDBI Bank for about $5.43 billion.",
+   "url": "https://www.wsj.com/finance/fairfax-financial-buying-majority-stake-in-indias-idbi-bank-faf0fe0c?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "14 Oct",
+   "title": "David&#x2019;s Bridal Uses AI to Power New Strategy",
+   "summary": "Plus, OpenAI engineer accused of bugging office",
+   "url": "https://www.wsj.com/cio-journal/davids-bridal-uses-ai-to-power-new-strategy-ea39efa3?mod=rss_Technology"
+  },
+  {
+   "source": "The Economist",
+   "category": "Economia",
+   "published": "14 Oct",
+   "title": "Another warning sign for China’s economy: falling consumer credit",
+   "summary": "A crackdown on aggressive debt collectors is good news and bad news",
+   "url": "https://www.economist.com/finance-and-economics/2026/10/14/another-warning-sign-for-chinas-economy-falling-consumer-credit"
+  },
+  {
+   "source": "CNBC",
+   "category": "Obrigações",
+   "published": "14 Oct",
+   "title": "CoreWeave shares tumble as bond yields near 15% on concern about AI borrowing binge",
+   "summary": "Shares of CoreWeave sank 15%, while yields in its bonds blew out further.",
+   "url": "https://www.cnbc.com/2026/10/14/coreweave-stock-bond-yields-ai-debt.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Banca central",
+   "published": "14 Oct",
+   "title": "How high inflation became a 'fact of life' in the U.S.",
+   "summary": "U.S. inflation has stayed elevated for years, raising concern at the Federal Reserve that consumers may come to expect stubbornly high prices.",
+   "url": "https://www.cnbc.com/2026/10/14/high-inflation-fed-expectations.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "Container ship sinks in Strait of Hormuz as Iran steps up attacks",
+   "summary": "Iran has escalated its strikes on commercial ships transiting Hormuz in recent weeks, as it tries to choke off a rebound in crude oil exports.",
+   "url": "https://www.cnbc.com/2026/10/14/container-ship-sinks-strait-hormuz-as-iran-war-attacks.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Obrigações",
+   "published": "14 Oct",
+   "title": "Treasury says largest U.S. banks let politics influence who received banking services",
+   "summary": "New Treasury Department findings may lend weight to President Donald Trump’s long-running grievance that major banks have discriminated against conservatives.",
+   "url": "https://www.cnbc.com/2026/10/14/treasury-banks-debanking-trump-reputation-risk.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Habitação",
+   "published": "14 Oct",
+   "title": "Fannie Mae sharply raises mortgage rate forecast for 2027",
+   "summary": "Fannie Mae just put out its latest forecast for mortgage rates, and they are much higher than previous estimates.",
+   "url": "https://www.cnbc.com/2026/10/14/fannie-mae-sharply-raises-mortgage-rate-forecast-for-2027-.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "Trump to appeal order blocking White House from banning MS NOW, CNN and Politico",
+   "summary": "U.S. District Judge Timothy Kelly had ruled that the three outlets targeted by President Donald Trump can keep their access to the White House complex.",
+   "url": "https://www.cnbc.com/2026/10/14/trump-appeals-white-house-ban-judge.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Tecnologia",
+   "published": "14 Oct",
+   "title": "Bank of America hired 1,000 contractors to patch software flaws exposed by Anthropic's Mythos",
+   "summary": "Bank of America hired 1,000 contractors to patch software flaws exposed by Anthropic’s Mythos, offering a rare look at costs involved in defending against AI.",
+   "url": "https://www.cnbc.com/2026/10/14/anthropic-mythos-bank-of-america-hiring-cost.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "Netflix to lay off roughly 1,000 employees, or 6% of workforce",
+   "summary": "Netflix will lay off roughly 6% of its workforce, according to a memo obtained by CNBC.",
+   "url": "https://www.cnbc.com/2026/10/14/netflix-layoffs.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "Lisa Cook lawyer doubts Trump committee's fairness as president calls her 'automatic no vote'",
+   "summary": "White House spokesman Matthew Middleton said in response to Cook's lawyer that Trump \"is performing his constitutional duty.\"",
+   "url": "https://www.cnbc.com/2026/10/14/lisa-cook-trump-committee-hearing.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "Trump's diesel dilemma — by the numbers",
+   "summary": "Conflicts in Ukraine and Iran have created major ripple effects across global energy markets causing major price swings.",
+   "url": "https://www.cnbc.com/2026/10/14/trumps-diesel-dilemma-by-the-numbers.html"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Habitação",
+   "published": "14 Oct",
+   "title": "&#x2018;Some people did everything right&#x2019;: I lost my home in the Great Recession. I rent in my 50s. Why is that judged as failure?",
+   "summary": "&#x201d;I earn $110,000 a year.&#x201d;",
+   "url": "https://www.marketwatch.com/story/i-earn-110-000-a-year-i-lost-my-home-in-the-great-recession-im-renting-in-my-50s-why-is-that-judged-as-failure-d1371d67?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Banca central",
+   "published": "14 Oct",
+   "title": "What to expect at the next Fed meeting now that rate-hike odds are rising",
+   "summary": "Market participants and economists are split on the question of whether or not the Federal Reserve will raise interest rates by another quarter-point in two weeks.",
+   "url": "https://www.marketwatch.com/story/heres-what-the-fed-might-do-at-this-months-meeting-after-todays-hot-inflation-reading-087511b6?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Inflação",
+   "published": "14 Oct",
+   "title": "Did this year&#x2019;s COLA beat inflation? Here&#x2019;s how spending by American seniors stacks up so far in 2026.",
+   "summary": "The cost-of-living adjustment for 2027 will be 3.6%, which will give Social Security recipients an average of $75 more per month.",
+   "url": "https://www.marketwatch.com/story/did-this-years-cola-beat-inflation-heres-how-spending-by-american-seniors-stacks-up-so-far-in-2026-917c400c?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Banca central",
+   "published": "14 Oct",
+   "title": "Rising bond yields and higher inflation leave the Fed trapped in a rate-hike dilemma",
+   "summary": "&#x2018;I don&#x2019;t think you should jack up rates into this environment right now,&#x2019; says head of fixed-income at Aptus Capital Advisors",
+   "url": "https://www.marketwatch.com/story/rising-bond-yields-and-higher-inflation-leave-the-fed-trapped-in-a-rate-hike-dilemma-d34ba326?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "These unpopular solutions could rescue Social Security&#x2019;s finances. Here&#x2019;s who could pay the most.",
+   "summary": "Social Security is projected to become insolvent in six years. These are some of the creative solutions that are on the table, beyond raising payroll taxes.",
+   "url": "https://www.marketwatch.com/story/taxing-stocks-estates-and-employee-benefits-could-keep-social-security-from-running-out-of-money-heres-who-could-pay-the-most-616be82c?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Habitação",
+   "published": "14 Oct",
+   "title": "Will mortgage rates stay above 7% in 2027?",
+   "summary": "Two new forecasts spell bad news for home buyers and sellers",
+   "url": "https://www.marketwatch.com/story/will-mortgage-rates-stay-above-7-in-2027-437873bd?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "Investing, not homeownership, is the No. 1 milestone that makes Gen Z renters feel successful",
+   "summary": "&#x201c;Instead of focusing on homeownership, many are prioritizing financial freedom and debt-free living.&#x201d;",
+   "url": "https://www.marketwatch.com/story/gen-z-renters-are-the-only-group-more-likely-to-feel-successful-by-investing-than-buying-a-house-30ac5344?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Inflação",
+   "published": "14 Oct",
+   "title": "3 things that are driving inflation higher",
+   "summary": "Struggling with elevated prices? You don&#x2019;t have to look much further than your local gas station.",
+   "url": "https://www.marketwatch.com/story/3-things-that-are-driving-inflation-higher-26bda9a9?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Inflação",
+   "published": "14 Oct",
+   "title": "Your Social Security check will rise an average of $75 a month &#x2014; will it be able to keep up with inflation?",
+   "summary": "The 3.6% COLA for 2027 is aimed at helping more than 68 million beneficiaries keep pace with the cost of living",
+   "url": "https://www.marketwatch.com/story/social-securitys-cola-will-be-3-6-in-2027-as-inflation-persists-f7c9dff2?mod=mw_rss_topstories"
+  },
+  {
+   "source": "BBC",
+   "category": "Economia",
+   "published": "14 Oct",
+   "title": "Netflix to shed 1,000 jobs in steepest cuts since 2022",
+   "summary": "The cuts equate to around 6% of the streaming giant's total workforce worldwide.",
+   "url": "https://www.bbc.co.uk/news/articles/c6zxj0gzk4x4o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Tecnologia",
+   "published": "14 Oct",
+   "title": "Toilet paper and secret recorders: What we know about the arrest of the Saudi OpenAI engineer",
+   "summary": "Abdulrahman Alfozan had worked for the AI giant for more than a year before he was arrested by the FBI.",
+   "url": "https://www.bbc.co.uk/news/articles/cm04054ykqqqo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Inflação",
+   "published": "14 Oct",
+   "title": "US inflation rises more than expected - here's what is happening with prices",
+   "summary": "The pace of price rises increased to 3.7% in the year to September, driving by higher motor fuel costs.",
+   "url": "https://www.bbc.co.uk/news/articles/cwy8lx3pg4k2o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Inflação",
+   "published": "14 Oct",
+   "title": "US inflation rose to 3.7% in September in blow to Republicans before midterms",
+   "summary": "<p>Final inflation report before voters go to polls comes amid widespread anger over cost of living under Trump</p><ul><li><p><a href=\"https://www.theguardian.com/business/2026/oct/08/economy-midterm-",
+   "url": "https://www.theguardian.com/business/2026/oct/14/inflation-numbers-september"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Economia",
+   "published": "14 Oct",
+   "title": "Netflix to lay off about 1,000 employees in biggest cuts since 2022",
+   "summary": "<p>Streaming company faces ⁠tough competition for viewers and engagement ⁠from legacy rivals ​and YouTube</p><p>Netflix is laying off 6% of its workforce, ⁠or roughly 1,000 employees, in its biggest c",
+   "url": "https://www.theguardian.com/media/2026/oct/14/netflix-job-layoffs-streaming"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "‘From liabilities to goldmines’: refineries eye record profits from diesel shortage",
+   "summary": "<p>Firms turning crude oil into the ‘workhorse’ fuel stand to gain most despite economic fallout from record prices</p><p>Days after Donald Trump announced a <a href=\"https://www.theguardian.com/us-ne",
+   "url": "https://www.theguardian.com/business/2026/oct/14/refineries-record-profits-diesel-shortage-fuel-crude-oil"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Economia",
+   "published": "14 Oct",
+   "title": "Excluding UK from ‘Made in Europe’ law will hurt entire EU car industry, Mercedes boss warns",
+   "summary": "<p>Ola Källenius says it will ‘weaken the industry on both sides’ ahead of act intended to counter non-EU competition </p><p>Locking the UK out of the EU’s flagship industrial “Made in Europe” legisla",
+   "url": "https://www.theguardian.com/world/2026/oct/14/uk-made-in-europe-law-hurt-carmaking-eu-mercedes-benz-boss-ola-kallenius"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Economia",
+   "published": "14 Oct",
+   "title": "The UK energy secretary is flirting with a bad idea for bills – the ‘rising block tariff’",
+   "summary": "<p>There are many reasons to reject this affordability ‘solution’, not least it being complex and fiddly. Just keep things simple</p><p>‘My mark of failure or success is whether I can get bills down o",
+   "url": "https://www.theguardian.com/business/nils-pratley-on-finance/2026/oct/14/the-uk-energy-secretary-is-flirting-with-a-bad-idea-for-bills-the-rising-block-tariff"
+  },
+  {
+   "source": "New York Times",
+   "category": "Inflação",
+   "published": "14 Oct",
+   "title": "Democrats Blame Trump After CPI Report Shows Energy Prices Drove Up Inflation",
+   "summary": "Inflation and economic frustrations have expanded the map of competitive midterm election districts deep into Republican territory.",
+   "url": "https://www.nytimes.com/2026/10/14/business/economy/inflation-trump-democrats-midterms-energy.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Inflação",
+   "published": "14 Oct",
+   "title": "5 Costs Americans Are Paying More for as Inflation Rises",
+   "summary": "Consumers are paying more for everyday goods and services, like food, computers and streaming.",
+   "url": "https://www.nytimes.com/2026/10/14/business/prices-inflation-food-airfare-car-rentals.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Inflação",
+   "published": "14 Oct",
+   "title": "Surging Inflation Complicates Trump’s Final Push to Sell Voters on Strong Economy",
+   "summary": "The final inflation report before the 2026 election — showing price increases and stagnant wages — spelled bad political news for the White House.",
+   "url": "https://www.nytimes.com/2026/10/14/business/economy/inflation-economy-midterms.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Inflação",
+   "published": "14 Oct",
+   "title": "Rising Costs Push Necessities Out of Reach for Nearly Half of Americans",
+   "summary": "Inflation has made basic goods hard to afford and attitudes toward inequality have changed, studies from the Pew Research Center showed.",
+   "url": "https://www.nytimes.com/2026/10/14/business/economy/high-prices-cost-of-living-pew-research.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Poupança",
+   "published": "14 Oct",
+   "title": "Social Security COLA for 2027 Will Be 3.6%",
+   "summary": "The cost of living adjustment, or COLA, for next year will be the largest since 2023. Retirees will see the extra money in their benefit checks starting in January.",
+   "url": "https://www.nytimes.com/2026/10/14/business/social-security-cola-retirees.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Inflação",
+   "published": "14 Oct",
+   "title": "Gas Prices Are Up 34% From a Year Ago, Adding to Inflation Pressures",
+   "summary": "Energy prices have surged since the start of war with Iran, lifting inflation in the United States.",
+   "url": "https://www.nytimes.com/2026/10/14/business/economy/gas-prices-inflation-cpi.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Economia",
+   "published": "14 Oct",
+   "title": "Hollywood Agents and Producers Push to Restore Glory Days of Indie TV",
+   "summary": "A new alliance seeks legislation to force the biggest entertainment and streaming companies to devote half of their content budgets to independent producers in the U.S.",
+   "url": "https://www.nytimes.com/2026/10/14/business/media/hollywood-agents-producers-ron-howard.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Banca central",
+   "published": "14 Oct",
+   "title": "Higher Energy Prices Pushed U.S. Inflation Up to 3.7% Ahead of Midterm Elections",
+   "summary": "September’s Consumer Price Index report will keep pressure on President Trump and the Federal Reserve to tame intensifying price pressures.",
+   "url": "https://www.nytimes.com/2026/10/14/business/economy/inflation-cpi.html"
+  },
+  {
+   "source": "Fortune",
+   "category": "Poupança",
+   "published": "14 Oct",
+   "title": "‘The way work gets done is changing across every industry’: Kroger cites AI efficiency push as it cuts 3,000 corporate jobs",
+   "summary": "Kroger says corporate cuts will help fund lower prices, but an analyst cautions that meaningful savings depend on where the money goes.",
+   "url": "https://fortune.com/2026/10/14/kroger-ai-3000-corporate-job-cuts-grocery-prices/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "Exclusive: Koch’s venture arm backs a16z-backed Emanate’s push to bring AI to industrial sales",
+   "summary": "“Doing nothing isn’t neutral in this market,” says Emanate founder Kiara Nirghin.",
+   "url": "https://fortune.com/2026/10/14/exclusive-koch-venture-emanate-a16z-industrial-ai/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Tecnologia",
+   "published": "14 Oct",
+   "title": "Nvidia CEO Huang says society shouldn’t tolerate AI cyber incidents, says AI doomers “ought to stop working on” the technology",
+   "summary": "The Nvidia CEO says AI agents can be contained and that the technology is “completely in our control,” as he tours Europe pitching open-source models.",
+   "url": "https://fortune.com/2026/10/14/nvidia-ceo-huang-says-society-shouldnt-tolerate-ai-cyber-incidents-says-ai-doomers-ought-to-stop-working-on-the-technology/"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "US individual health insurance enrollment fell to 20.5 million as of June, KFF says",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/obamacare-enrollment-fell-to-205-million-people-as-of-junekff-says-4949773"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "Tesla tests critical $364 support near breakdown zone: Live",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/tesla-rangebound-at-380-with-weak-trend-live-levels-93CH-4944787"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "Alphabet C tests $338 support after bearish breakdown: Live levels",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/alphabet-c-squeezed-at-349-between-key-levels-live-levels-93CH-4944780"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "14 Oct",
+   "title": "Dow Jones rejects 200-MA, bear flag active: Live levels",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/dow-jones-tests-52200-resistance-amid-bull-trap-risk-live-levels-93CH-4944779"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "14 Oct",
+   "title": "Nasdaq 100 oversold at 200MA support with RSI 26: Live levels",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/nasdaq-100-breaks-cloud-support-at-30935-live-levels-93CH-4944778"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Tecnologia",
+   "published": "14 Oct",
+   "title": "Micron double top breakdown risks $900 support: Live levels",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/micron-tests-980-support-as-bears-dominate-live-levels-93CH-4944775"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "14 Oct",
+   "title": "S&P 500 breaks 200-period MA with double top: Live levels",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/sp-500-stalls-in-chop-zone-below-7897-live-levels-93CH-4944776"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "Dollar Index pulls back to 102.31 after rejection: Live levels",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/dollar-index-consolidates-near-double-top-at-102305-live-levels-93CH-4944781"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "Alphabet rejects range highs at $347: Bearish levels live",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/alphabet-a-squeezed-between-350-and-356-live-levels-93CH-4944771"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "14 Oct",
+   "title": "Apple consolidates near ATH with double top risk: Live levels",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/apple-double-top-threat-near-ath-34524-live-levels-93CH-4944773"
+  },
+  {
+   "source": "Seeking Alpha",
+   "category": "Obrigações",
+   "published": "14 Oct",
+   "title": "Bond market 'news failure' signals pain trade ahead - BTIG",
+   "summary": "",
+   "url": "https://seekingalpha.com/news/4653099-bond-market-news-failure-signals-pain-trade-ahead-btig?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news"
   }
  ],
  "sources": [
@@ -821,5 +821,5 @@
  "editions": [
   "afternoon"
  ],
- "collectedAt": "2026-10-14T12:27:31.702Z"
+ "collectedAt": "2026-10-14T19:44:21.587Z"
 }
