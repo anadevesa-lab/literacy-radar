@@ -1,0 +1,97 @@
+{
+ "auto": true,
+ "date": "2026-10-14",
+ "basedOn": "2026-10-14T12:27:31.702Z",
+ "generatedAt": "2026-10-14T12:27:34.205Z",
+ "resumo": "Today's talk is mostly about **stocks and central-bank rates**. Rising: stocks, central-bank rates, tech, the economy, inflation, commodities. Falling: bonds.",
+ "classes": [
+  {
+   "nome": "Ações",
+   "tendencia": "a subir",
+   "forca": 3,
+   "leitura": "17 stories today. Top one: Charles Schwab and DoorDash ranked among bargain stocks that could lead the market higher (MarketWatch).",
+   "a_favor": [
+    "Charles Schwab and DoorDash ranked among bargain stocks tha…"
+   ],
+   "riscos": [
+    "Chip Stocks Tumble on A.I. Spending Fears and Rising Chines…"
+   ],
+   "perfil": "Long horizon and tolerance for temporary losses."
+  },
+  {
+   "nome": "Juros (bancos centrais)",
+   "tendencia": "a subir",
+   "forca": 3,
+   "leitura": "14 stories today. Top one: Higher rates could be needed to avoid 'inflationary mindset' taking hold, says Fed's Hammack (CNBC).",
+   "a_favor": [
+    "Higher rates could be needed to avoid 'inflationary mindset…"
+   ],
+   "riscos": [],
+   "perfil": "Affects everyone's deposits, loans and bonds."
+  },
+  {
+   "nome": "Tecnologia",
+   "tendencia": "a subir",
+   "forca": 3,
+   "leitura": "11 stories today. Top one: AI Business Use Rises Despite Growing Concern (Wall Street Journal).",
+   "a_favor": [
+    "AI Business Use Rises Despite Growing Concern"
+   ],
+   "riscos": [],
+   "perfil": "Long horizon and tolerance for high volatility."
+  },
+  {
+   "nome": "Economia",
+   "tendencia": "a subir",
+   "forca": 3,
+   "leitura": "9 stories today. Top one: UK growth forecast upgraded but higher energy prices to hit economy next year (BBC).",
+   "a_favor": [
+    "UK growth forecast upgraded but higher energy prices to hit…"
+   ],
+   "riscos": [],
+   "perfil": "Background for saving and investing decisions."
+  },
+  {
+   "nome": "Obrigações",
+   "tendencia": "a descer",
+   "forca": 3,
+   "leitura": "8 stories today. Top one: Japanese banks and insurers return to domestic bonds as yields surge (Financial Times).",
+   "a_favor": [
+    "Europe, U.S. futures rise as semiconductor supplier ASML be…"
+   ],
+   "riscos": [
+    "Japanese banks and insurers return to domestic bonds as yie…"
+   ],
+   "perfil": "Medium horizon and tolerance for price swings."
+  },
+  {
+   "nome": "Inflação",
+   "tendencia": "a subir",
+   "forca": 3,
+   "leitura": "8 stories today. Top one: S&P 500 futures edge higher ahead of CPI data, more bank earnings (Investing.com).",
+   "a_favor": [
+    "S&P 500 futures edge higher ahead of CPI data, more bank ea…"
+   ],
+   "riscos": [
+    "English and Welsh water firms could be forced to return £10…"
+   ],
+   "perfil": "Affects everyone's purchasing power."
+  },
+  {
+   "nome": "Matérias-primas",
+   "tendencia": "a subir",
+   "forca": 2,
+   "leitura": "5 stories today. Top one: Oil Prices Rise as Iran Steps Up Attacks and Fighting Intensifies (New York Times).",
+   "a_favor": [
+    "Oil Prices Rise as Iran Steps Up Attacks and Fighting Inten…"
+   ],
+   "riscos": [],
+   "perfil": "A small slice of a portfolio, for diversification only."
+  }
+ ],
+ "temas": [
+  "Volatility is not the same as losing money",
+  "What the ECB does and why it touches your money",
+  "Concentration: the risk of betting on one sector"
+ ]
+}
