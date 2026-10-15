@@ -1,0 +1,169 @@
+{
+ "auto": true,
+ "date": "2026-10-15",
+ "basedOn": "2026-10-15T12:09:58.381Z",
+ "generatedAt": "2026-10-15T12:10:00.815Z",
+ "resumo": "Today's talk is mostly about **tech and stocks**. Rising: tech. Falling: inflation, the economy, bonds.",
+ "classes": [
+  {
+   "nome": "Tecnologia",
+   "tendencia": "a subir",
+   "forca": 3,
+   "leitura": "17 stories today. Top one: TSMC posts record profit for a sixth straight quarter, beating estimates on AI boom (CNBC).",
+   "a_favor": [
+    "TSMC posts record profit for a sixth straight quarter, beat…"
+   ],
+   "riscos": [],
+   "perfil": "Long horizon and tolerance for high volatility."
+  },
+  {
+   "nome": "Ações",
+   "tendencia": "misto",
+   "forca": 3,
+   "leitura": "15 stories today. Top one: This 30-year market veteran is alarmed by a record-chasing S&P 500. Here&#x2019;s where he&#x2019;s investing… (MarketWatch).",
+   "a_favor": [
+    "This 30-year market veteran is alarmed by a record-chasing…"
+   ],
+   "riscos": [
+    "Rocket Lab&#x2019;s stock slides as the company pushes back…"
+   ],
+   "perfil": "Long horizon and tolerance for temporary losses."
+  },
+  {
+   "nome": "Inflação",
+   "tendencia": "a descer",
+   "forca": 3,
+   "leitura": "13 stories today. Top one: Tech Stocks Plunge as Doubts Over A.I. Spending Intensify (New York Times).",
+   "a_favor": [
+    "US inflation rises more than expected - here's what is happ…"
+   ],
+   "riscos": [
+    "Tech Stocks Plunge as Doubts Over A.I. Spending Intensify"
+   ],
+   "perfil": "Affects everyone's purchasing power."
+  },
+  {
+   "nome": "Economia",
+   "tendencia": "a descer",
+   "forca": 3,
+   "leitura": "13 stories today. Top one: How lower fuel economy targets could boost pickups and V-8 engines (CNBC).",
+   "a_favor": [],
+   "riscos": [
+    "How lower fuel economy targets could boost pickups and V-8…"
+   ],
+   "perfil": "Background for saving and investing decisions."
+  },
+  {
+   "nome": "Fundos",
+   "tendencia": "estável",
+   "forca": 3,
+   "leitura": "6 stories today. Top one: New Private-Equity Firm Specializes in Giving Companies AI Glow-Ups (Wall Street Journal).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "People who want to diversify with professional management."
+  },
+  {
+   "nome": "Obrigações",
+   "tendencia": "a descer",
+   "forca": 2,
+   "leitura": "5 stories today. Top one: Bank of America shares drop after third-quarter revenue miss and regulatory penalty (CNBC).",
+   "a_favor": [],
+   "riscos": [
+    "Bank of America shares drop after third-quarter revenue mis…"
+   ],
+   "perfil": "Medium horizon and tolerance for price swings."
+  },
+  {
+   "nome": "Juros (bancos centrais)",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "5 stories today. Top one: Frank Elderson: Ensuring resilience in the face of uncertainty (ECB).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Affects everyone's deposits, loans and bonds."
+  }
+ ],
+ "temas": [
+  "Concentration: the risk of betting on one sector",
+  "Volatility is not the same as losing money",
+  "How inflation eats idle cash"
+ ],
+ "pack": {
+  "carousel": {
+   "title": "Why sticky sellers are holding up housing",
+   "slides": [
+    {
+     "kind": "hook",
+     "h": "Why won't **house prices** fall?",
+     "big": "",
+     "t": ""
+    },
+    {
+     "kind": "stat",
+     "h": "The current **mortgage rate** in Portugal",
+     "big": "3%",
+     "t": "New mortgage rates sit at three percent as the market adapts."
+    },
+    {
+     "kind": "point",
+     "h": "Sellers refuse to drop their **prices**",
+     "big": "",
+     "t": "Homeowners are holding firm, keeping property values surprisingly high right now."
+    },
+    {
+     "kind": "myth",
+     "h": "\"High rates always crash property values\"",
+     "big": "",
+     "t": "Stubborn sellers can keep prices elevated even when borrowing gets pricier."
+    },
+    {
+     "kind": "point",
+     "h": "What this means for your **buying plans**",
+     "big": "",
+     "t": "Waiting for a massive market crash might take longer than expected."
+    },
+    {
+     "kind": "cta",
+     "h": "Save this and follow **PaperMint**",
+     "big": "",
+     "t": "Never miss our fresh daily finance news."
+    }
+   ]
+  },
+  "linkedin": "Stock markets recently suffered their worst day since July, driven by a mix of AI jitters and persistent rate-hike fears. At the same time, the broader economy continues to navigate shifting monetary policy, with the ECB deposit rate holding at 2.5% and 12-month Euribor averaging 3.247% in September.\n\nFor everyday savers, these headlines can feel like noise. But they highlight a crucial lesson in personal finance: markets move in cycles, and patience is often your best asset. Whether you are looking at mortgage rates averaging 3% in Portugal or watching inflation tick along at 3.6%, understanding the bigger picture helps you make calmer, clearer financial choices.\n\nKeep your eyes on your long-term goals rather than daily market swings. What is your strategy for navigating rate uncertainty? Let us know in the comments.\n\n#PersonalFinance #Investing #PaperMint",
+  "reel": {
+   "hook": "Why are house prices refusing to fall right now?",
+   "script": [
+    "Higher borrowing costs usually mean lower house prices, right?",
+    "Not this time. Stubborn sellers are refusing to budge.",
+    "In Portugal, new mortgage rates sit right around three percent.",
+    "That keeps property values propped up.",
+    "Patience is key if you are waiting to buy."
+   ],
+   "caption": "House prices are staying stubborn despite higher rates. Here is why waiting for a crash might take longer than you think."
+  },
+  "faq": [
+   {
+    "q": "Why are stock markets falling right now?",
+    "a": "Markets recently hit their worst day since July due to a mix of AI jitters and lingering fears over interest rates. Investors are constantly weighing tech valuations against macroeconomic conditions."
+   },
+   {
+    "q": "What is the current ECB deposit rate?",
+    "a": "The European Central Bank deposit rate is currently set at 2.5 percent. This rate influences broader borrowing costs across the eurozone."
+   },
+   {
+    "q": "Why are house prices staying high?",
+    "a": "Stubborn sellers are refusing to lower their asking prices. This reluctance helps prop up the housing market even when borrowing becomes more expensive."
+   },
+   {
+    "q": "What are new mortgage rates in Portugal?",
+    "a": "New mortgages in Portugal averaged around 3 percent recently. Borrowing costs reflect the current interest rate environment set by central bank policies."
+   },
+   {
+    "q": "How does inflation look right now?",
+    "a": "Inflation in Portugal stood at 3.6 percent, with a 12-month average of 2.8 percent. Euro area inflation was recorded at 3.8 percent."
+   }
+  ],
+  "generatedAt": "2026-10-15T12:11:05.126Z"
+ }
+}
