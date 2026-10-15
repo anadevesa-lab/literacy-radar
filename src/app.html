@@ -1369,7 +1369,7 @@ main.play .pmh-copy>p,main.play .pmh .acts{animation:mfade .9s var(--ease) both;
 .pillgrid .indpanel{background:#FFFFFF!important;padding:clamp(4px,1vw,12px) 0!important}
 .pillgrid .indhead h2{color:#0D0E0E!important} .pillgrid .indhead h2 em{color:#5D6366!important;font-family:var(--f-serif);font-style:italic;font-weight:400}
 .pillgrid .indhead span{color:#5D6366!important}
-.pillgrid .stats4 .st{background:var(--mint2)!important;border:0!important;border-radius:20px!important;padding:20px 20px 22px!important;color:#0D0E0E!important;gap:10px!important;transition:transform .5s var(--ease),background .3s!important}
+.pillgrid .stats4 .st{background:var(--mint2)!important;border:0!important;border-radius:26px!important;padding:24px 24px 26px!important;color:#0D0E0E!important;gap:10px!important;transition:transform .5s var(--ease),background .3s!important}
 .pillgrid .stats4 .st:hover{background:#7FDCCD!important;transform:translateY(-4px)}
 .pillgrid .stats4 .st .hd{display:flex;align-items:center;gap:10px;min-width:0}
 .pillgrid .stats4 .st .ic{flex:none;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#0D0E0E;color:var(--mint2);font-weight:800;font-size:16px;font-style:normal;line-height:1}
@@ -1400,6 +1400,17 @@ main.play .pmh-copy>p,main.play .pmh .acts{animation:mfade .9s var(--ease) both;
 .segc .sc:focus-visible{outline:3px solid #0D0E0E;outline-offset:3px}
 @media (max-width:900px){.segc{grid-template-columns:repeat(2,minmax(0,1fr))} .segc .sc{min-height:170px} .segc .ds{display:none} .segc .tt{font-size:clamp(1.7rem,7.5vw,2.4rem)}}
 @media (prefers-reduced-motion:reduce){.segc .sc,.segc .go{transition:none} .segc .sc:hover{transform:none}}
+/* the hero's mint card matches the Markets section cards: big title, short line, arrow in a notched corner */
+.pmh-mint{--bite:clamp(40px,3.6vw,50px);--bg:var(--mint2);background:none!important;overflow:visible!important;justify-content:flex-start!important;gap:10px!important;padding-bottom:calc(var(--bite) * 2 + 8px)!important}
+.pmh-mint::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--bg);transition:background .3s;
+  -webkit-mask:radial-gradient(circle var(--bite) at calc(100% - var(--bite) + 8px) calc(100% - var(--bite) + 8px),transparent calc(var(--bite) - .5px),#000 var(--bite));
+  mask:radial-gradient(circle var(--bite) at calc(100% - var(--bite) + 8px) calc(100% - var(--bite) + 8px),transparent calc(var(--bite) - .5px),#000 var(--bite))}
+.pmh-mint:hover{--bg:#7FDCCD;box-shadow:none!important}
+.pmh-mint .t{font-size:clamp(2.1rem,3.3vw,3.3rem)!important;letter-spacing:-.045em!important;line-height:.98!important;max-width:11ch}
+.pmh-mint .sub{font-size:var(--t-sm);line-height:1.45;color:rgba(13,14,14,.7);max-width:30ch}
+.pmh-mint .arr{top:auto!important;left:auto!important;right:4px!important;bottom:4px!important;width:calc(var(--bite) * 2 - 24px)!important;height:calc(var(--bite) * 2 - 24px)!important;background:transparent!important;border:1px solid rgba(13,14,14,.35);font-size:22px!important}
+.pmh-mint:hover .arr{transform:rotate(45deg)!important;background:#FFFFFF!important}
+@media (max-width:820px){.pmh-mint .t{font-size:clamp(1.8rem,8vw,2.4rem)!important}}
 </style>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -1888,7 +1899,7 @@ function vPills(){
   const it=S.ind?.items||[]; if(!it.length) return `<div class="stats4"><div class="st"><b>…</b><span>Loading indicators</span></div></div>`;
   return `<div class="stats4">${it.map(x=>{ const ch = x.prev!=null ? (+x.value-+x.prev) : null;
     return `<a class="st" ${x.url?`href="${esc(x.url)}" target="_blank" rel="noopener"`:""} title="Source: ${esc(srcEN(x.source))}">
-      <span class="hd"><span class="ic" aria-hidden="true">${IND_ICON[IND_GROUP[x.k]]||"•"}</span><span class="tg">${esc(IND_GROUP[x.k]||"Indicator")}</span></span><b><span class="v">${fmtNum(x.value,x.dec)}</span><i>%</i>${ch?`<em class="${ch>0?"up":"dn"}">${ch>0?"▲":"▼"} ${fmtNum(Math.abs(ch),x.dec)}</em>`:""}</b>
+      <span class="hd"><span class="tg">${esc(IND_GROUP[x.k]||"Indicator")}</span></span><b><span class="v">${fmtNum(x.value,x.dec)}</span><i>%</i>${ch?`<em class="${ch>0?"up":"dn"}">${ch>0?"▲":"▼"} ${fmtNum(Math.abs(ch),x.dec)}</em>`:""}</b>
       <span class="k">${esc(indLabel(x))}</span><small>${esc(perEN(x.period))} · ${esc(srcEN(x.source))}</small></a>`; }).join("")}</div>`;
 }
 function vInd(){
@@ -1984,7 +1995,7 @@ function heroFrame(o){
         </g></svg></div>
       <span class="pmh-note" aria-hidden="true">Educational, never advice.</span>
     </div>
-    ${nx?`<button class="pmh-c pmh-mint" type="button" style="--j:1" ${nx[3]}><span class="pmh-k">${esc(nx[0])}</span><span><span class="t">${esc(nx[1])}</span><br><span class="sub">${esc(nx[2])}</span></span><span class="arr" aria-hidden="true">↗</span></button>`:""}
+    ${nx?`<button class="pmh-c pmh-mint" type="button" style="--j:1" aria-label="${esc(nx[0]+": "+nx[1])}" ${nx[3]}><span class="t">${esc(nx[1])}</span><span class="sub">${esc(nx[2])}</span><span class="arr" aria-hidden="true">↗</span></button>`:""}
     <div class="pmh-c pmh-grey" style="--j:2" aria-label="${esc(lt[0]+" "+lt[1])}">
       <div class="t" aria-hidden="true"><span class="l1"><span>${esc(lt[0])}</span></span><span class="l2"><em>${esc(lt[1])}.</em></span></div></div>
   </div></div></section>`;
