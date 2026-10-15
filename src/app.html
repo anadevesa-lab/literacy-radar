@@ -1304,7 +1304,14 @@ section.cy::before,.brief .story.cy::before{display:none!important}
    It switches on with a short flicker on arrival; the beam and the glow swing with it. */
 .pmh-lamp{position:absolute;top:0;right:clamp(10px,8vw,150px);height:100%;aspect-ratio:400 / 720;pointer-events:none;z-index:1}
 .pmh-lamp svg{display:block;width:100%;height:100%;overflow:visible}
-.pmh-lamp .lp-swing{transform-origin:200px -40px;transform-box:view-box;animation:lampSwing 4.2s ease-in-out infinite alternate}
+.pmh-lamp .lp-swing{transform-origin:200px -40px;transform-box:view-box;transform:rotate(var(--sw,0deg))}
+/* the light falls on the card: a faint pool on the "wall" and, over the copy, a wash that brightens the letters
+   in proportion to how close they are to where the lamp points (overlay keeps the black untouched) */
+.pmh-dark{--lx:75%;--ly:85%}
+.pmh-dark::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(38% 55% at var(--lx) var(--ly),rgba(255,255,255,.07),transparent 70%)}
+.pmh-copy{--cx:80%;--cy:90%;--r1:320px;--r2:1150px;background:radial-gradient(circle at var(--cx) var(--cy),#FFFFFF 0,#FFFFFF var(--r1),rgba(255,255,255,.5) var(--r2));-webkit-background-clip:text;background-clip:text}
+.pmh-dark .pmh-k,.pmh-dark h1,.pmh-dark h1 em,.pmh-dark .pmh-copy>p{color:transparent;-webkit-text-fill-color:transparent}
+@media (max-width:820px){.pmh-copy{--r1:90px;--r2:520px}}
 .pmh-lamp .lp-light{animation:lampOn 1.6s steps(1,end) both;animation-delay:calc(var(--introDelay,0s) + .5s)}
 .pmh-lamp .lp-rim{animation:lampRim 1.6s steps(1,end) both;animation-delay:calc(var(--introDelay,0s) + .5s)}
 @keyframes lampSwing{from{transform:rotate(-4deg)}to{transform:rotate(4deg)}}
@@ -1963,11 +1970,24 @@ function heroFrame(o){
   </div></div></section>`;
 }
 /* the fan leans gently towards the pointer (fine pointers only, never with reduced motion) */
-const FAN={ mount(root){ const card=root.querySelector(".pmh-dark"), fan=card?.querySelector(".pmh-fan");
-  if(!fan||matchMedia("(prefers-reduced-motion: reduce)").matches||!matchMedia("(pointer: fine)").matches) return;
-  card.onpointermove=e=>{ const r=card.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
-    fan.style.setProperty("--ry",(x*14).toFixed(2)+"deg"); fan.style.setProperty("--rx",(-y*10).toFixed(2)+"deg"); };
-  card.onpointerleave=()=>{ fan.style.setProperty("--ry","0deg"); fan.style.setProperty("--rx","0deg"); }; } };
+/* the lamp swings (a slow pendulum) and its light follows: every frame the point it shines on is projected
+   onto the card (--lx/--ly), so the wash lights the letters closest to the beam. Paused off-screen and in hidden tabs;
+   with reduced motion the lamp hangs still and the light is set once. */
+const LAMP=(()=>{ let raf=0, card=null, svg=null, sw=null, io=null, on=true, copy=null;
+  const A=6, T=8400;
+  function place(deg){ const r=card.getBoundingClientRect(), m=svg.getScreenCTM(); if(!m||!r.width) return;
+    const a=deg*Math.PI/180, pt=svg.createSVGPoint(); pt.x=200-580*Math.sin(a); pt.y=-40+580*Math.cos(a);
+    const q=pt.matrixTransform(m); card.style.setProperty("--lx",(q.x-r.left).toFixed(1)+"px"); card.style.setProperty("--ly",(q.y-r.top).toFixed(1)+"px");
+    if(copy){ const c=copy.getBoundingClientRect(); copy.style.setProperty("--cx",(q.x-c.left).toFixed(1)+"px"); copy.style.setProperty("--cy",(q.y-c.top).toFixed(1)+"px"); } }
+  function tick(now){ raf=0; if(!card||!card.isConnected) return;
+    if(on&&!document.hidden){ const deg=A*Math.sin(now/T*2*Math.PI); sw.style.setProperty("--sw",deg.toFixed(3)+"deg"); place(deg); }
+    raf=requestAnimationFrame(tick); }
+  return { mount(root){ io?.disconnect(); card=root.querySelector(".pmh-dark"); copy=card?.querySelector(".pmh-copy"); svg=card?.querySelector(".pmh-lamp svg"); sw=svg?.querySelector(".lp-swing");
+    if(!svg) return;
+    if(matchMedia("(prefers-reduced-motion: reduce)").matches){ requestAnimationFrame(()=>place(0)); addEventListener("resize",()=>place(0)); return; }
+    io=new IntersectionObserver(es=>{ on=es[0].isIntersecting; }); io.observe(card);
+    if(!raf) raf=requestAnimationFrame(tick); } };
+})();
 function heroHTML(day){
   const n=(day?.sources||[]).length||14;
   return heroFrame({label:"PaperMint", ribbon:"Finance news, freshly minted. · ", title:"Daily fresh", em:"market insights.",
@@ -2694,7 +2714,7 @@ function render(){
   if(!OWNER && (tab==="studio"||tab==="lib")){ tab="news"; document.querySelectorAll(".tab[data-tab]").forEach(x=>x.classList.toggle("on",x.dataset.tab===tab)); }
   m.innerHTML = tab==="lib" ? vLib() : tab==="mkt" ? vMarkets() : tab==="news" ? vNewsPage() : tab==="ask" ? vAsk() : tab==="rot" ? vRoutine() : vStudio();
   bind(); if(tab==="mkt"||tab==="ask") bindMarkets(); if(tab==="rot") bindRoutine();
-  splitWords(m); window.RADAR_TILES?.(); LINES.mount(m); PIXELS.mount(m); WAVE.mount(m); FAN.mount(m);
+  splitWords(m); window.RADAR_TILES?.(); LINES.mount(m); PIXELS.mount(m); WAVE.mount(m); LAMP.mount(m);
   m.querySelectorAll("[data-jump]").forEach(b=>b.onclick=()=>{ if(b.dataset.go&&mk.sub!==b.dataset.go){ mk.sub=b.dataset.go; render(); } document.querySelector(b.dataset.jump)?.scrollIntoView({behavior:RM()?"auto":"smooth",block:"start"}); });
   renderTicker(); motion(m); window.RADAR_BAR?.(); scrollFX(document); SCRUB.mount(document);
   m.querySelectorAll("[data-tabgo]").forEach(b=>b.onclick=()=>{ if(b.dataset.sub) mk.sub=b.dataset.sub; document.querySelector(`.tab[data-tab="${b.dataset.tabgo}"]`)?.click(); });
