@@ -1353,6 +1353,14 @@ section.cy::before,.brief .story.cy::before{display:none!important}
 .pmh-grey .num{display:flex;align-items:baseline;gap:10px;max-width:50%} .pmh-grey .num b{font-size:clamp(2.2rem,3.6vw,3.2rem);font-weight:600;letter-spacing:-.05em;line-height:1}
 .pmh-grey .num span{font-size:var(--t-sm);line-height:1.35;color:#4A4F52}
 .pmh-grey .srcs{display:flex} .pmh-grey .srcs i{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font:700 9.5px/1 var(--f-body);font-style:normal;border:2px solid var(--g1);margin-left:-8px;background:var(--bk);color:#FFFFFF} .pmh-grey .srcs i:first-child{margin-left:0;background:var(--mint2);color:var(--bk)}
+/* grey card: big lettering that fills the card, no picture */
+.pmh-grey{container-type:inline-size;justify-content:flex-end}
+.pmh-grey .t{max-width:none;display:flex;flex-direction:column;font-size:clamp(2.6rem,15.5cqi,8.5rem);font-weight:600;letter-spacing:-.055em;line-height:.9;color:var(--bk)}
+.pmh-grey .t>span{display:block;overflow:hidden;padding-bottom:.08em;white-space:nowrap} .pmh-grey .t>span>*{display:inline-block}
+.pmh-grey .t em{font:italic 400 1.12em/.9 var(--f-serif);letter-spacing:-.02em;color:#5D6366}
+.pmh-grey .t em::after{content:"";display:inline-block;width:.18em;height:.18em;margin-left:.06em;border-radius:50%;background:var(--mint2);vertical-align:.08em}
+main.play .pmh-grey .t>span>*{animation:rise 1s var(--ease) both;animation-delay:calc(var(--introDelay,0s) + 380ms)} main.play .pmh-grey .t .l2>*{animation-delay:calc(var(--introDelay,0s) + 480ms)}
+@media (prefers-reduced-motion:reduce){main.play .pmh-grey .t>span>*{animation:none}}
 .pmh + section.cy,.pmh + .mast{margin-top:clamp(24px,3vw,40px)!important}
 .pmh-dark :focus-visible{outline-color:#FFFFFF!important}
 /* arrival */
@@ -2133,9 +2141,8 @@ function heroFrame(o){
       <span class="pmh-note" aria-hidden="true">Educational, never advice.</span>
     </div>
     ${nx?`<button class="pmh-c pmh-mint" type="button" style="--j:1" ${nx[3]}><span class="pmh-k">${esc(nx[0])}</span><span><span class="t">${esc(nx[1])}</span><br><span class="sub">${esc(nx[2])}</span></span><span class="arr" aria-hidden="true">↗</span></button>`:""}
-    <div class="pmh-c pmh-grey" style="--j:2">${pic?`<img src="${pic}" alt="" style="object-position:${pos}" fetchpriority="high" decoding="async" onerror="this.remove()">`:""}
-      <div class="t">Daily Finance insights</div>
-      <div class="srcs" aria-hidden="true">${o.tiles.map(t=>`<i>${esc(t)}</i>`).join("")}</div></div>
+    <div class="pmh-c pmh-grey" style="--j:2" aria-label="Daily Finance insights">
+      <div class="t" aria-hidden="true"><span class="l1"><span>Daily Finance</span></span><span class="l2"><em>insights.</em></span></div></div>
   </div></div></section>`;
 }
 /* the fan leans gently towards the pointer (fine pointers only, never with reduced motion) */
