@@ -1380,6 +1380,26 @@ main.play .pmh-copy>p,main.play .pmh .acts{animation:mfade .9s var(--ease) both;
 .pillgrid .stats4 .st small{color:rgba(13,14,14,.62)!important}
 .pillgrid .stats4 .st:focus-visible{outline:3px solid #0D0E0E!important;outline-offset:3px}
 @media (prefers-reduced-motion:reduce){.pillgrid .stats4 .st:hover{transform:none}}
+/* Markets section cards (replace the old tab bar) */
+.segc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(10px,1.4vw,18px);scroll-margin-top:calc(var(--hh) + 20px);--bite:clamp(40px,3.6vw,50px)}
+.segc .sc{--bg:var(--mint2);position:relative;isolation:isolate;display:flex;flex-direction:column;align-items:flex-start;gap:10px;min-height:clamp(220px,19vw,270px);padding:clamp(20px,2vw,28px) clamp(20px,2vw,28px) calc(var(--bite) * 2 + 8px);
+  border:0;border-radius:26px;background:none;color:#0D0E0E;font:inherit;text-align:left;cursor:pointer;transition:transform .5s var(--ease)}
+/* the card colour lives on a layer with the round bite cut out of its corner; the arrow sits in the bite */
+.segc .sc::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:26px;background:var(--bg);transition:background .3s;
+  -webkit-mask:radial-gradient(circle var(--bite) at calc(100% - var(--bite) + 8px) calc(100% - var(--bite) + 8px),transparent calc(var(--bite) - .5px),#000 var(--bite));
+  mask:radial-gradient(circle var(--bite) at calc(100% - var(--bite) + 8px) calc(100% - var(--bite) + 8px),transparent calc(var(--bite) - .5px),#000 var(--bite))}
+.segc .sc:hover{transform:translateY(-4px);--bg:#7FDCCD}
+.segc .sc.on,.segc .sc.on:hover{--bg:#0D0E0E;color:#FFFFFF}
+.segc .ic{width:36px;height:36px;margin-bottom:auto} .segc .ic svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.segc .sc.on .ic{color:var(--mint2)}
+.segc .tt{margin-top:clamp(22px,3vw,40px);font-size:clamp(1.4rem,2.1vw,1.9rem);font-weight:500;letter-spacing:-.03em;line-height:1.05}
+.segc .ds{font-size:var(--t-sm);line-height:1.45;color:rgba(13,14,14,.7);max-width:26ch} .segc .sc.on .ds{color:rgba(255,255,255,.7)}
+.segc .go{position:absolute;right:4px;bottom:4px;width:calc(var(--bite) * 2 - 24px);height:calc(var(--bite) * 2 - 24px);border-radius:50%;display:grid;place-items:center;
+  border:1px solid rgba(13,14,14,.35);font-size:22px;color:#0D0E0E;transition:transform .5s var(--ease),background .3s,border-color .3s}
+.segc .sc:hover .go{transform:rotate(45deg)} .segc .sc.on .go{background:var(--mint2);border-color:var(--mint2)}
+.segc .sc:focus-visible{outline:3px solid #0D0E0E;outline-offset:3px}
+@media (max-width:900px){.segc{grid-template-columns:repeat(2,minmax(0,1fr))} .segc .sc{min-height:190px} .segc .ds{display:none}}
+@media (prefers-reduced-motion:reduce){.segc .sc,.segc .go{transition:none} .segc .sc:hover{transform:none}}
 </style>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -1992,7 +2012,7 @@ function heroHTML(day){
   const n=(day?.sources||[]).length||14;
   return heroFrame({label:"PaperMint", ribbon:"Finance news, freshly minted. · ", title:"Daily fresh", em:"market insights.",
     photo:"assets/markets-hero.webp", contain:"#FBF0DE", thumb:"assets/markets-thumb.webp", thumbPos:"50% 60%",
-    cta:{text:"Read today's Brief", attrs:'data-jump=".seg" data-go="brief"'},
+    cta:{text:"Read today's Brief", attrs:'data-jump=".segc" data-go="brief"'},
     text:`What today's news means for your money, in plain English. PaperMint reads ${n} trusted sources every weekday, picks the stories that matter for your savings, loans and investments, and explains them. Educational, never advice.`,
     tiles:srcTiles(day), num:String(n), numLabel:`trusted sources, read ${day?"today":"every weekday"}.`});
 }
@@ -2010,6 +2030,12 @@ const WAVE=(()=>{ let tp=null, unit=0, x=0, last=0, raf=0, on=true, io=null;
     io=new IntersectionObserver(es=>{ on=es[0].isIntersecting; }); io.observe(t.closest(".media"));
     last=performance.now(); if(!raf) raf=requestAnimationFrame(tick); } };
 })();
+/* Markets sections as cards: the open one is black, the others mint; each has a line icon and a notched corner with the arrow */
+const SEG_DESC={brief:"Today's markets in a few minutes, in plain English.",hoje:"How today's news reads for each type of investment.",mes:"The month in review, as a factsheet.",sim:"Try scenarios for your savings over time."};
+const SEG_ICON={brief:'<svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 12h7M9 16h7"/></svg>',
+  hoje:'<svg viewBox="0 0 24 24"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z"/><path d="M9 4v14M15 6v14"/></svg>',
+  mes:'<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>',
+  sim:'<svg viewBox="0 0 24 24"><path d="M3 20h18"/><path d="M5 16l5-5 4 3 6-7"/><path d="M15 7h5v5"/></svg>'};
 function vMarkets(){
   const day=latestDay(); const ins0 = day ? S.insights.find(i=>i.id===day.id) : null; const ins = ins0 && (ins0.classes||[]).length ? ins0 : null;
   const stale = ins && day.collectedAt && ins.basedOn < day.collectedAt;
@@ -2031,10 +2057,11 @@ function vMarkets(){
       <div class="mside">${gNum?`<span><b>Number of the day:</b> ${esc(gNum)}${gCap?` · ${esc(gCap)}`:""}</span>`:""}
         ${mv&&!mv.news?`<span><b>Biggest move:</b> ${esc(mv.name)}, ${TW[mv.trend]||"steady"}.</span>`:""}
         <span>${esc(sub)}</span>
-        <div class="row"><button class="btn primary" type="button" data-jump=".seg" data-go="brief">Read The Brief</button><button class="btn" type="button" data-jump=".pillgrid">See the indicators</button></div></div></div>
+        <div class="row"><button class="btn primary" type="button" data-jump=".segc" data-go="brief">Read The Brief</button><button class="btn" type="button" data-jump=".pillgrid">See the indicators</button></div></div></div>
   </section>
   <section class="pillgrid" aria-label="Verified indicators"><div class="indpanel"><div class="indhead"><h2>Verified <em>indicators</em></h2>${S.ind?`<span>ECB · Eurostat · Bank of Portugal · checked ${esc(new Date(S.ind.updatedAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}</span>`:""}</div>${vPills()}</div></section>
-  <nav class="seg" role="tablist" aria-label="Markets sections">${SUBS.map(([k,t])=>`<button type="button" role="tab" aria-selected="${mk.sub===k}" class="${mk.sub===k?"on":""}" data-sub="${k}">${t}</button>`).join("")}</nav>`;
+  <nav class="segc" role="tablist" aria-label="Markets sections">${SUBS.map(([k,t],i)=>`<button type="button" role="tab" aria-selected="${mk.sub===k}" class="sc${mk.sub===k?" on":""}" style="--j:${i}" data-sub="${k}">
+      <span class="ic" aria-hidden="true">${SEG_ICON[k]}</span><span class="tt">${t}</span><span class="ds">${SEG_DESC[k]}</span><span class="go" aria-hidden="true">↗</span></button>`).join("")}</nav>`;
   if(mk.sub==="hoje") h += `<section class="panel"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>Daily <em>map</em></h2>
       <span class="muted" style="font-size:.86rem">${ins?`Analysis from ${esc(when(ins.generatedAt))}${stale?" · new stories since then":""}`:"No analysis for today's news yet."}</span></div>
       ${(false)?``:`<button class="btn ${!ins||stale?"primary":""}" id="mgen" type="button" ${mk.busy||!day?"disabled":""}>${ins?"Refresh analysis":"Analyse today"}</button>`}</div>
