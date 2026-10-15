@@ -113,23 +113,25 @@
     return new TextDecoder().decode(await crypto.subtle.decrypt({ name:"AES-GCM", iv }, await kdf(pw, salt), ct)); }
   const sha = async t => [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t)))].map(b => b.toString(16).padStart(2,"0")).join("");
   const fp = (e, p) => sha("mint-owner-v1|" + e.trim().toLowerCase() + "|" + p);
-  function loginPanel(){
+  // forgotten password: a static site has no server to send a reset email, so "Forgot password?" makes a new fingerprint code;
+  // it unlocks nothing by itself and only takes effect once it is put into OWNER_HASH in the repo (which only the owner can push)
+  function loginPanel(mode){
     let el = document.getElementById("aiPanel");
     if(!el){ el = document.createElement("div"); el.id = "aiPanel"; el.className = "aipanel"; el.setAttribute("role","dialog"); el.setAttribute("aria-label","Owner sign in"); document.body.appendChild(el); }
-    const setup = !OWNER_HASH;
-    el.innerHTML = `<b>${setup ? "Create your owner password" : "Owner sign in"}</b>
-      <p>${setup ? "Choose the email and password you will use to open the Studio. You'll get a code to send to Claude; the password itself never leaves this page." : "The Studio and Library are private. Sign in to open them."}</p>
+    const reset = mode === "reset", setup = !OWNER_HASH || reset;
+    el.innerHTML = `<b>${reset ? "Reset your password" : setup ? "Create your owner password" : "Owner sign in"}</b>
+      <p>${reset ? "Choose your email and a new password. You'll get a code: send it to Claude, who puts it in the site. After the next publish your new password works (you'll need to add your AI key again once). The password itself never leaves this page." : setup ? "Choose the email and password you will use to open the Studio. You'll get a code to send to Claude; the password itself never leaves this page." : "The Studio and Library are private. Sign in to open them."}</p>
       <label class="field"><span class="label">Email</span><input id="owEmail" type="email" autocomplete="username"></label>
       <label class="field"><span class="label">Password</span><input id="owPass" type="password" autocomplete="${setup ? "new-password" : "current-password"}"></label>
       <p id="owMsg" class="muted" style="font-size:.85rem"></p>
-      <div class="row"><button class="btn primary" type="button" data-ow="go">${setup ? "Create code" : "Sign in"}</button><button class="btn" type="button" data-ow="close">Close</button></div>`;
+      <div class="row"><button class="btn primary" type="button" data-ow="go">${setup ? "Create code" : "Sign in"}</button><button class="btn" type="button" data-ow="close">Close</button>${setup ? "" : `<button class="btn ghost" type="button" data-ow="forgot">Forgot password?</button>`}</div>`;
     const msg = el.querySelector("#owMsg");
     closable(el, () => { el.remove(); history.replaceState(null, "", location.pathname + location.search); });
     el.querySelector('[data-ow="go"]').onclick = async () => {
       const e = el.querySelector("#owEmail").value, p = el.querySelector("#owPass").value;
       if(!e.includes("@") || p.length < 8){ msg.textContent = "Use your email and a password with at least 8 characters."; return; }
       const h = await fp(e, p);
-      if(setup){ msg.innerHTML = `Send this code to Claude:<br><code style="user-select:all;word-break:break-all">${h}</code>`; return; }
+      if(setup){ msg.innerHTML = `${reset ? "New password ready. " : ""}Send this code to Claude:<br><code style="user-select:all;word-break:break-all">${h}</code>`; return; }
       if(h === OWNER_HASH){
         try{ localStorage.setItem("mint-owner", h); }catch{}
         const done = t => { msg.textContent = t; setTimeout(() => { location.hash = ""; location.reload(); }, 900); };
@@ -140,11 +142,12 @@
         done("Welcome back. Opening the Studio…"); }
       else msg.textContent = "Email or password not recognised.";
     };
+    const fg = el.querySelector('[data-ow="forgot"]'); if(fg) fg.onclick = () => loginPanel("reset");
     el.querySelector("#owEmail").focus();
   }
   window.MINT_LOGIN = loginPanel;
   window.MINT_LOGOUT = () => { try{ localStorage.removeItem("mint-owner"); }catch{} location.reload(); };
-  if(/owner/.test(location.hash) && !window.MINT_OWNER) addEventListener("DOMContentLoaded", () => setTimeout(loginPanel, 300));
+  if(/owner/.test(location.hash) && !window.MINT_OWNER) addEventListener("DOMContentLoaded", () => setTimeout(() => loginPanel(/reset/.test(location.hash) ? "reset" : ""), 300));
   if(!PROXY) window.RADAR_AI_KEY = () => keyPanel();
   const toText = input => typeof input === "string" ? input : (input || []).map(t => t.content).join("\n\n");
   const MODELS = ["gemini-flash-latest", "gemini-2.5-flash", "gemini-flash-lite-latest", "gemini-2.5-flash-lite"];
