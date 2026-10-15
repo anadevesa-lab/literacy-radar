@@ -1357,6 +1357,21 @@ main.play .pmh-copy>p,main.play .pmh .acts{animation:mfade .9s var(--ease) both;
   .pmh-fan i{animation:none} .pmh-fan,.pmh-c,.pmh-grey img{transition:none}
   main.play .pmh-c,main.play .pmh h1 .w>span,main.play .pmh-copy>p,main.play .pmh .acts{animation:none}
 }
+/* indicators v2: white panel, mint cards with a black round icon (after Ana's reference) */
+.pillgrid .indpanel{background:#FFFFFF!important;padding:clamp(4px,1vw,12px) 0!important}
+.pillgrid .indhead h2{color:#0D0E0E!important} .pillgrid .indhead h2 em{color:#5D6366!important;font-family:var(--f-serif);font-style:italic;font-weight:400}
+.pillgrid .indhead span{color:#5D6366!important}
+.pillgrid .stats4 .st{background:var(--mint2)!important;border:0!important;border-radius:20px!important;padding:20px 20px 22px!important;color:#0D0E0E!important;gap:10px!important;transition:transform .5s var(--ease),background .3s!important}
+.pillgrid .stats4 .st:hover{background:#7FDCCD!important;transform:translateY(-4px)}
+.pillgrid .stats4 .st .hd{display:flex;align-items:center;gap:10px;min-width:0}
+.pillgrid .stats4 .st .ic{flex:none;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#0D0E0E;color:var(--mint2);font-weight:800;font-size:16px;font-style:normal;line-height:1}
+.pillgrid .stats4 .st .tg{background:transparent!important;color:#0D0E0E!important;padding:0!important;font-size:11px!important;letter-spacing:.08em!important}
+.pillgrid .stats4 .st b{color:#0D0E0E!important;margin-top:6px} .pillgrid .stats4 .st b i{color:rgba(13,14,14,.55)!important}
+.pillgrid .stats4 .st b em{color:#0D0E0E!important;font-weight:700} .pillgrid .stats4 .st b em.dn{color:#8A4B00!important}
+.pillgrid .stats4 .st .k{color:#0D0E0E!important;font-weight:700}
+.pillgrid .stats4 .st small{color:rgba(13,14,14,.62)!important}
+.pillgrid .stats4 .st:focus-visible{outline:3px solid #0D0E0E!important;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.pillgrid .stats4 .st:hover{transform:none}}
 </style>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -1839,12 +1854,13 @@ function applyIndDefaults(){ if(mk.touched) return; const d=indGet("dep_pt"), b=
 function indText(){ const it=S.ind?.items||[]; if(!it.length) return ""; return "Verified indicators (use these values; do not use other figures from memory):\n"+it.map(x=>`- ${indLabel(x)}: ${x.value}${x.unit||""} (${perEN(x.period)}; source: ${srcEN(x.source)})`).join("\n")+"\n"; }
 const fmtNum = (v,dec) => Number(v).toLocaleString("en-GB",{minimumFractionDigits:dec??1,maximumFractionDigits:dec??2});
 /* each indicator's theme, shown as a small tag on its tile */
+const IND_ICON={Inflation:"%","Interest rates":"↗",Savings:"€",Loans:"⌂",Bonds:"≡"};
 const IND_GROUP={inf_pt:"Inflation",inf_pt_avg:"Inflation",inf_ea:"Inflation",ecb_dep:"Interest rates",euribor12:"Interest rates",dep_pt:"Savings",mort_pt:"Loans",pt10y:"Bonds"};
 function vPills(){
   const it=S.ind?.items||[]; if(!it.length) return `<div class="stats4"><div class="st"><b>…</b><span>Loading indicators</span></div></div>`;
   return `<div class="stats4">${it.map(x=>{ const ch = x.prev!=null ? (+x.value-+x.prev) : null;
     return `<a class="st" ${x.url?`href="${esc(x.url)}" target="_blank" rel="noopener"`:""} title="Source: ${esc(srcEN(x.source))}">
-      <span class="tg">${esc(IND_GROUP[x.k]||"Indicator")}</span><b><span class="v">${fmtNum(x.value,x.dec)}</span><i>%</i>${ch?`<em class="${ch>0?"up":"dn"}">${ch>0?"▲":"▼"} ${fmtNum(Math.abs(ch),x.dec)}</em>`:""}</b>
+      <span class="hd"><span class="ic" aria-hidden="true">${IND_ICON[IND_GROUP[x.k]]||"•"}</span><span class="tg">${esc(IND_GROUP[x.k]||"Indicator")}</span></span><b><span class="v">${fmtNum(x.value,x.dec)}</span><i>%</i>${ch?`<em class="${ch>0?"up":"dn"}">${ch>0?"▲":"▼"} ${fmtNum(Math.abs(ch),x.dec)}</em>`:""}</b>
       <span class="k">${esc(indLabel(x))}</span><small>${esc(perEN(x.period))} · ${esc(srcEN(x.source))}</small></a>`; }).join("")}</div>`;
 }
 function vInd(){
