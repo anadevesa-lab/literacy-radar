@@ -1335,7 +1335,14 @@ section.cy::before,.brief .story.cy::before{display:none!important}
 .pmh-dark{--lx:75%;--ly:85%}
 .pmh-dark::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(38% 55% at var(--lx) var(--ly),rgba(255,255,255,.07),transparent 70%)}
 .pmh-copy{--cx:80%;--cy:90%;--r1:320px;--r2:1150px;background:radial-gradient(circle at var(--cx) var(--cy),#FFFFFF 0,#FFFFFF var(--r1),rgba(255,255,255,.5) var(--r2));-webkit-background-clip:text;background-clip:text}
-.pmh-dark .pmh-k,.pmh-dark h1,.pmh-dark h1 em,.pmh-dark .pmh-copy>p{color:transparent;-webkit-text-fill-color:transparent}
+.pmh-dark .pmh-k,.pmh-dark .pmh-copy>p{color:transparent;-webkit-text-fill-color:transparent}
+/* the title sits on a mint highlighter band (ink letters), swept in from the left on arrival */
+.pmh-dark h1,.pmh-dark h1 em{color:var(--ink);-webkit-text-fill-color:var(--ink)}
+.pmh-dark h1{line-height:1.24} .pmh-dark h1 em{line-height:inherit} .pmh-dark h1 .w{padding-bottom:.24em;margin-bottom:-.24em}
+.pmh-dark h1>span{background:linear-gradient(var(--mint2),var(--mint2)) no-repeat 0 0 / 100% 100%;-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:0 .06em}
+main.play .pmh-dark h1>span{animation:hlSweep 1s var(--ease) both;animation-delay:calc(var(--introDelay,0s) + 120ms)}
+@keyframes hlSweep{from{background-size:0% 100%}}
+@media (prefers-reduced-motion:reduce){main.play .pmh-dark h1>span{animation:none}}
 @media (max-width:820px){.pmh-copy{--r1:90px;--r2:520px}}
 .pmh-lamp .lp-light{animation:lampOn 1.4s var(--ease) both;animation-delay:calc(var(--introDelay,0s) + .5s)}
 .pmh-lamp .lp-rim{animation:lampRim 1.4s var(--ease) both;animation-delay:calc(var(--introDelay,0s) + .5s)}
