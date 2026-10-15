@@ -1417,13 +1417,13 @@ main.play .pmh-copy>p,main.play .pmh .acts{animation:mfade .9s var(--ease) both;
 .segc .sc.on,.segc .sc.on:hover{--bg:#0D0E0E;color:#FFFFFF}
 .segc .ic{width:36px;height:36px;margin-bottom:auto} .segc .ic svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .segc .sc.on .ic{color:var(--mint2)}
-.segc .tt{margin-top:clamp(22px,3vw,40px);font-size:clamp(1.4rem,2.1vw,1.9rem);font-weight:500;letter-spacing:-.03em;line-height:1.05}
+.segc .tt{margin-top:4px;margin-bottom:auto;font-size:clamp(2.1rem,3.3vw,3.3rem);font-weight:500;letter-spacing:-.045em;line-height:.98;max-width:7ch}
 .segc .ds{font-size:var(--t-sm);line-height:1.45;color:rgba(13,14,14,.7);max-width:26ch} .segc .sc.on .ds{color:rgba(255,255,255,.7)}
 .segc .go{position:absolute;right:4px;bottom:4px;width:calc(var(--bite) * 2 - 24px);height:calc(var(--bite) * 2 - 24px);border-radius:50%;display:grid;place-items:center;
   border:1px solid rgba(13,14,14,.35);font-size:22px;color:#0D0E0E;transition:transform .5s var(--ease),background .3s,border-color .3s}
 .segc .sc:hover .go{transform:rotate(45deg)} .segc .sc.on .go{background:var(--mint2);border-color:var(--mint2)}
 .segc .sc:focus-visible{outline:3px solid #0D0E0E;outline-offset:3px}
-@media (max-width:900px){.segc{grid-template-columns:repeat(2,minmax(0,1fr))} .segc .sc{min-height:190px} .segc .ds{display:none}}
+@media (max-width:900px){.segc{grid-template-columns:repeat(2,minmax(0,1fr))} .segc .sc{min-height:170px} .segc .ds{display:none} .segc .tt{font-size:clamp(1.7rem,7.5vw,2.4rem)}}
 @media (prefers-reduced-motion:reduce){.segc .sc,.segc .go{transition:none} .segc .sc:hover{transform:none}}
 </style>
 
@@ -2277,7 +2277,7 @@ function vMarkets(){
   </section>
   <section class="pillgrid" aria-label="Verified indicators"><div class="indpanel"><div class="indhead"><h2>Verified <em>indicators</em></h2>${S.ind?`<span>ECB · Eurostat · Bank of Portugal · checked ${esc(new Date(S.ind.updatedAt).toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}</span>`:""}</div>${vPills()}</div></section>
   <nav class="segc" role="tablist" aria-label="Markets sections">${SUBS.map(([k,t],i)=>`<button type="button" role="tab" aria-selected="${mk.sub===k}" class="sc${mk.sub===k?" on":""}" style="--j:${i}" data-sub="${k}">
-      <span class="ic" aria-hidden="true">${SEG_ICON[k]}</span><span class="tt">${t}</span><span class="ds">${SEG_DESC[k]}</span><span class="go" aria-hidden="true">↗</span></button>`).join("")}</nav>`;
+      <span class="tt">${t}</span><span class="ds">${SEG_DESC[k]}</span><span class="go" aria-hidden="true">↗</span></button>`).join("")}</nav>`;
   if(mk.sub==="hoje") h += `<section class="panel"><div class="row between"><div style="display:flex;flex-direction:column;gap:2px"><h2>Daily <em>map</em></h2>
       <span class="muted" style="font-size:.86rem">${ins?`Analysis from ${esc(when(ins.generatedAt))}${stale?" · new stories since then":""}`:"No analysis for today's news yet."}</span></div>
       ${(false)?``:`<button class="btn ${!ins||stale?"primary":""}" id="mgen" type="button" ${mk.busy||!day?"disabled":""}>${ins?"Refresh analysis":"Analyse today"}</button>`}</div>
