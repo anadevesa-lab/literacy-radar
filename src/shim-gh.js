@@ -99,11 +99,11 @@
   const PROXY = "__MINT_AI_PROXY__".startsWith("http") ? "__MINT_AI_PROXY__" : "";
   window.MINT_AI_PROXY = PROXY;
   // owner sign-in: email + password checked against a salted SHA-256 fingerprint (the password itself is never stored)
-  const OWNER_HASH = "4767b469b9aeec7201a27cc862ac91446a05fd736e4d08926a2e1649991c1cbe";
+  const OWNER_HASH = "c3c22e932d5d66e2686404cd14ad48ad5e0785ec08e51d870c34c6e9f9aa5678";
   const isOwner = () => { try{ return localStorage.getItem("mint-owner") === OWNER_HASH && !!OWNER_HASH; }catch{ return false; } };
   window.MINT_OWNER = isOwner();
   // the AI key, locked with the owner's password (AES-GCM, key from PBKDF2): useless without the password
-  const ENC_KEY = "F1b5hurwgjV8htdvUCRaMNNFMGV+xOH+wpaFe2GdT7iW/h7ZG1YDXHEtVjuaXYM/CZortWvId5P4XVzrKt83OAc2y/fl2tfPHIH5op48kixDgFOABP3r1U6m1yjpesAPkQ==";
+  const ENC_KEY = "";
   const b64 = u => btoa(String.fromCharCode(...u)), unb64 = t => Uint8Array.from(atob(t), c => c.charCodeAt(0));
   const kdf = async (pw, salt) => crypto.subtle.deriveKey({ name:"PBKDF2", salt, iterations:250000, hash:"SHA-256" }, await crypto.subtle.importKey("raw", new TextEncoder().encode(pw), "PBKDF2", false, ["deriveKey"]), { name:"AES-GCM", length:256 }, false, ["encrypt","decrypt"]);
   async function seal(text, pw){ const salt = crypto.getRandomValues(new Uint8Array(16)), iv = crypto.getRandomValues(new Uint8Array(12));
