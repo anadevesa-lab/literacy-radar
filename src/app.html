@@ -1467,7 +1467,7 @@ main.play .pmh-copy>p,main.play .pmh .acts{animation:mfade .9s var(--ease) both;
   <section class="fcta"><div class="in">
     <div class="fhead">
       <div class="fcopy"><h2 class="mega">Stay curious. <em>Stay ahead.</em></h2></div>
-      <div class="fside"><p class="guest-only">Read what moved today and see what it means for your money, in plain English, every weekday.</p><p class="owner-only">Read what moved today, see what it means for your money, then turn it into content in minutes.</p>
+      <div class="fside"><p class="guest-only">Read what moved today and see what it means for your money, every weekday.</p><p class="owner-only">Read what moved today, see what it means for your money, then turn it into content in minutes.</p>
         <div class="row"><button class="btn primary owner-only" data-tab="studio" type="button">Open the Studio</button><button class="btn primary guest-only" data-tab="mkt" type="button">Read today's Brief</button></div>
         <!--SUBF--></div>
     </div>
@@ -1782,7 +1782,7 @@ function vDeeper(){
     <div class="dp-cards">
       ${card("#8DE6D8","Daily<em>brief</em>","The Brief","The day's four stories that matter for your money, minus the jargon.","mkt","brief")}
       ${card("#E6E8EA","Monthly<em>brief</em>","The Monthly Brief","The month in markets: the numbers, the factors and what to watch.","mkt","mes")}
-      ${card("#0D0E0E","Ask<em>away</em>","Ask PaperMint","Questions people ask about today's news, answered in plain English.","ask","")}
+      ${card("#0D0E0E","Ask<em>away</em>","Ask PaperMint","Questions people ask about today's news, answered.","ask","")}
     </div></section>`;
 }
 function vNews(pick=true){
@@ -2071,7 +2071,7 @@ function heroHTML(day){
   return heroFrame({label:"PaperMint", ribbon:"Finance news, freshly minted. · ", title:"Daily fresh", em:"market insights.",
     photo:"assets/markets-hero.webp", contain:"#FBF0DE", thumb:"assets/markets-thumb.webp", thumbPos:"50% 60%",
     cta:{text:"Read today's Brief", attrs:'data-jump=".segc" data-go="brief"'},
-    text:`What today's news means for your money, in plain English. PaperMint reads ${n} trusted sources every weekday, picks the stories that matter for your savings, loans and investments, and explains them. Educational, never advice.`,
+    text:`What today's news means for your money. PaperMint reads ${n} trusted sources every weekday, picks the stories that matter for your savings, loans and investments, and explains them. Educational, never advice.`,
     tiles:srcTiles(day), num:String(n), numLabel:`trusted sources, read ${day?"today":"every weekday"}.`});
 }
 /* the ribbon's words travel along the wave: startOffset slides left by one repeat of the phrase and wraps, so the loop is seamless;
@@ -2089,7 +2089,7 @@ const WAVE=(()=>{ let tp=null, unit=0, x=0, last=0, raf=0, on=true, io=null;
     last=performance.now(); if(!raf) raf=requestAnimationFrame(tick); } };
 })();
 /* Markets sections as cards: the open one is black, the others mint; each has a line icon and a notched corner with the arrow */
-const SEG_DESC={brief:"Today's markets in a few minutes, in plain English.",hoje:"How today's news reads for each type of investment.",mes:"The month in review, as a factsheet.",sim:"Try scenarios for your savings over time."};
+const SEG_DESC={brief:"Today's markets in a few minutes.",hoje:"How today's news reads for each type of investment.",mes:"The month in review, as a factsheet.",sim:"Try scenarios for your savings over time."};
 const SEG_ICON={brief:'<svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 12h7M9 16h7"/></svg>',
   hoje:'<svg viewBox="0 0 24 24"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z"/><path d="M9 4v14M15 6v14"/></svg>',
   mes:'<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>',
@@ -2108,7 +2108,7 @@ function vMarkets(){
   const inds=(S.ind?.items||[]).slice(0,8); const one=bb?.one_liner||""; const WM=worldModel(), mv=WM.mover;
   const GLY={up:"▲",down:"▼",mixed:"◆",flat:"–"}, MOOD={calm:"Calm",changeable:"Changeable",stormy:"Stormy"};
   const nS=day?(day.items||[]).length:0, nSrc=day?(day.sources||[]).length:0, TW={up:"rising",down:"falling",mixed:"mixed",flat:"steady"};
-  const lead=hlLead(one||"What today's news means for your money, in plain English.");
+  const lead=hlLead(one||"What today's news means for your money.");
   let h = `${heroHTML(day)}<section class="mast" aria-label="Today's front page">
     <div class="dateline"><span>${esc(new Date().toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long",year:"numeric"}))}</span><span>${day?`${nS} stories · ${nSrc} sources`:"Collecting today's stories"}</span><span>Educational, never advice</span></div>
     <div class="mcols"><p class="mlead">${lead}</p>
@@ -2160,7 +2160,7 @@ function vBrief(){
       <button class="btn ${!b||stale?"primary":""}" id="bgen" type="button" ${mk.bBusy||!day?"disabled":""}>${b?"Rewrite the Brief":"Write today's Brief"}</button></div>
     ${mk.bBusy?think("Reading "+((day?.items||[]).length)+" stories and picking the ones that matter…"):""}
     ${mk.bErr?`<p class="notice">${esc(mk.bErr)}</p>`:""}`;
-  if(!b){ h += `<div class="empty"><b>No Brief yet today.</b><p class="muted">${day?"Press the button and PaperMint picks the four stories that matter most for everyday money, and explains each one in plain English: what's going on, what it means and why you should care.":"The Brief appears after the first news collection."}</p></div></section>`; return h; }
+  if(!b){ h += `<div class="empty"><b>No Brief yet today.</b><p class="muted">${day?"Press the button and PaperMint picks the four stories that matter most for everyday money, and explains each one: what's going on, what it means and why you should care.":"The Brief appears after the first news collection."}</p></div></section>`; return h; }
   const items=day.items||[];
   h += `
     <div class="stories">${(b.stories||[]).map((x,k)=>{ const it=items[(+x.i||0)-1]||{}; return `<article class="story">
