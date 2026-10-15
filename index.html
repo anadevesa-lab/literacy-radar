@@ -2147,6 +2147,8 @@ function heroFrame(o){
     "Content studio":["Your work","Open your library","Everything you've made, in one place.","data-golib"],
     "Library":["Make more","Back to the Studio","From today's news to a post.","data-gostudio"]};
   const nx=o.next||NEXT[o.label];
+  // the grey card lettering: one line per page, Markets has its own
+  const LETTER={"PaperMint":["Your Daily","update"]}, lt=o.letter||LETTER[o.label]||["Daily Finance","insights"];
   return `<section class="pmh" aria-label="${esc(o.label)}"><div class="pmh-frame"><div class="pmh-grid">
     <div class="pmh-c pmh-dark" style="--j:0">
       <div class="pmh-copy"><span class="pmh-k">${esc(o.label)}</span>
@@ -2157,8 +2159,8 @@ function heroFrame(o){
       <span class="pmh-note" aria-hidden="true">Educational, never advice.</span>
     </div>
     ${nx?`<button class="pmh-c pmh-mint" type="button" style="--j:1" ${nx[3]}><span class="pmh-k">${esc(nx[0])}</span><span><span class="t">${esc(nx[1])}</span><br><span class="sub">${esc(nx[2])}</span></span><span class="arr" aria-hidden="true">↗</span></button>`:""}
-    <div class="pmh-c pmh-grey" style="--j:2" aria-label="Daily Finance insights">
-      <div class="t" aria-hidden="true"><span class="l1"><span>Daily Finance</span></span><span class="l2"><em>insights.</em></span></div></div>
+    <div class="pmh-c pmh-grey" style="--j:2" aria-label="${esc(lt[0]+" "+lt[1])}">
+      <div class="t" aria-hidden="true"><span class="l1"><span>${esc(lt[0])}</span></span><span class="l2"><em>${esc(lt[1])}.</em></span></div></div>
   </div></div></section>`;
 }
 /* the fan leans gently towards the pointer (fine pointers only, never with reduced motion) */
