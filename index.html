@@ -1477,6 +1477,45 @@ main.play .pmh-copy>p,main.play .pmh .acts{animation:mfade .9s var(--ease) both;
 .dp-card:hover .dp-go{transform:rotate(45deg)!important;background:#FFFFFF!important}
 .dp-card[style*="#0D0E0E"] .dp-go{background:var(--mint2)!important;border-color:var(--mint2)}
 .dp-tt{color:#0D0E0E} .dp-tx{color:#5D6366}
+/* ===================== Glass layer =====================
+   Frosted cards over a soft mint/grey glow, so the blur has something to show. Black stays black; mint and grey become translucent. */
+body::before{content:"";position:fixed;inset:-12vmax;z-index:-1;pointer-events:none;
+  background:radial-gradient(40vmax 30vmax at 10% 14%,rgba(141,230,216,.5),transparent 70%),
+    radial-gradient(36vmax 30vmax at 92% 38%,rgba(180,187,192,.6),transparent 70%),
+    radial-gradient(34vmax 26vmax at 28% 86%,rgba(141,230,216,.30),transparent 70%),
+    radial-gradient(30vmax 24vmax at 80% 96%,rgba(205,209,212,.5),transparent 70%),#F7F8F8}
+html,#preload{background:#F7F8F8!important} body{background:transparent!important}
+#main > section.cy:nth-of-type(even){background:transparent!important;box-shadow:none!important}
+:root{--gl-w:rgba(255,255,255,.58);--gl-g:rgba(226,229,231,.55);--gl-m:rgba(141,230,216,.84);--gl-bd:1px solid rgba(255,255,255,.75);
+  --gl-sh:inset 0 1px 0 rgba(255,255,255,.85),0 14px 34px -18px rgba(13,14,14,.22);--gl-f:blur(18px) saturate(1.5)}
+header.top,body.solid header.top{background:rgba(255,255,255,.8)!important;-webkit-backdrop-filter:var(--gl-f);backdrop-filter:var(--gl-f);border-bottom:1px solid rgba(255,255,255,.7)!important}
+.panel,.story,.sigs,.mdet,.radar,.inds,.acls,.idea,.step,.reply,.ncard,.chip,.out,.answer,.aud div,.aipanel,.panel .panel,.panel .ncard,.panel .idea,.panel .step,.panel .reply,.panel .acls,.panel .out,.panel .answer,.panel .aud div,
+.field textarea,.field select,.field input,.btn:not(.primary):not(.cta){background:var(--gl-w)!important;-webkit-backdrop-filter:var(--gl-f);backdrop-filter:var(--gl-f);border:var(--gl-bd)!important;box-shadow:var(--gl-sh)!important}
+.panel .panel,.panel .ncard,.panel .idea,.panel .step,.panel .reply,.panel .acls,.panel .out,.panel .answer,.panel .aud div{background:rgba(255,255,255,.66)!important}
+.ncard{transition:transform .5s var(--ease),background .3s!important} .ncard:hover{background:rgba(255,255,255,.86)!important;transform:translateY(-3px)}
+.chip.on{background:#0D0E0E!important;color:#FFFFFF!important;border-color:#0D0E0E!important}
+/* grey and mint cards: translucent tints */
+.pillgrid .ib{background:var(--gl-g)!important;-webkit-backdrop-filter:var(--gl-f);backdrop-filter:var(--gl-f);box-shadow:var(--gl-sh)}
+.pillgrid .ib:hover{background:rgba(220,223,225,.72)!important}
+.pillgrid .ib.big,.pillgrid .ib.big:hover{background:#0D0E0E!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 18px 40px -20px rgba(13,14,14,.5)}
+.pmh-grey{background:var(--gl-g)!important;-webkit-backdrop-filter:var(--gl-f);backdrop-filter:var(--gl-f);box-shadow:var(--gl-sh)!important}
+.pmh-dark{box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 24px 50px -28px rgba(13,14,14,.6)!important}
+.segc .sc,.pmh-mint{--bg:var(--gl-m)!important} .segc .sc:hover,.pmh-mint:hover{--bg:rgba(127,220,205,.8)!important}
+.segc .sc.on,.segc .sc.on:hover{--bg:#0D0E0E!important}
+.segc .sc::before,.pmh-mint::before,.dp-big::before{-webkit-backdrop-filter:var(--gl-f);backdrop-filter:var(--gl-f)}
+.dp-card[style*="#8DE6D8"]{--dbg:var(--gl-m)!important} .dp-card[style*="#E6E8EA"]{--dbg:var(--gl-g)!important}
+/* Today's stories: black title, topic filter as one row of glass pills */
+.newslist h2,.ncard .tt{color:#0D0E0E!important} .newslist h2 em{color:#5D6366!important}
+.topics{display:flex;flex-wrap:wrap;gap:8px}
+.tpc{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 6px 0 18px;border-radius:999px;border:var(--gl-bd);background:var(--gl-w);-webkit-backdrop-filter:var(--gl-f);backdrop-filter:var(--gl-f);box-shadow:var(--gl-sh);
+  font:600 var(--t-sm)/1 var(--f-body);color:#0D0E0E;cursor:pointer;transition:background .3s,color .3s,transform .4s var(--ease)}
+.tpc b{display:grid;place-items:center;min-width:32px;height:32px;padding:0 8px;border-radius:999px;background:rgba(13,14,14,.07);font-size:13px;font-weight:700;font-variant-numeric:tabular-nums}
+.tpc:hover{background:rgba(255,255,255,.9);transform:translateY(-2px)}
+.tpc.on,.tpc.on:hover{background:#0D0E0E;color:#FFFFFF;border-color:#0D0E0E;transform:none} .tpc.on b{background:var(--mint2);color:#0D0E0E}
+.tpc:focus-visible{outline:3px solid #0D0E0E;outline-offset:3px}
+@media (max-width:700px){.topics{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding:4px 2px 8px;scroll-snap-type:x proximity} .topics::-webkit-scrollbar{display:none} .tpc{flex:none;scroll-snap-align:start}}
+@media (prefers-reduced-motion:reduce){.tpc,.ncard{transition:none!important} .tpc:hover,.ncard:hover{transform:none}}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){:root{--gl-w:rgba(255,255,255,.92);--gl-g:#E6E8EA;--gl-m:#8DE6D8}}
 </style>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -2019,7 +2058,7 @@ function vNews(pick=true){
       <span class="muted" style="font-size:.86rem">${items.length} stories · ${srcs.length} sources · updated ${esc(t)}</span></div>
       <div class="row">${srcs.length>1?`<label class="field"><select id="nsrc" aria-label="Source"><option value="">All sources</option>${srcs.map(x=>`<option value="${esc(x)}" ${st.src===x?"selected":""}>${esc(srcEN(x))}</option>`).join("")}</select></label>`:""}
       ${S.news.length>1?`<label class="field"><select id="nday" aria-label="Day">${S.news.slice(0,14).map(n=>`<option value="${esc(n.id)}" ${n.id===st.newsDay?"selected":""}>${esc(new Date(n.date+"T12:00:00").toLocaleDateString("en-GB",{weekday:"short",day:"2-digit",month:"short"}))}</option>`).join("")}</select></label>`:""}</div></div>
-    ${cats.length>1?`<div class="pulse">${cats.map(([c,n])=>`<button type="button" class="pbar ${st.cat===c?"on":""}" data-cat="${st.cat===c?"":esc(c)}"><span class="row"><span>${esc(catEN(c))}</span><span class="mono muted">${n}</span></span><i style="width:${Math.round(n/maxC*100)}%"></i></button>`).join("")}</div>`:""}
+    ${cats.length>1?`<div class="topics" role="group" aria-label="Filter by topic"><button type="button" class="tpc ${!st.cat?"on":""}" data-cat="" aria-pressed="${!st.cat}"><span>All topics</span><b>${items.length}</b></button>${cats.map(([c,n])=>`<button type="button" class="tpc ${st.cat===c?"on":""}" data-cat="${st.cat===c?"":esc(c)}" aria-pressed="${st.cat===c}"><span>${esc(catEN(c))}</span><b>${n}</b></button>`).join("")}</div>`:""}
     <div class="ncards">${shown.slice(0,lim).map(it=>`<${it.url?`a href="${esc(it.url)}" target="_blank" rel="noopener"`:"div"} class="ncard read" title="${esc(it.summary||"")}">
       ${srcTile(it.source)}<div style="min-width:0;padding-right:14px"><div class="meta"><b>${esc(srcEN(it.source))}</b>${it.published?`<span>· ${esc(it.published)}</span>`:""}${it.category?`<span>· ${esc(catEN(it.category))}</span>`:""}</div>
       <div class="tt">${esc(it.title)}</div>${it.summary?`<p class="sum">${esc(it.summary)}</p>`:""}</div>
@@ -2031,7 +2070,7 @@ function vNews(pick=true){
       <span class="muted" style="font-size:.86rem">${items.length} stories · ${srcs.length} sources · updated ${esc(t)}</span></div>
       <div class="row">${srcs.length>1?`<label class="field"><select id="nsrc" aria-label="Source"><option value="">All sources</option>${srcs.map(x=>`<option value="${esc(x)}" ${st.src===x?"selected":""}>${esc(srcEN(x))}</option>`).join("")}</select></label>`:""}
       ${S.news.length>1?`<label class="field"><select id="nday" aria-label="Day">${S.news.slice(0,14).map(n=>`<option value="${esc(n.id)}" ${n.id===st.newsDay?"selected":""}>${esc(new Date(n.date+"T12:00:00").toLocaleDateString("en-GB",{weekday:"short",day:"2-digit",month:"short"}))}</option>`).join("")}</select></label>`:""}</div></div>
-    ${cats.length>1?`<div class="pulse">${cats.map(([c,n])=>`<button type="button" class="pbar ${st.cat===c?"on":""}" data-cat="${st.cat===c?"":esc(c)}"><span class="row"><span>${esc(catEN(c))}</span><span class="mono muted">${n}</span></span><i style="width:${Math.round(n/maxC*100)}%"></i></button>`).join("")}</div>`:""}
+    ${cats.length>1?`<div class="topics" role="group" aria-label="Filter by topic"><button type="button" class="tpc ${!st.cat?"on":""}" data-cat="" aria-pressed="${!st.cat}"><span>All topics</span><b>${items.length}</b></button>${cats.map(([c,n])=>`<button type="button" class="tpc ${st.cat===c?"on":""}" data-cat="${st.cat===c?"":esc(c)}" aria-pressed="${st.cat===c}"><span>${esc(catEN(c))}</span><b>${n}</b></button>`).join("")}</div>`:""}
     <div class="ncards">${shown.slice(0,lim).map(it=>`<div class="ncard ${st.picked.has(it.key)?"on":""}" data-pick="${esc(it.key)}" role="checkbox" aria-checked="${st.picked.has(it.key)}" tabindex="0" title="${esc(it.summary||"")}">
       ${srcTile(it.source)}<div style="min-width:0;padding-right:14px"><div class="meta"><b>${esc(srcEN(it.source))}</b>${it.published?`<span>· ${esc(it.published)}</span>`:""}${it.category?`<span>· ${esc(catEN(it.category))}</span>`:""}</div>
       <div class="tt">${esc(it.title)}</div></div>
