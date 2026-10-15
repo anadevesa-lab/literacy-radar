@@ -28,7 +28,7 @@ share = f'''<link rel="canonical" href="{SITE}">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="PaperMint: Market insights, freshly minted.">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{{"@context":"https://schema.org","@type":"WebSite","name":"PaperMint","url":"{SITE}","description":"{DESC}","inLanguage":"en"}}</script>
+<script type="application/ld+json">{{"@context":"https://schema.org","@type":"WebSite","name":"PaperMint","url":"{SITE}","description":"{DESC}","inLanguage":"en","sameAs":["https://www.instagram.com/thepapermintnews/"]}}</script>
 '''
 html = f'''<!doctype html>
 <html lang="en">

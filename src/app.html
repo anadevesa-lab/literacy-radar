@@ -2869,7 +2869,7 @@ function render(){
   new MutationObserver(sync).observe(nav,{subtree:true,attributes:true,attributeFilter:["class"]}); sync();
 })();
 /* PaperMint's social accounts: paste the profile links here once they exist; until then the footer buttons say "coming soon" */
-const SOCIAL={ linkedin:"", instagram:"" };
+const SOCIAL={ linkedin:"", instagram:"https://www.instagram.com/thepapermintnews/" };
 document.querySelectorAll("[data-social]").forEach(a=>{ const u=SOCIAL[a.dataset.social];
   if(u) a.href=u; else { a.removeAttribute("target"); a.title="Coming soon"; a.onclick=e=>{ e.preventDefault(); toast("PaperMint on "+a.querySelector("span").textContent+": coming soon"); }; } });
 

@@ -18,7 +18,7 @@
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="PaperMint: Market insights, freshly minted.">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"PaperMint","url":"https://anadevesa-lab.github.io/literacy-radar/","description":"PaperMint, finance news freshly minted: financial news, official indicators and a financial-literacy content studio.","inLanguage":"en"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"PaperMint","url":"https://anadevesa-lab.github.io/literacy-radar/","description":"PaperMint, finance news freshly minted: financial news, official indicators and a financial-literacy content studio.","inLanguage":"en","sameAs":["https://www.instagram.com/thepapermintnews/"]}</script>
 <link rel="preload" as="image" href="assets/news-hero.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -3085,7 +3085,7 @@ function render(){
   new MutationObserver(sync).observe(nav,{subtree:true,attributes:true,attributeFilter:["class"]}); sync();
 })();
 /* PaperMint's social accounts: paste the profile links here once they exist; until then the footer buttons say "coming soon" */
-const SOCIAL={ linkedin:"", instagram:"" };
+const SOCIAL={ linkedin:"", instagram:"https://www.instagram.com/thepapermintnews/" };
 document.querySelectorAll("[data-social]").forEach(a=>{ const u=SOCIAL[a.dataset.social];
   if(u) a.href=u; else { a.removeAttribute("target"); a.title="Coming soon"; a.onclick=e=>{ e.preventDefault(); toast("PaperMint on "+a.querySelector("span").textContent+": coming soon"); }; } });
 
