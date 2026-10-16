@@ -1537,8 +1537,8 @@ header.top,body.solid header.top{background:#FFFFFF!important;-webkit-backdrop-f
 
 /* magnifying glass over the big lettering (mouse only) */
 .mglass{position:absolute;z-index:30;width:var(--L);height:var(--L);border-radius:50%;overflow:hidden;pointer-events:none;
-  border:2px solid rgba(141,230,216,.9);box-shadow:0 18px 40px -14px rgba(0,30,30,.45),inset 0 0 0 1px rgba(255,255,255,.35);
-  opacity:0;transform:scale(.6);transition:opacity .22s var(--ease),transform .28s var(--ease)}
+  box-shadow:0 22px 48px -16px rgba(0,30,30,.42),0 2px 6px rgba(0,30,30,.12),inset 0 0 0 1px rgba(255,255,255,.18);
+  opacity:0;transform:scale(.5);transition:opacity .35s var(--ease),transform .45s var(--ease);will-change:left,top}
 .mglass.on{opacity:1;transform:none}
 .mglass>.mgc{position:absolute;margin:0!important;max-width:none!important;pointer-events:none}
 .mglass *,.mglass{animation:none!important}
@@ -3660,13 +3660,17 @@ initStore();
     else { lens.style.backgroundColor=col; lens.style.backgroundImage=b.backgroundImage; }
     clone=t.cloneNode(true); clone.removeAttribute("id"); clone.querySelectorAll("[id]").forEach(e=>e.removeAttribute("id")); clone.classList.add("mgc");
     const r=t.getBoundingClientRect(); clone.style.width=r.width+"px"; lens.appendChild(clone); P.appendChild(lens); cur=t; requestAnimationFrame(()=>lens&&lens.classList.add("on")); }
-  function place(){ raf=0; if(!lens||!ev) return; const P=cur.parentElement, pr=P.getBoundingClientRect(), tr=cur.getBoundingClientRect();
-    const cx=ev.clientX-pr.left-P.clientLeft, cy=ev.clientY-pr.top-P.clientTop, tx=tr.left-pr.left-P.clientLeft, ty=tr.top-pr.top-P.clientTop;
+  /* the lens trails the pointer with an easing (lerp each frame), and the zoom grows in, so it glides rather than jumps */
+  let lx=0, ly=0, z=1;
+  function place(){ raf=0; if(!lens||!ev||!cur) return; const P=cur.parentElement, pr=P.getBoundingClientRect(), tr=cur.getBoundingClientRect();
+    const k=.16; lx+=(ev.clientX-lx)*k; ly+=(ev.clientY-ly)*k; z+=(Z-z)*.12;
+    const cx=lx-pr.left-P.clientLeft, cy=ly-pr.top-P.clientTop, tx=tr.left-pr.left-P.clientLeft, ty=tr.top-pr.top-P.clientTop;
     lens.style.left=(cx-L/2)+"px"; lens.style.top=(cy-L/2)+"px";
     clone.style.left=(tx-(cx-L/2))+"px"; clone.style.top=(ty-(cy-L/2))+"px";
-    clone.style.transformOrigin=(cx-tx)+"px "+(cy-ty)+"px"; clone.style.transform="scale("+Z+")"; }
+    clone.style.transformOrigin=(cx-tx)+"px "+(cy-ty)+"px"; clone.style.transform="scale("+z.toFixed(3)+")";
+    if(Math.abs(ev.clientX-lx)>.3||Math.abs(ev.clientY-ly)>.3||Math.abs(Z-z)>.005) raf=requestAnimationFrame(place); }
   document.addEventListener("mousemove",e=>{ const t=e.target.closest?.(SEL);
-    if(t && t.textContent.trim() && !t.closest(".mglass")){ if(t!==cur) open(t); ev=e; if(!raf) raf=requestAnimationFrame(place); } else if(cur) close(); },{passive:true});
+    if(t && t.textContent.trim() && !t.closest(".mglass")){ if(t!==cur){ const had=!!lens; open(t); if(!had){ lx=e.clientX; ly=e.clientY; } z=1.15; } ev=e; if(!raf) raf=requestAnimationFrame(place); } else if(cur) close(); },{passive:true});
   document.addEventListener("scroll",()=>{ if(!lens||!ev) return; const el=document.elementFromPoint(ev.clientX,ev.clientY), t=el?.closest?.(SEL);
     if(t!==cur) close(); else if(!raf) raf=requestAnimationFrame(place); },{passive:true}); addEventListener("blur",close); document.addEventListener("mouseleave",close);
 })();
