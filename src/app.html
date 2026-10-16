@@ -1494,6 +1494,18 @@ header.top,body.solid header.top{background:#FFFFFF!important;-webkit-backdrop-f
 @media (max-width:700px){.topics{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding:4px 2px 8px;scroll-snap-type:x proximity} .topics::-webkit-scrollbar{display:none} .tpc{flex:none;scroll-snap-align:start}}
 @media (prefers-reduced-motion:reduce){.tpc,.ncard{transition:none!important} .tpc:hover,.ncard:hover{transform:none}}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){:root{--gl-w:rgba(255,255,255,.92);--gl-g:#E6E8EA;--gl-m:#8DE6D8}}
+
+/* fixes: mint highlighter covers descenders (g, y, p) so no letter looks cut; the lamp light is a very soft mint;
+   phones: no fixed mint glow behind the page (on Android it showed as a mint smudge on the left while scrolling) */
+.pmh-dark h1{line-height:1.36!important}
+.pmh-dark h1>span{padding:.03em .08em .17em!important}
+.pmh-dark h1 .w{padding-bottom:.3em!important;margin-bottom:-.3em!important}
+.pmh-dark::before{background:radial-gradient(45% 60% at 72% 45%,rgba(205,245,236,.08),transparent 70%)!important}
+.pmh-dark::after{background:radial-gradient(38% 55% at var(--lx) var(--ly),rgba(205,245,236,.085),transparent 70%)!important}
+@media (max-width:760px),(pointer:coarse){
+  body::before{position:absolute!important;inset:0!important;height:100%;background:radial-gradient(60vmax 40vmax at 100% 30%,rgba(180,187,192,.35),transparent 70%),#F5F8F7!important}
+  body{position:relative}
+}
 </style>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -2069,14 +2081,14 @@ function heroFrame(o){
         <div class="acts">${o.cta?`<button class="btn primary cta" type="button" ${o.cta.attrs}>${esc(o.cta.text)}</button>`:""}${o.extra||""}</div></div>
       <div class="pmh-lamp" aria-hidden="true"><svg viewBox="0 0 400 720" preserveAspectRatio="xMidYMin meet">
         <defs><linearGradient id="lpShade" x1="0" x2="1"><stop offset="0" stop-color="#0E0F10"/><stop offset=".55" stop-color="#2A2E31"/><stop offset=".72" stop-color="#3B4044"/><stop offset="1" stop-color="#15171A"/></linearGradient>
-          <radialGradient id="lpRim" cx=".5" cy=".5" r=".55"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".7" stop-color="#F2F6F5"/><stop offset="1" stop-color="#C9D3D1"/></radialGradient>
-          <linearGradient id="lpBeam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".30"/><stop offset=".55" stop-color="#FFFFFF" stop-opacity=".08"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>
+          <radialGradient id="lpRim" cx=".5" cy=".5" r=".55"><stop offset="0" stop-color="#F3FDFA"/><stop offset=".7" stop-color="#E2F6F1"/><stop offset="1" stop-color="#BFD8D2"/></radialGradient>
+          <linearGradient id="lpBeam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DDF7F1" stop-opacity=".30"/><stop offset=".55" stop-color="#D3F4EC" stop-opacity=".08"/><stop offset="1" stop-color="#D3F4EC" stop-opacity="0"/></linearGradient>
           <filter id="lpBlur" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="14"/></filter>
           <filter id="lpGlow" x="-50%" y="-200%" width="200%" height="500%"><feGaussianBlur stdDeviation="9"/></filter></defs>
         <g class="lp-swing">
           <line x1="200" y1="-40" x2="200" y2="318" stroke="#3A3E42" stroke-width="2.5"/>
           <g class="lp-light"><path d="M66 470 L334 470 L470 760 L-70 760 Z" fill="url(#lpBeam)" filter="url(#lpBlur)"/>
-            <ellipse cx="200" cy="472" rx="150" ry="22" fill="#FFFFFF" opacity=".55" filter="url(#lpGlow)"/></g>
+            <ellipse cx="200" cy="472" rx="150" ry="22" fill="#E3F9F4" opacity=".55" filter="url(#lpGlow)"/></g>
           <path d="M184 316 Q184 306 194 306 L206 306 Q216 306 216 316 L218 352 L182 352 Z" fill="#1C1F22"/>
           <path d="M180 350 L220 350 L338 468 Q200 486 62 468 Z" fill="url(#lpShade)"/>
           <path d="M214 352 L246 352 L334 466 L300 470 Z" fill="#FFFFFF" opacity=".05"/>
