@@ -1518,6 +1518,7 @@ header.top,body.solid header.top{background:#FFFFFF!important;-webkit-backdrop-f
 .mglass>.mgc{position:absolute;margin:0!important;max-width:none!important;pointer-events:none}
 .mglass *,.mglass{animation:none!important}
 .mglass>.mgc *{transition:none!important}
+html.mg-hold,html.mg-hold *{-webkit-user-select:none!important;user-select:none!important;-webkit-touch-callout:none!important}
 </style>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -3429,34 +3430,51 @@ render();
 (async()=>{ try{ sample=await claude.use("sample"); }catch{} })();
 initStore();
 
-/* magnifying glass: over the big lettering a round lens follows the mouse and shows the letters 1.6x larger.
-   Fine pointers only, never with reduced motion. The lens holds a copy of the heading in the same place in the page,
+/* magnifying glass: a small round lens follows the mouse over text and numbers and shows them 1.5x larger.
+   On phones: press and hold on text, the lens shows above the finger. Never with reduced motion. The lens holds a copy of the heading in the same place in the page,
    so it keeps every style; it is aria-hidden and inert. */
-(()=>{ if(!matchMedia("(hover:hover) and (pointer:fine)").matches || matchMedia("(prefers-reduced-motion:reduce)").matches) return;
-  const SEL="main h1, main h2, .pmh-grey .t, .pmh-mint .t, .mega, .mlead, .bline, .brief .story > h3, .fs-line, .fcta h2";
-  const L=120, Z=1.6; let cur=null, host=null, lens=null, clone=null, raf=0, ev=null;
+(()=>{ if(matchMedia("(prefers-reduced-motion:reduce)").matches) return; const FINE=matchMedia("(hover:hover) and (pointer:fine)").matches;
+  const SEL="main h1, main h2, main h3, main h4, main p, main li, main b, main strong, main em, main dd, main dt, main td, main th, main blockquote, main .t, main .num, main .tt, main .sum, main .q, main .lbl, .mega, .mlead, .bline, .fs-line, footer h2, footer p, footer li";
+  const SKIP="input,textarea,select,option,[contenteditable],.ticker,header,nav,.mglass,svg,canvas,.subf .row";
+  const L=88, Z=1.5; let OY=0; let cur=null, host=null, lens=null, clone=null, raf=0, ev=null;
   /* the lens lives in the nearest ancestor that does not paint its text through background-clip:text (the lit card copy does), or the copy shows up as ghost letters */
-  const hostOf=t=>{ let h=t.parentElement; while(h&&h.parentElement&&h!==document.body){ const c=getComputedStyle(h); if(c.backgroundClip!=="text"&&c.webkitBackgroundClip!=="text") break; h=h.parentElement; } return h; };
+  const hostOf=t=>{ let h=t.parentElement; while(h&&h!==document.body){ const c=getComputedStyle(h); if(c.backgroundClip!=="text"&&c.webkitBackgroundClip!=="text"&&c.position!=="static") return h; h=h.parentElement; }
+    if(getComputedStyle(document.body).position==="static") document.body.style.position="relative"; return document.body; };
   const bgOf=el=>{ for(let e=el;e&&e!==document.documentElement;e=e.parentElement){ const c=getComputedStyle(e); if(c.backgroundClip==="text"||c.webkitBackgroundClip==="text") continue; if(c.backgroundImage!=="none"||(c.backgroundColor&&c.backgroundColor!=="rgba(0, 0, 0, 0)"&&c.backgroundColor!=="transparent")) return c; } return getComputedStyle(document.body); };
   function close(){ if(!lens) return; const l=lens; l.classList.remove("on"); setTimeout(()=>l.remove(),260); lens=clone=cur=host=null; }
-  function open(t){ close(); const P=hostOf(t); if(!P) return; host=P; if(getComputedStyle(P).position==="static") P.style.position="relative";
+  function open(t){ close(); const P=hostOf(t); if(!P) return; host=P;
     lens=document.createElement("div"); lens.className="mglass"; lens.setAttribute("aria-hidden","true"); lens.inert=true; lens.style.setProperty("--L",L+"px");
-    const b=bgOf(P), col=b.backgroundColor, a=(col.match(/rgba\([^)]*,\s*([\d.]+)\)/)||[])[1];
+    const b=bgOf(t.parentElement), col=b.backgroundColor, a=(col.match(/rgba\([^)]*,\s*([\d.]+)\)/)||[])[1];
     if(a!==undefined&&+a<1){ lens.style.backgroundColor="#F2F5F5"; lens.style.backgroundImage=(b.backgroundImage!=="none"?b.backgroundImage+",":"")+"linear-gradient("+col+","+col+")"; }
     else { lens.style.backgroundColor=col; lens.style.backgroundImage=b.backgroundImage; }
     clone=t.cloneNode(true); clone.removeAttribute("id"); clone.querySelectorAll("[id]").forEach(e=>e.removeAttribute("id")); clone.classList.add("mgc");
+    /* the copy sits in a different parent, so give it the original's inherited look (font, colour, spacing) */
+    const cs=getComputedStyle(t); ["fontFamily","fontSize","fontWeight","fontStyle","lineHeight","letterSpacing","wordSpacing","color","webkitTextFillColor","textTransform","textAlign","whiteSpace","fontVariantNumeric","fontFeatureSettings","textWrap"].forEach(k=>{ try{ clone.style[k]=cs[k]; }catch{} });
+    const clear=v=>!v||v==="transparent"||/rgba\(0, 0, 0, 0\)/.test(v), clipT=cs.webkitBackgroundClip==="text";
+    if(!clipT&&clear(cs.webkitTextFillColor)){ clone.style.webkitTextFillColor=clear(cs.color)?"#FFFFFF":cs.color; if(clear(cs.color)) clone.style.color="#FFFFFF"; }
     const r=t.getBoundingClientRect(); clone.style.width=r.width+"px"; lens.appendChild(clone); P.appendChild(lens); cur=t; requestAnimationFrame(()=>lens&&lens.classList.add("on")); }
   /* the lens trails the pointer with an easing (lerp each frame), and the zoom grows in, so it glides rather than jumps */
   let lx=0, ly=0, z=1;
   function place(){ raf=0; if(!lens||!ev||!cur) return; const P=host, pr=P.getBoundingClientRect(), tr=cur.getBoundingClientRect();
     const k=.16; lx+=(ev.clientX-lx)*k; ly+=(ev.clientY-ly)*k; z+=(Z-z)*.12;
-    const cx=lx-pr.left-P.clientLeft, cy=ly-pr.top-P.clientTop, tx=tr.left-pr.left-P.clientLeft, ty=tr.top-pr.top-P.clientTop;
-    lens.style.left=(cx-L/2)+"px"; lens.style.top=(cy-L/2)+"px";
-    clone.style.left=(tx-(cx-L/2))+"px"; clone.style.top=(ty-(cy-L/2))+"px";
-    clone.style.transformOrigin=(cx-tx)+"px "+(cy-ty)+"px"; clone.style.transform="scale("+z.toFixed(3)+")";
+    /* (sx,sy): the point being magnified; the lens is drawn OY px above it (on touch, so the finger does not hide it) */
+    const sx=lx-pr.left-P.clientLeft, sy=ly-pr.top-P.clientTop, tx=tr.left-pr.left-P.clientLeft, ty=tr.top-pr.top-P.clientTop;
+    lens.style.left=(sx-L/2)+"px"; lens.style.top=(sy+OY-L/2)+"px";
+    clone.style.left=(tx-sx+L/2)+"px"; clone.style.top=(ty-sy+L/2)+"px";
+    clone.style.transformOrigin=(sx-tx)+"px "+(sy-ty)+"px"; clone.style.transform="scale("+z.toFixed(3)+")";
     if(Math.abs(ev.clientX-lx)>.3||Math.abs(ev.clientY-ly)>.3||Math.abs(Z-z)>.005) raf=requestAnimationFrame(place); }
-  document.addEventListener("mousemove",e=>{ const t=e.target.closest?.(SEL);
-    if(t && t.textContent.trim() && !t.closest(".mglass")){ if(t!==cur){ const had=!!lens; open(t); if(!had){ lx=e.clientX; ly=e.clientY; } z=1.15; } ev=e; if(!raf) raf=requestAnimationFrame(place); } else if(cur) close(); },{passive:true});
+  if(FINE) document.addEventListener("mousemove",e=>{ const t=e.target.closest?.(SEL);
+    if(t && t.textContent.trim() && !t.closest(SKIP)){ if(t!==cur){ const had=!!lens; open(t); if(!had){ lx=e.clientX; ly=e.clientY; } z=1.15; } ev=e; if(!raf) raf=requestAnimationFrame(place); } else if(cur) close(); },{passive:true});
+  /* touch: press and hold on text (~0.3 s) and the lens appears above the finger and follows it; lift the finger to close */
+  let hold=0, touching=false;
+  const pt=e=>({clientX:e.touches[0].clientX, clientY:e.touches[0].clientY});
+  document.addEventListener("touchstart",e=>{ if(e.touches.length!==1) return; const t=e.target.closest?.(SEL); if(!t||!t.textContent.trim()||t.closest(SKIP)) return;
+    const p0=pt(e); clearTimeout(hold); hold=setTimeout(()=>{ touching=true; OY=-70; document.documentElement.classList.add("mg-hold"); open(t); lx=p0.clientX; ly=p0.clientY; z=1.15; ev=p0; place(); },280); },{passive:true});
+  document.addEventListener("touchmove",e=>{ if(!touching){ clearTimeout(hold); return; } e.preventDefault(); ev=pt(e);
+    const el=document.elementFromPoint(ev.clientX,ev.clientY), t=el?.closest?.(SEL); if(t&&t!==cur&&!t.closest(SKIP)){ open(t); } if(!raf) raf=requestAnimationFrame(place); },{passive:false});
+  const endT=e=>{ clearTimeout(hold); if(touching){ touching=false; if(e.cancelable) e.preventDefault(); document.documentElement.classList.remove("mg-hold"); close(); } };
+  document.addEventListener("touchend",endT,{passive:false}); document.addEventListener("touchcancel",endT);
+  document.addEventListener("contextmenu",e=>{ if(touching) e.preventDefault(); });
   document.addEventListener("scroll",()=>{ if(!lens||!ev) return; const el=document.elementFromPoint(ev.clientX,ev.clientY), t=el?.closest?.(SEL);
     if(t!==cur) close(); else if(!raf) raf=requestAnimationFrame(place); },{passive:true}); addEventListener("blur",close); document.addEventListener("mouseleave",close);
 })();
