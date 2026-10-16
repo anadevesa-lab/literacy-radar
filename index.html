@@ -3645,15 +3645,17 @@ render();
 (async()=>{ try{ sample=await claude.use("sample"); }catch{} })();
 initStore();
 
-/* magnifying glass: over the big lettering a round lens follows the mouse and shows the letters 1.9x larger.
+/* magnifying glass: over the big lettering a round lens follows the mouse and shows the letters 1.6x larger.
    Fine pointers only, never with reduced motion. The lens holds a copy of the heading in the same place in the page,
    so it keeps every style; it is aria-hidden and inert. */
 (()=>{ if(!matchMedia("(hover:hover) and (pointer:fine)").matches || matchMedia("(prefers-reduced-motion:reduce)").matches) return;
   const SEL="main h1, main h2, .pmh-grey .t, .pmh-mint .t, .mega, .mlead, .bline, .brief .story > h3, .fs-line, .fcta h2";
-  const L=170, Z=1.9; let cur=null, lens=null, clone=null, raf=0, ev=null;
+  const L=120, Z=1.6; let cur=null, host=null, lens=null, clone=null, raf=0, ev=null;
+  /* the lens lives in the nearest ancestor that does not paint its text through background-clip:text (the lit card copy does), or the copy shows up as ghost letters */
+  const hostOf=t=>{ let h=t.parentElement; while(h&&h.parentElement&&h!==document.body){ const c=getComputedStyle(h); if(c.backgroundClip!=="text"&&c.webkitBackgroundClip!=="text") break; h=h.parentElement; } return h; };
   const bgOf=el=>{ for(let e=el;e&&e!==document.documentElement;e=e.parentElement){ const c=getComputedStyle(e); if(c.backgroundClip==="text"||c.webkitBackgroundClip==="text") continue; if(c.backgroundImage!=="none"||(c.backgroundColor&&c.backgroundColor!=="rgba(0, 0, 0, 0)"&&c.backgroundColor!=="transparent")) return c; } return getComputedStyle(document.body); };
-  function close(){ if(!lens) return; const l=lens; l.classList.remove("on"); setTimeout(()=>l.remove(),260); lens=clone=cur=null; }
-  function open(t){ close(); const P=t.parentElement; if(!P) return; if(getComputedStyle(P).position==="static") P.style.position="relative";
+  function close(){ if(!lens) return; const l=lens; l.classList.remove("on"); setTimeout(()=>l.remove(),260); lens=clone=cur=host=null; }
+  function open(t){ close(); const P=hostOf(t); if(!P) return; host=P; if(getComputedStyle(P).position==="static") P.style.position="relative";
     lens=document.createElement("div"); lens.className="mglass"; lens.setAttribute("aria-hidden","true"); lens.inert=true; lens.style.setProperty("--L",L+"px");
     const b=bgOf(P), col=b.backgroundColor, a=(col.match(/rgba\([^)]*,\s*([\d.]+)\)/)||[])[1];
     if(a!==undefined&&+a<1){ lens.style.backgroundColor="#F2F5F5"; lens.style.backgroundImage=(b.backgroundImage!=="none"?b.backgroundImage+",":"")+"linear-gradient("+col+","+col+")"; }
@@ -3662,7 +3664,7 @@ initStore();
     const r=t.getBoundingClientRect(); clone.style.width=r.width+"px"; lens.appendChild(clone); P.appendChild(lens); cur=t; requestAnimationFrame(()=>lens&&lens.classList.add("on")); }
   /* the lens trails the pointer with an easing (lerp each frame), and the zoom grows in, so it glides rather than jumps */
   let lx=0, ly=0, z=1;
-  function place(){ raf=0; if(!lens||!ev||!cur) return; const P=cur.parentElement, pr=P.getBoundingClientRect(), tr=cur.getBoundingClientRect();
+  function place(){ raf=0; if(!lens||!ev||!cur) return; const P=host, pr=P.getBoundingClientRect(), tr=cur.getBoundingClientRect();
     const k=.16; lx+=(ev.clientX-lx)*k; ly+=(ev.clientY-ly)*k; z+=(Z-z)*.12;
     const cx=lx-pr.left-P.clientLeft, cy=ly-pr.top-P.clientTop, tx=tr.left-pr.left-P.clientLeft, ty=tr.top-pr.top-P.clientTop;
     lens.style.left=(cx-L/2)+"px"; lens.style.top=(cy-L/2)+"px";
