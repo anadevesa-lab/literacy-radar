@@ -1509,6 +1509,15 @@ header.top,body.solid header.top{background:#FFFFFF!important;-webkit-backdrop-f
 
 /* grey card lettering: sized to its longest line so it never runs out of the card */
 .pmh-grey .t{font-size:clamp(2rem,min(15.5cqi,calc(165cqi / var(--ch,10))),8.5rem)!important}
+
+/* magnifying glass over the big lettering (mouse only) */
+.mglass{position:absolute;z-index:30;width:var(--L);height:var(--L);border-radius:50%;overflow:hidden;pointer-events:none;
+  border:2px solid rgba(141,230,216,.9);box-shadow:0 18px 40px -14px rgba(0,30,30,.45),inset 0 0 0 1px rgba(255,255,255,.35);
+  opacity:0;transform:scale(.6);transition:opacity .22s var(--ease),transform .28s var(--ease)}
+.mglass.on{opacity:1;transform:none}
+.mglass>.mgc{position:absolute;margin:0!important;max-width:none!important;pointer-events:none}
+.mglass *,.mglass{animation:none!important}
+.mglass>.mgc *{transition:none!important}
 </style>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -3419,5 +3428,31 @@ async function downloadPptx(c, btn){
 render();
 (async()=>{ try{ sample=await claude.use("sample"); }catch{} })();
 initStore();
+
+/* magnifying glass: over the big lettering a round lens follows the mouse and shows the letters 1.9x larger.
+   Fine pointers only, never with reduced motion. The lens holds a copy of the heading in the same place in the page,
+   so it keeps every style; it is aria-hidden and inert. */
+(()=>{ if(!matchMedia("(hover:hover) and (pointer:fine)").matches || matchMedia("(prefers-reduced-motion:reduce)").matches) return;
+  const SEL="main h1, main h2, .pmh-grey .t, .pmh-mint .t, .mega, .mlead, .bline, .brief .story > h3, .fs-line, .fcta h2";
+  const L=170, Z=1.9; let cur=null, lens=null, clone=null, raf=0, ev=null;
+  const bgOf=el=>{ for(let e=el;e&&e!==document.documentElement;e=e.parentElement){ const c=getComputedStyle(e); if(c.backgroundClip==="text"||c.webkitBackgroundClip==="text") continue; if(c.backgroundImage!=="none"||(c.backgroundColor&&c.backgroundColor!=="rgba(0, 0, 0, 0)"&&c.backgroundColor!=="transparent")) return c; } return getComputedStyle(document.body); };
+  function close(){ if(!lens) return; const l=lens; l.classList.remove("on"); setTimeout(()=>l.remove(),260); lens=clone=cur=null; }
+  function open(t){ close(); const P=t.parentElement; if(!P) return; if(getComputedStyle(P).position==="static") P.style.position="relative";
+    lens=document.createElement("div"); lens.className="mglass"; lens.setAttribute("aria-hidden","true"); lens.inert=true; lens.style.setProperty("--L",L+"px");
+    const b=bgOf(P), col=b.backgroundColor, a=(col.match(/rgba\([^)]*,\s*([\d.]+)\)/)||[])[1];
+    if(a!==undefined&&+a<1){ lens.style.backgroundColor="#F2F5F5"; lens.style.backgroundImage=(b.backgroundImage!=="none"?b.backgroundImage+",":"")+"linear-gradient("+col+","+col+")"; }
+    else { lens.style.backgroundColor=col; lens.style.backgroundImage=b.backgroundImage; }
+    clone=t.cloneNode(true); clone.removeAttribute("id"); clone.querySelectorAll("[id]").forEach(e=>e.removeAttribute("id")); clone.classList.add("mgc");
+    const r=t.getBoundingClientRect(); clone.style.width=r.width+"px"; lens.appendChild(clone); P.appendChild(lens); cur=t; requestAnimationFrame(()=>lens&&lens.classList.add("on")); }
+  function place(){ raf=0; if(!lens||!ev) return; const P=cur.parentElement, pr=P.getBoundingClientRect(), tr=cur.getBoundingClientRect();
+    const cx=ev.clientX-pr.left-P.clientLeft, cy=ev.clientY-pr.top-P.clientTop, tx=tr.left-pr.left-P.clientLeft, ty=tr.top-pr.top-P.clientTop;
+    lens.style.left=(cx-L/2)+"px"; lens.style.top=(cy-L/2)+"px";
+    clone.style.left=(tx-(cx-L/2))+"px"; clone.style.top=(ty-(cy-L/2))+"px";
+    clone.style.transformOrigin=(cx-tx)+"px "+(cy-ty)+"px"; clone.style.transform="scale("+Z+")"; }
+  document.addEventListener("mousemove",e=>{ const t=e.target.closest?.(SEL);
+    if(t && t.textContent.trim() && !t.closest(".mglass")){ if(t!==cur) open(t); ev=e; if(!raf) raf=requestAnimationFrame(place); } else if(cur) close(); },{passive:true});
+  document.addEventListener("scroll",()=>{ if(!lens||!ev) return; const el=document.elementFromPoint(ev.clientX,ev.clientY), t=el?.closest?.(SEL);
+    if(t!==cur) close(); else if(!raf) raf=requestAnimationFrame(place); },{passive:true}); addEventListener("blur",close); document.addEventListener("mouseleave",close);
+})();
 })();
 </script>
