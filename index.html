@@ -1531,6 +1531,9 @@ header.top,body.solid header.top{background:#FFFFFF!important;-webkit-backdrop-f
   body::before{position:absolute!important;inset:0!important;height:100%;background:radial-gradient(60vmax 40vmax at 100% 30%,rgba(180,187,192,.35),transparent 70%),#F5F8F7!important}
   body{position:relative}
 }
+
+/* grey card lettering: sized to its longest line so it never runs out of the card */
+.pmh-grey .t{font-size:clamp(2rem,min(15.5cqi,calc(165cqi / var(--ch,10))),8.5rem)!important}
 </style>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -2313,7 +2316,7 @@ function heroFrame(o){
       <span class="pmh-note" aria-hidden="true">Educational, never advice.</span>
     </div>
     ${nx?`<button class="pmh-c pmh-mint" type="button" style="--j:1" aria-label="${esc(nx[0]+": "+nx[1])}" ${nx[3]}><span class="t">${esc(nx[1])}</span><span class="sub">${esc(nx[2])}</span><span class="arr" aria-hidden="true">↗</span></button>`:""}
-    <div class="pmh-c pmh-grey" style="--j:2" aria-label="${esc(lt[0]+" "+lt[1])}">
+    <div class="pmh-c pmh-grey" style="--j:2;--ch:${Math.max(lt[0].length,lt[1].length+1,6)}" aria-label="${esc(lt[0]+" "+lt[1])}">
       <div class="t" aria-hidden="true"><span class="l1"><span>${esc(lt[0])}</span></span><span class="l2"><em>${esc(lt[1])}.</em></span></div></div>
   </div></div></section>`;
 }
