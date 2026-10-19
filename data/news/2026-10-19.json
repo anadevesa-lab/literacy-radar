@@ -3,14 +3,6 @@
  "items": [
   {
    "source": "Bloomberg",
-   "category": "Bolsa",
-   "published": "18 Oct",
-   "title": "Election Rallies That Swept Latin America Face Reality Check",
-   "summary": "The searing financial-market rallies unleashed by elections across Latin America are beginning to show signs of cracks — sowing doubts among money managers over whether to keep pushing stocks and curr",
-   "url": "https://www.bloomberg.com/news/articles/2026-10-18/election-rallies-that-swept-latin-america-face-reality-check"
-  },
-  {
-   "source": "Bloomberg",
    "category": "Obrigações",
    "published": "19 Oct",
    "title": "UK Debt Is a Buy for Those Betting on a Play-It-Safe Budget",
@@ -760,6 +752,54 @@
    "title": "Federal Reserve Board announces termination of enforcement actions with Gardner Bancshares, Inc. and Small Business Bank",
    "summary": "Federal Reserve Board announces termination of enforcement actions with Gardner Bancshares, Inc. and Small Business Bank",
    "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261016a.htm"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Bolsa",
+   "published": "18 Oct",
+   "title": "Stocks Rebound From Chip Rout as Earnings Await: Markets Wrap",
+   "summary": "A rebound in US stock futures offered investors some respite from a chip-led rout, marking a positive start to a week in which major beneficiaries of the artificial-intelligence trade will be tested b",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-18/stock-market-today-dow-s-p-live-updates"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "19 Oct",
+   "title": "As France reels from violence, Macron points to security failings",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/as-france-reels-from-violence-macron-points-to-security-failings-4956666"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "19 Oct",
+   "title": "Serica Energy falls 4% as Triton delay cuts 2026 output outlook",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/serica-energy-falls-4-as-triton-restart-delay-trims-2026-output-outlook-4956671"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "19 Oct",
+   "title": "Why is Mowi stock surging today?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/why-is-mowi-stock-surging-today-93CH-4956655"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "19 Oct",
+   "title": "Indonesia stocks lower at close of trade; IDX Composite Index down 4.02%",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/indonesia-stocks-lower-at-close-of-trade-idx-composite-index-down-402-4956627"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "19 Oct",
+   "title": "Why is Nebius stock rallying today?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/why-is-nebius-stock-rallying-today-93CH-4956626"
   }
  ],
  "sources": [
@@ -780,5 +820,5 @@
  "editions": [
   "morning"
  ],
- "collectedAt": "2026-10-19T08:43:24.535Z"
+ "collectedAt": "2026-10-19T08:48:43.518Z"
 }
