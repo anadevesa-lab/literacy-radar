@@ -1,0 +1,8 @@
+# Keeps the GitHub Actions in .github/workflows up to date.
+# Dependabot opens a pull request when a new version is released.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
