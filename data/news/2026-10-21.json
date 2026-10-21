@@ -2,278 +2,6 @@
  "date": "2026-10-21",
  "items": [
   {
-   "source": "Bloomberg",
-   "category": "Bolsa",
-   "published": "21 Oct",
-   "title": "Oppenheimer’s Stoltzfus Sees ‘Broader Rally’ in Stocks to Year End",
-   "summary": "John Stoltzfus, chief investment strategist at Oppenheimer, says traders have been carrying the equity market for the last month or so and expects “improved breadth in the market as we go forward.” He",
-   "url": "https://www.bloomberg.com/news/videos/2026-10-21/oppenheimer-s-stoltzfus-sees-broader-rally-to-year-end-video"
-  },
-  {
-   "source": "Financial Times",
-   "category": "Mercados",
-   "published": "21 Oct",
-   "title": "Can Britain’s grid make the grade?",
-   "summary": "Green transition and rising demand call for massive investment — and smarter operation",
-   "url": "https://www.ft.com/content/7713a613-7b31-4e31-9aeb-0fb2bd03391e?syn-25a6b1a6=1"
-  },
-  {
-   "source": "Financial Times",
-   "category": "Mercados",
-   "published": "21 Oct",
-   "title": "The rise of index vigilantes",
-   "summary": "Not the regulators we want, or the regulators we need. But at least it’s something?",
-   "url": "https://www.ft.com/content/b3544087-2673-4e90-9192-342c6b1a6a03"
-  },
-  {
-   "source": "Financial Times",
-   "category": "Mercados",
-   "published": "21 Oct",
-   "title": "Iran war sparks heating crisis in US north-east as winter approaches",
-   "summary": "Record heating oil prices are forcing the region to rethink prior opposition to natural gas pipelines",
-   "url": "https://www.ft.com/content/162c6dd8-5501-46f4-8f7c-b456a4e29539?syn-25a6b1a6=1"
-  },
-  {
-   "source": "Financial Times",
-   "category": "Obrigações",
-   "published": "21 Oct",
-   "title": "France’s borrowing costs hit 5% for first time since 2002",
-   "summary": "Concerns over public finances and political stability have helped push up 10-year bond yields from 3.2% in late February",
-   "url": "https://www.ft.com/content/76f076e4-9db2-4971-8ac9-73d9f39e4876?syn-25a6b1a6=1"
-  },
-  {
-   "source": "Financial Times",
-   "category": "Poupança",
-   "published": "21 Oct",
-   "title": "UK’s biggest port operator valued at over £10bn in Australian fund purchase",
-   "summary": "Infrastructure giant IFM Investors buys majority stake in Associated British Ports from Canadian pension funds",
-   "url": "https://www.ft.com/content/21d3b4e1-941b-4ad8-8e41-f8fc1864e758?syn-25a6b1a6=1"
-  },
-  {
-   "source": "Financial Times",
-   "category": "Mercados",
-   "published": "21 Oct",
-   "title": "Are index providers overstepping the mark?",
-   "summary": "Action against Indonesia and Turkey is a venture into territory best left to local regulators and governments",
-   "url": "https://www.ft.com/content/0a892b95-0216-40d9-89a4-e1654b9a3fa2"
-  },
-  {
-   "source": "Financial Times",
-   "category": "Mercados",
-   "published": "21 Oct",
-   "title": "UK approves development of Jackdaw gasfield in North Sea",
-   "summary": "Ministers give go-ahead to project about 150 miles east of Aberdeen",
-   "url": "https://www.ft.com/content/9cfa52b2-77cb-4b53-ad74-badd53f24fc6?syn-25a6b1a6=1"
-  },
-  {
-   "source": "Financial Times",
-   "category": "Mercados",
-   "published": "21 Oct",
-   "title": "The Indian mega-refinery drawing Rubio’s interest",
-   "summary": "Trump’s top diplomat visits Mukesh Ambani as White House battles high fuel prices ahead of midterms",
-   "url": "https://www.ft.com/content/e316142e-c315-47d4-89c9-971bad5a6380?syn-25a6b1a6=1"
-  },
-  {
-   "source": "Financial Times",
-   "category": "Banca central",
-   "published": "21 Oct",
-   "title": "Small caps: not a great AI hedge",
-   "summary": "Plus, fewer Fed meetings",
-   "url": "https://www.ft.com/content/b7e5fa98-0cb5-4eba-b921-26e3a9393199?syn-25a6b1a6=1"
-  },
-  {
-   "source": "Financial Times",
-   "category": "Mercados",
-   "published": "21 Oct",
-   "title": "UK’s top banking regulator to set targets with five-year strategy",
-   "summary": "Katharine Braddick will outline plans to make the BoE’s Prudential Regulation Authority more accountable and transparent",
-   "url": "https://www.ft.com/content/f06bdefd-bbc6-4a33-9884-09daa15752a9?syn-25a6b1a6=1"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Bolsa",
-   "published": "21 Oct",
-   "title": "Stock Market Today: SpaceX Shares Surge After Tesla Deal Talks",
-   "summary": "Rocket-and-AI maker's earnings boost AI sentiment; French borrowing costs climb to 24-year high",
-   "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-10-21-2026?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Habitação",
-   "published": "21 Oct",
-   "title": "Housing Looks Awful. These Housing-Related Stocks Don&#x2019;t.",
-   "summary": "Plus, is Musk Inc. inevitable?",
-   "url": "https://www.wsj.com/finance/stocks/housing-looks-awful-these-housing-related-stocks-dont-bcc009ae?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Bolsa",
-   "published": "21 Oct",
-   "title": "Healthcare Stocks Are Rallying, and Flashing a Warning for the Rest of the Market",
-   "summary": "The sector is trading at a premium as investors seek safety from AI jitters.",
-   "url": "https://www.wsj.com/finance/stocks/healthcare-stocks-are-rallying-and-flashing-a-warning-for-the-rest-of-the-market-ae13aa0b?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Bolsa",
-   "published": "21 Oct",
-   "title": "NYSE Is Getting Trounced in the Battle for Wall Street&#x2019;s Biggest IPOs",
-   "summary": "Anthropic is expected to bring the Nasdaq another blockbuster listing, following SpaceX. And the Texas Stock Exchange is also emerging as a threat.",
-   "url": "https://www.wsj.com/finance/stocks/nyse-is-getting-trounced-in-the-battle-for-wall-streets-biggest-ipos-048e3b94?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Bolsa",
-   "published": "21 Oct",
-   "title": "Larry Ellison Went on Borrowing Spree to Bankroll His Son&#x2019;s Warner Bros. Bid",
-   "summary": "The billionaire put up shares in Tesla, SpaceX and Paramount Skydance this year to borrow more from banks.",
-   "url": "https://www.wsj.com/finance/larry-ellison-warner-bros-loans-49918714?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Bolsa",
-   "published": "20 Oct",
-   "title": "Stocks Make a U-Turn on Hopes of U.S.-Iran Diplomacy",
-   "summary": "Plus, oil prices slip and General Motors&#x2019; shares fall after company warns of a rocky 2027",
-   "url": "https://www.wsj.com/finance/stocks/stocks-make-a-u-turn-on-hopes-of-u-s-iran-diplomacy-39fb739b?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Bolsa",
-   "published": "20 Oct",
-   "title": "Stocks Face Headwind That Ended Other Bull Markets",
-   "summary": "Plus, SpaceX reports",
-   "url": "https://www.wsj.com/finance/stocks/stocks-face-headwind-that-ended-other-bull-markets-10b9b7b0?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Bolsa",
-   "published": "20 Oct",
-   "title": "How to Play the Retreat in Defense Stocks",
-   "summary": "Smaller defense companies have fared worse recently, presenting a possible buying opportunity.",
-   "url": "https://www.wsj.com/finance/investing/how-to-play-the-retreat-in-defense-stocks-bd7b1c8d?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Mercados",
-   "published": "21 Oct",
-   "title": "Health Care Roundup: Market Talk",
-   "summary": "Find insight on EssilorLuxottica, Bumrungrad Hospital, Hansoh Pharmaceutical and more in the latest Market Talks covering Health Care.",
-   "url": "https://www.wsj.com/business/health-care-roundup-market-talk-4025abb1?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Mercados",
-   "published": "21 Oct",
-   "title": "Auto & Transport Roundup: Market Talk",
-   "summary": "",
-   "url": "https://www.wsj.com/business/auto-transport-roundup-market-talk-e0a8366d?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "21 Oct",
-   "title": "Why AI&#x2019;s Deepest Mind Believes the World Is About to Change Radically",
-   "summary": "From childhood prodigy to AI pioneer to Nobel Prize winner, Demis Hassabis has always had a simple plan. Step one, solve intelligence. Step two, solve everything else.",
-   "url": "https://www.wsj.com/tech/ai/demis-hassabis-ai-deepmind-google-isomorphic-2b4e3153?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Banca central",
-   "published": "20 Oct",
-   "title": "Meta Policy Chief Joel Kaplan to Leave Company",
-   "summary": "His departure comes as Meta President Dina Powell McCormick, who served in the first Trump administration, has risen in stature at the tech firm.",
-   "url": "https://www.wsj.com/tech/meta-policy-chief-joel-kaplan-to-leave-company-86cb20dc?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "21 Oct",
-   "title": "Chinese AI Tool Linked to Hacks in Japan",
-   "summary": "Around 80 Japanese companies were targeted from overseas in hacks that bore digital traces of Artex, an AI agent developed in China.",
-   "url": "https://www.wsj.com/world/asia/chinese-ai-tool-linked-to-hacks-in-japan-4813d13b?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Mercados",
-   "published": "20 Oct",
-   "title": "Tech, Media & Telecom Roundup: Market Talk",
-   "summary": "Find insight on SpaceX, Netflix and more in the latest Market Talks covering Technology, Media and Telecom.",
-   "url": "https://www.wsj.com/business/tech-media-telecom-roundup-market-talk-1d828729?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "20 Oct",
-   "title": "Anthropic S-1 Shows Red-Hot Growth, Risks and Massive Computing Costs",
-   "summary": "In a new draft prospectus viewed by the Journal, the AI giant disclosed an $80.7 billion net loss for the first half of 2026 and a long list of risk factors.",
-   "url": "https://www.wsj.com/tech/ai/anthropic-revenue-growth-ipo-accaf0f1?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "20 Oct",
-   "title": "Why Nvidia Needs CoreWeave",
-   "summary": "Plus, Musk&#x2019;s donation pledge, and consumers are still wary of giving agents their credit cards.",
-   "url": "https://www.wsj.com/tech/ai/why-nvidia-needs-coreweave-2c26136e?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "20 Oct",
-   "title": "AI&#x2019;s Transformational Value Remains Elusive for Most Companies",
-   "summary": "Plus, a U.A.E.-based startup expands into Silicon Valley.",
-   "url": "https://www.wsj.com/cio-journal/ais-transformational-value-remains-elusive-for-most-companies-2fc0e3d3?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "20 Oct",
-   "title": "AstraZeneca Partners With Oracle to Refine Clinical Research With AI",
-   "summary": "AstraZeneca is teaming up with Oracle to refine clinical research, in the latest artificial-intelligence partnership in the pharmaceutical industry.",
-   "url": "https://www.wsj.com/tech/biotech/astrazeneca-partners-with-oracle-to-refine-clinical-research-with-ai-55cab932?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "20 Oct",
-   "title": "Opinion | The Ukraine &#x2018;Kill Zone&#x2019; Is AI&#x2019;s Testing Ground",
-   "summary": "Artificial intelligence is transforming war in real time by analyzing data and automating weapons.",
-   "url": "https://www.wsj.com/opinion/the-ukraine-kill-zone-is-ais-testing-ground-982701c9?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "20 Oct",
-   "title": "Bill Gross&#x2019;s AI Tool Could Supercharge the Number of Startups",
-   "summary": "",
-   "url": "https://www.wsj.com/tech/ai/bill-grosss-ai-tool-could-supercharge-the-number-of-startups-27187080?mod=rss_Technology"
-  },
-  {
-   "source": "The Economist",
-   "category": "Mercados",
-   "published": "20 Oct",
-   "title": "The late Perry Mehrling explained the hierarchy of money",
-   "summary": "The course for par",
-   "url": "https://www.economist.com/finance-and-economics/2026/10/20/the-late-perry-mehrling-explained-the-hierarchy-of-money"
-  },
-  {
-   "source": "CNBC",
-   "category": "Bolsa",
-   "published": "21 Oct",
-   "title": "SpaceX up 8% in premarket after earnings beat and Musk hints at Tesla tie-up",
-   "summary": "SpaceX shares jumped after the company reported surging revenue growth in its third quarter, and owner Elon Musk floated a potential SpaceX-Tesla merger.",
-   "url": "https://www.cnbc.com/2026/10/21/spacex-spcx-stock-musk-merger-tesla.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Tecnologia",
-   "published": "21 Oct",
-   "title": "Nvidia announces plug and play Vera Rubin racks that can be shipped on a truck",
-   "summary": "Nvidia says its DSX Pod AI Factory, which combines seven Vera Rubin racks in a shipping container, could cut the time to start serving AI tokens to 14 days.",
-   "url": "https://www.cnbc.com/2026/10/21/nvidia-announces-vera-rubin-racks-that-can-be-shipped-on-a-truck-.html"
-  },
-  {
    "source": "CNBC",
    "category": "Mercados",
    "published": "21 Oct",
@@ -800,6 +528,278 @@
    "title": "Federal Reserve Board announces termination of enforcement actions with Gardner Bancshares, Inc. and Small Business Bank",
    "summary": "Federal Reserve Board announces termination of enforcement actions with Gardner Bancshares, Inc. and Small Business Bank",
    "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261016a.htm"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Obrigações",
+   "published": "21 Oct",
+   "title": "Treasury Market’s Power Brokers Are Price Sensitive",
+   "summary": "Beset by a selloff in Treasuries that’s sent benchmark yields to multidecade highs, the US government is finding itself increasingly dependent on investors who only buy if the price is right.",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-21/the-treasury-market-s-new-power-brokers-are-pickier-than-ever"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "21 Oct",
+   "title": "Wheat Hits 14-Week Low as Risk Premiums Ease on Ukraine Talks",
+   "summary": "Wheat slid to a 14-week low in Chicago as traders wound back risk premiums after US President Donald Trump increased pressure on Ukraine to strike a peace agreement with Russia.",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-21/wheat-hits-11-week-low-as-risk-premiums-ease-on-ukraine-talks"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Inflação",
+   "published": "21 Oct",
+   "title": "Surging Yields Bring Biggest Spate of Debt Sale Delays This Year",
+   "summary": "Companies have postponed more than $5 billion in US and European debt sales this month as investors grow increasingly alarmed about rising interest rates, resurgent inflation, and potential cracks in ",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-21/surging-yields-bring-biggest-spate-of-debt-sale-delays-this-year"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Bolsa",
+   "published": "20 Oct",
+   "title": "Stocks Climb as SpaceX Results Reignite AI Trade: Markets Wrap",
+   "summary": "A blockbuster earnings report from SpaceX spurred a rally in tech stocks, easing concerns over whether a global investment spree in artificial intelligence can prove sustainable.",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-20/stock-market-today-dow-s-p-live-updates"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Bolsa",
+   "published": "21 Oct",
+   "title": "US Futures Climb With SpaceX Results Helping Boost AI Sentiment",
+   "summary": "The S&P 500 Index climbed on Wednesday, after solid earnings from SpaceX and Super Micro Computer Inc. bolstered bullish views of the artificial-intelligence trade. Attention turns next to earnings fr",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-21/us-futures-climb-with-spacex-results-helping-boost-ai-sentiment"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Bolsa",
+   "published": "21 Oct",
+   "title": "United ‘Still Solidly Profitable’ as Fuels Costs Rise, CEO Kirby Says",
+   "summary": "United Airlines CEO Scott Kirby discusses the company’s ability to pass along higher fuel costs and seeing continued strength in customer demand. Kirby also shares his thoughts on a wealth tax and oth",
+   "url": "https://www.bloomberg.com/news/videos/2026-10-21/united-till-solidly-profitable-as-fuels-costs-rise-ceo-video"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "21 Oct",
+   "title": "Fãs de música brasileira entram na divisão política",
+   "summary": "Barbara Nascimento conta como a música brasileira reflete a disputa política no país. Edição de Patricia Xavier. (Source: Bloomberg)",
+   "url": "https://www.bloomberg.com/news/videos/2026-10-21/fas-de-musica-brasileira-entram-na-divisao-politica-video"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "21 Oct",
+   "title": "Merz Urges Trump to Invite South Africa to G-20 Summit in Miami",
+   "summary": "German Chancellor Friedrich Merz urged US President Donald Trump to reconsider his decision not to invite South Africa to the Group of 20 in Miami in December.",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-21/merz-urges-trump-to-invite-south-africa-to-g-20-summit-in-miami"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Banca central",
+   "published": "21 Oct",
+   "title": "Gold Steadies as Oil Eases With Traders Focused on Fed Rate Path",
+   "summary": "Gold steadied as oil’s rally cooled and US Treasury yields retreated, with traders focused on the outlook for inflation and the Federal Reserve’s path for interest rates.",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-21/gold-steadies-as-conflicting-iran-signals-cloud-path-for-rates"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "20 Oct",
+   "title": "Latest Oil Market News and Analysis for Oct. 21",
+   "summary": "Oil was little changed with attacks in the Strait of Hormuz continuing to menace global supplies, though flows through the waterway remain robust.",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-20/latest-oil-market-news-and-analysis-for-oct-21"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "21 Oct",
+   "title": "Dangote takes stake in Kenyan pipeline and pledges more ‘aggressive’ energy investment",
+   "summary": "Deal for 25% of Kenya Pipeline comes amid plans for refineries and storage facilities across Africa",
+   "url": "https://www.ft.com/content/e3282291-be9a-4c97-8fc8-d43f9297e167?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "21 Oct",
+   "title": "Middle East oil exports climb back to prewar levels",
+   "summary": "Daily shipments from Gulf producers average 24.6mn, above 23.3mn before conflict, as ships use alternative routes",
+   "url": "https://www.ft.com/content/509c0ecf-625e-4473-96cf-e249edb7c86e?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "21 Oct",
+   "title": "Nasdaq Futures Higher After Asian AI Rally, Brent Crude Holds Close to $110",
+   "summary": "Nasdaq futures rose after AI stocks rallied in Asia and Europe, though investor sentiment remained muted as oil prices held close to $110 a barrel.",
+   "url": "https://www.wsj.com/finance/stocks/nasdaq-futures-higher-after-asian-ai-rally-5d6a76ef?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "21 Oct",
+   "title": "AI Drives Record Growth in Information Technology",
+   "summary": "Plus, a draft prospectus for Anthropic shows revenue growth, rising computing costs",
+   "url": "https://www.wsj.com/cio-journal/ai-drives-record-growth-in-information-technology-afd1c03c?mod=rss_Technology"
+  },
+  {
+   "source": "CNBC",
+   "category": "Fundos",
+   "published": "21 Oct",
+   "title": "Goldman Sachs, JPMorgan and Morgan Stanley are dominating the AI stock boom. Here's their edge",
+   "summary": "Wall Street’s Big Three have generated $52 billion in equity trading revenue this year, capturing about 80% of the market on rising margin lending to hedge funds.",
+   "url": "https://www.cnbc.com/2026/10/21/goldman-sachs-jpmorgan-morgan-stanley-ai-trading.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Bolsa",
+   "published": "21 Oct",
+   "title": "Tokenized stock trading takes off overseas as Goldman, other U.S. companies object",
+   "summary": "Tokenized stocks are gaining momentum in international markets, even as major U.S. companies are pushing back against efforts to introduce them domestically.",
+   "url": "https://www.cnbc.com/2026/10/21/tokenized-stocks-us-companies-object.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "21 Oct",
+   "title": "Witkoff calls Putin a 'humanitarian' at Russia peace talks without Ukraine",
+   "summary": "Speaking in Oslo on Tuesday, Zelenskyy said Washington had reaffirmed its commitment to providing Ukraine with security guarantees.",
+   "url": "https://www.cnbc.com/2026/10/21/witkoff-russia-putin-ukraine-zelenskyy.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Obrigações",
+   "published": "21 Oct",
+   "title": "French 10-year bond yield hits 5% for first time since 2002 amid unrest",
+   "summary": "France is grappling with intense pressure to slash spending, while trying to quell violent protests demanding the government spends more.",
+   "url": "https://www.cnbc.com/2026/10/21/france-protests-bonds-debt.html"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Tecnologia",
+   "published": "21 Oct",
+   "title": "Heckler disrupts Nvidia CEO Huang&#x2019;s speech at Berlin conference",
+   "summary": "The person shouted something that could not be heard on the company&#x2019;s livestream about 20 minutes into the address, before being removed from the auditorium.",
+   "url": "https://www.marketwatch.com/story/heckler-disrupts-nvidia-ceo-huangs-speech-at-berlin-conference-fc461a82?mod=mw_rss_topstories"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Inflação",
+   "published": "21 Oct",
+   "title": "French borrowing costs hit 24-year high as civil unrest and budget fears spook markets",
+   "summary": "<p>Yield on 10-year government bonds passes 5% amid failure to pass budget and fallout from violent street protests</p><ul><li><p><a href=\"https://www.theguardian.com/business/live/2026/oct/21/uk-infl",
+   "url": "https://www.theguardian.com/business/2026/oct/21/french-borrowing-costs-failure-to-pass-budget-govenment-bonds-violent-street-protests"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Poupança",
+   "published": "20 Oct",
+   "title": "A modest increase in bank taxes is not the end of the world for lenders | Nils Pratley",
+   "summary": "<p>As long as Healey doesn’t go overboard, a small turn on surcharge dial will not seriously undermine flow of capital</p><p>Everyone is familiar with the banks’ plea: raising taxes on them amounts to",
+   "url": "https://www.theguardian.com/business/nils-pratley-on-finance/2026/oct/20/modest-increase-bank-taxes-not-end-of-world-for-lenders"
+  },
+  {
+   "source": "Fortune",
+   "category": "Bolsa",
+   "published": "21 Oct",
+   "title": "Australians also don’t like data centers: NextDC shares fall 42% after community opposition stalls a grid upgrade",
+   "summary": "NextDC also cut capital spending by up to 750 million Australian dollars and put new data center projects and land purchases on hold.",
+   "url": "https://fortune.com/2026/10/21/australia-nextdc-shares-fall-data-center/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Mercados",
+   "published": "21 Oct",
+   "title": "Current price of oil as of October 21, 2026",
+   "summary": "When oil prices change, it affects your energy costs—and even the price of everyday items. Here’s why.",
+   "url": "https://fortune.com/article/price-of-oil-10-21-2026/"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "21 Oct",
+   "title": "SpaceX, Tesla shares rise after Musk says committees exploring possible merger",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/spacex-and-tesla-form-special-committees-to-evaluate-potential-merger-musk-says-4961262"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "21 Oct",
+   "title": "Salesforce surged 48% since July, yet the rally looks far from over",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/salesforce-surged-48-since-july-yet-the-rally-looks-far-from-over-4963256"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "21 Oct",
+   "title": "S&P, Nasdaq open higher as SpaceX, Tesla climb on Musk’s update on possible merger",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/us-stock-futures-rise-as-spacex-surges-on-upbeat-earnings-4961479"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "21 Oct",
+   "title": "Wall St says Tesla-SpaceX deal inevitable but Musk says it’s not certain",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/teslaspacex-deal-wall-st-says-inevitable-but-musk-says-its-not-certain-4962374"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "21 Oct",
+   "title": "Why would Musk merge SpaceX and Tesla?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/explainerwhy-would-musk-merge-spacex-and-tesla-4961493"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "21 Oct",
+   "title": "A possible SpaceX-Tesla merger? Here’s what people are saying",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/a-possible-spacextesla-merger-heres-what-people-are-saying-4961497"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "21 Oct",
+   "title": "Government websites go dark as vulnerabilities in programming language send shudder across internet",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/cyber-agency-warns-websites-may-go-dark-as-php-prepares-critical-fix-4961963"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "21 Oct",
+   "title": "Unicycive stock jumps as FDA accepts OLC drug resubmission",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/unicycive-stock-jumps-as-fda-accepts-olc-drug-resubmission-4963257"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "21 Oct",
+   "title": "Is AT&T stock a buy-the-dip opportunity after its earnings-led selloff?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/is-att-stock-a-buythedip-opportunity-after-its-earningsled-selloff-93CH-4963252"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "21 Oct",
+   "title": "Buy the dip in Netflix stock as Q3 results show “no new negatives”: DB",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/buy-the-dip-in-netflix-stock-as-q3-results-show-no-new-negatives-db-4963248"
+  },
+  {
+   "source": "Seeking Alpha",
+   "category": "Bolsa",
+   "published": "21 Oct",
+   "title": "Wall Street opens in green as SpaceX earnings lift investor confidence",
+   "summary": "",
+   "url": "https://seekingalpha.com/news/4655012-sp500-nasdaq-dow-jones-outlook-stock-market?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news"
   }
  ],
  "sources": [
@@ -821,5 +821,5 @@
  "editions": [
   "afternoon"
  ],
- "collectedAt": "2026-10-21T12:28:03.179Z"
+ "collectedAt": "2026-10-21T13:45:35.413Z"
 }
