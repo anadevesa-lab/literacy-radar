@@ -1028,7 +1028,7 @@ footer.foot::before{display:none!important}
 .slide .acts3{display:flex;gap:6px;flex-wrap:wrap} .slide .acts3 i{font:800 11px/1 var(--bfb,inherit);font-style:normal;padding:7px 10px;border-radius:var(--r-pill);border:1.5px solid currentColor}
 .slides.branded .slide:nth-child(even){background:var(--page);color:var(--slide);border-color:transparent}
 .bmark{position:absolute;top:12px;right:12px;font:800 11px/1 var(--bfb);letter-spacing:.04em;max-width:45%;text-align:right;z-index:1}
-.bmark img{display:block;height:20px;width:auto;max-width:100%} .bmark.plate img{background:#FFFFFF;border-radius:var(--r-xs);padding:3px 6px;box-sizing:content-box}
+.bmark img{display:block;height:20px;width:auto;max-width:100%} .bmark.plate img{background:#FFFFFF;border-radius:var(--r-xs);padding:3px 6px;box-sizing:content-box} .bmark.plate-dark img{background:var(--plate,#0D0E0E);border-radius:var(--r-xs);padding:3px 6px;box-sizing:content-box}
 .slide .n{max-width:50%} .pslide{position:relative}
 .pslide .bmark{top:8px;right:8px;font-size:9px} .pslide .bmark img{height:12px}
 .lihead{position:relative} .lihead .bmark{top:14px;right:16px;color:var(--slide)}
@@ -1668,6 +1668,8 @@ const BR={ list:(()=>{ try{ const l=JSON.parse(localStorage.getItem("mint-brands
   active: ls.get("mint-brand","papermint"), edit:false, msg:"" };
 // logos saved before uploads were resized: shrink them to 400 px PNG to free browser storage
 BR.list.forEach(b=>{ if(!b.logo||b.logo.length<200000||!/^data:image\/(png|jpeg|webp)/.test(b.logo)) return; const im=new Image(); im.onload=()=>{ const k=Math.min(1,400/Math.max(im.width,im.height)), c=document.createElement("canvas"); c.width=Math.max(1,Math.round(im.width*k)); c.height=Math.max(1,Math.round(im.height*k)); c.getContext("2d").drawImage(im,0,0,c.width,c.height); b.logo=c.toDataURL("image/png"); saveBrands(); }; im.src=b.logo; });
+// logos saved before tone detection: find out whether they are light (white) or dark
+BR.list.forEach(b=>{ if(b.logo&&!b.logoTone) logoToneOf(b.logo).then(t=>{ if(!t) return; b.logoTone=t; saveBrands(); try{ render(); }catch{} }); });
 // kits saved before brand voice existed get their preset's voice
 BR.list.forEach(b=>{ const p=BRAND_PRESETS.find(x=>x.id===b.id); if(p&&b.voice==null){ b.voice=p.voice; b.avoid=p.avoid; } });
 const saveBrands=()=>{ try{ localStorage.setItem("mint-brands",JSON.stringify(BR.list)); }catch{ BR.msg="Couldn't save: this browser's storage is full. Use a smaller logo or delete an old kit."; toast(BR.msg); } ls.set("mint-brand",BR.active); };
@@ -1687,8 +1689,10 @@ const brandMark=b=>b.logo?`<img src="${b.logo}" alt="${esc(b.name)}">`:`<span>${
 const showLogo=b=>b.showLogo!==false;
 /* the kit website: add https:// when it was typed without it; show it without the protocol */
 const siteURL=u=>{ u=String(u||"").trim(); return !u?"":/^https?:\/\//i.test(u)?u:"https://"+u.replace(/^\/+/,""); };
+/* is the logo light (white or pale)? light logos get a dark plate so they show on light backgrounds */
+function logoToneOf(src){ return new Promise(res=>{ if(!src) return res(""); const im=new Image(); im.onload=()=>{ try{ const c=document.createElement("canvas"); c.width=c.height=48; const x=c.getContext("2d"); x.drawImage(im,0,0,48,48); const d=x.getImageData(0,0,48,48).data; let n=0,s=0; for(let i=0;i<d.length;i+=4){ if(d[i+3]<60) continue; n++; s+=(.2126*d[i]+.7152*d[i+1]+.0722*d[i+2])/255; } res(n&&s/n>.82?"light":"dark"); }catch{ res(""); } }; im.onerror=()=>res(""); im.src=src; }); }
 const siteHost=u=>String(u||"").trim().replace(/^https?:\/\//i,"").replace(/\/$/,"");
-const logoTR=b=>showLogo(b)?`<span class="bmark${b.logoPlate?" plate":""}">${brandMark(b)}</span>`:"";
+const logoTR=b=>showLogo(b)?`<span class="bmark${b.logoTone==="light"?" plate-dark":b.logoPlate?" plate":""}" style="--plate:${esc(b.ink||"#0D0E0E")}">${brandMark(b)}</span>`:"";
 /* suggest a palette from the logo: quantise the pixels, drop near-white and transparent ones, keep the most common distinct colours */
 function paletteFromImage(src){ return new Promise(res=>{ const im=new Image(); im.onload=()=>{ const c=document.createElement("canvas"); c.width=c.height=64; const x=c.getContext("2d"); x.drawImage(im,0,0,64,64);
   const d=x.getImageData(0,0,64,64).data, cnt={}; for(let i=0;i<d.length;i+=4){ if(d[i+3]<128) continue; const r=d[i],g=d[i+1],b=d[i+2]; if(r>235&&g>235&&b>235) continue; const k=[r,g,b].map(v=>v>>4).join(","); cnt[k]=(cnt[k]||0)+1; }
@@ -1716,7 +1720,8 @@ function vBrand(){
         ${b.logo?`<button class="btn small" id="bfromlogo" type="button">Suggest colours from the logo</button><button class="btn small" id="bnologo" type="button">Remove logo</button>`:""}</div>
       <div class="row"><label class="field" style="flex:1;min-width:200px"><span class="label">Logo link for emails (Gmail and Outlook hide embedded logos)</span><input id="blogourl" type="url" placeholder="https://…/logo.png" value="${esc(b.logoUrl||"")}"></label><label class="field" style="min-width:170px"><span class="label">White plate behind logo</span><input id="bplate" type="checkbox" ${b.logoPlate?"checked":""}></label></div>
       <div class="row"><label class="field" style="flex:1;min-width:200px"><span class="label">Website (newsletter button)</span><input id="burl" type="url" placeholder="https://" value="${esc(b.url||"")}"></label>
-        <label class="field" style="flex:1;min-width:200px"><span class="label">Footer line (company, address)</span><input id="bfoot" value="${esc(b.footer||"")}"></label></div>
+        <label class="field" style="flex:1;min-width:200px"><span class="label">Footer line (company, address)</span><input id="bfoot" value="${esc(b.footer||"")}"></label>
+        <label class="sw"><input type="color" data-bcol="footColor" value="${esc(b.footColor||b.ink||"#000000")}"><span>Footer text</span><code>${esc(b.footColor||b.ink||"")}</code></label></div>
       <div class="row"><span class="label">Start from a palette</span><div class="chips">${BRAND_PRESETS.map(p=>`<button type="button" class="chip" data-bpreset="${p.id}"><i class="dot3" style="background:linear-gradient(90deg,${p.primary} 0 33%,${p.secondary} 0 66%,${p.accent} 0)"></i>${esc(p.name)}</button>`).join("")}</div></div>
       <div class="row">${b.id==="papermint"&&["primary","secondary","accent","bg","ink","font"].some(k=>b[k]!==BRAND_PRESETS[0][k])?`<button class="btn small" id="breset" type="button">Restore PaperMint colours</button>`:""}
       ${BR.list.length>1&&b.id!=="papermint"?`<button class="btn small danger" id="bdel" type="button">Delete this kit</button>`:""}</div>
@@ -1744,9 +1749,9 @@ function bindBrand(){
   const rs=$("#breset"); if(rs) rs.onclick=()=>{ Object.assign(b,{...BRAND_PRESETS[0]},{logo:b.logo}); if(!b.logo) delete b.logo; saveBrands(); render(); toast("PaperMint colours restored"); };
   document.querySelectorAll("[data-goedit]").forEach(x=>x.onclick=()=>{ BR.edit=true; render(); document.querySelector(".brandkit")?.scrollIntoView({behavior:"smooth",block:"start"}); });
   const lg=$("#blogo"); if(lg) lg.onchange=()=>{ const fl=lg.files?.[0]; if(!fl) return; if(fl.size>2048*1024){ BR.msg="That logo is over 2 MB. Export a smaller version and try again."; return render(); }
-    const r=new FileReader(); r.onload=()=>{ if(fl.type==="image/svg+xml") return upd("logo",r.result); const im=new Image(); im.onload=()=>{ const k=Math.min(1,400/Math.max(im.width,im.height)), c=document.createElement("canvas"); c.width=Math.max(1,Math.round(im.width*k)); c.height=Math.max(1,Math.round(im.height*k)); c.getContext("2d").drawImage(im,0,0,c.width,c.height); upd("logo",c.toDataURL("image/png")); }; im.onerror=()=>{ BR.msg="Couldn't read this image. Try a PNG or SVG."; render(); }; im.src=r.result; }; r.readAsDataURL(fl); };
+    const r=new FileReader(); r.onload=()=>{ if(fl.type==="image/svg+xml") return logoToneOf(r.result).then(t=>{ b.logoTone=t; upd("logo",r.result); }); const im=new Image(); im.onload=()=>{ const k=Math.min(1,400/Math.max(im.width,im.height)), c=document.createElement("canvas"); c.width=Math.max(1,Math.round(im.width*k)); c.height=Math.max(1,Math.round(im.height*k)); c.getContext("2d").drawImage(im,0,0,c.width,c.height); const u=c.toDataURL("image/png"); logoToneOf(u).then(t=>{ b.logoTone=t; upd("logo",u); }); }; im.onerror=()=>{ BR.msg="Couldn't read this image. Try a PNG or SVG."; render(); }; im.src=r.result; }; r.readAsDataURL(fl); };
   const nl=$("#bnologo"); if(nl) nl.onclick=()=>{ delete b.logo; saveBrands(); render(); };
-  const fl=$("#bfromlogo"); if(fl) fl.onclick=async()=>{ const p=await paletteFromImage(b.logo); if(!p.length){ BR.msg="Couldn't read colours from this logo."; return render(); }
+  const fl=$("#bfromlogo"); if(fl) fl.onclick=async()=>{ const p=await paletteFromImage(b.logo); if(!p.length){ BR.msg=b.logoTone==="light"?"This logo is white, so there are no colours to read. Pick the colours below, or upload the colour version of the logo.":"Couldn't read colours from this logo. Pick the colours below."; return render(); }
     const byL=[...p].sort((x,y)=>lum(x)-lum(y)); b.primary=byL[0]; b.ink=lum(byL[0])<.08?byL[0]:mix(byL[0],"#000000",.45); b.secondary=p[1]||mix(byL[0],"#FFFFFF",.25); b.accent=byL[byL.length-1]!==byL[0]?byL[byL.length-1]:mix(byL[0],"#FFFFFF",.55); b.bg=mix(b.accent,"#FFFFFF",.92);
     BR.msg=""; saveBrands(); render(); toast("Palette suggested from the logo"); };
   const bd=$("#bdel"); if(bd) bd.onclick=()=>{ if(!confirm(`Delete the "${b.name}" kit? Pieces already made keep their colours.`)) return; BR.list=BR.list.filter(x=>x!==b); BR.active=BR.list[0].id; BR.edit=false; saveBrands(); render(); };
@@ -1767,7 +1772,7 @@ ${f.g?`<${"link"} rel="stylesheet" href="${"https://fonts.googleapis.com/css2?fa
 <table role="presentation" class="wrap" width="600" cellpadding="0" cellspacing="0" style="width:600px;max-width:600px;background:#FFFFFF;border-radius:18px;overflow:hidden">
 <tr><td class="pad" style="background:${b.primary};padding:22px 40px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
   <td style="font:600 12px/1 ${B};color:${on};opacity:.8;letter-spacing:.04em">${esc(date)}</td>
-  <td align="right" style="font:800 20px/1 ${H};color:${on}">${showLogo(b)?(b.logo?`<span style="display:inline-block;${b.logoPlate?"background:#FFFFFF;border-radius:8px;padding:6px 10px":""}"><img src="${esc(b.logoUrl||b.logo)}" alt="${esc(b.name)}" height="28" style="display:block;height:28px;width:auto;border:0"></span>`:esc(b.name)):""}</td></tr></table></td></tr>
+  <td align="right" style="font:800 20px/1 ${H};color:${on}">${showLogo(b)?(b.logo?`<span style="display:inline-block;${b.logoTone==="light"?`background:${b.ink||"#0D0E0E"};border-radius:8px;padding:6px 10px`:b.logoPlate?"background:#FFFFFF;border-radius:8px;padding:6px 10px":""}"><img src="${esc(b.logoUrl||b.logo)}" alt="${esc(b.name)}" height="28" style="display:block;height:28px;width:auto;border:0"></span>`:esc(b.name)):""}</td></tr></table></td></tr>
 <tr><td style="height:6px;background:${b.accent};font-size:0;line-height:0">&nbsp;</td></tr>
 <tr><td class="pad" style="padding:40px 40px 8px">
   <div style="font:800 12px/1 ${B};letter-spacing:.12em;text-transform:uppercase;color:${b.secondary};margin:0 0 14px">${st.lang==="pt"?"A newsletter":"The newsletter"}</div>
@@ -1782,7 +1787,7 @@ ${n.takeaway?`<tr><td class="pad" style="padding:14px 40px 8px"><table role="pre
 ${n.cta?`<tr><td class="pad" align="left" style="padding:22px 40px 8px"><a href="${esc(siteURL(b.url)||"#")}" style="display:inline-block;background:${b.primary};color:${on};font:700 16px/1 ${B};text-decoration:none;padding:16px 26px;border-radius:10px">${esc(n.cta)} &rarr;</a></td></tr>`:""}
 ${n.ps?`<tr><td class="pad" style="padding:18px 40px 8px"><p style="margin:0;font:italic 400 15px/1.6 ${B};color:${b.ink}"><b>P.S.</b> ${md(n.ps)}</p></td></tr>`:""}
 <tr><td class="pad" style="padding:32px 40px 36px"><div style="border-top:1px solid ${mix(b.ink,"#FFFFFF",.85)};padding-top:20px;font:400 12px/1.6 ${B};color:${mix(b.ink,"#FFFFFF",.35)}">
-  ${disc?`<p style="margin:0 0 10px">${esc(disc)}</p>`:""}${b.footer?`<p style="margin:0 0 10px">${esc(b.footer)}</p>`:""}${b.url?`<p style="margin:0 0 10px"><a href="${esc(siteURL(b.url))}" style="color:${b.secondary}">${esc(siteHost(b.url))}</a></p>`:""}
+  ${disc?`<p style="margin:0 0 10px">${esc(disc)}</p>`:""}${b.footer?`<p style="margin:0 0 10px${b.footColor?`;color:${b.footColor}`:""}">${esc(b.footer)}</p>`:""}${b.url?`<p style="margin:0 0 10px"><a href="${esc(siteURL(b.url))}" style="color:${b.footColor||b.secondary}">${esc(siteHost(b.url))}</a></p>`:""}
   <p style="margin:0"><a href="#" style="color:${b.secondary}">${st.lang==="pt"?"Cancelar subscrição":"Unsubscribe"}</a></p></div></td></tr>
 </table></td></tr></table></body></html>`;
 }
@@ -1911,7 +1916,7 @@ function carSlide(s, k, n, b, foot){
     ${big?`<span class="big">${esc(big)}</span>`:""}<h4>${hi(head)}</h4>${body?`<p>${kind==="myth"?`<b>${st.lang==="pt"?"Facto":"Fact"}:</b> `:""}${esc(body)}</p>`:""}
     ${kind==="hook"?`<span class="swipe">${st.lang==="pt"?"Desliza":"Swipe"} →</span>`:""}
     ${kind==="cta"?`<span class="acts3"><i>${st.lang==="pt"?"Guardar":"Save"}</i><i>${st.lang==="pt"?"Partilhar":"Share"}</i><i>${st.lang==="pt"?"Seguir":"Follow"}</i></span>`:""}
-    ${kind==="cta"&&b&&(b.footer||b.url)?`<span class="bsign">${b.footer?esc(b.footer):""}${b.footer&&b.url?"<br>":""}${b.url?esc(siteHost(b.url)):""}</span>`:""}${foot?`<span class="foot">${esc(foot)}</span>`:""}${logoTR(b)}</div>`;
+    ${kind==="cta"&&b&&(b.footer||b.url)?`<span class="bsign"${b.footColor?` style="color:${esc(b.footColor)}"`:""}>${b.footer?esc(b.footer):""}${b.footer&&b.url?"<br>":""}${b.url?esc(siteHost(b.url)):""}</span>`:""}${foot?`<span class="foot">${esc(foot)}</span>`:""}${logoTR(b)}</div>`;
 }
 /* switch the client or open the kit editor from right above the content */
 function brandBar(){ const b=brand(); return `<div class="bbar"><span class="label">Design for</span><div class="bchips">${BR.list.map(x=>`<button type="button" class="bchip ${x.id===b.id?"on":""}" data-brand="${esc(x.id)}"><i style="background:${x.primary}"></i><i style="background:${x.secondary}"></i><i style="background:${x.accent}"></i><span>${esc(x.name)}</span></button>`).join("")}</div><button class="btn small" type="button" data-goedit>Edit colours, logo and voice</button></div>`; }
