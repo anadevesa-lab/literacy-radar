@@ -1,0 +1,208 @@
+{
+ "auto": true,
+ "date": "2026-10-22",
+ "basedOn": "2026-10-22T12:30:49.700Z",
+ "generatedAt": "2026-10-22T12:30:52.353Z",
+ "resumo": "**Middle East tensions and sovereign debt strains** drove crude oil and bond yields higher, whilst global equities diverged on shifting tech sentiment.",
+ "classes": [
+  {
+   "nome": "Global equities",
+   "tendencia": "mixed",
+   "forca": 2,
+   "leitura": "Tech shares faced volatility, whilst healthcare equities advanced as investors sought defensive shelter.",
+   "a_favor": [
+    "Defensive sector rotation",
+    "Robust consumer staples earnings"
+   ],
+   "riscos": [
+    "Elevated corporate fuel expenses",
+    "Valuation doubts around AI"
+   ],
+   "perfil": "Suits long-term investors comfortable with equity market swings."
+  },
+  {
+   "nome": "Government bonds",
+   "tendencia": "falling",
+   "forca": 2,
+   "leitura": "Prices dropped as French yields reached 24-year highs and UK inflation accelerated to 3.5%.",
+   "a_favor": [
+    "Higher nominal coupons",
+    "Portuguese 10-year yields at 3.85%"
+   ],
+   "riscos": [
+    "Foreign capital flight",
+    "Persistent regional inflation pressures"
+   ],
+   "perfil": "Suits defensive profiles seeking fixed interest returns."
+  },
+  {
+   "nome": "Energy commodities",
+   "tendencia": "rising",
+   "forca": 2,
+   "leitura": "Crude oil rose following Middle Eastern military strikes on an airport and oil facility.",
+   "a_favor": [
+    "Geopolitical supply disruption fears",
+    "Resilient global energy demand"
+   ],
+   "riscos": [
+    "Recovering Persian Gulf exports",
+    "Airline capacity cuts"
+   ],
+   "perfil": "Suits tactical investors tolerant of sharp price fluctuations."
+  },
+  {
+   "nome": "Foreign exchange",
+   "tendencia": "mixed",
+   "forca": 1,
+   "leitura": "Sterling approached 17-month highs against the euro, whereas India committed $90bn defending the rupee.",
+   "a_favor": [
+    "Sterling high-yielding status",
+    "Massive central bank reserve support"
+   ],
+   "riscos": [
+    "Divergent central bank policies",
+    "Geopolitical currency pressures"
+   ],
+   "perfil": "Suits seasoned investors managing multi-currency portfolio exposure."
+  },
+  {
+   "nome": "Private credit",
+   "tendencia": "steady",
+   "forca": 2,
+   "leitura": "Asset securitisation issuance remained brisk as managers actively courted retail wealth advisers.",
+   "a_favor": [
+    "Unstoppable debt securitisation volumes",
+    "Untapped household wealth inflows"
+   ],
+   "riscos": [
+    "Scrutiny over sweetheart deals",
+    "Potential investor conflict of interest"
+   ],
+   "perfil": "Suits patient investors accepting illiquidity in exchange for yield."
+  }
+ ],
+ "temas": [
+  "How government bond yields affect wider borrowing costs",
+  "The transmission of oil price shocks to airline earnings",
+  "Defensive versus cyclical equities during market uncertainty",
+  "Why central banks spend reserves to defend currencies"
+ ],
+ "ai": true,
+ "brief": {
+  "one_liner": "Between rising UK inflation, French bond jitters, popping oil prices, and Barclays testing AI efficiency, wallets face a rather lively week.",
+  "number": {
+   "value": "3.5%",
+   "caption": "UK annual inflation in September, jumping from 3.1% last month."
+  },
+  "stories": [
+   {
+    "i": 60,
+    "title": "UK inflation heats up right before Budget day",
+    "whats_going_on": "UK inflation accelerated to 3.5% in the year to September, up from 3.1% in August. Government borrowing figures also climbed to their highest level in a year ahead of the upcoming Budget.",
+    "what_it_means": "Stubborn price pressures make it significantly harder for the Bank of England to swiftly lower interest rates. It also narrows the government's fiscal headroom, making tax tweaks and spending restraints more likely.",
+    "why_care": "When inflation creeps upwards, cash sitting in standard accounts risks losing purchasing power unless deposit rates keep pace, while mortgage rate cuts may take longer to arrive."
+   },
+   {
+    "i": 35,
+    "title": "French borrowing costs hit a 24-year peak",
+    "whats_going_on": "France's 10-year government bond yield reached a 24-year high as political unrest and protests rattled financial markets. Foreign investors have turned cautious, forcing the French state to pay steeper interest to attract debt buyers.",
+    "what_it_means": "France is one of the eurozone's economic heavyweights, so rising risk premiums there cause ripples across neighbouring sovereign debt markets. It tests financial stability at a time when Portuguese 10-year yields average 3.85%.",
+    "why_care": "Government bond yields serve as the foundational benchmark for wider borrowing costs, meaning sustained market tension can eventually influence mortgage rates and business loan terms across Europe."
+   },
+   {
+    "i": 9,
+    "title": "Oil surges again on Middle Eastern supply jitters",
+    "whats_going_on": "Global stock markets slipped after fresh Middle East tensions and strikes on Saudi facilities pushed crude prices sharply higher. US airline carriers, including American Airlines, flagged expanding annual losses as jet fuel costs jumped unexpectedly.",
+    "what_it_means": "Energy spikes act like an immediate levy on the global economy by lifting transportation, shipping, and heating expenses. Central bankers keep a nervous eye on crude, as sudden oil rallies threaten to derail recent progress on inflation.",
+    "why_care": "Surging oil usually filters down to dearer fuel at the petrol pump and higher utility bills, leaving households with less spare cash to save or invest."
+   },
+   {
+    "i": 53,
+    "title": "Barclays trims 5,000 jobs as AI steps in",
+    "whats_going_on": "Barclays is eliminating roughly 5,000 roles, representing about 5% of its total workforce, as it leans into artificial intelligence to handle back-office processes. The cuts represent one of the most direct payroll reductions linked to banking automation to date.",
+    "what_it_means": "High street lenders face constant pressure to rein in operational overheads and defend profit margins as interest rate dynamics evolve. Replacing repetitive tasks with automated software is rapidly becoming the standard corporate recipe to curb wage expenses.",
+    "why_care": "For everyday investors holding broad index funds or banking shares, corporate automation can bolster long-term operating margins, though it underlines how technological disruption is reshaping the wider employment landscape."
+   }
+  ],
+  "basedOn": "2026-10-22T12:30:49.700Z",
+  "generatedAt": "2026-10-22T12:31:41.969Z"
+ },
+ "pack": {
+  "carousel": {
+   "title": "Why Your Cash Is Losing Power",
+   "slides": [
+    {
+     "kind": "hook",
+     "h": "Your cash is **losing** its power",
+     "big": "",
+     "t": ""
+    },
+    {
+     "kind": "stat",
+     "h": "UK inflation ticks **upwards**",
+     "big": "3.5%",
+     "t": "Prices rose faster in September, shrinking the real value of savings."
+    },
+    {
+     "kind": "point",
+     "h": "Higher prices mean **less** left over",
+     "big": "",
+     "t": "When energy and fuel costs climb, everyday households have smaller monthly surpluses."
+    },
+    {
+     "kind": "myth",
+     "h": "\"Standard accounts protect my **money**\"",
+     "big": "",
+     "t": "If inflation outpaces your interest rate, your purchasing power still shrinks."
+    },
+    {
+     "kind": "point",
+     "h": "Make your savings work **harder**",
+     "big": "",
+     "t": "Compare what your bank pays against current inflation to spot the gap."
+    },
+    {
+     "kind": "cta",
+     "h": "Save this for your **finances**",
+     "big": "",
+     "t": "Follow PaperMint for fresh financial news minus the jargon."
+    }
+   ]
+  },
+  "linkedin": "Inflation is playing a quiet game of catch-up with our wallets.\n\nFresh figures show UK inflation ticked up to 3.5% in September. When the cost of everyday essentials climbs, cash sitting in low-paying accounts slowly loses its purchasing power. It is a timely reminder that inflation is the silent tax on idle savings.\n\nMeanwhile, corporate automation is making waves. Barclays is cutting 5,000 jobs as it leans into artificial intelligence for back-office tasks. For everyday investors, shifts like this show how technology is reshaping corporate efficiency and the wider job market.\n\nYou do not need a finance degree to protect your future. You just need to know where your money stands.\n\n#PersonalFinance #Inflation #PaperMint",
+  "reel": {
+   "hook": "Why your savings account might actually be losing you money.",
+   "script": [
+    "UK inflation just climbed to three point five percent.",
+    "That means standard cash accounts are fighting a losing battle.",
+    "When prices rise faster than your interest, your purchasing power shrinks.",
+    "Check your rate today and make your money work harder.",
+    "Follow PaperMint for finance news that makes sense."
+   ],
+   "caption": "UK inflation hits 3.5% as prices rise. Check your savings rate today. Follow PaperMint for fresh finance news."
+  },
+  "faq": [
+   {
+    "q": "Why does rising inflation matter for my savings?",
+    "a": "When inflation climbs higher than your bank interest rate, your money buys fewer things over time. It quietly eats away at your purchasing power."
+   },
+   {
+    "q": "What caused the latest jump in UK inflation?",
+    "a": "UK inflation accelerated to 3.5% in the year to September, up from 3.1% in August, driven by rising costs across the board."
+   },
+   {
+    "q": "How do higher oil prices affect my household budget?",
+    "a": "Surging oil prices usually filter down to dearer fuel at the petrol pump and higher utility bills, leaving households with less spare cash."
+   },
+   {
+    "q": "What does corporate automation mean for everyday investors?",
+    "a": "Companies adopting artificial intelligence to cut costs can improve their operating margins, though it highlights rapid changes in the employment landscape."
+   },
+   {
+    "q": "Is past performance a guide to future returns?",
+    "a": "No, past performance is never a guide to the future. Markets and economic conditions change constantly."
+   }
+  ],
+  "generatedAt": "2026-10-22T12:32:09.821Z"
+ }
+}
