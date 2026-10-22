@@ -1028,9 +1028,9 @@ footer.foot::before{display:none!important}
 .slide .acts3{display:flex;gap:6px;flex-wrap:wrap} .slide .acts3 i{font:800 11px/1 var(--bfb,inherit);font-style:normal;padding:7px 10px;border-radius:var(--r-pill);border:1.5px solid currentColor}
 .slides.branded .slide:nth-child(even){background:var(--page);color:var(--slide);border-color:transparent}
 .bmark{position:absolute;top:12px;right:12px;font:800 11px/1 var(--bfb);letter-spacing:.04em;max-width:45%;text-align:right;z-index:1}
-.bmark img{display:block;height:20px;width:auto;max-width:100%;background:#FFFFFF;border-radius:var(--r-xs);padding:3px 6px;box-sizing:content-box}
+.bmark img{display:block;height:20px;width:auto;max-width:100%} .bmark.plate img{background:#FFFFFF;border-radius:var(--r-xs);padding:3px 6px;box-sizing:content-box}
 .slide .n{max-width:50%} .pslide{position:relative}
-.pslide .bmark{top:8px;right:8px;font-size:9px} .pslide .bmark img{height:12px;padding:2px var(--s1)}
+.pslide .bmark{top:8px;right:8px;font-size:9px} .pslide .bmark img{height:12px}
 .lihead{position:relative} .lihead .bmark{top:14px;right:16px;color:var(--slide)}
 .bphead{justify-content:flex-end;min-height:56px} .bphead .bmark{position:static;font-size:var(--t-md)} .bphead .bmark img{height:28px}.pslides.branded .pslide b{font-family:var(--bfh)}
 .pslides.branded .pslide:not(:first-child){background:var(--page);border-color:transparent;border-top:4px solid var(--slide-hi)}
@@ -1040,7 +1040,7 @@ footer.foot::before{display:none!important}
 .rframe{flex:0 0 150px;aspect-ratio:9/16;border-radius:var(--r-base);background:var(--slide);color:var(--slide-ink);padding:var(--s3);display:flex;flex-direction:column;gap:var(--s2);position:relative;font-family:var(--bfb)}
 .rframe:nth-child(even){background:var(--page);color:var(--slide)}
 .rframe .rt{font-size:var(--t-2xs);font-weight:800;opacity:.75} .rframe b{font:800 15px/1.2 var(--bfh)} .rframe .rv{font-size:var(--t-2xs);line-height:1.35;opacity:.75;margin-top:auto}
-.rframe .bmark{top:10px;right:10px;font-size:9px} .rframe .bmark img{height:12px;padding:2px var(--s1)}
+.rframe .bmark{top:10px;right:10px;font-size:9px} .rframe .bmark img{height:12px}
 .rframe .rt{max-width:55%}
 /* Markets: the verified indicators as one dark panel, title inside, eight tiles tagged by theme */
 .pillgrid .indpanel{background:var(--ink);border-radius:clamp(22px,2.6vw,32px);padding:clamp(22px,3.2vw,44px);display:flex;flex-direction:column;gap:clamp(18px,2.4vw,28px)}
@@ -1666,9 +1666,11 @@ const BRAND_PRESETS=[
 ];
 const BR={ list:(()=>{ try{ const l=JSON.parse(localStorage.getItem("mint-brands")||"null"); if(Array.isArray(l)&&l.length) return l; }catch{} return [{...BRAND_PRESETS[0]}]; })(),
   active: ls.get("mint-brand","papermint"), edit:false, msg:"" };
+// logos saved before uploads were resized: shrink them to 400 px PNG to free browser storage
+BR.list.forEach(b=>{ if(!b.logo||b.logo.length<200000||!/^data:image\/(png|jpeg|webp)/.test(b.logo)) return; const im=new Image(); im.onload=()=>{ const k=Math.min(1,400/Math.max(im.width,im.height)), c=document.createElement("canvas"); c.width=Math.max(1,Math.round(im.width*k)); c.height=Math.max(1,Math.round(im.height*k)); c.getContext("2d").drawImage(im,0,0,c.width,c.height); b.logo=c.toDataURL("image/png"); saveBrands(); }; im.src=b.logo; });
 // kits saved before brand voice existed get their preset's voice
 BR.list.forEach(b=>{ const p=BRAND_PRESETS.find(x=>x.id===b.id); if(p&&b.voice==null){ b.voice=p.voice; b.avoid=p.avoid; } });
-const saveBrands=()=>{ try{ localStorage.setItem("mint-brands",JSON.stringify(BR.list)); }catch{ BR.msg="Couldn't save: the logo may be too big. Try a smaller image."; } ls.set("mint-brand",BR.active); };
+const saveBrands=()=>{ try{ localStorage.setItem("mint-brands",JSON.stringify(BR.list)); }catch{ BR.msg="Couldn't save: this browser's storage is full. Use a smaller logo or delete an old kit."; toast(BR.msg); } ls.set("mint-brand",BR.active); };
 const brandById=id=>BR.list.find(b=>b.id===id);
 const brand=()=>brandById(BR.active)||BR.list[0]||BRAND_PRESETS[0];
 const hexRGB=h=>{ h=String(h||"#000").replace("#",""); if(h.length===3) h=h.split("").map(c=>c+c).join(""); const n=parseInt(h,16)||0; return [n>>16&255,n>>8&255,n&255]; };
@@ -1683,7 +1685,7 @@ const brandVars=b=>{ const f=fontCSS(b); return `--slide:${b.primary};--slide-in
 const brandMark=b=>b.logo?`<img src="${b.logo}" alt="${esc(b.name)}">`:`<span>${esc(b.name)}</span>`;
 /* the logo sits in the top-right corner of every piece (carousel, reel, deck, LinkedIn, article, newsletter); the kit can switch it off */
 const showLogo=b=>b.showLogo!==false;
-const logoTR=b=>showLogo(b)?`<span class="bmark">${brandMark(b)}</span>`:"";
+const logoTR=b=>showLogo(b)?`<span class="bmark${b.logoPlate?" plate":""}">${brandMark(b)}</span>`:"";
 /* suggest a palette from the logo: quantise the pixels, drop near-white and transparent ones, keep the most common distinct colours */
 function paletteFromImage(src){ return new Promise(res=>{ const im=new Image(); im.onload=()=>{ const c=document.createElement("canvas"); c.width=c.height=64; const x=c.getContext("2d"); x.drawImage(im,0,0,64,64);
   const d=x.getImageData(0,0,64,64).data, cnt={}; for(let i=0;i<d.length;i+=4){ if(d[i+3]<128) continue; const r=d[i],g=d[i+1],b=d[i+2]; if(r>235&&g>235&&b>235) continue; const k=[r,g,b].map(v=>v>>4).join(","); cnt[k]=(cnt[k]||0)+1; }
@@ -1707,8 +1709,9 @@ function vBrand(){
       <label class="chk"><input type="checkbox" id="blogoon" ${showLogo(b)?"checked":""}> Logo in the top-right corner of every piece (Instagram, reel, LinkedIn, article, deck, newsletter)</label>
       <label class="field"><span class="label">Brand voice: how this client sounds (the AI follows it in every format)</span><textarea id="bvoice" rows="3" placeholder="e.g. Calm and expert, short sentences, explains every term">${esc(b.voice||"")}</textarea></label>
       <label class="field"><span class="label">Words and habits to avoid</span><input id="bavoid" value="${esc(b.avoid||"")}" placeholder="e.g. jargon, emojis, exclamation marks"></label>
-      <div class="row"><label class="field" style="flex:1;min-width:200px"><span class="label">Logo (PNG, JPG or SVG, up to 300 KB)</span><input id="blogo" type="file" accept="image/png,image/jpeg,image/svg+xml,image/webp"></label>
+      <div class="row"><label class="field" style="flex:1;min-width:200px"><span class="label">Logo (PNG or SVG keeps the background transparent; JPG and WebP also work; up to 2 MB)</span><input id="blogo" type="file" accept="image/png,image/jpeg,image/svg+xml,image/webp"></label>
         ${b.logo?`<button class="btn small" id="bfromlogo" type="button">Suggest colours from the logo</button><button class="btn small" id="bnologo" type="button">Remove logo</button>`:""}</div>
+      <div class="row"><label class="field" style="flex:1;min-width:200px"><span class="label">Logo link for emails (Gmail and Outlook hide embedded logos)</span><input id="blogourl" type="url" placeholder="https://…/logo.png" value="${esc(b.logoUrl||"")}"></label><label class="field" style="min-width:170px"><span class="label">White plate behind logo</span><input id="bplate" type="checkbox" ${b.logoPlate?"checked":""}></label></div>
       <div class="row"><label class="field" style="flex:1;min-width:200px"><span class="label">Website (newsletter button)</span><input id="burl" type="url" placeholder="https://" value="${esc(b.url||"")}"></label>
         <label class="field" style="flex:1;min-width:200px"><span class="label">Footer line (company, address)</span><input id="bfoot" value="${esc(b.footer||"")}"></label></div>
       <div class="row"><span class="label">Start from a palette</span><div class="chips">${BRAND_PRESETS.map(p=>`<button type="button" class="chip" data-bpreset="${p.id}"><i class="dot3" style="background:linear-gradient(90deg,${p.primary} 0 33%,${p.secondary} 0 66%,${p.accent} 0)"></i>${esc(p.name)}</button>`).join("")}</div></div>
@@ -1726,6 +1729,8 @@ function bindBrand(){
   const nm=$("#bname"); if(nm) nm.onchange=()=>upd("name",nm.value.trim()||"Client");
   const fo=$("#bfont"); if(fo) fo.onchange=()=>upd("font",fo.value);
   const ur=$("#burl"); if(ur) ur.onchange=()=>upd("url",ur.value.trim());
+  const lu=$("#blogourl"); if(lu) lu.onchange=()=>upd("logoUrl",lu.value.trim());
+  const lp=$("#bplate"); if(lp) lp.onchange=()=>upd("logoPlate",lp.checked);
   const lo=$("#blogoon"); if(lo) lo.onchange=()=>upd("showLogo",lo.checked);
   const bv=$("#bvoice"); if(bv) bv.onchange=()=>upd("voice",bv.value.trim());
   const ba=$("#bavoid"); if(ba) ba.onchange=()=>upd("avoid",ba.value.trim());
@@ -1735,8 +1740,8 @@ function bindBrand(){
     ["primary","secondary","accent","bg","ink","font"].forEach(k=>b[k]=p[k]); saveBrands(); render(); });
   const rs=$("#breset"); if(rs) rs.onclick=()=>{ Object.assign(b,{...BRAND_PRESETS[0]},{logo:b.logo}); if(!b.logo) delete b.logo; saveBrands(); render(); toast("PaperMint colours restored"); };
   document.querySelectorAll("[data-goedit]").forEach(x=>x.onclick=()=>{ BR.edit=true; render(); document.querySelector(".brandkit")?.scrollIntoView({behavior:"smooth",block:"start"}); });
-  const lg=$("#blogo"); if(lg) lg.onchange=()=>{ const fl=lg.files?.[0]; if(!fl) return; if(fl.size>300*1024){ BR.msg="That logo is over 300 KB. Export a smaller version and try again."; return render(); }
-    const r=new FileReader(); r.onload=()=>upd("logo",r.result); r.readAsDataURL(fl); };
+  const lg=$("#blogo"); if(lg) lg.onchange=()=>{ const fl=lg.files?.[0]; if(!fl) return; if(fl.size>2048*1024){ BR.msg="That logo is over 2 MB. Export a smaller version and try again."; return render(); }
+    const r=new FileReader(); r.onload=()=>{ if(fl.type==="image/svg+xml") return upd("logo",r.result); const im=new Image(); im.onload=()=>{ const k=Math.min(1,400/Math.max(im.width,im.height)), c=document.createElement("canvas"); c.width=Math.max(1,Math.round(im.width*k)); c.height=Math.max(1,Math.round(im.height*k)); c.getContext("2d").drawImage(im,0,0,c.width,c.height); upd("logo",c.toDataURL("image/png")); }; im.onerror=()=>{ BR.msg="Couldn't read this image. Try a PNG or SVG."; render(); }; im.src=r.result; }; r.readAsDataURL(fl); };
   const nl=$("#bnologo"); if(nl) nl.onclick=()=>{ delete b.logo; saveBrands(); render(); };
   const fl=$("#bfromlogo"); if(fl) fl.onclick=async()=>{ const p=await paletteFromImage(b.logo); if(!p.length){ BR.msg="Couldn't read colours from this logo."; return render(); }
     const byL=[...p].sort((x,y)=>lum(x)-lum(y)); b.primary=byL[0]; b.ink=lum(byL[0])<.08?byL[0]:mix(byL[0],"#000000",.45); b.secondary=p[1]||mix(byL[0],"#FFFFFF",.25); b.accent=byL[byL.length-1]!==byL[0]?byL[byL.length-1]:mix(byL[0],"#FFFFFF",.55); b.bg=mix(b.accent,"#FFFFFF",.92);
@@ -1759,7 +1764,7 @@ ${f.g?`<${"link"} rel="stylesheet" href="${"https://fonts.googleapis.com/css2?fa
 <table role="presentation" class="wrap" width="600" cellpadding="0" cellspacing="0" style="width:600px;max-width:600px;background:#FFFFFF;border-radius:18px;overflow:hidden">
 <tr><td class="pad" style="background:${b.primary};padding:22px 40px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
   <td style="font:600 12px/1 ${B};color:${on};opacity:.8;letter-spacing:.04em">${esc(date)}</td>
-  <td align="right" style="font:800 20px/1 ${H};color:${on}">${showLogo(b)?(b.logo?`<span style="display:inline-block;background:#FFFFFF;border-radius:8px;padding:6px 10px"><img src="${b.logo}" alt="${esc(b.name)}" height="28" style="display:block;height:28px;width:auto;border:0"></span>`:esc(b.name)):""}</td></tr></table></td></tr>
+  <td align="right" style="font:800 20px/1 ${H};color:${on}">${showLogo(b)?(b.logo?`<span style="display:inline-block;${b.logoPlate?"background:#FFFFFF;border-radius:8px;padding:6px 10px":""}"><img src="${esc(b.logoUrl||b.logo)}" alt="${esc(b.name)}" height="28" style="display:block;height:28px;width:auto;border:0"></span>`:esc(b.name)):""}</td></tr></table></td></tr>
 <tr><td style="height:6px;background:${b.accent};font-size:0;line-height:0">&nbsp;</td></tr>
 <tr><td class="pad" style="padding:40px 40px 8px">
   <div style="font:800 12px/1 ${B};letter-spacing:.12em;text-transform:uppercase;color:${b.secondary};margin:0 0 14px">${st.lang==="pt"?"A newsletter":"The newsletter"}</div>
@@ -1791,7 +1796,7 @@ function vStudio(){
   ${vPack()}
   ${vNews()}
   <section class="panel">
-    <div class="row between"><h2>What's happening</h2><div class="row"><button class="btn small" id="ex" type="button">Use an example</button><button class="btn small" id="sur" type="button">Evergreen topic</button></div></div>
+    <div class="row between"><h2>What's happening</h2><div class="row"><button class="btn small" id="ex" type="button">Use an example</button><select class="btn small" id="sur" aria-label="Pick an evergreen topic"><option value="">Evergreen topic…</option>${EVERGREEN.map(t=>`<option>${esc(t)}</option>`).join("")}</select></div></div>
     <label class="field"><span class="label">News, comments, DMs, questions</span><textarea id="in" placeholder="Paste today's headlines and your audience's questions here…">${esc(st.input)}</textarea></label>
     <div class="row between">
       <div class="row"><span class="label">Level</span><div class="chips">${LEVELS.map(([k,t])=>`<button type="button" class="chip ${st.level===k?"on":""}" data-lv="${k}">${t}</button>`).join("")}</div><span class="label">Tone</span><div class="chips">${TONES.map(([k,t])=>`<button type="button" class="chip ${st.tone===k?"on":""}" data-tone="${k}">${t}</button>`).join("")}</div></div>
@@ -1925,7 +1930,7 @@ function vContent(c, t){
     h += `<section class="panel"><div class="row between"><h2>Reel script <span class="muted" style="font-family:var(--f-body);font-weight:500;font-size:.9rem">· ${esc(c.reel.duration||"")}</span></h2><button class="btn small" data-copy="reel" type="button">Copy script</button></div>
       <div class="reelboard branded" style="${brandVars(b)}">${(c.reel.scenes||[]).map((s,k)=>`<div class="rframe"><span class="rt">${esc(s.time)}</span><b>${esc(s.onscreen||"")}</b><span class="rv">${esc(s.visual||"")}</span>${logoTR(b)}</div>`).join("")}</div>
       <div class="tscroll"><table class="scenes"><thead><tr><th>Time</th><th>Visual</th><th>Voiceover</th><th>On-screen text</th></tr></thead><tbody>
-      ${(c.reel.scenes||[]).map(s=>`<tr><td class="mono">${esc(s.time)}</td><td>${esc(s.visual)}</td><td>${esc(s.voiceover)}</td><td>${esc(s.onscreen)}</td></tr>`).join("")}</tbody></table></div></section>`;
+      ${(c.reel.scenes||[]).map(s=>`<tr><td class="mono">${esc(s.time)}</td><td>${esc(s.visual)}</td><td>${esc(s.voiceover)}</td><td>${esc(s.onscreen)}</td></tr>`).join("")}</tbody></table></div>${(c.reel.caption||(c.reel.hashtags||[]).length)?`<div class="out"><span class="label">Caption</span><pre>${esc(c.reel.caption||"")}\n\n${esc((c.reel.hashtags||[]).map(x=>String(x).startsWith("#")?x:"#"+x).join(" "))}</pre></div>`:""}</section>`;
   }
   if(c.linkedin) h += `<section class="panel"><div class="row between"><h2>LinkedIn post</h2><button class="btn small" data-copy="linkedin" type="button">Copy</button></div>${liPost(b,c.linkedin.text)}</section>`;
   if(c.article) h += `<section class="panel"><div class="row between"><h2>LinkedIn article</h2><button class="btn small" data-copy="article" type="button">Copy</button></div>
@@ -1949,7 +1954,7 @@ const prose = t => String(t||"").split(/\n{2,}|\n(?=## )/).map(p=>p.trim()).filt
 const hi = s => esc(s).replace(/\*\*(.+?)\*\*/g,'<span class="hi">$1</span>');
 function textOf(c,k){
   if(k==="carousel") return (c.carousel.slides||[]).map((s,i)=>`Slide ${i+1}${s.big?"\n"+s.big:""}\n${String(s.headline).replace(/\*\*/g,"")}\n${s.body||""}`).join("\n\n")+`\n\nCaption:\n${c.carousel.caption}\n${(c.carousel.hashtags||[]).map(x=>x.startsWith("#")?x:"#"+x).join(" ")}`;
-  if(k==="reel") return `Reel (${c.reel.duration||""})\n\n`+(c.reel.scenes||[]).map(s=>`[${s.time}] Visual: ${s.visual}\nVO: ${s.voiceover}\nOn-screen: ${s.onscreen}`).join("\n\n");
+  if(k==="reel") return `Reel (${c.reel.duration||""})\n\n`+(c.reel.scenes||[]).map(s=>`[${s.time}] Visual: ${s.visual}\nVO: ${s.voiceover}\nOn-screen: ${s.onscreen}`).join("\n\n")+(c.reel.caption?"\n\nCaption:\n"+c.reel.caption:"")+((c.reel.hashtags||[]).length?"\n"+(c.reel.hashtags||[]).map(x=>String(x).startsWith("#")?x:"#"+x).join(" "):"");
   if(k==="linkedin") return c.linkedin.text;
   if(k==="article") return `${c.article.title}\n${c.article.subtitle||""}\n\n${String(c.article.body||"").replace(/^## /gm,"")}`;
   if(k==="opinion") return `${c.opinion.title}\n\n${c.opinion.lead||""}\n\n${String(c.opinion.body||"").replace(/^## /gm,"")}\n\n${c.opinion.author_line||""}`;
@@ -3034,7 +3039,7 @@ function bind(){
   document.querySelectorAll("[data-pcopy]").forEach(b=>b.onclick=()=>copy(PACKTXT[b.dataset.pcopy]||"",b));
   const inp=$("#in"); if(inp) inp.oninput=()=>{ st.input=inp.value; ls.set("radar-input",inp.value); };
   const ex=$("#ex"); if(ex) ex.onclick=()=>{ st.input=EXAMPLE; ls.set("radar-input",EXAMPLE); render(); };
-  const sur=$("#sur"); if(sur) sur.onclick=()=>{ const t=EVERGREEN[Math.floor(Math.random()*EVERGREEN.length)]; st.input=(st.input.trim()?st.input.trim()+"\n":"")+"- Evergreen topic: "+t; render(); };
+  const sur=$("#sur"); if(sur) sur.onchange=()=>{ const t=sur.value; if(!t) return; st.own=t; st.ideas=[{title:t,hook:t,key_concept:"Evergreen topic",why_now:"An evergreen topic you picked.",analogy:"",source:""}]; st.sel=0; st.content=null; st.err=""; st.ideaMs=0; render(); document.querySelector(".idea.on")?.scrollIntoView({block:"center"}); };
   document.querySelectorAll(".ncard[data-pick]").forEach(c=>{ const tog=()=>{ const k=c.dataset.pick; st.picked.has(k)?st.picked.delete(k):st.picked.add(k); render(); };
     c.onclick=e=>{ if(e.target.closest("a")) return; tog(); }; c.onkeydown=e=>{ if(e.key===" "||e.key==="Enter"){ e.preventDefault(); tog(); } }; });
   const nm=$("#nmore"); if(nm) nm.onclick=()=>{ st.nmore=true; render(); };
@@ -3164,13 +3169,13 @@ Exactly 6 slides, in this order:
 6. kind "cta": headline max 6 words asking to save or share; body max 10 words inviting to follow for more.
 In every headline wrap the 1-2 most important words in **double asterisks**. Write like a person talking: short everyday words, active verbs, no jargon, no emojis or hashtags on the slides. Count the words; never go over the limits.
 "caption": first line is a hook of max 10 words, then 2-3 short lines, then one question; max 60 words in total. "hashtags": 5 relevant hashtags.`,
-    reel:`Create a short-video (reel) script. Reply with only JSON: {"duration":"e.g. 30 s","scenes":[{"time":"0-3 s","visual":"what we see","voiceover":"what is said","onscreen":"short text overlay"}]}. 5-7 scenes; the first 3 seconds must hook.`,
+    reel:`Create a short-video (reel) script. Reply with only JSON: {"duration":"e.g. 30 s","scenes":[{"time":"0-3 s","visual":"what we see","voiceover":"what is said","onscreen":"short text overlay"}],"caption":"post caption: a hook line plus 1-2 short lines, max 40 words","hashtags":["5-8 relevant hashtags"]}. 5-7 scenes; the first 3 seconds must hook.`,
     presentation:`Create a presentation deck. Reply with only JSON: {"title":"deck title","subtitle":"one line","slides":[{"title":"max 8 words","bullets":["3-5 bullets, max 12 words each"],"notes":"speaker notes, 40-80 words"}]}. 8 to 10 slides telling a clear story: context, the key concept explained simply, data from the context, risks, practical takeaways, final slide with the main message.`
   };
   const TEXTF = {
-    linkedin:{keys:["POST"], ask:`Write a LinkedIn post of 150-220 words, short paragraphs, professional but human. Reply in exactly this format:\nPOST:\n<the post>`},
-    article:{keys:["TITLE","SUBTITLE","BODY"], ask:`Write a news-style LinkedIn article of 450-650 words: what happened, why it matters for ordinary savers and investors, context with numbers, what to watch next. Use 2-4 subheadings, each on its own line starting with "## ". Reply in exactly this format:\nTITLE: <headline>\nSUBTITLE: <one-sentence standfirst>\nBODY:\n<article>`},
-    opinion:{keys:["TITLE","LEAD","BODY","AUTHOR"], ask:`Write an opinion piece of 550-750 words in the first person, by an investment-fund professional with 8 years of experience: clear thesis, 2-3 arguments with evidence, a fair counter-argument, conclusion. Opinions about markets, saving habits and financial literacy, never a recommendation to buy a product. Optional subheadings on their own line starting with "## ". Reply in exactly this format:\nTITLE: <headline with a point of view>\nLEAD: <opening paragraph stating the thesis>\nBODY:\n<the piece>\nAUTHOR: <short author line saying views are personal>`},
+    linkedin:{keys:["POST"], ask:`Write a LinkedIn post of 150-220 words, short paragraphs, professional but human. End the post with a blank line and 3-5 relevant hashtags. Reply in exactly this format:\nPOST:\n<the post>`},
+    article:{keys:["TITLE","SUBTITLE","BODY"], ask:`Write a news-style LinkedIn article of 450-650 words: what happened, why it matters for ordinary savers and investors, context with numbers, what to watch next. Use 2-4 subheadings, each on its own line starting with "## ". End the BODY with a blank line and 3-5 relevant hashtags. Reply in exactly this format:\nTITLE: <headline>\nSUBTITLE: <one-sentence standfirst>\nBODY:\n<article>`},
+    opinion:{keys:["TITLE","LEAD","BODY","AUTHOR"], ask:`Write an opinion piece of 550-750 words in the first person, by an investment-fund professional with 8 years of experience: clear thesis, 2-3 arguments with evidence, a fair counter-argument, conclusion. Opinions about markets, saving habits and financial literacy, never a recommendation to buy a product. Optional subheadings on their own line starting with "## ". End the BODY with a blank line and 3-5 relevant hashtags. Reply in exactly this format:\nTITLE: <headline with a point of view>\nLEAD: <opening paragraph stating the thesis>\nBODY:\n<the piece>\nAUTHOR: <short author line saying views are personal>`},
   };
   JSONF.newsletter=`Write an email newsletter of 280-400 words, one idea, one takeaway, written to be laid out in a designed email. Reply with only JSON: {"subject":"max 8 words, makes people open it","preheader":"preview text, max 14 words, adds to the subject","headline":"the headline inside the email, max 12 words","intro":"2-3 sentences that open the story","sections":[{"heading":"max 6 words","text":"60-110 words; separate paragraphs with a line break; you may use **bold** for one key phrase"}],"takeaway":"the one thing to remember, max 25 words","cta":"button text, 2-5 words, e.g. Read the full analysis","ps":"one friendly closing line"}. 2 or 3 sections.`;
   const c={}; const fails=[];
