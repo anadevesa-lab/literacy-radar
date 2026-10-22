@@ -201,7 +201,7 @@ main.wrap{display:flex;flex-direction:column}
 
 .slide .hi{color:var(--slide-hi)}
 .slide:nth-child(even) .hi{color:var(--accent)}
-.slide .foot{margin-top:auto;font-size:var(--t-xs);opacity:.7}
+.slide .foot{margin-top:auto;font-size:var(--t-xs);opacity:.7} .slide .bsign{margin-top:auto;font:700 11px/1.35 var(--bfb,inherit);color:var(--slide-hi,currentColor)} .slide .bsign+.foot{margin-top:8px}
 .out{background:var(--bg);border-radius:var(--r-sm);padding:var(--s4);display:flex;flex-direction:column;gap:var(--s2)}
 .out pre{margin:0;white-space:pre-wrap;font:inherit;font-size:var(--t-sm)}
 .scenes{width:100%;border-collapse:collapse;font-size:var(--t-sm)}
@@ -1901,6 +1901,9 @@ const brandVars=b=>{ const f=fontCSS(b); return `--slide:${b.primary};--slide-in
 const brandMark=b=>b.logo?`<img src="${b.logo}" alt="${esc(b.name)}">`:`<span>${esc(b.name)}</span>`;
 /* the logo sits in the top-right corner of every piece (carousel, reel, deck, LinkedIn, article, newsletter); the kit can switch it off */
 const showLogo=b=>b.showLogo!==false;
+/* the kit website: add https:// when it was typed without it; show it without the protocol */
+const siteURL=u=>{ u=String(u||"").trim(); return !u?"":/^https?:\/\//i.test(u)?u:"https://"+u.replace(/^\/+/,""); };
+const siteHost=u=>String(u||"").trim().replace(/^https?:\/\//i,"").replace(/\/$/,"");
 const logoTR=b=>showLogo(b)?`<span class="bmark${b.logoPlate?" plate":""}">${brandMark(b)}</span>`:"";
 /* suggest a palette from the logo: quantise the pixels, drop near-white and transparent ones, keep the most common distinct colours */
 function paletteFromImage(src){ return new Promise(res=>{ const im=new Image(); im.onload=()=>{ const c=document.createElement("canvas"); c.width=c.height=64; const x=c.getContext("2d"); x.drawImage(im,0,0,64,64);
@@ -1992,10 +1995,10 @@ ${(n.sections||[]).map(s=>`<tr><td class="pad" style="padding:22px 40px 4px">
 ${n.takeaway?`<tr><td class="pad" style="padding:14px 40px 8px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${soft};border-radius:14px"><tr><td style="padding:20px 24px">
   <div style="font:800 12px/1 ${B};letter-spacing:.1em;text-transform:uppercase;color:${b.primary};margin:0 0 8px">${st.lang==="pt"?"A reter":"Key takeaway"}</div>
   <div style="font:700 18px/1.45 ${H};color:${b.ink}">${md(n.takeaway)}</div></td></tr></table></td></tr>`:""}
-${n.cta?`<tr><td class="pad" align="left" style="padding:22px 40px 8px"><a href="${esc(b.url||"#")}" style="display:inline-block;background:${b.primary};color:${on};font:700 16px/1 ${B};text-decoration:none;padding:16px 26px;border-radius:10px">${esc(n.cta)} &rarr;</a></td></tr>`:""}
+${n.cta?`<tr><td class="pad" align="left" style="padding:22px 40px 8px"><a href="${esc(siteURL(b.url)||"#")}" style="display:inline-block;background:${b.primary};color:${on};font:700 16px/1 ${B};text-decoration:none;padding:16px 26px;border-radius:10px">${esc(n.cta)} &rarr;</a></td></tr>`:""}
 ${n.ps?`<tr><td class="pad" style="padding:18px 40px 8px"><p style="margin:0;font:italic 400 15px/1.6 ${B};color:${b.ink}"><b>P.S.</b> ${md(n.ps)}</p></td></tr>`:""}
 <tr><td class="pad" style="padding:32px 40px 36px"><div style="border-top:1px solid ${mix(b.ink,"#FFFFFF",.85)};padding-top:20px;font:400 12px/1.6 ${B};color:${mix(b.ink,"#FFFFFF",.35)}">
-  ${disc?`<p style="margin:0 0 10px">${esc(disc)}</p>`:""}${b.footer?`<p style="margin:0 0 10px">${esc(b.footer)}</p>`:""}
+  ${disc?`<p style="margin:0 0 10px">${esc(disc)}</p>`:""}${b.footer?`<p style="margin:0 0 10px">${esc(b.footer)}</p>`:""}${b.url?`<p style="margin:0 0 10px"><a href="${esc(siteURL(b.url))}" style="color:${b.secondary}">${esc(siteHost(b.url))}</a></p>`:""}
   <p style="margin:0"><a href="#" style="color:${b.secondary}">${st.lang==="pt"?"Cancelar subscrição":"Unsubscribe"}</a></p></div></td></tr>
 </table></td></tr></table></body></html>`;
 }
@@ -2124,7 +2127,7 @@ function carSlide(s, k, n, b, foot){
     ${big?`<span class="big">${esc(big)}</span>`:""}<h4>${hi(head)}</h4>${body?`<p>${kind==="myth"?`<b>${st.lang==="pt"?"Facto":"Fact"}:</b> `:""}${esc(body)}</p>`:""}
     ${kind==="hook"?`<span class="swipe">${st.lang==="pt"?"Desliza":"Swipe"} →</span>`:""}
     ${kind==="cta"?`<span class="acts3"><i>${st.lang==="pt"?"Guardar":"Save"}</i><i>${st.lang==="pt"?"Partilhar":"Share"}</i><i>${st.lang==="pt"?"Seguir":"Follow"}</i></span>`:""}
-    ${foot?`<span class="foot">${esc(foot)}</span>`:""}${logoTR(b)}</div>`;
+    ${kind==="cta"&&b&&(b.footer||b.url)?`<span class="bsign">${b.footer?esc(b.footer):""}${b.footer&&b.url?"<br>":""}${b.url?esc(siteHost(b.url)):""}</span>`:""}${foot?`<span class="foot">${esc(foot)}</span>`:""}${logoTR(b)}</div>`;
 }
 /* switch the client or open the kit editor from right above the content */
 function brandBar(){ const b=brand(); return `<div class="bbar"><span class="label">Design for</span><div class="bchips">${BR.list.map(x=>`<button type="button" class="bchip ${x.id===b.id?"on":""}" data-brand="${esc(x.id)}"><i style="background:${x.primary}"></i><i style="background:${x.secondary}"></i><i style="background:${x.accent}"></i><span>${esc(x.name)}</span></button>`).join("")}</div><button class="btn small" type="button" data-goedit>Edit colours, logo and voice</button></div>`; }
