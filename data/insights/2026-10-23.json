@@ -1,100 +1,178 @@
 {
  "auto": true,
  "date": "2026-10-23",
- "basedOn": "2026-10-23T12:11:21.553Z",
- "generatedAt": "2026-10-23T12:11:27.076Z",
- "resumo": "Global markets wobble as **AI spending fears** and rising oil prices clash with sliding Treasury yields.",
+ "basedOn": "2026-10-23T19:33:35.088Z",
+ "generatedAt": "2026-10-23T19:33:36.821Z",
+ "resumo": "Global markets faced a turbulent week as **AI tech jitters, soaring oil prices, and political concerns** collided.",
  "classes": [
   {
    "nome": "Equities",
    "tendencia": "falling",
    "forca": 1,
-   "leitura": "Tech selloffs and AI jitters pushed major indices lower amid lofty valuations and heavy spending.",
+   "leitura": "Global stock markets tumbled as technology shares suffered a sharp AI selloff and automotive stocks declined.",
    "a_favor": [
-    "Strong earnings beats in specific sectors",
-    "Pension funds logging historical gains"
+    "Strong quarterly corporate profits",
+    "Strategic artificial intelligence integration"
    ],
    "riscos": [
-    "Faltering AI rally and high spending",
-    "Geopolitical tensions and rising oil"
+    "Rising oil prices increasing operational costs",
+    "Widespread technology sector jitters"
    ],
-   "perfil": "Suits investors with a higher risk tolerance and a long-term investment horizon."
+   "perfil": "Suits growth-oriented investors with high risk tolerance."
   },
   {
    "nome": "Government Bonds",
-   "tendencia": "rising",
-   "forca": 1,
-   "leitura": "Treasury yields posted their biggest drop since 2023 as safe-haven demand increased.",
+   "tendencia": "mixed",
+   "forca": 2,
+   "leitura": "Treasury yields rose and bond markets navigated turbulence amid oil price spikes and French political concerns.",
    "a_favor": [
-    "Significant drop in bond yields",
-    "Safe-haven appeal during market stress"
+    "Traditional haven demand returning",
+    "Active municipal and state borrowing"
    ],
    "riscos": [
-    "Short-term debt tilt concerns",
-    "Rising debt and political risks"
+    "Inflation pressures from energy costs",
+    "Uncertainty ahead of interest-rate decisions"
    ],
-   "perfil": "Suits conservative investors seeking regular income and capital preservation."
+   "perfil": "Suits income-seeking investors looking for regular returns."
   },
   {
    "nome": "Commodities",
    "tendencia": "rising",
-   "forca": 1,
-   "leitura": "Oil prices climbed to a five-month high as Middle East tensions intensified.",
+   "forca": 3,
+   "leitura": "Oil prices surged to multi-month highs on Middle East supply concerns, while gold prices dropped below $4,000.",
    "a_favor": [
-    "Oil rising to five-month high",
-    "Surging investment in energy sectors"
+    "Intensifying geopolitical supply concerns",
+    "Rising global energy demand"
    ],
    "riscos": [
-    "Market manipulation accusations",
-    "Supply and geopolitical volatility"
+    "Heightened price volatility",
+    "Potential dampening effect on global economic growth"
    ],
-   "perfil": "Suits experienced investors looking to hedge against inflation and geopolitical shocks."
+   "perfil": "Suits active speculators prepared for high volatility."
   }
  ],
  "temas": [
   "Artificial intelligence market impact",
-  "Bond yield movements",
-  "Oil price fluctuations",
-  "Global economic uncertainty"
+  "Energy price inflation risks",
+  "Government bond yield dynamics",
+  "Corporate earnings and restructuring"
  ],
  "ai": true,
  "brief": {
-  "one_liner": "Tech wobbles and oil prices climb as markets experience a rollercoaster week of AI jitters and economic reality checks.",
+  "one_liner": "Oil prices surged and tech stocks stumbled as global markets caught a cold from a chilly cocktail of AI jitters and geopolitical fears.",
   "number": {
-   "value": "3.8%",
-   "caption": "Euro area inflation rate as tracked by Eurostat"
+   "value": "$117",
+   "caption": "Brent crude price per barrel, hitting its highest level since April."
   },
   "stories": [
    {
-    "i": 11,
-    "title": "Tech Stocks Slide as AI Spending Spooks Wall Street",
-    "whats_going_on": "The tech-heavy Nasdaq fell 2.6% after Meta disclosed further heavy spending commitments on artificial intelligence. Meanwhile, Treasury yields posted their biggest drop since 2023 as investors sought safer assets.",
-    "what_it_means": "Markets are starting to question whether massive corporate spending on AI will deliver quick profits. This split the stock market, with tech slumping while broader segments of the market saw gains.",
-    "why_care": "If you hold broad market index funds or pensions exposed to big tech, high volatility can cause short-term swings in your overall portfolio balance."
+    "i": 7,
+    "title": "Tech wobbles and rising oil give global markets a headache",
+    "whats_going_on": "Global stocks fell sharply as a combination of technology sell-offs, rising oil prices, and market jitters collided at once. Brent crude climbed to $117 a barrel, its highest level since April, amid intensifying supply concerns.",
+    "what_it_means": "When major tech shares slide and energy costs spike simultaneously, it rattles investor confidence across the board. Markets are prone to sudden mood swings when multiple economic pressures overlap.",
+    "why_care": "Broad market dips can unsettle your investment portfolio, while higher oil prices eventually trickle down to everyday fuel and utility bills."
    },
    {
-    "i": 29,
-    "title": "Oil Prices Jump to Five-Month High Amid Mideast Tensions",
-    "whats_going_on": "U.S. oil pushed above $100 a barrel and Brent crude hit a five-month high following heightened geopolitical tensions and warnings from Iran. President Trump accused Iran of attempting to manipulate the oil market.",
-    "what_it_means": "Higher crude oil prices directly feed into the cost of fuel, transport, and energy production globally. When oil spikes, it adds an upward pressure on everyday household bills.",
-    "why_care": "Costlier oil can eventually filter down to higher prices at the petrol pump and push up wider inflation figures, squeezing your monthly disposable income."
+    "i": 38,
+    "title": "Consumer sentiment slips to a five-month low on high prices",
+    "whats_going_on": "US consumer sentiment edged down to a five-month low of 48 in October, falling from 48.1 in September. The University of Michigan index showed that stubborn living costs and rising interest rates continue to depress public morale.",
+    "what_it_means": "Even as economies grow, everyday people feel the heavy pinch of cumulative price rises over recent years. When households feel financially squeezed, they tend to pull back on discretionary spending.",
+    "why_care": "It is a reminder that while headline inflation figures cool down, the everyday cost of living still weighs heavily on household budgets."
    },
    {
-    "i": 32,
-    "title": "French Borrowing Costs Flash Fresh Euro Zone Warning Signs",
-    "whats_going_On": "French borrowing costs surged as mounting national debt and political risks sparked investor concern. Analysts are watching closely to see if this debt stress could spread across the wider euro zone.",
-    "what_it_means": "When a major European government sees its borrowing costs rise, it often reflects broader nervousness about public finances in the bloc. Credit rating agencies are keeping a sharp eye on these developments.",
-    "why_care": "Turmoil in European government debt markets can indirectly influence regional borrowing conditions and broader investor sentiment across the continent."
+    "i": 60,
+    "title": "American Express cuts 5 per cent of jobs to ready for AI",
+    "whats_going_on": "American Express announced it is cutting 5% of its workforce as part of a restructuring plan to prepare for artificial intelligence. The firm is taking a $336 million restructuring charge in the quarter to adapt its operations.",
+    "what_it_means": "Major corporations are increasingly restructuring their teams to integrate new automation technologies. Workforce shifts in the financial sector highlight how rapidly corporate strategies are evolving around tech.",
+    "why_care": "Employment trends in major financial institutions offer a window into how automation is gradually reshaping the wider corporate landscape."
    },
    {
-    "i": 57,
-    "title": "British Retail Sales Slip as Households Tighten Purse Strings",
-    "whats_going_On": "Retail sales in Great Britain fell as struggling households cut back on spending amid mounting economic pressures. This negative update comes just ahead of the upcoming national budget announcement.",
-    "what_it_means": "Consumers are feeling the pinch from the cost of living and shifting economic confidence, leading them to rein in discretionary purchases. Policymakers monitor these trends to gauge the underlying health of the high street.",
-    "why_care": "A slowdown in consumer spending is a classic sign of households protecting their cash buffers as everyday essentials eat further into monthly pay packets."
+    "i": 51,
+    "title": "Treasury yields rise as investors seek safety from French bond turmoil",
+    "whats_going_on": "US Treasury yields rose while eurozone bond yields shifted as investors sought safe havens. Market participants rushed to secure assets amid ongoing concerns surrounding French government debt.",
+    "what_it_means": "Uncertainty in European politics and public finances often triggers a dash for safer, highly reliable government debt. Bond markets closely monitor these sovereign debt wobbles to price risk accordingly.",
+    "why_care": "Shifts in government bond yields quietly influence the wider borrowing costs that eventually feed into mortgages and loans."
    }
   ],
-  "basedOn": "2026-10-23T12:11:21.553Z",
-  "generatedAt": "2026-10-23T12:11:37.727Z"
+  "basedOn": "2026-10-23T19:33:35.088Z",
+  "generatedAt": "2026-10-23T19:34:30.336Z"
+ },
+ "pack": {
+  "carousel": {
+   "title": "Why rising oil prices affect your wallet",
+   "slides": [
+    {
+     "kind": "hook",
+     "h": "Why **oil prices** just rattled markets",
+     "big": "",
+     "t": ""
+    },
+    {
+     "kind": "stat",
+     "h": "Brent crude reaches a **fresh peak**",
+     "big": "$117",
+     "t": "Oil climbed to its highest level since April amid supply concerns."
+    },
+    {
+     "kind": "point",
+     "h": "Energy costs **feed inflation**",
+     "big": "",
+     "t": "Expensive crude oil quickly trickles down to household fuel and utility bills."
+    },
+    {
+     "kind": "myth",
+     "h": "\"Lower inflation means **falling prices**\"",
+     "big": "",
+     "t": "Slowing inflation only means prices climb more slowly, not that goods become cheaper."
+    },
+    {
+     "kind": "point",
+     "h": "Protect your **household budget**",
+     "big": "",
+     "t": "Anticipate higher energy bills and keep your emergency savings readily accessible."
+    },
+    {
+     "kind": "cta",
+     "h": "**Share** this with a friend",
+     "big": "",
+     "t": "Follow PaperMint for freshly minted finance updates every day."
+    }
+   ]
+  },
+  "linkedin": "Global markets had quite the headache today, and your monthly budget might feel the ripple effects.\n\nBrent crude oil jumped to $117 a barrel, marking its highest price since April. At the same time, tech shares took a tumble and US consumer sentiment slipped to a five-month low of 48. Stubborn living costs and borrowing rates continue to test household resilience.\n\nWhy does a barrel of crude matter if you do not trade commodities? Because dearer oil rarely stays confined to trading floors. It works its way into petrol pumps, domestic heating bills, and supermarket transport costs.\n\nMeanwhile, government bond yields are shifting as investors seek safe ground amidst French debt worries. These quiet movements in sovereign bonds ultimately influence the rates lenders charge on everyday mortgages.\n\nMarket turbulence can feel unsettling, but panicking rarely helps your pocket. Focusing on what you can control—such as maintaining an emergency fund and trimming unnecessary recurring expenses—keeps your finances steady whatever the markets do.\n\n#PersonalFinance #EconomyNews #SmartSaving",
+  "reel": {
+   "hook": "Oil just jumped to $117. Here is what that means.",
+   "script": [
+    "Oil prices have surged to $117 a barrel, their highest mark since April.",
+    "At the same time, global stock markets are wobbling under tech sell-offs.",
+    "When crude climbs this fast, higher petrol and utility bills usually follow.",
+    "It reminds us that cooling headline inflation does not mean life is cheaper.",
+    "Stay calm, check your utility plans, and keep your emergency buffer intact."
+   ],
+   "caption": "Crude oil is at a multi-month high. Here is how global market moves quietly reach your household budget."
+  },
+  "faq": [
+   {
+    "q": "Why does the price of oil affect my daily budget?",
+    "a": "Crude oil powers transport, manufacturing, and heating across the global economy. When oil prices surge, businesses face higher operating costs and pass them onto consumers through pricier fuel, transport, and goods. Over time, that pressure shows up directly in your household utility and shopping bills."
+   },
+   {
+    "q": "What caused the recent drop in global stock markets?",
+    "a": "A wave of technology stock sell-offs coincided with surging oil prices and broader political worries. Investors grew cautious about corporate earnings and persistent inflationary pressures. When multiple concerns happen at once, markets often react with short-term price drops."
+   },
+   {
+    "q": "Why is consumer sentiment still falling if inflation is cooling?",
+    "a": "Slowing inflation simply means prices are rising at a calmer pace, not returning to past levels. Everyday necessities such as groceries, energy, and loan payments remain significantly higher than they were a few years ago. That ongoing cumulative pressure keeps household confidence subdued."
+   },
+   {
+    "q": "Why do French government bond troubles matter to savers elsewhere?",
+    "a": "Government bonds set the baseline risk-free borrowing cost for entire economies. When concerns emerge over sovereign debt, yields shift as investors move money to safer assets. Those changing yields eventually filter through into the interest rates banks charge on personal loans and mortgages."
+   },
+   {
+    "q": "Why are major financial firms cutting jobs to prepare for AI?",
+    "a": "Institutions like American Express are restructuring their operations to integrate automated tools and cut long-term administrative costs. Firms incur upfront restructuring charges to modernise their workforce. It highlights how automation is steadily transforming routine roles across the financial services sector."
+   }
+  ],
+  "generatedAt": "2026-10-23T19:35:21.843Z"
  }
 }
