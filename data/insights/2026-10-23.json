@@ -1,0 +1,100 @@
+{
+ "auto": true,
+ "date": "2026-10-23",
+ "basedOn": "2026-10-23T12:11:21.553Z",
+ "generatedAt": "2026-10-23T12:11:27.076Z",
+ "resumo": "Global markets wobble as **AI spending fears** and rising oil prices clash with sliding Treasury yields.",
+ "classes": [
+  {
+   "nome": "Equities",
+   "tendencia": "falling",
+   "forca": 1,
+   "leitura": "Tech selloffs and AI jitters pushed major indices lower amid lofty valuations and heavy spending.",
+   "a_favor": [
+    "Strong earnings beats in specific sectors",
+    "Pension funds logging historical gains"
+   ],
+   "riscos": [
+    "Faltering AI rally and high spending",
+    "Geopolitical tensions and rising oil"
+   ],
+   "perfil": "Suits investors with a higher risk tolerance and a long-term investment horizon."
+  },
+  {
+   "nome": "Government Bonds",
+   "tendencia": "rising",
+   "forca": 1,
+   "leitura": "Treasury yields posted their biggest drop since 2023 as safe-haven demand increased.",
+   "a_favor": [
+    "Significant drop in bond yields",
+    "Safe-haven appeal during market stress"
+   ],
+   "riscos": [
+    "Short-term debt tilt concerns",
+    "Rising debt and political risks"
+   ],
+   "perfil": "Suits conservative investors seeking regular income and capital preservation."
+  },
+  {
+   "nome": "Commodities",
+   "tendencia": "rising",
+   "forca": 1,
+   "leitura": "Oil prices climbed to a five-month high as Middle East tensions intensified.",
+   "a_favor": [
+    "Oil rising to five-month high",
+    "Surging investment in energy sectors"
+   ],
+   "riscos": [
+    "Market manipulation accusations",
+    "Supply and geopolitical volatility"
+   ],
+   "perfil": "Suits experienced investors looking to hedge against inflation and geopolitical shocks."
+  }
+ ],
+ "temas": [
+  "Artificial intelligence market impact",
+  "Bond yield movements",
+  "Oil price fluctuations",
+  "Global economic uncertainty"
+ ],
+ "ai": true,
+ "brief": {
+  "one_liner": "Tech wobbles and oil prices climb as markets experience a rollercoaster week of AI jitters and economic reality checks.",
+  "number": {
+   "value": "3.8%",
+   "caption": "Euro area inflation rate as tracked by Eurostat"
+  },
+  "stories": [
+   {
+    "i": 11,
+    "title": "Tech Stocks Slide as AI Spending Spooks Wall Street",
+    "whats_going_on": "The tech-heavy Nasdaq fell 2.6% after Meta disclosed further heavy spending commitments on artificial intelligence. Meanwhile, Treasury yields posted their biggest drop since 2023 as investors sought safer assets.",
+    "what_it_means": "Markets are starting to question whether massive corporate spending on AI will deliver quick profits. This split the stock market, with tech slumping while broader segments of the market saw gains.",
+    "why_care": "If you hold broad market index funds or pensions exposed to big tech, high volatility can cause short-term swings in your overall portfolio balance."
+   },
+   {
+    "i": 29,
+    "title": "Oil Prices Jump to Five-Month High Amid Mideast Tensions",
+    "whats_going_on": "U.S. oil pushed above $100 a barrel and Brent crude hit a five-month high following heightened geopolitical tensions and warnings from Iran. President Trump accused Iran of attempting to manipulate the oil market.",
+    "what_it_means": "Higher crude oil prices directly feed into the cost of fuel, transport, and energy production globally. When oil spikes, it adds an upward pressure on everyday household bills.",
+    "why_care": "Costlier oil can eventually filter down to higher prices at the petrol pump and push up wider inflation figures, squeezing your monthly disposable income."
+   },
+   {
+    "i": 32,
+    "title": "French Borrowing Costs Flash Fresh Euro Zone Warning Signs",
+    "whats_going_On": "French borrowing costs surged as mounting national debt and political risks sparked investor concern. Analysts are watching closely to see if this debt stress could spread across the wider euro zone.",
+    "what_it_means": "When a major European government sees its borrowing costs rise, it often reflects broader nervousness about public finances in the bloc. Credit rating agencies are keeping a sharp eye on these developments.",
+    "why_care": "Turmoil in European government debt markets can indirectly influence regional borrowing conditions and broader investor sentiment across the continent."
+   },
+   {
+    "i": 57,
+    "title": "British Retail Sales Slip as Households Tighten Purse Strings",
+    "whats_going_On": "Retail sales in Great Britain fell as struggling households cut back on spending amid mounting economic pressures. This negative update comes just ahead of the upcoming national budget announcement.",
+    "what_it_means": "Consumers are feeling the pinch from the cost of living and shifting economic confidence, leading them to rein in discretionary purchases. Policymakers monitor these trends to gauge the underlying health of the high street.",
+    "why_care": "A slowdown in consumer spending is a classic sign of households protecting their cash buffers as everyday essentials eat further into monthly pay packets."
+   }
+  ],
+  "basedOn": "2026-10-23T12:11:21.553Z",
+  "generatedAt": "2026-10-23T12:11:37.727Z"
+ }
+}
