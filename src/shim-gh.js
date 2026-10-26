@@ -98,41 +98,70 @@
   // free relay (Cloudflare Worker) that holds PaperMint's key: visitors need no key of their own
   const PROXY = "__MINT_AI_PROXY__".startsWith("http") ? "__MINT_AI_PROXY__" : "";
   window.MINT_AI_PROXY = PROXY;
-  // owner access by private link: https://…/literacy-radar/#studio=<secret>. The site keeps only a SHA-256 fingerprint of the secret;
-  // the part after # never reaches any server. Opening the link once marks this browser as the owner's. New link = new fingerprint here.
-  const OWNER_HASH = "e678f46b40afe964c79f1dc4025dfb0b6dc4ef245c0e6e6bd9a09533e3b11791";
-  const isOwner = () => { try{ return localStorage.getItem("mint-owner") === OWNER_HASH && !!OWNER_HASH; }catch{ return false; } };
-  window.MINT_OWNER = isOwner();
-  // the AI key, locked with the private link (AES-GCM, key from PBKDF2): useless without the link
-  const ENC_KEY = "";
-  const b64 = u => btoa(String.fromCharCode(...u)), unb64 = t => Uint8Array.from(atob(t), c => c.charCodeAt(0));
-  const kdf = async (pw, salt) => crypto.subtle.deriveKey({ name:"PBKDF2", salt, iterations:250000, hash:"SHA-256" }, await crypto.subtle.importKey("raw", new TextEncoder().encode(pw), "PBKDF2", false, ["deriveKey"]), { name:"AES-GCM", length:256 }, false, ["encrypt","decrypt"]);
-  async function seal(text, pw){ const salt = crypto.getRandomValues(new Uint8Array(16)), iv = crypto.getRandomValues(new Uint8Array(12));
-    const ct = new Uint8Array(await crypto.subtle.encrypt({ name:"AES-GCM", iv }, await kdf(pw, salt), new TextEncoder().encode(text)));
-    return b64(new Uint8Array([...salt, ...iv, ...ct])); }
-  async function unseal(code, pw){ const u = unb64(code); const salt = u.slice(0,16), iv = u.slice(16,28), ct = u.slice(28);
-    return new TextDecoder().decode(await crypto.subtle.decrypt({ name:"AES-GCM", iv }, await kdf(pw, salt), ct)); }
-  const sha = async t => [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t)))].map(b => b.toString(16).padStart(2,"0")).join("");
-  const linkFp = t => sha("mint-link-v1|" + t);
-  const LINK = (location.hash.match(/[#&]studio=([A-Za-z0-9_-]{16,})/) || [])[1];
-  if(LINK){ history.replaceState(null, "", location.pathname + location.search);   // the secret leaves the address bar at once
-    linkFp(LINK).then(async h => {
-      if(h !== OWNER_HASH){ addEventListener("DOMContentLoaded", () => setTimeout(() => loginPanel("old"), 300)); return; }
-      try{ localStorage.setItem("mint-owner", h); }catch{}
-      if(ENC_KEY && !getKey()){ try{ localStorage.setItem(KEY, await unseal(ENC_KEY, LINK)); }catch{} }
-      if(!window.MINT_OWNER) location.reload(); }); }
-  // the Studio is private: visitors get a short note instead of a sign-in form
-  function loginPanel(mode){
+  // ---------- owner sign-in: Firebase Authentication (email + password, reset link by email) ----------
+  // The config below is public by design (it identifies the project, it is not a secret). Only OWNER_EMAIL, once its address is
+  // confirmed, opens the Studio. Sign-in state lives in Firebase; the "mint-owner" flag lets the page draw the Studio at once.
+  const FB = { apiKey:"AIzaSyCqHIvLrAKALvZu11DHpO8CZRCxtjC7d2s", authDomain:"papermint-d0b5e.firebaseapp.com", projectId:"papermint-d0b5e", appId:"1:650029368833:web:ecdaa7c893dd94cd31a200" };
+  const OWNER_EMAIL = "ana.devesa@gmail.com";
+  const FBV = "10.12.2", SITE = location.origin + location.pathname;
+  let fbP = null;
+  const fb = () => fbP || (fbP = Promise.all([import(`https://www.gstatic.com/firebasejs/${FBV}/firebase-app.js`), import(`https://www.gstatic.com/firebasejs/${FBV}/firebase-auth.js`)])
+    .then(([A, U]) => { const auth = U.getAuth(A.initializeApp(FB)); auth.languageCode = "en"; return { auth, U }; }).catch(e => { fbP = null; throw e; }));
+  const isOwnerUser = u => !!u && (u.email || "").toLowerCase() === OWNER_EMAIL && u.emailVerified;
+  window.MINT_OWNER = (() => { try{ return localStorage.getItem("mint-owner") === "1"; }catch{ return false; } })();
+  // keep the flag honest: if Firebase says this browser is no longer signed in as the owner, lock the Studio again
+  fb().then(({ auth, U }) => U.onAuthStateChanged(auth, u => { const ok = isOwnerUser(u);
+    try{ ok ? localStorage.setItem("mint-owner", "1") : localStorage.removeItem("mint-owner"); }catch{}
+    if(ok !== window.MINT_OWNER) location.reload(); })).catch(() => {});
+  const ERR = c => ({ "auth/invalid-credential":"Email or password not recognised.", "auth/wrong-password":"Email or password not recognised.", "auth/user-not-found":"Email or password not recognised.",
+    "auth/invalid-email":"That email address doesn't look right.", "auth/too-many-requests":"Too many attempts. Wait a few minutes, or reset your password.",
+    "auth/email-already-in-use":"This email already has an account. Sign in, or use Forgot password.", "auth/weak-password":"Use at least 8 characters.",
+    "auth/network-request-failed":"No connection. Check your internet and try again." })[c] || "Something went wrong. Try again.";
+  function loginPanel(mode = "in"){
     let el = document.getElementById("aiPanel");
-    if(!el){ el = document.createElement("div"); el.id = "aiPanel"; el.className = "aipanel"; el.setAttribute("role","dialog"); el.setAttribute("aria-label","Private Studio"); document.body.appendChild(el); }
-    el.innerHTML = `<b>${mode === "old" ? "This link no longer works" : "The Studio is private"}</b>
-      <p>${mode === "old" ? "It was replaced by a newer private link. Use the latest link you saved." : "It opens with the owner's private link. Saved it? Open it from your bookmarks and the Studio unlocks in this browser."}</p>
-      <div class="row"><button class="btn" type="button" data-ow="close">Close</button></div>`;
+    if(!el){ el = document.createElement("div"); el.id = "aiPanel"; el.className = "aipanel"; el.setAttribute("role","dialog"); document.body.appendChild(el); }
+    el.setAttribute("aria-label", "Sign in");
+    const T = { in:["Sign in to the Studio","Use your email and password."],
+      forgot:["Reset your password","Type your email. We'll send you a link to choose a new password."],
+      create:["Create your account","First time here? Choose a password for the Studio owner's email. We'll send a link to confirm the address."] }[mode];
+    el.innerHTML = `<b>${T[0]}</b><p>${T[1]}</p>
+      <label class="field"><span class="label">Email</span><input id="owEmail" type="email" autocomplete="username" value="${esc2(window.__owEmail || "")}"></label>
+      ${mode !== "forgot" ? `<label class="field"><span class="label">Password</span><input id="owPass" type="password" autocomplete="${mode === "create" ? "new-password" : "current-password"}"></label>` : ""}
+      <p id="owMsg" class="muted" role="status" style="font-size:.85rem"></p>
+      <div class="row"><button class="btn primary" type="button" data-ow="go">${{ in:"Sign in", forgot:"Send reset link", create:"Create account" }[mode]}</button><button class="btn" type="button" data-ow="close">Close</button></div>
+      <div class="row" style="font-size:.85rem">${mode === "in" ? `<button class="btn ghost small" type="button" data-ow="forgot">Forgot password?</button><button class="btn ghost small" type="button" data-ow="create">First time? Create account</button>` : `<button class="btn ghost small" type="button" data-ow="in">Back to sign in</button>`}</div>`;
     closable(el, () => el.remove());
-    el.querySelector('[data-ow="close"]').focus();
+    const msg = el.querySelector("#owMsg"), go = el.querySelector('[data-ow="go"]');
+    el.querySelectorAll('[data-ow="forgot"],[data-ow="create"],[data-ow="in"]').forEach(b => b.onclick = () => { window.__owEmail = el.querySelector("#owEmail").value; loginPanel(b.dataset.ow); });
+    const run = async () => {
+      const e = el.querySelector("#owEmail").value.trim(), p = el.querySelector("#owPass")?.value || "";
+      if(!e.includes("@")){ msg.textContent = "Type your email."; return; }
+      if(mode !== "forgot" && p.length < (mode === "create" ? 8 : 1)){ msg.textContent = mode === "create" ? "Use a password with at least 8 characters." : "Type your password."; return; }
+      go.disabled = true; msg.textContent = "One moment…";
+      try{
+        const { auth, U } = await fb();
+        if(mode === "forgot"){ await U.sendPasswordResetEmail(auth, e, { url: SITE }).catch(x => { if(x?.code !== "auth/user-not-found") throw x; });
+          msg.textContent = "If this email has an account, a reset link is on its way. Check your inbox (and spam)."; go.disabled = false; return; }
+        if(mode === "create"){
+          if(e.toLowerCase() !== OWNER_EMAIL){ msg.textContent = "This Studio is private: only its owner can create an account."; go.disabled = false; return; }
+          const c = await U.createUserWithEmailAndPassword(auth, e, p); await U.sendEmailVerification(c.user, { url: SITE });
+          msg.textContent = "Account created. We sent a link to your email: open it to confirm, then sign in here."; await U.signOut(auth); go.disabled = false; return; }
+        const c = await U.signInWithEmailAndPassword(auth, e, p);
+        if(!isOwnerUser(c.user)){
+          if((c.user.email || "").toLowerCase() === OWNER_EMAIL && !c.user.emailVerified){ await U.sendEmailVerification(c.user, { url: SITE }).catch(() => {}); await U.signOut(auth);
+            msg.textContent = "Confirm your email first: we sent a new link to your inbox. Then sign in again."; go.disabled = false; return; }
+          await U.signOut(auth); msg.textContent = "This account can't open the Studio."; go.disabled = false; return; }
+        try{ localStorage.setItem("mint-owner", "1"); }catch{}
+        msg.textContent = "Welcome back. Opening the Studio…"; setTimeout(() => { location.hash = ""; location.reload(); }, 700);
+      }catch(x){ msg.textContent = x?.code ? ERR(x.code) : "Couldn't reach the sign-in service. Check your connection."; go.disabled = false; }
+    };
+    go.onclick = run; el.querySelectorAll("input").forEach(i => i.onkeydown = ev => { if(ev.key === "Enter") run(); });
+    el.querySelector("#owEmail").focus();
   }
+  const esc2 = s => String(s).replace(/[&<>"]/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" })[c]);
   window.MINT_LOGIN = loginPanel;
-  window.MINT_LOGOUT = () => { try{ localStorage.removeItem("mint-owner"); }catch{} location.reload(); };
+  window.MINT_LOGOUT = async () => { try{ localStorage.removeItem("mint-owner"); }catch{} try{ const { auth, U } = await fb(); await U.signOut(auth); }catch{} location.reload(); };
+  if(/owner|login/.test(location.hash) && !window.MINT_OWNER) addEventListener("DOMContentLoaded", () => setTimeout(() => loginPanel(/reset/.test(location.hash) ? "forgot" : "in"), 300));
   if(!PROXY) window.RADAR_AI_KEY = () => keyPanel();
   const toText = input => typeof input === "string" ? input : (input || []).map(t => t.content).join("\n\n");
   const MODELS = ["gemini-flash-latest", "gemini-2.5-flash", "gemini-flash-lite-latest", "gemini-2.5-flash-lite"];
