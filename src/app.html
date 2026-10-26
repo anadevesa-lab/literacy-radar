@@ -1678,6 +1678,8 @@ BR.list.forEach(b=>{ if(b.logo&&!b.logoTone) logoToneOf(b.logo).then(t=>{ if(!t)
 // kits saved before brand voice existed get their preset's voice
 BR.list.forEach(b=>{ const p=BRAND_PRESETS.find(x=>x.id===b.id); if(p&&b.voice==null){ b.voice=p.voice; b.avoid=p.avoid; } });
 const saveBrands=()=>{ try{ localStorage.setItem("mint-brands",JSON.stringify(BR.list)); }catch{ BR.msg="Couldn't save: this browser's storage is full. Use a smaller logo or delete an old kit."; toast(BR.msg); } ls.set("mint-brand",BR.active); };
+// logos are transparent by default: switch off the white plate once for kits saved before (it can be ticked again in the kit)
+BR.list.forEach(b=>{ if(b.logoPlateV===2) return; b.logoPlate=false; b.logoPlateV=2; saveBrands(); });
 const brandById=id=>BR.list.find(b=>b.id===id);
 const brand=()=>brandById(BR.active)||BR.list[0]||BRAND_PRESETS[0];
 const hexRGB=h=>{ h=String(h||"#000").replace("#",""); if(h.length===3) h=h.split("").map(c=>c+c).join(""); const n=parseInt(h,16)||0; return [n>>16&255,n>>8&255,n&255]; };
