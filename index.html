@@ -1711,7 +1711,7 @@ header.top,body.solid header.top{background:#FFFFFF!important;-webkit-backdrop-f
       try{
         const { auth, U } = await fb();
         if(mode === "forgot"){ await U.sendPasswordResetEmail(auth, e, { url: SITE }).catch(x => { if(x?.code !== "auth/user-not-found") throw x; });
-          msg.textContent = "If this email has an account, a reset link is on its way. Check your inbox (and spam)."; go.disabled = false; return; }
+          msg.textContent = "If this email has an account, a reset link is on its way. Check your inbox (and spam). Never created an account here? Go back and use \"First time? Create account\"."; go.disabled = false; return; }
         if(mode === "create"){
           if(e.toLowerCase() !== OWNER_EMAIL){ msg.textContent = "This Studio is private: only its owner can create an account."; go.disabled = false; return; }
           const c = await U.createUserWithEmailAndPassword(auth, e, p); await U.sendEmailVerification(c.user, { url: SITE });
@@ -1723,7 +1723,8 @@ header.top,body.solid header.top{background:#FFFFFF!important;-webkit-backdrop-f
           await U.signOut(auth); msg.textContent = "This account can't open the Studio."; go.disabled = false; return; }
         try{ localStorage.setItem("mint-owner", "1"); }catch{}
         msg.textContent = "Welcome back. Opening the Studio…"; setTimeout(() => { location.hash = ""; location.reload(); }, 700);
-      }catch(x){ msg.textContent = x?.code ? ERR(x.code) : "Couldn't reach the sign-in service. Check your connection."; go.disabled = false; }
+      }catch(x){ msg.textContent = x?.code ? ERR(x.code) : "Couldn't reach the sign-in service. Check your connection."; go.disabled = false;
+        if(mode === "in" && /invalid-credential|user-not-found/.test(x?.code || "") && e.toLowerCase() === OWNER_EMAIL) msg.textContent += " No account yet? Use \"First time? Create account\" below."; }
     };
     go.onclick = run; el.querySelectorAll("input").forEach(i => i.onkeydown = ev => { if(ev.key === "Enter") run(); });
     el.querySelector("#owEmail").focus();
