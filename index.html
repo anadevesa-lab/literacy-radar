@@ -1888,7 +1888,7 @@ const BR={ list:(()=>{ try{ const l=JSON.parse(localStorage.getItem("mint-brands
 // logos saved before uploads were resized: shrink them to 400 px PNG to free browser storage
 BR.list.forEach(b=>{ if(!b.logo||b.logo.length<200000||!/^data:image\/(png|jpeg|webp)/.test(b.logo)) return; const im=new Image(); im.onload=()=>{ const k=Math.min(1,400/Math.max(im.width,im.height)), c=document.createElement("canvas"); c.width=Math.max(1,Math.round(im.width*k)); c.height=Math.max(1,Math.round(im.height*k)); c.getContext("2d").drawImage(im,0,0,c.width,c.height); b.logo=c.toDataURL("image/png"); saveBrands(); }; im.src=b.logo; });
 // logos saved on a solid black or white box: make the box transparent once (the original is kept to undo)
-BR.list.forEach(b=>{ if(!b.logo||b.logoBgDone) return; clearLogoBg(b.logo).then(u=>{ b.logoBgDone=true; if(u){ b.logoOrig=b.logo; b.logo=u; } saveBrands(); try{ render(); }catch{} }); });
+BR.list.forEach(b=>{ if(!b.logo||b.logoBgDone===2) return; clearLogoBg(b.logo).then(u=>{ b.logoBgDone=2; if(u){ b.logoOrig=b.logo; b.logo=u; } saveBrands(); try{ render(); }catch{} }); });
 // logos saved before tone detection: find out whether they are light (white) or dark
 BR.list.forEach(b=>{ if(b.logo&&!b.logoTone) logoToneOf(b.logo).then(t=>{ if(!t) return; b.logoTone=t; saveBrands(); try{ render(); }catch{} }); });
 // kits saved before brand voice existed get their preset's voice
@@ -1913,13 +1913,13 @@ const siteURL=u=>{ u=String(u||"").trim(); return !u?"":/^https?:\/\//i.test(u)?
 /* is the logo light (white or pale)? used for the colour message only; logos always stay transparent */
 function logoToneOf(src){ return new Promise(res=>{ if(!src) return res(""); const im=new Image(); im.onload=()=>{ try{ const c=document.createElement("canvas"); c.width=c.height=48; const x=c.getContext("2d"); x.drawImage(im,0,0,48,48); const d=x.getImageData(0,0,48,48).data; let n=0,s=0; for(let i=0;i<d.length;i+=4){ if(d[i+3]<60) continue; n++; s+=(.2126*d[i]+.7152*d[i+1]+.0722*d[i+2])/255; } res(n&&s/n>.82?"light":"dark"); }catch{ res(""); } }; im.onerror=()=>res(""); im.src=src; }); }
 /* logos that arrive on a solid black or white box (JPG, flattened PNG): turn that background colour into transparency,
-   keeping anti-aliased edges soft (colour-to-alpha). Only when all four corners share one near-black or near-white opaque colour. */
+   keeping anti-aliased edges soft (colour-to-alpha). Only when all four corners share one dark or light, nearly grey, opaque colour (not a coloured icon tile). */
 function clearLogoBg(src){ return new Promise(res=>{ if(!src||!/^data:image\/(png|jpe?g|webp)/.test(src)) return res(null); const im=new Image();
   im.onload=()=>{ try{ const c=document.createElement("canvas"); c.width=im.naturalWidth; c.height=im.naturalHeight; const x=c.getContext("2d"); x.drawImage(im,0,0);
     const W=c.width,H=c.height, id=x.getImageData(0,0,W,H), d=id.data, px=(i,j)=>{ const k=(j*W+i)*4; return [d[k],d[k+1],d[k+2],d[k+3]]; };
     const cs=[px(0,0),px(W-1,0),px(0,H-1),px(W-1,H-1)]; if(cs.some(q=>q[3]<250)) return res(null);
     const bg=cs[0]; if(cs.some(q=>Math.abs(q[0]-bg[0])+Math.abs(q[1]-bg[1])+Math.abs(q[2]-bg[2])>30)) return res(null);
-    const mx=Math.max(bg[0],bg[1],bg[2]), mn=Math.min(bg[0],bg[1],bg[2]); if(!(mx<=32||mn>=228)) return res(null);
+    const mx=Math.max(bg[0],bg[1],bg[2]), mn=Math.min(bg[0],bg[1],bg[2]); if(mx-mn>35||(mx>70&&mn<215)) return res(null);
     for(let k=0;k<d.length;k+=4){ let a=0; for(let n=0;n<3;n++){ const v=d[k+n], b0=bg[n]; const t=v>b0?(v-b0)/(255-b0||1):v<b0?(b0-v)/(b0||1):0; if(t>a) a=t; }
       a=Math.min(1,a); if(a<.04){ d[k+3]=0; continue; }
       for(let n=0;n<3;n++) d[k+n]=Math.max(0,Math.min(255,Math.round((d[k+n]-bg[n])/a+bg[n]))); d[k+3]=Math.round(d[k+3]*a); }
@@ -1983,9 +1983,9 @@ function bindBrand(){
   const rs=$("#breset"); if(rs) rs.onclick=()=>{ Object.assign(b,{...BRAND_PRESETS[0]},{logo:b.logo}); if(!b.logo) delete b.logo; saveBrands(); render(); toast("PaperMint colours restored"); };
   document.querySelectorAll("[data-goedit]").forEach(x=>x.onclick=()=>{ BR.edit=true; render(); document.querySelector(".brandkit")?.scrollIntoView({behavior:"smooth",block:"start"}); });
   const lg=$("#blogo"); if(lg) lg.onchange=()=>{ const fl=lg.files?.[0]; if(!fl) return; if(fl.size>2048*1024){ BR.msg="That logo is over 2 MB. Export a smaller version and try again."; return render(); }
-    const r=new FileReader(); r.onload=()=>{ if(fl.type==="image/svg+xml") return logoToneOf(r.result).then(t=>{ b.logoTone=t; upd("logo",r.result); }); const im=new Image(); im.onload=()=>{ const k=Math.min(1,400/Math.max(im.width,im.height)), c=document.createElement("canvas"); c.width=Math.max(1,Math.round(im.width*k)); c.height=Math.max(1,Math.round(im.height*k)); c.getContext("2d").drawImage(im,0,0,c.width,c.height); const u0=c.toDataURL("image/png"); clearLogoBg(u0).then(cl=>{ const u=cl||u0; b.logoBgDone=true; if(cl) b.logoOrig=u0; else delete b.logoOrig; logoToneOf(u).then(t=>{ b.logoTone=t; upd("logo",u); if(cl) toast("Logo background made transparent"); }); }); }; im.onerror=()=>{ BR.msg="Couldn't read this image. Try a PNG or SVG."; render(); }; im.src=r.result; }; r.readAsDataURL(fl); };
+    const r=new FileReader(); r.onload=()=>{ if(fl.type==="image/svg+xml") return logoToneOf(r.result).then(t=>{ b.logoTone=t; upd("logo",r.result); }); const im=new Image(); im.onload=()=>{ const k=Math.min(1,400/Math.max(im.width,im.height)), c=document.createElement("canvas"); c.width=Math.max(1,Math.round(im.width*k)); c.height=Math.max(1,Math.round(im.height*k)); c.getContext("2d").drawImage(im,0,0,c.width,c.height); const u0=c.toDataURL("image/png"); clearLogoBg(u0).then(cl=>{ const u=cl||u0; b.logoBgDone=2; if(cl) b.logoOrig=u0; else delete b.logoOrig; logoToneOf(u).then(t=>{ b.logoTone=t; upd("logo",u); if(cl) toast("Logo background made transparent"); }); }); }; im.onerror=()=>{ BR.msg="Couldn't read this image. Try a PNG or SVG."; render(); }; im.src=r.result; }; r.readAsDataURL(fl); };
   const nl=$("#bnologo"); if(nl) nl.onclick=()=>{ delete b.logo; delete b.logoOrig; saveBrands(); render(); };
-  const lr=$("#blogorig"); if(lr) lr.onclick=()=>{ b.logo=b.logoOrig; delete b.logoOrig; b.logoBgDone=true; saveBrands(); render(); toast("Original logo restored"); };
+  const lr=$("#blogorig"); if(lr) lr.onclick=()=>{ b.logo=b.logoOrig; delete b.logoOrig; b.logoBgDone=2; saveBrands(); render(); toast("Original logo restored"); };
   const fl=$("#bfromlogo"); if(fl) fl.onclick=async()=>{ const p=await paletteFromImage(b.logo); if(!p.length){ BR.msg=b.logoTone==="light"?"This logo is white, so there are no colours to read. Pick the colours below, or upload the colour version of the logo.":"Couldn't read colours from this logo. Pick the colours below."; return render(); }
     const byL=[...p].sort((x,y)=>lum(x)-lum(y)); b.primary=byL[0]; b.ink=lum(byL[0])<.08?byL[0]:mix(byL[0],"#000000",.45); b.secondary=p[1]||mix(byL[0],"#FFFFFF",.25); b.accent=byL[byL.length-1]!==byL[0]?byL[byL.length-1]:mix(byL[0],"#FFFFFF",.55); b.bg=mix(b.accent,"#FFFFFF",.92);
     BR.msg=""; saveBrands(); render(); toast("Palette suggested from the logo"); };
