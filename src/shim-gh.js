@@ -98,11 +98,12 @@
   // free relay (Cloudflare Worker) that holds PaperMint's key: visitors need no key of their own
   const PROXY = "__MINT_AI_PROXY__".startsWith("http") ? "__MINT_AI_PROXY__" : "";
   window.MINT_AI_PROXY = PROXY;
-  // owner sign-in: email + password checked against a salted SHA-256 fingerprint (the password itself is never stored)
-  const OWNER_HASH = "c3c22e932d5d66e2686404cd14ad48ad5e0785ec08e51d870c34c6e9f9aa5678";
+  // owner access by private link: https://…/literacy-radar/#studio=<secret>. The site keeps only a SHA-256 fingerprint of the secret;
+  // the part after # never reaches any server. Opening the link once marks this browser as the owner's. New link = new fingerprint here.
+  const OWNER_HASH = "e678f46b40afe964c79f1dc4025dfb0b6dc4ef245c0e6e6bd9a09533e3b11791";
   const isOwner = () => { try{ return localStorage.getItem("mint-owner") === OWNER_HASH && !!OWNER_HASH; }catch{ return false; } };
   window.MINT_OWNER = isOwner();
-  // the AI key, locked with the owner's password (AES-GCM, key from PBKDF2): useless without the password
+  // the AI key, locked with the private link (AES-GCM, key from PBKDF2): useless without the link
   const ENC_KEY = "";
   const b64 = u => btoa(String.fromCharCode(...u)), unb64 = t => Uint8Array.from(atob(t), c => c.charCodeAt(0));
   const kdf = async (pw, salt) => crypto.subtle.deriveKey({ name:"PBKDF2", salt, iterations:250000, hash:"SHA-256" }, await crypto.subtle.importKey("raw", new TextEncoder().encode(pw), "PBKDF2", false, ["deriveKey"]), { name:"AES-GCM", length:256 }, false, ["encrypt","decrypt"]);
@@ -112,42 +113,26 @@
   async function unseal(code, pw){ const u = unb64(code); const salt = u.slice(0,16), iv = u.slice(16,28), ct = u.slice(28);
     return new TextDecoder().decode(await crypto.subtle.decrypt({ name:"AES-GCM", iv }, await kdf(pw, salt), ct)); }
   const sha = async t => [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t)))].map(b => b.toString(16).padStart(2,"0")).join("");
-  const fp = (e, p) => sha("mint-owner-v1|" + e.trim().toLowerCase() + "|" + p);
-  // forgotten password: a static site has no server to send a reset email, so "Forgot password?" makes a new fingerprint code;
-  // it unlocks nothing by itself and only takes effect once it is put into OWNER_HASH in the repo (which only the owner can push)
+  const linkFp = t => sha("mint-link-v1|" + t);
+  const LINK = (location.hash.match(/[#&]studio=([A-Za-z0-9_-]{16,})/) || [])[1];
+  if(LINK){ history.replaceState(null, "", location.pathname + location.search);   // the secret leaves the address bar at once
+    linkFp(LINK).then(async h => {
+      if(h !== OWNER_HASH){ addEventListener("DOMContentLoaded", () => setTimeout(() => loginPanel("old"), 300)); return; }
+      try{ localStorage.setItem("mint-owner", h); }catch{}
+      if(ENC_KEY && !getKey()){ try{ localStorage.setItem(KEY, await unseal(ENC_KEY, LINK)); }catch{} }
+      if(!window.MINT_OWNER) location.reload(); }); }
+  // the Studio is private: visitors get a short note instead of a sign-in form
   function loginPanel(mode){
     let el = document.getElementById("aiPanel");
-    if(!el){ el = document.createElement("div"); el.id = "aiPanel"; el.className = "aipanel"; el.setAttribute("role","dialog"); el.setAttribute("aria-label","Owner sign in"); document.body.appendChild(el); }
-    const reset = mode === "reset", setup = !OWNER_HASH || reset;
-    el.innerHTML = `<b>${reset ? "Reset your password" : setup ? "Create your owner password" : "Owner sign in"}</b>
-      <p>${reset ? "Choose your email and a new password. You'll get a code: send it to Claude, who puts it in the site. After the next publish your new password works (you'll need to add your AI key again once). The password itself never leaves this page." : setup ? "Choose the email and password you will use to open the Studio. You'll get a code to send to Claude; the password itself never leaves this page." : "The Studio and Library are private. Sign in to open them."}</p>
-      <label class="field"><span class="label">Email</span><input id="owEmail" type="email" autocomplete="username"></label>
-      <label class="field"><span class="label">Password</span><input id="owPass" type="password" autocomplete="${setup ? "new-password" : "current-password"}"></label>
-      <p id="owMsg" class="muted" style="font-size:.85rem"></p>
-      <div class="row"><button class="btn primary" type="button" data-ow="go">${setup ? "Create code" : "Sign in"}</button><button class="btn" type="button" data-ow="close">Close</button>${setup ? "" : `<button class="btn ghost" type="button" data-ow="forgot">Forgot password?</button>`}</div>`;
-    const msg = el.querySelector("#owMsg");
-    closable(el, () => { el.remove(); history.replaceState(null, "", location.pathname + location.search); });
-    el.querySelector('[data-ow="go"]').onclick = async () => {
-      const e = el.querySelector("#owEmail").value, p = el.querySelector("#owPass").value;
-      if(!e.includes("@") || p.length < 8){ msg.textContent = "Use your email and a password with at least 8 characters."; return; }
-      const h = await fp(e, p);
-      if(setup){ msg.innerHTML = `${reset ? "New password ready. " : ""}Send this code to Claude:<br><code style="user-select:all;word-break:break-all">${h}</code>`; return; }
-      if(h === OWNER_HASH){
-        try{ localStorage.setItem("mint-owner", h); }catch{}
-        const done = t => { msg.textContent = t; setTimeout(() => { location.hash = ""; location.reload(); }, 900); };
-        if(ENC_KEY && !getKey()){ try{ localStorage.setItem(KEY, await unseal(ENC_KEY, p)); return done("Welcome back. AI connected, opening the Studio…"); }catch{} }
-        if(!ENC_KEY && getKey()){ const code = await seal(getKey(), p);
-          msg.innerHTML = `Signed in. To have the AI ready on every computer, send Claude this code (it is your AI key locked with your password, safe to share):<br><code style="user-select:all;word-break:break-all;font-size:11px">${code}</code>`;
-          el.querySelector('[data-ow="go"]').textContent = "Continue"; el.querySelector('[data-ow="go"]').onclick = () => { location.hash = ""; location.reload(); }; return; }
-        done("Welcome back. Opening the Studio…"); }
-      else msg.textContent = "Email or password not recognised.";
-    };
-    const fg = el.querySelector('[data-ow="forgot"]'); if(fg) fg.onclick = () => loginPanel("reset");
-    el.querySelector("#owEmail").focus();
+    if(!el){ el = document.createElement("div"); el.id = "aiPanel"; el.className = "aipanel"; el.setAttribute("role","dialog"); el.setAttribute("aria-label","Private Studio"); document.body.appendChild(el); }
+    el.innerHTML = `<b>${mode === "old" ? "This link no longer works" : "The Studio is private"}</b>
+      <p>${mode === "old" ? "It was replaced by a newer private link. Use the latest link you saved." : "It opens with the owner's private link. Saved it? Open it from your bookmarks and the Studio unlocks in this browser."}</p>
+      <div class="row"><button class="btn" type="button" data-ow="close">Close</button></div>`;
+    closable(el, () => el.remove());
+    el.querySelector('[data-ow="close"]').focus();
   }
   window.MINT_LOGIN = loginPanel;
   window.MINT_LOGOUT = () => { try{ localStorage.removeItem("mint-owner"); }catch{} location.reload(); };
-  if(/owner/.test(location.hash) && !window.MINT_OWNER) addEventListener("DOMContentLoaded", () => setTimeout(() => loginPanel(/reset/.test(location.hash) ? "reset" : ""), 300));
   if(!PROXY) window.RADAR_AI_KEY = () => keyPanel();
   const toText = input => typeof input === "string" ? input : (input || []).map(t => t.content).join("\n\n");
   const MODELS = ["gemini-flash-latest", "gemini-2.5-flash", "gemini-flash-lite-latest", "gemini-2.5-flash-lite"];
