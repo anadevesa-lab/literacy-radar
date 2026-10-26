@@ -1,0 +1,178 @@
+{
+ "auto": true,
+ "date": "2026-10-26",
+ "basedOn": "2026-10-26T13:37:21.397Z",
+ "generatedAt": "2026-10-26T13:37:40.166Z",
+ "resumo": "Global markets face a busy week of **big tech earnings** and central bank decisions alongside geopolitical tensions.",
+ "classes": [
+  {
+   "nome": "Equities",
+   "tendencia": "mixed",
+   "forca": 3,
+   "leitura": "Stocks rose ahead of major tech earnings and a Federal Reserve decision, while Brazilian equities suffered steep losses following an election outcome.",
+   "a_favor": [
+    "Strong upcoming tech earnings and huge IPO filings",
+    "Anticipation of policy decisions"
+   ],
+   "riscos": [
+    "Steep losses in emerging markets due to political shifts",
+    "High valuations and debt-fueled infrastructure spending"
+   ],
+   "perfil": "Suits growth-oriented investors with a high tolerance for market volatility."
+  },
+  {
+   "nome": "Commodities",
+   "tendencia": "falling",
+   "forca": 3,
+   "leitura": "Oil retreated as geopolitical rhetoric remained familiar, while European and US natural gas futures faced weather-driven losses and supply scrutiny.",
+   "a_favor": [
+    "Strategic underground storage agreements",
+    "Ongoing industrial and energy demand"
+   ],
+   "riscos": [
+    "Geopolitical headline volatility and peace talk efforts",
+    "Milder weather forecasts reducing heating demand"
+   ],
+   "perfil": "Suits tactical traders looking to navigate short-term supply and demand shifts."
+  },
+  {
+   "nome": "Government Bonds",
+   "tendencia": "steady",
+   "forca": 3,
+   "leitura": "Gilt investors looked ahead to upcoming national budget announcements, seeking reassurance and fiscal discipline from policymakers.",
+   "a_favor": [
+    "Steady baseline yields",
+    "Demand for safe-haven assets during equity corrections"
+   ],
+   "riscos": [
+    "Potential changes to fiscal rules in upcoming budgets",
+    "Persistent inflation pressures affecting real returns"
+   ],
+   "perfil": "Suits conservative investors seeking regular income and capital preservation."
+  }
+ ],
+ "temas": [
+  "Understanding corporate earnings reports",
+  "Navigating equity market volatility",
+  "The role of central bank interest rates",
+  "Balancing growth and risk in portfolios"
+ ],
+ "ai": true,
+ "brief": {
+  "one_liner": "As Meta plans a massive $95 billion funding drive for AI and global markets eye upcoming central bank choices, everyday savers navigate shifting economic tides.",
+  "number": {
+   "value": "2.5%",
+   "caption": "The current ECB deposit rate holding steady since September."
+  },
+  "stories": [
+   {
+    "i": 35,
+    "title": "Meta Launches Massive $95 Billion AI Funding Drive",
+    "whats_going_on": "Meta Platforms announced plans to raise up to $95 billion to fund its expanding artificial-intelligence infrastructure and superintelligence initiatives. Key chipmakers like Nvidia, AMD, and Broadcom are eyeing billions in shares as part of the massive financial push.",
+    "what_it_means": "This represents one of the largest capital-raising efforts by a technology giant to feed the unrelenting demand for AI hardware and data centres. It highlights how tech heavyweights are doubling down on infrastructure investments despite growing scrutiny over long-term returns.",
+    "why_care": "For everyday investors holding broad market index funds or tech sector portfolios, the sheer scale of these capital expenditures heavily influences overall market volatility and tech sector momentum."
+   },
+   {
+    "i": 55,
+    "title": "AI Pioneer Anthropic Files Prospectus for Historic IPO",
+    "whats_going_on": "Artificial intelligence firm Anthropic filed its paperwork for a planned stock market debut, setting up a public listing in November. The extensive prospectus outlines rapid growth alongside substantial ongoing losses and key market risk factors.",
+    "what_it_means": "This listing is shaping up to be one of the largest and most closely watched tech debuts in history, marking a major milestone for generative AI companies entering public markets. It puts concrete financial figures behind the private AI boom for public market scrutiny.",
+    "why_care": "As major AI players transition from private backing to public trading, everyday investors will soon have direct access to shares, though evaluating high-growth, loss-making tech companies requires careful risk management."
+   },
+   {
+    "i": 39,
+    "title": "Brazilian Markets Stumble Following Lula Election Victory",
+    "whats_going_on": "Brazilian stocks and currency suffered steep losses after Luiz Inácio Lula da Silva won a stunning presidential runoff victory. Investors reacted negatively amid concerns that the incoming administration could lead to fiscal expansion and wider budget deficits.",
+    "what_it_means": "Emerging market assets often experience sharp volatility when election outcomes challenge investor expectations regarding fiscal discipline and government spending. Market participants quickly repriced local assets to reflect concerns over future public debt levels.",
+    "why_care": "For international investors with emerging market exposure through global mutual funds or exchange-traded funds, sudden regional political shifts can create noticeable portfolio turbulence."
+   },
+   {
+    "i": 56,
+    "title": "UK Chancellor Moves to Shield State Pensioners From Tax",
+    "whats_going_on": "Ahead of the upcoming UK Budget, Chancellor John Healey announced plans to protect low-income pensioners from income tax. The adjustment aims to prevent the full, flat-rate state pension from crossing the tax threshold after its scheduled rise in April.",
+    "what_it_means": "Without policy adjustments, rising state pension payouts risk pulling vulnerable retirees into income tax brackets purely due to inflationary adjustments and benefit increases. This pre-budget measure attempts to safeguard basic retirement incomes from unexpected tax exposure.",
+    "why_care": "For UK savers and retirees planning their household finances, understanding potential tax threshold adjustments helps ensure retirement income projections remain accurate."
+   }
+  ],
+  "basedOn": "2026-10-26T13:37:21.397Z",
+  "generatedAt": "2026-10-26T13:38:05.932Z"
+ },
+ "pack": {
+  "carousel": {
+   "title": "Protect your retirement from **tax traps**",
+   "slides": [
+    {
+     "kind": "hook",
+     "h": "Are you losing money to **tax**?",
+     "big": "",
+     "t": ""
+    },
+    {
+     "kind": "stat",
+     "h": "State pensions face **new limits**",
+     "big": "2.8%",
+     "t": "UK plans aim to protect low income pensioners from rising tax thresholds."
+    },
+    {
+     "kind": "point",
+     "h": "Check your **tax threshold**",
+     "big": "",
+     "t": "Upcoming budget adjustments try to stop standard state pensions from crossing limits."
+    },
+    {
+     "kind": "myth",
+     "h": "\"All pension income is **tax free**\"",
+     "big": "",
+     "t": "Scheduled rises can push your total retirement earnings above the allowance."
+    },
+    {
+     "kind": "point",
+     "h": "Plan your **retirement money**",
+     "big": "",
+     "t": "Keep track of threshold changes so your household budget stays accurate and secure."
+    },
+    {
+     "kind": "cta",
+     "h": "Save this for **later**",
+     "big": "",
+     "t": "Follow PaperMint for clear weekly money news."
+    }
+   ]
+  },
+  "linkedin": "Tax thresholds and retirement planning are back in the headlines as the UK moves to shield low-income pensioners ahead of the upcoming Budget. With scheduled state pension rises threatening to pull more retirees into paying income tax, understanding these limits is essential for accurate household financial forecasting.\n\nMeanwhile, in the wider financial world, tech giant Meta launched a massive funding drive for AI infrastructure, and artificial intelligence firm Anthropic filed its paperwork for a public stock market debut this November. While these multi-billion-dollar moves shape broad market index funds and tech portfolios, they also highlight the importance of careful risk management when evaluating high-growth companies.\n\nWhether you are managing retirement income or watching global markets, clarity beats confusion every single time.\n\n#PersonalFinance #RetirementPlanning #PaperMint",
+  "reel": {
+   "hook": "Is your pension about to hit a secret tax trap?",
+   "script": [
+    "UK pensioners might face unexpected tax bills soon.",
+    "Scheduled pension rises could push incomes over the limit.",
+    "The Chancellor is planning new rules to protect the lowest earners.",
+    "Always check your personal tax thresholds.",
+    "Follow PaperMint for simple money news."
+   ],
+   "caption": "UK pension changes could affect your retirement income. Here is what you need to know about tax thresholds."
+  },
+  "faq": [
+   {
+    "q": "Why might my pension become taxable?",
+    "a": "Scheduled increases to the flat-rate state pension can push your total yearly income past the standard personal allowance threshold."
+   },
+   {
+    "q": "What is the UK Chancellor planning to do?",
+    "a": "The government announced plans to protect low-income pensioners from income tax increases ahead of the upcoming Budget."
+   },
+   {
+    "q": "Why is Anthropic making news?",
+    "a": "The artificial intelligence firm filed its prospectus for an upcoming public stock market debut in November."
+   },
+   {
+    "q": "How does Meta funding affect everyday investors?",
+    "a": "Meta launched a massive funding drive for AI infrastructure, which can influence broad market index funds and tech sector momentum."
+   },
+   {
+    "q": "Why did Brazilian markets fall recently?",
+    "a": "Stocks and currency dropped following a presidential victory, as investors worried about potential fiscal expansion and budget deficits."
+   }
+  ],
+  "generatedAt": "2026-10-26T13:38:20.884Z"
+ }
+}
