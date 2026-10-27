@@ -2285,7 +2285,11 @@ function newsBlock(day){ return (day.items||[]).map(it=>`- [${it.source}, ${it.p
 
 /* ---------- the daily ready-made pack (prepared every morning and afternoon by the collector) ---------- */
 let PACKTXT={};
-function latestPack(){ const l=(S.insights||[]).filter(i=>i&&i.pack).sort((a,b)=>a.id<b.id?1:-1)[0]; return l?{...l.pack,day:l.id}:null; }
+/* the robot writes the daily pack as PaperMint ("Follow PaperMint…", #PaperMint); with a client's kit active, those mentions take the client's name */
+function forBrand(v,name){ if(typeof v==="string") return v.replace(/#PaperMint\b/g,"#"+name.replace(/[^\p{L}\p{N}_]/gu,"")).replace(/\bPaperMint\b/g,name);
+  if(Array.isArray(v)) return v.map(x=>forBrand(x,name)); if(v&&typeof v==="object") return Object.fromEntries(Object.entries(v).map(([k,x])=>[k,forBrand(x,name)])); return v; }
+function latestPack(raw){ const l=(S.insights||[]).filter(i=>i&&i.pack).sort((a,b)=>a.id<b.id?1:-1)[0]; if(!l) return null;
+  const b=brand(), name=String(b.name||"").trim(); const p=(!raw&&b.id!=="papermint"&&name)?forBrand(l.pack,name):l.pack; return {...p,day:l.id}; }
 function vPack(){
   const p=latestPack(); if(!p) return ""; const b=brand(); loadFont(b);
   const when=new Date(p.generatedAt||p.day).toLocaleString("en-GB",{weekday:"long",day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"});
@@ -2301,7 +2305,7 @@ function vPack(){
     <p class="disc">Educational content generated automatically from public news. Not investment advice. Check it before you post.</p></section>`;
 }
 function vFaq(){
-  const p=latestPack(); if(!p?.faq?.length) return "";
+  const p=latestPack(true); if(!p?.faq?.length) return "";
   return `<section class="panel"><div style="display:flex;flex-direction:column;gap:2px"><span class="eyebrow">Answered today</span><h2>Today's <em>questions</em></h2><span class="muted" style="font-size:.9rem">What beginners are asking about today's news, answered from the collected stories.</span></div>
     <div class="faq">${p.faq.map((f,i)=>`<details ${i===0?"open":""}><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join("")}</div></section>`;
 }
