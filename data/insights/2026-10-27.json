@@ -1,0 +1,192 @@
+{
+ "auto": true,
+ "date": "2026-10-27",
+ "basedOn": "2026-10-27T12:43:21.334Z",
+ "generatedAt": "2026-10-27T12:43:24.564Z",
+ "resumo": "Global markets navigate **heavy AI financing costs**, inflation pressures, and political developments.",
+ "classes": [
+  {
+   "nome": "Equities",
+   "tendencia": "mixed",
+   "forca": 3,
+   "leitura": "Tech listings attract massive capital while emerging markets face sharp geopolitical and currency volatility.",
+   "a_favor": [
+    "Major public listings and AI partnerships",
+    "Attractive valuations in some regions"
+   ],
+   "riscos": [
+    "Soaring infrastructure debt and high spending",
+    "Severe political and currency sell-offs"
+   ],
+   "perfil": "Suits investors comfortable with high volatility and long-term capital growth."
+  },
+  {
+   "nome": "Government Bonds",
+   "tendencia": "rising",
+   "forca": 2,
+   "leitura": "Britain issued its costliest five-year debt since 2008 ahead of the budget.",
+   "a_favor": [
+    "Higher yields on sovereign debt",
+    "Safe-haven demand during global uncertainty"
+   ],
+   "riscos": [
+    "Rising borrowing costs for states",
+    "Inflation eroding fixed returns"
+   ],
+   "perfil": "Suits cautious investors seeking regular income and lower capital risk."
+  },
+  {
+   "nome": "Commodities",
+   "tendencia": "steady",
+   "forca": 2,
+   "leitura": "Brent crude slipped just below $110 a barrel with Middle Eastern developments in focus.",
+   "a_favor": [
+    "Persistent geopolitical supply concerns",
+    "Strong industrial demand for energy"
+   ],
+   "riscos": [
+    "Potential shifts in regional conflicts",
+    "Volatile price swings impacting costs"
+   ],
+   "perfil": "Suits experienced participants looking for inflation hedges and diversification."
+  },
+  {
+   "nome": "Private Markets",
+   "tendencia": "rising",
+   "forca": 3,
+   "leitura": "Insurers and major funds increase allocations to unlisted assets and massive AI financing vehicles.",
+   "a_favor": [
+    "Growing institutional allocations",
+    "Large-scale private credit deals"
+   ],
+   "riscos": [
+    "Looming corporate debt walls",
+    "Higher borrowing costs for private firms"
+   ],
+   "perfil": "Suits sophisticated investors with high liquidity tolerance."
+  }
+ ],
+ "temas": [
+  "Understanding public equity listings",
+  "Managing corporate and sovereign debt",
+  "The impact of inflation on retail prices",
+  "Evaluating private market investments"
+ ],
+ "ai": true,
+ "brief": {
+  "one_liner": "From AI giant Anthropic’s massive market debut to rising shop prices and looming budget taxes, the financial week is off to a busy start.",
+  "number": {
+   "value": "$63 Billion",
+   "caption": "Financing vehicle formed by banks and Blackstone for Broadcom AI tech infrastructure."
+  },
+  "stories": [
+   {
+    "i": 1,
+    "title": "Anthropic drops massive IPO filing and warns of AI risks",
+    "whats_going_on": "AI developer Anthropic has published its IPO prospectus, revealing both its financial standing and unusual warnings regarding the potential risks of artificial intelligence. Alongside the filing, a coalition of major financial institutions lined up a $63 billion financing vehicle to purchase AI computing infrastructure from Broadcom to lease to the start-up.",
+    "what_it_means": "The blockbuster listing highlights how intensely capital is flowing into the artificial intelligence sector as firms try to fund massive infrastructure demands. At the same time, it puts the spotlight squarely on the steep costs and unique corporate risks involved in scaling new tech.",
+    "why_care": "For everyday savers with pension funds exposed to global tech, the listing is a fascinating look at the engine room of the current market boom."
+   },
+   {
+    "i": 2,
+    "title": "HSBC profit growth slows down despite new share buyback",
+    "whats_going_on": "Banking giant HSBC reported slower-than-expected quarterly profit growth, sending its shares lower in London trading. To appease investors, the bank announced a fresh share buyback of up to $1 billion.",
+    "what_it_means": "Slower profit growth shows that even major international lenders are feeling the pinch of shifting global economic conditions and changing interest rate environments. Share buybacks are frequently used by large corporations to return excess cash to shareholders when growth hits a speed bump.",
+    "why_care": "If you hold bank shares directly or via a tracker fund, shifts in major lender profitability can influence your overall portfolio returns."
+   },
+   {
+    "i": 3,
+    "title": "UK shop price inflation hits its highest level since 2024",
+    "whats_going_on": "British shop price inflation has climbed to its highest level in two and a half years as retailers struggle to absorb a rising wave of operational costs. The British Retail Consortium noted that the dam is starting to break on costs previously kept away from shoppers.",
+    "what_it_means": "When businesses face sustained cost pressures, those expenses eventually trickle down to everyday consumer goods on the high street. This creates an ongoing squeeze on household budgets just as wider economic policies are being debated.",
+    "why_care": "Higher shop prices directly impact your weekly grocery and retail spending, leaving less room for building up monthly savings."
+   },
+   {
+    "i": 4,
+    "title": "Brazil's currency suffers worst plunge in decades after election",
+    "whats_going_on": "Brazilian financial markets experienced a severe shock following a surprise political election victory, triggering the currency's worst single-day drop in over 25 years. Local stocks in São Paulo also tumbled as investors reacted to immediate concerns over the country's fiscal management.",
+    "what_it_means": "Political shifts often trigger rapid market re-evaluations when investors worry about government spending, national debt, and future economic stability. Emerging market volatility can happen swiftly when confidence in fiscal policy takes a sudden hit.",
+    "why_care": "Unless you hold specific emerging market funds, the direct impact on local savings is minimal, but it serves as a reminder of how quickly global sentiment can shift."
+   }
+  ],
+  "basedOn": "2026-10-27T12:43:21.334Z",
+  "generatedAt": "2026-10-27T12:44:16.230Z"
+ },
+ "pack": {
+  "carousel": {
+   "title": "Why your grocery bill is rising",
+   "slides": [
+    {
+     "kind": "hook",
+     "h": "Are your **shopping bills** climbing?",
+     "big": "",
+     "t": ""
+    },
+    {
+     "kind": "stat",
+     "h": "UK shop prices hit a **new peak**",
+     "big": "2.5yr",
+     "t": "Inflation reaches its highest level since 2024 for British shoppers."
+    },
+    {
+     "kind": "point",
+     "h": "Retailers pass on **rising costs**",
+     "big": "",
+     "t": "Businesses struggle to absorb operational expenses, pushing prices up on the high street."
+    },
+    {
+     "kind": "myth",
+     "h": "\"Inflation is **always slowing down**\"",
+     "big": "",
+     "t": "Shop prices can jump unexpectedly when businesses finally pass their costs on."
+    },
+    {
+     "kind": "point",
+     "h": "Protect your **monthly savings**",
+     "big": "",
+     "t": "Higher everyday spending leaves less room for building up your savings cushion."
+    },
+    {
+     "kind": "cta",
+     "h": "Save this and **follow PaperMint**",
+     "big": "",
+     "t": "Stay ahead with clear finance news."
+    }
+   ]
+  },
+  "linkedin": "Is your weekly shop feeling a bit heavier on the wallet lately? You are not imagining things. British shop price inflation has just climbed to its highest level in two and a half years as retailers struggle to absorb rising operational costs. When businesses can no longer shield customers from expenses, those increases land straight on the high street.\n\nFor everyday savers, this is a gentle reminder of how inflation quietly eats into monthly budgets. When grocery and retail spending claims a larger share of your income, there is naturally less room left over for building your savings cushion. It pays to keep a close eye on your outgoings as economic pressures shift.\n\nHow are you managing your household budget this month? Let us know in the comments.\n\n#PersonalFinance #Inflation #PaperMint",
+  "reel": {
+   "hook": "Why your weekly shop is suddenly costing you much more.",
+   "script": [
+    "UK shop price inflation just hit a two and a half year high.",
+    "Retailers are finally passing rising operational costs on to shoppers.",
+    "Higher everyday spending leaves less room for your monthly savings.",
+    "Keep an eye on your budget and follow PaperMint for more."
+   ],
+   "caption": "Shop prices are climbing across the UK. Here is what it means for your monthly savings and budget. Follow PaperMint for clear news."
+  },
+  "faq": [
+   {
+    "q": "Why are UK shop prices rising right now?",
+    "a": "Retailers are struggling to absorb a growing wave of operational expenses. As a result, they are finally passing these accumulated costs on to everyday shoppers."
+   },
+   {
+    "q": "How does shop price inflation affect my savings?",
+    "a": "When you spend more money on everyday groceries and retail items, you have less cash left over at the end of the month to put into your savings."
+   },
+   {
+    "q": "What happened to HSBC shares recently?",
+    "a": "Banking giant HSBC reported slower profit growth than expected, which sent its shares lower in London trading. The bank responded with a fresh share buyback."
+   },
+   {
+    "q": "Why is Anthropic in the news?",
+    "a": "The artificial intelligence developer published its IPO prospectus, revealing its financial standing alongside unusual warnings about the potential risks of AI technology."
+   },
+   {
+    "q": "What caused the drop in Brazil's currency?",
+    "a": "Brazilian financial markets suffered a severe shock and currency plunge following a surprise election victory and immediate concerns over fiscal management."
+   }
+  ],
+  "generatedAt": "2026-10-27T12:45:20.611Z"
+ }
+}

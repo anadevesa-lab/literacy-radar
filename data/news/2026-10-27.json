@@ -1,0 +1,823 @@
+{
+ "date": "2026-10-27",
+ "items": [
+  {
+   "source": "Financial Times",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "Anthropic’s big financial reveal",
+   "summary": "Here are the big takeaways from the start-up’s IPO prospectus",
+   "url": "https://www.ft.com/content/d1dca5d1-467f-4311-a004-82bb1ef761e0?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "27 Oct",
+   "title": "Bank of England orders probe into Revolut’s internal controls",
+   "summary": "Section 166 order came earlier this year and is focused on risks around rapid launches of new financial products",
+   "url": "https://www.ft.com/content/ea6d6d50-57c0-4b21-a05f-df5efe020c24?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Obrigações",
+   "published": "27 Oct",
+   "title": "Insurers bullish on private markets even as government bond yields rise",
+   "summary": "Three-quarters of the groups surveyed in a BlackRock poll are looking to increase their allocations to unlisted assets",
+   "url": "https://www.ft.com/content/26aea932-a70f-4d6a-bb41-b37079658652?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "UK stocks are a haven in a more uncertain world",
+   "summary": "Valuations of London-listed companies are now the most attractive in the G10",
+   "url": "https://www.ft.com/content/75645b2b-b092-47b5-8c62-a931dc645006"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "27 Oct",
+   "title": "Lula faces a fiscal reckoning after Brazil’s market rout",
+   "summary": "Concerns about management of economy trigger worst day for currency in more than 25 years",
+   "url": "https://www.ft.com/content/0231b234-14dc-4ff0-8263-e1063b0a25d5?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "27 Oct",
+   "title": "Where auditors can lift their game",
+   "summary": "Investors hope awards for work on ‘critical audit matters’ can highlight where standards can be raised",
+   "url": "https://www.ft.com/content/59bc903b-9ccd-4d86-8529-7ea9d83344e9?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Bolsa",
+   "published": "26 Oct",
+   "title": "Brazil’s currency plunges most since 1999 after Lula’s election victory",
+   "summary": "São Paulo stocks tumble after leftwing politician’s win against Flávio Bolsonaro",
+   "url": "https://www.ft.com/content/bffe028e-838d-4e74-b05e-62f6db4978db?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "Stock Market Today: Brent Crude Slips Just Below $110 a Barrel With Mideast in Focus",
+   "summary": "Israeli elections could prove consequential in course of Iran war; U.S. stock futures muted",
+   "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-10-27-2026?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "A $300 Billion &#x2018;Debt Wall&#x2019; Is Looming Over Private-Equity Backed Companies",
+   "summary": "Software firms account for about a third of the risky corporate loans due in 2028 and 2029.",
+   "url": "https://www.wsj.com/finance/investing/a-300-billion-debt-wall-is-looming-over-private-equity-backed-companies-d6359497?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Fundos",
+   "published": "27 Oct",
+   "title": "Janus Launches First Tokenized Fund Licensing the Nasdaq-100 Index",
+   "summary": "Nasdaq opened up licensing deals on its Big Tech benchmark to other money managers earlier this year.",
+   "url": "https://www.wsj.com/finance/investing/janus-launches-first-tokenized-fund-licensing-the-nasdaq-100-index-5af1cf65?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Fundos",
+   "published": "27 Oct",
+   "title": "These Funds Thrive on Investors&#x2019; Impatience",
+   "summary": "Plus, is Anthropic misanthropic?",
+   "url": "https://www.wsj.com/finance/investing/these-funds-thrive-on-investors-impatience-48a6d3a4?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Fundos",
+   "published": "27 Oct",
+   "title": "Ares Private-Credit Fund to Buy Competitor From Apollo",
+   "summary": "The merger of the two business-development companies will boost Ares Capital Corp. to over $31 billion.",
+   "url": "https://www.wsj.com/finance/investing/ares-private-credit-fund-to-buy-competitor-from-apollo-daecb67c?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "27 Oct",
+   "title": "Inside the 11th-Hour Scramble to Save Anthropic&#x2019;s Debt Deal",
+   "summary": "Plus, Microsoft and Skydance turn to voluntary exits to shrink their workforces, and Trump&#x2019;s tariff exposes America&#x2019;s reliance on Canadian aluminum.",
+   "url": "https://www.wsj.com/articles/inside-the-11th-hour-scramble-to-save-anthropics-debt-deal-1c8ad883?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "Anthropic&#x2019;s &#x2018;Adjusted&#x2019; Profit Exposes Wall Street&#x2019;s Earnings Game",
+   "summary": "The AI developer&#x2019;s losses were the flip side of the big gains for Amazon and Alphabet.",
+   "url": "https://www.wsj.com/finance/investing/anthropics-adjusted-profit-exposes-wall-streets-earnings-game-40cbcef1?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "26 Oct",
+   "title": "This German Energy Giant Is an Overlooked AI Bargain",
+   "summary": "Siemens Energy is outselling GE Vernova on gas turbines.",
+   "url": "https://www.wsj.com/finance/this-german-energy-giant-is-an-overlooked-ai-bargain-c190ee76?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "27 Oct",
+   "title": "Financial Services Roundup: Market Talk",
+   "summary": "Find insight on HSBC Holdings, Daiichi Life, ANZ and more in the latest Market Talks covering Financial Services.",
+   "url": "https://www.wsj.com/business/financial-services-roundup-market-talk-43324d13?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "HSBC Profit Growth Misses, Plans $1 Billion Buyback",
+   "summary": "The London-based bank reported slower-than-expected quarterly profit growth, sending shares lower despite its announcement of a new share buyback of up to $1 billion.",
+   "url": "https://www.wsj.com/finance/banking/hsbc-quarterly-profit-climbs-plans-1-billion-buyback-1551a999?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "The Morning Risk Report: The Biggest Takeaways From Anthropic&#x2019;s IPO Prospectus",
+   "summary": "Plus: Florida&#x2019;s role in battling big tech and China warns U.S. over investment curbs.",
+   "url": "https://www.wsj.com/risk-compliance-journal/the-morning-risk-report-the-biggest-takeaways-from-anthropics-ipo-prospectus-f786ea5e?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "26 Oct",
+   "title": "DoorDash Circles Deal to Buy Instacart",
+   "summary": "Plus, Brazilian markets crashed after Lula&#x2019;s surprise election victory, and Florida is leading a battle against big tech companies.",
+   "url": "https://www.wsj.com/business/doordash-circles-deal-to-buy-instacart-41ac407d?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "26 Oct",
+   "title": "The Biggest Takeaways From Anthropic&#x2019;s IPO Prospectus",
+   "summary": "From the potential to cure cancer and a huge cushion of cash to humans losing control of AI models, here&#x2019;s what stood out in Anthropic&#x2019;s S-1 filing.",
+   "url": "https://www.wsj.com/tech/ai/anthropic-ipo-s1-report-takeaways-6eebd721?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "26 Oct",
+   "title": "How Florida Took the Lead in Battling Big Tech",
+   "summary": "States are getting increasingly aggressive when it comes to tech and AI guardrails. The Republican-led Sunshine State got started early.",
+   "url": "https://www.wsj.com/tech/ai/how-florida-took-the-lead-in-battling-big-tech-f75ed5a4?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "26 Oct",
+   "title": "The Bull Case for AI Armageddon",
+   "summary": "For investors mulling the Anthropic share offering, a 10% chance of extinction may be a 90% win for your portfolio.",
+   "url": "https://www.wsj.com/tech/ai/the-bull-case-for-ai-armageddon-673521f4?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "Anthropic&#x2019;s &#x2018;Adjusted&#x2019; Profit Exposes Wall Street&#x2019;s Earnings Game",
+   "summary": "The AI developer&#x2019;s losses were the flip side of the big gains for Amazon and Alphabet.",
+   "url": "https://www.wsj.com/finance/investing/anthropics-adjusted-profit-exposes-wall-streets-earnings-game-40cbcef1?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "Nvidia to Invest $3 Billion in Meta&#x2019;s Equity Offering as They Expand AI Partnership",
+   "summary": "The investment comes as Nvidia and Meta Platforms expand their partnership on the Facebook parent&#x2019;s artificial-intelligence offering Muse.",
+   "url": "https://www.wsj.com/tech/ai/nvidia-to-invest-3-billion-in-metas-equity-offering-as-they-expand-ai-partnership-e8d3850a?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "27 Oct",
+   "title": "Broadcom CEO Intervened to Seal $63 Billion Anthropic Debt Deal",
+   "summary": "The deal, announced on Monday, is the biggest ever to raise money for AI infrastructure.",
+   "url": "https://www.wsj.com/finance/broadcom-ceo-intervened-to-seal-63-billion-anthropic-debt-deal-c807754f?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "26 Oct",
+   "title": "Banks, Blackstone Form $63 Billion Financing Vehicle for Broadcom AI Tech",
+   "summary": "A coalition of major financial institutions is lining up $63 billion in financing to purchase artificial-intelligence computing infrastructure from Broadcom and lease it to Anthropic.",
+   "url": "https://www.wsj.com/tech/ai/banks-blackstone-form-63-billion-financing-vehicle-for-broadcom-ai-tech-0438f6d2?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Fundos",
+   "published": "26 Oct",
+   "title": "Meta Plans up to $95 Billion in Financing to Power Its AI Growth",
+   "summary": "The Facebook parent said it would look to raise up to $95 billion to help fund its massive investments in artificial-intelligence infrastructure and personal superintelligence.",
+   "url": "https://www.wsj.com/tech/ai/meta-plans-35-billion-stock-offering-to-power-ai-buildout-eyes-95-billion-total-plan-10b8947e?mod=rss_Technology"
+  },
+  {
+   "source": "CNBC",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "Coca-Cola hikes earnings outlook, even as it sees lackluster demand in North America",
+   "summary": "Coca-Cola stock has climbed about 32% so far this year, raising the beverage company's market cap to roughly $398 billion.",
+   "url": "https://www.cnbc.com/2026/10/27/coca-cola-ko-q3-2026-earnings.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Banca central",
+   "published": "27 Oct",
+   "title": "Fed expected to hold rates steady, but Warsh may point way to more hikes",
+   "summary": "Markets overwhelmingly expect no change in benchmark interest rates following September's increase.",
+   "url": "https://www.cnbc.com/2026/10/27/federal-reserve-rates-kevin-warsh.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "27 Oct",
+   "title": "Boeing narrows third-quarter loss as defense sales rise, but focus remains on 737 Max production",
+   "summary": "Boeing is set to brief investors on its aircraft production outlook when it reports quarterly results before the market opens Tuesday.",
+   "url": "https://www.cnbc.com/2026/10/27/-boeing-ba-q3-2026-earnings.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Tecnologia",
+   "published": "27 Oct",
+   "title": "Santoli: We are nearing a now-or-never moment for the AI trade to rebound",
+   "summary": "Pampers over AI? Procter & Gamble's valuation crosses above Alphabet's.",
+   "url": "https://www.cnbc.com/2026/10/27/santoli-now-or-never-for-ai-trade.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "Anthropic's IPO is risky business",
+   "summary": "Anthropic's much-anticipated IPO is giving potential investors some perspective on the risky business of artificial intelligence.",
+   "url": "https://www.cnbc.com/2026/10/27/anthropic-five-surprising-risks-s1.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "27 Oct",
+   "title": "Melania Trump-brokered local ceasefire begins as Russia continues attacks on Ukraine",
+   "summary": "An Oleshky ceasefire brokered by Melania Trump began Tuesday as Russia launched missiles and drones at cities across Ukraine.",
+   "url": "https://www.cnbc.com/2026/10/27/russia-ukraine-zelenskyy-trump-putin-ceasefire.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "GM will switch to Nasdaq from the NYSE on Nov. 17",
+   "summary": "GM expects to keep its “GM” ticker symbol, and the company says shareholders do not need to take action because of the transfer.",
+   "url": "https://www.cnbc.com/2026/10/27/gm-nasdaq-nyse-stock-listing.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Tecnologia",
+   "published": "27 Oct",
+   "title": "World Bank's Banga: Availability of capital 'not really an issue' as AI demand drives up borrowing costs",
+   "summary": "World Bank President Ajay Banga came on CNBC's \"Squawk Box\" on Oct. 27, 2026.",
+   "url": "https://www.cnbc.com/2026/10/27/world-bank-president-ajay-banga.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "27 Oct",
+   "title": "A 'canary in the coal mine': Measles resurgence exposes weaknesses in U.S. public health, experts say",
+   "summary": "The measles resurgence exposes the U.S.' public health weaknesses, such as declining vaccination rates and waning trust in health institutions, experts say.",
+   "url": "https://www.cnbc.com/2026/10/27/us-measles-public-health.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Habitação",
+   "published": "27 Oct",
+   "title": "Frozen housing market sends remodelers mixed messages",
+   "summary": "Home remodelers have always served two different markets, but the current state of housing is now pulling them opposite directions.",
+   "url": "https://www.cnbc.com/2026/10/27/frozen-housing-market-sends-remodelers-mixed-messages.html"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "27 Oct",
+   "title": "My wife cried when I found out she had only $80,000 in her 401(k). I have $2.2 million. Am I wrong to be shocked?",
+   "summary": "&#x201c;When I brought up retiring last spring, she said she was ready whenever I was, and I took that to mean we were in good shape.&#x201d;",
+   "url": "https://www.marketwatch.com/story/my-wife-has-only-80-000-saved-for-retirement-i-have-2-2-million-am-i-wrong-to-be-shocked-3e27b490?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "Why SoFi&#x2019;s stock is soaring after earnings",
+   "summary": "SoFi&#x2019;s early 2027 forecast is impressing Wall Street after a tough stretch for the stock.",
+   "url": "https://www.marketwatch.com/story/sofis-stock-climbs-as-lending-surge-drives-an-earnings-beat-and-rosy-outlook-0c978535?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Tecnologia",
+   "published": "27 Oct",
+   "title": "Here&#x2019;s the question three tech-sector earnings reports raise about the future of AI",
+   "summary": "Celestica, Cadence Design Systems and Rambus all posted estimate-beating results for the third quarter.",
+   "url": "https://www.marketwatch.com/story/heres-the-question-three-tech-sector-earnings-reports-raise-about-the-future-of-ai-5676248b?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Poupança",
+   "published": "27 Oct",
+   "title": "&#x2018;Just watch Judge Judy&#x2019;: I&#x2019;m in my 70s. Why do people keep making the same avoidable financial mistakes?",
+   "summary": "&#x201c;Consider some familiar examples of poor decisions: accumulating credit-card debt or failing to plan for retirement.&#x201d;",
+   "url": "https://www.marketwatch.com/story/you-need-only-watch-episodes-of-judge-judy-im-in-my-70s-why-do-people-keep-making-the-same-avoidable-financial-mistakes-bbf60fe4?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "27 Oct",
+   "title": "Why reported Khamenei call for end to &#x2018;neither war nor peace&#x2019; moved markets &#x2014; a bit",
+   "summary": "Iran&#x2019;s supreme leader was quoted as saying it&#x2019;s time for a deal. There&#x2019;s a long way to go.",
+   "url": "https://www.marketwatch.com/story/why-reported-khamenei-call-for-end-to-neither-war-nor-peace-moved-markets-a-bit-dd94b602?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Banca central",
+   "published": "27 Oct",
+   "title": "AI debt trouble could help Fed&#x2019;s Warsh get his way with fewer rate hikes",
+   "summary": "AI financing has been harder and more expensive to come by as the capital-spending boom comes under more scrutiny.",
+   "url": "https://www.marketwatch.com/story/ai-debt-trouble-could-help-feds-warsh-get-his-way-with-fewer-rate-hikes-b3dc4525?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Economia",
+   "published": "27 Oct",
+   "title": "Big Tech&#x2019;s earnings are on deck. There&#x2019;s more for investors to watch than AI spending.",
+   "summary": "As Microsoft, Alphabet and Amazon prepare to report quarterly results, workforce cuts are raising questions about how AI will reshape jobs at the top-tier tech companies.",
+   "url": "https://www.marketwatch.com/story/big-techs-earnings-are-on-deck-theres-more-for-investors-to-watch-than-ai-spending-bb566c90?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Inflação",
+   "published": "27 Oct",
+   "title": "A leading Silicon Valley cheerleader just showed all the reasons to be worried about the AI bubble",
+   "summary": "If you needed any further reasons to be worried about the bubble that has inflated the stock market, look no further.",
+   "url": "https://www.marketwatch.com/story/a-leading-silicon-valley-cheerleader-just-showed-all-the-reasons-to-be-worried-about-the-ai-bubble-e3b32fe1?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "AI stocks haven&#x2019;t played by the normal valuation rules. Now that rates are higher, they may have to, says UBS",
+   "summary": "Historically, the surges in investment and in the profitability it produced have proven unsustainable for U.S. tech companies, says Michel Lerner.",
+   "url": "https://www.marketwatch.com/story/ai-stocks-havent-played-by-the-normal-valuation-rules-now-that-rates-are-higher-they-may-have-to-says-ubs-f8c78948?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "Options traders are seizing control of the S&P 500",
+   "summary": "There&#x2019;s a reason the index hasn&#x2019;t moved much since June, according to a team at UBS.",
+   "url": "https://www.marketwatch.com/story/options-traders-are-seizing-control-of-the-s-p-500-1add94ca?mod=mw_rss_topstories"
+  },
+  {
+   "source": "BBC",
+   "category": "Economia",
+   "published": "27 Oct",
+   "title": "I'm a single mum on £41,000 and limit my weekly shop to £40 - it's hard",
+   "summary": "People earning from £380 a month to £150,000 a year tell the BBC what they want to see in this year's Budget.",
+   "url": "https://www.bbc.co.uk/news/articles/cmx235r9wr3yo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "Rise in sales of radios and tinned foods, say retailers, after call to stock up",
+   "summary": "Figures obtained by BBC Newsnight show large spikes in sales of torches, radios and power banks.",
+   "url": "https://www.bbc.co.uk/news/articles/c5rmy84np001o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Bolsa",
+   "published": "26 Oct",
+   "title": "Anthropic's blockbuster share listing - 5 surprising things we now know",
+   "summary": "Anthropic’s IPO prospectus is 355 pages and full of never before disclosed company information.",
+   "url": "https://www.bbc.co.uk/news/articles/cwn8d7g29vd9o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Economia",
+   "published": "27 Oct",
+   "title": "What is the Budget and what could be in it?",
+   "summary": "Chancellor John Healey will set out his plans for UK taxes on 28 October.",
+   "url": "https://www.bbc.co.uk/news/articles/c6x2zrjl7kjno?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Tecnologia",
+   "published": "26 Oct",
+   "title": "Anthropic warns of 'catastrophic risk' to humankind ahead of blockbuster share listing",
+   "summary": "The company will be the first true artificial intelligence company to go public as tech firms continue to invest heavily in AI.",
+   "url": "https://www.bbc.co.uk/news/articles/cq398p1wd1evo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Poupança",
+   "published": "26 Oct",
+   "title": "Healey to shield low-income pensioners from income tax in the Budget",
+   "summary": "Changes are needed to prevent the full, flat-rate state pension becoming liable for income tax after it rises in April.",
+   "url": "https://www.bbc.co.uk/news/articles/ck98zp7zeq65o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Economia",
+   "published": "26 Oct",
+   "title": "Salon owners urge Budget VAT cut as staffing pressures grow",
+   "summary": "Marcus Perkins, who owns a hair and beauty salon in Brierley Hill, says he is scared for the future.",
+   "url": "https://www.bbc.co.uk/news/articles/c60rlp8kkz1zo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Habitação",
+   "published": "27 Oct",
+   "title": "First-time buyer wary of Budget housing loan scheme",
+   "summary": "Luke Anstee has been saving for three years but says rising living costs make home ownership harder.",
+   "url": "https://www.bbc.co.uk/news/articles/c3dxwznv4kyyo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Economia",
+   "published": "27 Oct",
+   "title": "Will the Budget pass Burnham's Makerfield test?",
+   "summary": "People in the prime minister's constituency say rising costs are squeezing household finances.",
+   "url": "https://www.bbc.co.uk/news/articles/cqzjx1e9ylv1o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Inflação",
+   "published": "27 Oct",
+   "title": "Britain issues costliest five-year debt since 2008 in run-up to budget – business live",
+   "summary": "<p>Rolling coverage of the latest economic and financial news</p><ul><li><p><a href=\"https://www.theguardian.com/business/2026/oct/27/uk-shop-price-inflation-highest-since-2024-as-retailers-struggle-t",
+   "url": "https://www.theguardian.com/business/live/2026/oct/27/hsbc-shareholders-profits-surge-32-percent-bank-tax-budget-stock-markets-cost-cutting-latest-news-updates"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "Number of UK businesses in financial distress ‘at two-decade high’",
+   "summary": "<p>Administrator BTG says 738,144 firms struggling as calls grow for more support for private sector in budget</p><ul><li><p><a href=\"https://www.theguardian.com/business/live/2026/oct/27/hsbc-shareho",
+   "url": "https://www.theguardian.com/business/2026/oct/27/number-of-uk-businesses-in-financial-distress-at-two-decade-high-budget"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Inflação",
+   "published": "27 Oct",
+   "title": "UK shop price inflation ‘highest since 2024’ as retailers struggle to limit price rises",
+   "summary": "<p>British Retail Consortium says ‘dam is starting to break on the huge wave of costs’ being kept from consumers</p><p>Shop price inflation has risen to the highest level in two and a half years, acco",
+   "url": "https://www.theguardian.com/business/2026/oct/27/uk-shop-price-inflation-highest-since-2024-as-retailers-struggle-to-limit-price-rises"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Economia",
+   "published": "27 Oct",
+   "title": "‘No one saves the planet if it hits their pocket’: UK heat pump installers fear planned subsidy cuts",
+   "summary": "<p>Boiler upgrade scheme, which provides grants of up to £9,000 for sustainable alternatives, expected to be slashed in budget</p><p>When Bill Tuck first started installing air source heat pumps six y",
+   "url": "https://www.theguardian.com/environment/2026/oct/27/heat-pump-installers-fear-planned-subsidy-cuts-uk-budget"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Economia",
+   "published": "27 Oct",
+   "title": "UK officials discussing options including free movement with EU ahead of summit",
+   "summary": "<p>Business secretary says focus for November summit will be trade and youth mobility, but talks will also include ‘future options for relationship’</p><ul><li><p><a href=\"https://www.theguardian.com/",
+   "url": "https://www.theguardian.com/politics/2026/oct/27/uk-eu-relationship-talks-summit-free-movement-jonathan-reynolds"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "Four takeaways from Anthropic’s potentially record-breaking stock market filing",
+   "summary": "<p>The AI company’s first public financial disclosures reveal explosive growth, huge costs and risks ranging from cyber-attacks to the limits of safeguards</p><p>Anthropic <a href=\"https://www.theguar",
+   "url": "https://www.theguardian.com/technology/2026/oct/26/anthropic-stock-market-filing-takeaways"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Mercados",
+   "published": "27 Oct",
+   "title": "Super-rich get ‘double dividend’ from causes and costs of climate crisis, report finds",
+   "summary": "<p>Oxfam says investing by rich in disaster recovery widens inequality and gives incentive to delay climate action</p><p>The world’s wealthiest people are not just profiting from the polluting causes ",
+   "url": "https://www.theguardian.com/environment/2026/oct/27/super-rich-double-dividend-climate-crisis-oxfam"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Economia",
+   "published": "27 Oct",
+   "title": "My advice for Burnham’s first budget? Hit the banks – and hit them hard | Polly Toynbee",
+   "summary": "<p>Bankers have barely begun to repay the billions they cost the country after 2008. In this PM they may have met their match</p><p>Vibes matter. We live by how we feel – an idea that orthodox economi",
+   "url": "https://www.theguardian.com/commentisfree/2026/oct/27/andy-burnham-budget-banks-billions-prime-minister"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Fundos",
+   "published": "27 Oct",
+   "title": "Why won't MPs tax the rich? We asked them – and their answers gave us hope | Faiza Shaheen",
+   "summary": "<p>Even most Reform voters are in favour of a tax on the super-wealthy. Yet the first budget of the Burnham era looks set to dodge the issue</p><p>In John Healey’s first budget this week, we will fina",
+   "url": "https://www.theguardian.com/commentisfree/2026/oct/27/mps-tax-super-rich-wealthy-voters-reform-budget-burnham"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Poupança",
+   "published": "26 Oct",
+   "title": "Healey is expected to shield low-income pensioners from income tax – but how will it work?",
+   "summary": "<p>Retirees will get a personal allowance aligned with the new state pension, but experts say it could get complicated</p><p>Retirees in the UK on low incomes are expected to be given a new personal a",
+   "url": "https://www.theguardian.com/money/2026/oct/26/healey-pensioners-low-income-tax-budget-how-will-it-work"
+  },
+  {
+   "source": "New York Times",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "Who Stands to Gain From an Anthropic I.P.O.",
+   "summary": "Wall Street banks and chipmakers are among those poised to capitalize on the artificial intelligence giant’s public trading debut.",
+   "url": "https://www.nytimes.com/2026/10/27/business/dealbook/winners-losers-anthropic-ipo-ai.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "In Anthropic I.P.O., Goldman and Morgan Stanley Slug It Out for Top Bank",
+   "summary": "Anthropic named the Wall Street firms lead underwriters on its upcoming public offering, a role that will generate generous fees and enormous prestige.",
+   "url": "https://www.nytimes.com/2026/10/27/business/anthropic-ipo-goldman-morgan-stanley.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Banca central",
+   "published": "27 Oct",
+   "title": "The Fed Is Expected to Hold Rates Steady. Warsh Will Have to Explain Why.",
+   "summary": "Inflation is moving in the wrong direction and the labor market remains stable, a combination that bolsters the case for higher interest rates.",
+   "url": "https://www.nytimes.com/2026/10/27/business/the-fed-is-expected-to-hold-rates-steady-warsh-will-have-to-explain-why.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Economia",
+   "published": "27 Oct",
+   "title": "Holiday Travel Costs Are Soaring. Here’s How to Save.",
+   "summary": "As airfares and gas prices surge, here’s how you can extend your travel budget.",
+   "url": "https://www.nytimes.com/2026/10/27/travel/discounts-holiday-travel.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Poupança",
+   "published": "27 Oct",
+   "title": "U.S. Pensions Are Riding the A.I. Wave. For Better or Worse.",
+   "summary": "As exuberance around the technology stokes fears of a bubble, the nation’s public pensions are starting to grapple with their role — and their risks.",
+   "url": "https://www.nytimes.com/2026/10/27/business/pensions-ai.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Mercados",
+   "published": "26 Oct",
+   "title": "Brazilian Markets Convulse After Unexpected Election Result",
+   "summary": "President Luiz Inácio Lula da Silva’s re-election victory prompted a sharp reversal in financial markets that had expected his opponent to win.",
+   "url": "https://www.nytimes.com/2026/10/26/business/brazil-stock-markets-election-lula.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Fundos",
+   "published": "26 Oct",
+   "title": "Meta and SpaceX to Raise Billions More to Fund A.I. Ambitions",
+   "summary": "The race to build artificial intelligence infrastructure is consuming increasingly enormous amounts of cash at the biggest tech companies.",
+   "url": "https://www.nytimes.com/2026/10/26/business/meta-spacex-artificial-intelligence.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Mercados",
+   "published": "26 Oct",
+   "title": "Musk Is Predicting ‘Guppy-level Death’ for Scores of A.I. Companies",
+   "summary": "Elon Musk sees many artificial-intelligence infrastructure companies being shut out of the debt market, a warning that could weigh on markets.",
+   "url": "https://www.nytimes.com/2026/10/26/business/dealbook/musk-ai-credit-shakeout.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Economia",
+   "published": "26 Oct",
+   "title": "What’s Riding on Anthropic Going Public? Nearly Everything.",
+   "summary": "Anthropic sits atop a pyramid of business partners and suppliers, making it a barometer of the broader economy. Its initial public offering will have widespread implications.",
+   "url": "https://www.nytimes.com/2026/10/26/technology/anthropic-going-public-stakes.html"
+  },
+  {
+   "source": "Fortune",
+   "category": "Tecnologia",
+   "published": "27 Oct",
+   "title": "NSA official turned founder: AI multiplies attackers’ expertise while defenders are still short on talent",
+   "summary": "A lone attacker, possibly 26, used AI agents to break into seven Korean lenders. The fix for defenders is not fewer people.",
+   "url": "https://fortune.com/2026/10/27/ai-hacking-agents-cybersecurity-talent-gap-synack-jay-kaplan/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Poupança",
+   "published": "27 Oct",
+   "title": "‘The real generation gap is about expectations’: What happens to retirement if we live to 130?",
+   "summary": "The MIT AgeLab's Joe Coughlin isn't sold on the Great Wealth Transfer. \"For all the kids waiting for that great check in the sky, don’t hold your breath.”",
+   "url": "https://fortune.com/2026/10/27/great-wealth-transfer-retirement-longevity-boomers-millennials-gen-z-john-hancock-mit/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Tecnologia",
+   "published": "27 Oct",
+   "title": "Anthropic’s S-1 embodies all the contradictions of the AI boom, and the questions about what happens next",
+   "summary": "The anxiously awaited go-public filing from the $965 billion company is filled with contradictions that, perhaps, wholly encapsulate the AI era.",
+   "url": "https://fortune.com/2026/10/27/anthropic-s-1-embodies-contradictions-ai-boom-questions-what-happens-next/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Mercados",
+   "published": "27 Oct",
+   "title": "Raised to swipe, ready to bet: How prediction markets exploit kids’ digital conditioning",
+   "summary": "Prediction markets risk turning a childhood of digital rewards into an adulthood of betting. Young users need stronger safeguards.",
+   "url": "https://fortune.com/2026/10/27/prediction-markets-young-adults-safeguards/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Fundos",
+   "published": "27 Oct",
+   "title": "Tech bulls are barely winning their fight against the oil bears",
+   "summary": "Meta's stock declined nearly 2% after it announced it would offer $95 billion in new, dilutive stock to fund its AI buildout plans.",
+   "url": "https://fortune.com/2026/10/27/tech-bulls-barely-winning-fight-against-oil-bears-meta/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "A good buy or ‘the most ridiculous IPO of 2026’: Anthropic’s debut will be a referendum on AI",
+   "summary": "Also: All the news and watercooler chat from Fortune.",
+   "url": "https://fortune.com/2026/10/27/anthropic-ipo-s1-referendum-good-buy-ridiculous/"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Obrigações",
+   "published": "27 Oct",
+   "title": "Oppenheimer holds $150 CoreWeave target, sees bond selloff as overdone",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/oppenheimer-holds-150-coreweave-target-sees-bond-selloff-as-overdone-4975535"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "27 Oct",
+   "title": "UPS raises annual forecasts as higher-margin parcels drive quarterly profit beat",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/ups-raises-annual-profit-revenue-forecasts-as-higherpaying-shipments-boost-margin-4974771"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "27 Oct",
+   "title": "TSX futures point higher with upcoming Bank of Canada meeting in focus",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/tsx-futures-point-higher-with-upcoming-bank-of-canada-meeting-in-focus-4975484"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "27 Oct",
+   "title": "Goldman downgrades Gjensidige as slowing price hikes limit earnings upside",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/goldman-downgrades-gjensidige-as-slowing-price-hikes-limit-earnings-upside-4975468"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "Why is CTS stock surging today?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/why-is-cts-stock-surging-today-93CH-4975455"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "Why is PACCAR stock surging today?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/why-is-paccar-stock-surging-today-93CH-4975453"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "Is Robinhood stock setup strong enough to trigger a post earnings rally today?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/is-robinhood-stock-setup-strong-enough-to-trigger-a-post-earnings-rally-today-93CH-4975452"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "Why is Xylem stock tumbling today?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/why-is-xylem-stock-tumbling-today-93CH-4975447"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "27 Oct",
+   "title": "Boeing jetliner production challenges weigh on third-quarter results",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/boeing-jetliner-production-challenges-weigh-on-thirdquarter-results-4975148"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "Why is Artiva Biotherapeutics stock collapsing today?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/why-is-artiva-biotherapeutics-stock-collapsing-today-93CH-4975397"
+  },
+  {
+   "source": "Seeking Alpha",
+   "category": "Bolsa",
+   "published": "27 Oct",
+   "title": "Hilton shares drop as investors weigh results, full-year outlook",
+   "summary": "",
+   "url": "https://seekingalpha.com/news/4657801-hilton-shares-drop-as-investors-weigh-results-full-year-outlook?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news"
+  },
+  {
+   "source": "Seeking Alpha",
+   "category": "Fundos",
+   "published": "27 Oct",
+   "title": "AllianceBernstein Global High Income Fund declares $0.0655 dividend",
+   "summary": "",
+   "url": "https://seekingalpha.com/news/4657846-alliancebernstein-global-high-income-fund-declares-0_0655-dividend?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "27 Oct",
+   "title": "October 2026 euro area bank lending survey",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261027~506ef03145.en.html"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "26 Oct",
+   "title": "Survey on the Access to Finance of Enterprises: lending conditions tightened",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261026~bde7b6d11a.en.html"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "26 Oct",
+   "title": "Frank Elderson: Taking action for nature – investing in economic resilience and prosperity",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261026~d903d7ad85.en.html"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "24 Oct",
+   "title": "Piero Cipollone: Interview with Milano Finanza",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261024~ee2ba73cf3.en.html"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "23 Oct",
+   "title": "ECB Consumer Expectations Survey results – September 2026",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261023~a3d201c97c.en.html"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "21 Oct",
+   "title": "Piero Cipollone: Pontes and Appia: unlocking opportunities for banks",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261021_1~d190f2c349.en.pdf"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "21 Oct",
+   "title": "Philip R. Lane: Euro liquidity lines and the international monetary system",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261021~401d6c4b70.en.html"
+  }
+ ],
+ "sources": [
+  "Bloomberg",
+  "Financial Times",
+  "Wall Street Journal",
+  "CNBC",
+  "MarketWatch",
+  "BBC",
+  "The Guardian",
+  "New York Times",
+  "Fortune",
+  "Investing.com",
+  "Seeking Alpha",
+  "ECB"
+ ],
+ "editions": [
+  "afternoon"
+ ],
+ "collectedAt": "2026-10-27T12:43:21.334Z"
+}
