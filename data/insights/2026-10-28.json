@@ -1,17 +1,28 @@
 {
  "auto": true,
  "date": "2026-10-28",
- "basedOn": "2026-10-28T13:34:48.363Z",
- "generatedAt": "2026-10-28T13:34:52.036Z",
- "resumo": "Today's talk is mostly about **stocks and tech**. Rising: stocks, tech, the economy, central-bank rates. Falling: funds.",
+ "basedOn": "2026-10-28T20:35:22.179Z",
+ "generatedAt": "2026-10-28T20:35:24.165Z",
+ "resumo": "Today's talk is mostly about **central-bank rates and stocks**. Rising: central-bank rates, commodities, bonds. Falling: stocks.",
  "classes": [
   {
-   "nome": "Ações",
+   "nome": "Juros (bancos centrais)",
    "tendencia": "a subir",
    "forca": 3,
-   "leitura": "27 stories today. Top one: Wendy's shares jump 15% as Nelson Peltz's Trian offers $1.4 billion to buy burger chain (CNBC).",
+   "leitura": "22 stories today. Top one: Stocks Edge Higher After Fed as Oracle Surges 11%: Markets Wrap (Bloomberg).",
    "a_favor": [
-    "Wendy's shares jump 15% as Nelson Peltz's Trian offers $1.4…"
+    "Stocks Edge Higher After Fed as Oracle Surges 11%: Markets…"
+   ],
+   "riscos": [],
+   "perfil": "Affects everyone's deposits, loans and bonds."
+  },
+  {
+   "nome": "Ações",
+   "tendencia": "a descer",
+   "forca": 3,
+   "leitura": "19 stories today. Top one: Rapport Therapeutics stock tumbles on $350M capital raise (Investing.com).",
+   "a_favor": [
+    "Microsoft stock jumps 4% as cloud growth drives earnings an…"
    ],
    "riscos": [
     "Rapport Therapeutics stock tumbles on $350M capital raise"
@@ -19,72 +30,59 @@
    "perfil": "Long horizon and tolerance for temporary losses."
   },
   {
-   "nome": "Tecnologia",
-   "tendencia": "a subir",
+   "nome": "Fundos",
+   "tendencia": "estável",
    "forca": 3,
-   "leitura": "13 stories today. Top one: AI Boom Drives a Jump in Lending, but Bankers Still Sound Cautious (Wall Street Journal).",
-   "a_favor": [
-    "AI Boom Drives a Jump in Lending, but Bankers Still Sound C…"
-   ],
+   "leitura": "8 stories today. Top one: In pro sports, even the superrich are being priced out of owning a team (Fortune).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "People who want to diversify with professional management."
+  },
+  {
+   "nome": "Tecnologia",
+   "tendencia": "estável",
+   "forca": 3,
+   "leitura": "7 stories today. Top one: Zocdoc CEO: will AI agents make your business more valuable or more vulnerable? (Fortune).",
+   "a_favor": [],
    "riscos": [],
    "perfil": "Long horizon and tolerance for high volatility."
   },
   {
    "nome": "Economia",
-   "tendencia": "a subir",
+   "tendencia": "estável",
    "forca": 3,
-   "leitura": "13 stories today. Top one: Minimum wage set to rise but 18-20 year-olds will not get bigger increase (BBC).",
-   "a_favor": [
-    "Minimum wage set to rise but 18-20 year-olds will not get b…"
-   ],
+   "leitura": "7 stories today. Top one: Bank of England able to take UK Budget in its stride despite slippage in deficit reduction (Financial Times).",
+   "a_favor": [],
    "riscos": [],
    "perfil": "Background for saving and investing decisions."
   },
   {
-   "nome": "Juros (bancos centrais)",
+   "nome": "Matérias-primas",
    "tendencia": "a subir",
-   "forca": 3,
-   "leitura": "10 stories today. Top one: Stock Market Today: Tech Stocks Open Higher Ahead of Fed Rate Decision (Wall Street Journal).",
+   "forca": 2,
+   "leitura": "5 stories today. Top one: European gas prices jump above €100 on fears of Iran war escalation (Financial Times).",
    "a_favor": [
-    "Stock Market Today: Tech Stocks Open Higher Ahead of Fed Ra…"
+    "European gas prices jump above €100 on fears of Iran war es…"
    ],
    "riscos": [],
-   "perfil": "Affects everyone's deposits, loans and bonds."
-  },
-  {
-   "nome": "Fundos",
-   "tendencia": "a descer",
-   "forca": 3,
-   "leitura": "6 stories today. Top one: China Steps In to Rescue Stocks, But the Market Continues to Fall (New York Times).",
-   "a_favor": [],
-   "riscos": [
-    "China Steps In to Rescue Stocks, But the Market Continues t…"
-   ],
-   "perfil": "People who want to diversify with professional management."
+   "perfil": "A small slice of a portfolio, for diversification only."
   },
   {
    "nome": "Obrigações",
-   "tendencia": "estável",
+   "tendencia": "a subir",
    "forca": 2,
-   "leitura": "3 stories today. Top one: This is a very interesting time for trashy credit (and all those who love it) (Financial Times).",
-   "a_favor": [],
+   "leitura": "4 stories today. Top one: Global Bond Sales Shatter Record, Fueled by AI Borrowing Binge (Bloomberg).",
+   "a_favor": [
+    "Global Bond Sales Shatter Record, Fueled by AI Borrowing Bi…"
+   ],
    "riscos": [],
    "perfil": "Medium horizon and tolerance for price swings."
-  },
-  {
-   "nome": "Crédito à habitação",
-   "tendencia": "estável",
-   "forca": 2,
-   "leitura": "3 stories today. Top one: Home Buyers Who Enjoyed Cheap Adjustable Mortgages Are Now Getting a Nasty Shock (Wall Street Journal).",
-   "a_favor": [],
-   "riscos": [],
-   "perfil": "Anyone with, or about to take, a mortgage."
   }
  ],
  "temas": [
+  "What the ECB does and why it touches your money",
   "Volatility is not the same as losing money",
-  "Concentration: the risk of betting on one sector",
-  "How to read the economic numbers"
+  "What an investment fund is"
  ],
  "brief": {
   "one_liner": "As tech giants fuel a lending surge and fixed rates hover, everyday savers are navigating a tricky maze of costs and cash.",
