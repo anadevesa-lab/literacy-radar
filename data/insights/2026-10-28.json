@@ -1,0 +1,206 @@
+{
+ "auto": true,
+ "date": "2026-10-28",
+ "basedOn": "2026-10-28T13:34:48.363Z",
+ "generatedAt": "2026-10-28T13:34:52.036Z",
+ "resumo": "Today's talk is mostly about **stocks and tech**. Rising: stocks, tech, the economy, central-bank rates. Falling: funds.",
+ "classes": [
+  {
+   "nome": "Ações",
+   "tendencia": "a subir",
+   "forca": 3,
+   "leitura": "27 stories today. Top one: Wendy's shares jump 15% as Nelson Peltz's Trian offers $1.4 billion to buy burger chain (CNBC).",
+   "a_favor": [
+    "Wendy's shares jump 15% as Nelson Peltz's Trian offers $1.4…"
+   ],
+   "riscos": [
+    "Rapport Therapeutics stock tumbles on $350M capital raise"
+   ],
+   "perfil": "Long horizon and tolerance for temporary losses."
+  },
+  {
+   "nome": "Tecnologia",
+   "tendencia": "a subir",
+   "forca": 3,
+   "leitura": "13 stories today. Top one: AI Boom Drives a Jump in Lending, but Bankers Still Sound Cautious (Wall Street Journal).",
+   "a_favor": [
+    "AI Boom Drives a Jump in Lending, but Bankers Still Sound C…"
+   ],
+   "riscos": [],
+   "perfil": "Long horizon and tolerance for high volatility."
+  },
+  {
+   "nome": "Economia",
+   "tendencia": "a subir",
+   "forca": 3,
+   "leitura": "13 stories today. Top one: Minimum wage set to rise but 18-20 year-olds will not get bigger increase (BBC).",
+   "a_favor": [
+    "Minimum wage set to rise but 18-20 year-olds will not get b…"
+   ],
+   "riscos": [],
+   "perfil": "Background for saving and investing decisions."
+  },
+  {
+   "nome": "Juros (bancos centrais)",
+   "tendencia": "a subir",
+   "forca": 3,
+   "leitura": "10 stories today. Top one: Stock Market Today: Tech Stocks Open Higher Ahead of Fed Rate Decision (Wall Street Journal).",
+   "a_favor": [
+    "Stock Market Today: Tech Stocks Open Higher Ahead of Fed Ra…"
+   ],
+   "riscos": [],
+   "perfil": "Affects everyone's deposits, loans and bonds."
+  },
+  {
+   "nome": "Fundos",
+   "tendencia": "a descer",
+   "forca": 3,
+   "leitura": "6 stories today. Top one: China Steps In to Rescue Stocks, But the Market Continues to Fall (New York Times).",
+   "a_favor": [],
+   "riscos": [
+    "China Steps In to Rescue Stocks, But the Market Continues t…"
+   ],
+   "perfil": "People who want to diversify with professional management."
+  },
+  {
+   "nome": "Obrigações",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "3 stories today. Top one: This is a very interesting time for trashy credit (and all those who love it) (Financial Times).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Medium horizon and tolerance for price swings."
+  },
+  {
+   "nome": "Crédito à habitação",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "3 stories today. Top one: Home Buyers Who Enjoyed Cheap Adjustable Mortgages Are Now Getting a Nasty Shock (Wall Street Journal).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Anyone with, or about to take, a mortgage."
+  }
+ ],
+ "temas": [
+  "Volatility is not the same as losing money",
+  "Concentration: the risk of betting on one sector",
+  "How to read the economic numbers"
+ ],
+ "brief": {
+  "one_liner": "As tech giants fuel a lending surge and fixed rates hover, everyday savers are navigating a tricky maze of costs and cash.",
+  "number": {
+   "value": "2.5%",
+   "caption": "The ECB deposit rate holding steady as borrowers face higher charges."
+  },
+  "stories": [
+   {
+    "i": 6,
+    "title": "Tech Stocks Climb as Markets Brace for Fed Decisions",
+    "whats_going_on": "Chip stocks rose in early trading as tech shares opened higher. Wall Street is keenly watching ahead of the Federal Reserve's expected decision to hold interest rates steady.",
+    "what_it_means": "Investors are closely monitoring central bank signals to gauge how long borrowing costs might remain elevated. Steady rates reflect ongoing caution among policymakers balancing growth and inflation.",
+    "why_care": "Broader market movements can influence pension funds and diversified investment portfolios, though everyday savers should focus on their own cash buffers rather than daily stock swings."
+   },
+   {
+    "i": 10,
+    "title": "AI Boom Ignites Lending Wave While Bankers Stay Cautious",
+    "whats_going_on": "Major banks and regional lenders alike are riding a wave of new financing driven by the artificial intelligence sector. Despite the surge in AI-related lending, bankers continue to voice caution about underlying risks.",
+    "what_it_means": "The massive capital requirements of building out AI infrastructure are reshaping commercial loan books. Lenders are eager for growth but mindful of potential credit strains.",
+    "why_care": "Corporate borrowing trends rarely alter household deposit rates overnight, but they highlight where financial institutions are placing their biggest bets."
+   },
+   {
+    "i": 11,
+    "title": "Adjustable Mortgage Holders Face Payment Shocks",
+    "whats_going_on": "Homeowners who financed properties with adjustable-rate mortgages during periods of historically low borrowing costs are facing sharp payment increases. Tens of thousands of borrowers are seeing their monthly expenses jump as rates reset.",
+    "what_it_means": "When variable or adjustable loans reprice higher, household budgets absorb an immediate squeeze. This is the direct transmission channel of higher central bank rates hitting Main Street.",
+    "why_care": "If you hold a variable-rate loan or mortgage, reviewing your monthly budget ahead of rate resets is essential to protect your household savings."
+   },
+   {
+    "i": 60,
+    "title": "GSK Shares Plunge on Weaker Sales and Mounting Costs",
+    "whats_going_on": "Shares in British pharmaceutical giant GSK dropped sharply after the company reported declining profits. Weaker vaccine sales and looming patent losses for a key HIV drug unnerved investors.",
+    "what_it_means": "Even established blue-chip firms face severe market penalties when sales momentum stumbles and future revenue streams look uncertain. Single-stock volatility can strike rapidly in defensive sectors.",
+    "why_care": "If you hold individual shares or specific healthcare funds, sudden corporate earnings drops are a reminder of the risks tied to company-specific downturns."
+   }
+  ],
+  "basedOn": "2026-10-28T13:34:48.363Z",
+  "generatedAt": "2026-10-28T13:35:21.307Z"
+ },
+ "pack": {
+  "carousel": {
+   "title": "Protect your **mortgage payments** now",
+   "slides": [
+    {
+     "kind": "hook",
+     "h": "Is your **mortgage payment** jumping?",
+     "big": "",
+     "t": ""
+    },
+    {
+     "kind": "stat",
+     "h": "Average new **mortgage rates** sit here",
+     "big": "3%",
+     "t": "Recent data shows typical new mortgage rates at 3% in Portugal."
+    },
+    {
+     "kind": "point",
+     "h": "Variable **rates** cause sudden payment shocks",
+     "big": "",
+     "t": "Homeowners with adjustable loans face much higher monthly expenses as rates reset."
+    },
+    {
+     "kind": "myth",
+     "h": "\"Low rates last **forever**\"",
+     "big": "",
+     "t": "Borrowing costs change, and past low rates are never a guide to the future."
+    },
+    {
+     "kind": "point",
+     "h": "Review your **budget** before resets",
+     "big": "",
+     "t": "Check your monthly spending now to protect your household savings from unexpected shocks."
+    },
+    {
+     "kind": "cta",
+     "h": "Save this **post** and follow us",
+     "big": "",
+     "t": "Follow PaperMint for fresh financial news every single day."
+    }
+   ]
+  },
+  "linkedin": "Mortgage holders are feeling the pinch as adjustable rates reset, driving home a classic lesson in personal finance: borrowing costs do not stay low forever.\n\nWhile tech stocks climb and banks fund the ongoing artificial intelligence boom, everyday savers face a much more grounded reality. If you financed a property with a variable-rate loan during times of historically cheap credit, your monthly payments might be heading north.\n\nCorporate earnings swings and stock market jitters make for noisy headlines, but they rarely change the immediate health of your household cash buffer. Instead of watching daily stock movements, take ten minutes today to review your monthly budget. Knowing where every pound goes is your best defence against rising expenses.\n\n#PersonalFinance #Mortgages #PaperMint",
+  "reel": {
+   "hook": "Why your adjustable mortgage payment is about to jump.",
+   "script": [
+    "Adjustable mortgage holders are facing sharp payment increases right now.",
+    "When rates reset after years of cheap credit, monthly budgets take a hit.",
+    "New mortgage rates in Portugal recently averaged three percent.",
+    "Corporate news and tech stocks make headlines, but your cash buffer matters most.",
+    "Review your monthly spending today to protect your savings."
+   ],
+   "caption": "Adjustable mortgage rates are resetting higher. Check your household budget today to protect your savings from payment shocks."
+  },
+  "faq": [
+   {
+    "q": "Why are adjustable mortgage payments increasing?",
+    "a": "Borrowers who secured loans when borrowing costs were historically low are seeing sharp increases as their variable rates reset to current market levels."
+   },
+   {
+    "q": "What is the average new mortgage rate in Portugal?",
+    "a": "Recent data from August 2026 shows new mortgage rates averaging 3%. Remember that past rates are not a guide to future borrowing costs."
+   },
+   {
+    "q": "Do corporate lending trends affect my savings account?",
+    "a": "Corporate borrowing trends and bank financing for the artificial intelligence sector rarely alter household deposit rates overnight."
+   },
+   {
+    "q": "Should I worry about daily stock market swings?",
+    "a": "Daily stock movements and tech sector rallies matter for diversified portfolios and pension funds, but everyday savers should focus primarily on their cash buffers."
+   },
+   {
+    "q": "How can I protect my household finances from rate resets?",
+    "a": "Reviewing your monthly budget ahead of scheduled rate resets is essential for identifying potential shortfalls and protecting your household savings."
+   }
+  ],
+  "generatedAt": "2026-10-28T13:35:35.489Z"
+ }
+}
