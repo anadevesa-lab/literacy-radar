@@ -1,20 +1,18 @@
 {
  "auto": true,
  "date": "2026-10-29",
- "basedOn": "2026-10-29T13:45:59.207Z",
- "generatedAt": "2026-10-29T13:46:03.869Z",
- "resumo": "Today's talk is mostly about **central-bank rates and stocks**. Rising: tech, inflation. Falling: central-bank rates, stocks.",
+ "basedOn": "2026-10-29T20:40:21.843Z",
+ "generatedAt": "2026-10-29T20:40:24.747Z",
+ "resumo": "Today's talk is mostly about **central-bank rates and stocks**. Falling: central-bank rates, stocks.",
  "classes": [
   {
    "nome": "Juros (bancos centrais)",
    "tendencia": "a descer",
    "forca": 3,
-   "leitura": "22 stories today. Top one: UK government borrowing costs fall as City welcomes ‘no harm’ budget – business live (The Guardian).",
-   "a_favor": [
-    "Inflation surges, PCE shows. Fed pause on rate hikes unlike…"
-   ],
+   "leitura": "23 stories today. Top one: U.S. futures remain lower after in-line report on Fed’s favorite inflation gauge (Investing.com).",
+   "a_favor": [],
    "riscos": [
-    "UK government borrowing costs fall as City welcomes ‘no har…"
+    "U.S. futures remain lower after in-line report on Fed’s fav…"
    ],
    "perfil": "Affects everyone's deposits, loans and bonds."
   },
@@ -22,65 +20,59 @@
    "nome": "Ações",
    "tendencia": "a descer",
    "forca": 3,
-   "leitura": "17 stories today. Top one: Stock Market Today: Alphabet Stock Sinks After Earnings, Dragging the Nasdaq (Wall Street Journal).",
-   "a_favor": [],
+   "leitura": "21 stories today. Top one: Nvidia CEO Huang caught up in reported Chinese spy probe as AI stocks slide (Investing.com).",
+   "a_favor": [
+    "Alphabet Stumbles, U.S. Economy Surges"
+   ],
    "riscos": [
-    "Stock Market Today: Alphabet Stock Sinks After Earnings, Dr…"
+    "Nvidia CEO Huang caught up in reported Chinese spy probe as…"
    ],
    "perfil": "Long horizon and tolerance for temporary losses."
   },
   {
    "nome": "Tecnologia",
-   "tendencia": "a subir",
+   "tendencia": "estável",
    "forca": 3,
-   "leitura": "16 stories today. Top one: AI Boom Drives a Jump in Lending, but Bankers Still Sound Cautious (Wall Street Journal).",
-   "a_favor": [
-    "AI Boom Drives a Jump in Lending, but Bankers Still Sound C…"
-   ],
+   "leitura": "10 stories today. Top one: “The attackers are winning”: Cyber 60 founders say AI is giving hackers the upper hand (Fortune).",
+   "a_favor": [],
    "riscos": [],
    "perfil": "Long horizon and tolerance for high volatility."
   },
   {
-   "nome": "Economia",
-   "tendencia": "misto",
-   "forca": 3,
-   "leitura": "10 stories today. Top one: Minimum wage rise 'a massive blow' says farmer (BBC).",
-   "a_favor": [
-    "Minimum wage rise 'a massive blow' says farmer"
-   ],
-   "riscos": [
-    "'Painful' years ahead, think tanks warn, as living standard…"
-   ],
-   "perfil": "Background for saving and investing decisions."
-  },
-  {
    "nome": "Matérias-primas",
    "tendencia": "estável",
-   "forca": 3,
-   "leitura": "6 stories today. Top one: Oil Is Gushing Out of the Gulf. Why Are Prices Still Above $100 a Barrel? (Wall Street Journal).",
+   "forca": 2,
+   "leitura": "5 stories today. Top one: Current price of oil as of October 28, 2026 (Fortune).",
    "a_favor": [],
    "riscos": [],
    "perfil": "A small slice of a portfolio, for diversification only."
   },
   {
-   "nome": "Crédito à habitação",
+   "nome": "Obrigações",
    "tendencia": "estável",
    "forca": 2,
-   "leitura": "4 stories today. Top one: What the Budget offers for under 25s - and what it leaves out (BBC).",
+   "leitura": "5 stories today. Top one: Stock Rotation Hits AI Winners on Spending Worries: Markets Wrap (Bloomberg).",
    "a_favor": [],
    "riscos": [],
-   "perfil": "Anyone with, or about to take, a mortgage."
+   "perfil": "Medium horizon and tolerance for price swings."
   },
   {
-   "nome": "Inflação",
-   "tendencia": "a subir",
+   "nome": "Economia",
+   "tendencia": "estável",
    "forca": 2,
-   "leitura": "3 stories today. Top one: Consumer spending flattens out after inflation surge (MarketWatch).",
-   "a_favor": [
-    "Consumer spending flattens out after inflation surge"
-   ],
+   "leitura": "4 stories today. Top one: ING Launches Buyback But Flags Job Cuts and Unit Restructuring (Wall Street Journal).",
+   "a_favor": [],
    "riscos": [],
-   "perfil": "Affects everyone's purchasing power."
+   "perfil": "Background for saving and investing decisions."
+  },
+  {
+   "nome": "Depósitos e poupança",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "3 stories today. Top one: This is where most people go wrong in their 30s and 40s (MarketWatch).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Emergency fund and short-term goals."
   }
  ],
  "temas": [
