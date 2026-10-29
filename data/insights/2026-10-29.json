@@ -1,0 +1,168 @@
+{
+ "auto": true,
+ "date": "2026-10-29",
+ "basedOn": "2026-10-29T13:45:59.207Z",
+ "generatedAt": "2026-10-29T13:46:03.869Z",
+ "resumo": "Today's talk is mostly about **central-bank rates and stocks**. Rising: tech, inflation. Falling: central-bank rates, stocks.",
+ "classes": [
+  {
+   "nome": "Juros (bancos centrais)",
+   "tendencia": "a descer",
+   "forca": 3,
+   "leitura": "22 stories today. Top one: UK government borrowing costs fall as City welcomes ‘no harm’ budget – business live (The Guardian).",
+   "a_favor": [
+    "Inflation surges, PCE shows. Fed pause on rate hikes unlike…"
+   ],
+   "riscos": [
+    "UK government borrowing costs fall as City welcomes ‘no har…"
+   ],
+   "perfil": "Affects everyone's deposits, loans and bonds."
+  },
+  {
+   "nome": "Ações",
+   "tendencia": "a descer",
+   "forca": 3,
+   "leitura": "17 stories today. Top one: Stock Market Today: Alphabet Stock Sinks After Earnings, Dragging the Nasdaq (Wall Street Journal).",
+   "a_favor": [],
+   "riscos": [
+    "Stock Market Today: Alphabet Stock Sinks After Earnings, Dr…"
+   ],
+   "perfil": "Long horizon and tolerance for temporary losses."
+  },
+  {
+   "nome": "Tecnologia",
+   "tendencia": "a subir",
+   "forca": 3,
+   "leitura": "16 stories today. Top one: AI Boom Drives a Jump in Lending, but Bankers Still Sound Cautious (Wall Street Journal).",
+   "a_favor": [
+    "AI Boom Drives a Jump in Lending, but Bankers Still Sound C…"
+   ],
+   "riscos": [],
+   "perfil": "Long horizon and tolerance for high volatility."
+  },
+  {
+   "nome": "Economia",
+   "tendencia": "misto",
+   "forca": 3,
+   "leitura": "10 stories today. Top one: Minimum wage rise 'a massive blow' says farmer (BBC).",
+   "a_favor": [
+    "Minimum wage rise 'a massive blow' says farmer"
+   ],
+   "riscos": [
+    "'Painful' years ahead, think tanks warn, as living standard…"
+   ],
+   "perfil": "Background for saving and investing decisions."
+  },
+  {
+   "nome": "Matérias-primas",
+   "tendencia": "estável",
+   "forca": 3,
+   "leitura": "6 stories today. Top one: Oil Is Gushing Out of the Gulf. Why Are Prices Still Above $100 a Barrel? (Wall Street Journal).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "A small slice of a portfolio, for diversification only."
+  },
+  {
+   "nome": "Crédito à habitação",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "4 stories today. Top one: What the Budget offers for under 25s - and what it leaves out (BBC).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Anyone with, or about to take, a mortgage."
+  },
+  {
+   "nome": "Inflação",
+   "tendencia": "a subir",
+   "forca": 2,
+   "leitura": "3 stories today. Top one: Consumer spending flattens out after inflation surge (MarketWatch).",
+   "a_favor": [
+    "Consumer spending flattens out after inflation surge"
+   ],
+   "riscos": [],
+   "perfil": "Affects everyone's purchasing power."
+  }
+ ],
+ "temas": [
+  "What the ECB does and why it touches your money",
+  "Volatility is not the same as losing money",
+  "Concentration: the risk of betting on one sector"
+ ],
+ "pack": {
+  "carousel": {
+   "title": "Why your savings need a fresh look",
+   "slides": [
+    {
+     "kind": "hook",
+     "h": "Are your **savings** losing out?",
+     "big": "",
+     "t": ""
+    },
+    {
+     "kind": "stat",
+     "h": "The average **deposit** rate right now",
+     "big": "1.62%",
+     "t": "New term deposits in Portugal sit at 1.62% as of August."
+    },
+    {
+     "kind": "point",
+     "h": "Inflation eats your **hard** earned cash",
+     "big": "",
+     "t": "Prices keep rising, meaning cash sitting idle slowly loses its buying power."
+    },
+    {
+     "kind": "myth",
+     "h": "\"All **bank** accounts pay the same\"",
+     "big": "",
+     "t": "Rates vary wildly. Shopping around can secure you a better deal for your money."
+    },
+    {
+     "kind": "point",
+     "h": "Time to check your **options** today",
+     "big": "",
+     "t": "Compare what your current bank offers versus what is available on the wider market."
+    },
+    {
+     "kind": "cta",
+     "h": "Save this and **follow** us",
+     "big": "",
+     "t": "Never miss a fresh financial update with PaperMint."
+    }
+   ]
+  },
+  "linkedin": "Tech giants are feeling the heat as Alphabet shares sink following earnings, reminding us all that even the biggest players face turbulent markets.\n\nAt the same time, the broader AI boom continues to reshape industries, from driving a jump in corporate lending to putting chip suppliers back in the driver's seat against tech heavyweights like Apple.\n\nFor everyday savers and new investors, these shifts are a useful reminder: headlines change fast, but a solid, grounded strategy stands the test of time. Markets go up and down, and past performance is never a guide to the future. Keeping a level head is your best asset when tech stocks wobble.\n\nHow are you adjusting your portfolio as tech earnings roll in? Let us know below.\n\n#Investing #PersonalFinance #TechNews",
+  "reel": {
+   "hook": "Why big tech stocks are suddenly wobbling on your screen.",
+   "script": [
+    "Alphabet shares just took a hit, dragging the Nasdaq down with them.",
+    "At the same time, chip suppliers are finally turning the tables on Apple.",
+    "It proves that even market giants face heavy pressure when earnings land.",
+    "Markets move fast, so keep your strategy steady and ignore the noise."
+   ],
+   "caption": "Tech earnings are shaking up the markets this week. Here is what you need to know without the jargon. #PaperMint #Investing"
+  },
+  "faq": [
+   {
+    "q": "Why did Alphabet stock sink recently?",
+    "a": "Alphabet shares dropped following its latest earnings report, which weighed on the broader Nasdaq index. Markets often react sharply to quarterly results from major tech firms."
+   },
+   {
+    "q": "What is happening between Apple and its chip suppliers?",
+    "a": "Suppliers that were squeezed on prices for years are finding new leverage thanks to the current artificial intelligence boom."
+   },
+   {
+    "q": "Are AI-related companies still growing?",
+    "a": "The artificial intelligence boom continues to drive strong demand, including a jump in corporate lending, though bankers remain cautious about the risks."
+   },
+   {
+    "q": "How do tech market dips affect everyday savers?",
+    "a": "Stock market drops highlight why diversification matters. Short-term market swings are normal and rarely impact your cash savings directly."
+   },
+   {
+    "q": "Should I change my investments when tech stocks fall?",
+    "a": "Reacting to daily market headlines can lead to poor choices. Stick to your long-term plan and remember past performance is not a guide to future results."
+   }
+  ],
+  "generatedAt": "2026-10-29T13:47:25.834Z"
+ }
+}
