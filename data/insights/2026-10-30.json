@@ -1,0 +1,89 @@
+{
+ "auto": true,
+ "date": "2026-10-30",
+ "basedOn": "2026-10-30T13:38:31.346Z",
+ "generatedAt": "2026-10-30T13:38:33.576Z",
+ "resumo": "Today's talk is mostly about **stocks and central-bank rates**. Falling: stocks.",
+ "classes": [
+  {
+   "nome": "Ações",
+   "tendencia": "a descer",
+   "forca": 3,
+   "leitura": "21 stories today. Top one: Amazon Stock Drops on Wall Street Miss, Despite Biggest Cloud Growth in Years (Wall Street Journal).",
+   "a_favor": [
+    "Wall Street braces for Democratic gains as 2026 midterm ele…"
+   ],
+   "riscos": [
+    "Amazon Stock Drops on Wall Street Miss, Despite Biggest Clo…"
+   ],
+   "perfil": "Long horizon and tolerance for temporary losses."
+  },
+  {
+   "nome": "Juros (bancos centrais)",
+   "tendencia": "estável",
+   "forca": 3,
+   "leitura": "15 stories today. Top one: Canada to Take Equity Stake in AI Firm Cohere (Wall Street Journal).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Affects everyone's deposits, loans and bonds."
+  },
+  {
+   "nome": "Tecnologia",
+   "tendencia": "misto",
+   "forca": 3,
+   "leitura": "10 stories today. Top one: Ignore AI and ask for that pay rise (The Economist).",
+   "a_favor": [
+    "Ignore AI and ask for that pay rise"
+   ],
+   "riscos": [
+    "Intel plunges 25%, triggers global chip rout on bleak outlo…"
+   ],
+   "perfil": "Long horizon and tolerance for high volatility."
+  },
+  {
+   "nome": "Economia",
+   "tendencia": "misto",
+   "forca": 3,
+   "leitura": "10 stories today. Top one: UK side-hustle tax-free allowance to rise to £3,000 next year (The Guardian).",
+   "a_favor": [
+    "UK side-hustle tax-free allowance to rise to £3,000 next ye…"
+   ],
+   "riscos": [
+    "'Painful' years ahead, think tanks warn, as living standard…"
+   ],
+   "perfil": "Background for saving and investing decisions."
+  },
+  {
+   "nome": "Fundos",
+   "tendencia": "estável",
+   "forca": 3,
+   "leitura": "7 stories today. Top one: The Extra-Strength Funds That Are Too Much of a Good Thing (Wall Street Journal).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "People who want to diversify with professional management."
+  },
+  {
+   "nome": "Matérias-primas",
+   "tendencia": "estável",
+   "forca": 3,
+   "leitura": "6 stories today. Top one: The never-ending absurdity of global oil markets (The Economist).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "A small slice of a portfolio, for diversification only."
+  },
+  {
+   "nome": "Depósitos e poupança",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "3 stories today. Top one: &#x2018;Fancy cars hold no appeal&#x2019;: We have a 99% chance of outliving our life savings. Why not spend,… (MarketWatch).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Emergency fund and short-term goals."
+  }
+ ],
+ "temas": [
+  "Volatility is not the same as losing money",
+  "What the ECB does and why it touches your money",
+  "Concentration: the risk of betting on one sector"
+ ]
+}
