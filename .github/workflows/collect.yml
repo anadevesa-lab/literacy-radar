@@ -1,8 +1,8 @@
 name: Collect news
-# Weekdays, morning and afternoon in Lisbon (cron is UTC). Free on GitHub.
+# Every day, morning and afternoon in Lisbon (cron is UTC). Free on GitHub.
 on:
   schedule:
-    - cron: "47 6,15 * * 1-5"
+    - cron: "47 6,15 * * *"
   workflow_dispatch: {}
 permissions:
   contents: write
