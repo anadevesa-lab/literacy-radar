@@ -2,590 +2,6 @@
  "date": "2026-10-30",
  "items": [
   {
-   "source": "The Guardian",
-   "category": "Mercados",
-   "published": "30 Oct",
-   "title": "How big a deal is the $6.3bn crypto heist, who did it, and are investments safe?",
-   "summary": "<p>The theft from Binance could be the biggest theft of any kind in history. We answer some key questions</p><ul><li><p><a href=\"https://www.theguardian.com/business/2026/oct/29/binance-crypto-exchang",
-   "url": "https://www.theguardian.com/business/2026/oct/30/crypto-heist-binance-who-did-it-are-investments-safe"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Fundos",
-   "published": "29 Oct",
-   "title": "Hold your nose: a £1.25bn subsidy for rich Rolls-Royce’s new engine had to happen",
-   "summary": "<p>The chancellor’s budget giveaway is, unfortunately, a reflection of how life works in the global aerospace business</p><p>It wasn’t a “nothing” <a href=\"https://www.theguardian.com/uk-news/budget-2",
-   "url": "https://www.theguardian.com/business/nils-pratley-on-finance/2026/oct/29/hold-your-nose-125bn-subsidy-rolls-royces-engine-justified-budget"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Economia",
-   "published": "30 Oct",
-   "title": "Opening the EU debate again is clearly a political minefield. But we have to do it | Simon Jenkins",
-   "summary": "<p>Andy Burnham must tread cautiously, but Brexit was a very grave act of self-harm – and he is right to address it</p><p>Andy Burnham’s <a href=\"https://www.theguardian.com/politics/2026/oct/26/brexi",
-   "url": "https://www.theguardian.com/commentisfree/2026/oct/30/brexit-eu-debate-again-political-minefield-andy-burnham"
-  },
-  {
-   "source": "New York Times",
-   "category": "Bolsa",
-   "published": "30 Oct",
-   "title": "The Tech Tumult Rocks Wall Street",
-   "summary": "Investors are growing nervous about the huge spending bills that tech giants are amassing to pay for their bets on artificial intelligence.",
-   "url": "https://www.nytimes.com/2026/10/30/business/dealbook/tech-tumult-ai-wall-street.html"
-  },
-  {
-   "source": "New York Times",
-   "category": "Mercados",
-   "published": "30 Oct",
-   "title": "U.S. Oil Industry Earned Over $130 Billion in Profit During Iran War",
-   "summary": "That was almost three times as much as what businesses producing and refining oil in the United States made in the same period in 2025.",
-   "url": "https://www.nytimes.com/2026/10/30/business/energy-environment/exxon-chevron-oil-profits-iran-war.html"
-  },
-  {
-   "source": "New York Times",
-   "category": "Bolsa",
-   "published": "30 Oct",
-   "title": "Tech Stocks Tumble, but Broader Market Is Holding On",
-   "summary": "The S&P 500 is set for a small loss for the month, despite a deeper slide in some of the A.I. stocks that exert a heavy influence on the index.",
-   "url": "https://www.nytimes.com/2026/10/30/business/stock-market-october-ai.html"
-  },
-  {
-   "source": "New York Times",
-   "category": "Inflação",
-   "published": "30 Oct",
-   "title": "Why the Markets Don’t Care About the Midterms",
-   "summary": "Factors like inflation, interest rates, A.I. and the war with Iran are far more important, our columnist says.",
-   "url": "https://www.nytimes.com/2026/10/30/business/midterms-stock-bond-markets.html"
-  },
-  {
-   "source": "New York Times",
-   "category": "Tecnologia",
-   "published": "30 Oct",
-   "title": "How One Country Became the Unlikely Crossroads of the Global A.I. Boom",
-   "summary": "In Malaysia, U.S. and Chinese tech giants are pouring billions into vast data centers, straining local resources and testing the limits of Washington’s restrictions on advanced chips.",
-   "url": "https://www.nytimes.com/2026/10/30/business/malaysia-data-center-china.html"
-  },
-  {
-   "source": "New York Times",
-   "category": "Mercados",
-   "published": "29 Oct",
-   "title": "Polymarket Is Investigating Suspicious Bets on Israeli Election",
-   "summary": "The company said it was looking into hundreds of new accounts that had placed wagers in two markets related to the election on Tuesday.",
-   "url": "https://www.nytimes.com/2026/10/29/business/polymarket-investigates-israeli-bets.html"
-  },
-  {
-   "source": "New York Times",
-   "category": "Tecnologia",
-   "published": "30 Oct",
-   "title": "Big Tech’s Data Center Blitz Is Burning Through Cash and Scaring Wall St.",
-   "summary": "Amazon on Thursday became the latest tech company to announce swelling investments in A.I. amid stumbling share prices.",
-   "url": "https://www.nytimes.com/2026/10/29/technology/amazon-earnings-tech-spending.html"
-  },
-  {
-   "source": "New York Times",
-   "category": "Banca central",
-   "published": "29 Oct",
-   "title": "Inflation Accelerated in October, PCE Index Shows",
-   "summary": "The Personal Consumption Expenditures index picked up in September, according to data released a day after the Federal Reserve’s decision to hold interest rates steady.",
-   "url": "https://www.nytimes.com/2026/10/29/business/economy/pce-inflation-economy.html"
-  },
-  {
-   "source": "New York Times",
-   "category": "Economia",
-   "published": "29 Oct",
-   "title": "U.S. GDP Increased 3.4% in Third Quarter",
-   "summary": "The economy grew 3.4 percent in the third quarter, the fastest pace in a year. Strong spending and growth contrast with the poor marks many voters are giving the economy.",
-   "url": "https://www.nytimes.com/2026/10/29/business/economy/us-economy-gdp.html"
-  },
-  {
-   "source": "New York Times",
-   "category": "Mercados",
-   "published": "29 Oct",
-   "title": "Its Investors Say Kalshi Is Worth $40 Billion. Is an I.P.O. Next?",
-   "summary": "The prediction market raised $1 billion in a new funding round and landed a market value almost double that of rival Polymarket. But legal challenges to its business persist.",
-   "url": "https://www.nytimes.com/2026/10/29/business/dealbook/kalshi-fundraising-ipo.html"
-  },
-  {
-   "source": "Fortune",
-   "category": "Economia",
-   "published": "30 Oct",
-   "title": "Goldman says AI layoffs are starting to leave a ‘long-lasting’ scar, just like the last 40 years of history",
-   "summary": "Workers 35 and older are taking the biggest hit, as finding a job takes about five weeks longer—and that's an AI-exposed job, too.",
-   "url": "https://fortune.com/2026/10/30/goldman-sachs-ai-layoffs-displaced-workers-older-workers-past-tech-disruptions/"
-  },
-  {
-   "source": "Fortune",
-   "category": "Mercados",
-   "published": "30 Oct",
-   "title": "Current price of oil as of October 30, 2026",
-   "summary": "When oil prices change, it affects your energy costs—and even the price of everyday items. Here’s why.",
-   "url": "https://fortune.com/article/price-of-oil-10-30-2026/"
-  },
-  {
-   "source": "Fortune",
-   "category": "Bolsa",
-   "published": "30 Oct",
-   "title": "Nasdaq futures sink 2.3% as Amazon, Intel and Alphabet send AI jitters through stocks",
-   "summary": "Alphabet's Class A shares slid more than 12% on Thursday in their worst ever trading day as it reported weaker growth for the summer than analysts expected.",
-   "url": "https://fortune.com/2026/10/30/stock-futures-fall-nasdaq-amazon-intel-alphabet-bitcoin-binance/"
-  },
-  {
-   "source": "Investing.com",
-   "category": "Bolsa",
-   "published": "30 Oct",
-   "title": "European shares dip as Amazon, Intel stoke AI cash-burn fears",
-   "summary": "",
-   "url": "https://www.investing.com/news/stock-market-news/european-shares-dip-as-amazon-intel-stoke-ai-cashburn-fears-4985916"
-  },
-  {
-   "source": "Investing.com",
-   "category": "Bolsa",
-   "published": "30 Oct",
-   "title": "Reddit shares plunge 23% on DAUs deceleration, weak guidance",
-   "summary": "",
-   "url": "https://www.investing.com/news/stock-market-news/reddit-shares-tumble-on-weak-guidance-despite-earnings-beat-4985080"
-  },
-  {
-   "source": "Investing.com",
-   "category": "Tecnologia",
-   "published": "30 Oct",
-   "title": "Intel plunges 25%, triggers global chip rout on bleak outlook",
-   "summary": "",
-   "url": "https://www.investing.com/news/stock-market-news/intel-warning-sparks-chip-rout-as-pc-weakness-clouds-turnaround-4987123"
-  },
-  {
-   "source": "Investing.com",
-   "category": "Bolsa",
-   "published": "30 Oct",
-   "title": "Why is Arbor Realty Trust stock plunging today?",
-   "summary": "",
-   "url": "https://www.investing.com/news/stock-market-news/why-is-arbor-realty-trust-stock-plunging-today-93CH-4987911"
-  },
-  {
-   "source": "Investing.com",
-   "category": "Mercados",
-   "published": "30 Oct",
-   "title": "General Dynamics tops quarterly estimates on robust Gulfstream, marine bookings",
-   "summary": "",
-   "url": "https://www.investing.com/news/stock-market-news/general-dynamics-tops-quarterly-estimates-on-robust-gulfstream-marine-bookings-4987898"
-  },
-  {
-   "source": "Investing.com",
-   "category": "Bolsa",
-   "published": "30 Oct",
-   "title": "Nasdaq 100 futures slide over 2% as tech earnings deepen AI spending concerns",
-   "summary": "",
-   "url": "https://www.investing.com/news/stock-market-news/us-stock-futures-sink-nasdaq-down-2-as-amazon-intel-earnings-underwhelm-4985675"
-  },
-  {
-   "source": "Investing.com",
-   "category": "Fundos",
-   "published": "30 Oct",
-   "title": "Investors pull money from US equity funds ahead of earnings reports from AI hyperscalers",
-   "summary": "",
-   "url": "https://www.investing.com/news/stock-market-news/investors-pull-money-from-us-equity-funds-ahead-of-earnings-reports-from-ai-hyperscalers-4987818"
-  },
-  {
-   "source": "Investing.com",
-   "category": "Bolsa",
-   "published": "30 Oct",
-   "title": "AMG Critical Materials shares may move 7.2% on earnings",
-   "summary": "",
-   "url": "https://www.investing.com/news/stock-market-news/amg-critical-materials-shares-may-move-72-on-earnings-93CH-4987806"
-  },
-  {
-   "source": "Investing.com",
-   "category": "Bolsa",
-   "published": "30 Oct",
-   "title": "Daimler Truck shares may move 4.6% on Nov. 6 earnings",
-   "summary": "",
-   "url": "https://www.investing.com/news/stock-market-news/daimler-truck-shares-may-move-46-on-nov-6-earnings-93CH-4987804"
-  },
-  {
-   "source": "Investing.com",
-   "category": "Bolsa",
-   "published": "30 Oct",
-   "title": "International Consolidated Airlines shares may move 4.8% on earnings",
-   "summary": "",
-   "url": "https://www.investing.com/news/stock-market-news/international-consolidated-airlines-shares-may-move-48-on-earnings-93CH-4987801"
-  },
-  {
-   "source": "Seeking Alpha",
-   "category": "Obrigações",
-   "published": "30 Oct",
-   "title": "BofA&#x2019;s Hartnett calls beaten-down tech bonds &#x2018;diamonds in the rough&#x2019;",
-   "summary": "",
-   "url": "https://seekingalpha.com/news/4661411-bofa-s-hartnett-calls-beaten-down-tech-bonds-diamonds-in-the-rough?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news"
-  },
-  {
-   "source": "Seeking Alpha",
-   "category": "Bolsa",
-   "published": "30 Oct",
-   "title": "Nasdaq drops 2% as Amazon and Intel results weigh on market sentiments",
-   "summary": "",
-   "url": "https://seekingalpha.com/news/4661205-sp500-nasdaq-dow-jones-outlook-stock-market?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news"
-  },
-  {
-   "source": "ECB",
-   "category": "Banca central",
-   "published": "30 Oct",
-   "title": "Results of the ECB Survey of Professional Forecasters for the fourth quarter of 2026",
-   "summary": "",
-   "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261030~e92c3c838c.en.html"
-  },
-  {
-   "source": "ECB",
-   "category": "Banca central",
-   "published": "29 Oct",
-   "title": "Piero Cipollone: Next-day securities settlement, tokenisation and the transformation of Europe’s financial infrastructure",
-   "summary": "",
-   "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261029~e9b57c3495.en.html"
-  },
-  {
-   "source": "ECB",
-   "category": "Banca central",
-   "published": "29 Oct",
-   "title": "Christine Lagarde, Boris Vujčić: Monetary policy statement (with Q&A)",
-   "summary": "",
-   "url": "https://www.ecb.europa.eu//press/press_conference/monetary-policy-statement/2026/html/ecb.is261029~5c5ffe99e5.en.html"
-  },
-  {
-   "source": "ECB",
-   "category": "Banca central",
-   "published": "29 Oct",
-   "title": "Monetary policy decisions",
-   "summary": "",
-   "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.mp261029~9a493adf17.en.html"
-  },
-  {
-   "source": "ECB",
-   "category": "Banca central",
-   "published": "29 Oct",
-   "title": "ECB President Lagarde to step down on 7 February 2027",
-   "summary": "",
-   "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261029~abbb6dc64b.en.html"
-  },
-  {
-   "source": "ECB",
-   "category": "Banca central",
-   "published": "27 Oct",
-   "title": "October 2026 euro area bank lending survey",
-   "summary": "",
-   "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261027~506ef03145.en.html"
-  },
-  {
-   "source": "ECB",
-   "category": "Banca central",
-   "published": "26 Oct",
-   "title": "Survey on the Access to Finance of Enterprises: lending conditions tightened",
-   "summary": "",
-   "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261026~bde7b6d11a.en.html"
-  },
-  {
-   "source": "ECB",
-   "category": "Banca central",
-   "published": "26 Oct",
-   "title": "Frank Elderson: Taking action for nature – investing in economic resilience and prosperity",
-   "summary": "",
-   "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261026~d903d7ad85.en.html"
-  },
-  {
-   "source": "ECB",
-   "category": "Banca central",
-   "published": "24 Oct",
-   "title": "Piero Cipollone: Interview with Milano Finanza",
-   "summary": "",
-   "url": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261024~ee2ba73cf3.en.html"
-  },
-  {
-   "source": "Fed",
-   "category": "Banca central",
-   "published": "28 Oct",
-   "title": "Federal Reserve issues FOMC statement",
-   "summary": "Federal Reserve issues FOMC statement",
-   "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
-  },
-  {
-   "source": "Fed",
-   "category": "Banca central",
-   "published": "29 Oct",
-   "title": "Federal Reserve Board announces approval of application by The Bank of Nova Scotia",
-   "summary": "Federal Reserve Board announces approval of application by The Bank of Nova Scotia",
-   "url": "https://www.federalreserve.gov/newsevents/pressreleases/orders20261029a.htm"
-  },
-  {
-   "source": "Bloomberg",
-   "category": "Bolsa",
-   "published": "29 Oct",
-   "title": "Nasdaq 100 Sinks 4%, Gets Close to Correction Zone: Markets Wrap",
-   "summary": "Wall Street got a reality check as a bruising selloff in technology shares fueled concern the artificial-intelligence frenzy that has powered the equity bull market might be overblown.",
-   "url": "https://www.bloomberg.com/news/articles/2026-10-29/stock-market-today-dow-s-p-live-updates"
-  },
-  {
-   "source": "Bloomberg",
-   "category": "Bolsa",
-   "published": "29 Oct",
-   "title": "Air Canada Shares Sink Amid Jet Fuel Costs, Lower Profit Outlook",
-   "summary": "Air Canada’s stock price tumbled the most in more than a month after the airline slashed its full-year guidance for the second quarter in a row on higher-than-expected jet fuel prices.",
-   "url": "https://www.bloomberg.com/news/articles/2026-10-29/air-canada-reduces-profit-outlook-again-on-jet-fuel-costs"
-  },
-  {
-   "source": "Bloomberg",
-   "category": "Mercados",
-   "published": "30 Oct",
-   "title": "Big Oil Scores $56 Billion Windfall on Spiking Fuel Prices",
-   "summary": "Big Oil reaped more than $50 billion in windfall profits as conflicts in the Persian Gulf and Russia roiled energy markets and drove refining results to record highs.",
-   "url": "https://www.bloomberg.com/news/articles/2026-10-30/exxon-reaps-record-oil-refining-profits-on-war-driven-gasoline-diesel-spikes"
-  },
-  {
-   "source": "Bloomberg",
-   "category": "Obrigações",
-   "published": "30 Oct",
-   "title": "Bessemer Trust CEO: Constructive on Markets",
-   "summary": "Disappointing earnings from Intel and Amazon add to a brutal week for the AI trade, fueling a flight into Treasuries. Bessemer Trust CEO Holly MacDonald breaks down where the firm sees pockets of oppo",
-   "url": "https://www.bloomberg.com/news/videos/2026-10-30/bessemer-trust-ceo-constructive-on-markets-video"
-  },
-  {
-   "source": "Bloomberg",
-   "category": "Obrigações",
-   "published": "30 Oct",
-   "title": "UK Debt Chief Sees Volatility Driving Demand for Short Gilts",
-   "summary": "The UK Debt Management Office is pulling back further from long-dated gilts to meet investor demand for shorter tenors that are less exposed to swings in the bond market, Chief Executive Jessica Pulay",
-   "url": "https://www.bloomberg.com/news/articles/2026-10-30/uk-debt-chief-sees-volatility-driving-demand-for-short-gilts"
-  },
-  {
-   "source": "Bloomberg",
-   "category": "Mercados",
-   "published": "30 Oct",
-   "title": "Big Oil Scores $56 Billion Windfall on Spiking Fuel Prices",
-   "summary": "Big Oil reaped more than $50 billion in windfall profits as conflicts in the Persian Gulf and Russia drove refining results to record highs. ExxonMobil Holdings Corp., Chevron Corp., BP Plc, Shell Plc",
-   "url": "https://www.bloomberg.com/news/videos/2026-10-30/big-oil-scores-56b-windfall-on-spiking-fuel-prices-video"
-  },
-  {
-   "source": "Bloomberg",
-   "category": "Banca central",
-   "published": "30 Oct",
-   "title": "Fed’s Musalem Says More Rate Hikes Needed Soon to Tame Inflation",
-   "summary": "Federal Reserve Bank of St. Louis President Alberto Musalem said additional interest-rate increases are needed to bring inflation to the central bank’s target.",
-   "url": "https://www.bloomberg.com/news/articles/2026-10-30/fed-s-musalem-says-more-rate-hikes-needed-soon-to-tame-inflation"
-  },
-  {
-   "source": "Bloomberg",
-   "category": "Mercados",
-   "published": "30 Oct",
-   "title": "Come See Lina Khan at Odd Lots LIVE on 12/9 in NYC",
-   "summary": "Come see our final live show of the year.",
-   "url": "https://www.bloomberg.com/news/newsletters/2026-10-30/come-see-lina-khan-at-odd-lots-live-on-12-9-in-nyc"
-  },
-  {
-   "source": "Bloomberg",
-   "category": "Mercados",
-   "published": "30 Oct",
-   "title": "Brasília em Off: O que Lula entendeu das urnas",
-   "summary": "A repórter Martha Beck detalha a sua coluna Brasília em Off. Com produção de Beatriz Amat e edição de Gisele Fernandes. (Source: Bloomberg)",
-   "url": "https://www.bloomberg.com/news/videos/2026-10-30/brasilia-em-off-o-que-lula-entendeu-das-urnas-video"
-  },
-  {
-   "source": "Bloomberg",
-   "category": "Bolsa",
-   "published": "30 Oct",
-   "title": "Stocks Fall After Amazon and Intel Deal Another Blow to AI Trade",
-   "summary": "Jonathan Ferro, Lisa Abramowicz and Annmarie Hordern speak daily with leaders and decision makers from Wall Street to Washington and beyond. No other program better positions investors and executives ",
-   "url": "https://www.bloomberg.com/news/videos/2026-10-30/bloomberg-surveillance-10-30-2026-video"
-  },
-  {
-   "source": "Financial Times",
-   "category": "Bolsa",
-   "published": "30 Oct",
-   "title": "US tech stocks tumble as earnings stoke AI spending fears",
-   "summary": "Intel’s shares on track to plunge by the most since 1974 after chipmaker’s results spook investors",
-   "url": "https://www.ft.com/content/3ba953ae-84bb-4de4-959e-baec3e908fb3?syn-25a6b1a6=1"
-  },
-  {
-   "source": "Financial Times",
-   "category": "Bolsa",
-   "published": "30 Oct",
-   "title": "Anthropic may not secure investment-grade rating after IPO, Blackstone says",
-   "summary": "Private capital giant says AI group is expected to receive ‘high’ junk rating in shift from previous guidance",
-   "url": "https://www.ft.com/content/59383c7f-8d82-493f-bf01-d2e862a1018f?syn-25a6b1a6=1"
-  },
-  {
-   "source": "Financial Times",
-   "category": "Bolsa",
-   "published": "30 Oct",
-   "title": "Apollo and Thrive capitalise on private equity’s generational shift",
-   "summary": "By leaning into their new role as debt financiers, the old guard still have a lucrative place in the new financial order",
-   "url": "https://www.ft.com/content/95480c09-5018-4400-b9c1-f2d53373a47c?syn-25a6b1a6=1"
-  },
-  {
-   "source": "Financial Times",
-   "category": "Mercados",
-   "published": "30 Oct",
-   "title": "CD&R pursues buyout of $40bn card processor Global Payments",
-   "summary": "Deal for US company would rank among largest buyouts in history",
-   "url": "https://www.ft.com/content/da16af06-4431-4ced-9c3e-a0753d8c45c9?syn-25a6b1a6=1"
-  },
-  {
-   "source": "Financial Times",
-   "category": "Mercados",
-   "published": "30 Oct",
-   "title": "Binance rushes to recover customer money after $6.3bn heist",
-   "summary": "World’s largest crypto exchange says an engineer’s laptop was compromised in major security breach",
-   "url": "https://www.ft.com/content/c7f5e395-c3a9-430e-b757-5014527b4d49?syn-25a6b1a6=1"
-  },
-  {
-   "source": "Financial Times",
-   "category": "Mercados",
-   "published": "30 Oct",
-   "title": "What we know about the $6.3bn Binance hack",
-   "summary": "Analysis suggests hackers bypassed standard methods used in crypto thefts",
-   "url": "https://www.ft.com/content/58fee10f-8a99-4e8b-835d-ddba5e434ce3?syn-25a6b1a6=1"
-  },
-  {
-   "source": "Financial Times",
-   "category": "Fundos",
-   "published": "30 Oct",
-   "title": "Partners plans to halve withdrawal limits on strained private equity fund",
-   "summary": "Swiss firm is under pressure as clients pull their money from its largest US and European funds",
-   "url": "https://www.ft.com/content/e42fabdb-2fa1-47ef-a014-9873639c40ae?syn-25a6b1a6=1"
-  },
-  {
-   "source": "Financial Times",
-   "category": "Mercados",
-   "published": "30 Oct",
-   "title": "Did Anthropic value itself at $1.2tn in August?",
-   "summary": "Not quite Navier-Stokes",
-   "url": "https://www.ft.com/content/60fb40ed-f1bf-416e-982b-1b9b80582ab4"
-  },
-  {
-   "source": "Financial Times",
-   "category": "Mercados",
-   "published": "30 Oct",
-   "title": "Europe’s EV transition accelerates",
-   "summary": "Carmakers are producing more attractive and affordable models to compete with Chinese rivals",
-   "url": "https://www.ft.com/content/a6629e05-5afc-403a-b305-67966854c7e3?syn-25a6b1a6=1"
-  },
-  {
-   "source": "Financial Times",
-   "category": "Mercados",
-   "published": "30 Oct",
-   "title": "How North Korea became a hacking superpower",
-   "summary": "Cash-strapped state, cut off by sanctions, has invested heavily in cyber warfare to help support itself",
-   "url": "https://www.ft.com/content/46c03338-63d5-43fc-a946-ebcbe9e1c07a?syn-25a6b1a6=1"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Mercados",
-   "published": "30 Oct",
-   "title": "What Does the Weil Gotshal Implosion Mean for the Law-Firm Industry?",
-   "summary": "Leaders of the once-storied law firm confirmed plans to dissolve the partnership.",
-   "url": "https://www.wsj.com/business/how-weil-gotshal-one-of-wall-streets-most-storied-law-firms-ended-up-in-chaos-d98ad13d?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Mercados",
-   "published": "30 Oct",
-   "title": "U.S. Natural Gas Futures Fall in Early Trading",
-   "summary": "U.S. natural gas futures fell amid downward pressure from a mild weather outlook for the first half of November.",
-   "url": "https://www.wsj.com/finance/commodities-futures/european-ttf-gas-is-back-above-100-euros-a-megawatt-hour-9e52f763?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Bolsa",
-   "published": "30 Oct",
-   "title": "NatWest Shares Fall After Bank&#x2019;s Interest Income Guidance Disappoints",
-   "summary": "The British high-street bank&#x2019;s shares dropped after it forecast weaker-than-expected interest income next year.",
-   "url": "https://www.wsj.com/business/earnings/natwest-earnings-boosted-by-higher-net-interest-income-20ebc371?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Mercados",
-   "published": "30 Oct",
-   "title": "Tech, Media & Telecom Roundup: Market Talk",
-   "summary": "Find insight on Intel, Amazon, Universal Music Group and more in the latest Market Talks covering technology, media and telecom.",
-   "url": "https://www.wsj.com/finance/investing/tech-media-telecom-roundup-market-talk-e8eff14c?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "29 Oct",
-   "title": "Opinion | How Do We Trust and Verify College Degrees?",
-   "summary": "The divide AI has created in higher education extends beyond teaching and research.",
-   "url": "https://www.wsj.com/opinion/how-do-we-trust-and-verify-college-degrees-734bea66?mod=rss_Technology"
-  },
-  {
-   "source": "CNBC",
-   "category": "Obrigações",
-   "published": "30 Oct",
-   "title": "Treasury Department announces new Series I bond rate of 5.51% for the next six months",
-   "summary": "The U.S. Department of the Treasury has announced new Series I bond rates through April 2027.",
-   "url": "https://www.cnbc.com/2026/10/30/treasury-i-bond-rate-through-april-2027.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "30 Oct",
-   "title": "Why bitcoin held up better after the record Binance hack",
-   "summary": "Bitcoin was trading down about 4% on Friday afternoon, less than a day after the biggest crypto hack in history.",
-   "url": "https://www.cnbc.com/2026/10/30/binance-hack-bitcoin-price.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "30 Oct",
-   "title": "Tankers defy sharp escalation of Iranian attacks to keep crude oil flowing through Strait of Hormuz",
-   "summary": "Soaring freight rates are giving tankers a big financial incentive to run the gauntlet through the Strait of Hormuz.",
-   "url": "https://www.cnbc.com/2026/10/30/tanker-attack-strait-hormuz-iran-war-oil.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Banca central",
-   "published": "30 Oct",
-   "title": "Fed officials are already saying they’ll need to get back to hiking rates",
-   "summary": "The comments from Federal Reserve Presidents Alberto Musalem and Lorie Logan offer the first morsels of insight into what leaders at the Fed see happening next.",
-   "url": "https://www.cnbc.com/2026/10/30/musalem-fed-monetary-policy-tightening.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "30 Oct",
-   "title": "Google lost nearly half a trillion this week. Here's how Mike Khouw is trading it",
-   "summary": "Google lost nearly half a trillion this week. But the week's tech sell off might provide an opportunity, says Mike Khouw.",
-   "url": "https://www.cnbc.com/2026/10/30/google-lost-about-half-a-trillion-this-week-how-mike-khouw-trades-it-.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Inflação",
-   "published": "30 Oct",
-   "title": "Halloween gets pricier as chocolate costs climb — Hershey may feel the pinch",
-   "summary": "Higher cocoa and sugar prices are fueling above-average cost inflation for candy",
-   "url": "https://www.cnbc.com/2026/10/30/halloween-gets-pricier-as-chocolate-costs-rise-hershey-could-feel-it.html"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Bolsa",
-   "published": "30 Oct",
-   "title": "Microsoft is winning the cloud wars and becoming Wall Street&#x2019;s new golden child",
-   "summary": "Various factors indicate that Microsoft is in a better financial position than its cloud rivals, analysts say.",
-   "url": "https://www.marketwatch.com/story/microsoft-is-winning-the-cloud-wars-and-becoming-wall-streets-new-golden-child-62eecbbd?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Mercados",
-   "published": "30 Oct",
-   "title": "&#x2018;He was heartbroken&#x2019;: My husband&#x2019;s kids abandoned him when he was dying. Was he right to leave everything to me?",
-   "summary": "&#x201c;In the end, he left them a few sentimental mementos, some collectibles and old photographs.&#x201d;",
-   "url": "https://www.marketwatch.com/story/he-was-heartbroken-my-husbands-kids-never-helped-when-he-was-gravely-ill-was-he-right-to-leave-everything-to-me-1ad0616b?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Inflação",
-   "published": "30 Oct",
-   "title": "American workers are finding their take-home pay isn&#x2019;t keeping up with inflation, with their wallets &#x2018;stretched thinner and thinner&#x2019;",
-   "summary": "Worker compensation grows slower than inflation for second straight quarter",
-   "url": "https://www.marketwatch.com/story/american-workers-are-finding-their-take-home-pay-isnt-keeping-up-with-inflation-with-their-wallets-stretching-thinner-and-thinner-6a1af690?mod=mw_rss_topstories"
-  },
-  {
    "source": "MarketWatch",
    "category": "Bolsa",
    "published": "30 Oct",
@@ -800,6 +216,590 @@
    "title": "Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)",
    "summary": "",
    "url": "https://www.ecb.europa.eu//press/govcdec/otherdec/2026/html/ecb.gc261030~e40f864093.en.html"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Bolsa",
+   "published": "30 Oct",
+   "title": "Stock Volatility Surges as Plunge Has Investors Seeking Cover",
+   "summary": "US options volatility spiked Friday as technology stocks were battered by disappointing earnings.",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-30/stock-volatility-surges-as-plunge-has-investors-seeking-cover"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "29 Oct",
+   "title": "Latest Oil Market News and Analysis for Oct. 30",
+   "summary": "Oil climbed on worries that the US may resume strikes against Iran, adding fresh risk to supplies in the Middle East.",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-29/latest-oil-market-news-and-analysis-for-oct-30"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Inflação",
+   "published": "29 Oct",
+   "title": "Gold Poised for Worst October Since 2008 as AI Stock Rout Grows",
+   "summary": "Gold tumbled to a one-year low and headed for its worst October since the global financial crisis as rising oil prices stoked inflation concerns and a global tech rout spurred investors to sell bullio",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-29/gold-steadies-near-4-000-as-inflation-keeps-rate-hike-bets-firm"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "30 Oct",
+   "title": "Vail Resorts Wins Large Shareholder Support in Fight with Oasis",
+   "summary": "Baron Capital, one of Vail Resorts Inc.’s largest shareholders, is supporting the company and its nominees, as the ski resort company tries to fend off a proxy fight against activist investor Oasis Ma",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-30/vail-resorts-wins-large-shareholder-support-in-fight-with-oasis"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Poupança",
+   "published": "30 Oct",
+   "title": "Don't Assume Social Security Will Be There: Treyz",
+   "summary": "Henrietta Treyz, co-founder and economic policy research director at Veda Partners, joins Scarlet Fu and Tom Keene on \"Bloomberg Money.\" They discuss Henrietta Treyz's personal approach to investing, ",
+   "url": "https://www.bloomberg.com/news/videos/2026-10-30/don-t-assume-social-security-will-be-there-treyz-video"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Bolsa",
+   "published": "30 Oct",
+   "title": "Nasdaq 100 (NDX, NDQ, QQQ) Hits Third Correction of 2026 on Unwinding Tech Bets",
+   "summary": "Investors dumped big tech stocks following a slew of disappointing earnings, putting the Nasdaq 100 Index on course to enter its third technical correction of the year.",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-30/nasdaq-100-ndx-ndq-qqq-hits-third-correction-of-2026-on-unwinding-tech-bets"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Bolsa",
+   "published": "30 Oct",
+   "title": "Own, Don't Earn: 'Everywhere Millionaire' Author",
+   "summary": "Owen Zidar, author of 'The Everywhere Millionaire', joins Scarlet Fu and Tom Keene discuss their must-read book on this week's edition of \"Bloomberg Money.\" They discuss Zidar's book, which lays out h",
+   "url": "https://www.bloomberg.com/news/videos/2026-10-30/own-don-t-earn-everywhere-millionaire-author-video"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "30 Oct",
+   "title": "Chile Signals Slow Copper Recovery From Historic Output Slump",
+   "summary": "Chile expects its copper output to stage only a modest recovery next year after a historic slump, leaving it well below recent levels as aging mines contend with deteriorating ore quality and increasi",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-30/chile-copper-mines-deliver-worst-quarter-in-at-least-two-decades"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Inflação",
+   "published": "30 Oct",
+   "title": "People Don't Know Their Retirement Number: Conrath",
+   "summary": "Michael Conrath, chief retirement strategist at JPMorgan Asset Management, joins Scarlet Fu and Tom Keene on \"Bloomberg Money.\" They discuss how inflation is causing Americans to rethink their retirem",
+   "url": "https://www.bloomberg.com/news/videos/2026-10-30/people-don-t-know-their-retirement-number-conrath-video"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "30 Oct",
+   "title": "$6.3bn in 30 minutes: how the world’s biggest heist unfolded",
+   "summary": "North Korean hackers’ attack on Binance takes crypto theft to an unprecedented scale",
+   "url": "https://www.ft.com/content/e84eceda-040b-4e5f-b906-09768085933a?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Tecnologia",
+   "published": "30 Oct",
+   "title": "How AI might be deployed for better bank supervision",
+   "summary": "The technology could help tackle some of the cultural issues that contributed to the collapse of SVB",
+   "url": "https://www.ft.com/content/be6723d6-ab63-41ab-ac46-dc870c449da0?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "30 Oct",
+   "title": "Stock Market Today: Deepening Tech Selloff Pushes Nasdaq Toward Its Worst Month in Over a Year",
+   "summary": "Tech-heavy index falls 3% following disappointing earnings from Alphabet, Intel and Amazon this week",
+   "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-10-30-2026?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "30 Oct",
+   "title": "How Binance Is Racing to Cover Losses in the Biggest Heist in Crypto History",
+   "summary": "The breach blew past everything the exchange had set aside to cover such an incident.",
+   "url": "https://www.wsj.com/finance/currencies/how-binance-is-scrambling-to-cover-losses-in-the-biggest-heist-in-crypto-history-babbfe90?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Fundos",
+   "published": "30 Oct",
+   "title": "The Extra-Strength Funds That Are Too Much of a Good Thing",
+   "summary": "A new kind of sector ETF concentrates even more of your money in the top stocks.",
+   "url": "https://www.wsj.com/finance/investing/the-extra-strength-funds-that-are-too-much-of-a-good-thing-c71362eb?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "30 Oct",
+   "title": "Clues Point to Familiar Culprit in Massive Binance Crypto Heist: North Korea",
+   "summary": "The rogue country is behind the $6.3 billion theft, experts say, potentially cementing its status as the world&#x2019;s top crypto thief.",
+   "url": "https://www.wsj.com/finance/clues-point-to-familiar-culprit-in-massive-binance-crypto-heist-north-korea-d1fd887d?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "30 Oct",
+   "title": "The Morning Risk Report: Binance and Polymarket Suspend Trading After Hacks",
+   "summary": "Plus: Trump administration promised tariff relief in talks to secure U.S. Audi factory and Cleveland-Cliffs to retain Stelco amid jobs dispute with Canadian government.",
+   "url": "https://www.wsj.com/risk-compliance-journal/the-morning-risk-report-binance-and-polymarket-suspend-trading-after-hacks-9261a44c?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "30 Oct",
+   "title": "The Market Isn&#x2019;t Buying Skydance&#x2019;s Balance-Sheet Math",
+   "summary": "The media conglomerate&#x2019;s goodwill alone exceeds its stock-market value.",
+   "url": "https://www.wsj.com/finance/the-market-isnt-buying-skydances-balance-sheet-math-11705c2c?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "29 Oct",
+   "title": "Alphabet Still Has the Ingredients to Win in an AI Pullback",
+   "summary": "The tech giant is no longer loved by investors, despite its many advantages.",
+   "url": "https://www.wsj.com/tech/ai/alphabet-still-has-the-ingredients-to-win-in-an-ai-pullback-6583aa7c?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "30 Oct",
+   "title": "Enterprise AI Is on the Ballot Too",
+   "summary": "Plus, Mistral releases &#x2018;Le Chonk;&#x2019; the cloud delivers (again)",
+   "url": "https://www.wsj.com/cio-journal/enterprise-ai-is-on-the-ballot-too-36cdf06d?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "30 Oct",
+   "title": "Chinese Executive Close to Nvidia CEO Suspected of Giving China Information",
+   "summary": "Investigators believed the woman, Alice Huang, was recruited based on her relationship with Jensen Huang.",
+   "url": "https://www.wsj.com/tech/chinese-executive-close-to-nvidia-ceo-suspected-of-giving-china-information-798eb6a1?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "30 Oct",
+   "title": "The Morning Risk Report: Binance and Polymarket Suspend Trading After Hacks",
+   "summary": "Plus: Trump administration promised tariff relief in talks to secure U.S. Audi factory and Cleveland-Cliffs to retain Stelco amid jobs dispute with Canadian government.",
+   "url": "https://www.wsj.com/risk-compliance-journal/the-morning-risk-report-binance-and-polymarket-suspend-trading-after-hacks-9261a44c?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "30 Oct",
+   "title": "Amazon Stock Drops on Wall Street Miss, Despite Biggest Cloud Growth in Years",
+   "summary": "The online behemoth&#x2019;s net income topped $20 billion for the third quarter, but free cash flow plunged.",
+   "url": "https://www.wsj.com/tech/amazon-amzn-q3-earnings-report-2026-stock-a0b92f17?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "29 Oct",
+   "title": "Alphabet&#x2019;s Market Value Drops $500 Billion",
+   "summary": "Plus, the DOJ expanded its criminal investigation into the Alaska Senate race, and the U.S. national debt reached 100% of GDP.",
+   "url": "https://www.wsj.com/tech/alphabets-market-value-drops-500-billion-df24d044?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "29 Oct",
+   "title": "Alphabet Sheds Half a Trillion in Market Value in Stock&#x2019;s Worst Day Ever",
+   "summary": "Discontent with the Google parent&#x2019;s quarterly results highlights the tensions of its transition from search engine to artificial-intelligence hyperscaler.",
+   "url": "https://www.wsj.com/tech/ai/alphabet-sheds-half-a-trillion-in-market-value-in-stocks-worst-day-ever-bde7bb6e?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Banca central",
+   "published": "29 Oct",
+   "title": "Canada to Take Equity Stake in AI Firm Cohere",
+   "summary": "Cohere&#x2019;s funding round attracted commitments from Nvidia, German conglomerate Schwarz Group and telecommunications firm BCE.",
+   "url": "https://www.wsj.com/pro/venture-capital/canada-to-take-equity-stake-in-ai-firm-cohere-e8d7215f?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "29 Oct",
+   "title": "AI Is Almost the Easy Part. Everything Else Is Hard",
+   "summary": "Plus, Cloud growth soars at Microsoft and Google.",
+   "url": "https://www.wsj.com/cio-journal/ai-is-almost-the-easy-part-everything-else-is-hard-556c9204?mod=rss_Technology"
+  },
+  {
+   "source": "The Economist",
+   "category": "Banca central",
+   "published": "29 Oct",
+   "title": "Christine Lagarde departs at a moment of peril",
+   "summary": "Her successor as ECB chief will have an unenviable job",
+   "url": "https://www.economist.com/finance-and-economics/2026/10/29/christine-lagarde-departs-at-a-moment-of-peril"
+  },
+  {
+   "source": "The Economist",
+   "category": "Mercados",
+   "published": "29 Oct",
+   "title": "The never-ending absurdity of global oil markets",
+   "summary": "Despite stronger Gulf exports, Brent is near its Iran-war peak",
+   "url": "https://www.economist.com/finance-and-economics/2026/10/29/the-never-ending-absurdity-of-global-oil-markets"
+  },
+  {
+   "source": "The Economist",
+   "category": "Mercados",
+   "published": "29 Oct",
+   "title": "The countries making a fortune from the US-China rivalry",
+   "summary": "Critical-mineral profits could transform a lucky few",
+   "url": "https://www.economist.com/finance-and-economics/2026/10/29/the-countries-making-a-fortune-from-the-us-china-rivalry"
+  },
+  {
+   "source": "The Economist",
+   "category": "Mercados",
+   "published": "29 Oct",
+   "title": "The task facing the new head of India’s biggest private bank",
+   "summary": "HDFC Bank needs revitalising",
+   "url": "https://www.economist.com/finance-and-economics/2026/10/29/the-task-facing-the-new-head-of-indias-biggest-private-bank"
+  },
+  {
+   "source": "The Economist",
+   "category": "Tecnologia",
+   "published": "29 Oct",
+   "title": "Ignore AI and ask for that pay rise",
+   "summary": "Fear of a technological revolution may be suppressing wages",
+   "url": "https://www.economist.com/finance-and-economics/2026/10/29/ignore-ai-and-ask-for-that-pay-rise"
+  },
+  {
+   "source": "CNBC",
+   "category": "Bolsa",
+   "published": "30 Oct",
+   "title": "Intel stock has worst day since 1970s, wiping about $12 billion off government's stake",
+   "summary": "Investors are nervous about the massive AI spending from the tech giants and whether that will pay off.",
+   "url": "https://www.cnbc.com/2026/10/30/amazon-intel-earnings-big-tech-ai-spending-concerns.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "30 Oct",
+   "title": "Reid Hoffman gives millions to Dems in late spending spree as Epstein fight spills into election",
+   "summary": "Reid Hoffman has given $8 million to Wisconsin Democrats backing David Crowley as Tom Tiffany attacks Hoffman's past ties to Jeffrey Epstein.",
+   "url": "https://www.cnbc.com/2026/10/30/reid-hoffman-democrats-epstein-midterms-2026.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Fundos",
+   "published": "30 Oct",
+   "title": "Binance hack: Investigators in a 'cat and mouse game' to recover $6.3 billion in stolen funds",
+   "summary": "More than $6 billion in crypto was stolen from Binance, setting off a race to recover the funds before North Korea-linked hackers can launder them into cash.",
+   "url": "https://www.cnbc.com/2026/10/30/binance-hack-stolen-crypto-recovery.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "30 Oct",
+   "title": "'Bad time to troll': Binance co-founder Zhao asks Musk for support after hack",
+   "summary": "Binance co-founder Changpeng Zhao asked Elon Musk to stop “trolling” after a $6.3 billion hack, pointing to Binance’s $1 billion-plus SpaceX stake.",
+   "url": "https://www.cnbc.com/2026/10/30/binance-hack-elon-musk-tesla-spacex.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "30 Oct",
+   "title": "Chevron and Exxon hit all-time highs as refining profits soar in reaction to Iran and Ukraine wars",
+   "summary": "Global diesel prices surged as Ukraine and Iran struck refineries in Russia and the Middle East.",
+   "url": "https://www.cnbc.com/2026/10/30/chevron-exxon-cvx-xom-earnings-q3-2026.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "30 Oct",
+   "title": "Gamble on democracy: Inside suspicious election-contracts trading on prediction markets",
+   "summary": "Prediction markets' failure to call an LA primary correctly raised the possibility they can be manipulated to exaggerate the amount of support candidates have.",
+   "url": "https://www.cnbc.com/2026/10/30/gamble-on-democracy-inside-suspicious-election-contracts-trading-on-prediction-markets-.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "30 Oct",
+   "title": "Gen Z is ditching bars for run clubs — and finding more than friends along the way",
+   "summary": "As young adults denote less wallet share to bars, run clubs, races and recreational leagues become increasingly popular places to build community.",
+   "url": "https://www.cnbc.com/2026/10/30/gen-z-diplo-run-club.html"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Poupança",
+   "published": "30 Oct",
+   "title": "&#x2018;Showy jewelry and fancy cars hold no appeal&#x2019;: We have a 99% chance of outliving our life savings. Why not spend it all?",
+   "summary": "&#x201c;I&#x2019;m 68, she&#x2019;s 74, and we&#x2019;re both in good health. We married later in life and have no children.&#x201d;",
+   "url": "https://www.marketwatch.com/story/fancy-cars-hold-no-appeal-my-wife-and-i-have-a-99-chance-of-outliving-our-savings-why-dont-we-spend-it-all-932a2166?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Banca central",
+   "published": "30 Oct",
+   "title": "The Fed held interest rates steady, but these officials see more hikes coming soon",
+   "summary": "Dallas Fed&#x2019;s Lorie Logan sees &#x201c;at least&#x201d; 50 basis points in additional hikes.",
+   "url": "https://www.marketwatch.com/story/the-fed-held-interest-rates-steady-but-these-officials-see-more-hikes-coming-soon-2098bbd8?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Inflação",
+   "published": "30 Oct",
+   "title": "Is it curtains for COLA? Saving Social Security could mean changing the cost-of-living adjustment.",
+   "summary": "Several proposals consider changing the way retirees receive inflation protection. Here&#x2019;s what it could cost you.",
+   "url": "https://www.marketwatch.com/story/is-it-curtains-for-cola-saving-social-security-could-mean-changing-the-cost-of-living-adjustment-867c6bd8?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Poupança",
+   "published": "30 Oct",
+   "title": "This is where most people go wrong in their 30s and 40s",
+   "summary": "These big life decisions will determine just how well you retire.",
+   "url": "https://www.marketwatch.com/story/the-house-the-kids-college-and-the-raise-where-people-in-their-30s-and-40s-go-wrong-69ec6c90?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "30 Oct",
+   "title": "Caregivers are now spending more than $11,000 a year out of pocket&#x2014;up 60% in five years",
+   "summary": "An AARP study shows the financial sacrifices families make and their long-term impacts.",
+   "url": "https://www.marketwatch.com/story/were-spending-more-than-11-000-a-year-of-our-own-money-caring-for-our-aging-parents-and-loved-ones-8fc5b2dc?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Poupança",
+   "published": "30 Oct",
+   "title": "What gave this city its &#x2018;best place to retire&#x2019; crown? You can actually afford to live there.",
+   "summary": "Low cost of living, high quality of life and favorable taxes for retirees, for the win.",
+   "url": "https://www.marketwatch.com/story/what-gave-this-city-its-best-place-to-retire-crown-you-can-actually-afford-to-live-there-a06f8f4d?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "30 Oct",
+   "title": "Is your crypto safe? What Binance&#x2019;s $6.3 billion hack means for bitcoin investors.",
+   "summary": "A look at how safe your money really is when even the world&#x2019;s largest cryptocurrency exchange can be breached",
+   "url": "https://www.marketwatch.com/story/heres-when-binance-plans-to-reopen-after-whats-believed-to-be-the-largest-ever-6-3-billion-hack-d3cb8154?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "30 Oct",
+   "title": "My father has Alzheimer&#x2019;s and his caregiver is using his debit card for DoorDash. Do I intervene?",
+   "summary": "&#x201c;I suspect the live-in caregiver is benefiting from my parent&#x2019;s generosity.&#x201d;",
+   "url": "https://www.marketwatch.com/story/theres-a-lot-of-hurt-between-us-my-fathers-caregiver-is-using-his-debit-card-for-doordash-orders-what-can-i-do-714de7a5?mod=mw_rss_topstories"
+  },
+  {
+   "source": "BBC",
+   "category": "Bolsa",
+   "published": "30 Oct",
+   "title": "Google value plunges by $500bn as its own AI search hits ad sales",
+   "summary": "Google spooked investors so badly that its stock hit a six-month low, after it revealed its AI own search summaries were affecting ad revenue.",
+   "url": "https://www.bbc.co.uk/news/articles/cm9qzdqpxy48o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Economia",
+   "published": "29 Oct",
+   "title": "Faisal Islam: This Budget was micro and that was deliberate",
+   "summary": "Chancellor John Healey's plans fall short of radical action to create a promised new economic model.",
+   "url": "https://www.bbc.co.uk/news/articles/cwx283zynnv3o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Banca central",
+   "published": "29 Oct",
+   "title": "US interest rates held steady and economy grows - what it means for you",
+   "summary": "The Federal Reserve's interest rate decisions affect everything from mortgages to car loans",
+   "url": "https://www.bbc.co.uk/news/articles/cr15jxzv4w24o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Economia",
+   "published": "29 Oct",
+   "title": "'Painful' years ahead, think tanks warn, as living standards set to fall",
+   "summary": "Budget forecasts show growth in living standards grinding almost to a halt.",
+   "url": "https://www.bbc.co.uk/news/articles/c6z7x8214np7o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Poupança",
+   "published": "29 Oct",
+   "title": "Bereaved families will not face tax bill over pension delays under new rules",
+   "summary": "Campaigners had warned some families could face an unfair financial penalty because of delays which were not their fault.",
+   "url": "https://www.bbc.co.uk/news/articles/cr5yn9zwnp3qo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Economia",
+   "published": "29 Oct",
+   "title": "I earn £30,000. I'm angry there was no fuel duty cut in the Budget",
+   "summary": "People on a range of incomes from £4,062 to £150,000 a year tell the BBC what they made of this year's Budget.",
+   "url": "https://www.bbc.co.uk/news/articles/cmx235r9wr3yo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Poupança",
+   "published": "29 Oct",
+   "title": "Your pay, energy bills and savings: How the Budget affects you",
+   "summary": "Changes announced by Chancellor John Healey in his first Budget will affect your finances directly. Here's how.",
+   "url": "https://www.bbc.co.uk/news/articles/cr0j05vxlwjzo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Economia",
+   "published": "29 Oct",
+   "title": "The South West reacts to Budget announcements",
+   "summary": "Tourism and business leaders have been reacting to John Healey's first Budget as chancellor.",
+   "url": "https://www.bbc.co.uk/news/articles/cm62yle1g2wyo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Fundos",
+   "published": "30 Oct",
+   "title": "FBI working with Binance after crypto exchange hit by $6.3bn heist – business live",
+   "summary": "<p>Blockchain intelligence firm TRM says North Korea’s TraderTraitor hacking unit is responsible for the largest crypto theft on record</p><ul><li><p><a href=\"https://www.theguardian.com/business/2026",
+   "url": "https://www.theguardian.com/business/live/2026/oct/30/uk-house-price-growth-crypto-industry-6bn-binance-hack-eurozone-france-gdp-latest-news-updates"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Habitação",
+   "published": "30 Oct",
+   "title": "Britain’s blighted high streets will improve by next election, says Rayner",
+   "summary": "<p>Housing secretary says Labour wants to reverse fortunes of towns plagued by boarded-up shops and rogue businesses</p><p>Angela Rayner has said voters will begin to see a difference in their high st",
+   "url": "https://www.theguardian.com/uk-news/2026/oct/30/britain-blighted-high-streets-angela-rayner-labour"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Mercados",
+   "published": "30 Oct",
+   "title": "BP profits hit ‘obscene’ 18-year high as Iran war drives up oil refining margins",
+   "summary": "<p>Oil giant comes under fire from climate campaigners, as its earnings reach $8.46bn while ‘innocent civilians suffer’</p><p>BP’s quarterly profits have been labelled “obscene” after they hit an 18-y",
+   "url": "https://www.theguardian.com/business/2026/oct/30/bp-profits-jump-as-middle-east-conflict-drives-up-oil-refining-margins"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Fundos",
+   "published": "30 Oct",
+   "title": "Andy Burnham admits he would have liked more radical first budget",
+   "summary": "<p>Prime minister says room for manoeuvre was limited by geopolitical crises and Labour’s 2024 manifesto</p><p>Andy Burnham has admitted <a href=\"https://www.theguardian.com/uk-news/2026/oct/28/budget",
+   "url": "https://www.theguardian.com/uk-news/2026/oct/30/andy-burnham-first-budget-labour-welfare"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Habitação",
+   "published": "30 Oct",
+   "title": "UK house prices grow at slowest pace in two years as mortgage rates rise",
+   "summary": "<p>Average price for property stands at £273,566 in October, flat on previous month, says Nationwide</p><ul><li><p><a href=\"https://www.theguardian.com/business/live/2026/oct/30/uk-house-price-growth-",
+   "url": "https://www.theguardian.com/business/2026/oct/30/uk-house-prices-grow-at-slowest-pace-in-two-years-as-mortgage-rates-rise"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Mercados",
+   "published": "30 Oct",
+   "title": "Public sector an ‘afterthought’ to North Sea oil jobs, says Unison leader",
+   "summary": "<p>Andrea Egan calls for same political focus on teachers, care sector and NHS and says Jackdaw decision ‘a serious misstep’</p><p>The leader of the UK’s biggest trade union has called for the same po",
+   "url": "https://www.theguardian.com/politics/2026/oct/30/public-sector-afterthought-north-sea-oil-jobs-unison"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Economia",
+   "published": "30 Oct",
+   "title": "UK side-hustle tax-free allowance to rise to £3,000 next year",
+   "summary": "<p>Up to 1.4 million people could benefit from change to trading allowance announced in budget, with some saving hundreds in tax</p><p>The amount Britons can earn from a side hustle without paying tax",
+   "url": "https://www.theguardian.com/politics/2026/oct/30/uk-side-hustle-tax-free-allowance-rise-3000"
+  },
+  {
+   "source": "New York Times",
+   "category": "Mercados",
+   "published": "30 Oct",
+   "title": "Why Kalshi Wants to Repeal a 1958 Law About Onions",
+   "summary": "A law enacted after a brazen scheme to rig onion prices in the 1950s puts the vegetable, as well as box office receipts, off-limits for prediction markets.",
+   "url": "https://www.nytimes.com/2026/10/30/business/kalshi-onion-futures-act-1958.html"
+  },
+  {
+   "source": "Fortune",
+   "category": "Economia",
+   "published": "30 Oct",
+   "title": "Greenland opens a new international airport to lure tourists and diversify its economy as it eyes independence from Denmark",
+   "summary": "Ilulissat, known as the “City of Icebergs,” sits along the island's western coast and is home to some 5,000 people.",
+   "url": "https://fortune.com/2026/10/30/greenland-new-international-airport-tourism-independence-denmark/"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "30 Oct",
+   "title": "S&P 500 November seasonality: historical trends and this year’s context",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/sp-500-november-seasonality-historical-trends-and-this-years-context-93CH-4988560"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "30 Oct",
+   "title": "US approves $2.1 billion Patriot missile sale to Ukraine",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/us-approves-21-billion-patriot-missile-sale-to-ukraine-4988538"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "30 Oct",
+   "title": "Kioxia’s NAND price slowdown and what it means for memory stocks",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/kioxias-nand-price-slowdown-and-what-it-means-for-memory-stocks-93CH-4988549"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "30 Oct",
+   "title": "US approves $2.1 billion Patriot missile sale to Ukraine",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/us-approves-21-billion-patriot-missile-sale-to-ukraine-93CH-4988537"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "30 Oct",
+   "title": "Nasdaq 100 in freefall below all MAs after Bear Flag: Live levels",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/nasdaq-100-tests-descending-triangle-support-at-29000-live-levels-93CH-4973069"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "30 Oct",
+   "title": "Alphabet C in freefall after gap-down: Live bear levels",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/alphabet-c-deeply-oversold-after-bear-flag-breakdown-live-levels-93CH-4973070"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "30 Oct",
+   "title": "Tesla cools from $410 highs with momentum fading: Hourly",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/tesla-breaks-out-above-388-range-overextended-live-levels-93CH-4973068"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "30 Oct",
+   "title": "Dow Jones breaks below key MAs: Live levels",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/dow-jones-pulls-back-to-ma-cluster-near-52400-live-levels-93CH-4973066"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "30 Oct",
+   "title": "S&P 500 breaks 200-day MA with bearish Marubozu: Live levels",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/sp-500-tests-382-fib-after-double-top-rejection-live-levels-93CH-4973067"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "30 Oct",
+   "title": "Dollar Index trapped in range with bearish MACD: Live levels",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/dollar-index-trapped-in-ichimoku-cloud-at-10186-live-levels-93CH-4973064"
   }
  ],
  "sources": [
@@ -821,5 +821,5 @@
  "editions": [
   "afternoon"
  ],
- "collectedAt": "2026-10-30T18:16:51.250Z"
+ "collectedAt": "2026-10-30T20:09:57.274Z"
 }

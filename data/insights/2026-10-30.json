@@ -1,87 +1,99 @@
 {
  "auto": true,
  "date": "2026-10-30",
- "basedOn": "2026-10-30T18:16:51.250Z",
- "generatedAt": "2026-10-30T18:16:52.974Z",
- "resumo": "Today's talk is mostly about **stocks and central-bank rates**. Rising: inflation. Falling: stocks, commodities, tech.",
+ "basedOn": "2026-10-30T20:09:57.274Z",
+ "generatedAt": "2026-10-30T20:09:59.590Z",
+ "resumo": "Global stock markets faced a severe tech sell-off and **surging volatility** as disappointing earnings weighed on major indices.",
  "classes": [
   {
-   "nome": "Ações",
-   "tendencia": "a descer",
-   "forca": 3,
-   "leitura": "29 stories today. Top one: Tech Stocks Tumble, but Broader Market Is Holding On (New York Times).",
+   "nome": "Equities",
+   "tendencia": "falling",
+   "forca": 1,
+   "leitura": "Technology stocks and major indexes like the Nasdaq tumbled following disappointing earnings and heavy AI spending concerns.",
    "a_favor": [
-    "You can expect the stock market to rally no matter who wins…"
+    "Biopharma stocks hit record highs",
+    "Some see AI constraints as healthy"
    ],
    "riscos": [
-    "Tech Stocks Tumble, but Broader Market Is Holding On"
+    "Historic drops in major tech names",
+    "Surging stock volatility and corrections"
    ],
-   "perfil": "Long horizon and tolerance for temporary losses."
+   "perfil": "Suits investors with a higher risk tolerance and a long-term time horizon."
   },
   {
-   "nome": "Juros (bancos centrais)",
-   "tendencia": "estável",
-   "forca": 3,
-   "leitura": "16 stories today. Top one: Inflation Accelerated in October, PCE Index Shows (New York Times).",
-   "a_favor": [],
-   "riscos": [],
-   "perfil": "Affects everyone's deposits, loans and bonds."
-  },
-  {
-   "nome": "Matérias-primas",
-   "tendencia": "a descer",
-   "forca": 3,
-   "leitura": "7 stories today. Top one: U.S. Natural Gas Futures Fall in Early Trading (Wall Street Journal).",
-   "a_favor": [],
-   "riscos": [
-    "U.S. Natural Gas Futures Fall in Early Trading"
-   ],
-   "perfil": "A small slice of a portfolio, for diversification only."
-  },
-  {
-   "nome": "Fundos",
-   "tendencia": "estável",
-   "forca": 2,
-   "leitura": "4 stories today. Top one: Hold your nose: a £1.25bn subsidy for rich Rolls-Royce’s new engine had to happen (The Guardian).",
-   "a_favor": [],
-   "riscos": [],
-   "perfil": "People who want to diversify with professional management."
-  },
-  {
-   "nome": "Inflação",
-   "tendencia": "a subir",
-   "forca": 2,
-   "leitura": "4 stories today. Top one: Halloween gets pricier as chocolate costs climb — Hershey may feel the pinch (CNBC).",
+   "nome": "Cryptocurrencies",
+   "tendencia": "falling",
+   "forca": 1,
+   "leitura": "Digital assets and crypto stocks tumbled following a historic cyber heist and trading suspensions.",
    "a_favor": [
-    "Halloween gets pricier as chocolate costs climb — Hershey m…"
+    "High digital adoption and innovation"
    ],
-   "riscos": [],
-   "perfil": "Affects everyone's purchasing power."
-  },
-  {
-   "nome": "Tecnologia",
-   "tendencia": "a descer",
-   "forca": 2,
-   "leitura": "4 stories today. Top one: Intel plunges 25%, triggers global chip rout on bleak outlook (Investing.com).",
-   "a_favor": [],
    "riscos": [
-    "Intel plunges 25%, triggers global chip rout on bleak outlo…"
+    "Unprecedented multi-billion-dollar security breaches",
+    "Rout hitting crypto stocks and exchanges"
    ],
-   "perfil": "Long horizon and tolerance for high volatility."
+   "perfil": "Suits speculative investors prepared for extreme volatility and high security risks."
   },
   {
-   "nome": "Obrigações",
-   "tendencia": "estável",
+   "nome": "Commodities",
+   "tendencia": "mixed",
    "forca": 2,
-   "leitura": "4 stories today. Top one: BofA&#x2019;s Hartnett calls beaten-down tech bonds &#x2018;diamonds in the rough&#x2019; (Seeking Alpha).",
-   "a_favor": [],
-   "riscos": [],
-   "perfil": "Medium horizon and tolerance for price swings."
+   "leitura": "Gold hit a one-year low amid inflation and tech sell-offs, while oil climbed due to geopolitical supply worries.",
+   "a_favor": [
+    "Oil supported by supply risks",
+    "Energy profits beating forecasts"
+   ],
+   "riscos": [
+    "Gold heading for worst October since 2008",
+    "Inflation concerns tied to rising energy costs"
+   ],
+   "perfil": "Suits tactical investors looking to hedge against inflation and geopolitical events."
   }
  ],
  "temas": [
-  "Volatility is not the same as losing money",
-  "What the ECB does and why it touches your money",
-  "Oil and gold: what moves the price"
- ]
+  "Tech sector volatility",
+  "Cybersecurity risks in finance",
+  "Inflation and energy impacts",
+  "Retirement planning awareness"
+ ],
+ "ai": true,
+ "brief": {
+  "one_liner": "Tech titans stumble on hefty AI bills, a record crypto heist shakes digital assets, and central bankers face fresh leadership headaches.",
+  "number": {
+   "value": "$6.3bn",
+   "caption": "Stolen from Binance in the largest crypto heist in history."
+  },
+  "stories": [
+   {
+    "i": 39,
+    "title": "Big Tech’s AI hangover triggers a Wall Street wobble",
+    "whats_going_on": "The tech-heavy Nasdaq index dropped 3% following disappointing corporate earnings from Alphabet, Intel, and Amazon. Investors took fright as annual artificial intelligence spending edged towards $1tn, pushing the index towards its third technical correction this year.",
+    "what_it_means": "Markets had priced these mega-cap firms for perfection, leaving zero margin for error when profit margins slipped. When cloud and chip revenues fail to dazzle, broader global share indices tend to catch a cold.",
+    "why_care": "Most broad pension and ISA index funds are heavily weighted towards US tech giants. When they swing sharply, everyday portfolios feel the bump even if you do not own individual shares."
+   },
+   {
+    "i": 37,
+    "title": "Binance hit by record-breaking cyber raid",
+    "whats_going_on": "Hackers drained $6.3bn from crypto exchange Binance in just 30 minutes, marking the largest cyber theft in financial history. The breach blew past the firm's dedicated emergency reserves and sent Bitcoin and listed fintech stocks tumbling.",
+    "what_it_means": "Investigators suspect sophisticated AI-driven tools were deployed to breach security defences and launder the funds in record time. The sheer scale exposes lingering structural vulnerabilities across decentralised finance platforms.",
+    "why_care": "Digital assets carry unique security risks alongside extreme market volatility. If you hold crypto, keeping tokens on an exchange rather than in cold storage leaves you exposed to platform-level shocks."
+   },
+   {
+    "i": 54,
+    "title": "Lagarde bows out of Frankfurt at a tricky crossroads",
+    "whats_going_on": "Christine Lagarde is preparing to step down as European Central Bank chief, leaving her successor an unenviable economic balancing act. The transition arrives with euro area inflation running at 3.8% and the benchmark deposit rate sitting at 2.5%.",
+    "what_it_means": "Central bank leadership changes often introduce fresh uncertainty over the future path of interest rates. Frankfurt must decide whether to keep borrowing costs elevated to quell inflation or ease them to bolster sluggish European growth.",
+    "why_care": "ECB decisions directly steer benchmark borrowing rates like the 12-month Euribor, currently at 3.247%. That eventually dictates how much you pay on variable mortgages and what banks pay on term deposits."
+   },
+   {
+    "i": 30,
+    "title": "Gold loses its shine as crude flares up",
+    "whats_going_on": "Gold tumbled to a one-year low, heading for its steepest October decline since the 2008 financial crisis. Meanwhile, crude oil prices climbed on mounting geopolitical fears that the US might resume strikes against Iran.",
+    "what_it_means": "Investors scrambled to sell bullion to cover fast-moving equity losses during the tech rout, blunting gold’s traditional safe-haven role. At the same time, firmer oil prices threaten to reignite stubborn energy inflation.",
+    "why_care": "Costlier crude quickly filters through to the petrol pump and household utility bills, keeping consumer prices sticky. Precious metals can offer portfolio diversification, but they are not immune to liquidity squeezes."
+   }
+  ],
+  "basedOn": "2026-10-30T20:09:57.274Z",
+  "generatedAt": "2026-10-30T20:10:25.114Z"
+ }
 }
