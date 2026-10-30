@@ -1,20 +1,20 @@
 {
  "auto": true,
  "date": "2026-10-30",
- "basedOn": "2026-10-30T13:38:31.346Z",
- "generatedAt": "2026-10-30T13:38:33.576Z",
- "resumo": "Today's talk is mostly about **stocks and central-bank rates**. Falling: stocks.",
+ "basedOn": "2026-10-30T18:16:51.250Z",
+ "generatedAt": "2026-10-30T18:16:52.974Z",
+ "resumo": "Today's talk is mostly about **stocks and central-bank rates**. Rising: inflation. Falling: stocks, commodities, tech.",
  "classes": [
   {
    "nome": "Ações",
    "tendencia": "a descer",
    "forca": 3,
-   "leitura": "21 stories today. Top one: Amazon Stock Drops on Wall Street Miss, Despite Biggest Cloud Growth in Years (Wall Street Journal).",
+   "leitura": "29 stories today. Top one: Tech Stocks Tumble, but Broader Market Is Holding On (New York Times).",
    "a_favor": [
-    "Wall Street braces for Democratic gains as 2026 midterm ele…"
+    "You can expect the stock market to rally no matter who wins…"
    ],
    "riscos": [
-    "Amazon Stock Drops on Wall Street Miss, Despite Biggest Clo…"
+    "Tech Stocks Tumble, but Broader Market Is Holding On"
    ],
    "perfil": "Long horizon and tolerance for temporary losses."
   },
@@ -22,68 +22,66 @@
    "nome": "Juros (bancos centrais)",
    "tendencia": "estável",
    "forca": 3,
-   "leitura": "15 stories today. Top one: Canada to Take Equity Stake in AI Firm Cohere (Wall Street Journal).",
+   "leitura": "16 stories today. Top one: Inflation Accelerated in October, PCE Index Shows (New York Times).",
    "a_favor": [],
    "riscos": [],
    "perfil": "Affects everyone's deposits, loans and bonds."
   },
   {
-   "nome": "Tecnologia",
-   "tendencia": "misto",
+   "nome": "Matérias-primas",
+   "tendencia": "a descer",
    "forca": 3,
-   "leitura": "10 stories today. Top one: Ignore AI and ask for that pay rise (The Economist).",
-   "a_favor": [
-    "Ignore AI and ask for that pay rise"
+   "leitura": "7 stories today. Top one: U.S. Natural Gas Futures Fall in Early Trading (Wall Street Journal).",
+   "a_favor": [],
+   "riscos": [
+    "U.S. Natural Gas Futures Fall in Early Trading"
    ],
+   "perfil": "A small slice of a portfolio, for diversification only."
+  },
+  {
+   "nome": "Fundos",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "4 stories today. Top one: Hold your nose: a £1.25bn subsidy for rich Rolls-Royce’s new engine had to happen (The Guardian).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "People who want to diversify with professional management."
+  },
+  {
+   "nome": "Inflação",
+   "tendencia": "a subir",
+   "forca": 2,
+   "leitura": "4 stories today. Top one: Halloween gets pricier as chocolate costs climb — Hershey may feel the pinch (CNBC).",
+   "a_favor": [
+    "Halloween gets pricier as chocolate costs climb — Hershey m…"
+   ],
+   "riscos": [],
+   "perfil": "Affects everyone's purchasing power."
+  },
+  {
+   "nome": "Tecnologia",
+   "tendencia": "a descer",
+   "forca": 2,
+   "leitura": "4 stories today. Top one: Intel plunges 25%, triggers global chip rout on bleak outlook (Investing.com).",
+   "a_favor": [],
    "riscos": [
     "Intel plunges 25%, triggers global chip rout on bleak outlo…"
    ],
    "perfil": "Long horizon and tolerance for high volatility."
   },
   {
-   "nome": "Economia",
-   "tendencia": "misto",
-   "forca": 3,
-   "leitura": "10 stories today. Top one: UK side-hustle tax-free allowance to rise to £3,000 next year (The Guardian).",
-   "a_favor": [
-    "UK side-hustle tax-free allowance to rise to £3,000 next ye…"
-   ],
-   "riscos": [
-    "'Painful' years ahead, think tanks warn, as living standard…"
-   ],
-   "perfil": "Background for saving and investing decisions."
-  },
-  {
-   "nome": "Fundos",
-   "tendencia": "estável",
-   "forca": 3,
-   "leitura": "7 stories today. Top one: The Extra-Strength Funds That Are Too Much of a Good Thing (Wall Street Journal).",
-   "a_favor": [],
-   "riscos": [],
-   "perfil": "People who want to diversify with professional management."
-  },
-  {
-   "nome": "Matérias-primas",
-   "tendencia": "estável",
-   "forca": 3,
-   "leitura": "6 stories today. Top one: The never-ending absurdity of global oil markets (The Economist).",
-   "a_favor": [],
-   "riscos": [],
-   "perfil": "A small slice of a portfolio, for diversification only."
-  },
-  {
-   "nome": "Depósitos e poupança",
+   "nome": "Obrigações",
    "tendencia": "estável",
    "forca": 2,
-   "leitura": "3 stories today. Top one: &#x2018;Fancy cars hold no appeal&#x2019;: We have a 99% chance of outliving our life savings. Why not spend,… (MarketWatch).",
+   "leitura": "4 stories today. Top one: BofA&#x2019;s Hartnett calls beaten-down tech bonds &#x2018;diamonds in the rough&#x2019; (Seeking Alpha).",
    "a_favor": [],
    "riscos": [],
-   "perfil": "Emergency fund and short-term goals."
+   "perfil": "Medium horizon and tolerance for price swings."
   }
  ],
  "temas": [
   "Volatility is not the same as losing money",
   "What the ECB does and why it touches your money",
-  "Concentration: the risk of betting on one sector"
+  "Oil and gold: what moves the price"
  ]
 }
