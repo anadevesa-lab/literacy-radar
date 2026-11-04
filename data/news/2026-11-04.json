@@ -2,494 +2,6 @@
  "date": "2026-11-04",
  "items": [
   {
-   "source": "Financial Times",
-   "category": "Tecnologia",
-   "published": "4 Nov",
-   "title": "Are we ready for an AI bust?",
-   "summary": "The longer the investment surge and the associated financial engineering continue, the bigger the negative impact is likely to be when it ends",
-   "url": "https://www.ft.com/content/b954b99c-b71e-4334-9789-18e2b69de76d?syn-25a6b1a6=1"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Bolsa",
-   "published": "4 Nov",
-   "title": "Stock Market Today: Dow Jumps 1,000 Points After Democrats Sweep Congress",
-   "summary": "S&P 500, Nasdaq also rally at open as investors reverse initial knee-jerk reaction",
-   "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-11-04-2026?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Fundos",
-   "published": "4 Nov",
-   "title": "Index Funds Are Better When They&#x2019;re Lucky and Smart",
-   "summary": "Plus, markets digest the blue tsunami",
-   "url": "https://www.wsj.com/finance/stocks/index-funds-are-better-when-theyre-lucky-and-smart-3f64f351?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Mercados",
-   "published": "4 Nov",
-   "title": "How Beer Companies Stole Happy Hour From Liquor Brands",
-   "summary": "Diageo and Pernod Ricard have missed the cocktails-in-a-can craze, and investors are paying the price.",
-   "url": "https://www.wsj.com/business/retail/how-beer-companies-stole-happy-hour-from-liquor-brands-342e96c7?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Mercados",
-   "published": "3 Nov",
-   "title": "Bitcoin Miners Pivoted to AI&#x2014;Only to Find It&#x2019;s Just as Turbulent as Crypto",
-   "summary": "Operating AI data centers isn&#x2019;t any easier for companies that swapped out their bitcoin-mining servers for greener pastures.",
-   "url": "https://www.wsj.com/finance/currencies/bitcoin-miners-pivoted-to-aionly-to-find-its-just-as-turbulent-as-crypto-17485887?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Bolsa",
-   "published": "3 Nov",
-   "title": "Apple Shares Slip, Meta Debt Costs Rise",
-   "summary": "Plus, Apollo swings to a loss and investors eye midterm election races",
-   "url": "https://www.wsj.com/finance/stocks/apple-shares-slip-meta-debt-costs-rise-a8eb0510?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Mercados",
-   "published": "3 Nov",
-   "title": "Want to Try Alternative Investments? Here&#x2019;s an Easy Way to Start",
-   "summary": "These publicly traded investments offer diversification, but take some time to understand the risks and rewards before jumping in.",
-   "url": "https://www.wsj.com/finance/investing/alternative-investments-start-b21fc8ef?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Mercados",
-   "published": "3 Nov",
-   "title": "Mark Walter in Talks to Sell Cadillac F1 Stake to Red Sox, Liverpool Owners",
-   "summary": "John Henry&#x2019;s Fenway Sports Group is one of the bidders for the outfit at a valuation believed to be above $3 billion.",
-   "url": "https://www.wsj.com/sports/cadillac-formula-one-mark-walter-john-henry-af86c109?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "3 Nov",
-   "title": "Apple Is an AI Safe Haven&#x2014;but Safety Isn&#x2019;t Cheap",
-   "summary": "Apple is the rare big tech play that hasn&#x2019;t become a giant bet on the AI boom.",
-   "url": "https://www.wsj.com/finance/stocks/apple-is-an-ai-safe-havenbut-safety-isnt-cheap-68fa76f6?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Bolsa",
-   "published": "4 Nov",
-   "title": "Dow Jumps After Democrats Sweep Congress",
-   "summary": "U.S. stocks are surging as investors react to a blue wave that puts Democrats in control of both chambers of Congress.",
-   "url": "https://www.wsj.com/finance/investing/stock-futures-edge-lower-treasurys-strengthen-after-democratic-sweep-f2198d07?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Mercados",
-   "published": "4 Nov",
-   "title": "Andersons to Buy Harvestone Low Carbon Partners for $915 Million",
-   "summary": "Andersons agreed to buy low-carbon ethanol producer Harvestone Low Carbon Partners for $915 million in a deal that expands the diversified agricultural company&#x2019;s renewables platform by more tha",
-   "url": "https://www.wsj.com/pro/private-equity/andersons-to-buy-harvestone-low-carbon-partners-for-915-million-4dc82e7b?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "4 Nov",
-   "title": "Democratic Wave Changes AI Policy Calculus",
-   "summary": "Plus, a reckoning for tech executives and the data center build-out",
-   "url": "https://www.wsj.com/cio-journal/democratic-wave-changes-ai-policy-calculus-bec0ffe5?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Mercados",
-   "published": "4 Nov",
-   "title": "Democrats Take Congress as Trump Says Iran War Is Partly to Blame for GOP Losses",
-   "summary": "Plus, Iran turns to guerrilla tactics to try to stop the flow of oil leaving the Strait of Hormuz, and CVS Health decides to split in two.",
-   "url": "https://www.wsj.com/world/democrats-take-congress-as-trump-says-iran-war-is-partly-to-blame-for-gop-losses-b03d4784?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "4 Nov",
-   "title": "Silicon Valley Promises AI Will Cure Disease. Drugmaker CEOs Aren&#x2019;t Buying It.",
-   "summary": "No drug designed by artificial intelligence has won FDA clearance, and pharma leaders say biology is the obstacle.",
-   "url": "https://www.wsj.com/tech/ai/silicon-valley-promises-ai-will-cure-disease-drugmaker-ceos-arent-buying-it-5218511c?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "3 Nov",
-   "title": "Google Curbs AI in School Accounts After Pushback",
-   "summary": "The search company turns off Gemini chatbot and Google Search by default for schoolchildren after a WSJ investigation into Google&#x2019;s AI rollout in schools.",
-   "url": "https://www.wsj.com/tech/ai/google-curbs-ai-in-school-accounts-after-pushback-6b8021fc?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Bolsa",
-   "published": "3 Nov",
-   "title": "AMD Beats Wall Street Expectations as it Pivots to Data-Center First Status",
-   "summary": "The chip maker&#x2019;s shares soared.",
-   "url": "https://www.wsj.com/business/earnings/advancedmicrodevices-amd-thirdquarter-earnings-report-2026-stock-e186e911?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "4 Nov",
-   "title": "AI Security Startup Sentra Raises $150 Million to Police Autonomous Agents",
-   "summary": "A five-year-old data security platform is riding a wave of demand for autonomous digital tools that won&#x2019;t misbehave.",
-   "url": "https://www.wsj.com/pro/cybersecurity/ai-security-startup-sentra-raises-150-million-to-police-autonomous-agents-4ab9da29?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Mercados",
-   "published": "3 Nov",
-   "title": "Bitcoin Miners Pivoted to AI&#x2014;Only to Find It&#x2019;s Just as Turbulent as Crypto",
-   "summary": "Operating AI data centers isn&#x2019;t any easier for companies that swapped out their bitcoin-mining servers for greener pastures.",
-   "url": "https://www.wsj.com/finance/currencies/bitcoin-miners-pivoted-to-aionly-to-find-its-just-as-turbulent-as-crypto-17485887?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Bolsa",
-   "published": "3 Nov",
-   "title": "The IPO Market Is Open For Anthropic. Not For Everyone Else.",
-   "summary": "Plus, a wild week for tech earnings, and an Nvidia spy caper.",
-   "url": "https://www.wsj.com/tech/ai/the-ipo-market-is-open-for-anthropic-not-for-everyone-else-15d97043?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "3 Nov",
-   "title": "Trump Declared War on the Term &#x2018;AI.&#x2019; CEOs Are Struggling to Keep Up.",
-   "summary": "Executives from Nvidia to Microsoft have been walking a linguistic tightrope since the decree, sometimes recalibrating in midsentence",
-   "url": "https://www.wsj.com/tech/ai/trump-declared-war-on-the-term-ai-ceos-are-struggling-to-keep-up-c81387ef?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "3 Nov",
-   "title": "EU Court Advisor Warns AI Chatbots Could Risk Infringing Copyright Law",
-   "summary": "Tech companies could risk breaching EU copyright when their AI chatbots reuse news articles to generate answers, a top advisor to the bloc&#x2019;s highest court said.",
-   "url": "https://www.wsj.com/business/media/eu-court-adviser-warns-ai-chatbots-could-risk-infringing-copyright-law-41793aa3?mod=rss_Technology"
-  },
-  {
-   "source": "The Economist",
-   "category": "Bolsa",
-   "published": "3 Nov",
-   "title": "China’s AI stock-market struggles are a warning",
-   "summary": "What happens when the supply of new tech catches up with demand?",
-   "url": "https://www.economist.com/finance-and-economics/2026/11/03/chinas-ai-stock-market-struggles-are-a-warning"
-  },
-  {
-   "source": "The Economist",
-   "category": "Mercados",
-   "published": "3 Nov",
-   "title": "America’s renters are in serious trouble",
-   "summary": "Several gauges of their financial health are flashing red",
-   "url": "https://www.economist.com/finance-and-economics/2026/11/03/americas-renters-are-in-serious-trouble"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "4 Nov",
-   "title": "5 midterm election takeaways: Tech billionaires suffer as Democrats drub Republicans",
-   "summary": "Elon Musk's spending may have become a liability as voters in exit polls raised concerns about government corruption and the growing influence of billionaires.",
-   "url": "https://www.cnbc.com/2026/11/04/midterm-election-blue-wave-trump-billionaires.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Bolsa",
-   "published": "4 Nov",
-   "title": "CVS to split off drugstore business in major breakup of healthcare giant; shares fall 10%",
-   "summary": "The move would reverse the company's $78 billion acquisition of Aetna and dismantle the vertically integrated healthcare conglomerate it created in 2018.",
-   "url": "https://www.cnbc.com/2026/11/04/cvs-to-split-off-drugstore-business.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "4 Nov",
-   "title": "SpaceX signs deal with Qualcomm to provide network technology for U.S. mobile service",
-   "summary": "SpaceX struck a multiyear deal with Qualcomm to build out base stations for its Starlink Mobile cellular network.",
-   "url": "https://www.cnbc.com/2026/11/04/spacex-strikes-deal-with-qualcomm-for-mobile-network-infrastructure.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "4 Nov",
-   "title": "Uber beats on revenue even as mobility and delivery units miss estimates",
-   "summary": "Uber reported better-than-expected revenue but its mobility unit faced higher fuel costs overseas and tighter driver supply.",
-   "url": "https://www.cnbc.com/2026/11/04/uber-stock-q3-2026-earnings.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "4 Nov",
-   "title": "Blood banks targeted in latest European fridge cyberattacks",
-   "summary": "French blood banks were hit by cybersecurity attacks on Monday, with hackers cranking up temperatures in refrigerators storing blood.",
-   "url": "https://www.cnbc.com/2026/11/04/blood-bank-fridges-cyberattacks.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Economia",
-   "published": "4 Nov",
-   "title": "Private companies added 86,000 jobs in October, slightly higher than expected, ADP says",
-   "summary": "Private-sector job growth held steady in October, with gains spread across sectors",
-   "url": "https://www.cnbc.com/2026/11/04/private-companies-added-86000-jobs-in-october-slightly-higher-than-expected-adp-says.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Economia",
-   "published": "4 Nov",
-   "title": "McDonald's earnings beat, but traffic to its U.S. restaurants falls",
-   "summary": "McDonald's has leaned into discounts to attract budget-conscious diners over the last two years.",
-   "url": "https://www.cnbc.com/2026/11/04/mcdonalds-is-about-to-report-earnings-heres-what-to-expect.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Bolsa",
-   "published": "4 Nov",
-   "title": "AI data center stocks and Musk's SpaceX decline as Texas governor result raises risks of a slowdown",
-   "summary": "AI fortunes were mixed as premarket trading opened on Wednesday.",
-   "url": "https://www.cnbc.com/2026/11/04/ai-stocks-texas-governor-data-centers.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "4 Nov",
-   "title": "Americans have said 'NO TO WAR,' Iran speaker says as Democrats take Congress",
-   "summary": "Ghalibaf said that \"Conscience or the cost of living, Americans said NO TO WAR, and we endorse this message.\"",
-   "url": "https://www.cnbc.com/2026/11/04/us-midterm-elections-iran-war-speaker.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Inflação",
-   "published": "4 Nov",
-   "title": "Mortgage rates drop for the third straight week, but homebuyers are still leaving the market",
-   "summary": "Mortgage rates came down again last week, but mortgage demand from homebuyers continued to decline, as high home prices and inflation stretch affordability.",
-   "url": "https://www.cnbc.com/2026/11/04/mortgage-rates-dropped-homebuyers-still-leaving.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Obrigações",
-   "published": "4 Nov",
-   "title": "10-year Treasury yield slips after Democrats win House and Senate majorities",
-   "summary": "Treasury yields moved lower on Wednesday as investors weighed big wins from Democrats in the U.S. midterm elections.",
-   "url": "https://www.cnbc.com/2026/11/03/treasury-yields-fall-as-democrats-win-big-in-us-midterm-elections.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Fundos",
-   "published": "3 Nov",
-   "title": "Blackstone president calls for more equity to fund AI buildout as debt risks mount",
-   "summary": "Blackstone President Jon Gray says AI infrastructure needs more equity as debt investors face concentration risks amid massive spending plans.",
-   "url": "https://www.cnbc.com/2026/11/03/equity-ai-debt-blackstone-pimco-financing.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "3 Nov",
-   "title": "Texas governor race tightens in prediction markets, but Abbott remains favored",
-   "summary": "Prediction markets still show the Republican incumbent favored to win a fourth term, but the odds have narrowed in recent weeks.",
-   "url": "https://www.cnbc.com/2026/11/02/texas-governor-prediction-markets-abbott-hinojosa.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Bolsa",
-   "published": "3 Nov",
-   "title": "Stock market after midterm elections: What S&P 500 history shows",
-   "summary": "Midterms historically precede a strong year for the S&P 500. What to know if Democrats win back Congress",
-   "url": "https://www.cnbc.com/2026/11/02/stock-market-after-midterm-elections-sp-500-history.html"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Tecnologia",
-   "published": "4 Nov",
-   "title": "Big Tech&#x2019;s $500 billion spending spree leaves a lot less for shareholders",
-   "summary": "AI is changing the bargain between large technology companies and their shareholders,",
-   "url": "https://www.marketwatch.com/story/big-techs-500-billion-spending-spree-leaves-a-lot-less-for-shareholders-4ed57fb5?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Bolsa",
-   "published": "4 Nov",
-   "title": "CVS Health plans to split in two. Here&#x2019;s what is driving the massive healthcare breakup.",
-   "summary": "The healthcare giant surprised analysts with the decision to separate its business. Its stock is down.",
-   "url": "https://www.marketwatch.com/story/cvs-health-plans-to-split-in-two-heres-what-is-driving-the-massive-healthcare-breakup-27c0d6be?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Tecnologia",
-   "published": "4 Nov",
-   "title": "The internet is &#x2018;dying&#x2019;: AI is eating it and obliterating these business models",
-   "summary": "&#x201c;The internet as we&#x2019;ve known it for the past 20-plus years is going away, and it&#x2019;s going to completely change,&#x201d; one CEO says.",
-   "url": "https://www.marketwatch.com/story/the-internet-is-dying-ai-is-eating-it-and-obliterating-these-business-models-435ae2b0?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Mercados",
-   "published": "4 Nov",
-   "title": "Learning from &#x2018;Love Is Blind&#x2019; money drama",
-   "summary": "Hear me out: These reality-TV couples are having really important conversations about love and money heading into tonight&#x2019;s finale.",
-   "url": "https://www.marketwatch.com/story/learning-from-love-is-blind-money-drama-810175f9?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Mercados",
-   "published": "4 Nov",
-   "title": "ADP says businesses added 86,000 jobs in October. The labor market shows small signs of improvement.",
-   "summary": "More industries are hiring, but employers are still cautious.",
-   "url": "https://www.marketwatch.com/story/adp-says-businesses-add-86-000-jobs-in-october-labor-market-shows-small-signs-of-improvement-64c89fd3?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Bolsa",
-   "published": "4 Nov",
-   "title": "Tesla and SpaceX shares slide as Musk&#x2019;s political push falls flat",
-   "summary": "The billionaire spent hundreds of millions of dollars on the U.S. election. Now, investors are worried about less favorable policies under new Democratic officials.",
-   "url": "https://www.marketwatch.com/story/tesla-and-spacex-shares-slide-as-musks-political-push-falls-flat-c15d29a3?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Obrigações",
-   "published": "4 Nov",
-   "title": "Treasury opens the door to changes in how it finances the growing U.S. debt. Here&#x2019;s what you need to know.",
-   "summary": "Some potential changes that may take place after the next several quarters.",
-   "url": "https://www.marketwatch.com/story/treasury-opens-the-door-to-changes-in-how-it-finances-the-growing-u-s-debt-heres-what-you-need-to-know-6001f7e1?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Bolsa",
-   "published": "4 Nov",
-   "title": "Datadog&#x2019;s stock extends steep declines in the wake of earnings",
-   "summary": "Datadog failed to top expectations with its revenue forecast.",
-   "url": "https://www.marketwatch.com/story/datadogs-stock-extends-steep-declines-in-the-wake-of-earnings-af412874?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Poupança",
-   "published": "4 Nov",
-   "title": "&#x2018;It seems bizarre&#x2019;: We&#x2019;re in our 80s with $950,000 in traditional IRAs. Why is our adviser pushing Roth conversions?",
-   "summary": "&#x201c;Our basic living expenses are covered by $110,000 in annual pensions and Social Security.&#x201d;",
-   "url": "https://www.marketwatch.com/story/it-seems-bizarre-were-in-our-80s-with-950-000-in-traditional-iras-why-is-our-adviser-pushing-us-to-do-roth-conversions-a665f990?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Banca central",
-   "published": "4 Nov",
-   "title": "Think the Fed will be done after two more rate hikes? How Friday&#x2019;s jobs report may trigger a major market repricing.",
-   "summary": "Unexpectedly hot jobs data could affect the number and timing of future rate hikes",
-   "url": "https://www.marketwatch.com/story/think-the-fed-will-be-done-after-two-more-rate-hikes-how-fridays-jobs-report-may-trigger-a-major-market-repricing-6aca874c?mod=mw_rss_topstories"
-  },
-  {
-   "source": "BBC",
-   "category": "Economia",
-   "published": "3 Nov",
-   "title": "Binance says fake job interviews used as part of $6.3bn crypto hack",
-   "summary": "An engineer was contacted through a legitimate job-hunting platform and invited to bogus job interviews with fake company representatives, Binance says.",
-   "url": "https://www.bbc.co.uk/news/articles/ck5ynwz9gy67o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-   "source": "BBC",
-   "category": "Tecnologia",
-   "published": "4 Nov",
-   "title": "Graduates are managing AI - but are they learning much else?",
-   "summary": "Graduates are spending more time managing AI, but are they missing out on other work experience?",
-   "url": "https://www.bbc.co.uk/news/articles/c820vz6wyp65o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-   "source": "BBC",
-   "category": "Economia",
-   "published": "4 Nov",
-   "title": "Canva announces major job cuts after 'our hardest year yet'",
-   "summary": "CEO Melanie Perkins says more than 1,000 staff will either lose their jobs or be asked to change roles.",
-   "url": "https://www.bbc.co.uk/news/articles/cw77pg7neydmo?at_medium=RSS&at_campaign=rss"
-  },
-  {
-   "source": "BBC",
-   "category": "Economia",
-   "published": "3 Nov",
-   "title": "'Quiet quitting' could be hitting the economy - here's why",
-   "summary": "Britons have become less engaged with the jobs they do and are less willing to put in extra effort, a report has found.",
-   "url": "https://www.bbc.co.uk/news/articles/cw23d5z87drpo?at_medium=RSS&at_campaign=rss"
-  },
-  {
-   "source": "BBC",
-   "category": "Habitação",
-   "published": "4 Nov",
-   "title": "What's happening to UK interest rates and what does it mean for mortgages?",
-   "summary": "The interest rate set by the Bank of England affects mortgage, loan and savings rates for millions.",
-   "url": "https://www.bbc.co.uk/news/articles/c3dky111m40o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-   "source": "BBC",
-   "category": "Inflação",
-   "published": "4 Nov",
-   "title": "Swim and gym prices set to rise above inflation",
-   "summary": "The rises would impact Perdiswell, St John's Sports Centre and Nunnery Wood Sports Complex.",
-   "url": "https://www.bbc.co.uk/news/articles/c6pvgw8gz1k4o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-   "source": "BBC",
-   "category": "Habitação",
-   "published": "3 Nov",
-   "title": "Keeping mortgage interest relief approved",
-   "summary": "Homeowners can get tax relief of £3,500 on the money spent on the interstate of a mortgage.",
-   "url": "https://www.bbc.co.uk/news/articles/c6vgj0ljx01jo?at_medium=RSS&at_campaign=rss"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Banca central",
-   "published": "4 Nov",
-   "title": "US stock markets and government bonds rally while dollar falls after Democrats secure Congress – business live",
-   "summary": "<p>European shares also power ahead as markets react to blue wave in US midterm elections</p><p>And <strong>Chris Turner</strong>, global head of markets at ING, says:</p><p>Investors will be parsing ",
-   "url": "https://www.theguardian.com/business/live/2026/nov/04/dollar-falls-while-gold-us-treasury-bonds-rally-markets-react-democrats-midterm-election-victory-marks-spencer-latest-live-updates"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Inflação",
-   "published": "4 Nov",
-   "title": "UK interest rates increase expected after services sector activity accelerates",
-   "summary": "<p>Purchasing manager’s index at eight-month high, bolstered by spending on AI as firms regain momentum lost to Iran war</p><ul><li><p><a href=\"https://www.theguardian.com/business/live/2026/nov/04/do",
-   "url": "https://www.theguardian.com/business/2026/nov/04/uk-interest-rates-increase-expected-service-sector-activity-accelerates-pmi"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Economia",
-   "published": "4 Nov",
-   "title": "M&S boss bemoans last week’s budget as ‘whole lot of nothing’",
-   "summary": "<p>Stuart Machin hits out at Labour but welcomes expected UK-EU food deal as retailer reveals half-year results</p><p>The chief executive of Marks &amp; Spencer has called John Healey’s first budget a",
-   "url": "https://www.theguardian.com/business/2026/nov/04/m-and-s-recover-from-cyber-attack-profits-bounce-back"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Habitação",
-   "published": "4 Nov",
-   "title": "Britain’s housing market unlikely to recover until 2028, says Savills",
-   "summary": "<p>House prices forecast to fall by 1.5% next year as Middle East war keeps mortgage rates higher for longer</p><p>Britain’s sluggish housing market is not expected to recover until 2028 as higher mor",
-   "url": "https://www.theguardian.com/business/2026/nov/04/britains-housing-market-unlikely-to-recover-until-2028-says-savills"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Economia",
-   "published": "4 Nov",
-   "title": "BMW warns on profits as it counts cost of plan for 8,000 job cuts",
-   "summary": "<p>German carmaker slashes profit margin to between -0.5% and 0.5% this year in face of competition from China</p><p>The German carmaker BMW has issued its second profit warning in a year, blaming the",
-   "url": "https://www.theguardian.com/business/2026/nov/04/bmw-warns-on-profits-counts-cost-plan-for-8000-job-cuts"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Tecnologia",
-   "published": "3 Nov",
-   "title": "AI ‘godfather’ Geoffrey Hinton: it might turn out we were better off without AI",
-   "summary": "<p>Nobel winner warns the tech could be near to triggering major incident such as power or banking shutdown</p><p>One of the “godfathers of AI”, Geoffrey Hinton, has said it could turn out that humans",
-   "url": "https://www.theguardian.com/uk-news/2026/nov/03/ai-godfather-geoffrey-hinton-better-off-without-ai"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Economia",
-   "published": "4 Nov",
-   "title": "Canva layoffs: design giant to cut or relocate more than 1,200 jobs in major restructure",
-   "summary": "<p>Chief executive Melanie Perkins describes job cuts as ‘without doubt the hardest moment in our thirteen-year history’ in email to staff</p><ul><li><p>Get our <a href=\"https://www.theguardian.com/em",
-   "url": "https://www.theguardian.com/australia-news/2026/nov/04/canva-layoffs-job-cuts-restructure"
-  },
-  {
    "source": "The Guardian",
    "category": "Bolsa",
    "published": "3 Nov",
@@ -800,6 +312,494 @@
    "title": "Federal Reserve Board announces approval of application by The Bank of Nova Scotia",
    "summary": "Federal Reserve Board announces approval of application by The Bank of Nova Scotia",
    "url": "https://www.federalreserve.gov/newsevents/pressreleases/orders20261029a.htm"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Bolsa",
+   "published": "4 Nov",
+   "title": "Renewable Stocks Surge After Democrats Sweep Congress",
+   "summary": "Renewable energy stocks rallied around the world after the Democrats won control of both chambers of Congress in the US midterm elections, an outcome seen as supporting more favorable policy for the i",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-04/global-solar-stocks-jump-as-democrats-hold-early-us-midterm-lead"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Bolsa",
+   "published": "4 Nov",
+   "title": "Musk Stocks Erase $130 Billion as Texas Blue Wave Hits Home",
+   "summary": "Elon Musk’s Texas-based empire is coming under investor scrutiny after Democrats clinched unlikely wins in his adopted state on their way to take control of Congress.",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-04/tesla-spacex-shares-take-early-hit-as-midterm-blue-wave-unfolds"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "Dollar Falls Most in Two Months as Traders Weigh Gridlock Risks",
+   "summary": "The dollar sank the most in two months as Democrats’ sweeping victory in the midterm elections fueled concern about potential political gridlock and raised the prospect of diminished spending on AI by",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-04/franc-yen-emerge-as-fx-winners-as-us-midterms-weaken-dollar"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Obrigações",
+   "published": "3 Nov",
+   "title": "Stocks, Bonds Climb After US Election as Oil Sinks: Markets Wrap",
+   "summary": "A Democratic sweep of Congress that highlighted opposition of the Iran war extended this week’s plunge in oil prices, helping drive stocks and bonds to big post-election gains.",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-03/stock-market-today-dow-s-p-live-updates"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Obrigações",
+   "published": "4 Nov",
+   "title": "Wall Street Revises Treasury Sales Forecasts on Guidance Revamp",
+   "summary": "Wall Street strategists are rejigging forecasts for US borrowing next year after the Treasury signaled that changes to auction sizes for notes and bonds are on the horizon.",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-04/wall-street-revises-treasury-sales-forecasts-on-guidance-revamp"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Bolsa",
+   "published": "4 Nov",
+   "title": "US Stocks Surge as Election Drives Oil Down, Fuels Tech Optimism",
+   "summary": "US stocks surged Wednesday as Democrats’ sweeping victory in midterm elections fueled optimism the Iran War could end soon, sending oil prices lower. Tech megacaps also jumped as investors bet a Democ",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-04/us-equity-futures-inch-higher-as-investors-await-midterm-results"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Obrigações",
+   "published": "4 Nov",
+   "title": "Treasuries Gain as Oil Prices Tumble After Democrats Elected",
+   "summary": "Treasuries rose as the outcome of the US midterm elections contributed to steep declines for oil prices based on the prospect of an end to the war in the Middle East.",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-04/treasuries-advance-as-traders-eye-us-votes-refinancing-plans"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Obrigações",
+   "published": "4 Nov",
+   "title": "Gold Climbs Above $4,000 as Dollar, Yields Fall on Democrat Win",
+   "summary": "Gold climbed above $4,000 an ounce after a Democratic sweep of Congress sent the dollar and Treasury yields lower, boosting the appeal of the precious metal.",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-04/gold-steadies-as-traders-track-iran-talk-prospects-us-midterms"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "Copper Slips as Investors Weigh Growth, Demand After US Election",
+   "summary": "Copper edged lower as traders weighed the potential impact on growth and demand from a divided government following a Democratic sweep of Congress.",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-04/copper-holds-losses-below-14-000-on-us-midterm-risks-to-stocks"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "3 Nov",
+   "title": "Latest Oil Market News and Analysis for Nov. 4",
+   "summary": "Brent oil futures plunged 10% to trade below $100 a barrel as investors wagered that a Democratic sweep in the US midterm elections could usher a quicker end to the months-long Iran conflict that upen",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-03/latest-oil-market-news-and-analysis-for-nov-4"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "Oil tumbles below $100 on post-election peace hopes",
+   "summary": "US vice-president JD Vance blames Republicans’ midterm defeat on anger over Iran war",
+   "url": "https://www.ft.com/content/b526f876-810a-4e74-8b8d-4ffca04b29c7?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "Trump diesel deal with Russia falters as US fuel supplies hit 20-year low",
+   "summary": "Two tankers change course in setback to White House gambit to lower fuel prices and shore up political support",
+   "url": "https://www.ft.com/content/f66ebf48-6d09-4a91-9af5-8bf7adca65ba?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Bolsa",
+   "published": "4 Nov",
+   "title": "Stocks climb after Democrats’ sweep",
+   "summary": "Hyperscalers surge and chipmakers fall as investors bet on winners and losers from expected Democrat backlash against AI boom",
+   "url": "https://www.ft.com/content/a0b18705-3bd8-4886-992c-b6062fdec6ea?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "Blue wave sweeps markets back towards normality",
+   "summary": "US midterm results may point to more restraints on the Trump administration",
+   "url": "https://www.ft.com/content/fc404189-8dde-4dfe-8da7-0df8e92effd2?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Fundos",
+   "published": "4 Nov",
+   "title": "China steps up defence of stock market in bid to revive AI boom",
+   "summary": "ETFs commonly used by Beijing to support market see second-highest net inflows on record",
+   "url": "https://www.ft.com/content/b86cc3e7-e638-4b58-8d4d-4516c13c45f5?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "Solvay strikes rare earths deal that will reduce global dependence on China",
+   "summary": "Supply from Brazilian mine will bolster high-tech magnet production in Europe and US",
+   "url": "https://www.ft.com/content/7479802b-7071-4ab7-a7a0-bbebc20010e3?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Bolsa",
+   "published": "4 Nov",
+   "title": "Anthropic is an opportunity to rethink IPO rules",
+   "summary": "To protect retail investors, we should stop permitting the deferral of stock-based employee compensation costs",
+   "url": "https://www.ft.com/content/5083bad9-2a6e-4dc8-9627-1d41f9aa5b5b"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "US midterms results night as it happened: Democrats rout Republicans to win Senate and House",
+   "summary": "President’s party defeated in battleground races from Kansas to South Carolina",
+   "url": "https://www.ft.com/content/77c2eaca-4fe1-4c69-b3bd-c517b045ff37?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "Copper and conflict trigger profit surge for Buffett-backed Japanese commodity traders",
+   "summary": "Mitsui chief warns geopolitical risks continue to be ‘unpredictable rather than calming down’",
+   "url": "https://www.ft.com/content/656f10c4-26ec-430e-adfa-dcadf0dd61ff?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "Seriously, stop worrying about market concentration",
+   "summary": "And maybe worry more about what markets are concentrated in",
+   "url": "https://www.ft.com/content/ddc15117-2e67-429c-8c47-233121ee1587?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "AstraZeneca Made $10 Billion Offer for Rhythm Pharmaceuticals",
+   "summary": "Rhythm specializes in treatments for metabolic conditions and severe obesity.",
+   "url": "https://www.wsj.com/health/pharma/astrazeneca-made-10-billion-offer-for-rhythm-pharmaceuticals-6f261471?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "4 Nov",
+   "title": "Financial Services Roundup: Market Talk",
+   "summary": "Find insight on U.K. bank stocks, AIB Group and more in the latest Market Talks covering Financial Services.",
+   "url": "https://www.wsj.com/business/financial-services-roundup-market-talk-7f9a203c?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "4 Nov",
+   "title": "U.S. Stocks Rally on Divided Government as AI Wobbles Continue",
+   "summary": "Stocks surged as oil prices tumbled and traders bet a divided government would be good for business, offsetting ongoing unease about artificial-intelligence bets.",
+   "url": "https://www.wsj.com/finance/investing/u-s-stocks-rally-on-divided-government-as-ai-wobbles-continue-1a679abe?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "Tech, Media & Telecom Roundup: Market Talk",
+   "summary": "Find insight on AI and the U.S. midterm elections, the New York Times Company, Uber and more in the latest Market Talks covering Technology, Media and Telecom.",
+   "url": "https://www.wsj.com/business/tech-media-telecom-roundup-market-talk-59aa7335?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "3 Nov",
+   "title": "AI&#x2019;s Most Wanted Hire Gets a Big Raise",
+   "summary": "Plus, AI on the ballot from coast to coast",
+   "url": "https://www.wsj.com/cio-journal/ais-most-wanted-hire-gets-a-big-raise-4f084fc8?mod=rss_Technology"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "What Republicans' huge loss means for Trump",
+   "summary": "Trump's handling of tariffs, the Iran war and an array of Washington-area construction projects are sure to face sudden pushback from newly empowered Democrats.",
+   "url": "https://www.cnbc.com/2026/11/04/trump-midterm-election-results-congress.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Bolsa",
+   "published": "4 Nov",
+   "title": "Qualcomm stock drops 5% on weak earnings forecast as memory shortage weighs on smartphone sales",
+   "summary": "Qualcomm delivered better-than-expected results but issued a weak earnings forecast.",
+   "url": "https://www.cnbc.com/2026/11/04/qualcomm-qcom-earnings-report-q4-2026.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "Democrats map out an agenda to address affordability and corruption after midterm sweep",
+   "summary": "In control of Congress, Democrats are preparing to pursue legislation to address affordability, while also trying to rein-in President Donald Trump",
+   "url": "https://www.cnbc.com/2026/11/04/congressional-democrats-affordability-oversight.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Bolsa",
+   "published": "4 Nov",
+   "title": "Hyperscalers and Apple surge after election results remove investor uncertainty",
+   "summary": "Apple, Amazon, Google, Meta and Microsoft stock was up after the midterms, while stocks tied to Trump advisor Elon Musk and data centers fell on Wednesday.",
+   "url": "https://www.cnbc.com/2026/11/04/apple-and-other-big-tech-stocks-surge-after-2026-midterm-elections.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Economia",
+   "published": "4 Nov",
+   "title": "The economy brought Trump back to power. Now it's his downfall",
+   "summary": "Participants in the CNBC Voter Poll ranked the economy the most important issue facing the country, ahead of topics tied to democracy and immigration.",
+   "url": "https://www.cnbc.com/2026/11/04/2026-midterms-trump-economy-iran-war.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "E.l.f. Beauty posts 51% sales increase, raises full-year guidance",
+   "summary": "E.l.f. Beauty posted stronger-than-expected quarterly results on Wednesday as the company continues to see broad-based growth across its portfolio.",
+   "url": "https://www.cnbc.com/2026/11/04/elf-beauty-elf-q2-2027-earnings.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "CVS Health plans to split itself up. Here's why a breakup could make sense now",
+   "summary": "Analysts say that after a roughly two-year turnaround the company's retail pharmacy business and other units may be strong enough to stand on their own.",
+   "url": "https://www.cnbc.com/2026/11/04/cvs-health-pharmacy-aetna-split.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "Analysis: The Democrats have one chance to extract concessions from Trump. Markets will hate it",
+   "summary": "The next debt-ceiling confrontation could reverse Washington's traditional political roles, raising the possibility of spending concessions, market volatility and a damaging default.",
+   "url": "https://www.cnbc.com/2026/11/04/democrats-trump-debt-ceiling-fight.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "What Trump losing power over Congress means for Iran, Ukraine and foreign policy",
+   "summary": "Democratic control of Congress could bring greater scrutiny of Trump’s handling of the Iran and Ukraine wars, while leaving him broad foreign-policy powers.",
+   "url": "https://www.cnbc.com/2026/11/04/democrats-congress-trump-foreign-policy.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Tecnologia",
+   "published": "4 Nov",
+   "title": "Voters rebuff data centers in every ballot measure except one during the 2026 midterms",
+   "summary": "Voters in the states at the heart of the AI data center boom pushed back on the buildout on Election Night.",
+   "url": "https://www.cnbc.com/2026/11/04/data-center-ballot-measures-2026-midterm.html"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "&#x2018;It&#x2019;s good to be old&#x2019;: I&#x2019;ve been invited to a dozen free meals that turn into annuity sales pitches. Should I stop going?",
+   "summary": "&#x201c;Salespeople typically push annuities, Medicare plans and estate-planning services.&#x201d;",
+   "url": "https://www.marketwatch.com/story/its-good-to-be-old-ive-been-invited-to-a-dozen-free-meals-that-turn-into-annuity-sales-pitches-should-i-stop-going-63df67ca?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Obrigações",
+   "published": "4 Nov",
+   "title": "Dow scores its best day in 18 months in a broad relief rally after Democrats sweep to power in Congress",
+   "summary": "Stocks surged, oil prices plunged and bond yields fell Wednesday on optimism around a quicker end to the Iran war now that Democrats have clinched control of Congress.",
+   "url": "https://www.marketwatch.com/story/dow-scores-its-best-day-in-18-months-in-a-broad-relief-rally-after-democrats-sweep-to-power-in-congress-d7348fc0?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Bolsa",
+   "published": "4 Nov",
+   "title": "Big Tech is driving a historic divide in the U.S. stock market",
+   "summary": "A historic divergence has split the U.S. stock market: The benchmark S&P 500 index has tumbled into deeply oversold territory even as nearly half of its constituent stocks remained decidedly overbough",
+   "url": "https://www.marketwatch.com/story/wall-street-veteran-says-these-are-some-of-the-most-unbelievable-charts-he-has-ever-seen-2c78e677?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Bolsa",
+   "published": "4 Nov",
+   "title": "Apple cements its status as tech&#x2019;s biggest heavyweight with the stock&#x2019;s best day in over a year",
+   "summary": "Investors are flocking to Apple as a safe haven as AI infrastructure names come under pressure from midterm election results",
+   "url": "https://www.marketwatch.com/story/apple-cements-its-status-as-techs-biggest-heavyweight-with-the-stocks-best-day-in-over-a-year-c7fd9e6f?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Poupança",
+   "published": "4 Nov",
+   "title": "&#x2018;I have no financial safety net&#x2019;: I&#x2019;m 66, rely on Social Security and have $500 in savings. What politician speaks for me?",
+   "summary": "&#x201c;In the wake of the midterm elections, how many Americans are living in poverty?&#x201d;",
+   "url": "https://www.marketwatch.com/story/i-have-no-financial-safety-net-im-66-rely-on-social-security-and-have-500-in-savings-what-politician-speaks-for-me-be2126cb?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Bolsa",
+   "published": "4 Nov",
+   "title": "Hospital stocks rallied while drugmakers brace for scrutiny. Here&#x2019;s what the Democratic wave means for healthcare.",
+   "summary": "The Democratic victory in the midterm elections could be a huge boon to the nation&#x2019;s largest hospitals.",
+   "url": "https://www.marketwatch.com/story/hospital-stocks-rally-while-drugmakers-brace-for-scrutiny-heres-what-the-democratic-wave-means-for-healthcare-625b79f3?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "Billionaires aren&#x2019;t off the hook for higher taxes, even if they did dodge California&#x2019;s wealth tax",
+   "summary": "Silicon Valley spent big to kill California&#x2019;s wealth tax &#x2014; but incoming Democrats are eyeing a national fight.",
+   "url": "https://www.marketwatch.com/story/billionaires-arent-off-the-hook-for-higher-taxes-even-if-they-did-dodge-californias-wealth-tax-a73f9045?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "Three things that explain what&#x2019;s changing with Obamacare in 2027",
+   "summary": "Affordable Care Act premiums are increasing again, and these plans have new rules.",
+   "url": "https://www.marketwatch.com/story/three-things-that-explain-whats-changing-with-obamacare-in-2027-7c94585b?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "Democrats&#x2019; big election win revives a difficult Social Security question: Who pays?",
+   "summary": "There are many ideas for saving Social Security. All of them will hurt.",
+   "url": "https://www.marketwatch.com/story/democrats-big-election-win-revives-a-difficult-social-security-question-who-pays-17ba9448?mod=mw_rss_topstories"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Obrigações",
+   "published": "4 Nov",
+   "title": "US stocks rise, dollar slides as investors digest Democrats’ midterm victories",
+   "summary": "<p>Government bond yields fall while initial fears ease over impact of election results on world’s biggest economy</p><ul><li><p><a href=\"https://www.theguardian.com/business/live/2026/nov/04/dollar-f",
+   "url": "https://www.theguardian.com/business/2026/nov/04/us-dollar-slides-democrats-midterm-election-win-growth-fears"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Economia",
+   "published": "4 Nov",
+   "title": "Don’t let Poundland owner maximise its return at our expense, suppliers say",
+   "summary": "<p>British companies that supply US-owned budget retailer face millions of pounds’ worth of losses if it collapses</p><p>Suppliers facing millions of pounds in losses if Poundland collapses have said ",
+   "url": "https://www.theguardian.com/business/2026/nov/04/poundland-suppliers-facing-losses-gordon-brothers"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Poupança",
+   "published": "4 Nov",
+   "title": "‘It’s just vape shops, nail shops, charity shops’: can anything save the British high street?",
+   "summary": "<p>It’s 20 years since Jo and Richard Hill bought anything in Rotherham town centre. Why have they and so many locals abandoned it for the nearest retail park – and what would it take to change their ",
+   "url": "https://www.theguardian.com/business/2026/nov/04/what-can-save-the-british-high-street-rotherham"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Habitação",
+   "published": "4 Nov",
+   "title": "CVS Health to split pharmacy chain from health insurance",
+   "summary": "<p>CVS Pharmacy will be separate from CVS Health, housing major insurer Aetna and benefits manager Caremark</p><p>CVS Health, the largest US healthcare conglomerate valued at $117bn, has announced its",
+   "url": "https://www.theguardian.com/us-news/2026/nov/04/cvs-health-pharmacy-insurance"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Inflação",
+   "published": "4 Nov",
+   "title": "After the US midterms, what will a lame duck Trump mean for the global economy?",
+   "summary": "<p>Republicans’ crushing setback will play out in stock markets, inflation, interest rates and economic growth</p><p>Donald Trump’s <a href=\"https://www.theguardian.com/us-news/2026/nov/04/democrats-h",
+   "url": "https://www.theguardian.com/us-news/2026/nov/04/explainer-midterms-trump-us-global-economy-markets"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "The Guardian view on EU ‘Made in Europe’ rules: a fatal blow to Brexiter delusions | Editorial",
+   "summary": "<p>It is getting ever harder for Eurosceptics to deny that it was an economic and strategic blunder for Britain to leave the single market</p><p>The EU is a constantly evolving institution. The rules ",
+   "url": "https://www.theguardian.com/commentisfree/2026/nov/04/the-guardian-view-on-eu-made-in-europe-rules-a-fatal-blow-to-brexiter-delusions"
+  },
+  {
+   "source": "Fortune",
+   "category": "Tecnologia",
+   "published": "4 Nov",
+   "title": "How ElevenLabs’ CTO is rolling out AI agents—and why he thinks bigger efficiency gains are ahead for the voice AI startup",
+   "summary": "ElevenLabs field CTO Alex Holt has deployed agents across sales, recruiting, and customer service. He's also beginning to embrace multi-agent systems to improve workflows across the $22 billion AI sta",
+   "url": "https://fortune.com/2026/11/04/waters-new-ai-tool-targets-one-of-the-pharmaceutical-industrys-most-tedious-tasks-2/"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "4 Nov",
+   "title": "Dow posts best day in 19 months as investors cheer removal of midterms uncertainty",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/us-stock-futures-steady-with-midterms-in-focus-amd-rallies-on-strong-earnings-4997029"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "Elf sees Q2 sales boost with marketing, Europe expansion",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/elf-sees-q2-sales-boost-with-marketing-europe-expansion-5001272"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "Chime raises annual revenue forecast on robust demand",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/chime-raises-annual-revenue-forecast-on-robust-demand-5001269"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "Online travel firm Expedia raises annual forecasts on resilient demand",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/online-travel-firm-expedia-raises-annual-forecasts-on-resilient-demand-5001268"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "4 Nov",
+   "title": "Qualcomm’s smartphone chip sales miss estimates, shares fall",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/qualcomm-forecasts-upbeat-sales-on-strength-in-nonsmartphone-segments-5001228"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Tecnologia",
+   "published": "4 Nov",
+   "title": "Arm beats second-quarter revenue estimates on AI and data-center demand",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/arm-beats-secondquarter-revenue-estimates-on-ai-and-datacenter-demand-5001267"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "Qualcomm falls 3% as handset revenue misses estimates, costs rise",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/qualcomm-falls-3-as-handset-revenue-misses-estimates-costs-rise-5001230"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "Two dead after incident at Citigroup’s complex in Florida",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/two-dead-after-incident-at-citigroups-complex-in-florida-5001201"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "4 Nov",
+   "title": "Why is Duolingo stock surging today?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/why-is-duolingo-stock-surging-today-93CH-5001190"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "4 Nov",
+   "title": "Why is UroGen Pharma stock sliding today?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/why-is-urogen-pharma-stock-sliding-today-93CH-5001189"
   }
  ],
  "sources": [
@@ -821,5 +821,5 @@
  "editions": [
   "afternoon"
  ],
- "collectedAt": "2026-11-04T14:54:13.696Z"
+ "collectedAt": "2026-11-04T21:33:01.187Z"
 }
