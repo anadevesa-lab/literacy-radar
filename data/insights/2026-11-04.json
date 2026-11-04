@@ -1,0 +1,193 @@
+{
+ "auto": true,
+ "date": "2026-11-04",
+ "basedOn": "2026-11-04T14:54:13.696Z",
+ "generatedAt": "2026-11-04T14:54:34.899Z",
+ "resumo": "US stocks and government bonds rally following the midterm elections, while tech sectors navigate policy shifts and **infrastructure spending risks**.",
+ "classes": [
+  {
+   "nome": "Equities",
+   "tendencia": "rising",
+   "forca": 3,
+   "leitura": "US stock markets rallied after Democrats swept Congress, while major tech firms faced scrutiny over heavy spending.",
+   "a_favor": [
+    "Dow jumps 1,000 points after congressional sweep",
+    "S&P 500 and Nasdaq rally strongly at open"
+   ],
+   "riscos": [
+    "Big tech faces heavy spending and debt costs",
+    "Political shifts impact billionaire-backed firms"
+   ],
+   "perfil": "Suits investors seeking growth despite high volatility."
+  },
+  {
+   "nome": "Government Bonds",
+   "tendencia": "rising",
+   "forca": 3,
+   "leitura": "Treasury yields moved lower as investors reacted to political shifts and weighed macroeconomic data.",
+   "a_favor": [
+    "10-year Treasury yield slips after election results",
+    "Government bonds rally alongside equities"
+   ],
+   "riscos": [
+    "Growing US debt financing concerns",
+    "Potential repricing from future jobs reports"
+   ],
+   "perfil": "Suits cautious investors prioritizing fixed income."
+  },
+  {
+   "nome": "Cryptocurrencies",
+   "tendencia": "mixed",
+   "forca": 2,
+   "leitura": "Crypto assets and miners face turbulence as they pivot toward AI data centers amidst security challenges.",
+   "a_favor": [
+    "Pivoting operational models toward data centers",
+    "High market interest in digital infrastructure"
+   ],
+   "riscos": [
+    "Severe cyberattacks and exchange security hacks",
+    "Operational turbulence equal to crypto markets"
+   ],
+   "perfil": "Suits risk-tolerant speculators seeking high volatility."
+  },
+  {
+   "nome": "Real Estate",
+   "tendencia": "falling",
+   "forca": 2,
+   "leitura": "Housing markets remain sluggish as high mortgage rates and inflation stretch affordability for buyers.",
+   "a_favor": [
+    "Mortgage rates drop for the third straight week",
+    "Potential long-term stabilization in housing demand"
+   ],
+   "riscos": [
+    "UK housing market unlikely to recover until 2028",
+    "Homebuyers leaving the market due to prices"
+   ],
+   "perfil": "Suits patient investors with long-term horizons."
+  }
+ ],
+ "temas": [
+  "Stock market reactions to midterm elections",
+  "Artificial intelligence infrastructure spending",
+  "Employment and labor market indicators",
+  "Mortgage rates and housing affordability"
+ ],
+ "ai": true,
+ "brief": {
+  "one_liner": "US markets rally as a blue wave sweeps Congress, while private employers add 86,000 jobs and mortgage demand stays cool.",
+  "number": {
+   "value": "3.06%",
+   "caption": "Average new mortgage rate in Portugal as borrowing costs remain steady."
+  },
+  "stories": [
+   {
+    "i": 2,
+    "title": "Blue wave crashes on Capitol Hill as US stocks surge",
+    "whats_going_on": "U.S. stocks rallied sharply at the open, with the Dow jumping 1,000 points after Democrats swept both chambers of Congress in the midterm elections. Treasury yields moved lower as investors digested the unexpected political shift and its potential impact on policy.",
+    "what_it_means": "Financial markets initially experienced a knee-jerk reaction before reversing course to price in a new legislative landscape in Washington. Investors are now weighing how a divided or Democrat-led Congress might alter future government spending and corporate regulations.",
+    "why_care": "Big swings in global stock indices can indirectly affect the value of your pension funds and international tracker investments."
+   },
+   {
+    "i": 25,
+    "title": "CVS health breakup leaves investors nursing a 10% hangover",
+    "whats_going_on": "CVS Health announced plans to split its massive healthcare conglomerate in two, reversing its $78 billion acquisition of Aetna made back in 2018. Following the surprise strategic pivot, company shares tumbled 10% as analysts digested the massive corporate restructuring.",
+    "what_it_means": "Vertically integrated giants are finding that combining massive retail drugstore networks with health insurance operations comes with heavy operational hurdles. Breaking the company apart is an admission that bigger isn't always better for long-term efficiency.",
+    "why_care": "If you hold healthcare sector funds, major industry breakups can introduce short-term volatility to your portfolio."
+   },
+   {
+    "i": 29,
+    "title": "Private sector quietly adds 86,000 jobs in steady October",
+    "whats_going_on": "Private companies added 86,000 jobs in October, according to the latest ADP report, marking a slight improvement in labour market growth. Hiring gains were spread across multiple industries, showing that businesses are still expanding cautiously.",
+    "what_it_means": "The figures point to a labour market that is holding steady rather than booming or collapsing under economic pressures. Employers appear willing to hire, but remain mindful of broader cost pressures and uncertain economic horizons.",
+    "why_care": "A resilient jobs market influences central bank interest rate decisions, which ultimately trickle down to savings and loan costs."
+   },
+   {
+    "i": 33,
+    "title": "Mortgage rates dip again, but buyers stay on sidelines",
+    "whats_going_on": "Mortgage rates fell for the third straight week, offering a slight reprieve for prospective borrowers. However, overall mortgage demand from homebuyers continued to decline as high home prices and lingering inflation stretched household affordability.",
+    "what_it_means": "Even when borrowing costs tick downward, cumulative price increases over recent years make property purchases tough to digest. Buyers are simply refusing to bite until they see a more meaningful alignment between wages, property tags, and interest rates.",
+    "why_care": "If you are trying to buy a home or remortgage, affordability remains squeezed even as headline borrowing rates edge lower."
+   }
+  ],
+  "basedOn": "2026-11-04T14:54:13.696Z",
+  "generatedAt": "2026-11-04T14:55:05.630Z"
+ },
+ "pack": {
+  "carousel": {
+   "title": "Why mortgage rates are falling without buyers",
+   "slides": [
+    {
+     "kind": "hook",
+     "h": "Why are **mortgage rates** dropping?",
+     "big": "",
+     "t": ""
+    },
+    {
+     "kind": "stat",
+     "h": "New **mortgage rate** in Portugal",
+     "big": "3.06%",
+     "t": "Recorded in September 2026 across the country."
+    },
+    {
+     "kind": "point",
+     "h": "Borrowing costs are **easing down**",
+     "big": "",
+     "t": "Rates fell for the third straight week, offering a slight reprieve for prospective borrowers."
+    },
+    {
+     "kind": "myth",
+     "h": "\"Cheaper rates mean **buying is easy**\"",
+     "big": "",
+     "t": "High home prices and lingering inflation still stretch household affordability across the board."
+    },
+    {
+     "kind": "point",
+     "h": "What this means for **your budget**",
+     "big": "",
+     "t": "Affordability remains squeezed even as headline borrowing rates edge lower for buyers."
+    },
+    {
+     "kind": "cta",
+     "h": "Save this and **follow PaperMint**",
+     "big": "",
+     "t": "Never miss our fresh daily financial news updates."
+    }
+   ]
+  },
+  "linkedin": "Mortgage rates in Portugal have dipped for the third consecutive week, sitting at an average of 3.06% as of September 2026. Yet, despite cheaper borrowing costs, overall buyer demand remains subdued. Why? Because high property prices and lingering inflation continue to stretch household affordability.\n\nAt the same time, broader economic news shows US stocks rallying sharply following a political shift, while Portugal's annual inflation rate stands at 3.9% with the 12-month average at 2.9%.\n\nFor everyday savers and prospective buyers, headline figures only tell part of the story. A falling rate helps, but personal affordability relies on the balance between your income, living costs, and actual property prices.\n\nHow are you navigating your property plans amid changing rates? Let us know in the comments.\n\n#PersonalFinance #Mortgages #PaperMint",
+  "reel": {
+   "hook": "Mortgage rates are falling, so why is no one buying?",
+   "script": [
+    "Mortgage rates just fell for the third straight week.",
+    "The average new mortgage rate in Portugal sits at 3.06%.",
+    "So why are buyers staying firmly on the sidelines?",
+    "High home prices and inflation still squeeze everyday affordability.",
+    "Follow PaperMint for finance news, freshly minted."
+   ],
+   "caption": "Mortgage rates are dropping, but high property prices mean affordability is still squeezed. Here is what is happening."
+  },
+  "faq": [
+   {
+    "q": "What is the current new mortgage rate in Portugal?",
+    "a": "The average new mortgage rate in Portugal was 3.06% as of September 2026, according to ECB and Banco de Portugal data."
+   },
+   {
+    "q": "Why are buyers staying on the sidelines if rates are falling?",
+    "a": "Even though borrowing rates have edged lower, high overall home prices and lingering inflation continue to stretch household affordability."
+   },
+   {
+    "q": "What is the inflation rate in Portugal right now?",
+    "a": "Inflation in Portugal was 3.9% in October 2026, with the 12-month average sitting at 2.9% according to Eurostat figures."
+   },
+   {
+    "q": "How do US stock market rallies affect everyday savers?",
+    "a": "Big swings in global stock indices can indirectly impact the value of international tracker investments and pension funds."
+   },
+   {
+    "q": "What is the current deposit rate in Portugal?",
+    "a": "The new term deposit rate in Portugal was 1.83% as of September 2026, according to official central bank data."
+   }
+  ],
+  "generatedAt": "2026-11-04T14:55:26.936Z"
+ }
+}
