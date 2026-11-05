@@ -1,20 +1,20 @@
 {
  "auto": true,
  "date": "2026-11-05",
- "basedOn": "2026-11-05T14:58:32.822Z",
- "generatedAt": "2026-11-05T14:58:40.799Z",
- "resumo": "Today's talk is mostly about **stocks and tech**. Rising: tech, central-bank rates, inflation, deposits & savings. Falling: stocks.",
+ "basedOn": "2026-11-05T21:35:26.092Z",
+ "generatedAt": "2026-11-05T21:35:28.843Z",
+ "resumo": "Today's talk is mostly about **stocks and tech**. Rising: tech, central-bank rates, inflation. Falling: stocks.",
  "classes": [
   {
    "nome": "Ações",
    "tendencia": "a descer",
    "forca": 3,
-   "leitura": "19 stories today. Top one: Stock Market Today: Nasdaq Slides as Investors Reassess Some Trades Post-Midterms (Wall Street Journal).",
+   "leitura": "39 stories today. Top one: SpaceX and Tesla Stocks Tumble After Elon Musk-Backed Candidates Lose in Texas (New York Times).",
    "a_favor": [
-    "Stocks Surge, Oil Plummets on Democrat Victory"
+    "Stocks Rise as Democrats Flip Control of Congress"
    ],
    "riscos": [
-    "Stock Market Today: Nasdaq Slides as Investors Reassess Som…"
+    "SpaceX and Tesla Stocks Tumble After Elon Musk-Backed Candi…"
    ],
    "perfil": "Long horizon and tolerance for temporary losses."
   },
@@ -22,7 +22,7 @@
    "nome": "Tecnologia",
    "tendencia": "a subir",
    "forca": 3,
-   "leitura": "18 stories today. Top one: How ElevenLabs’ field CTO is rolling out AI agents—and why he thinks bigger efficiency gains are ahead for th… (Fortune).",
+   "leitura": "12 stories today. Top one: How ElevenLabs’ field CTO is rolling out AI agents—and why he thinks bigger efficiency gains are ahead for th… (Fortune).",
    "a_favor": [
     "How ElevenLabs’ field CTO is rolling out AI agents—and why…"
    ],
@@ -33,7 +33,7 @@
    "nome": "Juros (bancos centrais)",
    "tendencia": "a subir",
    "forca": 3,
-   "leitura": "13 stories today. Top one: ECB wage tracker suggests slightly higher wage growth in first three quarters of 2027 compared with the full… (ECB).",
+   "leitura": "12 stories today. Top one: ECB wage tracker suggests slightly higher wage growth in first three quarters of 2027 compared with the full… (ECB).",
    "a_favor": [
     "ECB wage tracker suggests slightly higher wage growth in fi…"
    ],
@@ -43,51 +43,84 @@
   {
    "nome": "Inflação",
    "tendencia": "a subir",
-   "forca": 3,
-   "leitura": "8 stories today. Top one: Swim and gym prices set to rise above inflation (BBC).",
+   "forca": 2,
+   "leitura": "5 stories today. Top one: Interest rate rise in midst of cost of living crisis will leave many incredulous (The Guardian).",
    "a_favor": [
-    "Swim and gym prices set to rise above inflation"
+    "Interest rate rise in midst of cost of living crisis will l…"
    ],
    "riscos": [],
    "perfil": "Affects everyone's purchasing power."
   },
   {
+   "nome": "Obrigações",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "5 stories today. Top one: BofA Rejigs Global Credit Trading Businesses to Boost Liquidity (Bloomberg).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Medium horizon and tolerance for price swings."
+  },
+  {
    "nome": "Economia",
    "tendencia": "estável",
    "forca": 2,
-   "leitura": "5 stories today. Top one: Here's what the Democratic election rout could mean for the U.S. economy (CNBC).",
+   "leitura": "3 stories today. Top one: How irrational are Labour’s plans for migrant workers? To find out, read the small print | Frances Ryan (The Guardian).",
    "a_favor": [],
    "riscos": [],
    "perfil": "Background for saving and investing decisions."
   },
   {
    "nome": "Matérias-primas",
-   "tendencia": "misto",
-   "forca": 2,
-   "leitura": "4 stories today. Top one: Interest rates could go &#x2018;significantly higher&#x2019; if oil prices keep climbing &#x2014; even if the… (MarketWatch).",
-   "a_favor": [
-    "Interest rates could go &#x2018;significantly higher&#x2019…"
-   ],
-   "riscos": [
-    "Oil tumbles below $100 on post-election peace hopes"
-   ],
-   "perfil": "A small slice of a portfolio, for diversification only."
-  },
-  {
-   "nome": "Depósitos e poupança",
-   "tendencia": "a subir",
-   "forca": 2,
-   "leitura": "3 stories today. Top one: Three ways the interest rate rise could affect you (BBC).",
-   "a_favor": [
-    "Three ways the interest rate rise could affect you"
-   ],
+   "tendencia": "estável",
+   "forca": 1,
+   "leitura": "2 stories today. Top one: Current price of oil as of November 4, 2026 (Fortune).",
+   "a_favor": [],
    "riscos": [],
-   "perfil": "Emergency fund and short-term goals."
+   "perfil": "A small slice of a portfolio, for diversification only."
   }
  ],
  "temas": [
   "Volatility is not the same as losing money",
   "Concentration: the risk of betting on one sector",
   "What the ECB does and why it touches your money"
- ]
+ ],
+ "brief": {
+  "one_liner": "Tech stocks took a bruising and bond markets rallied after a dramatic blue wave in US midterms sparked AI panic.",
+  "number": {
+   "value": "2.3 Trillion",
+   "caption": "Dollars wiped from the Nasdaq 100 in the massive AI selloff."
+  },
+  "stories": [
+   {
+    "i": 38,
+    "title": "Tech Titans Wobble as US Midterms Trigger AI Panic",
+    "whats_going_on": "The Nasdaq 100 wiped out $2.3 trillion as tech shares suffered their worst rout in years. A Democratic sweep in the US midterms sparked speculation that lawmakers will clamp down hard on the artificial intelligence industry.",
+    "what_it_means": "Investors rushed to re-evaluate sky-high tech valuations amid fears of looming regulatory hurdles and data centre limits. Safe-haven assets like Treasuries soared as traders rotated out of chips and high-flying growth stocks.",
+    "why_care": "For everyday investors holding broad market index funds or tech-heavy portfolios, days like this are a sharp reminder of how quickly sentiment can pivot."
+   },
+   {
+    "i": 7,
+    "title": "Bank of England Ups Rates, Eyes Inflation Pinch",
+    "whats_going_on": "The central bank raised interest rates for the first time in over three years. Officials warned that inflation is expected to climb to about 5 percent next year, sitting far above the official target.",
+    "what_it_means": "Policymakers are hitting the brakes to cool surging price pressures despite concerns over the broader cost of living. This marks a notable shift in monetary policy after a prolonged period of steady rates.",
+    "why_care": "If you are a borrower, expect upward pressure on variable loans and mortgages, while savers might eventually see slightly better returns on cash."
+   },
+   {
+    "i": 49,
+    "title": "Monzo Weighs Valuation as Fundraising Talks Continue",
+    "whats_going_on": "Digital lender Monzo is exploring a new fundraising round aiming for a £7.5bn valuation. This move follows the stall of potential private equity talks and a previous acquisition attempt.",
+    "what_it_means": "High-growth fintechs are continually recalibrating their worth in a shifting private funding environment. It highlights the ongoing appetite for scaling digital-first banking alternatives despite market headwinds.",
+    "why_care": "For everyday app users, it’s a peek behind the curtain at how modern challenger banks fund their expansion and chase long-term profitability."
+   },
+   {
+    "i": 56,
+    "title": "Bricks vs. Bytes: Housing Still Trails the S&P 500",
+    "whats_going_on": "New research reveals that the S&P 500’s annualized returns over the past 40 years outpaced housing-price returns across every US state and local market. While homes feel like solid investments, equities have quietly won the long-term marathon.",
+    "what_it_means": "Property offers tangible security and steady living utility, but liquid stock markets benefit from corporate compounding over decades. Past performance is never a guarantee of future results, but the historical gap is stark.",
+    "why_care": "It offers useful perspective for everyday savers trying to balance building a property deposit versus investing in diversified stock markets."
+   }
+  ],
+  "basedOn": "2026-11-05T21:35:26.092Z",
+  "generatedAt": "2026-11-05T21:35:40.368Z"
+ }
 }
