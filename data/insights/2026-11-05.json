@@ -1,0 +1,93 @@
+{
+ "auto": true,
+ "date": "2026-11-05",
+ "basedOn": "2026-11-05T14:58:32.822Z",
+ "generatedAt": "2026-11-05T14:58:40.799Z",
+ "resumo": "Today's talk is mostly about **stocks and tech**. Rising: tech, central-bank rates, inflation, deposits & savings. Falling: stocks.",
+ "classes": [
+  {
+   "nome": "Ações",
+   "tendencia": "a descer",
+   "forca": 3,
+   "leitura": "19 stories today. Top one: Stock Market Today: Nasdaq Slides as Investors Reassess Some Trades Post-Midterms (Wall Street Journal).",
+   "a_favor": [
+    "Stocks Surge, Oil Plummets on Democrat Victory"
+   ],
+   "riscos": [
+    "Stock Market Today: Nasdaq Slides as Investors Reassess Som…"
+   ],
+   "perfil": "Long horizon and tolerance for temporary losses."
+  },
+  {
+   "nome": "Tecnologia",
+   "tendencia": "a subir",
+   "forca": 3,
+   "leitura": "18 stories today. Top one: How ElevenLabs’ field CTO is rolling out AI agents—and why he thinks bigger efficiency gains are ahead for th… (Fortune).",
+   "a_favor": [
+    "How ElevenLabs’ field CTO is rolling out AI agents—and why…"
+   ],
+   "riscos": [],
+   "perfil": "Long horizon and tolerance for high volatility."
+  },
+  {
+   "nome": "Juros (bancos centrais)",
+   "tendencia": "a subir",
+   "forca": 3,
+   "leitura": "13 stories today. Top one: ECB wage tracker suggests slightly higher wage growth in first three quarters of 2027 compared with the full… (ECB).",
+   "a_favor": [
+    "ECB wage tracker suggests slightly higher wage growth in fi…"
+   ],
+   "riscos": [],
+   "perfil": "Affects everyone's deposits, loans and bonds."
+  },
+  {
+   "nome": "Inflação",
+   "tendencia": "a subir",
+   "forca": 3,
+   "leitura": "8 stories today. Top one: Swim and gym prices set to rise above inflation (BBC).",
+   "a_favor": [
+    "Swim and gym prices set to rise above inflation"
+   ],
+   "riscos": [],
+   "perfil": "Affects everyone's purchasing power."
+  },
+  {
+   "nome": "Economia",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "5 stories today. Top one: Here's what the Democratic election rout could mean for the U.S. economy (CNBC).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Background for saving and investing decisions."
+  },
+  {
+   "nome": "Matérias-primas",
+   "tendencia": "misto",
+   "forca": 2,
+   "leitura": "4 stories today. Top one: Interest rates could go &#x2018;significantly higher&#x2019; if oil prices keep climbing &#x2014; even if the… (MarketWatch).",
+   "a_favor": [
+    "Interest rates could go &#x2018;significantly higher&#x2019…"
+   ],
+   "riscos": [
+    "Oil tumbles below $100 on post-election peace hopes"
+   ],
+   "perfil": "A small slice of a portfolio, for diversification only."
+  },
+  {
+   "nome": "Depósitos e poupança",
+   "tendencia": "a subir",
+   "forca": 2,
+   "leitura": "3 stories today. Top one: Three ways the interest rate rise could affect you (BBC).",
+   "a_favor": [
+    "Three ways the interest rate rise could affect you"
+   ],
+   "riscos": [],
+   "perfil": "Emergency fund and short-term goals."
+  }
+ ],
+ "temas": [
+  "Volatility is not the same as losing money",
+  "Concentration: the risk of betting on one sector",
+  "What the ECB does and why it touches your money"
+ ]
+}

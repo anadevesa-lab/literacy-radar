@@ -1,0 +1,824 @@
+{
+ "date": "2026-11-05",
+ "items": [
+  {
+   "source": "Financial Times",
+   "category": "Bolsa",
+   "published": "5 Nov",
+   "title": "European stocks approach all-time high on Democratic sweep",
+   "summary": "Investors bet scale of Republican defeat in US midterms will restrain White House policymaking that has weighed on markets",
+   "url": "https://www.ft.com/content/1ca182d6-8d16-4ddb-98fb-cf933b4c3073?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Fundos",
+   "published": "5 Nov",
+   "title": "French bank Crédit Mutuel Arkéa seeks to recover funds after €100mn hack",
+   "summary": "Attack on institution’s own account used techniques that echo the hit on crypto exchange Binance last week",
+   "url": "https://www.ft.com/content/3f6ef089-f478-4d00-a080-21a88ffd721b?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "5 Nov",
+   "title": "Crude awakening: how oil has fuelled 150 years of conflict",
+   "summary": "From the earliest commercial wells to the Strait of Hormuz, two new books look at how empires, states and companies have used black gold to shape global politics",
+   "url": "https://www.ft.com/content/9c6a400c-2207-4b68-8fda-080f1cc30260"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Bolsa",
+   "published": "5 Nov",
+   "title": "Battle-tested European drone maker takes step towards €7bn IPO",
+   "summary": "WB Electronics asks banks to pitch for roles managing listing, ahead of potential Warsaw float next year",
+   "url": "https://www.ft.com/content/58106ce0-31ec-4814-b1b4-bba34778e9e7?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Inflação",
+   "published": "5 Nov",
+   "title": "Bank of England raises interest rates to 4% in bid to tame inflation",
+   "summary": "Central bank lifts borrowing costs for first time since 2023",
+   "url": "https://www.ft.com/content/290cf85b-6d95-4c79-af9b-e2a3d79072f6?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "5 Nov",
+   "title": "German government close to buying half of tank maker KNDS",
+   "summary": "The agreement likely to be finalised this week does not preclude a future flotation of Franco-German group",
+   "url": "https://www.ft.com/content/198d3d9d-b7d4-4c3a-884e-ad7b4e359dfa?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "5 Nov",
+   "title": "Democratic landslide raises big questions for US energy policy",
+   "summary": "The party prioritised tackling the high cost of energy during the midterms",
+   "url": "https://www.ft.com/content/bdf4430c-5514-433a-ba04-67b0f9cf0de9?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Bolsa",
+   "published": "5 Nov",
+   "title": "Wall Street bets Democratic sweep will empower moderates in Washington",
+   "summary": "Investors expect midterm election to restrain sway of extremes in American politics",
+   "url": "https://www.ft.com/content/18739027-d5cc-4e18-825e-d43ac7d1ef9f?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "5 Nov",
+   "title": "Oil tumbles below $100 on post-election peace hopes",
+   "summary": "US vice-president JD Vance blames Republicans’ midterm defeat on anger over Iran war",
+   "url": "https://www.ft.com/content/b526f876-810a-4e74-8b8d-4ffca04b29c7?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "5 Nov",
+   "title": "Stock Market Today: Nasdaq Slides as Investors Reassess Some Trades Post-Midterms",
+   "summary": "Rotation knocks shares of chipmakers and data-center suppliers, boosts Dow",
+   "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-11-05-2026?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Poupança",
+   "published": "5 Nov",
+   "title": "Will AI Throttle the Retirement Money Machine?",
+   "summary": "Plus, Big Tech&#x2019;s election silver lining.",
+   "url": "https://www.wsj.com/finance/investing/will-ai-throttle-the-retirement-money-machine-81d5b52d?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "5 Nov",
+   "title": "How the Data Center Backlash Could Play Into the Hands of Big Tech",
+   "summary": "Giants like Amazon and Microsoft stand to benefit from a shakeout.",
+   "url": "https://www.wsj.com/tech/ai/how-the-data-center-backlash-could-play-into-the-hands-of-big-tech-a37dfb29?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "4 Nov",
+   "title": "Stocks Surge, Oil Plummets on Democrat Victory",
+   "summary": "Plus, CVS decides to break itself up.",
+   "url": "https://www.wsj.com/finance/stocks/stocks-surge-oil-plummets-on-democrat-victory-d4f606b5?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Fundos",
+   "published": "4 Nov",
+   "title": "Index Funds Are Better When They&#x2019;re Lucky and Smart",
+   "summary": "Plus, markets digest the blue tsunami",
+   "url": "https://www.wsj.com/finance/stocks/index-funds-are-better-when-theyre-lucky-and-smart-3f64f351?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "How Beer Companies Stole Happy Hour From Liquor Brands",
+   "summary": "Diageo and Pernod Ricard have missed the cocktails-in-a-can craze, and investors are paying the price.",
+   "url": "https://www.wsj.com/business/retail/how-beer-companies-stole-happy-hour-from-liquor-brands-342e96c7?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "5 Nov",
+   "title": "Health Care Roundup: Market Talk",
+   "summary": "Find insight on Siemens Healthineers, Hikma Pharmaceuticals, Novo Nordisk and more in the latest Market Talks covering Health Care.",
+   "url": "https://www.wsj.com/business/health-care-roundup-market-talk-d66d00d9?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "5 Nov",
+   "title": "Auto & Transport Roundup: Market Talk",
+   "summary": "Find insight on Maersk, Qantas Airways, Uber and more in the latest Market Talks covering Auto and Transport.",
+   "url": "https://www.wsj.com/business/auto-transport-roundup-market-talk-b120f508?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "5 Nov",
+   "title": "Energy & Utilities Roundup: Market Talk",
+   "summary": "Find insight on Harbour Energy, Engie, Saudi Aramco and more in the latest Market Talks covering Energy and Utilities.",
+   "url": "https://www.wsj.com/business/energy-utilities-roundup-market-talk-1d720229?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "5 Nov",
+   "title": "Basic Materials Roundup: Market Talk",
+   "summary": "Find insight on Croda International, ArcelorMittal, Dyno Nobel and more in the latest Market Talks covering Basic Materials.",
+   "url": "https://www.wsj.com/business/basic-materials-roundup-market-talk-791ec72d?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "5 Nov",
+   "title": "What AI Leaders Can Learn from the Midterms",
+   "summary": "Plus, Mercedes gives its cars an AI upgrade",
+   "url": "https://www.wsj.com/cio-journal/what-ai-leaders-can-learn-from-the-midterms-291f5f01?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "5 Nov",
+   "title": "Mercedes Gives Its Cars an AI Upgrade",
+   "summary": "The automaker is working with Liquid AI, a startup that spun out of MIT, to run AI models directly in the car, rather than the cloud.",
+   "url": "https://www.wsj.com/cio-journal/mercedes-gives-its-cars-an-ai-upgrade-607daae2?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "5 Nov",
+   "title": "China Blocks $5.4 Billion SoftBank Robot Deal, Flexing Control Over AI Tech",
+   "summary": "Beijing is seeking to keep AI data and expertise developed at home from leaking abroad.",
+   "url": "https://www.wsj.com/business/deals/abb-confirms-china-blocked-softbank-deal-for-robotics-unit-cf1d44bf?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "5 Nov",
+   "title": "How the Data Center Backlash Could Play Into the Hands of Big Tech",
+   "summary": "Giants like Amazon and Microsoft stand to benefit from a shakeout.",
+   "url": "https://www.wsj.com/tech/ai/how-the-data-center-backlash-could-play-into-the-hands-of-big-tech-a37dfb29?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Banca central",
+   "published": "5 Nov",
+   "title": "Meta President Says Midterm Results Will Make Building Data Centers Harder",
+   "summary": "Speaking at the WSJ Tech conference, Dina Powell McCormick said the company is more optimistic about scaling up its existing data centers.",
+   "url": "https://www.wsj.com/tech/ai/meta-president-says-midterm-results-will-make-building-data-centers-harder-f1d27c93?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "5 Nov",
+   "title": "Can an AI Agent Be Your Next CMO? At Some Small Startups, It Already Is.",
+   "summary": "Businesses with lean head counts are using specialized agents to operate as heads of growth and design&#x2014;at least for now.",
+   "url": "https://www.wsj.com/cmo-today/can-an-ai-agent-be-your-next-cmo-at-some-small-startups-it-already-is-daca36aa?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "5 Nov",
+   "title": "The Election Day Revolt That Threatens America&#x2019;s AI Boom",
+   "summary": "Americans&#x2019; vote for anti-data center candidates and ballot measures could rein in AI&#x2019;s expansion and hobble economic growth.",
+   "url": "https://www.wsj.com/tech/ai/the-election-day-revolt-that-threatens-americas-ai-boom-03a53b52?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "5 Nov",
+   "title": "U.S. Was Unprepared for Drone Warfare, Pentagon&#x2019;s Emil Michael Says",
+   "summary": "While the U.S. is playing catch up on drones, it has a lead over China in AI, the Pentagon&#x2019;s technology chief told the WSJ Tech conference.",
+   "url": "https://www.wsj.com/politics/national-security/u-s-was-unprepared-for-drone-warfare-pentagons-emil-michael-says-b3185fc9?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "4 Nov",
+   "title": "Democratic Wave Changes AI Policy Calculus",
+   "summary": "Plus, a reckoning for tech executives and the data center build-out",
+   "url": "https://www.wsj.com/cio-journal/democratic-wave-changes-ai-policy-calculus-bec0ffe5?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "Democrats Take Congress as Trump Says Iran War Is Partly to Blame for GOP Losses",
+   "summary": "Plus, Iran turns to guerrilla tactics to try to stop the flow of oil leaving the Strait of Hormuz, and CVS Health decides to split in two.",
+   "url": "https://www.wsj.com/world/democrats-take-congress-as-trump-says-iran-war-is-partly-to-blame-for-gop-losses-b03d4784?mod=rss_Technology"
+  },
+  {
+   "source": "The Economist",
+   "category": "Mercados",
+   "published": "5 Nov",
+   "title": "Indebted tycoons haunt China’s banking system",
+   "summary": "Lenders are feeling the hangover from years of Wild East capitalism",
+   "url": "https://www.economist.com/finance-and-economics/2026/11/05/indebted-tycoons-haunt-chinas-banking-system"
+  },
+  {
+   "source": "The Economist",
+   "category": "Tecnologia",
+   "published": "5 Nov",
+   "title": "AI is turning protectionists into free traders",
+   "summary": "Barriers to commerce are rising—except in technology",
+   "url": "https://www.economist.com/finance-and-economics/2026/11/05/ai-is-turning-protectionists-into-free-traders"
+  },
+  {
+   "source": "The Economist",
+   "category": "Mercados",
+   "published": "5 Nov",
+   "title": "William Nordhaus, favourite economist of the right and the left",
+   "summary": "The Nobel-prizewinner was fascinated by what happens when markets fail",
+   "url": "https://www.economist.com/finance-and-economics/2026/11/05/william-nordhaus-favourite-economist-of-the-right-and-the-left"
+  },
+  {
+   "source": "The Economist",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "What markets make of the midterms",
+   "summary": "Democrats triumph. Investors yawn",
+   "url": "https://www.economist.com/finance-and-economics/2026/11/04/what-markets-make-of-the-midterms"
+  },
+  {
+   "source": "CNBC",
+   "category": "Economia",
+   "published": "5 Nov",
+   "title": "Here's what the Democratic election rout could mean for the U.S. economy",
+   "summary": "The biggest forces shaping the economy aren't going to change just because the party in power did.",
+   "url": "https://www.cnbc.com/2026/11/05/emocratic-midterm-economy.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Tecnologia",
+   "published": "5 Nov",
+   "title": "How the midterms could fuel the K-shaped AI trade",
+   "summary": "U.S. midterm results could slow data center development, raising the value of existing AI capacity while increasing pressure on debt-funded neoclouds.",
+   "url": "https://www.cnbc.com/2026/11/05/ai-data-centers-midterms-capacity.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "5 Nov",
+   "title": "Democratic sweep puts crypto on defensive in Washington",
+   "summary": "Democrats in Congress could impose tougher rules on crypto and investigate President Donald Trump, ushering in a tougher era for the industry.",
+   "url": "https://www.cnbc.com/2026/11/05/crypto-midterms-democrats-clarity-act.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Banca central",
+   "published": "5 Nov",
+   "title": "Barkin sees interest rate hikes ahead, but at a gradual pace",
+   "summary": "In a CNBC interview, the policymaker expressed concern over inflation and said monetary policy will need to adjust.",
+   "url": "https://www.cnbc.com/2026/11/05/barkin-sees-interest-rate-hikes-ahead-but-at-a-gradual-pace.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "5 Nov",
+   "title": "Wendy's rejects $1.4 billion takeover proposal from Nelson Peltz’s Trian",
+   "summary": "Wendy's said the $1.4 billion takeover proposal does not reflect potential gains from the burger chain's turnaround strategy.",
+   "url": "https://www.cnbc.com/2026/11/05/wendys-rejects-takeover-proposal.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Tecnologia",
+   "published": "5 Nov",
+   "title": "Chinese AI lab Moonshot turned to Europe for Nvidia Blackwell access amid U.S. China curbs, sources tell CNBC",
+   "summary": "Moonshot AI has sought leasing agreements with neoclouds for advanced chips in Europe, as U.S. export controls restrict their import to China.",
+   "url": "https://www.cnbc.com/2026/11/05/moonshot-ai-nvidia-chips-europe-china.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Tecnologia",
+   "published": "5 Nov",
+   "title": "Voters rejected AI data centers over resource concerns. Here's why measuring water usage is hard",
+   "summary": "AI data centers are facing national outcry for draining local water and power supply. The truth about how they use water to stay cool is far more complicated.",
+   "url": "https://www.cnbc.com/2026/11/05/meta-spacex-ai-data-centers-use-millions-of-gallons-of-water-a-day.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Banca central",
+   "published": "5 Nov",
+   "title": "Banks are turning cautious on lending, according to the Fed. What it means for the economy",
+   "summary": "The Fed’s October bank lending survey shows tighter standards for small firms and commercial real estate, while subprime borrowers face tougher credit.",
+   "url": "https://www.cnbc.com/2026/11/05/fed-bank-lending-standards-small-business.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "5 Nov",
+   "title": "What the election means for high-end real estate: Watch Robert Frank live",
+   "summary": "CNBC Wealth Editor Robert Frank chats live with Brown Harris Stevens CEO Bess Freedman about how the 'blue wave' may affect your life, wealth and real estate.",
+   "url": "https://www.cnbc.com/2026/11/05/cnbcs-robert-frank-talks-with-brown-harris-stevens-ceo-bess-freedman.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Bolsa",
+   "published": "5 Nov",
+   "title": "What Wall Street billionaires are saying about Democrats' midterm sweep",
+   "summary": "Billionaire political spending met criticism from ... billionaires in the wake of Tuesday's blue wave election.",
+   "url": "https://www.cnbc.com/2026/11/04/billionaires-musk-branson-democrats-midterms-ai-wall-street.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "5 Nov",
+   "title": "What the Democratic midterms sweep changes for U.S.-China relations",
+   "summary": "Analysts note the growing risks around U.S. President Donald Trump's ability to maintain a fragile trade truce.",
+   "url": "https://www.cnbc.com/2026/11/05/what-the-democrat-midterms-sweep-changes-for-us-china-tech-rivalry.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Obrigações",
+   "published": "4 Nov",
+   "title": "10-year Treasury yield slides as traders mull over Democrats' midterm victories, oil prices drop",
+   "summary": "Treasury yields were last little changed Wednesday as investors weighed big wins from Democrats in the U.S. midterm elections.",
+   "url": "https://www.cnbc.com/2026/11/03/treasury-yields-fall-as-democrats-win-big-in-us-midterm-elections.html"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Economia",
+   "published": "5 Nov",
+   "title": "This is the secret sauce for the economy &#x2014; and it&#x2019;s showing up in faster U.S. growth",
+   "summary": "Americans are unhappy about the economy, they&#x2019;re worried about artificial intelligence and they took their frustration out on Republicans in the U.S. midterm elections.",
+   "url": "https://www.marketwatch.com/story/this-is-the-secret-sauce-for-the-economy-and-its-showing-up-in-faster-u-s-growth-fb78ce21?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "5 Nov",
+   "title": "Three things that explain what&#x2019;s changing with Obamacare in 2027",
+   "summary": "Affordable Care Act premiums are increasing again, and these plans have new rules.",
+   "url": "https://www.marketwatch.com/story/three-things-that-explain-whats-changing-with-obamacare-in-2027-7c94585b?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "5 Nov",
+   "title": "My wife cried when I found out she had only $80,000 in her 401(k). I have $2.2 million. Am I wrong to be shocked?",
+   "summary": "&#x201c;When I brought up retiring last spring, she said she was ready whenever I was, and I took that to mean we were in good shape.&#x201d;",
+   "url": "https://www.marketwatch.com/story/my-wife-has-only-80-000-saved-for-retirement-i-have-2-2-million-am-i-wrong-to-be-shocked-3e27b490?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Bolsa",
+   "published": "5 Nov",
+   "title": "Qualcomm&#x2019;s stock falls as twin forces pressure sales",
+   "summary": "Qualcomm faces the loss of Apple&#x2019;s business and the negative impact of high memory costs on overall smartphone demand.",
+   "url": "https://www.marketwatch.com/story/qualcomms-stock-falls-as-twin-forces-pressure-sales-fa161159?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Poupança",
+   "published": "5 Nov",
+   "title": "&#x2018;It seems bizarre&#x2019;: We&#x2019;re in our 80s with $950,000 in traditional IRAs. Why is our adviser pushing Roth conversions?",
+   "summary": "&#x201c;Our basic living expenses are covered by $110,000 in annual pensions and Social Security.&#x201d;",
+   "url": "https://www.marketwatch.com/story/it-seems-bizarre-were-in-our-80s-with-950-000-in-traditional-iras-why-is-our-adviser-pushing-us-to-do-roth-conversions-a665f990?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "5 Nov",
+   "title": "A prolonged war in Iran is the market&#x2019;s real &#x2018;black swan,&#x2019; says this strategist",
+   "summary": "Alicia Levine, of BNY&#x2019;s wealth management business, said markets have not priced in the possibility of the war in Iran lasting for a long time.",
+   "url": "https://www.marketwatch.com/story/a-prolonged-war-in-iran-is-the-markets-real-black-swan-says-this-strategist-65d105c7?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "5 Nov",
+   "title": "&#x2018;He was heartbroken&#x2019;: My husband&#x2019;s kids abandoned him when he was dying. Was he right to leave everything to me?",
+   "summary": "&#x201c;In the end, he left them a few sentimental mementos, some collectibles and old photographs.&#x201d;",
+   "url": "https://www.marketwatch.com/story/he-was-heartbroken-my-husbands-kids-never-helped-when-he-was-gravely-ill-was-he-right-to-leave-everything-to-me-1ad0616b?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "5 Nov",
+   "title": "Robot maker Agility starts trading today &#x2014; but its steep losses are raising red flags",
+   "summary": "Agility is going public via a SPAC merger that one executive says will give it a &#x201c;first-mover advantage.&#x201d;",
+   "url": "https://www.marketwatch.com/story/robot-maker-agility-starts-trading-today-but-its-steep-losses-are-raising-red-flags-f97c2cee?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "5 Nov",
+   "title": "Interest rates could go &#x2018;significantly higher&#x2019; if oil prices keep climbing &#x2014; even if the Iran war ends soon",
+   "summary": "Strategists at Bank of America found a dramatic correlation between interest rates and oil prices in the U.S., U.K. and Germany.",
+   "url": "https://www.marketwatch.com/story/interest-rates-could-go-significantly-higher-if-oil-prices-keep-climbing-even-if-the-iran-war-ends-soon-e3493498?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "5 Nov",
+   "title": "The real test for the artificial-intelligence buildout is what happens in 2028, analysts say",
+   "summary": "JPMorgan&#x2019;s Michael Cembalest is worried about data center build-outs following midterm elections, and he&#x2019;s looking two years ahead.",
+   "url": "https://www.marketwatch.com/story/the-real-test-for-the-artificial-intelligence-build-out-is-what-happens-in-2028-analysts-say-c5978e48?mod=mw_rss_topstories"
+  },
+  {
+   "source": "BBC",
+   "category": "Poupança",
+   "published": "5 Nov",
+   "title": "Three ways the interest rate rise could affect you",
+   "summary": "Job, loans and savings are all affected by the rise in interest rates announced by the Bank of England.",
+   "url": "https://www.bbc.co.uk/news/articles/cx4g1q3vlp62o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Bolsa",
+   "published": "5 Nov",
+   "title": "Welsh aviation firm AerFin bought in £475m deal",
+   "summary": "The company, which was majority owned by a private equity firm, said it was beginning a \"new chapter\".",
+   "url": "https://www.bbc.co.uk/news/articles/cq203vjxnln7o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Habitação",
+   "published": "4 Nov",
+   "title": "What's happening to UK interest rates and what does it mean for mortgages?",
+   "summary": "The interest rate set by the Bank of England affects mortgage, loan and savings rates for millions.",
+   "url": "https://www.bbc.co.uk/news/articles/c3dky111m40o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Inflação",
+   "published": "4 Nov",
+   "title": "Swim and gym prices set to rise above inflation",
+   "summary": "The rises would impact Perdiswell, St John's Sports Centre and Nunnery Wood Sports Complex.",
+   "url": "https://www.bbc.co.uk/news/articles/c6pvgw8gz1k4o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Inflação",
+   "published": "5 Nov",
+   "title": "Today’s UK interest rate rise unlikely to be the last unless Iran war ends, Bank of England warns – business live",
+   "summary": "<p>UK hit by first interest rate rise in three years, as Bank predicts inflation will approach 5% by middle of 2027</p><p><strong>UK government bond prices are also rallying today.</strong></p><p>This",
+   "url": "https://www.theguardian.com/business/live/2026/nov/05/bank-of-england-interest-rate-decision-pound-inflation-oil-iran-stock-markets-latest-news-updates"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Inflação",
+   "published": "5 Nov",
+   "title": "BT cuts almost 8,000 jobs amid sweeping cost-saving programme",
+   "summary": "<p>Telecoms group reports £1.1bn pre-tax profit in six months to end of September and share price touches five-year high</p><ul><li><p><a href=\"https://www.theguardian.com/business/live/2026/nov/05/ba",
+   "url": "https://www.theguardian.com/business/2026/nov/05/bt-cuts-jobs-cost-saving-programme-profit-share-price"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Economia",
+   "published": "5 Nov",
+   "title": "Poundland’s US owner says retailer remains ‘vulnerable’, after talks with ministers",
+   "summary": "<p>Gordon Brothers still in ‘active discussions’ with interested parties and seeking to ‘protect as many jobs as possible’</p><p>The US owner of Poundland has said the high street chain remains “chall",
+   "url": "https://www.theguardian.com/business/2026/nov/05/poundland-gordon-brothers-us-vulnerable-talks-ministers"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Mercados",
+   "published": "5 Nov",
+   "title": "‘I never understood wind’: midterms spark hope for renewables after Trump’s hostility",
+   "summary": "<p>Future brightens for US developers in particular after election when voters rejected Trump’s war on clean energy</p><p>After years as collateral damage in Donald Trump’s war on climate action, the ",
+   "url": "https://www.theguardian.com/business/2026/nov/05/democrats-midterms-triumph-renewable-energy-industry-donald-trump"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Inflação",
+   "published": "5 Nov",
+   "title": "Interest rate rise in midst of cost of living crisis will leave many incredulous",
+   "summary": "<p>Bank’s decision goes contrary to analysis from Office for Budget Responsibility that predicts lower inflation and little impetus for wage growth</p><ul><li><p><a href=\"https://www.theguardian.com/b",
+   "url": "https://www.theguardian.com/business/2026/nov/05/interest-rate-rise-in-midst-of-cost-of-living-crisis-will-leave-many-incredulous"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Inflação",
+   "published": "5 Nov",
+   "title": "What does the UK interest rate rise mean for homeowners and savers?",
+   "summary": "<p>First rate rise for more than three years leaves millions facing rise in mortgage payments</p><ul><li><p><a href=\"https://www.theguardian.com/business/2026/nov/05/bank-of-england-raises-interest-ra",
+   "url": "https://www.theguardian.com/business/2026/nov/05/what-does-interest-rate-rise-mean-for-homeowners-and-savers-mortgages"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Mercados",
+   "published": "5 Nov",
+   "title": "Elon Musk’s nearly half a billion dollars in midterms spending was a flop",
+   "summary": "<p>The tech billionaire set spending record as he poured $446m into campaigns for failed Republican candidates</p><p><a href=\"https://www.theguardian.com/technology/elon-musk\">Elon Musk</a> set a <a h",
+   "url": "https://www.theguardian.com/technology/2026/nov/04/elon-musk-midterm-spending-analysis"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Tecnologia",
+   "published": "5 Nov",
+   "title": "Tech barons cozied up to Trump. What will they do in newly blue America?",
+   "summary": "<p>Democrats’ success was helped by popular anger over tech, AI and the super rich – life for billionaires could become much more difficult</p><p>The photo of Silicon Valley centi-billionaires at Dona",
+   "url": "https://www.theguardian.com/technology/2026/nov/05/tech-barons-america-musk-bezos-zuckerberg"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Inflação",
+   "published": "4 Nov",
+   "title": "After the US midterms, what will a lame duck Trump mean for the global economy?",
+   "summary": "<p>Republicans’ crushing setback will play out in stock markets, inflation, interest rates and economic growth</p><p>Donald Trump’s <a href=\"https://www.theguardian.com/us-news/2026/nov/04/democrats-h",
+   "url": "https://www.theguardian.com/us-news/2026/nov/04/explainer-midterms-trump-us-global-economy-markets"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Economia",
+   "published": "5 Nov",
+   "title": "How irrational are Labour’s plans for migrant workers? To find out, read the small print | Frances Ryan",
+   "summary": "<p>Despite the partial U-turn on care worker visas, the staff who keep the system afloat still face a hostile environment</p><p>If you want to see the senselessness of Britain’s immigration debate pla",
+   "url": "https://www.theguardian.com/commentisfree/2026/nov/05/care-workers-visa-migration-labour-shabana-mahmood"
+  },
+  {
+   "source": "New York Times",
+   "category": "Inflação",
+   "published": "5 Nov",
+   "title": "Bank of England Raises Rates for First Time in Three Years",
+   "summary": "The central bank increased interest rates for the first time in more than three years and warned that inflation would climb to about 5 percent next year, far above its target.",
+   "url": "https://www.nytimes.com/2026/11/05/business/bank-of-england-interest-rates-inflation.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Bolsa",
+   "published": "5 Nov",
+   "title": "High Gas Prices Boost Sales of Hybrids for Toyota, Sending Its Stock Soaring",
+   "summary": "Toyota is cashing in on a U.S. hybrid boom as electric-vehicle demand slows, but shifting political tides in Washington could jeopardize its edge.",
+   "url": "https://www.nytimes.com/2026/11/05/business/toyota-profits-hybrids.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Banca central",
+   "published": "4 Nov",
+   "title": "White House Delays Hearing on Fed Governor",
+   "summary": "The administration pushed back a hearing for Lisa D. Cook, the Federal Reserve governor that President Trump has tried to fire, after her lawyers raised scheduling issues.",
+   "url": "https://www.nytimes.com/2026/11/04/business/trump-lisa-cook-fed-governor.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Bolsa",
+   "published": "4 Nov",
+   "title": "Trump Media’s Shares Fall to Record Low After Midterms",
+   "summary": "Trump Media & Technology Group’s stock plunged 24 percent a day after Democrats made huge gains in the midterm elections.",
+   "url": "https://www.nytimes.com/2026/11/04/business/trump-media-truth-social-midterm-elections.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Bolsa",
+   "published": "4 Nov",
+   "title": "SpaceX and Tesla Stocks Tumble After Elon Musk-Backed Candidates Lose in Texas",
+   "summary": "The world’s richest person has antagonized Democrats, some of whom have signaled their intent to investigate him when they take control of Congress.",
+   "url": "https://www.nytimes.com/2026/11/04/business/musk-elections-spacex-tesla-stocks.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Bolsa",
+   "published": "4 Nov",
+   "title": "Stocks Rise as Democrats Flip Control of Congress",
+   "summary": "Markets traded higher as investors foresaw gridlock in Washington, typically a bullish signal.",
+   "url": "https://www.nytimes.com/2026/11/04/business/midterm-elections-stock-market.html"
+  },
+  {
+   "source": "Fortune",
+   "category": "Mercados",
+   "published": "4 Nov",
+   "title": "Current price of oil as of November 4, 2026",
+   "summary": "When oil prices change, it affects your energy costs—and even the price of everyday items. Here’s why.",
+   "url": "https://fortune.com/article/price-of-oil-11-04-2026/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Tecnologia",
+   "published": "4 Nov",
+   "title": "How ElevenLabs’ field CTO is rolling out AI agents—and why he thinks bigger efficiency gains are ahead for the voice AI startup",
+   "summary": "ElevenLabs field CTO Alex Holt has deployed agents across sales, recruiting, and customer service. He's also beginning to embrace multi-agent systems to improve workflows across the $22 billion AI sta",
+   "url": "https://fortune.com/2026/11/04/waters-new-ai-tool-targets-one-of-the-pharmaceutical-industrys-most-tedious-tasks-2/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Tecnologia",
+   "published": "5 Nov",
+   "title": "As Big Tech bets on nuclear power, startup Uranium Digital raises $16.5 million to modernize uranium trading",
+   "summary": "Blockchain Capital led the Series A for the startup, which uses blockchain to track ownership of physical uranium.",
+   "url": "https://fortune.com/2026/11/05/big-tech-nuclear-power-startup-uranium-digital-uranium-trading/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Tecnologia",
+   "published": "5 Nov",
+   "title": "IBM CEO: rationing AI is a slow way to lose",
+   "summary": "Running AI now costs more than training it.",
+   "url": "https://fortune.com/2026/11/05/ibm-arvind-krishna-ai-inference-cost-curve-rationing-tokens/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Economia",
+   "published": "5 Nov",
+   "title": "Pfizer promotes its first female CFO as women’s share of top finance jobs slips",
+   "summary": "Cecile Guegan’s promotion comes as women’s share of global CFO appointments fell to 20% in the first three quarters of 2026.",
+   "url": "https://fortune.com/2026/11/05/pfizer-promotes-first-female-cfo-as-womens-share-top-finance-jobs-slips/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Tecnologia",
+   "published": "5 Nov",
+   "title": "Americans hate data centers. Tech needs them",
+   "summary": "Though the midterms have been dubbed “the AI election” and a resounding repudiation of tech, it’s hard to tell what all this practically means.",
+   "url": "https://fortune.com/2026/11/05/americans-hate-data-centers-tech-needs-them/"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "5 Nov",
+   "title": "Nasdaq extends opening slide to over 2% amid post-midterms rotation out of chips",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/us-stock-index-futures-steady-after-midterms-rally-5001919"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "5 Nov",
+   "title": "Nasdaq falls at open after midterms-fueled surge as chip, data center stocks fall",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/nasdaq-falls-at-open-after-midtermsfueled-surge-as-chip-data-center-stocks-fall-5004890"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "5 Nov",
+   "title": "Qualcomm stock slumps over 10% on margin headwinds, rising costs",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/qualcomm-falls-3-as-handset-revenue-misses-estimates-costs-rise-5001230"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "5 Nov",
+   "title": "Is IREN stock setup strong enough to trigger a post earnings rally?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/is-iren-stock-setup-strong-enough-to-trigger-a-post-earnings-rally-93CH-5004843"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "5 Nov",
+   "title": "Harbinger Motors raises $240M to expand beyond EV trucks - Bloomberg",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/harbinger-motors-raises-240m-to-expand-beyond-ev-trucks--bloomberg-93CH-5004842"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "5 Nov",
+   "title": "Deutsche Bank upgrades Frontier, JetBlue to Buy on improving backdrop",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/deutsche-bank-upgrades-frontier-jetblue-to-buy-on-improving-backdrop-5004812"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "5 Nov",
+   "title": "Activist investor Arkhouse pushes People for share buyback, HQ sale",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/activist-investor-arkhouse-pushes-people-for-share-buyback-hq-sale-5004760"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "5 Nov",
+   "title": "AI analysis: This cloud security stock is oversold ahead of earnings",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/ai-analysis-this-cloud-security-stock-is-oversold-ahead-of-earnings-93CH-5004710"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "5 Nov",
+   "title": "Why is Cisco Systems stock falling today?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/why-is-cisco-systems-stock-falling-today-93CH-5004697"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "5 Nov",
+   "title": "Why is Figma stock sliding today?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/why-is-figma-stock-sliding-today-93CH-5004696"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "5 Nov",
+   "title": "Isabel Schnabel: Navigating stormy waters: reflections on monetary policy",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261105_1~5e97d9d5a0.en.html"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "5 Nov",
+   "title": "Piero Cipollone: Shaping the future of money",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261105~6495a0df6f.en.html"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "4 Nov",
+   "title": "ECB wage tracker suggests slightly higher wage growth in first three quarters of 2027 compared with the full year of 2026",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261104~caf181d7ac.en.html"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "2 Nov",
+   "title": "Boris Vujčić: Integrated, open and resilient: Europe’s strengths in a fragmenting world",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp.261102~70003226e9.en.html"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "30 Oct",
+   "title": "Philip R. Lane: AI adoption in Europe",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261030~08d9d540f0.en.html"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "30 Oct",
+   "title": "Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/govcdec/otherdec/2026/html/ecb.gc261030~e40f864093.en.html"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "30 Oct",
+   "title": "Results of the ECB Survey of Professional Forecasters for the fourth quarter of 2026",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261030~e92c3c838c.en.html"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "29 Oct",
+   "title": "Piero Cipollone: Next-day securities settlement, tokenisation and the transformation of Europe’s financial infrastructure",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261029~e9b57c3495.en.html"
+  },
+  {
+   "source": "Fed",
+   "category": "Banca central",
+   "published": "29 Oct",
+   "title": "Federal Reserve Board announces approval of application by The Bank of Nova Scotia",
+   "summary": "Federal Reserve Board announces approval of application by The Bank of Nova Scotia",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/orders20261029a.htm"
+  }
+ ],
+ "sources": [
+  "Bloomberg",
+  "Financial Times",
+  "Wall Street Journal",
+  "The Economist",
+  "CNBC",
+  "MarketWatch",
+  "BBC",
+  "The Guardian",
+  "New York Times",
+  "Fortune",
+  "Investing.com",
+  "ECB",
+  "Fed"
+ ],
+ "editions": [
+  "afternoon"
+ ],
+ "collectedAt": "2026-11-05T14:58:32.822Z"
+}
