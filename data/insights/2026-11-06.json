@@ -1,0 +1,144 @@
+{
+ "auto": true,
+ "date": "2026-11-06",
+ "basedOn": "2026-11-06T14:38:36.952Z",
+ "generatedAt": "2026-11-06T14:38:39.438Z",
+ "resumo": "Global markets face turbulence as **tech stocks tumble** amid political shifts and AI scrutiny, while strong jobs data influences rate expectations.",
+ "classes": [
+  {
+   "nome": "Equities",
+   "tendencia": "falling",
+   "forca": 1,
+   "leitura": "Global stocks plunged as a tech rout and political shifts hit major indexes hard.",
+   "a_favor": [
+    "Strong October hiring data beating forecasts",
+    "Historical precedents of recoveries after corrections"
+   ],
+   "riscos": [
+    "Potential tougher scrutiny on data centres",
+    "Hedge funds unwinding positions rapidly"
+   ],
+   "perfil": "Suits investors with high risk tolerance and long-term horizons."
+  },
+  {
+   "nome": "Government Bonds",
+   "tendencia": "rising",
+   "forca": 1,
+   "leitura": "Treasury bonds offer compelling yields as market participants seek safety from equity volatility.",
+   "a_favor": [
+    "Compelling yields during stock market selloffs",
+    "Safe-haven appeal amid tech sector turmoil"
+   ],
+   "riscos": [
+    "Uncertain path for future interest rates",
+    "Shifting fiscal policies after elections"
+   ],
+   "perfil": "Suits cautious investors seeking regular income and capital preservation."
+  },
+  {
+   "nome": "Commodities",
+   "tendencia": "mixed",
+   "forca": 2,
+   "leitura": "Swinging oil prices and olive oil supply interventions highlight contrasting sectoral pressures.",
+   "a_favor": [
+    "Investments in early stages of new cycles",
+    "Supply controls supporting specific agricultural prices"
+   ],
+   "riscos": [
+    "Swinging prices creating short-term volatility",
+    "Geopolitical tensions affecting supply chains"
+   ],
+   "perfil": "Suits active investors looking for inflation hedges and tactical plays."
+  },
+  {
+   "nome": "Private Credit",
+   "tendencia": "falling",
+   "forca": 1,
+   "leitura": "The private credit sector faces headwinds following fraud cases and loan selloff attempts.",
+   "a_favor": [
+    "High yields historically offered to private lenders",
+    "Growing institutional demand for alternative financing"
+   ],
+   "riscos": [
+    "High-profile fraud cases shaking confidence",
+    "Lenders seeking buyers for data center loans"
+   ],
+   "perfil": "Suits sophisticated institutional investors comfortable with illiquidity."
+  }
+ ],
+ "temas": [
+  "Stock market corrections and historical rebounds",
+  "Interest rate expectations and employment data",
+  "Regulatory scrutiny on artificial intelligence and data centres",
+  "The role of safe-haven assets during market volatility"
+ ],
+ "ai": true,
+ "pack": {
+  "carousel": {
+   "title": "Why your **savings** might be shrinking",
+   "slides": [
+    {
+     "kind": "hook",
+     "h": "Are you losing money sitting in **cash**?",
+     "big": "",
+     "t": ""
+    },
+    {
+     "kind": "stat",
+     "h": "Prices keep rising across the **euro** zone",
+     "big": "4%",
+     "t": "Annual inflation reached four percent in October."
+    },
+    {
+     "kind": "point",
+     "h": "Your **savings** earn less than inflation",
+     "big": "",
+     "t": "New term deposit rates in Portugal sit at just one point eight three percent."
+    },
+    {
+     "kind": "myth",
+     "h": "\"My bank account is totally safe from **inflation**\"",
+     "big": "",
+     "t": "Cash loses purchasing power every single year when prices outpace interest rates."
+    },
+    {
+     "kind": "point",
+     "h": "Protect your hard earned **money** today",
+     "big": "",
+     "t": "Look for accounts that beat inflation or rethink your long term strategy."
+    },
+    {
+     "kind": "cta",
+     "h": "Save this and follow **PaperMint**",
+     "big": "",
+     "t": "Get clear financial news without the boring jargon."
+    }
+   ]
+  },
+  "linkedin": "Stock markets have had a turbulent week with tech shares swinging wildly and investors reassessing corporate profits. When the tech heavy Nasdaq takes a brutal hit, it is easy for everyday savers to feel unsettled by the noise.\n\nCloser to home, the economic reality is clear. Euro area inflation stands at 4%, while new term deposit rates in Portugal average 1.83%. Simple math tells us that keeping all your cash in a standard savings account means your money is slowly losing purchasing power.\n\nMarkets always move in cycles. The best defense against volatility is understanding the numbers and keeping a long term perspective. Don't let headline panic derail your personal financial goals.\n\n#PersonalFinance #Investing #PaperMint",
+  "reel": {
+   "hook": "Is your bank account actually losing you money right now?",
+   "script": [
+    "Let us look at the latest economic numbers.",
+    "Euro area inflation is sitting at four percent.",
+    "Meanwhile, new term deposits in Portugal offer just one point eight percent.",
+    "That means your cash is quietly losing value every day.",
+    "Hit follow for more clear money news."
+   ],
+   "caption": "Your cash might be losing value against inflation. Here is what the latest euro area numbers mean for everyday savers."
+  },
+  "faq": [
+   "What is the current inflation rate in the euro area?",
+   "Annual inflation in the euro area stood at 4% in October according to Eurostat data.",
+   "How much do banks in Portugal pay on new term deposits?",
+   "New term deposit rates averaged 1.83% in September.",
+   "What is the current 12 month Euribor rate?",
+   "The 12 month Euribor averaged 3.239% in October.",
+   "Why do stock markets experience sharp tech selloffs?",
+   "Markets react to changing profit expectations, investor sentiment shifts, and valuation concerns, which causes indexes to fluctuate.",
+   "Does past market performance predict future returns?",
+   "No, past performance is never a guide to future results."
+  ],
+  "generatedAt": "2026-11-06T14:40:34.882Z"
+ }
+}
