@@ -1,67 +1,67 @@
 {
- "titulo": "Tech Rout and US Midterm Shift Roil Global Markets",
- "resumo": "November brought heightened volatility to financial markets as political realignments collided with reassessments of artificial intelligence expenditure. The **US midterm elections delivered a Democratic sweep** of Congress, triggering swift sector rotations and sudden policy uncertainty over data centre developments. Technology shares endured severe turbulence, dragging the Nasdaq Composite down 4.4% month to date to 24315. In response, **the VIX volatility index jumped 45.1%** to 28.18 as investors sought safe havens in government paper. Meanwhile, Brent crude retreated 10.9% to $107.03 a barrel, offering temporary energy cost respite against broader inflationary pressures.",
+ "titulo": "Midterm Blue Wave and AI Shock Trigger Global Market Volatility",
+ "resumo": "November 2026 brought a dramatic convergence of political shocks and tech sector turbulence, led by a Democratic sweep in the US midterms. **Markets reeled from AI regulatory fears** and a historic tech sell-off, wiping trillions from market values. Meanwhile, oil tumbled on hopes of US-Iran peace talks, and central banks kept investors on edge. **Savers faced rising borrowing costs** as interest rate pressures persisted across major economies.",
  "sumup": {
-  "frase": "Political upheaval and technology doubts ignited **surging volatility** across asset classes.",
+  "frase": "Political shifts and tech sector shocks ignited a wave of **market volatility** across global exchanges.",
   "palavra": "Nervous",
-  "porque": "Tech stock turbulence and political shifts pushed the VIX volatility gauge sharply higher."
+  "porque": "Investors grappled with unexpected US midterm election outcomes and mounting regulatory scrutiny over artificial intelligence."
  },
  "drivers": [
   {
-   "factor": "US midterms deliver Democratic sweep",
+   "factor": "US Midterm Democratic Sweep",
    "efeito": "mixed",
-   "texto": "Democrats flipped control of both the House and Senate in the US midterms. Equities staged an initial broad relief rally before policy anxieties regarding technology regulations and data centre moratoriums sparked sharp declines. Following the shift, the S&P 500 fell 3% month to date to 7353.73."
+   "texto": "Democrats flipped control of Congress in the US midterms, triggering a brief relief rally followed by deep anxieties. The shift introduced fears of fiscal gridlock, increased regulatory pressure on tech and healthcare, and a major sell-off in AI-exposed assets."
   },
   {
-   "factor": "Technology sector suffers heavy rout",
+   "factor": "Historic AI Stock Rout",
    "efeito": "negative",
-   "texto": "Scrutiny over substantial capital expenditure and computing costs triggered a severe tech sell-off, with the Nasdaq Composite dropping 4.4% month to date to 24315. Investors grew wary of commitments such as Anthropic reporting $895.4 billion in purchase commitments alongside $17 billion in Q3 revenue. Volatility jumped markedly, with the Cboe VIX surging 45.1% to 28.18."
+   "texto": "Tech stocks suffered a historic $2.3 trillion wipeout as investors panicked over potential regulatory crackdowns and data center moratoriums. The Nasdaq Composite dropped 3.4% for the month, while the VIX equity volatility index surged 45.1% to 28.18."
   },
   {
-   "factor": "Brent crude declines on diplomacy",
+   "factor": "Oil Prices Tumble on Mideast Hopes",
    "efeito": "positive",
-   "texto": "Brent crude slid 10.9% month to date to $107.03 a barrel as optimism grew over possible US-Iran peace talks. The drop provided brief relief to transport and industrial firms facing high fuel costs. Despite this monthly decline, oil prices remained up 74.5% year to date."
+   "texto": "Brent crude slumped 10.9% over the month to settle at 107.03 dollars a barrel by early November. The sharp decline was driven by growing optimism regarding potential de-escalation and peace talks between the US and Iran."
   },
   {
-   "factor": "Bank of England raises rates",
+   "factor": "Central Bank and Interest Rate Pressures",
    "efeito": "negative",
-   "texto": "The Bank of England raised its key interest rate to 4%, representing its first increase in over three years. The tightening moved borrowing costs higher for UK consumers and businesses amid ongoing cost-of-living challenges. In Europe, the European Central Bank held its deposit rate steady at 2.5%."
+   "texto": "Persistent cost-of-living pressures and robust employment data kept central banks on alert, with the Bank of England raising interest rates to 4%. US Treasury yields eased slightly, with the 10-year yield falling 10 basis points to 4.84."
   },
   {
-   "factor": "Resilient US jobs data surfaces",
-   "efeito": "mixed",
-   "texto": "The US economy added 165,000 jobs in October, surpassing market expectations and demonstrating ongoing labour resilience. The sturdy labour report briefly halted a haven rally in sovereign debt. Benchmark US 10-year Treasury yields stood at 4.9%, down 4 basis points this month."
+   "factor": "Nvidia Leadership Scandal",
+   "efeito": "negative",
+   "texto": "Nvidia shares plunged after reports emerged regarding an investigation into CEO Jensen Huang over an alleged relationship with a suspected Chinese spy. The turmoil added significant pressure to an already battered semiconductor sector."
   }
  ],
  "themes": [
   {
-   "titulo": "AI expenditure sustainability under scrutiny",
-   "texto": "Markets began sharply re-evaluating the economics of artificial intelligence infrastructure and chip demand. Mega deals such as Marvell's acquisition of Lumentum occurred alongside mounting operational costs and extended computing bills across developers. Investor unease wiped trillions in market value from tech shares, sending the Nasdaq Composite down 4.4% to 24315. Consequently, corporate budgets and power grid limits are replacing unbridled optimism as primary market drivers."
+   "titulo": "The Artificial Intelligence Reckoning",
+   "texto": "The unstoppable momentum behind artificial intelligence hit a formidable wall in November as political backlash and high infrastructure costs converged. With data centers facing local moratoria and congressional scrutiny following the US midterms, tech valuations experienced a severe reality check. Investors are increasingly questioning whether immense capital expenditures on AI will yield near-term commercial profits."
   },
   {
-   "titulo": "Political gridlock and regulatory rotation",
-   "texto": "The Democratic sweep of both houses of Congress altered sector outlooks overnight. Calls for national data centre moratoriums and probes into energy and corporate relationships quickly followed the election. While renewable energy and hospital stocks saw initial buying interest, broader equities suffered as policy uncertainty mounted. The S&P 500 fell 3% to 7353.73, while corporate credit spreads widened slightly by 4 basis points to 3.48."
+   "titulo": "Geopolitics and Commodity Relief",
+   "texto": "Energy markets found some respite as Brent crude dropped significantly to 107.03 dollars a barrel, easing pressure on inflation-weary consumers. Hopes of diplomatic progress in the Middle East helped drive the sell-off in oil prices, offering a counterweight to ongoing supply chain and trade frictions. However, volatility remains high as geopolitical flashpoints continue to threaten global supply routes."
   },
   {
-   "titulo": "Persistent global inflation and divergent policies",
-   "texto": "Euro area inflation stood at 4% in October, while Portugal recorded a 3.9% annual rate and a 12-month average of 2.9%. Central bank paths diverged as the Bank of England raised rates to 4% whilst the ECB kept its deposit rate at 2.5%. With Portuguese 10-year sovereign bond yields averaging 3.85% and the 12-month Euribor at 3.239%, persistent inflation continues to prevent aggressive monetary easing across Europe."
+   "titulo": "Shifting Political Landscapes and Fiscal Risks",
+   "texto": "The unexpected Democratic sweep in the US midterm elections completely altered Washington's legislative outlook, bringing renewable energy stocks into focus while unsettling major tech and energy firms. Markets quickly priced in the risks of renewed political gridlock and prospective investigations into corporate spending. Consequently, safe-haven assets experienced renewed demand as traders hedged against legislative uncertainty."
   }
  ],
  "questoes": [
   {
-   "q": "Can tech firms justify immense capital spending on AI infrastructure?",
-   "porque": "Computing bills and power infrastructure are eroding margins across major software and semiconductor enterprises. A pullback in tech investment could drag down broader global equity benchmarks.",
-   "sinais": "Upcoming quarterly earnings reports and updated cloud infrastructure capital expenditure budgets."
+   "q": "Will proposed AI regulations and data center moratoriums permanently stall tech sector earnings growth?",
+   "porque": "Regulatory headwinds threaten the core profit engines of major technology companies driving recent market indexes.",
+   "sinais": "Upcoming legislative proposals in Congress and local zoning decisions regarding data centers will clarify the regulatory path."
   },
   {
-   "q": "Will legislative gridlock impede US fiscal and regulatory agendas?",
-   "porque": "A divided government facing a lame-duck administration creates friction over debt ceilings and regulatory reviews. This can elevate sovereign risk premiums and bond market volatility.",
-   "sinais": "Congressional debates regarding proposed national data centre moratoriums and the US debt limit."
+   "q": "Can oil prices sustain their downward trend amid ongoing Middle Eastern geopolitical tensions?",
+   "porque": "Sustained lower energy costs are vital for subduing persistent global inflation pressures.",
+   "sinais": "Official updates on US-Iran diplomatic talks and weekly energy inventory reports will dictate oil price direction."
   },
   {
-   "q": "Will European inflation cool sufficiently to allow ECB rate cuts?",
-   "porque": "Euro area inflation of 4% remains elevated, keeping borrowing costs high for businesses and homeowners. In Portugal, new mortgage rates stand at 3.06% against term deposit rates of 1.83%.",
-   "sinais": "Preliminary flash HICP inflation figures for November across the euro area."
+   "q": "How will central banks respond to robust employment figures alongside slowing technology valuations?",
+   "porque": "Policymakers must balance sticky inflationary labor markets against abrupt asset price corrections in equities.",
+   "sinais": "Upcoming employment reports and central bank commentary on inflation targets will provide decisive guidance."
   }
  ],
  "mercados": [
@@ -81,10 +81,10 @@
    "name": "Nasdaq Composite",
    "source": "Nasdaq",
    "kind": "price",
-   "value": 24315,
-   "asOf": "2026-11-05",
-   "chg": -4.4,
-   "ytd": 4.6,
+   "value": 24579.42,
+   "asOf": "2026-11-06",
+   "chg": -3.4,
+   "ytd": 5.8,
    "unit": "%"
   },
   {
@@ -103,10 +103,10 @@
    "name": "US Treasury 2-year yield",
    "source": "US Treasury / Federal Reserve",
    "kind": "yield",
-   "value": 4.58,
-   "asOf": "2026-11-04",
-   "chg": 2,
-   "ytd": 111,
+   "value": 4.46,
+   "asOf": "2026-11-05",
+   "chg": -10,
+   "ytd": 99,
    "unit": "bp"
   },
   {
@@ -114,10 +114,10 @@
    "name": "US Treasury 10-year yield",
    "source": "US Treasury / Federal Reserve",
    "kind": "yield",
-   "value": 4.9,
-   "asOf": "2026-11-04",
-   "chg": -4,
-   "ytd": 72,
+   "value": 4.84,
+   "asOf": "2026-11-05",
+   "chg": -10,
+   "ytd": 66,
    "unit": "bp"
   },
   {
@@ -125,10 +125,10 @@
    "name": "Euro area 2-year yield (AAA)",
    "source": "European Central Bank",
    "kind": "yield",
-   "value": 2.9584,
-   "asOf": "2026-11-05",
-   "chg": -5,
-   "ytd": 85,
+   "value": 2.9305,
+   "asOf": "2026-11-06",
+   "chg": -7,
+   "ytd": 82,
    "unit": "bp"
   },
   {
@@ -136,10 +136,10 @@
    "name": "Euro area 10-year yield (AAA)",
    "source": "European Central Bank",
    "kind": "yield",
-   "value": 3.2938,
-   "asOf": "2026-11-05",
-   "chg": -7,
-   "ytd": 35,
+   "value": 3.2856,
+   "asOf": "2026-11-06",
+   "chg": -8,
+   "ytd": 34,
    "unit": "bp"
   },
   {
@@ -147,10 +147,10 @@
    "name": "EUR/USD",
    "source": "European Central Bank",
    "kind": "fx",
-   "value": 1.1165,
-   "asOf": "2026-11-06",
-   "chg": -0.1,
-   "ytd": -5,
+   "value": 1.1193,
+   "asOf": "2026-11-09",
+   "chg": 0.2,
+   "ytd": -4.7,
    "unit": "%"
   },
   {
@@ -169,95 +169,90 @@
    "name": "US high-yield credit spread",
    "source": "ICE BofA",
    "kind": "yield",
-   "value": 3.48,
-   "asOf": "2026-11-05",
-   "chg": 4,
-   "ytd": 67,
+   "value": 3.42,
+   "asOf": "2026-11-06",
+   "chg": -2,
+   "ytd": 61,
    "unit": "bp"
   }
  ],
  "momentos": [
   {
    "data": "2 Nov",
-   "facto": "Cryptocurrency exchange Binance resumed withdrawals after suffering a record $6.3 billion cyber hack."
+   "facto": "Marvell announced an 80 billion dollar agreement to acquire Lumentum, sparking massive tech deal activity."
   },
   {
    "data": "3 Nov",
-   "facto": "Brent crude fell 10.9% month to date to $107.03 a barrel on hopes of US-Iran diplomatic talks."
+   "facto": "Binance resumed withdrawal services following the exposure of a record 6.3 billion dollar cryptocurrency security heist."
   },
   {
    "data": "4 Nov",
-   "facto": "Democrats swept the US midterm elections, winning majorities in both the Senate and the House of Representatives."
+   "facto": "US stock markets rallied as Democrats swept to power in Congress, securing control of both the Senate and the House."
   },
   {
    "data": "5 Nov",
-   "facto": "The Bank of England raised its benchmark interest rate to 4%, marking its first hike in three years."
-  },
-  {
-   "data": "5 Nov",
-   "facto": "The Cboe VIX volatility index jumped 45.1% to 28.18 as global tech stocks plunged over AI spending fears."
+   "facto": "The Nasdaq suffered its worst daily drop since 2025 as a 2.3 trillion dollar tech sell-off gripped global markets."
   },
   {
    "data": "6 Nov",
-   "facto": "US non-farm payrolls showed the economy added 165,000 jobs in October, beating analyst expectations."
+   "facto": "The Bank of England raised interest rates to 4% amidst ongoing cost-of-living and inflation pressures."
+  },
+  {
+   "data": "9 Nov",
+   "facto": "Nvidia shares tumbled after the company initiated a probe into CEO Jensen Huang following espionage allegations."
   }
  ],
  "numeros": [
   {
-   "valor": "28.18",
-   "contexto": "The level of the Cboe VIX index on 5 November, up 45.1% this month and 88.5% year to date."
+   "valor": "7353.73",
+   "contexto": "The level of the S&P 500 index on November 5, reflecting a 3% decline over the month."
   },
   {
-   "valor": "4%",
-   "contexto": "The annual inflation rate for the euro area recorded in October 2026."
+   "valor": "28.18",
+   "contexto": "The Cboe VIX equity volatility index reading on November 5, up 45.1% for the month."
   },
   {
    "valor": "107.03",
-   "contexto": "The price of Brent crude in US dollars per barrel on 3 November, down 10.9% month to date."
+   "contexto": "The price of Brent crude oil per barrel on November 3, down 10.9% on the month."
   },
   {
-   "valor": "3.239%",
-   "contexto": "The average 12-month Euribor rate during October 2026, anchoring European loan pricing."
+   "valor": "4.84",
+   "contexto": "The US Treasury 10-year yield on November 5, which decreased by 10 basis points during the month."
   },
   {
-   "valor": "165,000",
-   "contexto": "The number of jobs added by the US economy in October, outstripping forecasters' estimates."
+   "valor": "4%",
+   "contexto": "The Euro area inflation rate for October 2026, highlighting ongoing cost pressures."
   }
  ],
  "classes": [
   {
-   "nome": "Equities",
+   "nome": "US Equities",
    "balanco": "falling",
-   "leitura": "Global equity markets fell sharply as the S&P 500 declined 3% and the Nasdaq sank 4.4% amid a heavy tech and data centre sell-off."
+   "leitura": "Dragged down by a severe tech and AI stock sell-off following the midterm elections."
   },
   {
-   "nome": "Government bonds",
+   "nome": "Government Bonds",
    "balanco": "rising",
-   "leitura": "Sovereign debt saw safe-haven bids, pushing US 10-year yields down 4 basis points to 4.9% and euro area 10-year AAA yields down 7 basis points to 3.2938%."
+   "leitura": "Benefited from safe-haven flows as investors sought shelter from equity market volatility."
   },
   {
    "nome": "Commodities",
    "balanco": "falling",
-   "leitura": "Brent crude slid 10.9% to $107.03 a barrel on US-Iran dialogue prospects, whilst industrial copper prices softened."
+   "leitura": "Weighed down significantly by tumbling oil prices on hopes of Middle Eastern de-escalation."
   },
   {
-   "nome": "Currencies",
+   "nome": "Foreign Exchange",
    "balanco": "steady",
-   "leitura": "The euro held relatively steady against the US dollar, with the EUR/USD exchange rate dipping 0.1% month to date to 1.1165."
-  },
-  {
-   "nome": "Corporate credit",
-   "balanco": "falling",
-   "leitura": "US high-yield credit spreads widened by 4 basis points to 3.48 as risk sentiment deteriorated following the tech sector pullback."
+   "leitura": "The EUR/USD exchange rate held relatively stable, finishing the period up 0.2% at 1.1193."
   }
  ],
  "vigiar": [
-  "Legislative proposals from the incoming Democratic US congressional majority regarding artificial intelligence regulations and data centre moratoriums.",
-  "Euro area and Portuguese inflation updates to assess whether the ECB will keep its deposit rate at 2.5%.",
-  "Developments in diplomatic talks between the US and Iran influencing global crude oil supply and prices.",
-  "Further capital expenditure announcements and IPO developments among major artificial intelligence hardware and model developers."
+  "Congressional progress on proposed artificial intelligence regulations and data center restrictions.",
+  "Developments in US-Iran diplomatic talks and their impact on global crude oil supplies.",
+  "Upcoming inflation releases and labor market reports across the US and Europe.",
+  "Corporate earnings guidance from major technology hyperscalers regarding capital expenditure plans."
  ],
- "days": 5,
+ "days": 6,
  "final": false,
- "generatedAt": "2026-11-06T21:08:30.375Z"
+ "generatedAt": "2026-11-09T16:55:57.589Z"
 }
