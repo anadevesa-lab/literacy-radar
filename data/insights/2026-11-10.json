@@ -1,153 +1,209 @@
 {
  "auto": true,
  "date": "2026-11-10",
- "basedOn": "2026-11-10T15:15:09.687Z",
- "generatedAt": "2026-11-10T15:15:32.937Z",
- "resumo": "Hotter consumer prices and central bank rate hike warnings challenge markets, **while tech shares navigate high-profile corporate scandals and major new public stock offerings**.",
+ "basedOn": "2026-11-10T21:26:31.856Z",
+ "generatedAt": "2026-11-10T21:26:52.780Z",
+ "resumo": "Today's talk is mostly about **stocks and central-bank rates**. Rising: tech. Falling: stocks, central-bank rates.",
  "classes": [
   {
-   "nome": "Equities",
-   "tendencia": "mixed",
+   "nome": "Ações",
+   "tendencia": "a descer",
    "forca": 3,
-   "leitura": "Tech shares face volatility from executive investigations and high-stakes initial public offerings, while bank profits climb.",
+   "leitura": "29 stories today. Top one: Oil falls below $90 as Trump pulls back from threat to strike Iran (Financial Times).",
    "a_favor": [
-    "Major upcoming public stock offerings",
-    "Strong investment banking profits"
+    "The index impact of SpaceX’s record-shattering IPO"
    ],
    "riscos": [
-    "Corporate governance scandals",
-    "Hotter than expected inflation data"
+    "Oil falls below $90 as Trump pulls back from threat to stri…"
    ],
-   "perfil": "Suits investors with a higher risk tolerance seeking long-term growth."
+   "perfil": "Long horizon and tolerance for temporary losses."
   },
   {
-   "nome": "Government Bonds",
-   "tendencia": "falling",
-   "forca": 2,
-   "leitura": "Rising consumer price pressures and potential central bank rate increases weigh heavily on fixed-income valuations.",
+   "nome": "Juros (bancos centrais)",
+   "tendencia": "a descer",
+   "forca": 3,
+   "leitura": "19 stories today. Top one: Wall Street opens lower after hot CPI data, hawkish comments from Fed’s Waller (Investing.com).",
    "a_favor": [
-    "Higher yields following recent rate increases",
-    "Safe-haven demand during equity market volatility"
+    "ECB wage tracker suggests slightly higher wage growth in fi…"
    ],
    "riscos": [
-    "Hot inflation complicating rate cuts",
-    "Potential half-point rate hikes"
+    "Wall Street opens lower after hot CPI data, hawkish comment…"
    ],
-   "perfil": "Suits cautious investors prioritizing capital preservation over growth."
+   "perfil": "Affects everyone's deposits, loans and bonds."
   },
   {
-   "nome": "Commodities",
-   "tendencia": "falling",
-   "forca": 2,
-   "leitura": "Oil prices dropped to their lowest level since August as geopolitical tensions eased following statements on the Iran conflict.",
+   "nome": "Tecnologia",
+   "tendencia": "a subir",
+   "forca": 3,
+   "leitura": "17 stories today. Top one: It Looks Like Higher Rates Are on the Way (Bloomberg).",
    "a_favor": [
-    "Ongoing global industrial demand",
-    "Strategic resource stockpiling"
+    "It Looks Like Higher Rates Are on the Way"
    ],
-   "riscos": [
-    "Easing geopolitical conflict risks",
-    "Energy price volatility"
-   ],
-   "perfil": "Suits tactical investors looking to hedge against specific supply shocks."
+   "riscos": [],
+   "perfil": "Long horizon and tolerance for high volatility."
   },
   {
-   "nome": "Cash and Savings",
-   "tendencia": "steady",
+   "nome": "Inflação",
+   "tendencia": "misto",
    "forca": 2,
-   "leitura": "Deposit rates remain anchored by baseline central bank settings while inflation continues to erode purchasing power.",
+   "leitura": "4 stories today. Top one: Stock Market Today: Yields Jump as Inflation Comes in Hotter Than Expected (Wall Street Journal).",
    "a_favor": [
-    "Absolute capital security",
-    "Immediate liquidity for emergencies"
+    "Stock Market Today: Yields Jump as Inflation Comes in Hotte…"
    ],
    "riscos": [
-    "Inflation running above standard deposit rates",
-    "Missed opportunities from rising rates"
+    "Wall St opens lower after October’s hot inflation print"
    ],
-   "perfil": "Suits risk-averse savers needing immediate access to funds."
+   "perfil": "Affects everyone's purchasing power."
+  },
+  {
+   "nome": "Fundos",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "4 stories today. Top one: Cohen & Steers' real estate fund acquires New Hampshire shopping center with DLC (Seeking Alpha).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "People who want to diversify with professional management."
+  },
+  {
+   "nome": "Matérias-primas",
+   "tendencia": "misto",
+   "forca": 2,
+   "leitura": "3 stories today. Top one: RenTech sidesteps market turmoil with 6% October gain, Bloomberg reports (Investing.com).",
+   "a_favor": [
+    "RenTech sidesteps market turmoil with 6% October gain, Bloo…"
+   ],
+   "riscos": [
+    "U.S. gas prices fall below $4 for the first time since July"
+   ],
+   "perfil": "A small slice of a portfolio, for diversification only."
+  },
+  {
+   "nome": "Economia",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "3 stories today. Top one: My friend feels trapped at her job but won&#x2019;t do anything about it. Am I supposed to step in? (MarketWatch).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Background for saving and investing decisions."
   }
  ],
  "temas": [
-  "Inflation impact on central bank policy",
-  "Initial public offerings and valuations",
-  "Corporate governance and executive risk",
-  "Capital gains tax brackets"
+  "Volatility is not the same as losing money",
+  "What the ECB does and why it touches your money",
+  "Concentration: the risk of betting on one sector"
  ],
- "ai": true,
+ "brief": {
+  "one_liner": "Wall Street took a breather as hot inflation figures and central bank warnings sparked fresh fears of rising borrowing costs.",
+  "number": {
+   "value": "4%",
+   "caption": "Euro area annual inflation rate recorded in October 2026"
+  },
+  "stories": [
+   {
+    "i": 10,
+    "title": "Hot inflation figures and hawkish warnings send Wall Street lower",
+    "whats_going_on": "Wall Street opened lower after October consumer price data came in hotter than expected. Federal Reserve officials offered hawkish commentary, warning that central banks may need to keep monetary policy tight to tame price pressures.",
+    "what_it_means": "When inflation refuses to cool down as quickly as hoped, financial markets quickly reprice the path of future borrowing costs. Investors grow concerned that interest rates will stay higher for longer to combat stubborn price rises.",
+    "why_care": "Persistent inflation and talk of higher rates eventually trickle down into everyday loan costs, mortgages, and the broader returns on your savings and investments."
+   },
+   {
+    "i": 28,
+    "title": "Nvidia stumbles as executive investigation spooks tech investors",
+    "whats_going_on": "Nvidia shares slid into a tailspin following reports regarding an investigation into CEO Jensen Huang's personal conduct and potential security implications. The company has hired law firm Wachtell Lipton to lead an internal probe into the matter.",
+    "what_it_means": "Big technology firms often see their market valuations closely tied to the fortunes and stability of their visionary leaders. When unexpected leadership crises emerge, market confidence can wobble rapidly.",
+    "why_care": "Because tech giants make up a massive slice of global index funds and retirement portfolios, turbulence in top-tier stocks can cause noticeable ripples in everyday savers' portfolios."
+   },
+   {
+    "i": 40,
+    "title": "Anthropic targets massive valuation in historic stock market debut",
+    "whats_going_on": "AI startup Anthropic is pressing ahead with plans for a massive public listing, targeting a valuation of up to $1.4 trillion and aiming to raise as much as $64 billion. Investors are closely watching the upcoming debut as a major test of market appetite for artificial intelligence.",
+    "what_it_means": "Mega-listings of this scale are rare and serve as a litmus test for overall investor enthusiasm in high-growth sectors. Early backers and insiders are looking to cash in record amounts as the company goes public.",
+    "why_care": "While initial public offerings generate plenty of media excitement, high-flying tech flotations can carry intense volatility that impacts broader market sentiment."
+   },
+   {
+    "i": 36,
+    "title": "Oil prices slide below $90 as geopolitical tensions ease slightly",
+    "whats_going_on": "Crude oil prices fell below $90 a barrel after policymakers stepped back from immediate threats of military escalation involving Iran. The easing of supply fears helped support a broader recovery in global stocks following recent market jitters.",
+    "what_it_means": "Energy prices act as a vital barometer for global economic health and headline inflation. Sudden drops in crude can relieve cost pressures for manufacturers, airlines, and everyday consumers alike.",
+    "why_care": "Cheaper energy helps take the heat off inflation numbers, which ultimately influences how central banks decide to set interest rates on your savings and mortgages."
+   }
+  ],
+  "basedOn": "2026-11-10T21:26:31.856Z",
+  "generatedAt": "2026-11-10T21:27:07.014Z"
+ },
  "pack": {
   "carousel": {
-   "title": "Why bank pay is climbing",
+   "title": "Why your **savings** feel the pinch",
    "slides": [
     {
      "kind": "hook",
-     "h": "Why Wall Street **pay** is rising",
+     "h": "Why your **cash** loses its punch",
      "big": "",
      "t": ""
     },
     {
      "kind": "stat",
-     "h": "Bank profits fuel higher **bonuses**",
-     "big": "3.85%",
-     "t": "Volatile markets and IPOs are boosting big bank revenue."
+     "h": "Prices keep climbing in **Portugal**",
+     "big": "3.9%",
+     "t": "Inflation reached 3.9% in October, keeping pressure on household budgets."
     },
     {
      "kind": "point",
-     "h": "Deals are back on the **table**",
-     "big": "",
-     "t": "Market activity creates fresh fees for major financial institutions."
+     "h": "Central banks keep **rates** high",
+     "t": "Sticky inflation means borrowing costs stay elevated across the board."
     },
     {
      "kind": "myth",
-     "h": "\"Banks only make money in calm markets\"",
-     "big": "",
-     "t": "Volatility often drives heavy trading volume and high bank profits."
+     "h": "\"High **inflation** is temporary\"",
+     "t": "Price pressures prove stubborn, forcing central banks to maintain tight monetary policy."
     },
     {
      "kind": "point",
-     "h": "What this means for your **savings**",
-     "big": "",
-     "t": "A booming financial sector reflects broader shifts in global markets."
+     "h": "Protect your hard-earned **money**",
+     "t": "Look for accounts that match inflation to keep your purchasing power intact."
     },
     {
      "kind": "cta",
-     "h": "Save this and follow **PaperMint**",
+     "h": "Save this **post**",
      "big": "",
-     "t": "Get fresh finance news daily without the boring jargon."
+     "t": "Follow PaperMint for fresh money news daily."
     }
    ]
   },
-  "linkedin": "Wall Street pay is set to climb as volatile markets and a wave of new IPOs fuel fresh bank profits.\n\nWhile everyday savers often focus on central bank rates like the ECB deposit rate sitting at 2.5%, the wider financial sector is seeing a major shift. Big bank stocks have brushed off regulatory worries, proving that Capitol Hill's bark is often worse than its bite.\n\nFor everyday observers, this boom in banking revenue is a reminder of how quickly market sentiment can turn. Whether you are watching mortgage rates in Portugal hover around 3.06% or tracking global tech headlines, understanding where the money flows helps keep your financial strategy grounded.\n\nStay curious and keep your finances freshly minted.\n\n#FinancialNews #Banking #PaperMint",
+  "linkedin": "Ever feel like your money doesn't stretch as far as it used to? You are not imagining things. \n\nRecent data shows inflation in Portugal hit 3.9% in October. When everyday prices rise faster than your savings account interest, your cash quietly loses its purchasing power. Meanwhile, central banks are keeping interest rates high to cool things down, which keeps borrowing costs up for mortgages and loans.\n\nBig tech headlines like Nvidia's recent stumbles or massive upcoming stock market debuts might dominate the news, but boring old inflation is what actually hits your weekly grocery bill. \n\nStay grounded, keep an eye on your fixed costs, and remember that understanding how the economy works is your best financial defense. \n\n#PersonalFinance #Inflation #PaperMint",
   "reel": {
-   "hook": "Why are Wall Street paychecks suddenly getting a massive boost?",
+   "hook": "Why your grocery bill feels heavier this month.",
    "script": [
-    "Volatile markets and fresh IPOs are fueling huge bank profits.",
-    "Even with regulatory noise, big financial stocks are thriving.",
-    "It shows how quickly market activity can shift.",
-    "Follow PaperMint for daily finance news made simple."
+    "Inflation in Portugal just hit 3.9% in October.",
+    "That is higher than the euro area average.",
+    "Central banks are keeping interest rates tight to fight it.",
+    "Which means your savings need to work harder.",
+    "Follow PaperMint for fresh finance news daily."
    ],
-   "caption": "Wall Street pay is climbing as market volatility and IPOs boost bank profits. Find out what it means for the wider economy."
+   "caption": "Inflation in Portugal reached 3.9% in October. Here is what that means for your everyday savings and household budget."
   },
   "faq": [
    {
-    "q": "Why are Wall Street bank profits rising right now?",
-    "a": "Increased market volatility and a resurgence in initial public offerings are driving up bank revenue. Financial firms often thrive when trading activity picks up across global markets."
+    "q": "What is the current inflation rate in Portugal?",
+    "a": "Inflation in Portugal stood at 3.9% in October, according to Eurostat data."
    },
    {
-    "q": "Does this mean my personal bank account interest will change?",
-    "a": "Not directly. Standard deposit rates are influenced by central bank decisions like the ECB deposit rate rather than individual bank bonus pools."
+    "q": "How does inflation affect my savings?",
+    "a": "When inflation rises faster than your savings rate, your money buys less over time. It quietly eats away at your purchasing power."
    },
    {
-    "q": "What is an IPO?",
-    "a": "An initial public offering happens when a private company sells shares to the public for the first time. This creates new business and fee revenue for investment banks."
+    "q": "Why are central banks keeping rates high?",
+    "a": "Central banks keep monetary policy tight to tame persistent price pressures across the broader economy."
    },
    {
-    "q": "Are bank stocks a safe investment?",
-    "a": "All investments carry risks, and past performance is never a guide to the future. Bank stocks can fluctuate based on economic shifts and regulatory news."
+    "q": "Do big stock market drops affect everyday savers?",
+    "a": "Turbulence in major tech stocks can ripple through global index funds and retirement portfolios that hold those companies."
    },
    {
-    "q": "How does market volatility affect the broader economy?",
-    "a": "High volatility means asset prices swing more frequently. While it can generate profits for financial traders, it often signals uncertainty for everyday savers and investors."
+    "q": "What is the 12-month average inflation in Portugal?",
+    "a": "The 12-month average inflation rate in Portugal was 2.9% up to October."
    }
   ],
-  "generatedAt": "2026-11-10T15:15:55.222Z"
+  "generatedAt": "2026-11-10T21:27:11.321Z"
  }
 }
