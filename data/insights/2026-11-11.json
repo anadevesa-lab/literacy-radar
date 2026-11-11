@@ -1,0 +1,46 @@
+{
+ "auto": true,
+ "date": "2026-11-11",
+ "basedOn": "2026-11-11T14:43:53.218Z",
+ "generatedAt": "2026-11-11T14:44:14.346Z",
+ "resumo": "Financial markets react to **shifting interest rate expectations** alongside corporate developments in the technology sector.",
+ "classes": [
+  {
+   "nome": "Equities",
+   "tendencia": "mixed",
+   "forca": 3,
+   "leitura": "Technology shares experience high volatility due to governance scrutiny and major upcoming initial public offerings.",
+   "a_favor": [
+    "Strong revenue forecasts in artificial intelligence",
+    "Robust sales growth among leading firms"
+   ],
+   "riscos": [
+    "Corporate governance and leadership investigations",
+    "Intense market sensitivity to rate hikes"
+   ],
+   "perfil": "Suits investors seeking long-term growth who can tolerate sharp short-term market fluctuations."
+  },
+  {
+   "nome": "Bonds",
+   "tendencia": "rising",
+   "forca": 2,
+   "leitura": "Asian and global bond yields rise as hotter-than-expected inflation data increases expectations of Federal Reserve rate hikes.",
+   "a_favor": [
+    "Higher yields on government debt",
+    "Growing anticipation of monetary tightening"
+   ],
+   "riscos": [
+    "Falling bond prices when interest rates climb",
+    "Inflation persistence eroding fixed returns"
+   ],
+   "perfil": "Suits conservative investors prioritizing regular income over capital growth."
+  }
+ ],
+ "temas": [
+  "Inflation trends and central bank interest rates",
+  "Corporate governance in the technology sector",
+  "Understanding market volatility and risk management",
+  "The role of initial public offerings in financing"
+ ],
+ "ai": true
+}

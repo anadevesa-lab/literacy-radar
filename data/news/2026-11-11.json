@@ -1,0 +1,825 @@
+{
+ "date": "2026-11-11",
+ "items": [
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "11 Nov",
+   "title": "Hospital Stocks Are Feeling Blue, in a Good Way",
+   "summary": "Plus, CoreWeave&#x2019;s mixed signal, and OpenAi&#x2019;s mounting losses.",
+   "url": "https://www.wsj.com/finance/stocks/hospital-stocks-are-feeling-blue-in-a-good-way-f4d73ed2?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "11 Nov",
+   "title": "CoreWeave Finds a Workaround to Capital Constraints&#x2014;for Now",
+   "summary": "The company&#x2019;s ambitious plans will still require cooperation from capital markets.",
+   "url": "https://www.wsj.com/business/energy-oil/coreweave-finds-a-workaround-to-capital-constraintsfor-now-1f548211?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Banca central",
+   "published": "11 Nov",
+   "title": "Asian Bond Yields Rise on Growing Expectations for Fed Rate Hike",
+   "summary": "Hotter-than-expected U.S. inflation data and Federal Reserve officials&#x2019; hawkish commentary raised the chances of a rate increase next month.",
+   "url": "https://www.wsj.com/finance/asian-bond-yields-rise-on-growing-expectations-for-fed-rate-hike-a2491a28?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "11 Nov",
+   "title": "The $26 Million Cyber Heist Rocking a Small New Jersey Town",
+   "summary": "In historic Cranbury, residents are confronting local leaders over missing money that wasn&#x2019;t disclosed until after the election.",
+   "url": "https://www.wsj.com/us-news/the-26-million-cyberheist-rocking-a-small-new-jersey-town-bbe2ae6d?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "10 Nov",
+   "title": "SEC Enforcement Penalties Fall to 18-Year Low",
+   "summary": "The Wall Street regulator obtained about $1 billion last year, the lowest amount since the 2008 financial crisis.",
+   "url": "https://www.wsj.com/finance/regulation/sec-enforcement-penalties-fall-to-18-year-low-2aa5d9d3?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "10 Nov",
+   "title": "U.K. Police Arrested a U.S. Army Soldier on Allegations of Spying for Russia",
+   "summary": "Plus, Wall Street is worried about interest rates again, and Anthropic&#x2019;s founders are about to be worth billions.",
+   "url": "https://www.wsj.com/world/uk/u-k-police-arrested-a-u-s-army-soldier-on-allegations-of-spying-for-russia-f87c5257?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "10 Nov",
+   "title": "A Reined In Jensen Huang Is Nvidia&#x2019;s Best Option",
+   "summary": "A more restrained chief would suit the chip giant well for the next phase of the AI boom.",
+   "url": "https://www.wsj.com/business/a-reined-in-jensen-huang-is-nvidias-best-option-e79cb305?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "10 Nov",
+   "title": "Wall Street Pay Set to Climb After Volatile Markets and IPOs Fuel Bank Profits",
+   "summary": "Traders and investment bankers are set to see among the biggest bumps in bonuses.",
+   "url": "https://www.wsj.com/finance/wall-street-pay-set-to-climb-after-volatile-markets-and-ipos-fuel-bank-profits-94fd9137?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "11 Nov",
+   "title": "Tech, Media & Telecom Roundup: Market Talk",
+   "summary": "Find insight on Anthropic, CoreWeave, TSMC and more in the latest Market Talks covering Technology, Media and Telecom.",
+   "url": "https://www.wsj.com/business/tech-media-telecom-roundup-market-talk-d1ea7fbd?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "11 Nov",
+   "title": "AI Is Testing the Limits of Corporate Governance",
+   "summary": "Plus, CoreWeave beat Wall Street&#x2019;s expectations",
+   "url": "https://www.wsj.com/cio-journal/ai-is-testing-the-limits-of-corporate-governance-f69dda7d?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "11 Nov",
+   "title": "CoreWeave Finds a Workaround to Capital Constraints&#x2014;for Now",
+   "summary": "The company&#x2019;s ambitious plans will still require cooperation from capital markets.",
+   "url": "https://www.wsj.com/business/energy-oil/coreweave-finds-a-workaround-to-capital-constraintsfor-now-1f548211?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Economia",
+   "published": "11 Nov",
+   "title": "Nvidia Scandal Tests the Resilience of the Global AI Boom",
+   "summary": "Jensen Huang is the biggest cheerleader of the &#x2018;next industrial revolution.&#x2019; Could it carry on without him?",
+   "url": "https://www.wsj.com/tech/ai/jensen-huang-nvidia-ceo-ai-bubble-93097556?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "11 Nov",
+   "title": "Masayoshi Son&#x2019;s Huge Bet on Electrical Turbines Backfires",
+   "summary": "SoftBank reserved enough gas turbines to generate the power of six Hoover Dams. It cost the company billions of dollars in losses.",
+   "url": "https://www.wsj.com/business/energy-oil/masayoshi-sons-huge-bet-on-electrical-turbines-backfires-b51f160c?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "10 Nov",
+   "title": "Law Firm Wachtell Lipton to Lead Nvidia Internal Investigation",
+   "summary": "The elite New York firm will probe whether the technology company was the target of foreign espionage effort.",
+   "url": "https://www.wsj.com/tech/law-firm-wachtell-lipton-to-lead-nvidia-internal-investigation-d37731c7?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Economia",
+   "published": "11 Nov",
+   "title": "How Kickstarter CEO Everette Taylor Traded the CMO Title for the Top Job",
+   "summary": "Plus, why giving your teams access to AI isn&#x2019;t enough for a revolutionary moment.",
+   "url": "https://www.wsj.com/cmo-today/how-kickstarter-ceo-everette-taylor-traded-the-cmo-title-for-the-top-job-c25a7a0c?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "11 Nov",
+   "title": "TSMC Approves Up to $1 Billion Investment Plan in Anthropic, OpenAI",
+   "summary": "The move to buy stakes in the industry&#x2019;s most influential model developers shows TSMC&#x2019;s desire to broaden its AI exposure beyond manufacturing advanced chips.",
+   "url": "https://www.wsj.com/tech/ai/tsmc-approves-up-to-1-billion-investment-plan-in-anthropic-openai-3e4b4997?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "10 Nov",
+   "title": "CoreWeave Meets Wall Street Expectations, Shares Rise",
+   "summary": "The Neocloud provider said its backlog of business hit $133 billion.",
+   "url": "https://www.wsj.com/business/earnings/coreweave-crwv-3q-2026-earnings-report-stock-9c109753?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "10 Nov",
+   "title": "Anthropic to Seek $1.3 Trillion Valuation in IPO",
+   "summary": "The Claude maker&#x2019;s stock-market debut is seen as a litmus test for investors on edge over the AI trade.",
+   "url": "https://www.wsj.com/finance/stocks/anthropic-ipo-valuation-8337b669?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "10 Nov",
+   "title": "Anthropic&#x2019;s IPO Is the Signal Amid the AI Noise",
+   "summary": "Plus, Jensen Huang&#x2019;s apology, and hackers find a new target.",
+   "url": "https://www.wsj.com/tech/ai/anthropics-ipo-is-the-signal-amid-the-ai-noise-7d4300fa?mod=rss_Technology"
+  },
+  {
+   "source": "The Economist",
+   "category": "Fundos",
+   "published": "10 Nov",
+   "title": "Lessons from a miserable month for hedge funds",
+   "summary": "The struggle to invest in anything other than AI",
+   "url": "https://www.economist.com/finance-and-economics/2026/11/10/lessons-from-a-miserable-month-for-hedge-funds"
+  },
+  {
+   "source": "The Economist",
+   "category": "Mercados",
+   "published": "10 Nov",
+   "title": "For boomers, economic boom times are over",
+   "summary": "Across the rich world, the geriatric share of income and wealth is ebbing",
+   "url": "https://www.economist.com/finance-and-economics/2026/11/10/for-boomers-economic-boom-times-are-over"
+  },
+  {
+   "source": "CNBC",
+   "category": "Banca central",
+   "published": "11 Nov",
+   "title": "Fed's Goolsbee calls inflation report 'borderline disturbing' as central bank weighs more hikes",
+   "summary": "The consumer price index rose more than expected in October, raising alarm among Federal Reserve officials.",
+   "url": "https://www.cnbc.com/2026/11/11/goolsbee-october-inflation-fed-rates-disturbing-distressing.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "11 Nov",
+   "title": "CoreWeave CEO says 'new political reality' after midterms won't slow buildout",
+   "summary": "After CoreWeave beat on revenue and upped its forecast, CEO Mike Intrator indicated the company will be fine despite last week's Democratic midterm sweep.",
+   "url": "https://www.cnbc.com/2026/11/11/coreweave-ceo-election-data-center-buildout.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Bolsa",
+   "published": "11 Nov",
+   "title": "Nvidia shares rebound as Jensen Huang faces scrutiny ahead of earnings",
+   "summary": "Investors are assessing whether CEO Jensen Huang's affair will have spillover effects on Nvidia's business.",
+   "url": "https://www.cnbc.com/2026/11/11/nvidia-stock-jensen-huang-affair-china.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Bolsa",
+   "published": "11 Nov",
+   "title": "CoreWeave stock pops 12% after outlook raise eases AI slowdown concerns",
+   "summary": "Neoclouds such as CoreWeave, Nebius and IREN have come under scrutiny this month as investors assessed the sustainability of the AI trade.",
+   "url": "https://www.cnbc.com/2026/11/11/coreweave-crwv-outlook-earnings-ai.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "11 Nov",
+   "title": "Measles is surging in the U.S. — and outbreaks can cost millions",
+   "summary": "A new tool developed by Johns Hopkins researchers estimates that the 2025 measles outbreak in the U.S. carried an economic cost of more than $37 million.",
+   "url": "https://www.cnbc.com/2026/11/11/measles-outbreak-us-economic-cost.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "11 Nov",
+   "title": "Zelenskyy warns Ukraine is 'not real estate' as experts say a Russia peace deal remains elusive",
+   "summary": "President Zelenskyy warned Tuesday that his country \"was not real estate,\" as a second and final day of U.S.-brokered peace talks got underway.",
+   "url": "https://www.cnbc.com/2026/11/11/ukraine-russia-peace-talks-zelenskyy-putin.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Bolsa",
+   "published": "11 Nov",
+   "title": "How Democrats could snarl Trump administration stakes in private sector companies",
+   "summary": "The Trump administration had established some form of equity position in 41 companies as of November, according to the CATO Institute's tally.",
+   "url": "https://www.cnbc.com/2026/11/11/trump-company-equity-takes.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Tecnologia",
+   "published": "11 Nov",
+   "title": "Nvidia's Huang tries to project 'business as usual' in return to office after affair revelation",
+   "summary": "Nvidia employees described the mood as \"sad\" as CEO Jensen Huang returned to the office after disclosing an affair.",
+   "url": "https://www.cnbc.com/2026/11/10/nvidia-jensen-huang-affair-office.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "11 Nov",
+   "title": "Bessent reportedly moved to military base over Iranian threats on his life",
+   "summary": "The move comes as the Department of Justice said late Tuesday that three Iranian nationals have been indicted on terrorism-related charges.",
+   "url": "https://www.cnbc.com/2026/11/11/us-iran-war-trump-hormuz-bessent-threats.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "11 Nov",
+   "title": "American soldier arrested on suspicion of spying for Russia",
+   "summary": "The 41-year-old man is being detained in London under the U.K.'s National Security Act.",
+   "url": "https://www.cnbc.com/2026/11/11/us-army-soldier-russia-espionage-arrest.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Bolsa",
+   "published": "11 Nov",
+   "title": "Alibaba announces plans to list T-Head, its Nvidia chip rival",
+   "summary": "Alibaba noted it had already filed confidentially on Sept. 11 to list T-Head on the Hong Kong Stock Exchange.",
+   "url": "https://www.cnbc.com/2026/11/11/alibaba-pr.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "10 Nov",
+   "title": "U.S. gas prices fall below $4 for the first time since July",
+   "summary": "Americans may finally find some relief at the pump.",
+   "url": "https://www.cnbc.com/2026/11/10/us-gas-prices-below-four-dollars.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "10 Nov",
+   "title": "Polymarket says annualized revenue has topped $1.8 billion",
+   "summary": "Amid growth of its U.S. exchange, the prediction market platform’s current annual run-rate is $1.8 billion.",
+   "url": "https://www.cnbc.com/2026/11/10/polymarket-annualized-revenue-us-growth.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Banca central",
+   "published": "10 Nov",
+   "title": "Fed Governor Waller sees December hike likely, opens door to possible half-point increase",
+   "summary": "The policymaker said he \"is leaning toward\" a rate increase in December and could support a half-point hike depending on inflation data.",
+   "url": "https://www.cnbc.com/2026/11/10/fed-governor-waller-sees-december-hike-likely.html"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Economia",
+   "published": "11 Nov",
+   "title": "My friend hates her job but shuts down when I give her advice. How can I help her?",
+   "summary": "It&#x2019;s counterintuitive, but the worst thing you could do is give your friend advice, says one career coach.",
+   "url": "https://www.marketwatch.com/story/my-friend-feels-trapped-at-her-job-but-wont-do-anything-about-it-am-i-supposed-to-step-in-7e55604e?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "11 Nov",
+   "title": "Forget happy hour. &#x2018;Money parties&#x2019; are having a moment.",
+   "summary": "There&#x2019;s evidence showing that talking about finances with your friends can help you save money.",
+   "url": "https://www.marketwatch.com/story/forget-happy-hour-money-parties-are-having-a-moment-6bc6f02a?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "11 Nov",
+   "title": "Here&#x2019;s how Bernie Sanders wants to keep Social Security solvent &#x2018;for generations&#x2019;",
+   "summary": "The Vermont senator aims to eliminate the taxable maximum, making the wealthy pay more in taxes",
+   "url": "https://www.marketwatch.com/story/heres-how-bernie-sanders-wants-to-keep-social-security-solvent-for-generations-f5666a38?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Poupança",
+   "published": "11 Nov",
+   "title": "Corporate America is making a trillion-dollar mistake about retirement",
+   "summary": "The market is dramatically underpricing the economic impact of Americans age 50 and older.",
+   "url": "https://www.marketwatch.com/story/corporate-america-is-making-a-trillion-dollar-mistake-about-retirement-234c8996?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Bolsa",
+   "published": "11 Nov",
+   "title": "Micron and other AI stocks surge as CoreWeave calms Wall Street&#x2019;s worst fears",
+   "summary": "CoreWeave&#x2019;s improved AI economics and its vow to show some discipline around future debt are sparking a broad rally across the chip sector.",
+   "url": "https://www.marketwatch.com/story/micron-and-other-ai-stocks-surge-as-coreweave-calms-wall-streets-worst-fears-0a18152a?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Poupança",
+   "published": "11 Nov",
+   "title": "&#x2018;We had the worst fight&#x2019;: I want my husband to retire at 65, but I don&#x2019;t want to lose his $280,000 salary. Is that unreasonable?",
+   "summary": "&#x201c;We have $2.6 million, most of it in his 401(k) and IRAs, plus $450,000 in a brokerage account.&#x201d;",
+   "url": "https://www.marketwatch.com/story/we-had-the-worst-fight-weve-ever-had-i-want-my-husband-to-retire-at-65-but-i-dont-want-to-lose-his-280-000-salary-48511469?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "11 Nov",
+   "title": "One reason Children&#x2019;s Place is filing for bankruptcy? Not enough children.",
+   "summary": "The chain has been contending with falling birth rates, cautious consumers, stiff competition and $881 million in debt.",
+   "url": "https://www.marketwatch.com/story/one-reason-the-childrens-place-is-going-bankrupt-not-enough-children-b275eab0?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Bolsa",
+   "published": "11 Nov",
+   "title": "22 stocks of companies with tremendous sales growth",
+   "summary": "These S&P 500 companies have also shown improving profit margins and free cash flow this earnings season.",
+   "url": "https://www.marketwatch.com/story/22-stocks-of-companies-with-tremendous-sales-growth-78c3f750?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Tecnologia",
+   "published": "11 Nov",
+   "title": "Keep Jensen Huang at Nvidia &#x2014; but end the one-man show",
+   "summary": "Nvidia can&#x2019;t afford to lose its CEO, but it&#x2019;s time for the company to grow up and get serious about governance.",
+   "url": "https://www.marketwatch.com/story/keep-jensen-huang-at-nvidia-but-end-the-one-man-show-305c19a2?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Obrigações",
+   "published": "11 Nov",
+   "title": "Nvidia&#x2019;s valuation tumbles to a 15-year low. A bargain or a falling knife?",
+   "summary": "The AI giant now trades at a discount to the S&P 500, by one measure. Plus, CoreWeave&#x2019;s answer to its debt problem and a Veterans Day breather for bonds.",
+   "url": "https://www.marketwatch.com/story/nvidias-valuation-tumbles-to-a-15-year-low-a-bargain-or-a-falling-knife-2ebf6085?mod=mw_rss_topstories"
+  },
+  {
+   "source": "BBC",
+   "category": "Tecnologia",
+   "published": "10 Nov",
+   "title": "Nvidia hires major US law firm to investigate alleged Chinese spy affair",
+   "summary": "The appointment was made after it emerged Jensen Huang had an affair with a woman believed to be a spy for China.",
+   "url": "https://www.bbc.co.uk/news/articles/ck1wvwwl3x0go?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Bolsa",
+   "published": "10 Nov",
+   "title": "Claude chatbot maker set for $1.3tn stock market debut despite 'catastrophic' AI warning",
+   "summary": "The AI company behind the Claude chatbot will offer its shares at between $70 and $78, which is lower than what was expected.",
+   "url": "https://www.bbc.co.uk/news/articles/crpdgd723x2zo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Inflação",
+   "published": "10 Nov",
+   "title": "US inflation higher than expected in October - here's what is happening with prices",
+   "summary": "Prices rose by 0.4% over the month, driven by increases in shelter, food and energy costs.",
+   "url": "https://www.bbc.co.uk/news/articles/cwy8lx3pg4k2o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Tecnologia",
+   "published": "10 Nov",
+   "title": "Faisal Islam: What the boss of US tech giant Nvidia told me about China and national security",
+   "summary": "Huang, who is now being investigated over an affair with an alleged Chinese spy, is far more important to the future of the world order than other tech bosses.",
+   "url": "https://www.bbc.co.uk/news/articles/c64g1gzy2vdzo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Tecnologia",
+   "published": "10 Nov",
+   "title": "Trump says FBI investigating Nvidia boss's affair with alleged Chinese spy",
+   "summary": "The US president said he spoke with Jensen Huang on Monday and asked him about the affair with the alleged spy.",
+   "url": "https://www.bbc.co.uk/news/articles/cqg7x7dpvym8o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Bolsa",
+   "published": "10 Nov",
+   "title": "Californians reject wealth tax for billionaires",
+   "summary": "Proposition 40 targeted Californian billionaires with a 5% tax on their total wealth, including assets such as shares as well as income.",
+   "url": "https://www.bbc.co.uk/news/articles/cq398em3032wo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Tecnologia",
+   "published": "10 Nov",
+   "title": "Australia considers criminal penalties for rogue AI in wake of OpenAI hack",
+   "summary": "AI safety regulator will also be created after a rogue OpenAI agent hacked government websites.",
+   "url": "https://www.bbc.co.uk/news/articles/cmp3g37l566po?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Economia",
+   "published": "10 Nov",
+   "title": "Civil servant who secretly held five jobs found guilty of fraud",
+   "summary": "Kashim Chowdhury had secretly held multiple public sector jobs on full-time salaries.",
+   "url": "https://www.bbc.co.uk/news/articles/cm70pgnx891do?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Bolsa",
+   "published": "11 Nov",
+   "title": "Nvidia’s value tumbles by $430bn since spy allegations, as major US law firm hired to investigate claims – business live",
+   "summary": "<p>Rolling coverage of the latest economic and financial news</p><p><strong>After two days of losses, Nvidia’s stock is expected to recover some lost ground today.</strong></p><p>Nvidia’s shares are u",
+   "url": "https://www.theguardian.com/business/live/2026/nov/11/nvidia-spy-allegations-us-law-firm-hired-investigation-stock-markets-pound-dollar-ftse-nasdaq-latest-news-updates"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Bolsa",
+   "published": "11 Nov",
+   "title": "Air traffic control boss says he was ‘most disliked person in the UK’ after flight chaos",
+   "summary": "<p>Nats chief says he ‘quite enjoyed’ ignoring calls from Ryanair CEO to quit over system outages in September</p><ul><li><p><a href=\"https://www.theguardian.com/business/live/2026/nov/11/nvidia-spy-a",
+   "url": "https://www.theguardian.com/business/2026/nov/11/air-traffic-control-nats-martin-rolfe-outages-ryanair"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Bolsa",
+   "published": "11 Nov",
+   "title": "Diesel still costing close to a ’dismal’ £2 a litre despite oil price falls",
+   "summary": "<p>Pump prices stay stubbornly high as leading bank official warns energy costs are likely to remain ‘elevated’</p><ul><li><p><a href=\"https://www.theguardian.com/business/live/2026/nov/11/nvidia-spy-",
+   "url": "https://www.theguardian.com/money/2026/nov/11/diesel-prices-petrol-business-oil-hormuz"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Bolsa",
+   "published": "11 Nov",
+   "title": "Prime property, slow sales: why London’s stock of empty high-end flats is piling up",
+   "summary": "<p>Homes in the West End, Mayfair and Marylebone are going unsold – and developers are counting the cost</p><p>London has no shortage of luxury flats. There are ultra-modern blocks in the most upmarke",
+   "url": "https://www.theguardian.com/news/2026/nov/11/property-london-empty-high-end-flats-developers"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Bolsa",
+   "published": "11 Nov",
+   "title": "Nissan reduces petrol car production as EV sales boom in China",
+   "summary": "<p>Manufacturer says ‘shift to new energy vehicles is happening faster than expected’ and market is harsh</p><ul><li><p><a href=\"https://www.theguardian.com/business/live/2026/nov/11/nvidia-spy-allega",
+   "url": "https://www.theguardian.com/business/2026/nov/11/nissan-reduces-petrol-car-production-as-ev-sales-boom-in-china"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Poupança",
+   "published": "11 Nov",
+   "title": "ITV to cut costs by £30m amid falling advertising sales",
+   "summary": "<p>Ad revenue slowdown forces company to reduce spending on content by £25m before inquiry into takeover by Sky</p><ul><li><p><a href=\"https://www.theguardian.com/business/live/2026/nov/11/nvidia-spy-",
+   "url": "https://www.theguardian.com/business/2026/nov/11/itv-cut-costs-falling-advertising-sales"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Mercados",
+   "published": "11 Nov",
+   "title": "Aldi cuts hundreds of UK head office roles as part of global cost trimming",
+   "summary": "<p>Supermarket’s move labelled ‘shortsighted’ by worker who calls upper management ‘woefully out of touch with reality’</p><p>Aldi’s UK business is cutting hundreds of head office roles as part of a g",
+   "url": "https://www.theguardian.com/business/2026/nov/11/aldi-cuts-hundreds-of-uk-head-office-and-logistics-roles-global-cost-trimming"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Bolsa",
+   "published": "11 Nov",
+   "title": "Burnham lauds £12bn offshore wind investment as he prepares for climate summit",
+   "summary": "<p>Package for plan off Norfolk coast revealed as government tries to calm critics after approving Jackdaw gasfield</p><ul><li><p><a href=\"https://www.theguardian.com/politics/live/2026/nov/11/andy-bu",
+   "url": "https://www.theguardian.com/environment/2026/nov/11/burnham-offshore-wind-investment-norfolk-climate-summit-cop31-jackdaw-gasfield"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Fundos",
+   "published": "11 Nov",
+   "title": "Why are Britain's streets still so polluted? Because the car industry dinosaurs do what they like, and politicians let them | George Monbiot",
+   "summary": "<p>The transition to electric vehicles should be moving apace, but it is not. And why? Incompetence, expedience and cowardice</p><p>This is how it works. An industry puts tremendous effort into resist",
+   "url": "https://www.theguardian.com/commentisfree/2026/nov/11/britain-streets-polluted-car-industry-electric-vehicles-transition"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Habitação",
+   "published": "11 Nov",
+   "title": "From blood group ID to cycle racks : I asked for little ways to fix broken Britain and the public’s ideas give me hope | Martin Lewis",
+   "summary": "<p>There are thousands of small tips to make our country better. People know what is wrong, and it’s clear they have solutions</p><p>Have you ever come across an annoying little problem and thought, “",
+   "url": "https://www.theguardian.com/commentisfree/2026/nov/11/how-fix-broken-britain-public-better"
+  },
+  {
+   "source": "New York Times",
+   "category": "Banca central",
+   "published": "11 Nov",
+   "title": "The Fed Has to Raise Rates. How Fast to Go Has Officials Divided.",
+   "summary": "The Federal Reserve’s gradual approach to raising rates is being tested by intensifying price pressures.",
+   "url": "https://www.nytimes.com/2026/11/11/business/fed-interest-rates-inflation.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Mercados",
+   "published": "11 Nov",
+   "title": "Heating Costs Will Rise 7% on Average This Winter",
+   "summary": "People who use heating oil will see increases of around 70 percent because the war in Iran has greatly reduced supply of that fuel.",
+   "url": "https://www.nytimes.com/2026/11/11/business/energy-environment/winter-heating-oil-costs.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Tecnologia",
+   "published": "11 Nov",
+   "title": "This Trader Raised Alarm About Nvidia’s China Entanglements Months Ago",
+   "summary": "Christian Lamarco, a 31-year-old short seller and trader, warned about financial and personal problems at Nvidia in May.",
+   "url": "https://www.nytimes.com/2026/11/11/business/nvidia-megaspeed-christian-lamarco.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Tecnologia",
+   "published": "11 Nov",
+   "title": "How a Suspected Chinese Spy Gained Access to Nvidia Chips",
+   "summary": "A woman whom U.S. intelligence identified as a Chinese spy had ties to Nvidia’s chief executive, Jensen Huang, dating to at least 2023. Ana Swanson, our reporter on trade and economics, explains what ",
+   "url": "https://www.nytimes.com/video/business/100000011273241/alice-huang-nvidia-china-spy.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Bolsa",
+   "published": "10 Nov",
+   "title": "Anthropic’s Giant IPO Will Tie It Closer to Nvidia",
+   "summary": "Nvidia planned to invest $10 billion in Anthropic alongside its initial public offering, the largest of the new financial commitments from several giants to the A.I. company.",
+   "url": "https://www.nytimes.com/2026/11/10/business/anthropic-ipo-nvidia.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Tecnologia",
+   "published": "10 Nov",
+   "title": "Nvidia Hires Wachtell Lipton to Investigate CEO Jensen Huang’s Affair With Chinese Executive",
+   "summary": "Wachtell partner Joon H. Kim, a former acting U.S. attorney, is leading the inquiry into the chip maker’s chief executive.",
+   "url": "https://www.nytimes.com/2026/11/10/business/nvidia-wachtell-lipton-jensen-huang.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Tecnologia",
+   "published": "10 Nov",
+   "title": "Who Is Alice Huang, the Woman in the Middle of Nvidia’s Spy Scandal?",
+   "summary": "Alice Huang, who U.S. intelligence determined is a Chinese asset, emerged from the high-flying world of Shanghai finance to work with tech titans and obtain essential A.I. chips.",
+   "url": "https://www.nytimes.com/2026/11/10/technology/alice-huang-megaspeed-nvidia-jensen-huang.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Banca central",
+   "published": "10 Nov",
+   "title": "Data Show Households Still Managing to Meet Their Monthly Debts",
+   "summary": "The New York Fed detailed general steadiness in debt payments for autos, student loans and mortgages.",
+   "url": "https://www.nytimes.com/2026/11/10/business/economy/household-debt-real-estate-home-equity.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Tecnologia",
+   "published": "10 Nov",
+   "title": "Nvidia’s Game of Thrones",
+   "summary": "Analysts and investors are asking whether the chipmaker needs to consider a successor to Jensen Huang, its C.E.O., as the company is engulfed in a spy scandal.",
+   "url": "https://www.nytimes.com/2026/11/10/business/dealbook/nvidia-huang-succession.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Mercados",
+   "published": "10 Nov",
+   "title": "Anthropic Targets Valuation of Up to $1.4 Trillion for Blockbuster I.P.O.",
+   "summary": "The A.I. company’s pricing would make it one of the biggest ever public listings. It comes at a volatile moment in markets, with investors questioning the sustainability of the A.I. boom.",
+   "url": "https://www.nytimes.com/2026/11/10/technology/anthropic-ipo-valuation-share-price.html"
+  },
+  {
+   "source": "Fortune",
+   "category": "Bolsa",
+   "published": "11 Nov",
+   "title": "Anthropic sets a $1.4 trillion IPO target, but bankers may already be aiming higher",
+   "summary": "Several tech giants are committing $26 billion alongside the offering.",
+   "url": "https://fortune.com/2026/11/11/anthropic-sets-a-1-4-trillion-ipo-target-but-bankers-may-already-be-aiming-higher-cfo/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Tecnologia",
+   "published": "11 Nov",
+   "title": "Meet Rox, the $1.3 billion AI sales startup betting it can take on Salesforce",
+   "summary": "Exclusive: The company has raised $100 million in Series B funding at a $1.3 billion valuation.",
+   "url": "https://fortune.com/2026/11/11/rox-series-b-100-million-funding-take-on-salesforce/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Mercados",
+   "published": "11 Nov",
+   "title": "Current price of oil as of November 11, 2026",
+   "summary": "When oil prices change, it affects your energy costs—and even the price of everyday items. Here’s why.",
+   "url": "https://fortune.com/article/price-of-oil-11-11-2026/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Tecnologia",
+   "published": "11 Nov",
+   "title": "Will AI change banking more in the next five years than the past 30? UAE lenders think so",
+   "summary": "As Dubai’s banks move towards deploying more advanced AI systems, the technology is becoming a strategic priority–one that looks set to reshape how financial services are delivered and how banks compe",
+   "url": "https://fortune.com/2026/11/11/inside-the-ai-revolution-reshaping-dubais-banking-sector/"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "11 Nov",
+   "title": "Jefferies calls FormFactor pullback a buying opportunity, shares rise 8%",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/jefferies-calls-formfactor-pullback-a-buying-opportunity-shares-rise-8-5019240"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "11 Nov",
+   "title": "Why is GoPro stock plunging today?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/why-is-gopro-stock-plunging-today-93CH-5019228"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "11 Nov",
+   "title": "European shares near record high as earnings absorb tech volatility",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/european-shares-near-record-high-as-earnings-absorb-tech-volatility-5017971"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Tecnologia",
+   "published": "11 Nov",
+   "title": "Baird downgrades Nvidia on China curbs, AI demand worries",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/baird-downgrades-nvidia-on-china-curbs-ai-demand-worries-5019212"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "11 Nov",
+   "title": "Why is Future Fintech stock rallying today?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/why-is-future-fintech-stock-rallying-today-93CH-5019205"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "11 Nov",
+   "title": "Why is Riskified stock surging today?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/why-is-riskified-stock-surging-today-93CH-5019171"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "11 Nov",
+   "title": "Rising costs will not halt data center construction boom, Citi says",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/rising-costs-will-not-halt-data-center-construction-boom-citi-says-5019161"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "11 Nov",
+   "title": "Key Nvidia stock levels to watch if pressure continues",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/key-nvidia-stock-levels-to-watch-if-pressure-continues-93CH-5019146"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "11 Nov",
+   "title": "Thomson Reuters unveils $500 million share buyback plan",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/thomson-reuters-unveils-500-million-share-buyback-plan-5018791"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "11 Nov",
+   "title": "Why is IMCD stock sliding today?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/why-is-imcd-stock-sliding-today-93CH-5019109"
+  },
+  {
+   "source": "Seeking Alpha",
+   "category": "Tecnologia",
+   "published": "11 Nov",
+   "title": "Chinese university on US blacklist bought Nvidia H200 AI chips: report",
+   "summary": "",
+   "url": "https://seekingalpha.com/news/4670657-chinese-university-on-us-blacklist-bought-nvidia-h200-ai-chips-report?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news"
+  },
+  {
+   "source": "Seeking Alpha",
+   "category": "Bolsa",
+   "published": "11 Nov",
+   "title": "GoPro shares drop as financing issues delay Q3 filing",
+   "summary": "",
+   "url": "https://seekingalpha.com/news/4670643-gopro-shares-drop-as-financing-issues-delay-q3-filing?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news"
+  },
+  {
+   "source": "Seeking Alpha",
+   "category": "Tecnologia",
+   "published": "11 Nov",
+   "title": "Anthropic CEO says cancer, mental illness 'will be relics of the past' due to AI",
+   "summary": "",
+   "url": "https://seekingalpha.com/news/4670634-anthropic-ceo-says-cancer-mental-illness-will-be-relics-of-the-past-due-to-ai?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news"
+  },
+  {
+   "source": "Seeking Alpha",
+   "category": "Bolsa",
+   "published": "11 Nov",
+   "title": "Stock market rises as CoreWeave results boost tech sector",
+   "summary": "",
+   "url": "https://seekingalpha.com/news/4670517-sp500-nasdaq-dow-jones-outlook-stock-market?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news"
+  },
+  {
+   "source": "Seeking Alpha",
+   "category": "Bolsa",
+   "published": "11 Nov",
+   "title": "Nasdaq tests 28K resistance zone as futures rebound past 200-DMA",
+   "summary": "",
+   "url": "https://seekingalpha.com/news/4670644-nasdaq-tests-28k-resistance-zone-as-futures-rebound-past-200-dma?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "10 Nov",
+   "title": "Philip R. Lane: The science and practice of monetary policy communication: the ECB experience",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261110_1~9725b7aa07.en.html"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "10 Nov",
+   "title": "Piero Cipollone: Cash and the digital euro: two sides of the same coin",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261110~9422461bad.en.html"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "7 Nov",
+   "title": "Christine Lagarde: Interview with Yomiuri Shimbun",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261107~e7b86fc4ce.en.html"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "6 Nov",
+   "title": "ECB publishes consolidated banking data for end-June 2026",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261106~356f2fc73a.en.html"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "5 Nov",
+   "title": "Isabel Schnabel: Navigating stormy waters: reflections on monetary policy",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261105_1~5e97d9d5a0.en.html"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "5 Nov",
+   "title": "Piero Cipollone: Shaping the future of money",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261105~6495a0df6f.en.html"
+  },
+  {
+   "source": "Fed",
+   "category": "Banca central",
+   "published": "9 Nov",
+   "title": "Federal Reserve Board announces approval of two applications by Mutual Federal Bancorp, MHC, and MFB Bancorp, Inc.",
+   "summary": "Federal Reserve Board announces approval of two applications by Mutual Federal Bancorp, MHC, and MFB Bancorp, Inc.",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm"
+  },
+  {
+   "source": "Fed",
+   "category": "Banca central",
+   "published": "5 Nov",
+   "title": "Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc",
+   "summary": "Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261105a.htm"
+  }
+ ],
+ "sources": [
+  "Bloomberg",
+  "Financial Times",
+  "Wall Street Journal",
+  "The Economist",
+  "CNBC",
+  "MarketWatch",
+  "BBC",
+  "The Guardian",
+  "New York Times",
+  "Fortune",
+  "Investing.com",
+  "Seeking Alpha",
+  "ECB",
+  "Fed"
+ ],
+ "editions": [
+  "afternoon"
+ ],
+ "collectedAt": "2026-11-11T14:43:53.218Z"
+}
