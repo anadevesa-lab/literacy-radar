@@ -1,67 +1,67 @@
 {
- "titulo": "Midterm Blue Wave and AI Jitters Shake Markets",
- "resumo": "November 2026 brought a dramatic convergence of political shocks and corporate turbulence that rattled global exchanges. **US midterms delivered a Democratic sweep of Congress**, instantly upending legislative assumptions and sparking intense fears over future artificial intelligence regulation and data centre expansions. Compounding the tech sector's woes, **Nvidia faced a historic governance crisis** following revelations surrounding its chief executive, wiping out billions in market value. Meanwhile, **bond yields spiked on hotter-than-expected inflation data**, forcing investors to re-evaluate the trajectory of monetary easing and driving a nervous dash for safe havens.",
+ "titulo": "AI Shockwaves and Midterm Shifts Shake Global Markets",
+ "resumo": "November 2026 brought extraordinary turbulence to global financial markets, catalyzed by political upheaval and corporate scandals. In the US, a dramatic Democratic midterm sweep upended regulatory expectations and sent **technology stocks into a historic rout**. Compounding the tech sector's woes, Nvidia CEO Jensen Huang resigned amid a high-profile investigation, triggering widespread anxiety across AI supply chains. Meanwhile, **hot inflation prints** revived aggressive Federal Reserve rate-hike fears, driving Treasury yields higher and putting mounting pressure on debt-reliant assets. Despite these severe headwinds, major equity benchmarks like the S&P 500 managed marginal monthly gains, demonstrating underlying resilience even as investors braced for a more volatile economic landscape.",
  "sumup": {
-  "frase": "Markets navigated intense volatility as political shifts and **AI regulatory fears** collided with sticky inflation.",
+  "frase": "Markets grapple with **AI sector turmoil**, political shifts, and **renewed rate anxiety**.",
   "palavra": "Cautious",
-  "porque": "Investors wrestled with political gridlock, tech governance scandals, and renewed interest rate anxieties following hot inflation prints."
+  "porque": "Investors navigated severe tech sell-offs, political gridlock risks, and rising inflation expectations driving bond yield spikes."
  },
  "drivers": [
   {
-   "factor": "US Midterm Democratic Sweep",
-   "efeito": "negative",
-   "texto": "The Democratic party flipped control of Congress, sending immediate shockwaves through equity markets. The unexpected shift triggered regulatory worries for technology firms, causing the Nasdaq Composite to drop 1.5% this month and fall to 25065.87 by 10 November."
+   "factor": "US Midterm Election Blue Wave",
+   "efeito": "mixed",
+   "texto": "Democrats swept Congress in the midterms, sparking an initial relief rally for broader indices like the Dow while instantly introducing severe regulatory risks for technology and healthcare stocks. Renewable energy shares surged on hopes of policy shifts, while tech giants faced immediate pressure over data center expansions."
   },
   {
-   "factor": "Nvidia Governance Scandal",
+   "factor": "Nvidia CEO Resignation Scandal",
    "efeito": "negative",
-   "texto": "Revelations regarding CEO Jensen Huang's personal relationships and subsequent internal investigations by Wachtell Lipton deeply rattled investor confidence. The chipmaker saw billions erased from its valuation as shares tumbled and lawmakers called for tighter export controls."
+   "texto": "Jensen Huang stepped down following investigations into his relationship with a Chinese executive, wiping out billions in market value and deepening a broad semiconductor sell-off. The Nasdaq Composite dropped significantly as investors questioned the stability of the AI hardware ecosystem and future chip export controls."
   },
   {
-   "factor": "Hot US Inflation Print",
+   "factor": "Hot US Inflation and Yield Surge",
    "efeito": "negative",
-   "texto": "Consumer price data came in hotter than anticipated, reviving fears of aggressive Federal Reserve rate hikes. Consequently, the S&P 500 slipped 0.8% this month to 7520.93 by 10 November, while US equity volatility as measured by the VIX rose 0.2% to 19.46."
+   "texto": "Hotter-than-expected October inflation data revived fears of aggressive Federal Reserve monetary tightening. The US Treasury 2-year yield jumped +17bp this month to 4.73, while the 10-year yield rose +4bp to 4.98, reflecting growing market bets on further rate hikes."
   },
   {
-   "factor": "Middle East Peace Hopes and Oil Slump",
+   "factor": "Crude Oil Slumps on Middle East Hopes",
    "efeito": "positive",
-   "texto": "Optimism surrounding potential peace talks between the US and Iran drove a sharp sell-off in energy markets. Brent crude plunged 10.9% this month to 107.03 USD a barrel by 3 November, easing cost pressures for industrial transport and airlines."
+   "texto": "Brent crude tumbled -10.9% this month to 107.03 dollars a barrel as diplomatic de-escalation talks regarding Iran eased supply disruption fears. Lower energy prices provided some relief to broader equity valuations even as bond markets wrestled with fiscal debt caps."
   },
   {
-   "factor": "Robust US Employment Report",
+   "factor": "Tech Volatility and VIX Compression",
    "efeito": "neutral",
-   "texto": "The US economy outstripped forecasts by adding 165,000 jobs in October, demonstrating a remarkably stable labor market. While supportive of broader economic growth, the resilient hiring data complicated bond market rallies and reinforced Fed hawkishness."
+   "texto": "The Cboe VIX equity volatility index fell -9.9% this month to 17.49 despite severe intraday swings in tech shares. While headline volatility contracted compared to peak panic sessions, single-stock turbulence remained exceptionally high due to the AI credit and debt scrutiny."
   }
  ],
  "themes": [
   {
-   "titulo": "AI Infrastructure Boom Meets Regulatory Backlash",
-   "texto": "The dizzying expansion of artificial intelligence faced its first major political and financial reckoning in November. Following the Democratic congressional sweep, lawmakers and voters pushed back against data centre expansions, with several states proposing moratoriums. Despite massive corporate spending plans—such as Anthropic targeting a valuation of up to $1.4 trillion in its upcoming IPO—investors began demanding tangible financial outcomes rather than endless capital expenditure."
+   "titulo": "The Great AI Reckoning and Credit Strain",
+   "texto": "The valuation of artificial intelligence infrastructure came under intense scrutiny as soaring corporate spending commitments collided with higher borrowing costs. Neocloud providers and chipmakers faced rising credit spreads, with some bond yields topping 16%. Analysts and institutional investors began questioning whether massive data center investments can generate sufficient near-term cash flows to justify their colossal debt footprints."
   },
   {
-   "titulo": "Bond Yields and Renewed Inflation Fears",
-   "texto": "Fixed-income markets experienced sharp turbulence as hotter inflation readings dashed hopes of imminent monetary policy relief. The US Treasury 2-year yield held steady at 4.56 on 9 November, while the 10-year yield dipped modestly by 6 basis points to 4.88. In the Euro area, the 2-year AAA yield edged up 1bp to 3.0186, while the 10-year yield eased 3bp to 3.3309, reflecting distinct regional economic pressures."
+   "titulo": "Central Banks and Stubborn Inflation Pressures",
+   "texto": "Persistent inflation readings across major economies forced central banks to maintain hawkish stances, defying hopes for imminent monetary easing. The Bank of England raised interest rates to 4% in its first hike in over three years, while US data pointed to a robust labor market adding 165,000 jobs in October. Consequently, bond yields pushed higher globally, tightening financial conditions for consumers and corporations alike."
   },
   {
-   "titulo": "Corporate Restructuring and Mega M&A Activity",
-   "texto": "Corporate boardrooms remained highly active despite broader market jitters, highlighted by massive consolidation in tech and healthcare. Marvell reached a landmark deal to acquire Lumentum, echoing historical dot-com scale transactions. Meanwhile, major companies like CVS Health announced plans to split their pharmacy and insurance operations to unlock shareholder value amid rising operational costs."
+   "titulo": "Blockbuster IPOs Meet Private Market Strain",
+   "texto": "High-profile public market debuts, notably Anthropic's targeted valuation of up to $1.4 trillion, acted as a litmus test for investor appetite amid tech sector volatility. While institutional demand remained strong with offerings heavily oversubscribed, venture capital and private equity firms faced growing pressure to streamline portfolios and execute exits amid tighter liquidity conditions."
   }
  ],
  "questoes": [
   {
-   "q": "Will Congress successfully pass restrictive AI legislation following the Democratic midterms sweep?",
-   "porque": "New oversight could severely curtail data centre buildouts and profitability for major tech firms.",
-   "sinais": "Introduction of specific bipartisan bills or federal moratorium proposals in the upcoming legislative session."
+   "q": "Will Nvidia recover its market dominance and find stable leadership after Jensen Huang's departure?",
+   "porque": "Nvidia's hardware monopoly has served as the primary engine for the global artificial intelligence boom over recent years.",
+   "sinais": "The outcome of the independent Wachtell Lipton investigation and the board's appointment of a permanent CEO."
   },
   {
-   "q": "How will the Federal Reserve respond to persistent inflation and robust employment data?",
-   "porque": "Sticky price pressures threaten to derail expectations of interest rate cuts and push yields higher.",
-   "sinais": "Upcoming FOMC statements and commentary from Federal Reserve officials regarding rate hike trajectories."
+   "q": "How aggressively will the Federal Reserve respond to sticky inflation and strong labor data?",
+   "porque": "Higher interest rates directly impact equity valuations, borrowing costs, and the viability of debt-funded tech buildouts.",
+   "sinais": "Upcoming consumer price index prints and Federal Open Market Committee rate projections."
   },
   {
-   "q": "Can upcoming blockbuster tech IPOs sustain investor enthusiasm amid governance scandals?",
-   "porque": "High-profile offerings like Anthropic test whether market appetite for artificial intelligence remains resilient.",
-   "sinais": "Final pricing, subscription demand, and post-listing performance of major initial public offerings."
+   "q": "Can upcoming blockbuster tech IPOs maintain their valuations amid heightened regulatory scrutiny?",
+   "porque": "Successful public listings are essential for unlocking liquidity across the broader venture capital and private equity ecosystems.",
+   "sinais": "Subscription levels and secondary market performance following initial public offerings."
   }
  ],
  "mercados": [
@@ -70,10 +70,10 @@
    "name": "S&P 500",
    "source": "S&P Dow Jones Indices",
    "kind": "price",
-   "value": 7520.93,
-   "asOf": "2026-11-10",
-   "chg": -0.8,
-   "ytd": 9.9,
+   "value": 7619.38,
+   "asOf": "2026-11-11",
+   "chg": 0.5,
+   "ytd": 11.3,
    "unit": "%"
   },
   {
@@ -81,10 +81,10 @@
    "name": "Nasdaq Composite",
    "source": "Nasdaq",
    "kind": "price",
-   "value": 25065.87,
-   "asOf": "2026-11-10",
-   "chg": -1.5,
-   "ytd": 7.8,
+   "value": 25466.19,
+   "asOf": "2026-11-11",
+   "chg": 0.1,
+   "ytd": 9.6,
    "unit": "%"
   },
   {
@@ -92,10 +92,10 @@
    "name": "VIX (US equity volatility)",
    "source": "Cboe",
    "kind": "level",
-   "value": 19.46,
-   "asOf": "2026-11-10",
-   "chg": 0.2,
-   "ytd": 30.2,
+   "value": 17.49,
+   "asOf": "2026-11-11",
+   "chg": -9.9,
+   "ytd": 17,
    "unit": "%"
   },
   {
@@ -103,10 +103,10 @@
    "name": "US Treasury 2-year yield",
    "source": "US Treasury / Federal Reserve",
    "kind": "yield",
-   "value": 4.56,
-   "asOf": "2026-11-09",
-   "chg": 0,
-   "ytd": 109,
+   "value": 4.73,
+   "asOf": "2026-11-10",
+   "chg": 17,
+   "ytd": 126,
    "unit": "bp"
   },
   {
@@ -114,10 +114,10 @@
    "name": "US Treasury 10-year yield",
    "source": "US Treasury / Federal Reserve",
    "kind": "yield",
-   "value": 4.88,
-   "asOf": "2026-11-09",
-   "chg": -6,
-   "ytd": 70,
+   "value": 4.98,
+   "asOf": "2026-11-10",
+   "chg": 4,
+   "ytd": 80,
    "unit": "bp"
   },
   {
@@ -125,10 +125,10 @@
    "name": "Euro area 2-year yield (AAA)",
    "source": "European Central Bank",
    "kind": "yield",
-   "value": 3.0186,
-   "asOf": "2026-11-10",
-   "chg": 1,
-   "ytd": 91,
+   "value": 3.0452,
+   "asOf": "2026-11-11",
+   "chg": 4,
+   "ytd": 94,
    "unit": "bp"
   },
   {
@@ -136,10 +136,10 @@
    "name": "Euro area 10-year yield (AAA)",
    "source": "European Central Bank",
    "kind": "yield",
-   "value": 3.3309,
-   "asOf": "2026-11-10",
-   "chg": -3,
-   "ytd": 38,
+   "value": 3.3401,
+   "asOf": "2026-11-11",
+   "chg": -2,
+   "ytd": 39,
    "unit": "bp"
   },
   {
@@ -147,10 +147,10 @@
    "name": "EUR/USD",
    "source": "European Central Bank",
    "kind": "fx",
-   "value": 1.1127,
-   "asOf": "2026-11-11",
-   "chg": -0.4,
-   "ytd": -5.3,
+   "value": 1.1081,
+   "asOf": "2026-11-12",
+   "chg": -0.8,
+   "ytd": -5.7,
    "unit": "%"
   },
   {
@@ -169,95 +169,95 @@
    "name": "US high-yield credit spread",
    "source": "ICE BofA",
    "kind": "yield",
-   "value": 3.34,
-   "asOf": "2026-11-09",
-   "chg": -10,
-   "ytd": 53,
+   "value": 3.3,
+   "asOf": "2026-11-11",
+   "chg": -14,
+   "ytd": 49,
    "unit": "bp"
   }
  ],
  "momentos": [
   {
    "data": "2 Nov",
-   "facto": "Marvell agreed to acquire Lumentum in a massive multi-billion-dollar technology deal."
+   "facto": "Chip maker Marvell agreed to buy Lumentum in a massive AI connectivity deal as global stock markets opened lower."
   },
   {
    "data": "4 Nov",
-   "facto": "Democrats swept control of Congress in the US midterms, sparking a brief relief rally in equities."
+   "facto": "US stocks surged and the Dow scored its best day in 18 months following a Democratic sweep of Congress."
   },
   {
    "data": "5 Nov",
-   "facto": "Tech stocks suffered their worst sell-off since the pandemic as investors priced in AI regulatory risks."
+   "facto": "The Nasdaq suffered its worst daily drop since April 2025 as a $2.5 trillion AI panic gripped markets."
   },
   {
    "data": "6 Nov",
-   "facto": "US employment data showed the economy added 165,000 jobs in October, beating forecasts."
-  },
-  {
-   "data": "9 Nov",
-   "facto": "Nvidia hired law firm Wachtell Lipton to investigate its CEO following governance and spy scandal allegations."
+   "facto": "The Bank of England raised interest rates to 4%, marking its first rate increase in more than three years."
   },
   {
    "data": "10 Nov",
-   "facto": "Hot US inflation data sparked renewed rate-hike fears, sending bond yields sharply higher."
+   "facto": "Hotter-than-expected US inflation data sparked sharp spikes in Treasury bond yields and renewed rate-hike fears."
+  },
+  {
+   "data": "12 Nov",
+   "facto": "Jensen Huang resigned as CEO of Nvidia following mounting scandal investigations, sending shockwaves through the tech sector."
   }
  ],
  "numeros": [
   {
-   "valor": "7520.93",
-   "contexto": "The S&P 500 index level on 10 November 2026, down 0.8% for the month."
+   "valor": "7,619.38",
+   "contexto": "S&P 500 index level on November 11, reflecting a 0.5% gain month-to-date."
   },
   {
-   "valor": "25065.87",
-   "contexto": "The Nasdaq Composite index level on 10 November 2026, reflecting a 1.5% monthly decline."
+   "valor": "4.98",
+   "contexto": "US Treasury 10-year yield on November 10, up 4 basis points this month."
   },
   {
    "valor": "107.03",
-   "contexto": "Brent crude price in USD per barrel on 3 November 2026, down 10.9% over the month."
+   "contexto": "Brent crude price in USD per barrel on November 3, down 10.9% for the month."
   },
   {
-   "valor": "4.88",
-   "contexto": "The US Treasury 10-year yield on 9 November 2026, down 6 basis points this month."
+   "valor": "1.1081",
+   "contexto": "EUR/USD exchange rate on November 12, down 0.8% over the course of the month."
   },
   {
    "valor": "3.9%",
-   "contexto": "The official inflation rate in Portugal for October 2026 according to Eurostat."
+   "contexto": "Official inflation rate in Portugal for October 2026 measured via the HICP index."
   }
  ],
  "classes": [
   {
    "nome": "US Equities",
+   "balanco": "mixed",
+   "leitura": "Gained modestly overall despite severe intraday tech sell-offs and political volatility."
+  },
+  {
+   "nome": "Government Bonds",
    "balanco": "falling",
-   "leitura": "Pressured by tech sell-offs following the midterms and governance scandals, though up solidly year-to-date."
+   "leitura": "Yields rose significantly across US and European curves as hot inflation sparked rate-hike bets."
   },
   {
    "nome": "Crude Oil",
    "balanco": "falling",
-   "leitura": "Slumped sharply over the month due to rising hopes of diplomatic de-escalation in the Middle East."
+   "leitura": "Prices dropped sharply on diplomatic de-escalation hopes in the Middle East."
   },
   {
-   "nome": "US Treasuries",
+   "nome": "Foreign Exchange",
    "balanco": "mixed",
-   "leitura": "Yields experienced volatile swings, reacting to safe-haven flows during tech sell-offs and renewed inflation fears."
-  },
-  {
-   "nome": "Currencies (EUR/USD)",
-   "balanco": "falling",
-   "leitura": "The euro drifted lower against the US dollar, down 0.4% this month to 1.1127."
+   "leitura": "The US dollar weakened on political gridlock risks while the euro traded lower against major peers."
   },
   {
    "nome": "High-Yield Credit",
    "balanco": "steady",
-   "leitura": "US high-yield credit spreads tightened by 10bp this month to 3.34, showing resilience despite equity turbulence."
+   "leitura": "Spreads tightened slightly by 14bp overall, though underlying credit risk in AI debt remained elevated."
   }
  ],
  "vigiar": [
-  "Legislative actions and proposed regulations targeting artificial intelligence from the newly empowered US Congress.",
-  "Developments regarding the internal investigation at Nvidia and potential impacts on its Chinese market access.",
-  "Upcoming inflation releases and Federal Reserve commentary for definitive signals on future interest rate adjustments.",
-  "Market reception and final valuations for upcoming high-profile technology initial public offerings."
+  "The appointment of Nvidia's permanent CEO and findings from independent corporate investigations.",
+  "Incoming US consumer price inflation data and subsequent Federal Reserve rate trajectory signals.",
+  "Market reception and final valuation pricing for upcoming high-profile technology IPOs.",
+  "Congressional legislative proposals targeting artificial intelligence data centers and export controls."
  ],
- "days": 8,
+ "days": 9,
  "final": false,
- "generatedAt": "2026-11-11T22:21:26.234Z"
+ "generatedAt": "2026-11-12T21:56:23.804Z"
 }

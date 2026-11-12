@@ -1,89 +1,192 @@
 {
  "auto": true,
  "date": "2026-11-12",
- "basedOn": "2026-11-12T15:37:47.896Z",
- "generatedAt": "2026-11-12T15:38:03.356Z",
- "resumo": "Today's talk is mostly about **tech and stocks**. Rising: central-bank rates, the economy. Falling: stocks.",
+ "basedOn": "2026-11-12T21:55:32.942Z",
+ "generatedAt": "2026-11-12T21:55:50.404Z",
+ "resumo": "Global markets faced turbulence as **Nvidia's leadership crisis** and rising oil prices weighed on investor sentiment and bond yields.",
  "classes": [
   {
-   "nome": "Tecnologia",
-   "tendencia": "misto",
+   "nome": "Equities",
+   "tendencia": "falling",
    "forca": 3,
-   "leitura": "36 stories today. Top one: CoreWeave Jumps, Boosting the AI Trade (Wall Street Journal).",
+   "leitura": "Wall Street opened lower and stocks fell as Nvidia's CEO resigned amid scandals, dragging down tech sectors.",
    "a_favor": [
-    "CoreWeave Jumps, Boosting the AI Trade"
+    "Strong demand for upcoming IPOs",
+    "Some competitors advancing on news"
    ],
    "riscos": [
-    "Wall St opens lower after Nvidia CEO steps down"
+    "Leadership crisis at key tech bellwether",
+    "Higher oil prices squeezing broader markets"
    ],
-   "perfil": "Long horizon and tolerance for high volatility."
+   "perfil": "Suits investors with high risk tolerance comfortable with major tech volatility."
   },
   {
-   "nome": "Ações",
-   "tendencia": "a descer",
-   "forca": 3,
-   "leitura": "19 stories today. Top one: Nvidia Live Updates: Chip Giant&#x2019;s Stock Tumbles After Jensen Huang Exit (Wall Street Journal).",
+   "nome": "Bonds",
+   "tendencia": "falling",
+   "forca": 2,
+   "leitura": "A rally in oil prices lifted Treasury yields as the bond market faced strain from AI debt issuance.",
    "a_favor": [
-    "Turkey stocks higher at close of trade; BIST 100 up 1.24%"
+    "Higher yields offer better nominal return opportunities",
+    "Active issuance across corporate sectors"
    ],
    "riscos": [
-    "Nvidia Live Updates: Chip Giant&#x2019;s Stock Tumbles Afte…"
+    "Rising oil prices pressuring bond valuations",
+    "Bond market choking on heavy AI debt"
    ],
-   "perfil": "Long horizon and tolerance for temporary losses."
+   "perfil": "Suits income-focused investors watching interest rate and inflation shifts."
   },
   {
-   "nome": "Juros (bancos centrais)",
-   "tendencia": "a subir",
-   "forca": 3,
-   "leitura": "9 stories today. Top one: CFOs face a tough choice on AI spending as borrowing costs rise, expert warns (Fortune).",
+   "nome": "Commodities",
+   "tendencia": "rising",
+   "forca": 2,
+   "leitura": "Oil prices jumped, lifting energy costs while a copper ore shortage drove a pricing revolution.",
    "a_favor": [
-    "CFOs face a tough choice on AI spending as borrowing costs…"
+    "Surging oil prices driving energy sector momentum",
+    "Acute shortages boosting underlying commodity values"
    ],
-   "riscos": [],
-   "perfil": "Affects everyone's deposits, loans and bonds."
+   "riscos": [
+    "Higher energy costs feeding into everyday inflation",
+    "Logistical constraints limiting crude export volumes"
+   ],
+   "perfil": "Suits tactical investors willing to handle physical asset price swings."
   },
   {
-   "nome": "Economia",
-   "tendencia": "a subir",
+   "nome": "Currencies",
+   "tendencia": "mixed",
    "forca": 2,
-   "leitura": "5 stories today. Top one: These home buyers bought their first house with help from their employer. &#x2018;Why not jump at the chance?… (MarketWatch).",
+   "leitura": "The Japanese yen experienced jittery trading, breaching 160 per dollar before rebounding on intervention fears.",
    "a_favor": [
-    "These home buyers bought their first house with help from t…"
+    "High volatility offering short-term trading opportunities",
+    "Active central bank and policy surveillance"
    ],
-   "riscos": [],
-   "perfil": "Background for saving and investing decisions."
-  },
-  {
-   "nome": "Fundos",
-   "tendencia": "estável",
-   "forca": 2,
-   "leitura": "4 stories today. Top one: Brookfield Earnings Buoyed by Fund Raising, Wealth Solutions Growth (Wall Street Journal).",
-   "a_favor": [],
-   "riscos": [],
-   "perfil": "People who want to diversify with professional management."
-  },
-  {
-   "nome": "Matérias-primas",
-   "tendencia": "estável",
-   "forca": 2,
-   "leitura": "3 stories today. Top one: Oil prices mixed after Trump says no Iran deal needed: 'We've got their Strait' (CNBC).",
-   "a_favor": [],
-   "riscos": [],
-   "perfil": "A small slice of a portfolio, for diversification only."
-  },
-  {
-   "nome": "Inflação",
-   "tendencia": "estável",
-   "forca": 1,
-   "leitura": "2 stories today. Top one: The Inflation Fight May Be About to Turn Painful (Wall Street Journal).",
-   "a_favor": [],
-   "riscos": [],
-   "perfil": "Affects everyone's purchasing power."
+   "riscos": [
+    "Unpredictable breakouts challenging traditional trading strategies",
+    "Sudden policy interventions causing sharp reversals"
+   ],
+   "perfil": "Suits active traders monitoring global foreign exchange fluctuations."
   }
  ],
  "temas": [
-  "Concentration: the risk of betting on one sector",
-  "Volatility is not the same as losing money",
-  "What the ECB does and why it touches your money"
- ]
+  "AI sector leadership and governance",
+  "Corporate debt and infrastructure spending",
+  "Global currency and commodity shifts"
+ ],
+ "ai": true,
+ "brief": {
+  "one_liner": "Wall Street took a breather as Nvidia lost its captain, reminding us that even tech titans aren't immune to drama.",
+  "number": {
+   "value": "4%",
+   "caption": "Euro area inflation rate as of October 2026"
+  },
+  "stories": [
+   {
+    "i": 16,
+    "title": "Nvidia stumbles as Jensen Huang steps down from the throne",
+    "whats_going_on": "Nvidia shares slid — dropping up to 14% at one point before recovering slightly — after long-time chief executive Jensen Huang resigned amid multiplying scandals. The board tapped CFO Colette Kress as interim chief while tech investor Harvey Jones was appointed as the company's first-ever board chair.",
+    "what_it_means": "The sudden departure of a defining tech visionary has rattled investors who built the entire artificial intelligence market rally around his leadership. Wall Street opened lower across the board as markets digested the leadership crisis at the world's most valuable chipmaker.",
+    "why_care": "If your pension fund or index tracker holds US equities, tech turbulence like this is a timely reminder of how quickly sentiment can shift when a star CEO departs."
+   },
+   {
+    "i": 36,
+    "title": "Anthropic IPO sees six times oversubscription despite market nerves",
+    "whats_going_on": "Artificial intelligence start-up Anthropic has drawn about six times the orders for its available shares ahead of its initial public offering. The massive demand comes even as broader market jitters and tech sector volatility threaten to derail major listings.",
+    "what_it_means": "Investor appetite for artificial intelligence newcomers remains remarkably fierce, proving that capital is still eager to chase the next big market disruptor. It marks a striking counterweight to the caution currently weighing down older tech giants.",
+    "why_care": "Massive initial public offerings can reshape tech indices and mutual funds, though buying into freshly listed hype always carries steep volatility risks for retail portfolios."
+   },
+   {
+    "i": 33,
+    "title": "The yen bounces back after breaching the 160 threshold",
+    "whats_going_on": "The Japanese yen tumbled past the closely watched 160-per-dollar level in jittery trading, before abruptly rebounding. Speculation quickly mounted that a deeper slide would force Japanese policymakers to step in and support the currency once again.",
+    "what_it_means": "Currency swings of this magnitude highlight the fragile state of global foreign exchange markets as central banks wrestle with shifting interest rate expectations. Traders remain on high alert for any sudden market interventions from Tokyo.",
+    "why_care": "Major currency fluctuations can quietly influence the cost of imported goods and international travel, while adding an extra layer of spice for global investors."
+   },
+   {
+    "i": 31,
+    "title": "Oil rally lifts Treasury yields as Wall Street digests risk",
+    "whats_going_on": "A sharp jump in oil prices dragged down global bond markets and pushed US Treasury yields higher. The commodity surge coincided with a broader risk-off mood as Wall Street reacted to corporate governance turmoil in the tech sector.",
+    "what_it_means": "When energy prices climb, they tend to stoke renewed fears about stubborn inflation eating into corporate margins and consumer purchasing power. Bond yields respond by rising, reflecting tighter financial conditions.",
+    "why_care": "Rising bond yields generally push up borrowing costs across the wider economy, which eventually trickles down to everything from mortgages to corporate loans."
+   }
+  ],
+  "basedOn": "2026-11-12T21:55:32.942Z",
+  "generatedAt": "2026-11-12T21:56:02.881Z"
+ },
+ "pack": {
+  "carousel": {
+   "title": "Why tech shares are feeling the heat",
+   "slides": [
+    {
+     "kind": "hook",
+     "h": "Is your **pension** too exposed here?",
+     "big": "",
+     "t": ""
+    },
+    {
+     "kind": "stat",
+     "h": "Big **drops** can happen very fast",
+     "big": "14%",
+     "t": "Nvidia shares slid sharply after the chief executive resigned amid multiple scandals."
+    },
+    {
+     "kind": "point",
+     "h": "Star **bosses** carry a lot of weight",
+     "big": "",
+     "t": "When a famous leader steps down unexpectedly, market sentiment can shift in an instant."
+    },
+    {
+     "kind": "myth",
+     "h": "\"Index trackers are **risk free**\"",
+     "big": "",
+     "t": "Even broad funds hold large tech names that feel the pinch when big news hits."
+    },
+    {
+     "kind": "point",
+     "h": "Check your **portfolio** for tech weight",
+     "big": "",
+     "t": "Make sure you know how much of your savings relies on a handful of giant companies."
+    },
+    {
+     "kind": "cta",
+     "h": "Save this and **follow** PaperMint",
+     "big": "",
+     "t": "Get clear money news without the jargon every single day."
+    }
+   ]
+  },
+  "linkedin": "Tech markets had quite a week after Nvidia shares tumbled up to 14% following the resignation of long-time chief executive Jensen Huang. The board stepped in quickly, naming CFO Colette Kress as interim chief, but it serves as a sharp reminder for everyday savers.\n\nIf you hold global index trackers or a workplace pension, you likely own a slice of these tech giants. When corporate governance drama hits a bellwether stock, volatility ripples through broader portfolios.\n\nAt the same time, Anthropic saw massive demand for its IPO despite broader market nerves, showing that appetite for artificial intelligence remains strong even as tech sector turbulence plays out.\n\nFor everyday investors, it is a timely prompt to check your diversification. Past performance is never a guide to the future, and leaning too heavily on a single sector can make for a bumpy ride.\n\n#Investing #PersonalFinance #PaperMint",
+  "reel": {
+   "hook": "Why a tech CEO resigning can shake up your pension.",
+   "script": [
+    "Nvidia shares just tumbled up to fourteen percent.",
+    "The long-time chief executive stepped down amid sudden scandals.",
+    "If you hold global index funds, you own that turbulence.",
+    "Star bosses carry massive weight in your portfolio.",
+    "Check your diversification and follow PaperMint for more."
+   ],
+   "caption": "Tech drama reminds us why diversification matters for everyday savers. Follow PaperMint for clear financial news."
+  },
+  "faq": [
+   {
+    "q": "Why did Nvidia shares drop so sharply?",
+    "a": "The shares fell after long-time chief executive Jensen Huang resigned amid multiplying corporate governance scandals. The board appointed the current CFO as interim chief while sorting out leadership."
+   },
+   {
+    "q": "How does tech turbulence affect my pension?",
+    "a": "Most workplace pensions and global index trackers hold large US tech companies. When those bellwether stocks stumble, the overall value of your fund can experience sudden short-term drops."
+   },
+   {
+    "q": "What happens during a major initial public offering?",
+    "a": "A high-profile stock market debut lets a private company sell shares to the public for the first time. Massive demand can happen even during market nerves, though freshly listed shares often carry steep volatility."
+   },
+   {
+    "q": "Why did the Japanese yen jump around recently?",
+    "a": "The yen tumbled past the closely watched 160-per-dollar threshold before rebounding. Speculation quickly grew that policymakers might step in to support the currency."
+   },
+   {
+    "q": "How do rising oil prices affect bond markets?",
+    "a": "A sharp jump in commodity prices can drag down global bond markets and push treasury yields higher. Higher yields generally push up borrowing costs across the wider economy."
+   }
+  ],
+  "generatedAt": "2026-11-12T21:56:08.766Z"
+ }
 }
