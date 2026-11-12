@@ -1,0 +1,89 @@
+{
+ "auto": true,
+ "date": "2026-11-12",
+ "basedOn": "2026-11-12T15:37:47.896Z",
+ "generatedAt": "2026-11-12T15:38:03.356Z",
+ "resumo": "Today's talk is mostly about **tech and stocks**. Rising: central-bank rates, the economy. Falling: stocks.",
+ "classes": [
+  {
+   "nome": "Tecnologia",
+   "tendencia": "misto",
+   "forca": 3,
+   "leitura": "36 stories today. Top one: CoreWeave Jumps, Boosting the AI Trade (Wall Street Journal).",
+   "a_favor": [
+    "CoreWeave Jumps, Boosting the AI Trade"
+   ],
+   "riscos": [
+    "Wall St opens lower after Nvidia CEO steps down"
+   ],
+   "perfil": "Long horizon and tolerance for high volatility."
+  },
+  {
+   "nome": "Ações",
+   "tendencia": "a descer",
+   "forca": 3,
+   "leitura": "19 stories today. Top one: Nvidia Live Updates: Chip Giant&#x2019;s Stock Tumbles After Jensen Huang Exit (Wall Street Journal).",
+   "a_favor": [
+    "Turkey stocks higher at close of trade; BIST 100 up 1.24%"
+   ],
+   "riscos": [
+    "Nvidia Live Updates: Chip Giant&#x2019;s Stock Tumbles Afte…"
+   ],
+   "perfil": "Long horizon and tolerance for temporary losses."
+  },
+  {
+   "nome": "Juros (bancos centrais)",
+   "tendencia": "a subir",
+   "forca": 3,
+   "leitura": "9 stories today. Top one: CFOs face a tough choice on AI spending as borrowing costs rise, expert warns (Fortune).",
+   "a_favor": [
+    "CFOs face a tough choice on AI spending as borrowing costs…"
+   ],
+   "riscos": [],
+   "perfil": "Affects everyone's deposits, loans and bonds."
+  },
+  {
+   "nome": "Economia",
+   "tendencia": "a subir",
+   "forca": 2,
+   "leitura": "5 stories today. Top one: These home buyers bought their first house with help from their employer. &#x2018;Why not jump at the chance?… (MarketWatch).",
+   "a_favor": [
+    "These home buyers bought their first house with help from t…"
+   ],
+   "riscos": [],
+   "perfil": "Background for saving and investing decisions."
+  },
+  {
+   "nome": "Fundos",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "4 stories today. Top one: Brookfield Earnings Buoyed by Fund Raising, Wealth Solutions Growth (Wall Street Journal).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "People who want to diversify with professional management."
+  },
+  {
+   "nome": "Matérias-primas",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "3 stories today. Top one: Oil prices mixed after Trump says no Iran deal needed: 'We've got their Strait' (CNBC).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "A small slice of a portfolio, for diversification only."
+  },
+  {
+   "nome": "Inflação",
+   "tendencia": "estável",
+   "forca": 1,
+   "leitura": "2 stories today. Top one: The Inflation Fight May Be About to Turn Painful (Wall Street Journal).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Affects everyone's purchasing power."
+  }
+ ],
+ "temas": [
+  "Concentration: the risk of betting on one sector",
+  "Volatility is not the same as losing money",
+  "What the ECB does and why it touches your money"
+ ]
+}
