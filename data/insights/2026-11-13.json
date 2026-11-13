@@ -1,139 +1,193 @@
 {
  "auto": true,
  "date": "2026-11-13",
- "basedOn": "2026-11-13T14:56:25.134Z",
- "generatedAt": "2026-11-13T14:56:43.498Z",
- "resumo": "**Markets face choppy conditions** as tech leadership scandals and inflation pressures weigh on sentiment.",
+ "basedOn": "2026-11-13T21:40:00.874Z",
+ "generatedAt": "2026-11-13T21:40:07.576Z",
+ "resumo": "Global markets faced turbulence this week as **tech stocks slumped** amid leadership changes, while inflation data and rate hike bets impacted bonds and gold.",
  "classes": [
   {
    "nome": "Equities",
    "tendencia": "mixed",
    "forca": 2,
-   "leitura": "Global stocks face turbulence as major technology firm leadership changes and political scrutiny rattle valuations.",
+   "leitura": "Chipmaker shares fell and tech valuations faced heavy pressure, though some healthcare and food stocks rose.",
    "a_favor": [
-    "Major enterprises remain highly valuable",
-    "Value funds offer unexpected exposure paths"
+    "Strong upcoming initial public offerings",
+    "Soft producer prices data"
    ],
    "riscos": [
-    "Tech sector leadership crisis",
-    "Regulatory probes and political scrutiny"
+    "Executive departures and tech sector turmoil",
+    "AI spending and concentration risks"
    ],
-   "perfil": "Suits investors with a higher risk tolerance focused on long-term capital growth."
+   "perfil": "Suits investors seeking growth who can tolerate high volatility."
+  },
+  {
+   "nome": "Government Bonds",
+   "tendencia": "falling",
+   "forca": 1,
+   "leitura": "Treasuries suffered their worst week since March due to higher-than-expected inflation and hawkish central bank remarks.",
+   "a_favor": [
+    "Higher yields on fixed income"
+   ],
+   "riscos": [
+    "Persistent energy-driven inflation",
+    "Expectations of further interest rate hikes"
+   ],
+   "perfil": "Suits conservative investors focused on income generation."
   },
   {
    "nome": "Commodities",
-   "tendencia": "mixed",
-   "forca": 1,
-   "leitura": "Oil prices show mixed movements as supply swings back to surplus alongside ongoing geopolitical tensions.",
-   "a_favor": [
-    "Global oil supply returns to surplus",
-    "Geopolitical tensions support price levels"
-   ],
-   "riscos": [
-    "Uncertainty over regional conflicts",
-    "Fluctuating global demand patterns"
-   ],
-   "perfil": "Suits experienced investors prepared for high short-term price volatility."
-  },
-  {
-   "nome": "Cryptocurrency",
    "tendencia": "falling",
    "forca": 1,
-   "leitura": "Digital assets face headwinds as law enforcement actions target massive illicitly acquired holdings.",
+   "leitura": "Gold headed for its worst week since March as traders priced in tighter monetary policy.",
    "a_favor": [
-    "High digital asset adoption interest",
-    "Ongoing technological integration in finance"
+    "Global oil markets swinging to surplus"
    ],
    "riscos": [
-    "Major law enforcement asset seizures",
-    "Regulatory and security interventions"
+    "Mounting interest rate hike bets",
+    "Stronger currency weighing on precious metals"
    ],
-   "perfil": "Suits speculative investors comfortable with extreme volatility and regulatory risk."
+   "perfil": "Suits diversified portfolios seeking inflation hedges."
+  },
+  {
+   "nome": "Currencies",
+   "tendencia": "rising",
+   "forca": 2,
+   "leitura": "The dollar wrapped up its best week in over a month, driven by rising rate hike expectations.",
+   "a_favor": [
+    "Growing rate hike expectations"
+   ],
+   "riscos": [
+    "Unpredictable macroeconomic policy shifts"
+   ],
+   "perfil": "Suits institutional or tactical foreign exchange participants."
   }
  ],
  "temas": [
-  "Understanding equity market volatility",
-  "Navigating corporate leadership risks",
-  "Interpreting inflation and producer prices",
-  "The impact of geopolitical events on markets"
+  "Inflation and interest rate expectations",
+  "Market volatility and risk concentration",
+  "Initial public offerings and valuations",
+  "Financial system risks from new technology"
  ],
  "ai": true,
+ "brief": {
+  "one_liner": "Tech turbulence and shifting rate expectations gave markets a wild ride this week, proving steady nerves are a saver's best asset.",
+  "number": {
+   "value": "4%зия",
+   "caption": "Euro area inflation rate recorded in October 2026 by Eurostat"
+  },
+  "stories": [
+   {
+    "i": 28,
+    "title": "Gold glitters a little less as rate hike bets grow",
+    "whats_going_on": "Gold is heading for its worst week since March as traders bet that persistent energy-driven inflation will lead to more Federal Reserve tightening. Higher interest rate expectations make non-yielding assets like gold a tougher sell for cautious portfolios.",
+    "what_it_means": "Precious metals often take a hit when central banks signal higher borrowing costs to tame rising prices. Investors shift focus toward cash and fixed-income assets that offer actual yields when rates climb.",
+    "why_care": "If you hold commodities or precious metals, expect a bumpy ride while global central banks recalibrate their next interest rate moves.",
+    "i_alt": 28
+   },
+   {
+    "i": 41,
+    "title": "US bonds suffer worst week since Trump's liberation day",
+    "whats_going_on": "US Treasuries are on track for their worst week since Trump’s liberation day following higher-than-expected inflation figures and hawkish remarks from Federal Reserve officials. Investors who previously bet that the global bond rout was over are now rethinking their strategies.",
+    "what_it_means": "Bond yields climb when prices fall, reflecting a market that suddenly expects borrowing costs to stay higher for longer. This repricing ripples across global debt markets, altering returns for fixed-income assets.",
+    "why_care": "Higher bond yields can influence broader lending costs, reminding savers and lenders that debt markets remain sensitive to sticky inflation surprises.",
+    "i_alt": 41
+   },
+   {
+    "i": 39,
+    "title": "Oil markets swing to surplus as Gulf shipments rebound",
+    "whats_going_on": "Global oil markets have swung into a surplus as Gulf shipments rebound following disruptions. IEA analysts warn it will take months to rebuild stockpiles that were heavily depleted during the recent US-Iran conflict.",
+    "what_it_means": "A return to supply surplus usually eases immediate pressure on energy pumps after a period of intense geopolitical friction. However, rebuilding depleted national reserves takes time and keeps supply chains sensitive.",
+    "why_care": "Smoother energy flows help curb household utility bills and petrol costs, offering a welcome break for everyday household budgets.",
+    "i_alt": 39
+   },
+   {
+    "i": 58,
+    "title": "Nvidia slump deepens as market value sinks by trillions",
+    "whats_going_on": "Nvidia stock suffered its longest weekly losing streak since 2012, with its market value sinking by $1.7 trillion amid leadership changes and broader tech sector jitters. Jensen Huang's unexpected resignation added fresh volatility to a stock already sliding since early October.",
+    "what_it_means": "High-flying tech giants occasionally face heavy weather when executive departures coincide with questions over lofty valuations and future AI spending. Such sharp pullbacks test the resolve of investors heavily exposed to single-sector momentum.",
+    "why_care": "If you own tech-heavy index funds or pensions, massive swings in bellwether stocks like Nvidia serve as a stark reminder of the risks tied to market concentration.",
+    "i_alt": 58
+   }
+  ],
+  "basedOn": "2026-11-13T21:40:00.874Z",
+  "generatedAt": "2026-11-13T21:40:13.657Z"
+ },
  "pack": {
   "carousel": {
-   "title": "Why your savings account needs a rethink",
+   "title": "Why oil surpluses help your **wallet**",
    "slides": [
     {
      "kind": "hook",
-     "h": "Are your **savings** losing value?",
+     "h": "Are your **energy bills** finally dropping?",
      "big": "",
      "t": ""
     },
     {
      "kind": "stat",
-     "h": "Current **inflation** rate in Portugal",
-     "big": "3.9%",
-     "t": "Prices keep rising faster than standard deposit rates."
+     "h": "Gulf shipments are boosting **global supplies**",
+     "big": "surplus",
+     "t": "Oil markets swing as shipments rebound from recent disruptions."
     },
     {
      "kind": "point",
-     "h": "Cash in the **bank** loses power",
+     "h": "Smoother energy flows **ease pressure**",
      "big": "",
-     "t": "When prices rise by 3.9%, static cash buys less over time."
+     "t": "Lower crude costs help curb household utility bills and petrol prices."
     },
     {
      "kind": "myth",
-     "h": "\"My bank **rate** protects me\"",
+     "h": "\"Global markets **never** bounce back\"",
      "big": "",
-     "t": "New term deposits average 1.83%, which trails behind inflation."
+     "t": "Supplies can recover quickly once supply chains and shipments resume."
     },
     {
      "kind": "point",
-     "h": "What you can **do** now",
+     "h": "What this means for **your budget**",
      "big": "",
-     "t": "Review your cash goals and check what your money actually earns."
+     "t": "Enjoy a welcome break on everyday household costs while prices stabilize."
     },
     {
      "kind": "cta",
-     "h": "Save this **post** and follow us",
+     "h": "Save this post and **follow** PaperMint",
      "big": "",
-     "t": "Follow PaperMint for fresh money news without the jargon."
+     "t": "Never miss fresh money news."
     }
    ]
   },
-  "linkedin": "We need to talk about what your cash is actually doing in the background.\n\nRecent data shows inflation in Portugal sitting at 3.9%, while new term deposits are averaging around 1.83%. Put simply, if your savings sit in a standard account, their purchasing power is quietly shrinking.\n\nIt is easy to assume that leaving money untouched is the safest option. But in a changing economic climate, safety has a hidden cost. Understanding how inflation interacts with your interest rates is one of the most practical steps you can take for your personal finances.\n\nTake five minutes today to check the actual return on your savings. Knowledge is your best defence.\n\n#PersonalFinance #Savings #PaperMint",
+  "linkedin": "Global markets are sending mixed signals this week, and everyday savers might be wondering how it affects them.\n\nFirst, the good news: global oil markets have swung into a surplus as Gulf shipments rebound. For households, smoother energy flows help curb utility bills and petrol costs, offering a welcome break for monthly budgets after months of volatility.\n\nOn the flip side, persistent inflation fears are hitting other assets. US Treasuries are facing their worst week in months following sticky inflation figures, while gold prices take a hit as traders price in tighter monetary policy. Meanwhile, tech bellwethers like Nvidia are seeing major market value swings, reminding us why portfolio diversification matters so much.\n\nWhen markets get bumpy, stick to your long-term plan, keep an eye on your fixed costs, and remember that headlines come and go.\n\n#PersonalFinance #Investing #PaperMint",
   "reel": {
-   "hook": "Why keeping all your cash in a bank might cost you.",
+   "hook": "Why falling oil prices are finally giving your wallet a break.",
    "script": [
-    "Inflation in Portugal is currently at 3.9%.",
-    "Meanwhile, new term deposits sit at just 1.83%.",
-    "That means your saved cash loses purchasing power over time.",
-    "Don't leave your money sitting idle without checking the details.",
-    "Follow PaperMint for daily finance news made simple."
+    "Global oil markets have officially swung into a surplus.",
+    "Why? Because Gulf shipments are finally rebounding.",
+    "For you, that means lower utility bills and petrol costs.",
+    "It is a much-needed break for your everyday budget.",
+    "Follow PaperMint for finance news made simple."
    ],
-   "caption": "Is inflation quietly eating your savings? Here is what the latest numbers mean for your everyday money. #PaperMint #Finance"
+   "caption": "Oil surpluses are finally easing household energy costs. Here is what you need to know about your budget this week."
   },
   "faq": [
    {
-    "q": "What is the current inflation rate in Portugal?",
-    "a": "Eurostat data for October 2026 puts annual inflation in Portugal at 3.9%. The twelve-month average sits at 2.9%."
+    "q": "Why are oil markets suddenly swinging into a surplus?",
+    "a": "Global oil markets have shifted as Gulf shipments rebound following previous disruptions. Analysts note that smoother energy flows are helping to rebuild depleted stockpiles."
    },
    {
-    "q": "How do term deposit rates compare to inflation?",
-    "a": "Data for September 2026 shows new term deposits in Portugal averaging 1.83%. This sits below the current inflation rate."
+    "q": "How do oil surpluses affect my household budget?",
+    "a": "When crude supplies increase and oil flows smoothly, it helps curb household utility bills and petrol costs. This offers a welcome break for everyday spending."
    },
    {
-    "q": "What is the current ECB deposit rate?",
-    "a": "The European Central Bank deposit rate has remained at 2.5% since September 2026."
+    "q": "Why are US bonds having such a bad week?",
+    "a": "US Treasuries faced their worst week since Trump's liberation day due to higher-than-expected inflation figures. Hawkish remarks from Federal Reserve officials also added pressure on debt markets."
    },
    {
-    "q": "What is the 12-month Euribor rate?",
-    "a": "The 12-month Euribor averaged 3.239% in October 2026. This rate often influences variable mortgage pricing."
+    "q": "Why is the gold price dropping right now?",
+    "a": "Gold is heading for its worst week since March as traders bet on tighter monetary policy. Higher interest rate expectations make non-yielding assets less attractive for cautious portfolios."
    },
    {
-    "q": "What was the average new mortgage rate in Portugal?",
-    "a": "Data from September 2026 shows the average new mortgage rate in Portugal was 3.06%."
+    "q": "What do Nvidia's recent stock swings mean for me?",
+    "a": "Nvidia suffered its longest losing streak since 2012 amid leadership changes and tech jitteriness. If you own broad index funds or pensions, massive swings in bellwether stocks highlight the risks of market concentration."
    }
   ],
-  "generatedAt": "2026-11-13T14:57:17.717Z"
+  "generatedAt": "2026-11-13T21:40:20.419Z"
  }
 }

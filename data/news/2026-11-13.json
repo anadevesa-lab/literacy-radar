@@ -2,590 +2,6 @@
  "date": "2026-11-13",
  "items": [
   {
-   "source": "Wall Street Journal",
-   "category": "Fundos",
-   "published": "13 Nov",
-   "title": "The Stock Market&#x2019;s Bargain Bin Is Secretly Stuffed With AI Stocks",
-   "summary": "Value funds don&#x2019;t always offer the exposure to cheap, boring stocks that investors might expect.",
-   "url": "https://www.wsj.com/finance/investing/the-stock-markets-bargain-bin-is-secretly-stuffed-with-ai-stocks-8fa3edbe?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Obrigações",
-   "published": "13 Nov",
-   "title": "How the AI Trade Hijacked the Treasury Market for a Month",
-   "summary": "Plus, Nvidia enters its next phase, and Microsoft&#x2019;s global outage",
-   "url": "https://www.wsj.com/finance/stocks/how-the-ai-trade-hijacked-the-treasury-market-for-a-month-3fa26a9f?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Bolsa",
-   "published": "13 Nov",
-   "title": "CVS Breakup Won&#x2019;t Satisfy Washington. It Could Still Work for Wall Street.",
-   "summary": "Spinning off its drugstores won&#x2019;t quiet CVS&#x2019;s critics, but it could leave shareholders with a more valuable company.",
-   "url": "https://www.wsj.com/health/healthcare/cvs-breakup-wont-satisfy-washington-it-could-still-work-for-wall-street-1b5004e3?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "13 Nov",
-   "title": "AI Bots Are Using Credit Cards. Banks Are Racing to Keep Up.",
-   "summary": "Stripe is positioning itself as a key cog for agentic commerce, while JPMorgan Chase is a skeptic.",
-   "url": "https://www.wsj.com/finance/ai-bots-are-using-credit-cards-banks-are-racing-to-keep-up-c30dda30?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Bolsa",
-   "published": "12 Nov",
-   "title": "Jensen Huang&#x2019;s Exit Will Test AI&#x2019;s Stocks, and Great-Man Theory",
-   "summary": "Nvidia&#x2019;s crisis divides the AI trade between companies dependent on Huang&#x2019;s patronage, and those that didn&#x2019;t need his chips or financing deals.",
-   "url": "https://www.wsj.com/finance/stocks/jensen-huangs-exit-will-test-ais-stocks-and-great-man-theory-3c4cd404?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Mercados",
-   "published": "12 Nov",
-   "title": "Cravath Employee Is Charged With Insider Trading Using Confidential Deal Information",
-   "summary": "Prosecutors said the employee netted $70,000 in profits related to client matters including Paramount&#x2019;s acquisition of Warner Bros.",
-   "url": "https://www.wsj.com/finance/regulation/cravath-employee-is-charged-with-insider-trading-using-confidential-deal-information-a5cdd0a9?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "12 Nov",
-   "title": "Nvidia Shareholders Won&#x2019;t Miss Jensen Huang for Long",
-   "summary": "Steadier hands could be better suited to enriching shareholders as the AI chip company enters a new phase.",
-   "url": "https://www.wsj.com/finance/stocks/nvidia-shareholders-wont-miss-jensen-huang-for-long-13429e31?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Mercados",
-   "published": "12 Nov",
-   "title": "Metro Bank Hangs Up &#x2018;For Sale&#x2019; Sign",
-   "summary": "The lender said Thursday that it wasn&#x2019;t in any active discussions and it hadn&#x2019;t received an approach for a potential takeover.",
-   "url": "https://www.wsj.com/business/deals/metro-bank-hangs-up-for-sale-sign-6a1e3da4?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Mercados",
-   "published": "13 Nov",
-   "title": "Kraft Heinz Plans to Bring New Life to Old Brands",
-   "summary": "Some of the best analysis and insight on investing, the wealth-management business and more.",
-   "url": "https://www.wsj.com/finance/investing/kraft-heinz-plans-to-bring-new-life-to-old-brands-8aa9f069?mod=rss_markets_main"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "13 Nov",
-   "title": "A Timeline of the Scandals That Brought Down Nvidia CEO Jensen Huang",
-   "summary": "The world&#x2019;s most consequential AI CEO is out after two affairs&#x2014;one with a suspected spy. Here&#x2019;s how it all unfolded.",
-   "url": "https://www.wsj.com/tech/ai/a-timeline-of-nvidia-ceo-jensen-huangs-suspected-spy-drama-05cbebf3?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Bolsa",
-   "published": "13 Nov",
-   "title": "The Morning Risk Report: Huang&#x2019;s Departure From Nvidia Unlikely to Mollify Congress, Plaintiffs&#x2019; Lawyers",
-   "summary": "Plus: Super Micro stock falls after DOJ probe and commissioners target insurance industry.",
-   "url": "https://www.wsj.com/risk-compliance-journal/the-morning-risk-report-huangs-departure-from-nvidia-unlikely-to-mollify-congress-plaintiffs-lawyers-baf11ad1?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "13 Nov",
-   "title": "The Leadership Message in the Nvidia Saga",
-   "summary": "",
-   "url": "https://www.wsj.com/business/the-leadership-message-in-the-nvidia-saga-407cd688?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "13 Nov",
-   "title": "They Were the Indispensable CEOs&#x2014;Until They Weren&#x2019;t",
-   "summary": "What Nvidia can learn from other companies that lost their seemingly irreplaceable leaders.",
-   "url": "https://www.wsj.com/business/they-were-the-indispensable-ceosuntil-they-werent-1bb8a52c?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "13 Nov",
-   "title": "Jensen Huang&#x2019;s Downfall Is a Sign of Silicon Valley&#x2019;s Power Drain",
-   "summary": "The chorus of support among the tech elite for Nvidia&#x2019;s co-founder underscores the seismic shifting of power under way within the industry.",
-   "url": "https://www.wsj.com/tech/jensen-huang-nvidia-silicon-valley-ce74b63f?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "13 Nov",
-   "title": "AI Bots Are Using Credit Cards. Banks Are Racing to Keep Up.",
-   "summary": "Stripe is positioning itself as a key cog for agentic commerce, while JPMorgan Chase is a skeptic.",
-   "url": "https://www.wsj.com/finance/ai-bots-are-using-credit-cards-banks-are-racing-to-keep-up-c30dda30?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "12 Nov",
-   "title": "Nvidia&#x2019;s Meteoric Rise, in One Chart",
-   "summary": "A once-modest company soared after ChatGPT unleashed demand for its chips.",
-   "url": "https://www.wsj.com/tech/nvidias-meteoric-rise-in-one-chart-2f47d54e?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "12 Nov",
-   "title": "How a Human Actor Prepared to Play an AI Character",
-   "summary": "On the CBS legal drama &#x201c;Cupertino,&#x201d; actor Rob McClure portrays a hyper-realistic AI model who wants to sue his creators for removing his guardrails.",
-   "url": "https://www.wsj.com/arts-culture/television/cupertino-cbs-rob-mcclure-bo-ai-97b9eebd?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Tecnologia",
-   "published": "12 Nov",
-   "title": "Jensen Huang Built Nvidia. Its Chips Made the AI Boom Possible.",
-   "summary": "Nvidia&#x2019;s first and only CEO turned semiconductors designed for videogames into the engine of the next technology revolution.",
-   "url": "https://www.wsj.com/tech/ai/jensen-huang-nvidia-ceo-departs-bef1b4bb?mod=rss_Technology"
-  },
-  {
-   "source": "Wall Street Journal",
-   "category": "Mercados",
-   "published": "12 Nov",
-   "title": "Health Care Roundup: Market Talk",
-   "summary": "Find insight on Moderna, Merck KGaA and more in the latest Market Talks covering the health care sector.",
-   "url": "https://www.wsj.com/business/health-care-roundup-market-talk-1f3d97b8?mod=rss_Technology"
-  },
-  {
-   "source": "The Economist",
-   "category": "Mercados",
-   "published": "12 Nov",
-   "title": "The return of the snatch-and-grab state",
-   "summary": "A new history of confiscation sheds light on modern economic warfare",
-   "url": "https://www.economist.com/finance-and-economics/2026/11/12/the-return-of-the-snatch-and-grab-state"
-  },
-  {
-   "source": "The Economist",
-   "category": "Bolsa",
-   "published": "12 Nov",
-   "title": "Where to find the anti-AI trade",
-   "summary": "The worse chipmakers do, the better Indian equities perform",
-   "url": "https://www.economist.com/finance-and-economics/2026/11/12/where-to-find-the-anti-ai-trade"
-  },
-  {
-   "source": "The Economist",
-   "category": "Mercados",
-   "published": "12 Nov",
-   "title": "Italy’s proposed exit tax causes ructions",
-   "summary": "Taxing rich emigrants’ capital gains may be good in theory. Practice is harder",
-   "url": "https://www.economist.com/finance-and-economics/2026/11/12/italys-proposed-exit-tax-causes-ructions"
-  },
-  {
-   "source": "CNBC",
-   "category": "Bolsa",
-   "published": "13 Nov",
-   "title": "Wholesale prices rose 0.3% in October, putting annual rate at 6.5%, the highest in nearly four years",
-   "summary": "The producer price index was expected to increase 0.4% in October, according to the Dow Jones consensus.",
-   "url": "https://www.cnbc.com/2026/11/13/ppi-inflation-report-october-2026.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Tecnologia",
-   "published": "13 Nov",
-   "title": "Bessent points to Lutnick’s Commerce as he slams Nvidia chip ‘leakage’ to China",
-   "summary": "Jensen Huang resigned as Nvidia CEO days after admitting to an affair following scrutiny of his relationship with a woman reportedly deemed a Chinese spy.",
-   "url": "https://www.cnbc.com/2026/11/13/us-inflation-outlook-federal-reserve-rate-hike.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "13 Nov",
-   "title": "Microsoft says email queues 'approaching normal levels' as Outlook issues persist",
-   "summary": "A Microsoft outage on Thursday and Friday affected users of services like Outlook, Teams and 365.",
-   "url": "https://www.cnbc.com/2026/11/12/microsoft-outage-outlook-aws-google.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "13 Nov",
-   "title": "What's ahead for AI financing after Nvidia CEO Jensen Huang departs",
-   "summary": "Jensen Huang’s resignation puts Nvidia’s AI financing strategy in focus as investors watch credit markets and neocloud exposure.",
-   "url": "https://www.cnbc.com/2026/11/13/nvidia-jensen-huang-resignation-ai-financing.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "13 Nov",
-   "title": "Trump says he wants to ‘get Cuba done’ before leaving office, would consider military force",
-   "summary": "It comes as the U.S. continues to enforce a comprehensive economic embargo against Cuba.",
-   "url": "https://www.cnbc.com/2026/11/13/trump-cuba-us-military-force-iran.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Fundos",
-   "published": "13 Nov",
-   "title": "U.S. seizes $1.2 billion in cryptocurrency stolen from Binance",
-   "summary": "The DOJ said it was taking action against the North Korean government's \"schemes to fund its regime through the massive theft of cryptocurrency.\"",
-   "url": "https://www.cnbc.com/2026/11/13/us-seizes-binance-hack-crypto.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "13 Nov",
-   "title": "CNBC's Official NHL Team Valuations 2026: How the 32 franchises stack up",
-   "summary": "The average NHL team is worth $2.71 billion, 23% more than a year ago.",
-   "url": "https://www.cnbc.com/2026/11/13/cnbcs-official-nhl-team-valuations-2026-how-the-32-clubs-stack-up.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Bolsa",
-   "published": "13 Nov",
-   "title": "Jim Cramer's top 10 things to watch in the stock market Friday",
-   "summary": "Stock futures picked up some steam this morning.",
-   "url": "https://www.cnbc.com/investingclub/2026/11/13/jim-cramers-top-10-things-to-watch-in-the-stock-market-friday.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Tecnologia",
-   "published": "13 Nov",
-   "title": "Huang's downfall may undo cozy ties between business and government: analysis",
-   "summary": "The Nvidia founder's downfall and the midterm election could mark a turning point in the recent close relationship between corporate leaders and the federal government.",
-   "url": "https://www.cnbc.com/2026/11/13/jensen-huang-nvidia-fallout-business-politics.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Tecnologia",
-   "published": "13 Nov",
-   "title": "Jensen Huang scandal casts doubt on Nvidia’s AI dominance — how we got here",
-   "summary": "Nvidia is facing its biggest crisis in its 33 year history, with founder Jensen Huang resigning as CEO. Here's the story of the rise and fall of Jensen Huang.",
-   "url": "https://www.cnbc.com/2026/11/13/jensen-huang-scandal-casts-doubt-on-nvidias-ai-dominance-how-we-got-here.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Banca central",
-   "published": "13 Nov",
-   "title": "Chicago Fed's Goolsbee says central bank 'has definitely got work to do' on inflation",
-   "summary": "The policymaker expressed concern about the latest inflation data, telling CNBC that the central bank likely will need to take action.",
-   "url": "https://www.cnbc.com/2026/11/13/chicago-feds-goolsbee-says-central-bank-has-definitely-got-work-to-do-on-inflation.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "13 Nov",
-   "title": "How the Jensen Huang affair changes the outlook for U.S.-China relations",
-   "summary": "The political climate heading into next week's Trump-Xi summit is drastically different from the last meeting in September.",
-   "url": "https://www.cnbc.com/2026/11/13/jensen-huang-nvidia-us-china-relations.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Banca central",
-   "published": "12 Nov",
-   "title": "In a policy switch, the Fed says its October 2027 meeting will not see a vote on interest rates",
-   "summary": "There will be seven voting meetings next year, with the October session set up as extra time for policy deliberation without a formal vote or post-meeting statement.",
-   "url": "https://www.cnbc.com/2026/11/12/in-policy-switch-fed-says-its-october-2027-meeting-will-not-see-a-vote-on-interest-rates.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Mercados",
-   "published": "13 Nov",
-   "title": "Oil prices rise after Trump says no Iran deal needed: 'We've got their Strait'",
-   "summary": "Oil prices were mixed on Thursday, after the latest comments from President Donald Trump raised worries that an end to the U.S.-Iran war was not in sight.",
-   "url": "https://www.cnbc.com/2026/11/12/oil-prices-jump-after-trump-says-no-iran-deal-needed-weve-got-their-strait.html"
-  },
-  {
-   "source": "CNBC",
-   "category": "Tecnologia",
-   "published": "12 Nov",
-   "title": "China's Ministry of State Security thrust into the spotlight by Nvidia CEO affair",
-   "summary": "China's Ministry of State Security is getting attention after news of Nvidia CEO Jensen Huang's affair with an alleged MSS spy.",
-   "url": "https://www.cnbc.com/2026/11/12/china-ministry-state-security-nvidia-ceo.html"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Obrigações",
-   "published": "13 Nov",
-   "title": "Trump administration is hiring debt collectors to go after defaulted student-loan borrowers for first time in 6 years",
-   "summary": "The Treasury Department proposes to pay debt collectors much less than in the past to help borrowers get out of default.",
-   "url": "https://www.marketwatch.com/story/trump-administration-is-hiring-debt-collectors-for-first-time-in-6-years-to-go-after-defaulted-student-loan-borrowers-8bae13ad?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Mercados",
-   "published": "13 Nov",
-   "title": "Microsoft Outlook outage stretches into a second day: What to know",
-   "summary": "Microsoft said there is &#x201c;no evidence of malicious activity&#x201d; as it works to restore access to email and other services.",
-   "url": "https://www.marketwatch.com/story/microsoft-stock-slumps-on-outage-that-includes-the-copilot-tool-it-has-been-heavily-promoting-4007dc4f?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Mercados",
-   "published": "13 Nov",
-   "title": "Opening trading-card packs has become a $2 billion market",
-   "summary": "Pack-ripping apps are changing the way people buy and sell cards. But analysts say their &#x201c;slot-like payoff&#x201d; raises risks.",
-   "url": "https://www.marketwatch.com/story/opening-trading-card-packs-has-become-a-2-billion-market-new-apps-are-trying-to-cash-in-b7ba11f5?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Habitação",
-   "published": "13 Nov",
-   "title": "I&#x2019;m 63 and spending $95,000 on a roof deck for my $500,000 home. Am I being extravagant?",
-   "summary": "&#x201c;I have a net worth of $2.3 million and my only debt is a 15-year mortgage.&#x201d;",
-   "url": "https://www.marketwatch.com/story/im-63-and-want-to-spend-95-000-on-a-roof-deck-for-my-500-000-home-is-that-a-good-investment-f1a59c27?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Mercados",
-   "published": "13 Nov",
-   "title": "Midterm elections provided the hyperscalers with the excuse they needed to cut back on spending, says Jefferies strategist",
-   "summary": "If the AI capex narrative is losing momentum then Jefferies strategist Chris Wood can recommen some sectors , like pharma, and some markets like India, Brazil and China, as ways to play that slowdown.",
-   "url": "https://www.marketwatch.com/story/midterm-elections-provided-the-hyperscalers-with-the-excuse-they-needed-to-cut-back-on-spending-says-jefferies-strategist-de6349ec?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Mercados",
-   "published": "13 Nov",
-   "title": "The science of vaccines is rapidly advancing &#x2014; despite the anti-vax movement",
-   "summary": "Look at the promising data for Moderna and Merck&#x2019;s experimental cancer vaccine and the research suggesting the shingles vaccine can delay dementia.",
-   "url": "https://www.marketwatch.com/story/the-worlds-most-sophisticated-drug-companies-are-putting-billions-into-vaccines-despite-the-political-environment-8dcbf276?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Mercados",
-   "published": "13 Nov",
-   "title": "The prostate-cancer screening rules just changed. Here&#x2019;s when men should get tested.",
-   "summary": "The American Cancer Society now recommends most men get their first PSA test when they turn 50. Black men and other men considered high risk should start screening at age 45.",
-   "url": "https://www.marketwatch.com/story/the-prostate-cancer-screening-rules-just-changed-heres-when-men-should-get-tested-894418bb?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Inflação",
-   "published": "13 Nov",
-   "title": "Nvidia has shed nearly $500 billion in market value this week. It&#x2019;s still a $4 trillion AI behemoth.",
-   "summary": "Can Nvidia keep its lead in AI chips without Jensen Huang? Plus, what investors are watching on inflation.",
-   "url": "https://www.marketwatch.com/story/nvidia-has-shed-nearly-500-billion-in-market-value-this-week-its-still-a-4-trillion-ai-behemoth-2ca6eba7?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Mercados",
-   "published": "13 Nov",
-   "title": "I inherited $1.4 million from my father. Am I wrong to ask my husband of 25 years for a postnuptial agreement?",
-   "summary": "&#x201c;He has always said he wants his daughter to inherit a chunk of his estate, and I&#x2019;ve never objected to that.&#x201d;",
-   "url": "https://www.marketwatch.com/story/i-inherited-1-4-million-from-my-father-am-i-wrong-to-ask-my-husband-of-25-years-for-a-postnuptial-agreement-b739c51d?mod=mw_rss_topstories"
-  },
-  {
-   "source": "MarketWatch",
-   "category": "Bolsa",
-   "published": "13 Nov",
-   "title": "Profit surprises are normalizing &#x2014; and that may signal a healthier stock market, say Citi strategists",
-   "summary": "Although the majority of S&P 500 companies reported earnings above analysts&#x2019; expectations, the beats were significantly lower than in more recent quarters.",
-   "url": "https://www.marketwatch.com/story/profit-surprises-are-normalizing-and-that-may-signal-a-healthier-stock-market-say-citi-strategists-d8cce7c2?mod=mw_rss_topstories"
-  },
-  {
-   "source": "BBC",
-   "category": "Tecnologia",
-   "published": "13 Nov",
-   "title": "How a sex scandal at Nvidia is putting pressure on the White House",
-   "summary": "Jensen Huang's personal life may have triggered the crisis, but the questions now reach into the White House itself.",
-   "url": "https://www.bbc.co.uk/news/articles/c67429m3vem3o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-   "source": "BBC",
-   "category": "Tecnologia",
-   "published": "13 Nov",
-   "title": "The rise of 'housefishing' - when does using AI go from enhancing to misleading?",
-   "summary": "Experts warn that using AI to enhance property images can go too far and mislead prospective buyers.",
-   "url": "https://www.bbc.co.uk/news/articles/cm62y0wrnz9zo?at_medium=RSS&at_campaign=rss"
-  },
-  {
-   "source": "BBC",
-   "category": "Tecnologia",
-   "published": "13 Nov",
-   "title": "Ex-Nvidia CEO Jensen Huang summoned to testify before Congress about affair with alleged Chinese spy",
-   "summary": "Huang abruptly quit on Thursday as head of one of the world's most valuable companies after revelations of alleged extramarital affairs.",
-   "url": "https://www.bbc.co.uk/news/articles/cmq5vd1wdgz6o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-   "source": "BBC",
-   "category": "Tecnologia",
-   "published": "12 Nov",
-   "title": "Who is Nvidia's interim CEO Colette Kress - and who could take over permanently?",
-   "summary": "Chief financial officer Colette Kress in in charge of Nvidia for now, but several others are in the frame as potential successors.",
-   "url": "https://www.bbc.co.uk/news/articles/cqgm37dv20e8o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-   "source": "BBC",
-   "category": "Economia",
-   "published": "12 Nov",
-   "title": "Faisal Islam: Why the UK economy is surprisingly resilient",
-   "summary": "The UK is seeing impressive growth, but will it last?",
-   "url": "https://www.bbc.co.uk/news/articles/cj62p32k90wyo?at_medium=RSS&at_campaign=rss"
-  },
-  {
-   "source": "BBC",
-   "category": "Economia",
-   "published": "12 Nov",
-   "title": "UK economy grows at fastest rate for more than two years",
-   "summary": "The UK economy grew by 0.7% in the three months to September, according to official figures.",
-   "url": "https://www.bbc.co.uk/news/articles/ck3rgd429zd5o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Tecnologia",
-   "published": "13 Nov",
-   "title": "Nvidia scandal: Howard Lutnick under pressure over alleged lack of action",
-   "summary": "<p>US commerce secretary faces sack as warnings emerge about alleged Chinese spy’s ties to Jensen Huang and delays in adding Megaspeed to trade blacklist</p><ul><li><p><a href=\"https://www.theguardian",
-   "url": "https://www.theguardian.com/technology/2026/nov/13/nvidia-scandal-sparks-us-national-security-concerns-china"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Mercados",
-   "published": "13 Nov",
-   "title": "Global oil supply returns to surplus for first time since start of Iran war, says IEA",
-   "summary": "<p>Supplies outstripped demand by almost 2m barrels a day in October as market shows ‘tentative signs of rebalancing’</p><p>The world’s oil supply is swinging back to a surplus for the first time sinc",
-   "url": "https://www.theguardian.com/business/2026/nov/13/global-oil-supply-returns-to-surplus-for-first-time-since-start-of-iran-war-says-iea"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Economia",
-   "published": "13 Nov",
-   "title": "‘They’ve cut all entry-level jobs’: unlikely seaside town on frontline of AI threat",
-   "summary": "<p>Bournemouth became a hub for thousands of finance jobs after the 1980s big bang, but new tech risks hurting Dorset’s economy</p><p>A few minutes’ drive from Bournemouth’s sandy beachfront, on the s",
-   "url": "https://www.theguardian.com/business/2026/nov/13/ai-uk-finance-jobs-bournemouth-tech"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Mercados",
-   "published": "13 Nov",
-   "title": "World is now in ‘age of electricity’, energy agency chief says",
-   "summary": "<p>Exclusive: Fossil fuels no longer dominant energy source, IEA leader says, as summit considers electrification pledge</p><p>The world has left behind the age of coal, oil and gas and is now firmly ",
-   "url": "https://www.theguardian.com/environment/2026/nov/13/cop-31-electricity-energy-fossil-fuels-fatih-birol-iea"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Mercados",
-   "published": "13 Nov",
-   "title": "The dark side of reselling apps: ‘If you include your pants, I’ll pay more’",
-   "summary": "<p>Ministers consider banning under-16s from online marketplaces amid reported misuse of messaging functions and users’ photos</p><p>In June, Hannah* listed her seven-year-old daughter’s pink swimming",
-   "url": "https://www.theguardian.com/media/2026/nov/13/reselling-apps-dark-side-under-16s-social-media-ban-child-protection"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Tecnologia",
-   "published": "12 Nov",
-   "title": "Jensen Huang was a busted flush at Nvidia – he had to go | Nils Pratley",
-   "summary": "<p>CEO was viewed as ‘irreplaceable’, but recklessness of affair with a woman regarded by US officials as a Chinese spy made him a political liability</p><p>Half the tech world made up its mind before",
-   "url": "https://www.theguardian.com/technology/nils-pratley-on-finance/2026/nov/12/jensen-huang-was-a-busted-flush-at-nvidia-he-had-to-go"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Tecnologia",
-   "published": "13 Nov",
-   "title": "Who is Colette Kress, interim Nvidia CEO after Jensen Huang exit?",
-   "summary": "<p>Chief financial officer, reportedly disparaged by Huang during summer meeting, to take over on short-term basis</p><p>The hunt is on for a new Nvidia CEO. It comes after a whirlwind week, which saw",
-   "url": "https://www.theguardian.com/technology/2026/nov/12/jensen-huang-nvidia-ceo-replacement"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Tecnologia",
-   "published": "13 Nov",
-   "title": "A timeline of the affair scandal that sank Nvidia’s Jensen Huang",
-   "summary": "<p>CEO behind the meteoric rise of Nvidia stepped down after it was revealed he had an affair with an alleged Chinese spy </p><p>Jensen Huang has stepped down as CEO of <a href=\"https://www.theguardia",
-   "url": "https://www.theguardian.com/technology/2026/nov/12/jensen-huang-affair-timeline"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Tecnologia",
-   "published": "13 Nov",
-   "title": "The datacenter industry is using propaganda to fight opposition | Samuel Woolley, Dean Jackson and Maia Woluchem",
-   "summary": "<p>Big tech has used misdirection, disinformation and jargon to obscure the harm the facilities can cause to communities</p><p>“Antifa”. “Commies”. “Chinese bots”. Everyone from tech leaders to the pr",
-   "url": "https://www.theguardian.com/commentisfree/2026/nov/13/datacenter-industry-propaganda"
-  },
-  {
-   "source": "The Guardian",
-   "category": "Economia",
-   "published": "12 Nov",
-   "title": "The Guardian view on venture capitalism: investor profits are no industrial strategy | Editorial",
-   "summary": "<p>Higher returns for backers do not guarantee national prosperity. Public investment should develop domestic capabilities and meet urgent social needs</p><p>Britain keeps selling its most valuable co",
-   "url": "https://www.theguardian.com/commentisfree/2026/nov/12/the-guardian-view-on-venture-capitalism-investor-profits-are-no-industrial-strategy"
-  },
-  {
-   "source": "New York Times",
-   "category": "Tecnologia",
-   "published": "13 Nov",
-   "title": "A Scorecard for Huang’s Exit From Nvidia",
-   "summary": "The ouster of Jensen Huang from the chipmaker he helped found is reverberating throughout Silicon Valley, Washington and beyond.",
-   "url": "https://www.nytimes.com/2026/11/13/business/dealbook/huang-nvidia-ouster-repercussions.html"
-  },
-  {
-   "source": "New York Times",
-   "category": "Tecnologia",
-   "published": "13 Nov",
-   "title": "Jensen Huang’s Fall Costs Asia an A.I. Ambassador to the U.S.",
-   "summary": "The ex-Nvidia C.E.O. was a bridge between companies and governments. His exit will reverberate, especially in China where it could accelerate a self-reliance drive.",
-   "url": "https://www.nytimes.com/2026/11/13/business/jensen-huang-nvidia-china-asia.html"
-  },
-  {
-   "source": "New York Times",
-   "category": "Bolsa",
-   "published": "13 Nov",
-   "title": "Looking Past Nvidia Turmoil, Stocks Log Best Week in Months",
-   "summary": "A drop in Nvidia shares after the ouster of the company’s chief executive has not spread to the rest of the market, as artificial intelligence stocks have broadly risen.",
-   "url": "https://www.nytimes.com/2026/11/13/business/nvidia-turmoil-stock-market.html"
-  },
-  {
-   "source": "New York Times",
-   "category": "Economia",
-   "published": "13 Nov",
-   "title": "Democrats Eye Strict New Limits on White House Budget Powers",
-   "summary": "The incoming majority is also planning aggressive oversight of the White House budget director, who appears to be working to install an ally to monitor the budget office’s handling of federal spending",
-   "url": "https://www.nytimes.com/2026/11/13/business/democrats-eye-strict-new-limits-on-white-house-budget-powers.html"
-  },
-  {
-   "source": "New York Times",
-   "category": "Tecnologia",
-   "published": "13 Nov",
-   "title": "Huang and Lutnick Summoned to Testify Before Congress",
-   "summary": "Senator Tim Scott said he had requested that the Nvidia co-founder and the commerce secretary appear before the Senate Banking Committee.",
-   "url": "https://www.nytimes.com/2026/11/12/business/jensen-huang-howard-lutnick-testify-capitol-hill.html"
-  },
-  {
-   "source": "New York Times",
-   "category": "Tecnologia",
-   "published": "13 Nov",
-   "title": "Howard Lutnick Took Softer Line on Nvidia as Calls for Tougher Controls Grew",
-   "summary": "Critics say Howard Lutnick, the commerce secretary, and his department have shielded Nvidia as concerns have grown over A.I. chip sales to firms like Megaspeed.",
-   "url": "https://www.nytimes.com/2026/11/12/us/politics/lutnick-nvidia-commerce-china-chips.html"
-  },
-  {
-   "source": "New York Times",
-   "category": "Tecnologia",
-   "published": "12 Nov",
-   "title": "Nvidia Scandal Unleashes a Flood of AI-Generated Memes",
-   "summary": "The revelations surrounding Jensen Huang, who resigned from Nvidia over extramarital affairs, inspired social media posts using the very technology his company helped develop.",
-   "url": "https://www.nytimes.com/2026/11/12/world/asia/nvidia-ceo-huang-ai-memes.html"
-  },
-  {
-   "source": "New York Times",
-   "category": "Banca central",
-   "published": "12 Nov",
-   "title": "Fed Will Not Hold Policy Vote at October 2027 Meeting",
-   "summary": "The shift to a strategy meeting next October is just the first step in a broader plan by Kevin M. Warsh, the chairman of the Federal Reserve, to change how the central bank operates.",
-   "url": "https://www.nytimes.com/2026/11/12/business/economy/fed-warsh-october.html"
-  },
-  {
-   "source": "New York Times",
-   "category": "Habitação",
-   "published": "13 Nov",
-   "title": "Mortgage Rates Remain High as Affordability Challenges Persist",
-   "summary": "The average 30-year, fixed-rate home loan fell slightly, to 7.11 percent, pushing buyers and sellers to the sidelines until conditions improve.",
-   "url": "https://www.nytimes.com/2026/11/12/business/mortgage-rates-home-sales-housing-market.html"
-  },
-  {
-   "source": "New York Times",
-   "category": "Tecnologia",
-   "published": "12 Nov",
-   "title": "Jensen Huang’s Resignation From Nvidia Could Complicate Billions in Philanthropic Giving",
-   "summary": "Mr. Huang, the company’s co-founder, and his wife oversee a charitable foundation with about $9 billion in assets.",
-   "url": "https://www.nytimes.com/2026/11/12/technology/jensen-huang-philanthropy-nvidia.html"
-  },
-  {
    "source": "Fortune",
    "category": "Mercados",
    "published": "12 Nov",
@@ -800,6 +216,590 @@
    "title": "Federal Reserve Board announces approval of two applications by Mutual Federal Bancorp, MHC, and MFB Bancorp, Inc.",
    "summary": "Federal Reserve Board announces approval of two applications by Mutual Federal Bancorp, MHC, and MFB Bancorp, Inc.",
    "url": "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Banca central",
+   "published": "12 Nov",
+   "title": "Gold Set for Worst Week Since March as Fed Rate Hike Bets Mount",
+   "summary": "Gold is on course for its worst week since March as traders bet that persistent energy-driven inflation will lead to more Federal Reserve tightening, a challenge for the precious metal.",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-12/gold-holds-drop-to-near-one-year-low-as-rate-hike-bets-increase"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Banca central",
+   "published": "13 Nov",
+   "title": "Dollar Wraps Best Week in Over a Month on Fed Rate Hike Bets",
+   "summary": "The dollar ended the week the strongest in more than a month, extending a rally fueled by growing expectations that the Federal Reserve will increase interest rates next month.",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-13/dollar-poised-for-best-week-in-over-a-month-on-fed-hike-bets"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Obrigações",
+   "published": "13 Nov",
+   "title": "US Treasury Weighs Loan to Help Venezuela Pay Debt to IDB",
+   "summary": "The US Treasury is weighing a plan to provide a short-term bridge loan to help Venezuela repay its outstanding obligations with the Inter-American Development ⁠Bank, according to people familiar with ",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-13/us-treasury-weighs-loan-to-help-venezuela-pay-debt-to-idb"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "13 Nov",
+   "title": "SEC Moves to Rein In Executive Pay Disclosures to Investors",
+   "summary": "Executive compensation disclosures are in for an overhaul as part of the US Securities and Exchange Commission’s plan to scale back the information that publicly-traded companies must give investors.",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-13/sec-moves-to-rein-in-executive-pay-disclosures-to-investors"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Obrigações",
+   "published": "13 Nov",
+   "title": "Wall Street’s Wild Ride Delivers Big Paydays and Bigger Bruises",
+   "summary": "From Treasuries to turbocharged tech bets, almost nothing on Wall Street is escaping the whiplash. Investors keep pouring billions into the fray anyway.",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-13/wall-street-s-wild-ride-delivers-big-paydays-and-bigger-bruises"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Banca central",
+   "published": "12 Nov",
+   "title": "S&P 500 Falls as Chip Slump Offsets Inflation Data: Markets Wrap",
+   "summary": "Another selloff in chipmakers weighed on stocks, overshadowing inflation data that helped ease concerns about an outsized Federal Reserve rate hike.",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-12/stock-market-today-dow-s-p-live-updates"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "12 Nov",
+   "title": "Compass Sues Multiple Listing Services, Upping Antitrust Row",
+   "summary": "A feud over how consumers can buy and sell homes escalated on Thursday with a slew of antitrust lawsuits filed across the country by the top US broker for residential properties.",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-12/compass-sues-multiple-listing-services-ramping-up-antitrust-row"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Bolsa",
+   "published": "13 Nov",
+   "title": "Anthropic IPO Buyers Have More Influence on Price Than SpaceX",
+   "summary": "Anthropic PBC will try next week to take SpaceX’s title of the biggest public listing of all time, but unlike Elon Musk’s conglomerate, major investors will have more sway on its initial share price a",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-13/anthropic-ipo-buyers-have-more-influence-on-price-than-spacex"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Mercados",
+   "published": "13 Nov",
+   "title": "H&R REIT Holders Nix Sale to Blackstone and GO, Rebuking CEO",
+   "summary": "Shareholders of H&R Real Estate Investment Trust voted against a plan to break up and sell the company to buyers including Blackstone Inc., rejecting a complex deal that would have allowed the chief e",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-13/h-r-investors-vote-down-sale-to-blackstone-and-go-rebuking-ceo"
+  },
+  {
+   "source": "Bloomberg",
+   "category": "Bolsa",
+   "published": "13 Nov",
+   "title": "Swiss Respiratory Biotech Windward Soars 68% in US Trading Debut",
+   "summary": "Windward Bio Group AG shares surged 68% in its trading debut after the company raised about $225 million in an initial public offering and private placement.",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-13/swiss-respiratory-biotech-windward-up-7-9-in-us-trading-debut"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "13 Nov",
+   "title": "US securities watchdog plans to loosen rules for executive pay disclosure",
+   "summary": "Only CEOs and CFOs would be required to disclose pay packages under Securities and Exchange Commission’s proposal",
+   "url": "https://www.ft.com/content/de634392-47bd-4a21-938a-77620aeb3d17?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Bolsa",
+   "published": "13 Nov",
+   "title": "Global oil markets swing to surplus as Gulf shipments rebound",
+   "summary": "IEA analysts warn it will take months to rebuild stockpiles depleted by US-Iran war",
+   "url": "https://www.ft.com/content/20b68fe2-9d60-4c0c-b714-1f3e03015823?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Bolsa",
+   "published": "13 Nov",
+   "title": "Anthropic’s Amodei ‘not super fussed’ about market turmoil ahead of IPO",
+   "summary": "AI lab’s chief executive brushes off tech stock turbulence less than a week before planned $1.5tn listing",
+   "url": "https://www.ft.com/content/4b7b83d7-7fea-4ce2-bfe3-4f2cf75b1d82?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Banca central",
+   "published": "13 Nov",
+   "title": "US Treasuries set for worst week since Trump’s ‘liberation day’",
+   "summary": "Higher than expected inflation and hawkish remarks by Fed officials have stung investors who bet a global bond rout was over",
+   "url": "https://www.ft.com/content/7bebace2-dc87-410a-ae29-ffd9f3176def?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Bolsa",
+   "published": "13 Nov",
+   "title": "AI believers hold the line after Nvidia ructions",
+   "summary": "Stock market bulls largely shrug off concerns about the concentration of risk",
+   "url": "https://www.ft.com/content/750e4304-7287-432a-8ac1-36db40d0d968?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Mercados",
+   "published": "13 Nov",
+   "title": "Norway loses landmark climate case over oilfields",
+   "summary": "Country’s Supreme Court rules that government should have considered emissions from burning oil abroad, in a finding likely to affect future projects",
+   "url": "https://www.ft.com/content/8535fe3e-f48b-43ac-b14c-946cd5aa1d51?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Obrigações",
+   "published": "13 Nov",
+   "title": "Why market timing is a fool’s game (note to self)",
+   "summary": "Recent gyrations in stock and bond prices are a timely reminder to do nothing",
+   "url": "https://www.ft.com/content/603270db-040c-44fb-9b1b-981b0b72de21?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Tecnologia",
+   "published": "13 Nov",
+   "title": "OK who just made $200mn shorting Nvidia ahead of Jensxit?",
+   "summary": "Someone is enjoying an early Christmas",
+   "url": "https://www.ft.com/content/13c485dc-2d51-4920-bd1f-13a11c79d96c"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Tecnologia",
+   "published": "13 Nov",
+   "title": "How fat are AI trading bots’ fingers?",
+   "summary": "Sizing up the risks",
+   "url": "https://www.ft.com/content/b2286012-26ec-4440-834e-580288f20ad0"
+  },
+  {
+   "source": "Financial Times",
+   "category": "Tecnologia",
+   "published": "13 Nov",
+   "title": "Chinese AI sell-off deepens over fears of tougher Nvidia chip restrictions",
+   "summary": "Ousted chief executive Jensen Huang had supported keeping sales open to China",
+   "url": "https://www.ft.com/content/0d4e93e4-895e-4ae0-a01b-833a3ed440a8?syn-25a6b1a6=1"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "13 Nov",
+   "title": "Stock Market Today: Nvidia Shares Drop Again as Investors Eye Fallout From Huang's Removal",
+   "summary": "AI trade faces major tests next week with chip giant's earnings and Anthropic's IPO",
+   "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-11-13-2026?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "13 Nov",
+   "title": "Tech Stocks Fall as Next Week Brings Big Tests for the AI Trade",
+   "summary": "Plus, Nvidia closes lower and Anthropic CEO hopes IPO will &#x201c;overdeliver.&#x201d;",
+   "url": "https://www.wsj.com/finance/stocks/tech-stocks-fall-as-next-week-brings-big-tests-for-the-ai-trade-6a346b49?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "13 Nov",
+   "title": "Anthropic Chief Tells Jamie Dimon He Hopes IPO Will &#x2018;Underpromise and Overdeliver&#x2019;",
+   "summary": "The artificial-intelligence giant, which is expected to begin trading Thursday, is targeting a valuation of roughly $1.33 trillion or more.",
+   "url": "https://www.wsj.com/finance/anthropic-chief-tells-jamie-dimon-he-hopes-ipo-will-underpromise-and-overdeliver-1ba2dd71?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "13 Nov",
+   "title": "Auto & Transport Roundup: Market Talk",
+   "summary": "Find insight on Air France-KLM, HMM and more in the latest Market Talks covering the Auto and Transport sector.",
+   "url": "https://www.wsj.com/business/auto-transport-roundup-market-talk-82432d04?mod=rss_markets_main"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "13 Nov",
+   "title": "Meta Testing New Prediction-Market App With Employees",
+   "summary": "Employees can wager on the outcome of questions or events using &#x2018;cred,&#x2019; not real money, on the app, which is under development.",
+   "url": "https://www.wsj.com/tech/meta-testing-new-prediction-market-app-with-employees-bf7bacb2?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "13 Nov",
+   "title": "Why I&#x2019;m Not Losing Sleep Over the AI Apocalypse",
+   "summary": "I&#x2019;ve been singing the virtues of the technology for several years. Have I changed my tune? No, and here&#x2019;s why.",
+   "url": "https://www.wsj.com/tech/ai/ai-apocalypse-fear-b04fd8d0?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "13 Nov",
+   "title": "Our New Cybersecurity Reality: If It&#x2019;s &#x2018;Smart,&#x2019; It&#x2019;s Hackable",
+   "summary": "Plus, how AI diagnosed a medical mystery, a growing push to protect African trophy hunting, and the reinvention of wellness travel.",
+   "url": "https://www.wsj.com/tech/ai/our-new-cybersecurity-reality-if-its-smart-its-hackable-44bcef4e?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "13 Nov",
+   "title": "Nvidia Needs Three CEOs in One",
+   "summary": "Plus, Microsoft works to fix widespread outage",
+   "url": "https://www.wsj.com/cio-journal/nvidia-needs-three-ceos-in-one-59038b0c?mod=rss_Technology"
+  },
+  {
+   "source": "CNBC",
+   "category": "Tecnologia",
+   "published": "13 Nov",
+   "title": "Nvidia is done with Jensen Huang. The fallout in Washington is just beginning",
+   "summary": "The Republican-led Congress wants to see Jensen Huang in Washington before Democrats take control in January.",
+   "url": "https://www.cnbc.com/2026/11/13/nvidia-jensen-huang-washington-congress.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "13 Nov",
+   "title": "FAA issues nationwide ground stop citing communication issues affecting ‘multiple’ air traffic control facilities",
+   "summary": "The Federal Aviation Administration issued a nationwide ground stop on Friday afternoon, \"due to extraordinary circumstances and for reasons of safety.\"",
+   "url": "https://www.cnbc.com/2026/11/13/faa-ground-stop.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Bolsa",
+   "published": "13 Nov",
+   "title": "Nvidia stock suffers longest weekly losing streak since 2012 as market value sinks by $1.7 trillion",
+   "summary": "Jensen Huang's resignation added to Nvidia's market woes, with the stock already in a downward slide since early October.",
+   "url": "https://www.cnbc.com/2026/11/13/nvidia-stock-jensen-affair-ai.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Tecnologia",
+   "published": "13 Nov",
+   "title": "Lutnick faces questions over Nvidia spy scandal. His sons’ firm has deep ties to the chipmaker",
+   "summary": "Jensen Huang’s resignation as Nvidia CEO has brought renewed scrutiny to Commerce Secretary Howard Lutnick and his family’s financial ties to the chipmaker.",
+   "url": "https://www.cnbc.com/2026/11/13/howard-lutnick-nvidia-jensen-huang-china-cantor-fitzgerald.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Banca central",
+   "published": "13 Nov",
+   "title": "AI risks are the biggest threat to the financial system, Fed survey finds",
+   "summary": "The report comes with Wall Street on edge over high-flying AI hyperscalers, while communities are on alert for the rapid spread of data centers.",
+   "url": "https://www.cnbc.com/2026/11/13/ai-risks-financial-system-federal-reserve.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "13 Nov",
+   "title": "Hassett denies report he's leaving White House: 'Not true'",
+   "summary": "National Economic Council Director Kevin Hassett poured cold water on a report that he's expected to leave the White House in the coming weeks.",
+   "url": "https://www.cnbc.com/2026/11/13/kevin-hassett-white-house-nec.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Poupança",
+   "published": "13 Nov",
+   "title": "Retirees sometimes tap savings for one-off expenses. Here’s what advisors say to consider first",
+   "summary": "Retirees who need cash for a one-time expense may look to their 401(k) or IRA, but financial advisors say there are trade-offs to weigh first.",
+   "url": "https://www.cnbc.com/2026/11/13/retirement-401k-ira-withdrawal-taxes.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Tecnologia",
+   "published": "13 Nov",
+   "title": "After Jensen Huang’s exit, what top financial advisors are doing with Nvidia: Exclusive CNBC poll",
+   "summary": "Advisors say investors should weigh their Nvidia exposure, time horizon and risk tolerance before reacting to the leadership change.",
+   "url": "https://www.cnbc.com/2026/11/13/nvidia-stock-advisors-jensen-huang-exit-exclusive-poll.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Bolsa",
+   "published": "13 Nov",
+   "title": "A trading strategy to ride out the Nvidia uncertainty and generate income in the process",
+   "summary": "By deploying a persistent covered call strategy, investors can leverage the exact fear driving the stock down to generate robust, risk-reducing income.",
+   "url": "https://www.cnbc.com/2026/11/13/a-trading-strategy-to-ride-out-the-nvidia-uncertainty-and-generate-income-in-the-process.html"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "13 Nov",
+   "title": "&#x2018;She has a history of financial mismanagement&#x2019;: My brother cut our sister out of his will. I&#x2019;ll get everything. Do I tell her?",
+   "summary": "&#x201c;I&#x2019;m torn between respecting my brother&#x2019;s wishes and being fair to my sister.&#x201d;",
+   "url": "https://www.marketwatch.com/story/she-has-a-history-of-financial-mismanagement-my-brother-cut-my-sister-out-of-his-will-im-getting-everything-do-i-tell-her-3e537851?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Bolsa",
+   "published": "13 Nov",
+   "title": "Bitcoin could fall even further if investors cash out to buy into the Anthropic IPO",
+   "summary": "Investors may have to sell some of their existing bets in crypto to make room in their portfolio for what could be one of the most sought-after stock offerings in history.",
+   "url": "https://www.marketwatch.com/story/bitcoin-could-fall-even-further-if-investors-cash-out-to-buy-into-the-anthropic-ipo-5a14f46a?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Bolsa",
+   "published": "13 Nov",
+   "title": "AMD and other chip stocks slide as Wall Street rethinks the AI trade without Jensen Huang",
+   "summary": "At first, it looked like Nvidia&#x2019;s pain might be the rest of the chip sector&#x2019;s gain. But now, investors aren&#x2019;t so sure.",
+   "url": "https://www.marketwatch.com/story/amd-and-other-chip-stocks-slide-as-wall-street-rethinks-the-ai-trade-without-jensen-huang-2fb74547?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Poupança",
+   "published": "13 Nov",
+   "title": "The trillion-dollar mistake corporate America is making about retirement",
+   "summary": "The market is dramatically underpricing the economic impact of Americans age 50 and older.",
+   "url": "https://www.marketwatch.com/story/corporate-america-is-making-a-trillion-dollar-mistake-about-retirement-234c8996?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "13 Nov",
+   "title": "How to figure out a key question this open-enrollment season: Are you overpaying for health insurance?",
+   "summary": "This back-of-the-napkin calculation can help you see if you&#x2019;re buying too much coverage",
+   "url": "https://www.marketwatch.com/story/am-i-overpaying-for-health-insurance-how-to-answer-the-key-question-this-open-enrollment-season-2d00ed55?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Bolsa",
+   "published": "13 Nov",
+   "title": "Jensen Huang was a &#x2018;China salesman&#x2019; for Nvidia. His exit is weighing on Chinese tech stocks.",
+   "summary": "The former Nvidia CEO was an &#x2018;influential voice&#x2019; for selling chips to Chinese companies, but now investors are preparing for more restrictions, experts say.",
+   "url": "https://www.marketwatch.com/story/jensen-huang-was-a-china-salesman-for-nvidia-his-exit-is-weighing-on-chinese-tech-stocks-e46351e4?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Poupança",
+   "published": "13 Nov",
+   "title": "Retirees should be big beneficiaries of the midterms: &#x2018;Democrats will hold every gavel that matters for aging and public policy&#x2019;",
+   "summary": "Here&#x2019;s what might be coming for Social Security, Medicare and long-term care.",
+   "url": "https://www.marketwatch.com/story/retirees-should-be-big-beneficiaries-of-the-midterms-democrats-will-hold-every-gavel-that-matters-for-aging-and-public-policy-71e966f0?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "13 Nov",
+   "title": "My husband inherited $500,000, but he refuses to spend it on our home. Should I be worried?",
+   "summary": "&#x201c;Our kitchen dates from 1999 and the oven only works if you hit the door a certain way.&#x201d;",
+   "url": "https://www.marketwatch.com/story/it-feels-like-hes-quietly-building-a-separate-life-my-husband-inherited-500-000-but-he-refuses-to-spend-it-on-our-home-06535cff?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Bolsa",
+   "published": "13 Nov",
+   "title": "Budget airlines are going upscale with first-class seats and faster wifi",
+   "summary": "Forget no-frills: Frontier and JetBlue are chasing luxury flyers, and Wall Street is buying in.",
+   "url": "https://www.marketwatch.com/story/budget-airlines-are-going-upscale-with-first-class-seats-and-faster-wifi-999868ab?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "13 Nov",
+   "title": "Medicare at age 50? What &#x2018;Medicare for more&#x2019; could mean for American workers.",
+   "summary": "It&#x2019;s not &#x201c;Medicare for All,&#x201d; but a new bill would lower the Medicare age to 50, expanding coverage for 60 million adults",
+   "url": "https://www.marketwatch.com/story/its-not-medicare-for-all-but-medicare-for-more-what-this-could-mean-for-workers-over-50-4a5c51a3?mod=mw_rss_topstories"
+  },
+  {
+   "source": "BBC",
+   "category": "Tecnologia",
+   "published": "13 Nov",
+   "title": "Microsoft 'deeply sorry' for global outage after almost 24 hours of disruption",
+   "summary": "Experts say the event is a \"stark reminder\" of how heavily the world relies on a small group of big tech providers.",
+   "url": "https://www.bbc.co.uk/news/articles/c6rrg51rkz09o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Tecnologia",
+   "published": "13 Nov",
+   "title": "Pressure grows on Trump's Commerce Secretary Lutnick in fallout from Nvidia scandal",
+   "summary": "Scott Bessent told CNBC that several government agencies \"were in favour of putting Megaspeed on the entity list for months\".",
+   "url": "https://www.bbc.co.uk/news/articles/cqvg2d1eg7zro?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Tecnologia",
+   "published": "13 Nov",
+   "title": "Microsoft outage: company ‘deeply sorry’ for disruption affecting millions and says it’s ‘not related to cyber or AI’ – as it happened",
+   "summary": "<p>This live blog is now closed.</p><ul><li><p><a href=\"https://www.theguardian.com/technology/2026/nov/13/tell-us-have-you-been-affected-by-the-microsoft-outage\">Tell us: have you been affected by th",
+   "url": "https://www.theguardian.com/technology/live/2026/nov/13/microsoft-outage-down-today-live-update-outlook-teams-365-when-fixed-latest-status-cause-news"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Bolsa",
+   "published": "13 Nov",
+   "title": "Trump bought Nvidia stock as he helped chipmaker with change to export rule",
+   "summary": "<p>President purchased up to $5m of stock before revoking Biden-era rule that limited Nvidia’s ability to sell to China</p><p>Donald Trump bought Nvidia stock worth millions of dollars as he made deci",
+   "url": "https://www.theguardian.com/us-news/2026/nov/13/trump-nvidia-stock-jensen-huang-us-china"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Economia",
+   "published": "13 Nov",
+   "title": "Jaguar Land Rover reports £451m quarterly loss after cutting 4,000 jobs",
+   "summary": "<p>JLR chief executive calls for EU and Britain to join forces amid competition from Chinese electric carmakers</p><p>Jaguar Land Rover has reported a £451m quarterly loss as it counts the cost of cut",
+   "url": "https://www.theguardian.com/business/2026/nov/13/jaguar-land-rover-quarterly-loss-electric-cars-job-cuts"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Poupança",
+   "published": "13 Nov",
+   "title": "The folly of just-in-time supply chains | Letters",
+   "summary": "<p><strong>Hannah Walker </strong>says systems designed to minimise expenditure in the name of efficiency can end up less capable of fulfilling their actual purpose</p><p>The article by Steven Strogat",
+   "url": "https://www.theguardian.com/society/2026/nov/13/the-folly-of-just-in-time-supply-chains"
+  },
+  {
+   "source": "New York Times",
+   "category": "Tecnologia",
+   "published": "13 Nov",
+   "title": "Why Jensen Huang Was Essential to Nvidia’s Rise",
+   "summary": "Jensen Huang was the driving force at Nvidia, with 60 direct reports and no clear succession plan. Tripp Mickle, one of our technology reporters, examines Mr. Huang’s central role in the company and t",
+   "url": "https://www.nytimes.com/video/business/100000011275611/why-jensen-huang-was-essential-to-nvidias-rise.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Bolsa",
+   "published": "13 Nov",
+   "title": "Wall Street Loses a Powerful Dealmaker After Nvidia’s CEO Is Ousted",
+   "summary": "The ousted Nvidia chief executive was the consummate dealmaker leading the trillion-dollar A.I. build out.",
+   "url": "https://www.nytimes.com/2026/11/13/business/jensen-huang-nvidia-wall-street.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Obrigações",
+   "published": "13 Nov",
+   "title": "Bessent Faults Commerce Dept. for Failing to Blacklist Megaspeed",
+   "summary": "The Treasury secretary blamed the department for not sanctioning the Singaporean firm and said that Nvidia employees should be held accountable if they sidestepped the law.",
+   "url": "https://www.nytimes.com/2026/11/13/business/economy/bessent-commerce-megaspeed-lutnick.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Tecnologia",
+   "published": "13 Nov",
+   "title": "Jensen Huang’s Resignation From Nvidia Worries the A.I. Start-Up World",
+   "summary": "Mr. Huang championed start-ups, with Nvidia holding $48 billion worth of stakes in 229 private companies, including OpenAI and Anthropic, at the end of July.",
+   "url": "https://www.nytimes.com/2026/11/13/technology/jensen-huang-silicon-valley-start-ups.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Banca central",
+   "published": "13 Nov",
+   "title": "Fewer Fed Meetings Raise Stakes of Warsh’s Communications",
+   "summary": "The Federal Reserve will vote on interest rates less frequently beginning next year as part of a plan by the central bank’s chairman, Kevin M. Warsh, to overhaul how it operates.",
+   "url": "https://www.nytimes.com/2026/11/13/business/federal-reserve-meetings-warsh.html"
+  },
+  {
+   "source": "Fortune",
+   "category": "Obrigações",
+   "published": "13 Nov",
+   "title": "Scott Bessent says Treasury wanted to blacklist Megaspeed ‘for months,’ blaming Howard Lutnick as Nvidia fallout widens: ‘Commerce has the pen’",
+   "summary": "Bessent said the Treasury, Defense, and State Departments were all in favor of placing trade restrictions on Megaspeed, but only Commerce had the power to do so.",
+   "url": "https://fortune.com/2026/11/13/scott-bessent-treasury-blacklist-megaspeed-howard-lutnick-nvidia-jensen-huang/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Mercados",
+   "published": "13 Nov",
+   "title": "‘The easiest way to penetrate a billion-dollar company’: Ex-FBI operative on how spies target CEOs",
+   "summary": "“Sometimes the easiest way to penetrate a billion-dollar company is to get close to the person running it,” says Eric O’Neill.",
+   "url": "https://fortune.com/2026/11/13/jensen-huang-ceo-security-spies-fbi-cia-training/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Mercados",
+   "published": "13 Nov",
+   "title": "How Novig became the third biggest prediction market site despite launching only months ago",
+   "summary": "Aided by a Sydney Sweeney ad, Novig’s monthly volume jumped 80% to $1.8 billion. What would it take to catch Kalshi?",
+   "url": "https://fortune.com/2026/11/13/novig-third-biggest-prediction-market-site/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Inflação",
+   "published": "13 Nov",
+   "title": "‘People are chucking stuff like gold and Bitcoin’ as rising inflation leads investors to seek yield",
+   "summary": "A brief comeback has given way to renewed selling, with analysts warning the road back could get rockier.",
+   "url": "https://fortune.com/2026/11/13/people-chucking-gold-bitcoin-rising-inflation-investors-yield/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Tecnologia",
+   "published": "13 Nov",
+   "title": "Jane Street more than doubled its Nvidia stake last quarter, filings reveal",
+   "summary": "The quant trading shop’s Nvidia holdings grew ahead of Jensen Huang’s resignation. Whether Jane Street actually lost money is another question.",
+   "url": "https://fortune.com/2026/11/12/jane-street-doubled-nvidia-stake-last-quarter-filings-reveal/"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "13 Nov",
+   "title": "US Congress Democrats plot ’must-have’ victories in 2027",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/us-congress-democrats-plot-musthave-victories-in-2027-5024779"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "13 Nov",
+   "title": "U.S. stocks mixed at close of trade; Dow Jones Industrial Average up 0.10%",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/us-stocks-mixed-at-close-of-trade-dow-jones-industrial-average-up-010-5026559"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Inflação",
+   "published": "13 Nov",
+   "title": "Mexico stocks lower at close of trade; S&P/BMV IPC down 1.04%",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/mexico-stocks-lower-at-close-of-trade-spbmv-ipc-down-104-5026551"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "13 Nov",
+   "title": "Canada stocks lower at close of trade; S&P/TSX Composite down 0.09%",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/canada-stocks-lower-at-close-of-trade-sptsx-composite-down-009-5026547"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Banca central",
+   "published": "13 Nov",
+   "title": "AI risks top financial stability concerns, Fed reports",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/ai-risks-top-financial-stability-concerns-fed-reports-93CH-5026543"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "13 Nov",
+   "title": "Colombia stocks lower at close of trade; COLCAP down 0.06%",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/colombia-stocks-lower-at-close-of-trade-colcap-down-006-5026542"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "13 Nov",
+   "title": "Why is Celestica stock sliding today?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/why-is-celestica-stock-sliding-today-93CH-5026527"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "13 Nov",
+   "title": "Russia stocks higher at close of trade; MOEX Russia Index up 0.18%",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/russia-stocks-higher-at-close-of-trade-moex-russia-index-up-018-5026525"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "13 Nov",
+   "title": "Deutsche Bank favours Ross Stores and TJX for earnings upside into 2027",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/deutsche-bank-favours-ross-stores-and-tjx-for-earnings-upside-into-2027-5026517"
+  },
+  {
+   "source": "Fed",
+   "category": "Banca central",
+   "published": "13 Nov",
+   "title": "Agencies extend comment period for proposed third-party risk management guidance",
+   "summary": "Agencies extend comment period for proposed third-party risk management guidance",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261113a.htm"
   }
  ],
  "sources": [
@@ -821,5 +821,5 @@
  "editions": [
   "afternoon"
  ],
- "collectedAt": "2026-11-13T14:56:25.134Z"
+ "collectedAt": "2026-11-13T21:40:00.874Z"
 }
