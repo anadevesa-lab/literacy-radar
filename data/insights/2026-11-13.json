@@ -1,0 +1,139 @@
+{
+ "auto": true,
+ "date": "2026-11-13",
+ "basedOn": "2026-11-13T14:56:25.134Z",
+ "generatedAt": "2026-11-13T14:56:43.498Z",
+ "resumo": "**Markets face choppy conditions** as tech leadership scandals and inflation pressures weigh on sentiment.",
+ "classes": [
+  {
+   "nome": "Equities",
+   "tendencia": "mixed",
+   "forca": 2,
+   "leitura": "Global stocks face turbulence as major technology firm leadership changes and political scrutiny rattle valuations.",
+   "a_favor": [
+    "Major enterprises remain highly valuable",
+    "Value funds offer unexpected exposure paths"
+   ],
+   "riscos": [
+    "Tech sector leadership crisis",
+    "Regulatory probes and political scrutiny"
+   ],
+   "perfil": "Suits investors with a higher risk tolerance focused on long-term capital growth."
+  },
+  {
+   "nome": "Commodities",
+   "tendencia": "mixed",
+   "forca": 1,
+   "leitura": "Oil prices show mixed movements as supply swings back to surplus alongside ongoing geopolitical tensions.",
+   "a_favor": [
+    "Global oil supply returns to surplus",
+    "Geopolitical tensions support price levels"
+   ],
+   "riscos": [
+    "Uncertainty over regional conflicts",
+    "Fluctuating global demand patterns"
+   ],
+   "perfil": "Suits experienced investors prepared for high short-term price volatility."
+  },
+  {
+   "nome": "Cryptocurrency",
+   "tendencia": "falling",
+   "forca": 1,
+   "leitura": "Digital assets face headwinds as law enforcement actions target massive illicitly acquired holdings.",
+   "a_favor": [
+    "High digital asset adoption interest",
+    "Ongoing technological integration in finance"
+   ],
+   "riscos": [
+    "Major law enforcement asset seizures",
+    "Regulatory and security interventions"
+   ],
+   "perfil": "Suits speculative investors comfortable with extreme volatility and regulatory risk."
+  }
+ ],
+ "temas": [
+  "Understanding equity market volatility",
+  "Navigating corporate leadership risks",
+  "Interpreting inflation and producer prices",
+  "The impact of geopolitical events on markets"
+ ],
+ "ai": true,
+ "pack": {
+  "carousel": {
+   "title": "Why your savings account needs a rethink",
+   "slides": [
+    {
+     "kind": "hook",
+     "h": "Are your **savings** losing value?",
+     "big": "",
+     "t": ""
+    },
+    {
+     "kind": "stat",
+     "h": "Current **inflation** rate in Portugal",
+     "big": "3.9%",
+     "t": "Prices keep rising faster than standard deposit rates."
+    },
+    {
+     "kind": "point",
+     "h": "Cash in the **bank** loses power",
+     "big": "",
+     "t": "When prices rise by 3.9%, static cash buys less over time."
+    },
+    {
+     "kind": "myth",
+     "h": "\"My bank **rate** protects me\"",
+     "big": "",
+     "t": "New term deposits average 1.83%, which trails behind inflation."
+    },
+    {
+     "kind": "point",
+     "h": "What you can **do** now",
+     "big": "",
+     "t": "Review your cash goals and check what your money actually earns."
+    },
+    {
+     "kind": "cta",
+     "h": "Save this **post** and follow us",
+     "big": "",
+     "t": "Follow PaperMint for fresh money news without the jargon."
+    }
+   ]
+  },
+  "linkedin": "We need to talk about what your cash is actually doing in the background.\n\nRecent data shows inflation in Portugal sitting at 3.9%, while new term deposits are averaging around 1.83%. Put simply, if your savings sit in a standard account, their purchasing power is quietly shrinking.\n\nIt is easy to assume that leaving money untouched is the safest option. But in a changing economic climate, safety has a hidden cost. Understanding how inflation interacts with your interest rates is one of the most practical steps you can take for your personal finances.\n\nTake five minutes today to check the actual return on your savings. Knowledge is your best defence.\n\n#PersonalFinance #Savings #PaperMint",
+  "reel": {
+   "hook": "Why keeping all your cash in a bank might cost you.",
+   "script": [
+    "Inflation in Portugal is currently at 3.9%.",
+    "Meanwhile, new term deposits sit at just 1.83%.",
+    "That means your saved cash loses purchasing power over time.",
+    "Don't leave your money sitting idle without checking the details.",
+    "Follow PaperMint for daily finance news made simple."
+   ],
+   "caption": "Is inflation quietly eating your savings? Here is what the latest numbers mean for your everyday money. #PaperMint #Finance"
+  },
+  "faq": [
+   {
+    "q": "What is the current inflation rate in Portugal?",
+    "a": "Eurostat data for October 2026 puts annual inflation in Portugal at 3.9%. The twelve-month average sits at 2.9%."
+   },
+   {
+    "q": "How do term deposit rates compare to inflation?",
+    "a": "Data for September 2026 shows new term deposits in Portugal averaging 1.83%. This sits below the current inflation rate."
+   },
+   {
+    "q": "What is the current ECB deposit rate?",
+    "a": "The European Central Bank deposit rate has remained at 2.5% since September 2026."
+   },
+   {
+    "q": "What is the 12-month Euribor rate?",
+    "a": "The 12-month Euribor averaged 3.239% in October 2026. This rate often influences variable mortgage pricing."
+   },
+   {
+    "q": "What was the average new mortgage rate in Portugal?",
+    "a": "Data from September 2026 shows the average new mortgage rate in Portugal was 3.06%."
+   }
+  ],
+  "generatedAt": "2026-11-13T14:57:17.717Z"
+ }
+}
