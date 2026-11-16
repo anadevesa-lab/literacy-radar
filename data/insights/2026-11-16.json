@@ -1,0 +1,158 @@
+{
+ "auto": true,
+ "date": "2026-11-16",
+ "basedOn": "2026-11-16T16:28:47.612Z",
+ "generatedAt": "2026-11-16T16:28:59.970Z",
+ "resumo": "Today's talk is mostly about **stocks and tech**. Rising: tech. Falling: stocks, commodities.",
+ "classes": [
+  {
+   "nome": "Ações",
+   "tendencia": "a descer",
+   "forca": 3,
+   "leitura": "28 stories today. Top one: Hong Kong developer New World’s shares tumble 40% on $3.2bn rights issue plan (Financial Times).",
+   "a_favor": [
+    "These 13 S&P 500 stocks can rise up to 70% over the next ye…"
+   ],
+   "riscos": [
+    "Hong Kong developer New World’s shares tumble 40% on $3.2bn…"
+   ],
+   "perfil": "Long horizon and tolerance for temporary losses."
+  },
+  {
+   "nome": "Tecnologia",
+   "tendencia": "a subir",
+   "forca": 3,
+   "leitura": "16 stories today. Top one: Why Jensen Huang Was Essential to Nvidia’s Rise (New York Times).",
+   "a_favor": [
+    "Why Jensen Huang Was Essential to Nvidia’s Rise"
+   ],
+   "riscos": [],
+   "perfil": "Long horizon and tolerance for high volatility."
+  },
+  {
+   "nome": "Juros (bancos centrais)",
+   "tendencia": "estável",
+   "forca": 3,
+   "leitura": "11 stories today. Top one: Treasury Yields Slip Ahead of Fedspeak (Wall Street Journal).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Affects everyone's deposits, loans and bonds."
+  },
+  {
+   "nome": "Economia",
+   "tendencia": "estável",
+   "forca": 3,
+   "leitura": "7 stories today. Top one: Nvidia&#x2019;s Days as an Open Checkbook for the AI Economy Are Numbered (Wall Street Journal).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Background for saving and investing decisions."
+  },
+  {
+   "nome": "Fundos",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "5 stories today. Top one: Tiny quant fund joins UK tax giants (Financial Times).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "People who want to diversify with professional management."
+  },
+  {
+   "nome": "Matérias-primas",
+   "tendencia": "a descer",
+   "forca": 2,
+   "leitura": "4 stories today. Top one: U.S. crude oil declines to $87 a barrel on recovering Middle East exports (CNBC).",
+   "a_favor": [],
+   "riscos": [
+    "U.S. crude oil declines to $87 a barrel on recovering Middl…"
+   ],
+   "perfil": "A small slice of a portfolio, for diversification only."
+  },
+  {
+   "nome": "Obrigações",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "4 stories today. Top one: Bessent Urges Nvidia to Pick Outsider as Next CEO (Wall Street Journal).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Medium horizon and tolerance for price swings."
+  }
+ ],
+ "temas": [
+  "Volatility is not the same as losing money",
+  "Concentration: the risk of betting on one sector",
+  "What the ECB does and why it touches your money"
+ ],
+ "pack": {
+  "carousel": {
+   "title": "Why equal-weight funds won the day",
+   "slides": [
+    {
+     "kind": "hook",
+     "h": "Is your **portfolio** too top-heavy?",
+     "big": "",
+     "t": ""
+    },
+    {
+     "kind": "stat",
+     "h": "When **tech** stumbles, shares wobble.",
+     "big": "4%",
+     "t": "Euro area inflation sits at four percent right now."
+    },
+    {
+     "kind": "point",
+     "h": "Spread your **bets** wisely.",
+     "t": "Equal-weight funds shine when single giants drop."
+    },
+    {
+     "kind": "myth",
+     "h": "\"Tech stocks always **rise**.\"",
+     "t": "Big names can fall hard when drama hits."
+    },
+    {
+     "kind": "point",
+     "h": "Protect your **hard-earned** cash.",
+     "t": "Diversification helps cushion the blow from sudden market shifts."
+    },
+    {
+     "kind": "cta",
+     "h": "Save this **post**.",
+     "t": "Follow PaperMint for fresh money news daily."
+    }
+   ]
+  },
+  "linkedin": "When big tech stumbles, the rest of the market tells a different story. Recent market shifts show that relying on a handful of mega-caps can leave everyday portfolios feeling every little bump.\n\nDiversification isn't just financial jargon; it is your best seatbelt. Equal-weight funds have recently proven their worth by stepping up when index heavyweights took a tumble. Spreading your risk helps you sleep better at night when the headlines get loud.\n\nKeep your savings strategy steady, look past the hype, and remember that balance beats brilliance every single time.\n\n#Investing #PersonalFinance #PaperMint",
+  "reel": {
+   "hook": "Why relying on just one tech giant could cost you.",
+   "script": [
+    "When tech giants stumble, the whole market feels it.",
+    "Recent trading shows why equal-weight funds are having a moment.",
+    "Instead of betting on a single winner, they spread the load.",
+    "Smart saving means not putting all your eggs in one basket."
+   ],
+   "caption": "Tech drama is loud, but balance is key. Here is why equal-weight funds are stealing the spotlight."
+  },
+  "faq": [
+   {
+    "q": "What is an equal-weight fund?",
+    "a": "It is a fund where every company gets the same slice of attention, rather than letting the biggest giants dominate."
+   },
+   {
+    "q": "Why did tech stocks slide recently?",
+    "a": "Recent market action saw drops driven by sector-specific drama and cooling momentum in major names like Nvidia."
+   },
+   {
+    "q": "Is inflation affecting the euro area?",
+    "a": "Yes, euro area inflation stands at four percent according to recent October data from Eurostat."
+   },
+   {
+    "q": "What does diversification mean for me?",
+    "a": "It means spreading your money across different assets so one bad day doesn't ruin your whole portfolio."
+   },
+   {
+    "q": "Where can I track official interest rates?",
+    "a": "You can follow official updates directly from the European Central Bank and Banco de Portugal."
+   }
+  ],
+  "generatedAt": "2026-11-16T16:30:09.739Z"
+ }
+}
