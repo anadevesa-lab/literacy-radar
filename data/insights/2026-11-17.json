@@ -1,0 +1,126 @@
+{
+ "auto": true,
+ "date": "2026-11-17",
+ "basedOn": "2026-11-17T16:29:55.169Z",
+ "generatedAt": "2026-11-17T16:30:16.230Z",
+ "resumo": "Today's talk is mostly about **tech and stocks**. Rising: stocks. Falling: central-bank rates, mortgages, commodities.",
+ "classes": [
+  {
+   "nome": "Tecnologia",
+   "tendencia": "estável",
+   "forca": 3,
+   "leitura": "22 stories today. Top one: It&#x2019;s Hard to Protect Your Nest Egg from Nvidia (Wall Street Journal).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Long horizon and tolerance for high volatility."
+  },
+  {
+   "nome": "Ações",
+   "tendencia": "a subir",
+   "forca": 3,
+   "leitura": "17 stories today. Top one: Coherent and Lumentum stocks climb as potential U.S. import ban threatens Chinese rivals (MarketWatch).",
+   "a_favor": [
+    "Coherent and Lumentum stocks climb as potential U.S. import…"
+   ],
+   "riscos": [
+    "Deutsche Bank Shares Drop After Leaks Put Spotlight on Trou…"
+   ],
+   "perfil": "Long horizon and tolerance for temporary losses."
+  },
+  {
+   "nome": "Juros (bancos centrais)",
+   "tendencia": "a descer",
+   "forca": 3,
+   "leitura": "13 stories today. Top one: AI Stocks Resume Their Slide (Wall Street Journal).",
+   "a_favor": [],
+   "riscos": [
+    "AI Stocks Resume Their Slide"
+   ],
+   "perfil": "Affects everyone's deposits, loans and bonds."
+  },
+  {
+   "nome": "Crédito à habitação",
+   "tendencia": "a descer",
+   "forca": 2,
+   "leitura": "5 stories today. Top one: Homebuilder sentiment plunges to 14-year low, leading more builders to drop prices (CNBC).",
+   "a_favor": [],
+   "riscos": [
+    "Homebuilder sentiment plunges to 14-year low, leading more…"
+   ],
+   "perfil": "Anyone with, or about to take, a mortgage."
+  },
+  {
+   "nome": "Economia",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "5 stories today. Top one: Where are the most jobs for 18-24 year-olds? (BBC).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Background for saving and investing decisions."
+  },
+  {
+   "nome": "Matérias-primas",
+   "tendencia": "a descer",
+   "forca": 2,
+   "leitura": "4 stories today. Top one: U.S. crude oil declines to $85 a barrel on recovering Middle East exports (CNBC).",
+   "a_favor": [],
+   "riscos": [
+    "U.S. crude oil declines to $85 a barrel on recovering Middl…"
+   ],
+   "perfil": "A small slice of a portfolio, for diversification only."
+  },
+  {
+   "nome": "Fundos",
+   "tendencia": "estável",
+   "forca": 1,
+   "leitura": "2 stories today. Top one: Aschenbrenner’s Situational Awareness made AI bets again before October rout (CNBC).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "People who want to diversify with professional management."
+  }
+ ],
+ "temas": [
+  "Concentration: the risk of betting on one sector",
+  "Volatility is not the same as losing money",
+  "What the ECB does and why it touches your money"
+ ],
+ "brief": {
+  "one_liner": "Markets stutter as tech drama unfolds, while everyday savers quietly navigate a steady landscape of borrowing costs and stubborn inflation.",
+  "number": {
+   "value": "3.239%",
+   "caption": "12-month Euribor average in October 2026"
+  },
+  "stories": [
+   {
+    "i": 1,
+    "title": "Nvidia Shares Slide as Leadership Turmoil Rattles Tech Markets",
+    "whats_going_on": "Nvidia shares slipped further as investors digested former CEO Jensen Huang's resignation and subsequent calls for his return. The ongoing leadership drama has added fresh volatility to broader artificial intelligence stocks.",
+    "what_it_means": "Uncertainty at the top of the world's most influential chipmaker naturally sends ripples across global equity markets. Investors are weighing how succession and governance issues might alter the company's high-flying trajectory.",
+    "why_care": "If you hold broad market index funds or tech-focused shares, high-profile corporate shake-ups can spark sudden portfolio swings without warning."
+   },
+   {
+    "i": 21,
+    "title": "US Homebuilder Sentiment Plunges to a 14-Year Low",
+    "whats_going_on": "U.S. homebuilder sentiment dropped to a 14-year low as developers grapple with elevated mortgage rates and soaring costs for labor and materials. In response, nearly half of builders are cutting prices and offering incentives to lure hesitant buyers.",
+    "what_it_means": "High financing and construction costs are squeezing both builders and buyers, slowing momentum in the property market. Developers are having to discount properties just to keep transactions moving.",
+    "why_care": "While this is happening across the Atlantic, it serves as a reminder of how high interest rates ripple through real estate and borrowing markets globally."
+   },
+   {
+    "i": 56,
+    "title": "UK Unemployment Ticks Down as Wage Growth Cools",
+    "whats_going_on": "UK unemployment unexpectedly eased to 4.6% while annual wage growth cooled to 3.5% in September. The data comes alongside government proposals aimed at boosting employment prospects for young workers.",
+    "what_it_means": "A cooling wage growth figure suggests that inflationary pressures from labor costs are continuing to ease. Meanwhile, policymakers are focusing fresh attention on structural employment challenges.",
+    "why_care": "Slowing wage growth is a key signal for central banks tracking inflation, which directly influences future decisions on borrowing costs and savings rates."
+   },
+   {
+    "i": 34,
+    "title": "Crude Oil Slips to $85 as Supply Concerns Ease",
+    "whats_going_on": "U.S. crude oil prices declined to around $85 a barrel following forecasts projecting a surplus in the fourth quarter. Recovering Middle East exports have helped ease earlier supply fears.",
+    "what_it_means": "Energy prices are responding to a more comfortable supply outlook heading into the winter months. Lower oil prices generally act as a natural brake on broader consumer inflation.",
+    "why_care": "Cheaper energy filters down to everything from petrol pumps to household utility bills, giving a little extra breathing room to everyday household budgets."
+   }
+  ],
+  "basedOn": "2026-11-17T16:29:55.169Z",
+  "generatedAt": "2026-11-17T16:30:48.618Z"
+ }
+}
