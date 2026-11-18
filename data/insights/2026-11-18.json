@@ -1,0 +1,87 @@
+{
+ "auto": true,
+ "date": "2026-11-18",
+ "basedOn": "2026-11-18T15:59:09.527Z",
+ "generatedAt": "2026-11-18T15:59:22.143Z",
+ "resumo": "Today's talk is mostly about **tech and stocks**. Rising: inflation. Falling: stocks, the economy, deposits & savings.",
+ "classes": [
+  {
+   "nome": "Tecnologia",
+   "tendencia": "estável",
+   "forca": 3,
+   "leitura": "27 stories today. Top one: Nvidia Results Show AI Demand Remains Robust (Wall Street Journal).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Long horizon and tolerance for high volatility."
+  },
+  {
+   "nome": "Ações",
+   "tendencia": "a descer",
+   "forca": 3,
+   "leitura": "20 stories today. Top one: Deutsche Bank Shares Drop After Leaks Put Spotlight on Troubled Past (Wall Street Journal).",
+   "a_favor": [
+    "Anthropic IPO: AI lab considers increasing the offering as…"
+   ],
+   "riscos": [
+    "Deutsche Bank Shares Drop After Leaks Put Spotlight on Trou…"
+   ],
+   "perfil": "Long horizon and tolerance for temporary losses."
+  },
+  {
+   "nome": "Juros (bancos centrais)",
+   "tendencia": "estável",
+   "forca": 3,
+   "leitura": "14 stories today. Top one: Fed’s Waller says central bank may need to ‘shock people’ with half-point rate hike (CNBC).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Affects everyone's deposits, loans and bonds."
+  },
+  {
+   "nome": "Economia",
+   "tendencia": "a descer",
+   "forca": 3,
+   "leitura": "10 stories today. Top one: Trump said colleges would ‘go to hell very quickly’ without foreign students. New enrollment just fell 18%, c… (Fortune).",
+   "a_favor": [],
+   "riscos": [
+    "Trump said colleges would ‘go to hell very quickly’ without…"
+   ],
+   "perfil": "Background for saving and investing decisions."
+  },
+  {
+   "nome": "Inflação",
+   "tendencia": "a subir",
+   "forca": 3,
+   "leitura": "6 stories today. Top one: Typical energy bill forecast to go up by £443 a year from January as inflation rate rises again (BBC).",
+   "a_favor": [
+    "Typical energy bill forecast to go up by £443 a year from J…"
+   ],
+   "riscos": [],
+   "perfil": "Affects everyone's purchasing power."
+  },
+  {
+   "nome": "Matérias-primas",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "3 stories today. Top one: Republicans could expedite bill to make big oil immune to lawsuits, warn experts (The Guardian).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "A small slice of a portfolio, for diversification only."
+  },
+  {
+   "nome": "Depósitos e poupança",
+   "tendencia": "a descer",
+   "forca": 1,
+   "leitura": "2 stories today. Top one: I&#x2019;m in my 40s. Should I accept a lower pension in exchange for naming my husband or child as a benefic… (MarketWatch).",
+   "a_favor": [],
+   "riscos": [
+    "I&#x2019;m in my 40s. Should I accept a lower pension in ex…"
+   ],
+   "perfil": "Emergency fund and short-term goals."
+  }
+ ],
+ "temas": [
+  "Concentration: the risk of betting on one sector",
+  "Volatility is not the same as losing money",
+  "What the ECB does and why it touches your money"
+ ]
+}
