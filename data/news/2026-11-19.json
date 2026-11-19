@@ -1,0 +1,825 @@
+{
+ "date": "2026-11-19",
+ "items": [
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "19 Nov",
+   "title": "Uber Co-Founder Kalanick Teases Protest at Nvidia as Calls for Huang&#x2019;s Return Continue",
+   "summary": "The Nvidia board said Jensen Huang won&#x2019;t come back as CEO, but some of his Silicon Valley peers are still pushing the idea.",
+   "url": "https://www.wsj.com/tech/ai/uber-co-founder-kalanick-teases-protest-at-nvidia-as-calls-for-huangs-return-continue-37c4f635?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "19 Nov",
+   "title": "Anthropic vs. OpenAI: The Financial Metrics Behind the AI Battle",
+   "summary": "Anthropic launches its public offering this week with a revenue edge over OpenAI and fewer losses.",
+   "url": "https://www.wsj.com/tech/ai/anthropic-vs-openai-the-financial-metrics-behind-the-ai-battle-4f5b90c0?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Economia",
+   "published": "19 Nov",
+   "title": "Nvidia Is the Central Bank to AI&#x2019;s Circular Economy. See Where the Money Goes.",
+   "summary": "The company has struck at least 293 deals since 2023 and amassed a more than $100 billion investment portfolio.",
+   "url": "https://www.wsj.com/finance/stocks/nvidia-is-the-central-bank-to-ais-circular-economy-see-where-the-money-goes-da480b61?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Fundos",
+   "published": "19 Nov",
+   "title": "Deutsche Telekom&#x2019;s Tech Fund Invests $110 Million in Mistral AI",
+   "summary": "The company said the investment in the startup&#x2019;s Series D funding round paved the way for a partnership to bring European AI to German enterprises and public institutions.",
+   "url": "https://www.wsj.com/business/deutsche-telekoms-tech-fund-invests-110-million-in-mistral-ai-13597573?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "19 Nov",
+   "title": "Novartis Sees Sales Growth Through Next Round of Patent Expirations",
+   "summary": "Novartis sought to reassure investors that its sales can continue to grow through an upcoming round of patent expirations, projecting steady rises and signaling potential gains from AI.",
+   "url": "https://www.wsj.com/business/retail/novartis-sees-sales-growth-through-2031-60d33957?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Bolsa",
+   "published": "18 Nov",
+   "title": "Opinion | Congrats on Your Anthropic Shares",
+   "summary": "The company&#x2019;s IPO will benefit taxpayers and workers far and wide.",
+   "url": "https://www.wsj.com/opinion/anthropic-ipo-shares-investment-pension-funds-9f4d0c52?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Tecnologia",
+   "published": "19 Nov",
+   "title": "The Jensen Huang Saga Has Reinvigorated Washington&#x2019;s China Hawks",
+   "summary": "The AI spy affair has spurred once-sidelined politicians to get tough on China.",
+   "url": "https://www.wsj.com/politics/national-security/the-jensen-huang-saga-has-reinvigorated-washingtons-china-hawks-0bc1bd4a?mod=rss_Technology"
+  },
+  {
+   "source": "Wall Street Journal",
+   "category": "Mercados",
+   "published": "19 Nov",
+   "title": "Just How Big Is &#x2018;Grand Theft Auto VI&#x2019;? The Multibillion-Dollar Frenzy in Charts",
+   "summary": "The long-awaited videogame is poised to be a cash cow, even compared with the Olympics and Taylor Swift.",
+   "url": "https://www.wsj.com/business/media/just-how-big-is-grand-theft-auto-vi-the-multibillion-dollar-frenzy-in-charts-7c6a3893?mod=rss_Technology"
+  },
+  {
+   "source": "The Economist",
+   "category": "Obrigações",
+   "published": "19 Nov",
+   "title": "Bond yields are rising everywhere—except China",
+   "summary": "The Chinese central bank has cut interest rates despite itself",
+   "url": "https://www.economist.com/finance-and-economics/2026/11/19/bond-yields-are-rising-everywhere-except-china"
+  },
+  {
+   "source": "The Economist",
+   "category": "Mercados",
+   "published": "19 Nov",
+   "title": "Europe tightens sanctions on Russia. America loosens them",
+   "summary": "The West’s sanctions regimes are pulling in opposite directions",
+   "url": "https://www.economist.com/finance-and-economics/2026/11/19/europe-tightens-sanctions-on-russia-america-loosens-them"
+  },
+  {
+   "source": "The Economist",
+   "category": "Tecnologia",
+   "published": "19 Nov",
+   "title": "AI is swallowing maths. Is economics next?",
+   "summary": "The dismal science braces for disruption",
+   "url": "https://www.economist.com/finance-and-economics/2026/11/19/ai-is-swallowing-maths-is-economics-next"
+  },
+  {
+   "source": "The Economist",
+   "category": "Mercados",
+   "published": "18 Nov",
+   "title": "Meet the European Central Bank’s new squad",
+   "summary": "A Spaniard, a German and a Frenchwoman",
+   "url": "https://www.economist.com/finance-and-economics/2026/11/18/meet-the-european-central-banks-new-squad"
+  },
+  {
+   "source": "CNBC",
+   "category": "Bolsa",
+   "published": "19 Nov",
+   "title": "Anthropic IPO could create thousands of multimillionaire employees",
+   "summary": "The average Anthropic employee could be worth over $40 million after the company's IPO today, according to SEC filings and investors.",
+   "url": "https://www.cnbc.com/2026/11/19/anthropic-ipo-could-create-thousands-of-multimillionaire-employees.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "19 Nov",
+   "title": "Walmart hikes outlook as CEO tells CNBC retailer aims to keep prices low despite soaring fuel costs",
+   "summary": "Walmart said it saw strength with store-fulfilled pickup and delivery in its fiscal third quarter.",
+   "url": "https://www.cnbc.com/2026/11/19/walmart-wmt-q3-2026-earnings.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "19 Nov",
+   "title": "Kash Patel skips House hearing after Mar-a-Lago gala with $50,000 access",
+   "summary": "Kash Patel missed a congressional hearing after appearing the night before at a Mar-a-Lago gala offering donors of $50,000 access to top officials.",
+   "url": "https://www.cnbc.com/2026/11/18/kash-patel-hearing-mar-a-lago-gala.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "19 Nov",
+   "title": "Denmark ratifies Trump security deal over Greenland after months of diplomatic tensions",
+   "summary": "It follows months of tensions after President Donald Trump repeatedly said the U.S. should take control of Greenland for national security reasons.",
+   "url": "https://www.cnbc.com/2026/11/19/greenland-denmark-trump-security-military-bases.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "19 Nov",
+   "title": "Gold's bad year is getting worse. Why its price keeps falling",
+   "summary": "Gold has fallen sharply from its January record as higher interest rates and a stronger dollar change the investment case for the precious metal.",
+   "url": "https://www.cnbc.com/2026/11/19/gold-prices-fall-fed-rates-dollar.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "19 Nov",
+   "title": "Trump says U.S., China, Russia ‘uniquely positioned’ to discuss reducing nuclear weapons at historic meeting",
+   "summary": "The leaders of the U.S., China and Russia met in Shenzhen on Thursday for a rare trilateral gathering.",
+   "url": "https://www.cnbc.com/2026/11/19/trump-xi-putin-trilateral-meeting-china.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Bolsa",
+   "published": "19 Nov",
+   "title": "Anthropic IPO, AI wealth spawn a new, leaner kind of family office",
+   "summary": "The Anthropic IPO and a flood of AI wealth are spurring the creation of new family offices built for the era of artificial intelligence.",
+   "url": "https://www.cnbc.com/2026/11/19/anthropic-ipo-ai-wealth-spawn-a-new-leaner-kind-of-family-office.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Bolsa",
+   "published": "19 Nov",
+   "title": "Anthropic IPO: Investors who flip the stock may face brokerage penalty",
+   "summary": "Brokerage firms may put future IPO limits in place for investors who sell their Anthropic stake too soon.",
+   "url": "https://www.cnbc.com/2026/11/19/anthropic-ipo-flipping-rules.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Tecnologia",
+   "published": "19 Nov",
+   "title": "Intel signs first external customer for advanced 18A chips",
+   "summary": "Intel CEO Lip-Bu Tan said Wednesday that the company signed its first outside customer for its 18A chips.",
+   "url": "https://www.cnbc.com/2026/11/18/intel-first-18a-foundry-customer.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "19 Nov",
+   "title": "Takaichi gets chilly reception in China on first Japan leader visit since 2019",
+   "summary": "Takaichi received a subdued welcome on her trip to attend the APEC summit, as Beijing shows limited appetite for repairing ties strained by Taiwan dispute.",
+   "url": "https://www.cnbc.com/2026/11/19/japan-china-trump-takaichi-taiwan-.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "19 Nov",
+   "title": "Trump praises ‘great relationship’ with Putin after meeting, as Ukraine war takes center stage",
+   "summary": "U.S. President Donald Trump met individually on Thursday with Russian President Vladimir Putin, as well as Chinese President Xi Jinping.",
+   "url": "https://www.cnbc.com/2026/11/19/trump-xi-putin-china-apec-.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Banca central",
+   "published": "18 Nov",
+   "title": "Fed officials expect more rate hikes, worry about AI impact on inflation, minutes show",
+   "summary": "The Federal Reserve on Wednesday released minutes from its October policy meeting at which it voted to hold its benchmark interest rate in a range between 3.75%-4%.",
+   "url": "https://www.cnbc.com/2026/11/18/fed-minutes-october-2026.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "18 Nov",
+   "title": "I watched Trump, Xi and Putin gather in China. Here are my top takeaways",
+   "summary": "U.S. President Donald Trump, Chinese President Xi Jinping and Russian President Vladimir Putin are expected to hold a rare trilateral meeting on Thursday.",
+   "url": "https://www.cnbc.com/2026/11/18/trump-xi-putin-apec-shenzhen-china.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "18 Nov",
+   "title": "Tech outages are causing people to panic-buy. Costco is benefiting, Mizuho says",
+   "summary": "Shoppers are spending more at Costco as tech outages turn into a race to get emergency goods.",
+   "url": "https://www.cnbc.com/2026/11/18/tech-outage-costco-panic-buying.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Banca central",
+   "published": "18 Nov",
+   "title": "Fed’s Waller says central bank may need to ‘shock people’ with half-point rate hike",
+   "summary": "Continued inflation above the Fed's 2% target is pushing central bank officials into a more aggressive stance.",
+   "url": "https://www.cnbc.com/2026/11/18/federal-reserve-governor-christopher-waller.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "18 Nov",
+   "title": "Putin says EU is losing industry, falling behind competition, ahead of meeting with Trump and Xi",
+   "summary": "Putin used the speech to emphasize Russia's economic resilience despite U.S. sanctions, and played up opportunities for APEC members in the country.",
+   "url": "https://www.cnbc.com/2026/11/18/putin-apec-eu-trump-xi-meeting.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Mercados",
+   "published": "18 Nov",
+   "title": "Three things to watch as Trump, Xi and Putin meet in China",
+   "summary": "U.S. President Donald Trump, Chinese President Xi Jinping and Russian President Vladimir Putin are set to meet in Shenzhen alongside an APEC leaders' meeting.",
+   "url": "https://www.cnbc.com/2026/11/18/apec-trump-xi-putin-shenzhen.html"
+  },
+  {
+   "source": "CNBC",
+   "category": "Tecnologia",
+   "published": "18 Nov",
+   "title": "JPMorgan is working on AI agent transactions that don’t involve humans",
+   "summary": "JPMorgan and Hyundai Card are looking to expand the use of AI agents in financial transactions.",
+   "url": "https://www.cnbc.com/2026/11/18/jpmorgan-hyundai-card-ai-agents-payments.html"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Bolsa",
+   "published": "19 Nov",
+   "title": "Tech outages are rattling Americans so much that they&#x2019;re stockpiling cash and supplies",
+   "summary": "A lack of clarity from world leaders is prompting some people to prepare for the worst.",
+   "url": "https://www.marketwatch.com/story/why-are-these-tech-outages-rattling-americans-so-much-that-theyre-stockpiling-cash-and-supplies-07516bdd?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Bolsa",
+   "published": "19 Nov",
+   "title": "Can Anthropic&#x2019;s IPO do for the stock market what Nvidia&#x2019;s earnings couldn&#x2019;t?",
+   "summary": "Here&#x2019;s the case for energy stocks in your 401(k) and why Target&#x2019;s comeback runs through the shoe aisle. Plus, what &#x201c;GTA VI&#x201d; means for Take-Two investors.",
+   "url": "https://www.marketwatch.com/story/can-anthropics-ipo-do-for-the-stock-market-what-nvidias-earnings-couldnt-be67a434?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Habitação",
+   "published": "19 Nov",
+   "title": "&#x2018;Buyers are out for blood&#x2019; as housing market finally hits rock bottom",
+   "summary": "The few buyers left in the market braving record-high home prices and 7% mortgage rates are starting to call the shots, real-estate agents say.",
+   "url": "https://www.marketwatch.com/story/buyers-are-out-for-blood-as-housing-market-finally-hits-rock-bottom-fa5093a6?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "19 Nov",
+   "title": "Trump says Americans should &#x2018;relax&#x2019; as Washington scrambles to get to the bottom of outages",
+   "summary": "The Trump administration and Congress have been rushing to address the series of technology failures that have hit the U.S. over the past week, with Vice President J.D. Vance withdrawing from an event",
+   "url": "https://www.marketwatch.com/story/washington-is-scrambling-to-get-to-the-bottom-of-the-growing-number-of-tech-outages-across-america-66fbf299?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Bolsa",
+   "published": "19 Nov",
+   "title": "Why Micron, Intel and other AI stocks are getting a lift on Thursday",
+   "summary": "Anthropic&#x2019;s IPO is one big reason &#x2014;&#xa0;but there&#x2019;s also optimism about Texas&#x2019;s data-center landscape and a new buyback program from optical company Coherent.",
+   "url": "https://www.marketwatch.com/story/why-micron-intel-and-other-ai-stocks-are-getting-a-lift-on-thursday-cf6f59f8?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Poupança",
+   "published": "19 Nov",
+   "title": "Anthropic is coming to your 401(k). Love it or hate it, AI is becoming a bigger part of your financial plan.",
+   "summary": "A number of public pension plans already have a stake in Anthropic.",
+   "url": "https://www.marketwatch.com/story/anthropic-is-coming-to-your-401-k-love-it-or-hate-it-ai-is-becoming-a-bigger-part-of-your-financial-plan-2e9ae533?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Bolsa",
+   "published": "19 Nov",
+   "title": "Sandisk&#x2019;s stock split is almost here. This is what investors need to know.",
+   "summary": "Sandisk is due to split its stock after Thursday&#x2019;s close, and while the move has gotten some buzz, it won&#x2019;t alter the fundamental picture for shareholders of the memory-chip company.",
+   "url": "https://www.marketwatch.com/story/sandisks-stock-split-is-almost-here-this-is-what-investors-need-to-know-e0a18461?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Bolsa",
+   "published": "19 Nov",
+   "title": "Investors are rushing back into cybersecurity stocks after a string of outages. Here&#x2019;s what to know before buying.",
+   "summary": "The theme is increasingly attractive to investors, and Wall Street has taken notice .",
+   "url": "https://www.marketwatch.com/story/investors-are-rushing-back-into-cybersecurity-stocks-after-a-string-of-outages-heres-what-to-know-before-buying-09e41107?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "19 Nov",
+   "title": "Ron Johnson&#x2019;s Social Security gaffe buried important news",
+   "summary": "The Wisconsin Republican&#x2019;s remarks overshadowed what might have been a useful Senate committee hearing about fixing Social Security.",
+   "url": "https://www.marketwatch.com/story/ron-johnsons-social-security-gaffe-buried-important-news-b96e0ce8?mod=mw_rss_topstories"
+  },
+  {
+   "source": "MarketWatch",
+   "category": "Mercados",
+   "published": "19 Nov",
+   "title": "My wife pays for her family to visit us in New York. I don&#x2019;t want to make this a choice between them and me.",
+   "summary": "&#x201c;Hotel rooms can cost as much as $400 per night.&#x201d;",
+   "url": "https://www.marketwatch.com/story/my-wife-pays-thousands-of-dollars-for-her-family-to-visit-from-argentina-how-can-i-convince-her-to-stop-9381351c?mod=mw_rss_topstories"
+  },
+  {
+   "source": "BBC",
+   "category": "Bolsa",
+   "published": "18 Nov",
+   "title": "Simon Jack: Can Anthropic's record-breaking IPO stop the AI bubble bursting?",
+   "summary": "Anthropic's hotly anticipated IPO is expected to put it in the top 10 most valuable US companies, but the future is uncertain.",
+   "url": "https://www.bbc.co.uk/news/articles/cj4gnpzll020o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Bolsa",
+   "published": "18 Nov",
+   "title": "The seven Anthropic founders who are about to become multi-billionaires",
+   "summary": "The AI company behind Claude is about to sell its shares on the US stock market - making its founders very rich.",
+   "url": "https://www.bbc.co.uk/news/articles/cmd7159vlr85o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Obrigações",
+   "published": "19 Nov",
+   "title": "Gilts v kilts: What is happening with Scottish government bonds?",
+   "summary": "MSPs have heard both the pros and cons of the government's plan to launch its first ever bond to the market.",
+   "url": "https://www.bbc.co.uk/news/articles/cmwy8pgj2z8vo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Inflação",
+   "published": "18 Nov",
+   "title": "Typical energy bill forecast to go up by £443 a year from January as inflation rate rises again",
+   "summary": "Energy bills are expected to jump by 26% a year for a typical household as UK inflation hits its highest rate for a year.",
+   "url": "https://www.bbc.co.uk/news/articles/cmy498kdkx3xo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Bolsa",
+   "published": "19 Nov",
+   "title": "Anthropic raises $81bn in record-breaking stock market debut",
+   "summary": "The company behind the Claude chatbot will become one of the most valuable firms in the world.",
+   "url": "https://www.bbc.co.uk/news/articles/c6742m39xgzxo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Inflação",
+   "published": "18 Nov",
+   "title": "Heating bills, chocolate and cat food: What the inflation figures mean for you",
+   "summary": "Prices are rising at their fastest pace for a year in the UK, and higher energy costs are on the way.",
+   "url": "https://www.bbc.co.uk/news/articles/ckq6eg55n221o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Economia",
+   "published": "18 Nov",
+   "title": "How important are Nvidia and Jensen Huang to the US economy?",
+   "summary": "The former Nvidia chief executive has been at the centre of the artificial intelligence boom.",
+   "url": "https://www.bbc.co.uk/news/articles/c68798vdprwpo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Tecnologia",
+   "published": "18 Nov",
+   "title": "Security flaw found in Java, world's third-largest programming language",
+   "summary": "The same tech start-up that discovered a PHP flaw used AI to uncover a critical software bug in one of the world's most popular computer language programs.",
+   "url": "https://www.bbc.co.uk/news/articles/cke89jevqm1vo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Mercados",
+   "published": "19 Nov",
+   "title": "More support for households reliant on heating oil",
+   "summary": "North Northamptonshire Council is encouraging eligible residents to apply for more support.",
+   "url": "https://www.bbc.co.uk/news/articles/cwm2mj7vezr3o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "BBC",
+   "category": "Inflação",
+   "published": "18 Nov",
+   "title": "How high is UK inflation and how will you be affected?",
+   "summary": "Prices rose 3.6% in the year to October, mainly because of higher petrol and diesel prices, official figures show.",
+   "url": "https://www.bbc.co.uk/news/videos/cxp80q5pv4q5o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Bolsa",
+   "published": "19 Nov",
+   "title": "Anthropic ‘to open up more than 20% higher at over $100 a share’ after blockbuster IPO – business live",
+   "summary": "<p>Rolling coverage of Anthropic’s IPO, and the latest economic and financial news</p><ul><li><p><a href=\"https://www.theguardian.com/technology/2026/nov/19/anthropic-public-trading-ipo\"><strong>Anthr",
+   "url": "https://www.theguardian.com/business/live/2026/nov/19/anthropic-float-stock-market-nasdaq-raises-81bn-record-ipo-latest-news-updates"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Inflação",
+   "published": "19 Nov",
+   "title": "AI demand will push up interest rates around the world, IMF head warns",
+   "summary": "<p>Kristalina Georgieva says countries needed to be ready for tech rollout, adding: ‘You snooze, you lose’</p><ul><li><p><a href=\"https://www.theguardian.com/business/live/2026/nov/19/anthropic-float-",
+   "url": "https://www.theguardian.com/world/2026/nov/19/imf-head-warns-ai-demand-push-up-interest-rates-apec"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Banca central",
+   "published": "19 Nov",
+   "title": "Grade I interiors, gold bars, cost fears: Bank of England faces headache over £160m revamp",
+   "summary": "<p>UK central bank will want to avoid echoes of expensive US Federal Reserve revamp that led to Trump clash</p><p>Andrew Bailey may spend his days closely watching developments in the <a href=\"https:/",
+   "url": "https://www.theguardian.com/business/2026/nov/19/bank-of-england-revamp"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Bolsa",
+   "published": "19 Nov",
+   "title": "Nvidia approaches Arm boss Rene Haas in search for new CEO",
+   "summary": "<p>CEO of Cambridge-based firm viewed as leading contender to replace co-founder Jensen Huang according to reports</p><ul><li><p><a href=\"https://www.theguardian.com/business/live/2026/nov/19/anthropi",
+   "url": "https://www.theguardian.com/technology/2026/nov/19/nvidia-new-ceo-search-jensen-huang-arm-rene-haas"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Economia",
+   "published": "19 Nov",
+   "title": "BAE to slash 1,000 jobs across head office and air business",
+   "summary": "<p>Cuts – which exclude shop floor and aircraft maintenance – prompt calls for more orders to support British defence contractor</p><p>BAE Systems has announced plans to cut more than 1,000 jobs from ",
+   "url": "https://www.theguardian.com/business/2026/nov/19/bae-to-slash-1000-jobs-across-head-office-and-air-business-to-streamline-orders"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Mercados",
+   "published": "19 Nov",
+   "title": "EDF snaps up 1.3m more customers after Utilita takeover",
+   "summary": "<p>Great Britain’s fourth-largest energy supplier brings account base up to 6m after purchase of pay-as-you-go supplier</p><p>EDF Energy will grow its share of the UK’s household energy market to more",
+   "url": "https://www.theguardian.com/business/2026/nov/19/edf-takeover-utilita-energy-suppliers-energy-bills"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Economia",
+   "published": "19 Nov",
+   "title": "Flexibility more important to jobseekers than pay, global survey finds",
+   "summary": "<p>A poll of more than 40,000 workers found that a better work-life balance was the main reason people consider leaving their jobs</p><p>Work-life balance has become the leading reason why workers con",
+   "url": "https://www.theguardian.com/money/2026/nov/19/flexibility-more-important-to-jobseekers-than-pay-global-survey-finds"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Economia",
+   "published": "19 Nov",
+   "title": "In an authoritarian economy, Jensen Huang may be too big to fail | Robert Reich",
+   "summary": "<p>A handful of men control the US economy. They have leveraged themselves to be – or seem – indispensable</p><p>Jensen Huang has said he would return to Nvidia as its CEO if its board requests it.</p",
+   "url": "https://www.theguardian.com/commentisfree/2026/nov/19/jensen-huang-authoritarian-economy"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Economia",
+   "published": "19 Nov",
+   "title": "When tech workers have to quit their jobs to raise the alarm, it’s time to worry | Isabelle Ferreras",
+   "summary": "<p>We can’t make AI safe for humanity if tech bosses are allowed to run their companies like autocracies</p><p>Over the past two years, a troubling pattern has emerged across the world’s leading AI la",
+   "url": "https://www.theguardian.com/commentisfree/2026/nov/19/tech-workers-quit-jobs-raise-alarm-worry-ai-humanity-autocracies"
+  },
+  {
+   "source": "The Guardian",
+   "category": "Economia",
+   "published": "18 Nov",
+   "title": "David Beckham's perfume, Poundland – and a mighty, mighty stink | Arwa Mahdawi",
+   "summary": "<p>The Beckhams have made an art of monetising their every move. But apparently there are limits to where they’re prepared to sell their wares</p><p>Thoughts and half-price prayers with Poundland, ple",
+   "url": "https://www.theguardian.com/commentisfree/2026/nov/18/david-beckhams-perfume-poundland-and-a-mighty-mighty-stink"
+  },
+  {
+   "source": "New York Times",
+   "category": "Bolsa",
+   "published": "19 Nov",
+   "title": "China Is Shut Out of Anthropic’s Blockbuster I.P.O.",
+   "summary": "Anthropic excluded investment firms from China and Hong Kong from buying shares in advance of its initial public offering.",
+   "url": "https://www.nytimes.com/2026/11/19/business/anthropic-ipo-china-hong-kong.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Bolsa",
+   "published": "19 Nov",
+   "title": "When will Anthropic shares start trading?",
+   "summary": "",
+   "url": "https://www.nytimes.com/live/2026/11/19/technology/anthropic-ipo-ai/when-will-anthropic-shares-start-trading"
+  },
+  {
+   "source": "New York Times",
+   "category": "Mercados",
+   "published": "19 Nov",
+   "title": "Mamdani, Musk, Altman, A.I. and Other DealBook Summit Highlights",
+   "summary": "Artificial intelligence, bubble fears, the Nvidia fallout, prediction markets, politics and other big topics that made headlines this year.",
+   "url": "https://www.nytimes.com/2026/11/19/business/dealbook/mamdani-musk-altman-summit-highlights.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Mercados",
+   "published": "19 Nov",
+   "title": "Anthropic’s Trillion-Dollar Debut Is Watershed Moment for A.I.’s Risks and Rewards",
+   "summary": "As the technology surges ahead, policymakers in Washington have struggled to prepare for potential disruption to workers, businesses and the rest of the economy.",
+   "url": "https://www.nytimes.com/2026/11/19/business/anthropic-ipo-washington.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Bolsa",
+   "published": "19 Nov",
+   "title": "Dustin Moskovitz, an Early Anthropic Investor, Feels a Bit Uneasy About the IPO",
+   "summary": "An early investment that Facebook co-founder Dustin Moskovitz made in Anthropic is paying off. But it’s not making him happy.",
+   "url": "https://www.nytimes.com/2026/11/19/business/anthropic-ipo-dustin-moskovitz.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Mercados",
+   "published": "19 Nov",
+   "title": "How the War in Iran Will Remake the Global Energy Order",
+   "summary": "The International Energy Agency, in its most comprehensive analysis of the war’s fallout, found the oil shock could accelerate adoption of alternative power sources.",
+   "url": "https://www.nytimes.com/2026/11/19/business/cop31-energy-iea.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Tecnologia",
+   "published": "19 Nov",
+   "title": "Takeaways From the 2026 DealBook Summit",
+   "summary": "Leaders in artificial intelligence and governments discussed America’s shifting politics, the reverberations of Jensen Huang’s ouster at Nvidia and more on Wednesday.",
+   "url": "https://www.nytimes.com/2026/11/18/business/dealbook/dealbook-summit-musk-altman-ellison.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Banca central",
+   "published": "19 Nov",
+   "title": "Watch: Christine Lagarde Wants to Fight Fake News",
+   "summary": "In an interview at the DealBook Summit, the president of the European Central Bank explained her decision to step down early and said that trust is “in short supply” around the world.",
+   "url": "https://www.nytimes.com/2026/11/18/business/dealbook/watch-christine-lagarde-wants-to-fight-fake-news.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Bolsa",
+   "published": "19 Nov",
+   "title": "Watch: Robinhood’s C.E.O. Says He Shouldn’t Decide What You Can Trade",
+   "summary": "Speaking alongside the Nasdaq chief Adena Friedman and the Polymarket founder Shayne Coplan, Vlad Tenev said regular investors should have access to more opportunities.",
+   "url": "https://www.nytimes.com/2026/11/18/business/dealbook/adena-friedman-vlad-tenev-shayne-copland-dealbook-summit.html"
+  },
+  {
+   "source": "New York Times",
+   "category": "Tecnologia",
+   "published": "19 Nov",
+   "title": "How Nvidia Chips Ended Up Within Reach of China’s Military",
+   "summary": "Alibaba, the Chinese internet giant behind the company at the center of the Nvidia spy saga, has used its A.I. computing technology to aid a lab with links to China’s military.",
+   "url": "https://www.nytimes.com/2026/11/18/technology/nvidia-alibaba-china-military.html"
+  },
+  {
+   "source": "Fortune",
+   "category": "Mercados",
+   "published": "18 Nov",
+   "title": "Current price of oil as of November 18, 2026",
+   "summary": "When oil prices change, it affects your energy costs—and even the price of everyday items. Here’s why.",
+   "url": "https://fortune.com/article/price-of-oil-11-18-2026/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Bolsa",
+   "published": "19 Nov",
+   "title": "Anthropic’s blockbuster IPO raises the stakes for its enterprise AI business",
+   "summary": "The IPO puts a spotlight on whether Anthropic can translate surging enterprise demand into sustainable growth.",
+   "url": "https://fortune.com/2026/11/19/anthropic-blockbuster-ipo-raises-stakes-enterprise-business-rao-cfo/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Banca central",
+   "published": "19 Nov",
+   "title": "Unless you’re building a data center or have a side hustle, you’re significantly worse off than last year, according to the Fed",
+   "summary": "\"Consumer resilience continues to depend on lowering savings rates and engaging in side hustles. It implies labor cost pressures are not an inflation driver,\" noted UBS's Paul Donovan.",
+   "url": "https://fortune.com/2026/11/19/data-center-skills-side-hustle-fed-minute-notes-inflation-income/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Tecnologia",
+   "published": "19 Nov",
+   "title": "An obscure Marxist critic who died fleeing the Nazis saw ‘aura farming’ coming 90 years ago—and why you can’t afford to see the Knicks or Taylor Swift",
+   "summary": "Live Nation’s CEO says AI can’t replicate “being there.” Walter Benjamin called that the aura in the 1930s. Now money is chasing it.",
+   "url": "https://fortune.com/2026/11/19/aura-farming-ai-economy-gen-z-walter-benjamin-marxist-critic/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Tecnologia",
+   "published": "19 Nov",
+   "title": "GoDaddy chief strategy and legal officer: AI agents still have a trust problem. The solution is waiting",
+   "summary": "The internet already has the blueprint.",
+   "url": "https://fortune.com/2026/11/19/ai-agents-trust-identity-agent-name-service-dns-godaddy-jared-sine/"
+  },
+  {
+   "source": "Fortune",
+   "category": "Economia",
+   "published": "19 Nov",
+   "title": "I’m the cofounder of the world’s largest platform to run open models locally. Here’s what business leaders are wrestling wit",
+   "summary": "A fintech company we work with told us that they’d burned 60% of their annual budget three months into a contract with a frontier model.",
+   "url": "https://fortune.com/2026/11/19/ollama-ceo-open-models-ai-security-enterprise-data-jeffrey-morgan/"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "19 Nov",
+   "title": "Israel stocks lower at close of trade; TA 35 down 1.16%",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/israel-stocks-lower-at-close-of-trade-ta-35-down-116-5039513"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "19 Nov",
+   "title": "Walmart raises forecasts ahead of holidays, warns of rising fuel costs",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/walmart-nudges-up-annual-forecasts-ahead-of-crucial-holiday-season-5038616"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "19 Nov",
+   "title": "JPMorgan Chase says vendors hit in cyberattack, not related to earlier outage",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/jpmorgan-chase-says-vendors-hit-in-cyberattack-not-related-to-earlier-outage-5039510"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "19 Nov",
+   "title": "Why is Youdao stock rallying today?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/why-is-youdao-stock-rallying-today-93CH-5039506"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "19 Nov",
+   "title": "Why is Advanced Micro Devices stock tumbling today?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/why-is-advanced-micro-devices-stock-tumbling-today-93CH-5039505"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "19 Nov",
+   "title": "Why is Construction Partners stock sliding today?",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/why-is-construction-partners-stock-sliding-today-93CH-5039503"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "19 Nov",
+   "title": "Greece stocks higher at close of trade; Athens General Composite up 0.65%",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/greece-stocks-higher-at-close-of-trade-athens-general-composite-up-065-5039501"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "19 Nov",
+   "title": "Italian court delays ruling in Meta, TikTok social media case pending government curbs",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/italian-court-delays-ruling-in-meta-tiktok-social-media-case-pending-government-curbs-5039378"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Mercados",
+   "published": "19 Nov",
+   "title": "Sanofi weighs takeover of US drugmaker Insmed, Bloomberg News reports",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/sanofi-weighs-takeover-of-us-drugmaker-insmed-bloomberg-news-reports-5039450"
+  },
+  {
+   "source": "Investing.com",
+   "category": "Bolsa",
+   "published": "19 Nov",
+   "title": "Nasdaq erases gains of 2% as investors await Anthropic’s market debut",
+   "summary": "",
+   "url": "https://www.investing.com/news/stock-market-news/wall-street-futures-climb-ahead-of-anthropics-15-trillion-mega-ipo-5037518"
+  },
+  {
+   "source": "Seeking Alpha",
+   "category": "Habitação",
+   "published": "19 Nov",
+   "title": "Rocket Cos.' mortgage units to pay $6.75M to New York to settle cyber incidents",
+   "summary": "",
+   "url": "https://seekingalpha.com/news/4674784-rocket-cos-mortgage-units-to-pay-675m-to-new-york-to-settle-cyber-incidents?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news"
+  },
+  {
+   "source": "Seeking Alpha",
+   "category": "Bolsa",
+   "published": "19 Nov",
+   "title": "Red Robin Gourmet Burgers shares crater as price hikes mask traffic declines; issues refranchising warning",
+   "summary": "",
+   "url": "https://seekingalpha.com/news/4674755-red-robin-gourmet-burgers-shares-crater-as-price-hikes-mask-traffic-declines-issues-refranchising-warning?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news"
+  },
+  {
+   "source": "Seeking Alpha",
+   "category": "Fundos",
+   "published": "19 Nov",
+   "title": "Hedge funds take contrasting calls on Meta Platforms",
+   "summary": "",
+   "url": "https://seekingalpha.com/news/4674307-hedge-funds-take-contrasting-calls-on-meta-platforms?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "18 Nov",
+   "title": "Boris Vujčić: Financial Stability Review - November 2026",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261118~86f1e8147e.en.pdf"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "18 Nov",
+   "title": "Risks from AI valuations, fiscal imbalances and geoeconomic tensions weigh on financial stability outlook",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261118~83c5c60158.en.html"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "17 Nov",
+   "title": "Philip R. Lane: The practice and science of monetary policy communication: the ECB experience",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261117~7f5d3b1a0e.en.pdf"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "16 Nov",
+   "title": "Frank Elderson: Smart supervision for small banks",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261116_1~11dd7f62af.en.html"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "16 Nov",
+   "title": "Boris Vujčić: Risks and resilience in the euro area financial system",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261116~db374b56ab.en.html"
+  },
+  {
+   "source": "ECB",
+   "category": "Banca central",
+   "published": "13 Nov",
+   "title": "Isabel Schnabel: Made in Europe",
+   "summary": "",
+   "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261113~3883f1f187.en.html"
+  },
+  {
+   "source": "Fed",
+   "category": "Banca central",
+   "published": "18 Nov",
+   "title": "Minutes of the Federal Open Market Committee, October 27-28, 2026",
+   "summary": "Minutes of the Federal Open Market Committee, October 27-28, 2026",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261118a.htm"
+  },
+  {
+   "source": "Fed",
+   "category": "Banca central",
+   "published": "12 Nov",
+   "title": "Federal Reserve announces revised tentative schedule of Federal Open Market Committee meetings in 2027",
+   "summary": "Federal Reserve announces revised tentative schedule of Federal Open Market Committee meetings in 2027",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261112a.htm"
+  },
+  {
+   "source": "Fed",
+   "category": "Banca central",
+   "published": "19 Nov",
+   "title": "Federal Reserve Board issues enforcement action with former employee of First Security Bancorp",
+   "summary": "Federal Reserve Board issues enforcement action with former employee of First Security Bancorp",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261119a.htm"
+  },
+  {
+   "source": "Fed",
+   "category": "Banca central",
+   "published": "13 Nov",
+   "title": "Agencies extend comment period for proposed third-party risk management guidance",
+   "summary": "Agencies extend comment period for proposed third-party risk management guidance",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261113a.htm"
+  },
+  {
+   "source": "Fed",
+   "category": "Banca central",
+   "published": "12 Nov",
+   "title": "Federal Reserve Board announces pricing, effective January 1, 2027, for payment services the Federal Reserve Banks provide to banks and credit unions, and changes to streamline and adjust their check services",
+   "summary": "Federal Reserve Board announces pricing, effective January 1, 2027, for payment services the Federal Reserve Banks provide to banks and credit unions, and changes to streamline and adjust their check ",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261112a.htm"
+  }
+ ],
+ "sources": [
+  "Bloomberg",
+  "Financial Times",
+  "Wall Street Journal",
+  "The Economist",
+  "CNBC",
+  "MarketWatch",
+  "BBC",
+  "The Guardian",
+  "New York Times",
+  "Fortune",
+  "Investing.com",
+  "Seeking Alpha",
+  "ECB",
+  "Fed"
+ ],
+ "editions": [
+  "afternoon"
+ ],
+ "collectedAt": "2026-11-19T16:05:58.800Z"
+}

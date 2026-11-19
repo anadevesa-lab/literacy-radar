@@ -1,0 +1,83 @@
+{
+ "auto": true,
+ "date": "2026-11-19",
+ "basedOn": "2026-11-19T16:05:58.800Z",
+ "generatedAt": "2026-11-19T16:06:02.075Z",
+ "resumo": "Today's talk is mostly about **stocks and central-bank rates**. Rising: stocks, inflation.",
+ "classes": [
+  {
+   "nome": "Ações",
+   "tendencia": "a subir",
+   "forca": 3,
+   "leitura": "26 stories today. Top one: Simon Jack: Can Anthropic's record-breaking IPO stop the AI bubble bursting? (BBC).",
+   "a_favor": [
+    "Simon Jack: Can Anthropic's record-breaking IPO stop the AI…"
+   ],
+   "riscos": [
+    "Israel stocks lower at close of trade; TA 35 down 1.16%"
+   ],
+   "perfil": "Long horizon and tolerance for temporary losses."
+  },
+  {
+   "nome": "Juros (bancos centrais)",
+   "tendencia": "estável",
+   "forca": 3,
+   "leitura": "16 stories today. Top one: Fed officials expect more rate hikes, worry about AI impact on inflation, minutes show (CNBC).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Affects everyone's deposits, loans and bonds."
+  },
+  {
+   "nome": "Tecnologia",
+   "tendencia": "estável",
+   "forca": 3,
+   "leitura": "12 stories today. Top one: Uber Co-Founder Kalanick Teases Protest at Nvidia as Calls for Huang&#x2019;s Return Continue (Wall Street Journal).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Long horizon and tolerance for high volatility."
+  },
+  {
+   "nome": "Economia",
+   "tendencia": "estável",
+   "forca": 3,
+   "leitura": "8 stories today. Top one: Nvidia Is the Central Bank to AI&#x2019;s Circular Economy. See Where the Money Goes. (Wall Street Journal).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Background for saving and investing decisions."
+  },
+  {
+   "nome": "Inflação",
+   "tendencia": "a subir",
+   "forca": 2,
+   "leitura": "4 stories today. Top one: Typical energy bill forecast to go up by £443 a year from January as inflation rate rises again (BBC).",
+   "a_favor": [
+    "Typical energy bill forecast to go up by £443 a year from J…"
+   ],
+   "riscos": [],
+   "perfil": "Affects everyone's purchasing power."
+  },
+  {
+   "nome": "Matérias-primas",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "3 stories today. Top one: Gold's bad year is getting worse. Why its price keeps falling (CNBC).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "A small slice of a portfolio, for diversification only."
+  },
+  {
+   "nome": "Fundos",
+   "tendencia": "estável",
+   "forca": 1,
+   "leitura": "2 stories today. Top one: Deutsche Telekom&#x2019;s Tech Fund Invests $110 Million in Mistral AI (Wall Street Journal).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "People who want to diversify with professional management."
+  }
+ ],
+ "temas": [
+  "Volatility is not the same as losing money",
+  "What the ECB does and why it touches your money",
+  "Concentration: the risk of betting on one sector"
+ ]
+}
