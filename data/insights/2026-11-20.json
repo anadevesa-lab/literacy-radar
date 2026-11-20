@@ -1,0 +1,85 @@
+{
+ "auto": true,
+ "date": "2026-11-20",
+ "basedOn": "2026-11-20T15:46:31.211Z",
+ "generatedAt": "2026-11-20T15:46:45.243Z",
+ "resumo": "Today's talk is mostly about **stocks and tech**. Rising: the economy. Falling: stocks, tech.",
+ "classes": [
+  {
+   "nome": "Ações",
+   "tendencia": "a descer",
+   "forca": 3,
+   "leitura": "32 stories today. Top one: Anthropic&#x2019;s stock slides closer to IPO price and drags down the AI trade (MarketWatch).",
+   "a_favor": [
+    "Anthropic raises $81bn in record-breaking stock market debut"
+   ],
+   "riscos": [
+    "Anthropic&#x2019;s stock slides closer to IPO price and dra…"
+   ],
+   "perfil": "Long horizon and tolerance for temporary losses."
+  },
+  {
+   "nome": "Tecnologia",
+   "tendencia": "a descer",
+   "forca": 3,
+   "leitura": "17 stories today. Top one: Nvidia falls below Alphabet to become fourth most valuable U.S. company (Investing.com).",
+   "a_favor": [],
+   "riscos": [
+    "Nvidia falls below Alphabet to become fourth most valuable…"
+   ],
+   "perfil": "Long horizon and tolerance for high volatility."
+  },
+  {
+   "nome": "Juros (bancos centrais)",
+   "tendencia": "estável",
+   "forca": 3,
+   "leitura": "12 stories today. Top one: Warsh wants Fed officials to talk less. Instead, they’re talking more (CNBC).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Affects everyone's deposits, loans and bonds."
+  },
+  {
+   "nome": "Economia",
+   "tendencia": "a subir",
+   "forca": 3,
+   "leitura": "7 stories today. Top one: UK government borrowing rises less than forecast in surprise boost for chancellor John Healey (The Guardian).",
+   "a_favor": [
+    "UK government borrowing rises less than forecast in surpris…"
+   ],
+   "riscos": [],
+   "perfil": "Background for saving and investing decisions."
+  },
+  {
+   "nome": "Fundos",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "4 stories today. Top one: Nvidia&#x2019;s stock heads for a stretch of weekly losses unseen since 2008 (MarketWatch).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "People who want to diversify with professional management."
+  },
+  {
+   "nome": "Obrigações",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "3 stories today. Top one: Bond yields are rising everywhere—except China (The Economist).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Medium horizon and tolerance for price swings."
+  },
+  {
+   "nome": "Depósitos e poupança",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "3 stories today. Top one: This closely watched investing guru just sold all of his stocks (MarketWatch).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Emergency fund and short-term goals."
+  }
+ ],
+ "temas": [
+  "Volatility is not the same as losing money",
+  "Concentration: the risk of betting on one sector",
+  "What the ECB does and why it touches your money"
+ ]
+}
