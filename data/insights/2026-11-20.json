@@ -1,85 +1,109 @@
 {
  "auto": true,
  "date": "2026-11-20",
- "basedOn": "2026-11-20T15:46:31.211Z",
- "generatedAt": "2026-11-20T15:46:45.243Z",
- "resumo": "Today's talk is mostly about **stocks and tech**. Rising: the economy. Falling: stocks, tech.",
+ "basedOn": "2026-11-20T22:23:25.858Z",
+ "generatedAt": "2026-11-20T22:23:32.483Z",
+ "resumo": "Global markets faced heavy turbulence as **AI-driven tech stocks slumped** and investors sought safe havens.",
  "classes": [
   {
-   "nome": "Ações",
-   "tendencia": "a descer",
-   "forca": 3,
-   "leitura": "32 stories today. Top one: Anthropic&#x2019;s stock slides closer to IPO price and drags down the AI trade (MarketWatch).",
+   "nome": "Equities",
+   "tendencia": "falling",
+   "forca": 1,
+   "leitura": "Tech shares and major indices plunged sharply amid a widespread selloff in artificial intelligence stocks.",
    "a_favor": [
-    "Anthropic raises $81bn in record-breaking stock market debut"
+    "Strong corporate earnings in selective sectors"
    ],
    "riscos": [
-    "Anthropic&#x2019;s stock slides closer to IPO price and dra…"
+    "AI spending bubble concerns",
+    "Regulatory probes and market corrections"
    ],
-   "perfil": "Long horizon and tolerance for temporary losses."
+   "perfil": "Suits growth-oriented investors with a high risk tolerance."
   },
   {
-   "nome": "Tecnologia",
-   "tendencia": "a descer",
-   "forca": 3,
-   "leitura": "17 stories today. Top one: Nvidia falls below Alphabet to become fourth most valuable U.S. company (Investing.com).",
-   "a_favor": [],
-   "riscos": [
-    "Nvidia falls below Alphabet to become fourth most valuable…"
-   ],
-   "perfil": "Long horizon and tolerance for high volatility."
-  },
-  {
-   "nome": "Juros (bancos centrais)",
-   "tendencia": "estável",
-   "forca": 3,
-   "leitura": "12 stories today. Top one: Warsh wants Fed officials to talk less. Instead, they’re talking more (CNBC).",
-   "a_favor": [],
-   "riscos": [],
-   "perfil": "Affects everyone's deposits, loans and bonds."
-  },
-  {
-   "nome": "Economia",
-   "tendencia": "a subir",
-   "forca": 3,
-   "leitura": "7 stories today. Top one: UK government borrowing rises less than forecast in surprise boost for chancellor John Healey (The Guardian).",
+   "nome": "Bonds",
+   "tendencia": "rising",
+   "forca": 1,
+   "leitura": "Investors rushed into fixed-income assets as a safe haven during the broader equity market correction.",
    "a_favor": [
-    "UK government borrowing rises less than forecast in surpris…"
+    "Safe-haven demand during equity turmoil"
    ],
-   "riscos": [],
-   "perfil": "Background for saving and investing decisions."
+   "riscos": [
+    "Hawkish central bank interest rate signals"
+   ],
+   "perfil": "Suits conservative investors seeking regular income and capital preservation."
   },
   {
-   "nome": "Fundos",
-   "tendencia": "estável",
-   "forca": 2,
-   "leitura": "4 stories today. Top one: Nvidia&#x2019;s stock heads for a stretch of weekly losses unseen since 2008 (MarketWatch).",
-   "a_favor": [],
-   "riscos": [],
-   "perfil": "People who want to diversify with professional management."
+   "nome": "Commodities",
+   "tendencia": "falling",
+   "forca": 1,
+   "leitura": "Precious and industrial metals declined significantly, recording steep weekly losses alongside the stock selloff.",
+   "a_favor": [
+    "Ongoing structural demand for energy"
+   ],
+   "riscos": [
+    "Broader market risk-off sentiment",
+    "Hawkish monetary policy pressures"
+   ],
+   "perfil": "Suits tactical investors diversifying against inflation."
   },
   {
-   "nome": "Obrigações",
-   "tendencia": "estável",
-   "forca": 2,
-   "leitura": "3 stories today. Top one: Bond yields are rising everywhere—except China (The Economist).",
-   "a_favor": [],
-   "riscos": [],
-   "perfil": "Medium horizon and tolerance for price swings."
-  },
-  {
-   "nome": "Depósitos e poupança",
-   "tendencia": "estável",
-   "forca": 2,
-   "leitura": "3 stories today. Top one: This closely watched investing guru just sold all of his stocks (MarketWatch).",
-   "a_favor": [],
-   "riscos": [],
-   "perfil": "Emergency fund and short-term goals."
+   "nome": "Currencies",
+   "tendencia": "mixed",
+   "forca": 1,
+   "leitura": "Traditional safe-haven currencies outperformed while the US dollar faced pressure from shifting market sentiment.",
+   "a_favor": [
+    "Safe-haven inflows into specific peers"
+   ],
+   "riscos": [
+    "Geoeconomic tensions and policy shifts"
+   ],
+   "perfil": "Suits active traders managing international exposure."
   }
  ],
  "temas": [
-  "Volatility is not the same as losing money",
-  "Concentration: the risk of betting on one sector",
-  "What the ECB does and why it touches your money"
- ]
+  "Market correction dynamics",
+  "Safe-haven asset flows",
+  "Sector concentration risks",
+  "Monetary policy impacts"
+ ],
+ "ai": true,
+ "brief": {
+  "one_liner": "Tech stocks took a brutal tumble this week as AI fever broke, sending jittery investors scurrying toward safer ground and government bonds.",
+  "number": {
+   "value": "4%",
+   "caption": "Euro area annual inflation rate, keeping pressure on central bankers."
+  },
+  "stories": [
+   {
+    "i": 26,
+    "title": "Wall Street's AI party hits a wall with a massive rout",
+    "whats_going_on": "Global markets suffered a severe shock this week as anxiety over the multi-billion-pound artificial intelligence boom finally erupted into heavy selling. High-flying technology shares took the brunt of the damage, pushing major US indices like the Nasdaq and S&P 500 into sharp corrections.",
+    "what_it_means": "Investors have poured astronomical sums into chips, data centres, and tech infrastructure over recent years in anticipation of endless growth. This sudden correction shows that market enthusiasm is cooling as people demand actual profits rather than just big promises.",
+    "why_care": "If you hold global index funds or tech-heavy pensions, your balance statement likely took a bruised hit this week. It is a timely reminder that even the most popular market trends can experience sudden, stomach-churning drops."
+   },
+   {
+    "i": 33,
+    "title": "Safe havens in demand as tech slide rattles nerves",
+    "whats_going_on": "As the tech sell-off gathered pace, global investors scrambled for safety, pushing traditional havens like the Japanese yen and Swiss franc sharply higher. Meanwhile, the US dollar slipped back as market participants reconsidered their appetite for risk.",
+    "what_it_means": "When stock markets turn volatile, professional and retail money routinely flees riskier assets in favour of currencies and instruments perceived as stable. This defensive rotation often triggers broad pullbacks across riskier corners of the financial system.",
+    "why_care": "Turbulence in major currency and bond markets can subtly influence the cost of imports and the performance of diversified portfolios. Staying diversified helps cushion the blow when one specific asset class falls out of favour."
+   },
+   {
+    "i": 57,
+    "title": "Nvidia suffers its longest losing streak since 2008",
+    "whats_going_on": "Semiconductor giant Nvidia plunged 14% this week, wrapping up its longest weekly losing streak since the 2008 financial crisis. Once crowned the world's most valuable company, it has now slipped down the global rankings amid deeper scrutiny of chipmaker valuations.",
+    "what_it_means": "Nvidia has served as the poster child for the artificial intelligence hardware boom, meaning any wobble in its share price reverberates across global exchanges. Heavy selling in the chip sector suggests the market is re-evaluating whether sky-high valuations are fully justified.",
+    "why_care": "Even if you do not own individual shares, massive companies like Nvidia occupy a huge footprint in international pension funds and tracker portfolios. Sharp drops here can temporarily dent the overall value of broad market investments."
+   },
+   {
+    "i": 30,
+    "title": "Bayer clears a multi-billion legal hurdle over Roundup",
+    "whats_going_on": "A Missouri judge approved Bayer's proposal to pay up to $7.25 billion to resolve tens of thousands of US lawsuits linked to its weedkiller Roundup. The settlement aims to draw a line under years of mounting litigation costs that have weighed heavily on the company.",
+    "what_it_means": "Mass tort settlements of this scale allow major corporations to cap their legal liabilities and remove a massive cloud of uncertainty. For long-term stakeholders, turning the page on protracted courtroom battles clears the path to focus on core operations.",
+    "why_care": "Corporate legal battles can severely impact share values and dividend stability for everyday investors holding healthcare or industrial giants. Resolving these disputes removes a major risk factor, though the enormous price tag highlights the financial dangers of regulatory setbacks."
+   }
+  ],
+  "basedOn": "2026-11-20T22:23:25.858Z",
+  "generatedAt": "2026-11-20T22:23:40.660Z"
+ }
 }
