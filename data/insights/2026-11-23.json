@@ -1,0 +1,85 @@
+{
+ "auto": true,
+ "date": "2026-11-23",
+ "basedOn": "2026-11-23T18:46:51.573Z",
+ "generatedAt": "2026-11-23T18:46:54.385Z",
+ "resumo": "Today's talk is mostly about **stocks and tech**. Rising: stocks, bonds. Falling: deposits & savings.",
+ "classes": [
+  {
+   "nome": "Ações",
+   "tendencia": "a subir",
+   "forca": 3,
+   "leitura": "27 stories today. Top one: Nasdaq jumps 7% as Nvidia shares soar (Financial Times).",
+   "a_favor": [
+    "Nasdaq jumps 7% as Nvidia shares soar"
+   ],
+   "riscos": [
+    "UnitedHealth, Humana and CVS stocks slide as U.S targets Me…"
+   ],
+   "perfil": "Long horizon and tolerance for temporary losses."
+  },
+  {
+   "nome": "Tecnologia",
+   "tendencia": "estável",
+   "forca": 3,
+   "leitura": "22 stories today. Top one: From rotation to contagion (Financial Times).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Long horizon and tolerance for high volatility."
+  },
+  {
+   "nome": "Juros (bancos centrais)",
+   "tendencia": "estável",
+   "forca": 3,
+   "leitura": "12 stories today. Top one: The Federal Reserve’s balance sheet yo-yo (Financial Times).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Affects everyone's deposits, loans and bonds."
+  },
+  {
+   "nome": "Obrigações",
+   "tendencia": "a subir",
+   "forca": 2,
+   "leitura": "4 stories today. Top one: Credit Heads ‘Swivel’ as Huang Return Ignites Tech Debt Rally (Bloomberg).",
+   "a_favor": [
+    "Credit Heads ‘Swivel’ as Huang Return Ignites Tech Debt Ral…"
+   ],
+   "riscos": [],
+   "perfil": "Medium horizon and tolerance for price swings."
+  },
+  {
+   "nome": "Fundos",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "4 stories today. Top one: The leveraged short Nvidia ETFs have just blown up (Financial Times).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "People who want to diversify with professional management."
+  },
+  {
+   "nome": "Depósitos e poupança",
+   "tendencia": "a descer",
+   "forca": 2,
+   "leitura": "4 stories today. Top one: Capita shares plunge 70% as boss quits after civil service pensions failure (BBC).",
+   "a_favor": [],
+   "riscos": [
+    "Capita shares plunge 70% as boss quits after civil service…"
+   ],
+   "perfil": "Emergency fund and short-term goals."
+  },
+  {
+   "nome": "Economia",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "3 stories today. Top one: A Timeline of Nvidia CEO Jensen Huang&#x2019;s Spy Downfall and Resurrection (Wall Street Journal).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Background for saving and investing decisions."
+  }
+ ],
+ "temas": [
+  "Volatility is not the same as losing money",
+  "Concentration: the risk of betting on one sector",
+  "What the ECB does and why it touches your money"
+ ]
+}
