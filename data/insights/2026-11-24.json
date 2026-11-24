@@ -1,0 +1,165 @@
+{
+ "auto": true,
+ "date": "2026-11-24",
+ "basedOn": "2026-11-24T18:23:13.685Z",
+ "generatedAt": "2026-11-24T18:23:17.431Z",
+ "resumo": "Today's talk is mostly about **tech and stocks**. Rising: tech, central-bank rates. Falling: stocks, deposits & savings.",
+ "classes": [
+  {
+   "nome": "Tecnologia",
+   "tendencia": "a subir",
+   "forca": 3,
+   "leitura": "24 stories today. Top one: From Chinese Factory Town to the Nvidia Scandal: The Rise of Alice Huang (New York Times).",
+   "a_favor": [
+    "From Chinese Factory Town to the Nvidia Scandal: The Rise o…"
+   ],
+   "riscos": [],
+   "perfil": "Long horizon and tolerance for high volatility."
+  },
+  {
+   "nome": "Ações",
+   "tendencia": "a descer",
+   "forca": 3,
+   "leitura": "22 stories today. Top one: Stock Market Today: Nasdaq Resumes Selloff as Nvidia, Anthropic Shares Slump (Wall Street Journal).",
+   "a_favor": [
+    "Drugmaker Insmed shares rally 14% after Sanofi agrees to bu…"
+   ],
+   "riscos": [
+    "Stock Market Today: Nasdaq Resumes Selloff as Nvidia, Anthr…"
+   ],
+   "perfil": "Long horizon and tolerance for temporary losses."
+  },
+  {
+   "nome": "Juros (bancos centrais)",
+   "tendencia": "a subir",
+   "forca": 3,
+   "leitura": "12 stories today. Top one: Fed's John Williams indicates higher interest rates likely 'over time' to address inflation (CNBC).",
+   "a_favor": [
+    "Fed's John Williams indicates higher interest rates likely…"
+   ],
+   "riscos": [],
+   "perfil": "Affects everyone's deposits, loans and bonds."
+  },
+  {
+   "nome": "Obrigações",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "4 stories today. Top one: Nvidia Chief&#x2019;s Return Lifts Many Boats (Wall Street Journal).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Medium horizon and tolerance for price swings."
+  },
+  {
+   "nome": "Inflação",
+   "tendencia": "estável",
+   "forca": 2,
+   "leitura": "3 stories today. Top one: Bank of Canada Warns of Oil Passthrough, Sticky Inflation (Bloomberg).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Affects everyone's purchasing power."
+  },
+  {
+   "nome": "Depósitos e poupança",
+   "tendencia": "a descer",
+   "forca": 1,
+   "leitura": "2 stories today. Top one: Capita shares plunge 70% as boss quits after civil service pensions failure (BBC).",
+   "a_favor": [],
+   "riscos": [
+    "Capita shares plunge 70% as boss quits after civil service…"
+   ],
+   "perfil": "Emergency fund and short-term goals."
+  },
+  {
+   "nome": "Economia",
+   "tendencia": "estável",
+   "forca": 1,
+   "leitura": "2 stories today. Top one: My husband secretly sends his ex-wife $1,500 a month after she lost her job. We have $2.4 million saved. Has… (MarketWatch).",
+   "a_favor": [],
+   "riscos": [],
+   "perfil": "Background for saving and investing decisions."
+  }
+ ],
+ "temas": [
+  "Concentration: the risk of betting on one sector",
+  "Volatility is not the same as losing money",
+  "What the ECB does and why it touches your money"
+ ],
+ "pack": {
+  "carousel": {
+   "title": "Why your **cash savings** might be shrinking",
+   "slides": [
+    {
+     "kind": "hook",
+     "h": "Are your **savings** losing their punch?",
+     "big": "",
+     "t": ""
+    },
+    {
+     "kind": "stat",
+     "h": "Inflation in Portugal is **running fast**",
+     "big": "3.9%",
+     "t": "Prices keep rising across the country, eroding your hard-earned cash."
+    },
+    {
+     "kind": "point",
+     "h": "Standard **deposit rates** trail behind",
+     "big": "",
+     "t": "New term deposits offer around 1.83 percent, which sits below the inflation rate."
+    },
+    {
+     "kind": "myth",
+     "h": "\"My cash is **safe** in the bank\"",
+     "big": "",
+     "t": "It feels safe, but inflation quietly reduces what that money can actually buy."
+    },
+    {
+     "kind": "point",
+     "h": "Protect your **money** from silent losses",
+     "big": "",
+     "t": "Check your accounts today and see if your returns beat inflation."
+    },
+    {
+     "kind": "cta",
+     "h": "Save this and **follow** us",
+     "big": "",
+     "t": "Never miss a fresh financial update again."
+    }
+   ]
+  },
+  "linkedin": "Tech stocks hit a rough patch this week, with shares sliding as the broader market rally cools down. Anthropic even dipped below its initial public offering price, reminding everyday investors that high-flying sectors can turn quickly.\n\nAt the same time, everyday savers face a quiet challenge closer to home. Inflation in Portugal sits at 3.9 percent, while standard term deposits offer an average of 1.83 percent. When inflation outpaces your savings rate, your money loses purchasing power over time.\n\nIt is a timely reminder to look past the hype and focus on the fundamentals of your personal finances. Keep an emergency fund, understand what your accounts actually pay you, and remember that past performance is never a guarantee of future results.\n\n#FinancialLiteracy #PersonalFinance #Investing",
+  "reel": {
+   "hook": "Why your bank account is shrinking even when you save.",
+   "script": [
+    "Prices in Portugal are rising at 3.9 percent.",
+    "Meanwhile, standard term deposits pay about 1.83 percent.",
+    "That means inflation outpaces your basic interest rate.",
+    "Your cash loses a little buying power every single month.",
+    "Check your savings rate today and stay informed."
+   ],
+   "caption": "Inflation is quietly eating away at uninvested cash. Know your numbers and protect your savings with PaperMint."
+  },
+  "faq": [
+   {
+    "q": "What is the current inflation rate in Portugal?",
+    "a": "Inflation in Portugal reached 3.9 percent as of October 2026. This measures how fast the general price of goods and services is rising."
+   },
+   {
+    "q": "What do standard term deposits currently pay?",
+    "a": "New term deposits in Portugal offer an average rate of 1.83 percent. This sits below the current inflation rate."
+   },
+   {
+    "q": "What is the 12-month Euribor rate?",
+    "a": "The 12-month Euribor averaged 3.239 percent in October 2026. Many variable-rate mortgages use this benchmark across Europe."
+   },
+   {
+    "q": "What is happening with tech stocks right now?",
+    "a": "Major tech shares and initial public offerings faced a selloff as the recent market rally cooled down. Companies like Anthropic dipped below their IPO prices."
+   },
+   {
+    "q": "Why does inflation matter for cash savings?",
+    "a": "When inflation is higher than your savings rate, your money buys less over time. Understanding this helps you plan better for the future."
+   }
+  ],
+  "generatedAt": "2026-11-24T18:23:37.211Z"
+ }
+}
