@@ -1,0 +1,46 @@
+{
+ "auto": true,
+ "date": "2026-11-25",
+ "basedOn": "2026-11-25T17:39:17.095Z",
+ "generatedAt": "2026-11-25T17:39:20.570Z",
+ "resumo": "Global markets faced a technology-led slide as AI confidence waned, while **inflation and interest rate risks** continued to influence economic forecasts.",
+ "classes": [
+  {
+   "nome": "Equities",
+   "tendencia": "falling",
+   "forca": 3,
+   "leitura": "Technology stocks tumbled as confidence in the artificial intelligence trade weakened and major tech companies suffered heavy losses.",
+   "a_favor": [
+    "Strong earnings from select technology firms",
+    "Bargain opportunities following power stock corrections"
+   ],
+   "riscos": [
+    "Fading confidence in the AI boom",
+    "Political scrutiny and corporate governance scandals"
+   ],
+   "perfil": "Suits risk-tolerant investors aiming for long-term growth despite high volatility."
+  },
+  {
+   "nome": "Commodities",
+   "tendencia": "mixed",
+   "forca": 2,
+   "leitura": "Energy and industrial resources experienced mixed trading as geopolitical tensions and energy supply concerns impacted futures.",
+   "a_favor": [
+    "Rising wholesale gas and oil demand",
+    "Strategic asset acquisitions by global investors"
+   ],
+   "riscos": [
+    "Geopolitical disruptions and refinery attacks",
+    "Supply chain vulnerabilities and trade tariffs"
+   ],
+   "perfil": "Suits dynamic investors comfortable with direct exposure to raw material cycles."
+  }
+ ],
+ "temas": [
+  "Artificial intelligence market corrections",
+  "Interest rate and inflation expectations",
+  "Corporate governance and political interference",
+  "Global trade tariffs and supply chain risks"
+ ],
+ "ai": true
+}
