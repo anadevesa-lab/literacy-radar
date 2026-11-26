@@ -1,0 +1,178 @@
+{
+ "auto": true,
+ "date": "2026-11-26",
+ "basedOn": "2026-11-26T17:20:55.854Z",
+ "generatedAt": "2026-11-26T17:20:58.384Z",
+ "resumo": "Global markets navigate **intense AI technology volatility**, trade tariff concerns, and shifting central bank leadership amid ongoing inflation pressures.",
+ "classes": [
+  {
+   "nome": "Equities",
+   "tendencia": "mixed",
+   "forca": 3,
+   "leitura": "Stock markets experienced wild sessions, with tech sell-offs and Nasdaq drops offset by bargain hunting.",
+   "a_favor": [
+    "Global stocks rally as investors fish for bargains",
+    "Software stocks spared in wider tech rout"
+   ],
+   "riscos": [
+    "Tech-dominated Nasdaq tumbles amid AI jitters",
+    "New tariffs unveiled targeting major trading partners"
+   ],
+   "perfil": "Suits investors with a higher risk tolerance aiming for long-term capital growth."
+  },
+  {
+   "nome": "Cryptocurrencies",
+   "tendencia": "falling",
+   "forca": 2,
+   "leitura": "The DeFi sector faces stricter regulatory oversight following high-profile heists and consumer protection concerns.",
+   "a_favor": [
+    "Moves toward structured regulatory clarity"
+   ],
+   "riscos": [
+    "Stricter FCA rules due to lack of protections",
+    "Vulnerability to security breaches and heists"
+   ],
+   "perfil": "Suits highly speculative investors prepared for extreme regulatory and price volatility."
+  },
+  {
+   "nome": "Private Equity",
+   "tendencia": "rising",
+   "forca": 3,
+   "leitura": "Hybrid capital and debtlike deals have surged in popularity as alternative funding mechanisms.",
+   "a_favor": [
+    "Hybrid capital becoming a dominant asset class",
+    "Strong institutional interest in private market deals"
+   ],
+   "riscos": [
+    "Complexity in deal structures and valuations",
+    "Capital lock-ups and restricted liquidity"
+   ],
+   "perfil": "Suits institutional or sophisticated investors seeking alternative return drivers."
+  }
+ ],
+ "temas": [
+  "Tech sector volatility and AI market corrections",
+  "Central bank leadership and monetary policy outlook",
+  "Regulatory developments in decentralised finance",
+  "Impact of international trade tariffs on markets"
+ ],
+ "ai": true,
+ "brief": {
+  "one_liner": "Global markets weathered a wild tech sell-off and tariff talk, while central banks line up new faces for the road ahead.",
+  "number": {
+   "value": "2.5%",
+   "caption": "Current ECB deposit rate holding steady since September 2026."
+  },
+  "stories": [
+   {
+    "i": 5,
+    "title": "Wall Street gets the shakes as tech stocks hit turbulence",
+    "whats_going_on": "The Nasdaq composite plunged sharply during a volatile session, with heavy hitters like Nvidia and Micron seeing notable slumps. Stocks ultimately pared some losses, but the wild ride left investors gripping their armrests.",
+    "what_it_means": "Soaring valuations in artificial intelligence and tech firms have made the wider stock market sensitive to any sudden shifts in momentum. When the biggest companies stumble, major indices feel the shockwaves instantly.",
+    "why_care": "If you hold broad market funds or tech-heavy portfolios, sudden index drops are a timely reminder that growth stocks can move fast in both directions.",
+    "whats_going_on_fixed": "The Nasdaq composite tumbled as much as 4.5% during a volatile session, with heavy hitters like Nvidia and Micron seeing notable slumps. Stocks ultimately pared some of their losses, but the wild ride left investors gripping their armrests."
+   },
+   {
+    "i": 27,
+    "title": "Spain's Pablo Hernández de Cos lined up to lead ECB",
+    "whats_going_on": "Pablo Hernández de Cos won the necessary backing to succeed Christine Lagarde as president of the European Central Bank next year. He will step into the role during a period of choppy economic growth and political uncertainty.",
+    "what_it_means": "Leadership transitions at central banks always bring fresh scrutiny over how monetary policy and interest rates will be handled. The ECB currently maintains its deposit rate at 2.5%.",
+    "why_care": "Central bank decisions directly influence borrowing costs across Europe, keeping mortgage holders and savers on watch for future policy shifts."
+   },
+   {
+    "i": 25,
+    "title": "Silicon overtakes oil as chip demand rewrites global trade",
+    "whats_going_on": "Semiconductor exports officially overtook oil and gas for the first time as the relentless artificial intelligence boom fuelled unprecedented global demand for chips. Meanwhile, Washington tightened restrictions, prompting Nvidia to pause certain shipments to Southeast Asia.",
+    "what_it_means": "The hardware powering modern computing has become the world's most critical and geopolitically sensitive commodity. Supply chains are constantly adapting as governments try to control who gets access to advanced tech.",
+    "why_care": "Ongoing shifts in the tech sector can ripple through global supply chains, affecting everything from gadget prices to your wider investment mix."
+   },
+   {
+    "i": 51,
+    "title": "UK mortgage holders face a sobering bump in repayments",
+    "whats_going_on": "Millions of people in the UK are projected to see their average monthly mortgage payments rise by £100 when rolling off fixed-rate deals. The increases come as households adjust to a higher baseline for borrowing costs compared to previous years.",
+    "what_it_means": "Homeowners who locked in cheap mortgages years ago are finding that renewing today means confronting significantly higher interest rates. It highlights how fast policy changes trickle down to household finances.",
+    "why_care": "If you are managing a home loan or saving for a deposit, keeping an eye on where borrowing rates settle is essential for balancing your monthly budget."
+   }
+  ],
+  "basedOn": "2026-11-26T17:20:55.854Z",
+  "generatedAt": "2026-11-26T17:21:05.858Z"
+ },
+ "pack": {
+  "carousel": {
+   "title": "Why tech stocks gave investors the shakes",
+   "slides": [
+    {
+     "kind": "hook",
+     "h": "Why tech **shares** took a sudden **dive**",
+     "big": "",
+     "t": ""
+    },
+    {
+     "kind": "stat",
+     "h": "When growth **stocks** move fast **downwards**",
+     "big": "3.9%",
+     "t": "Portugal annual inflation sits here while global markets face turbulence."
+    },
+    {
+     "kind": "point",
+     "h": "Big tech **giants** hit sudden **turbulence**",
+     "big": "",
+     "t": "Heavy hitters like Nvidia saw sharp slumps during a volatile trading session."
+    },
+    {
+     "kind": "myth",
+     "h": "\"Tech stocks **only** go up\"",
+     "big": "",
+     "t": "Growth shares can drop quickly just as easily as they climb."
+    },
+    {
+     "kind": "point",
+     "h": "What this **means** for your **savings**",
+     "big": "",
+     "t": "Broad market funds remind us that portfolios experience normal ups and downs."
+    },
+    {
+     "kind": "cta",
+     "h": "Save this **post** and follow **PaperMint**",
+     "big": "",
+     "t": ""
+    }
+   ]
+  },
+  "linkedin": "Tech stocks gave investors quite the wild ride recently, with heavy hitters like Nvidia experiencing notable slumps during a volatile market session. While indexes eventually pared some losses, it was a timely reminder that growth shares can move fast in both directions.\n\nAt the same time, global trade is shifting in fascinating ways. Semiconductor exports have officially overtaken oil and gas for the first time, fueled by relentless artificial intelligence demand. Yet tightened trade restrictions and choppy economic growth show how quickly the landscape can pivot.\n\nFor everyday savers, these headlines highlight why broad diversification matters so much. Sudden index drops and changing supply chains remind us that keeping a steady head is your best financial strategy.\n\n#FinanceNews #InvestingBasics #PaperMint",
+  "reel": {
+   "hook": "Why did major tech stocks just take a sudden wild ride?",
+   "script": [
+    "Tech giants like Nvidia just hit some serious turbulence.",
+    "Indexes plunged before paring losses, reminding us stocks move both ways.",
+    "Meanwhile, semiconductor exports officially overtook oil and gas globally.",
+    "What does this mean for your portfolio?",
+    "Diversification helps you weather the bumps."
+   ],
+   "caption": "Tech stocks hit turbulence and chips overtook oil. Here is what everyday savers need to know about recent market shifts."
+  },
+  "faq": [
+   {
+    "q": "Why did tech stocks experience a sudden slump?",
+    "a": "Heavy hitters like Nvidia faced a volatile trading session that caused sharp index drops. Growth stocks can move fast in both directions."
+   },
+   {
+    "q": "What does semiconductor demand overtaking oil mean?",
+    "a": "It shows how the artificial intelligence boom has changed global trade patterns. Microchips are now driving massive export volumes worldwide."
+   },
+   {
+    "q": "How do central bank leadership changes affect me?",
+    "a": "Incoming leaders steer monetary policy and interest rates across Europe. These decisions ultimately influence borrowing costs and mortgage rates."
+   },
+   {
+    "q": "Why are UK mortgage holders facing higher repayments?",
+    "a": "Many households are rolling off older fixed-rate deals onto higher current rates. This adjustment impacts monthly household budgeting significantly."
+   },
+   {
+    "q": "How should everyday investors handle market volatility?",
+    "a": "Sudden index drops highlight the importance of holding diversified portfolios. Staying calm helps you navigate short-term market turbulence."
+   }
+  ],
+  "generatedAt": "2026-11-26T17:21:14.695Z"
+ }
+}
