@@ -1,0 +1,103 @@
+{
+ "auto": true,
+ "date": "2026-11-27",
+ "basedOn": "2026-11-27T16:59:47.062Z",
+ "generatedAt": "2026-11-27T16:59:51.339Z",
+ "resumo": "Markets navigated a volatile week as **tech stocks rebounded** while investors weighed artificial intelligence jitters and upcoming central bank decisions.",
+ "classes": [
+  {
+   "nome": "Equities",
+   "tendencia": "mixed",
+   "forca": 3,
+   "leitura": "Major stock indexes experienced wild swings, bouncing back during a shortened session despite a monthly correction and tech volatility.",
+   "a_favor": [
+    "Chinese shares soared after support signals",
+    "U.S. tech stocks rebounded strongly"
+   ],
+   "riscos": [
+    "S&P 500 pushed into a correction",
+    "Single-stock ETFs exposed investors to volatility"
+   ],
+   "perfil": "Investors seeking capital growth willing to accept short-term price volatility."
+  },
+  {
+   "nome": "Bonds",
+   "tendencia": "steady",
+   "forca": 3,
+   "leitura": "Private-equity firms turned to the Nordic bond market for fast closings, while markets braced for upcoming U.S. labor data and the Fed's rate decision.",
+   "a_favor": [
+    "Nordic debt offers minimal paperwork",
+    "Attractive yields in U.S. credit markets"
+   ],
+   "riscos": [
+    "Upcoming central bank policy uncertainty",
+    "Potential impacts from labor market reports"
+   ],
+   "perfil": "Income-focused investors prioritizing regular returns over capital appreciation."
+  },
+  {
+   "nome": "Commodities",
+   "tendencia": "rising",
+   "forca": 3,
+   "leitura": "Semiconductors and industrial materials drew intense focus, with chip exports overtaking oil and gas as AI demand surged.",
+   "a_favor": [
+    "Semiconductor demand driven by AI boom",
+    "Copper highlighted by mining billionaires"
+   ],
+   "riscos": [
+    "Geopolitical restrictions on chip shipments",
+    "Fuel cost pressures on industrial operations"
+   ],
+   "perfil": "Risk-tolerant investors looking for exposure to raw materials and industrial inputs."
+  }
+ ],
+ "temas": [
+  "Understanding stock market corrections",
+  "Navigating volatility in technology shares",
+  "The fundamentals of corporate debt"
+ ],
+ "ai": true,
+ "brief": {
+  "one_liner": "Stock markets ride a rollercoaster of AI whiplash and economic data, leaving everyday savers watching rates and portfolios closely.",
+  "number": {
+   "value": "4%",
+   "caption": "Euro area inflation rate recorded in October 2026."
+  },
+  "stories": [
+   {
+    "i": 27,
+    "title": "When corrections happen: why Wall Street's wobble isn't the end",
+    "whats_going_on": "The S&P 500 has officially entered a correction following a sharp November sell-off. However, historical data shows that market corrections do not automatically lead to full bear markets or recessions.",
+    "what_it_means": "Stock markets naturally go through periods of turbulence after strong runs, driven recently by tech jitters and shifting investor sentiment. Analysts note that economic fundamentals often tell a calmer story than daily index swings.",
+    "why_care": "For long-term investors and retirement savers, market drops can feel unsettling, but staying calm and diversified is usually the best approach.",
+    "uniqueness": "Global"
+   },
+   {
+    "i": 53,
+    "title": "Fixed-rate mortgage cliff looms as millions face higher repayments",
+    "whats_going_on": "Millions of homeowners are facing an average monthly mortgage increase of £100 when rolling off their current fixed-rate deals. The higher costs reflect broader shifts in borrowing expenses over recent years.",
+    "what_it_means": "As older, lower fixed-rate deals expire, households are transitioning to today's elevated lending environment. This adjustment puts an extra squeeze on household budgets across the board.",
+    "why_care": "If your fixed-rate mortgage is up for renewal soon, factoring these higher monthly repayments into your household budget now can help prevent nasty surprises.",
+    "uniqueness": "UK"
+   },
+   {
+    "i": 32,
+    "title": "New car price tag shocker: average hits record territory",
+    "whats_going_on": "The average price of a brand-new car reached a record high of $51,109 in October, according to Kelley Blue Book data. Despite these steep headline figures, many savvy buyers are finding ways to spend far less.",
+    "what_it_means": "Supply chain pressures, inflation, and consumer preference for feature-heavy models have kept vehicle prices elevated. Dealerships and buyers are increasingly hunting for incentives and alternative models to manage costs.",
+    "why_care": "Anyone planning a major purchase like a car should look beyond the average sticker price and explore discounts, used options, or negotiation tactics to protect their savings.",
+    "uniqueness": "Global"
+   },
+   {
+    "i": 5,
+    "title": "Tech stocks bounce back as holiday trading brings brief relief",
+    "whats_going_on": "Tech shares rebounded during a shortened trading session, helping major U.S. indexes finish a volatile week on a stronger footing. The brief rally offered investors a welcome break from recent artificial intelligence jitters.",
+    "what_it_means": "Markets have experienced intense whiplash recently as traders grapple with lofty valuations and changing sentiment around tech giants. A single positive session doesn't erase the underlying anxiety, but it provides temporary calm.",
+    "why_care": "If you hold broad market index funds or tech-heavy pensions, these daily swings will affect your balance, reinforcing the value of ignoring short-term noise.",
+    "uniqueness": "Global"
+   }
+  ],
+  "basedOn": "2026-11-27T16:59:47.062Z",
+  "generatedAt": "2026-11-27T17:00:00.594Z"
+ }
+}
